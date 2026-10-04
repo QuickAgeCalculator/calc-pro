@@ -1,0 +1,1546 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Online Average Calculator – Mean, Median & Mode | Calculator Pro</title>
+    <meta name="description" content="Free Online Average Calculator – Instantly calculate mean, median, mode, weighted average & more. Easy, accurate & mobile-friendly. No signup required.">
+    <meta name="keywords" content="Average Calculator, Average calculator online, Mean median mode calculator, Weighted average calculator, How to calculate average, Arithmetic mean calculator, Free mean calculator, Online average finder">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://calculatorpro.com/average-calculator">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calculatorpro.com/average-calculator">
+    <meta property="og:title" content="Free Online Average Calculator – Mean, Median & Mode | Calculator Pro">
+    <meta property="og:description" content="Instantly calculate mean, median, mode, weighted average & more with step-by-step explanations. 100% free and mobile friendly.">
+    <meta property="og:image" content="https://placehold.co/1200x630/2563eb/ffffff?text=Calculator+Pro+-+Average+Calculator">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Online Average Calculator | Calculator Pro">
+    <meta name="twitter:description" content="Calculate mean, median, mode, range, and weighted averages quickly and accurately.">
+    <meta name="twitter:image" content="https://placehold.co/1200x630/2563eb/ffffff?text=Average+Calculator">
+
+    <!-- Google Fonts & FontAwesome -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind CSS CDN & Custom Config -->
+    
+
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "@id": "https://calculatorpro.com/average-calculator#webapp",
+          "name": "Average Calculator",
+          "url": "https://calculatorpro.com/average-calculator",
+          "applicationCategory": "EducationalApplication",
+          "operatingSystem": "All",
+          "description": "Online tool to calculate mean, median, mode, range, and weighted averages with step-by-step formulas.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "HowTo",
+          "@id": "https://calculatorpro.com/average-calculator#howto",
+          "name": "How to Calculate Average Online",
+          "step": [
+            {
+              "@type": "HowToStep",
+              "text": "Enter your set of numbers separated by commas, spaces, or newlines in the input box."
+            },
+            {
+              "@type": "HowToStep",
+              "text": "Select the type of average calculation required (Mean, Median, Mode, Range, or Weighted Average)."
+            },
+            {
+              "@type": "HowToStep",
+              "text": "Click the Calculate button to view immediate stats including sum, count, standard deviation, and step-by-step breakdown."
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://calculatorpro.com/average-calculator#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How do I calculate the average of numbers?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "To calculate the average (arithmetic mean) of a group of numbers, add all the numbers together and divide the sum by the total quantity of numbers."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the difference between mean, median and mode?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Mean is the sum divided by the count. Median is the middle number in an ordered list. Mode is the number that appears most frequently."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How to calculate weighted average?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Multiply each number by its corresponding weight, sum those products, and divide by the sum of all weights."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I calculate average of percentages?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, if all percentages represent equal sample sizes. If sample sizes differ, you should use a weighted average based on the sample sizes."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is this average calculator free?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, Calculator Pro's Average Calculator is 100% free with no registration or download required."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does this tool work offline?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Once the page is loaded in your browser, all mathematical calculations run locally on your device in real-time."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How accurate is the online average calculator?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The calculator utilizes standard JavaScript IEEE 754 precision algorithms to ensure extreme accuracy across large and decimal numbers."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I calculate average of negative numbers?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, negative numbers are fully supported. Simply include the minus sign (-) before any negative values."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the formula for average?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The standard average formula is: Average = (Sum of all values) ÷ (Total count of values)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How to find average in Excel vs Online Calculator?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "In Excel, you use the formula =AVERAGE(range). Our online calculator provides the same result without requiring desktop software."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans min-h-screen flex flex-col antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Site Branding & Navigation -->
+    <header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      
+      <!-- Brand Logo & Name -->
+      <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
+        <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
+          <i class="fa-solid fa-calculator text-lg"></i>
+        </div>
+        <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
+          Calculator<span class="text-indigo-600">-Pro</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-1" aria-label="Main Navigation">
+        
+        <!-- Category 1: Age -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Age
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="age-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="birthday-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Birthday Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="age-difference-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Diffrence Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Time -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Time & Date
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="time-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Time Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="date-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Date Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="work-days-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Work Days Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="time-zone-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">TimeZone Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Converter -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Converter
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="unit-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Unit Converter</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="cgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">CGPA to Percentage</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to Percentage</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sgpa-to-cgpa-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to CGPA</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="marks-to-percentage-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Marks to Percentage</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4: Financial -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Financial
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sip-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SIP Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="emi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">EMI Loan Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="Compound-Interest-Calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Compound Interest Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 5: Health -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Health
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute right-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="bmi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">BMI Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="waist-to-hip-ratio-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">WHR Calculator</a>
+            </div>
+          </div>
+        </div>
+		  
+		 
+
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex md:hidden">
+        <button id="calc-mobile-menu-btn" type="button" class="p-2.5 rounded-xl text-slate-600 hover:text-indigo-600 hover:bg-slate-100/80 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors duration-200" aria-controls="calc-mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+          <svg id="calc-menu-icon" class="w-6 h-6 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="calc-close-icon" class="w-6 h-6 hidden transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile Full-Width Menu Container -->
+  <div id="calc-mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white shadow-xl transition-all duration-200 ease-in-out">
+    <div class="px-4 pt-3 pb-6 space-y-4">
+      
+      <!-- Mobile Category: Age -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Age</div>
+        <a href="age-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Calculator</a>
+		  <a href="birthday-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Birthday Calculator</a>
+		  <a href="age-difference-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Diffrence Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Time -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Time & Date</div>
+        <a href="time-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Time Calculator</a>
+		  <a href="date-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Date Calculator</a>
+		  <a href="work-days-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Work Days Calculator</a>
+		  <a href="time-zone-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">TimeZone Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Converter -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Converter</div>
+        <a href="javascript:void(0)" onclick="openCalculator('length')" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Unit Converter</a>
+		  <a href="cgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">CGPA to Percentage</a>
+		  <a href="sgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to Percentage</a>
+		  <a href="sgpa-to-cgpa-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to CGPA</a>
+		  <a href="marks-to-percentage-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Marks to Percentage</a>
+      </div>
+
+      <!-- Mobile Category: Financial -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Financial</div>
+        <a href="sip-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SIP Calculator</a>
+		  <a href="emi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">EMI Loan Calculator</a>
+		  <a href="Compound-Interest-Calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Compound Interest Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Health -->
+      <div>
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Health</div>
+        <a href="bmi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">BMI Calculator</a>
+		  <a href="waist-to-hip-ratio-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">WHR Calculator</a>
+      </div>
+		
+		
+
+    </div>
+  </div>
+</header>
+
+    <!-- Hero Section & Calculator Tool -->
+    <main class="flex-grow">
+        <section class="relative bg-gradient-to-b from-brand-50/80 via-slate-50 to-slate-50 pt-8 pb-12 sm:pt-12 sm:pb-16 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center mb-8 sm:mb-12">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-brand-100 text-brand-700 border border-brand-200/60 mb-4">
+                    <i class="fa-solid fa-sparkles text-brand-500"></i> Fast, Free & Precise Statistical Calculator
+                </span>
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                    Average Calculator – Calculate the Average of Numbers
+                </h1>
+                <p class="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
+                    Use our free Average Calculator to quickly find the average, or arithmetic mean, of a set of numbers. Enter your numbers below and get an accurate result instantly. The calculator is useful for students, teachers, researchers, businesses, and anyone who needs to calculate an average online.
+                </p>
+            </div>
+
+            <!-- Calculator Tool Box -->
+            <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-200/80 overflow-hidden">
+                
+                <!-- Calculation Type Toggle Bar -->
+                <div class="bg-slate-50/80 border-b border-slate-200/80 p-3 sm:p-4">
+                    <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2 text-center sm:text-left">
+                        Calculation Type
+                    </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-5 gap-1.5 bg-slate-200/60 p-1.5 rounded-2xl text-xs sm:text-sm font-medium">
+                        <button type="button" data-mode="mean" class="calc-type-btn flex items-center justify-center py-2.5 px-3 rounded-xl bg-white text-brand-700 font-semibold shadow-sm transition-all duration-200">
+                            <i class="fa-solid fa-calculator mr-1.5 hidden sm:inline"></i> Mean
+                        </button>
+                        <button type="button" data-mode="median" class="calc-type-btn flex items-center justify-center py-2.5 px-3 rounded-xl text-slate-600 hover:text-slate-900 transition-all duration-200">
+                            <i class="fa-solid fa-arrows-left-right-to-line mr-1.5 hidden sm:inline"></i> Median
+                        </button>
+                        <button type="button" data-mode="mode" class="calc-type-btn flex items-center justify-center py-2.5 px-3 rounded-xl text-slate-600 hover:text-slate-900 transition-all duration-200">
+                            <i class="fa-solid fa-layer-group mr-1.5 hidden sm:inline"></i> Mode
+                        </button>
+                        <button type="button" data-mode="range" class="calc-type-btn flex items-center justify-center py-2.5 px-3 rounded-xl text-slate-600 hover:text-slate-900 transition-all duration-200">
+                            <i class="fa-solid fa-ruler-horizontal mr-1.5 hidden sm:inline"></i> Range
+                        </button>
+                        <button type="button" data-mode="weighted" class="calc-type-btn col-span-2 sm:col-span-1 flex items-center justify-center py-2.5 px-3 rounded-xl text-slate-600 hover:text-slate-900 transition-all duration-200">
+                            <i class="fa-solid fa-weight-hanging mr-1.5 hidden sm:inline"></i> Weighted
+                        </button>
+                    </div>
+                </div>
+
+                <div class="p-4 sm:p-8">
+                    <!-- Input Method Mode Switcher (Bulk vs Itemized) -->
+                    <div class="flex items-center justify-between mb-4 pb-2 border-b border-slate-100" id="input-mode-container">
+                        <span class="text-sm font-semibold text-slate-700">Input Method:</span>
+                        <div class="flex items-center gap-2 bg-slate-100 p-1 rounded-xl text-xs font-medium">
+                            <button type="button" id="input-tab-bulk" class="px-3 py-1.5 rounded-lg bg-white text-slate-800 shadow-xs font-semibold">
+                                <i class="fa-solid fa-paragraph mr-1"></i> Bulk Text
+                            </button>
+                            <button type="button" id="input-tab-rows" class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-800">
+                                <i class="fa-solid fa-list-ol mr-1"></i> Individual Rows
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- BULK INPUT AREA -->
+                    <div id="bulk-input-section" class="space-y-3">
+                        <label for="numbers-input" class="block text-sm font-semibold text-slate-700">
+                            Enter Numbers <span class="text-xs font-normal text-slate-500">(separated by commas, spaces, or lines)</span>:
+                        </label>
+                        <textarea id="numbers-input" rows="4" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-2xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all duration-200 text-slate-800 font-mono text-sm leading-relaxed" placeholder="e.g. 10, 25.5, -4, 42, 100, 85"></textarea>
+                    </div>
+
+                    <!-- INDIVIDUAL ROWS INPUT AREA (HIDDEN BY DEFAULT) -->
+                    <div id="rows-input-section" class="hidden space-y-3">
+                        <div id="rows-container" class="space-y-2 max-h-60 overflow-y-auto pr-1">
+                            <!-- Dynamic Row Elements inserted via JS -->
+                        </div>
+                        <button type="button" id="add-row-btn" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-600 hover:text-brand-700 bg-brand-50 hover:bg-brand-100 px-3 py-2 rounded-xl transition-colors">
+                            <i class="fa-solid fa-plus"></i> Add Another Row
+                        </button>
+                    </div>
+
+                    <!-- WEIGHTED INPUT AREA (DYNAMIC WHEN WEIGHTED IS SELECTED) -->
+                    <div id="weighted-input-section" class="hidden space-y-3">
+                        <div class="text-xs text-slate-500 mb-2">Enter value and corresponding weight for each entry:</div>
+                        <div id="weighted-rows-container" class="space-y-2 max-h-64 overflow-y-auto pr-1">
+                            <!-- Dynamic Weighted Rows inserted via JS -->
+                        </div>
+                        <button type="button" id="add-weighted-row-btn" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-600 hover:text-brand-700 bg-brand-50 hover:bg-brand-100 px-3 py-2 rounded-xl transition-colors">
+                            <i class="fa-solid fa-plus"></i> Add Value & Weight
+                        </button>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="mt-6 flex flex-wrap items-center justify-between gap-3 pt-2">
+                        <div class="flex items-center gap-2">
+                            <button type="button" id="calc-btn" class="px-6 py-3 bg-brand-600 hover:bg-brand-700 text-white font-semibold rounded-xl shadow-lg shadow-brand-500/30 hover:shadow-brand-600/40 active:scale-95 transition-all duration-150 inline-flex items-center gap-2 text-sm sm:text-base">
+                                <i class="fa-solid fa-calculator"></i> Calculate
+                            </button>
+                            <button type="button" id="clear-btn" class="px-4 py-3 bg-slate-100 hover:bg-slate-200 text-slate-600 font-semibold rounded-xl active:scale-95 transition-all duration-150 text-sm sm:text-base">
+                                Clear
+                            </button>
+                        </div>
+                        <button type="button" id="sample-data-btn" class="px-3 py-2 text-xs font-medium text-slate-500 hover:text-brand-600 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl transition-colors inline-flex items-center gap-1.5">
+                            <i class="fa-solid fa-lightbulb text-amber-500"></i> Load Sample Data
+                        </button>
+                    </div>
+
+                    <!-- Real-Time Results Section -->
+                    <div id="results-card" class="mt-8 bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-6 text-white shadow-xl relative overflow-hidden">
+                        <!-- Decorative glow element -->
+                        <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-brand-500/20 rounded-full blur-2xl pointer-events-none"></div>
+
+                        <div class="flex items-center justify-between border-b border-slate-700/80 pb-4 mb-5">
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded-full bg-emerald-400 animate-ping"></span>
+                                <span class="text-xs font-semibold uppercase tracking-wider text-slate-400" id="result-mode-title">Result Summary</span>
+                            </div>
+                            <button type="button" id="copy-result-btn" class="text-xs bg-slate-800 hover:bg-slate-700 border border-slate-600 text-slate-200 px-3 py-1.5 rounded-lg transition-colors inline-flex items-center gap-1.5">
+                                <i class="fa-regular fa-copy"></i> Copy Results
+                            </button>
+                        </div>
+
+                        <!-- Main Highlight Result Box -->
+                        <div class="bg-slate-800/80 border border-slate-700 rounded-xl p-5 mb-6 text-center">
+                            <div class="text-xs sm:text-sm font-medium text-slate-400 mb-1" id="primary-result-label">Arithmetic Mean (Average)</div>
+                            <div class="text-3xl sm:text-4xl font-extrabold text-brand-300 tracking-tight font-mono my-1" id="primary-result-val">0</div>
+                            <div class="text-xs text-slate-400 mt-1" id="primary-result-sub">Enter numbers above to see immediate calculation.</div>
+                        </div>
+
+                        <!-- Breakdown Grid Metrics -->
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center mb-6">
+                            <div class="bg-slate-800/50 border border-slate-700/60 p-3 rounded-xl">
+                                <div class="text-xs text-slate-400 mb-1">Sum (Total)</div>
+                                <div class="text-lg font-bold font-mono text-white" id="stat-sum">0</div>
+                            </div>
+                            <div class="bg-slate-800/50 border border-slate-700/60 p-3 rounded-xl">
+                                <div class="text-xs text-slate-400 mb-1">Count (n)</div>
+                                <div class="text-lg font-bold font-mono text-white" id="stat-count">0</div>
+                            </div>
+                            <div class="bg-slate-800/50 border border-slate-700/60 p-3 rounded-xl">
+                                <div class="text-xs text-slate-400 mb-1">Min Value</div>
+                                <div class="text-lg font-bold font-mono text-white" id="stat-min">0</div>
+                            </div>
+                            <div class="bg-slate-800/50 border border-slate-700/60 p-3 rounded-xl">
+                                <div class="text-xs text-slate-400 mb-1">Max Value</div>
+                                <div class="text-lg font-bold font-mono text-white" id="stat-max">0</div>
+                            </div>
+                        </div>
+
+                        <!-- Secondary Statistical Metrics -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs mb-6">
+                            <div class="bg-slate-800/40 p-3 rounded-xl border border-slate-700/40 flex justify-between items-center">
+                                <span class="text-slate-400">Standard Deviation (Population):</span>
+                                <span class="font-mono font-semibold text-slate-200" id="stat-stddev">0</span>
+                            </div>
+                            <div class="bg-slate-800/40 p-3 rounded-xl border border-slate-700/40 flex justify-between items-center">
+                                <span class="text-slate-400">Variance:</span>
+                                <span class="font-mono font-semibold text-slate-200" id="stat-variance">0</span>
+                            </div>
+                        </div>
+
+                        <!-- Step-By-Step Solution Container -->
+                        <div class="bg-slate-950/60 rounded-xl p-4 border border-slate-800 text-xs sm:text-sm font-mono text-slate-300">
+                            <div class="flex items-center gap-2 text-brand-400 font-sans font-semibold mb-2">
+                                <i class="fa-solid fa-list-check"></i> Step-by-Step Calculation:
+                            </div>
+                            <div id="step-by-step-content" class="space-y-1.5 leading-relaxed text-slate-300">
+                                Enter valid numbers to view step-by-step mathematical output.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Container -->
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+
+            <!-- Section B: How to Use the Average Calculator -->
+            <section id="how-to-use" class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200/80">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-100 text-brand-600 text-sm">
+                        <i class="fa-solid fa-circle-play"></i>
+                    </span>
+                    How to Use the Average Calculator
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
+                        <div class="w-8 h-8 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center text-sm mb-3">1</div>
+                        <h3 class="font-bold text-slate-800 text-base mb-1">Enter Numbers</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Type or paste your numbers in the input box using commas, spaces, or lines.</p>
+                    </div>
+                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
+                        <div class="w-8 h-8 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center text-sm mb-3">2</div>
+                        <h3 class="font-bold text-slate-800 text-base mb-1">Select Type</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Choose your calculation type: Mean, Median, Mode, Range, or Weighted Average.</p>
+                    </div>
+                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
+                        <div class="w-8 h-8 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center text-sm mb-3">3</div>
+                        <h3 class="font-bold text-slate-800 text-base mb-1">Click Calculate</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Press the Calculate button or modify values for real-time statistical generation.</p>
+                    </div>
+                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
+                        <div class="w-8 h-8 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center text-sm mb-3">4</div>
+                        <h3 class="font-bold text-slate-800 text-base mb-1">View Results</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Review the instant answers alongside the full step-by-step breakdown.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section C: What is an Average? -->
+            <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200/80">
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">What is an Average?</h2>
+                <p class="text-slate-600 leading-relaxed mb-4">
+                    In mathematics and statistics, an <strong>average</strong> represents a single central value that summarizes a larger set of numerical data. It provides a quick snapshot of where the center of a data group lies, allowing easy comparison between different groups.
+                </p>
+                <div class="bg-brand-50/60 border-l-4 border-brand-500 p-4 rounded-r-xl my-4">
+                    <p class="text-sm text-brand-900 font-medium">
+                        <strong>Example:</strong> If five students score 70, 80, 85, 90, and 100 on an exam, the average score is 85. This single number summarizes the overall performance of the group.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Section D: Types of Average Explained -->
+            <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200/80 space-y-8">
+                <h2 class="text-2xl font-bold text-slate-900 border-b border-slate-100 pb-4">Types of Average Explained</h2>
+                
+                <!-- 1. Mean -->
+                <div class="space-y-2">
+                    <h3 class="text-lg font-bold text-brand-700 flex items-center gap-2">
+                        <i class="fa-solid fa-calculator text-sm"></i> 1. Arithmetic Mean (Simple Average)
+                    </h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        The arithmetic mean is the most common form of average. It is computed by summing all numbers in a dataset and dividing that total by the quantity of numbers.
+                    </p>
+                    <div class="bg-slate-50 p-3 rounded-lg text-xs font-mono text-slate-700">
+                        Formula: Mean = Sum of Values ÷ Number of Values
+                    </div>
+                    <p class="text-xs text-slate-500"><strong>When to use:</strong> Best for uniform data without extreme outliers (e.g., test scores, daily temperature averages).</p>
+                </div>
+
+                <!-- 2. Median -->
+                <div class="space-y-2 pt-4 border-t border-slate-100">
+                    <h3 class="text-lg font-bold text-brand-700 flex items-center gap-2">
+                        <i class="fa-solid fa-arrows-left-right-to-line text-sm"></i> 2. Median
+                    </h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        The median is the exact middle value when a dataset is arranged in ascending order. If the dataset has an even count of values, the median is the mean of the two central numbers.
+                    </p>
+                    <p class="text-xs text-slate-500"><strong>When to use:</strong> Ideal when data contains extreme outliers or skewed distributions (e.g., real estate prices, household incomes).</p>
+                </div>
+
+                <!-- 3. Mode -->
+                <div class="space-y-2 pt-4 border-t border-slate-100">
+                    <h3 class="text-lg font-bold text-brand-700 flex items-center gap-2">
+                        <i class="fa-solid fa-layer-group text-sm"></i> 3. Mode
+                    </h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        The mode is the number that appears most frequently within a dataset. A dataset can have one mode (unimodal), multiple modes (multimodal), or no mode at all.
+                    </p>
+                    <p class="text-xs text-slate-500"><strong>When to use:</strong> Best for categorical data or discovering popular choices (e.g., most purchased shoe size, top survey response).</p>
+                </div>
+
+                <!-- 4. Weighted Average -->
+                <div class="space-y-2 pt-4 border-t border-slate-100">
+                    <h3 class="text-lg font-bold text-brand-700 flex items-center gap-2">
+                        <i class="fa-solid fa-weight-hanging text-sm"></i> 4. Weighted Average
+                    </h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        A weighted average assigns varying levels of importance (weights) to individual values in the dataset before calculating the overall mean.
+                    </p>
+                    <div class="bg-slate-50 p-3 rounded-lg text-xs font-mono text-slate-700">
+                        Formula: Weighted Average = Σ (Value × Weight) ÷ Σ Weights
+                    </div>
+                    <p class="text-xs text-slate-500"><strong>When to use:</strong> Academic grade point averages (GPA), investment portfolio returns, inventory valuation.</p>
+                </div>
+
+                <!-- 5. Geometric & Harmonic Mean -->
+                <div class="space-y-2 pt-4 border-t border-slate-100">
+                    <h3 class="text-lg font-bold text-brand-700 flex items-center gap-2">
+                        <i class="fa-solid fa-chart-line text-sm"></i> 5. Geometric Mean & Harmonic Mean (Advanced)
+                    </h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        <strong>Geometric Mean:</strong> Calculated by taking the nth root of the product of n numbers. Used for exponential growth rates and financial returns.<br>
+                        <strong>Harmonic Mean:</strong> Calculated as the reciprocal of the arithmetic mean of reciprocals. Used for ratios and speeds.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Section E: Average Formula -->
+            <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200/80">
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">Average Formula</h2>
+                <p class="text-slate-600 text-sm mb-6">
+                    The fundamental mathematical formula for calculating the arithmetic average is straightforward:
+                </p>
+                
+                <div class="bg-slate-900 text-white p-6 rounded-2xl text-center shadow-inner space-y-4 font-mono">
+                    <div class="text-lg sm:text-xl text-brand-300 font-bold">
+                        Average = Sum of all values ÷ Number of values
+                    </div>
+                    <div class="text-slate-400 text-sm sm:text-base border-t border-slate-800 pt-4">
+                        Average = (x₁ + x₂ + x₃ + ... + xₙ) / n
+                    </div>
+                </div>
+
+                <div class="mt-6 text-xs text-slate-500 grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    <div><strong>x₁, x₂, x₃ ...</strong> = individual values in the sample</div>
+                    <div><strong>n</strong> = total quantity of values</div>
+                </div>
+            </section>
+
+            <!-- Section F: Average Calculator Examples -->
+            <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200/80">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">Average Calculator Examples</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                    
+                    <div class="border border-slate-200 rounded-xl p-4 bg-slate-50/50">
+                        <h3 class="font-bold text-slate-800 mb-2 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-brand-500"></span> Example 1: Simple Mean
+                        </h3>
+                        <p class="text-xs text-slate-600 mb-2">Find the average of: 12, 18, 25, 31</p>
+                        <div class="text-xs font-mono text-slate-700 bg-white p-2.5 rounded border border-slate-200">
+                            Sum = 12 + 18 + 25 + 31 = 86<br>
+                            Count = 4<br>
+                            Average = 86 ÷ 4 = <strong>21.5</strong>
+                        </div>
+                    </div>
+
+                    <div class="border border-slate-200 rounded-xl p-4 bg-slate-50/50">
+                        <h3 class="font-bold text-slate-800 mb-2 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-brand-500"></span> Example 2: Median Calculation
+                        </h3>
+                        <p class="text-xs text-slate-600 mb-2">Find the median of: 5, 2, 9, 1, 7</p>
+                        <div class="text-xs font-mono text-slate-700 bg-white p-2.5 rounded border border-slate-200">
+                            Ordered = 1, 2, 5, 7, 9<br>
+                            Middle Element (3rd value)<br>
+                            Median = <strong>5</strong>
+                        </div>
+                    </div>
+
+                    <div class="border border-slate-200 rounded-xl p-4 bg-slate-50/50">
+                        <h3 class="font-bold text-slate-800 mb-2 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-brand-500"></span> Example 3: Weighted Average (Grades)
+                        </h3>
+                        <p class="text-xs text-slate-600 mb-2">Exam (80, weight 60%), Homework (100, weight 40%)</p>
+                        <div class="text-xs font-mono text-slate-700 bg-white p-2.5 rounded border border-slate-200">
+                            (80 × 0.60) + (100 × 0.40) = 48 + 40<br>
+                            Weighted Average = <strong>88</strong>
+                        </div>
+                    </div>
+
+                    <div class="border border-slate-200 rounded-xl p-4 bg-slate-50/50">
+                        <h3 class="font-bold text-slate-800 mb-2 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-brand-500"></span> Example 4: Real-Life Salary
+                        </h3>
+                        <p class="text-xs text-slate-600 mb-2">Monthly salaries: $3000, $3200, $3100, $3500</p>
+                        <div class="text-xs font-mono text-slate-700 bg-white p-2.5 rounded border border-slate-200">
+                            Sum = $12,800<br>
+                            Count = 4<br>
+                            Average Salary = <strong>$3,200</strong>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Section G: How to Calculate the Average -->
+            <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200/80">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">How to Calculate the Average</h2>
+                <div class="space-y-4">
+                    <div class="flex items-start gap-4 p-4 bg-slate-50 rounded-xl border border-slate-100">
+                        <span class="font-bold text-brand-600 text-lg">Step 1:</span>
+                        <div>
+                            <h3 class="font-bold text-slate-800 text-sm">Add all the numbers together.</h3>
+                            <p class="text-xs font-mono text-slate-600 mt-1">10 + 20 + 30 + 40 = 100</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 bg-slate-50 rounded-xl border border-slate-100">
+                        <span class="font-bold text-brand-600 text-lg">Step 2:</span>
+                        <div>
+                            <h3 class="font-bold text-slate-800 text-sm">Count the total number of values.</h3>
+                            <p class="text-xs font-mono text-slate-600 mt-1">There are 4 values in total.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 bg-slate-50 rounded-xl border border-slate-100">
+                        <span class="font-bold text-brand-600 text-lg">Step 3:</span>
+                        <div>
+                            <h3 class="font-bold text-slate-800 text-sm">Divide the sum by the number of values.</h3>
+                            <p class="text-xs font-mono text-slate-600 mt-1">100 ÷ 4 = 25</p>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-xl font-bold text-center">
+                        Final Answer: Average = 25
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section H: Why Use Our Free Online Average Calculator? -->
+            <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200/80">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">Why Use Our Free Online Average Calculator?</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="p-4 rounded-xl border border-slate-100 bg-slate-50">
+                        <i class="fa-solid fa-bolt text-amber-500 text-xl mb-2"></i>
+                        <h3 class="font-bold text-slate-800 text-sm mb-1">Instant Results</h3>
+                        <p class="text-xs text-slate-600">Calculations update immediately as you type without waiting.</p>
+                    </div>
+                    <div class="p-4 rounded-xl border border-slate-100 bg-slate-50">
+                        <i class="fa-solid fa-lock text-emerald-500 text-xl mb-2"></i>
+                        <h3 class="font-bold text-slate-800 text-sm mb-1">100% Free & No Signup</h3>
+                        <p class="text-xs text-slate-600">Unlimited usage without registrations or paywalls.</p>
+                    </div>
+                    <div class="p-4 rounded-xl border border-slate-100 bg-slate-50">
+                        <i class="fa-solid fa-mobile-screen text-brand-500 text-xl mb-2"></i>
+                        <h3 class="font-bold text-slate-800 text-sm mb-1">Fully Responsive</h3>
+                        <p class="text-xs text-slate-600">Optimized for seamless experience on mobile, tablet, or desktop.</p>
+                    </div>
+                    <div class="p-4 rounded-xl border border-slate-100 bg-slate-50">
+                        <i class="fa-solid fa-database text-purple-500 text-xl mb-2"></i>
+                        <h3 class="font-bold text-slate-800 text-sm mb-1">Supports Large Datasets</h3>
+                        <p class="text-xs text-slate-600">Handle hundreds of numbers at once via simple text pasting.</p>
+                    </div>
+                    <div class="p-4 rounded-xl border border-slate-100 bg-slate-50">
+                        <i class="fa-solid fa-graduation-cap text-indigo-500 text-xl mb-2"></i>
+                        <h3 class="font-bold text-slate-800 text-sm mb-1">Detailed Steps</h3>
+                        <p class="text-xs text-slate-600">Learn math concepts easily with step-by-step mathematical explanations.</p>
+                    </div>
+                    <div class="p-4 rounded-xl border border-slate-100 bg-slate-50">
+                        <i class="fa-solid fa-shield-halved text-blue-500 text-xl mb-2"></i>
+                        <h3 class="font-bold text-slate-800 text-sm mb-1">Accurate & Reliable</h3>
+                        <p class="text-xs text-slate-600">Powered by verified numerical statistical formulas.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section I & K: When to Use & Who Can Use -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200/80">
+                    <h2 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-calendar-check text-brand-600"></i> When to Use an Average Calculator
+                    </h2>
+                    <ul class="space-y-2 text-xs sm:text-sm text-slate-600">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Calculate test scores & grades</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Calculate class averages</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Analyze survey results</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Calculate average product prices</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Compare numerical datasets</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Calculate scientific measurements</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Analyze business revenue trends</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Verify manual math homework</li>
+                    </ul>
+                </section>
+
+                <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200/80">
+                    <h2 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-users text-brand-600"></i> Who Can Use This Average Calculator?
+                    </h2>
+                    <ul class="space-y-2 text-xs sm:text-sm text-slate-600">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-user-graduate text-slate-400"></i> <strong>Students:</strong> Quick grade calculations</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-chalkboard-user text-slate-400"></i> <strong>Teachers:</strong> Class performance evaluation</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-microscope text-slate-400"></i> <strong>Researchers:</strong> Scientific statistical aggregation</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-briefcase text-slate-400"></i> <strong>Business Professionals:</strong> Sales tracking</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-chart-pie text-slate-400"></i> <strong>Data Analysts:</strong> Fast distribution metrics</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-house text-slate-400"></i> <strong>Parents:</strong> Homework assistance</li>
+                    </ul>
+                </section>
+            </div>
+
+            <!-- Section L: How to Use Our Average Calculator Summary -->
+            <section class="bg-gradient-to-r from-brand-600 to-indigo-700 text-white rounded-2xl p-6 sm:p-8 shadow-lg">
+                <h2 class="text-2xl font-bold mb-4">Quick Summary: How to Use Our Average Calculator</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 text-center text-xs sm:text-sm">
+                    <div class="bg-white/10 p-3 rounded-xl backdrop-blur-xs">
+                        <div class="font-bold text-brand-200 mb-1">1. Input</div>
+                        <p class="text-slate-100">Enter or paste your numbers</p>
+                    </div>
+                    <div class="bg-white/10 p-3 rounded-xl backdrop-blur-xs">
+                        <div class="font-bold text-brand-200 mb-1">2. Calculate</div>
+                        <p class="text-slate-100">Click Calculate Average</p>
+                    </div>
+                    <div class="bg-white/10 p-3 rounded-xl backdrop-blur-xs">
+                        <div class="font-bold text-brand-200 mb-1">3. Review</div>
+                        <p class="text-slate-100">View answer & full steps</p>
+                    </div>
+                    <div class="bg-white/10 p-3 rounded-xl backdrop-blur-xs">
+                        <div class="font-bold text-brand-200 mb-1">4. Repeat</div>
+                        <p class="text-slate-100">Clear & try another set</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section M: Frequently Asked Questions (FAQ) -->
+            <section id="faq-section" class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200/80">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Frequently Asked Questions</h2>
+                    <p class="text-xs sm:text-sm text-slate-500 mt-2">Everything you need to know about calculating averages online.</p>
+                </div>
+
+                <div class="space-y-3 max-w-3xl mx-auto" id="faq-accordion">
+                    
+                    <!-- Q1 -->
+                    <div class="border border-slate-200 rounded-xl overflow-hidden">
+                        <button type="button" class="faq-toggle w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
+                            <span>Q1. How do I calculate the average of numbers?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                        </button>
+                        <div class="accordion-content px-5 text-xs sm:text-sm text-slate-600 leading-relaxed bg-slate-50/50">
+                            <div class="py-4">To calculate the average (arithmetic mean) of numbers, add all the numbers together to find their total sum, then divide that sum by the total count of numbers in the dataset.</div>
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="border border-slate-200 rounded-xl overflow-hidden">
+                        <button type="button" class="faq-toggle w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
+                            <span>Q2. What is the difference between mean, median and mode?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                        </button>
+                        <div class="accordion-content px-5 text-xs sm:text-sm text-slate-600 leading-relaxed bg-slate-50/50">
+                            <div class="py-4">The <strong>Mean</strong> is the sum of values divided by count. The <strong>Median</strong> is the middle value when data is sorted in numerical order. The <strong>Mode</strong> is the number that appears most frequently.</div>
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="border border-slate-200 rounded-xl overflow-hidden">
+                        <button type="button" class="faq-toggle w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
+                            <span>Q3. How to calculate weighted average?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                        </button>
+                        <div class="accordion-content px-5 text-xs sm:text-sm text-slate-600 leading-relaxed bg-slate-50/50">
+                            <div class="py-4">Multiply each number by its specific weight factor, add all those multiplied values together, and divide by the total sum of all weight factors.</div>
+                        </div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="border border-slate-200 rounded-xl overflow-hidden">
+                        <button type="button" class="faq-toggle w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
+                            <span>Q4. Can I calculate average of percentages?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                        </button>
+                        <div class="accordion-content px-5 text-xs sm:text-sm text-slate-600 leading-relaxed bg-slate-50/50">
+                            <div class="py-4">Yes, if all percentages represent equal sample sizes or base values. If the base totals differ, you must calculate a weighted average based on sample sizes.</div>
+                        </div>
+                    </div>
+
+                    <!-- Q5 -->
+                    <div class="border border-slate-200 rounded-xl overflow-hidden">
+                        <button type="button" class="faq-toggle w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
+                            <span>Q5. Is this average calculator free?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                        </button>
+                        <div class="accordion-content px-5 text-xs sm:text-sm text-slate-600 leading-relaxed bg-slate-50/50">
+                            <div class="py-4">Yes, Calculator Pro's Average Calculator is 100% free with no account creation, subscription, or software downloads required.</div>
+                        </div>
+                    </div>
+
+                    <!-- Q6 -->
+                    <div class="border border-slate-200 rounded-xl overflow-hidden">
+                        <button type="button" class="faq-toggle w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
+                            <span>Q6. Does this tool work offline?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                        </button>
+                        <div class="accordion-content px-5 text-xs sm:text-sm text-slate-600 leading-relaxed bg-slate-50/50">
+                            <div class="py-4">Yes! Once the website page is loaded in your browser, all calculation scripts execute locally inside your web browser.</div>
+                        </div>
+                    </div>
+
+                    <!-- Q7 -->
+                    <div class="border border-slate-200 rounded-xl overflow-hidden">
+                        <button type="button" class="faq-toggle w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
+                            <span>Q7. How accurate is the online average calculator?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                        </button>
+                        <div class="accordion-content px-5 text-xs sm:text-sm text-slate-600 leading-relaxed bg-slate-50/50">
+                            <div class="py-4">Our tool utilizes double-precision floating-point arithmetic standards to guarantee precision up to 10 decimal places.</div>
+                        </div>
+                    </div>
+
+                    <!-- Q8 -->
+                    <div class="border border-slate-200 rounded-xl overflow-hidden">
+                        <button type="button" class="faq-toggle w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
+                            <span>Q8. Can I calculate average of negative numbers?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                        </button>
+                        <div class="accordion-content px-5 text-xs sm:text-sm text-slate-600 leading-relaxed bg-slate-50/50">
+                            <div class="py-4">Yes, negative numbers are completely supported. Simply enter the minus sign (-) before negative inputs (e.g. -10, 20, -5).</div>
+                        </div>
+                    </div>
+
+                    <!-- Q9 -->
+                    <div class="border border-slate-200 rounded-xl overflow-hidden">
+                        <button type="button" class="faq-toggle w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
+                            <span>Q9. What is the formula for average?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                        </button>
+                        <div class="accordion-content px-5 text-xs sm:text-sm text-slate-600 leading-relaxed bg-slate-50/50">
+                            <div class="py-4">The basic formula is: <code>Average = Sum of Values ÷ Number of Values</code> or mathematically <code>A = (x₁ + x₂ + ... + xₙ) / n</code>.</div>
+                        </div>
+                    </div>
+
+                    <!-- Q10 -->
+                    <div class="border border-slate-200 rounded-xl overflow-hidden">
+                        <button type="button" class="faq-toggle w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
+                            <span>Q10. How to find average in Excel vs Online Calculator?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                        </button>
+                        <div class="accordion-content px-5 text-xs sm:text-sm text-slate-600 leading-relaxed bg-slate-50/50">
+                            <div class="py-4">In Microsoft Excel, you write `=AVERAGE(A1:A10)`. Our online calculator delivers identical statistical accuracy without launching Excel.</div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Section N: Related Tools / Internal Links -->
+            <section id="related-tools" class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200/80">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                    <i class="fa-solid fa-toolbox text-brand-600"></i> Related Tools & Calculators
+                </h2>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                    <a href="#" class="p-4 rounded-xl border border-slate-100 bg-slate-50 hover:bg-brand-50 hover:border-brand-200 transition-all text-center group">
+                        <i class="fa-solid fa-percent text-slate-400 group-hover:text-brand-600 text-xl mb-2 transition-colors"></i>
+                        <div class="font-semibold text-slate-800 text-xs sm:text-sm group-hover:text-brand-600">Ratio Calculator</div>
+                    </a>
+                    <a href="#" class="p-4 rounded-xl border border-slate-100 bg-slate-50 hover:bg-brand-50 hover:border-brand-200 transition-all text-center group">
+                        <i class="fa-solid fa-flask text-slate-400 group-hover:text-brand-600 text-xl mb-2 transition-colors"></i>
+                        <div class="font-semibold text-slate-800 text-xs sm:text-sm group-hover:text-brand-600">Scientific Calculator</div>
+                    </a>
+                    <a href="#" class="p-4 rounded-xl border border-slate-100 bg-slate-50 hover:bg-brand-50 hover:border-brand-200 transition-all text-center group">
+                        <i class="fa-solid fa-receipt text-slate-400 group-hover:text-brand-600 text-xl mb-2 transition-colors"></i>
+                        <div class="font-semibold text-slate-800 text-xs sm:text-sm group-hover:text-brand-600">GST Calculator</div>
+                    </a>
+                    <a href="#" class="p-4 rounded-xl border border-slate-100 bg-slate-50 hover:bg-brand-50 hover:border-brand-200 transition-all text-center group">
+                        <i class="fa-solid fa-coins text-slate-400 group-hover:text-brand-600 text-xl mb-2 transition-colors"></i>
+                        <div class="font-semibold text-slate-800 text-xs sm:text-sm group-hover:text-brand-600">Simple Interest</div>
+                    </a>
+                    <a href="#" class="p-4 rounded-xl border border-slate-100 bg-slate-50 hover:bg-brand-50 hover:border-brand-200 transition-all text-center group">
+                        <i class="fa-solid fa-chart-line text-slate-400 group-hover:text-brand-600 text-xl mb-2 transition-colors"></i>
+                        <div class="font-semibold text-slate-800 text-xs sm:text-sm group-hover:text-brand-600">Compound Interest</div>
+                    </a>
+                    <a href="#" class="p-4 rounded-xl border border-slate-100 bg-slate-50 hover:bg-brand-50 hover:border-brand-200 transition-all text-center group">
+                        <i class="fa-solid fa-heart-pulse text-slate-400 group-hover:text-brand-600 text-xl mb-2 transition-colors"></i>
+                        <div class="font-semibold text-slate-800 text-xs sm:text-sm group-hover:text-brand-600">BMI Calculator</div>
+                    </a>
+                    <a href="#" class="p-4 rounded-xl border border-slate-100 bg-slate-50 hover:bg-brand-50 hover:border-brand-200 transition-all text-center group">
+                        <i class="fa-solid fa-cake-candles text-slate-400 group-hover:text-brand-600 text-xl mb-2 transition-colors"></i>
+                        <div class="font-semibold text-slate-800 text-xs sm:text-sm group-hover:text-brand-600">Age Calculator</div>
+                    </a>
+                    <a href="#" class="p-4 rounded-xl border border-slate-100 bg-slate-50 hover:bg-brand-50 hover:border-brand-200 transition-all text-center group">
+                        <i class="fa-solid fa-clock text-slate-400 group-hover:text-brand-600 text-xl mb-2 transition-colors"></i>
+                        <div class="font-semibold text-slate-800 text-xs sm:text-sm group-hover:text-brand-600">Time Calculator</div>
+                    </a>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Section O: Clean Multi-Column Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-sm border-t border-slate-800 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <!-- Col 1: About -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2 text-white font-bold text-lg">
+            <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
+              <i class="fa-solid fa-calculator"></i>
+            </div>
+            <span>Calculator<span class="text-indigo-400">-Pro</span></span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Calculator Pro provides free, fast, and clinically accurate online tools for health, financial, mathematical, and everyday conversion needs.
+          </p>
+          <div class="text-xs text-slate-500">
+            &copy; <span id="current-year">2026</span> Calculator Pro. All rights reserved.
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Quick Links</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Unit Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Length Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Weight Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Temperature Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Volume & Area Converter</a></li>
+          </ul>
+        </div>
+        <!-- Column 3: Tools & Resources -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Calculators</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="age-calculator.html" class="hover:text-white transition-colors">Age Calculator</a></li>
+            <li><a href="time-calculator.html" class="hover:text-white transition-colors">Time Calculator</a></li>
+            <li><a href="sip-calculator.html" class="hover:text-white transition-colors">SIP Financial Calculator</a></li>
+            <li><a href="bmi-calculator.html" class="hover:text-white transition-colors">BMI Health Calculator</a></li>
+            <li><a href="percentage-calculator.html" class="hover:text-white transition-colors">Percentage Calculator</a></li>
+          </ul>
+        </div>
+
+         <!-- Column 4: Legal & Contact -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Legal & Info</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Editorial Guidelines</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+    <!-- Vanilla JavaScript Implementation -->
+    <script>
+		<!-- Inline JavaScript for Toggle -->
+      
+        document.addEventListener('DOMContentLoaded', () => {
+          const btn = document.getElementById('calc-mobile-menu-btn');
+          const menu = document.getElementById('calc-mobile-menu');
+          const menuIcon = document.getElementById('calc-menu-icon');
+          const closeIcon = document.getElementById('calc-close-icon');
+
+          if (btn && menu) {
+            btn.addEventListener('click', () => {
+              const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+              btn.setAttribute('aria-expanded', !isExpanded);
+              menu.classList.toggle('hidden');
+              menuIcon.classList.toggle('hidden');
+              closeIcon.classList.toggle('hidden');
+            });
+          }
+        });
+		
+        document.addEventListener('DOMContentLoaded', () => {
+            // State Management Variables
+            let currentMode = 'mean'; // 'mean', 'median', 'mode', 'range', 'weighted'
+            let currentInputMethod = 'bulk'; // 'bulk', 'rows'
+
+            // DOM Elements
+            const bulkTextarea = document.getElementById('numbers-input');
+            const bulkSection = document.getElementById('bulk-input-section');
+            const rowsSection = document.getElementById('rows-input-section');
+            const rowsContainer = document.getElementById('rows-container');
+            const weightedSection = document.getElementById('weighted-input-section');
+            const weightedRowsContainer = document.getElementById('weighted-rows-container');
+            const inputModeContainer = document.getElementById('input-mode-container');
+
+            const calcTypeBtns = document.querySelectorAll('.calc-type-btn');
+            const inputTabBulk = document.getElementById('input-tab-bulk');
+            const inputTabRows = document.getElementById('input-tab-rows');
+
+            const calcBtn = document.getElementById('calc-btn');
+            const clearBtn = document.getElementById('clear-btn');
+            const sampleDataBtn = document.getElementById('sample-data-btn');
+            const addRowBtn = document.getElementById('add-row-btn');
+            const addWeightedRowBtn = document.getElementById('add-weighted-row-btn');
+            const copyResultBtn = document.getElementById('copy-result-btn');
+
+            // Result Display Elements
+            const resultModeTitle = document.getElementById('result-mode-title');
+            const primaryResultLabel = document.getElementById('primary-result-label');
+            const primaryResultVal = document.getElementById('primary-result-val');
+            const primaryResultSub = document.getElementById('primary-result-sub');
+
+            const statSum = document.getElementById('stat-sum');
+            const statCount = document.getElementById('stat-count');
+            const statMin = document.getElementById('stat-min');
+            const statMax = document.getElementById('stat-max');
+            const statStddev = document.getElementById('stat-stddev');
+            const statVariance = document.getElementById('stat-variance');
+            const stepByStepContent = document.getElementById('step-by-step-content');
+
+            // Initialize Dynamic Rows
+            function createRowInput(val = '') {
+                const div = document.createElement('div');
+                div.className = 'flex items-center gap-2 dynamic-row';
+                div.innerHTML = `
+                    <input type="number" step="any" value="${val}" class="row-num-input flex-1 px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-sm font-mono focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500" placeholder="Enter number">
+                    <button type="button" class="remove-row-btn p-2 text-slate-400 hover:text-red-500 rounded-lg hover:bg-slate-100 transition-colors">
+                        <i class="fa-solid fa-trash-can text-xs"></i>
+                    </button>
+                `;
+                div.querySelector('.remove-row-btn').addEventListener('click', () => {
+                    if (rowsContainer.children.length > 2) {
+                        div.remove();
+                        calculate();
+                    }
+                });
+                div.querySelector('input').addEventListener('input', calculate);
+                return div;
+            }
+
+            function createWeightedRowInput(val = '', weight = '') {
+                const div = document.createElement('div');
+                div.className = 'flex items-center gap-2 weighted-row';
+                div.innerHTML = `
+                    <input type="number" step="any" value="${val}" class="weighted-val-input flex-1 px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-sm font-mono focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500" placeholder="Value (x)">
+                    <input type="number" step="any" value="${weight}" class="weighted-weight-input flex-1 px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-sm font-mono focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500" placeholder="Weight (w)">
+                    <button type="button" class="remove-weighted-row-btn p-2 text-slate-400 hover:text-red-500 rounded-lg hover:bg-slate-100 transition-colors">
+                        <i class="fa-solid fa-trash-can text-xs"></i>
+                    </button>
+                `;
+                div.querySelector('.remove-weighted-row-btn').addEventListener('click', () => {
+                    if (weightedRowsContainer.children.length > 2) {
+                        div.remove();
+                        calculate();
+                    }
+                });
+                div.querySelectorAll('input').forEach(inp => inp.addEventListener('input', calculate));
+                return div;
+            }
+
+            function initDefaultRows() {
+                rowsContainer.innerHTML = '';
+                rowsContainer.appendChild(createRowInput('10'));
+                rowsContainer.appendChild(createRowInput('20'));
+                rowsContainer.appendChild(createRowInput('30'));
+                rowsContainer.appendChild(createRowInput('40'));
+
+                weightedRowsContainer.innerHTML = '';
+                weightedRowsContainer.appendChild(createWeightedRowInput('80', '0.6'));
+                weightedRowsContainer.appendChild(createWeightedRowInput('100', '0.4'));
+            }
+
+            initDefaultRows();
+
+            // Mode Switching Handler
+            calcTypeBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    calcTypeBtns.forEach(b => {
+                        b.classList.remove('bg-white', 'text-brand-700', 'font-semibold', 'shadow-sm');
+                        b.classList.add('text-slate-600');
+                    });
+                    btn.classList.add('bg-white', 'text-brand-700', 'font-semibold', 'shadow-sm');
+                    btn.classList.remove('text-slate-600');
+
+                    currentMode = btn.getAttribute('data-mode');
+
+                    if (currentMode === 'weighted') {
+                        inputModeContainer.classList.add('hidden');
+                        bulkSection.classList.add('hidden');
+                        rowsSection.classList.add('hidden');
+                        weightedSection.classList.remove('hidden');
+                    } else {
+                        inputModeContainer.classList.remove('hidden');
+                        weightedSection.classList.add('hidden');
+                        if (currentInputMethod === 'bulk') {
+                            bulkSection.classList.remove('hidden');
+                            rowsSection.classList.add('hidden');
+                        } else {
+                            bulkSection.classList.add('hidden');
+                            rowsSection.classList.remove('hidden');
+                        }
+                    }
+
+                    calculate();
+                });
+            });
+
+            // Input Method Switcher (Bulk vs Rows)
+            inputTabBulk.addEventListener('click', () => {
+                currentInputMethod = 'bulk';
+                inputTabBulk.classList.add('bg-white', 'text-slate-800', 'shadow-xs', 'font-semibold');
+                inputTabBulk.classList.remove('text-slate-600');
+                inputTabRows.classList.remove('bg-white', 'text-slate-800', 'shadow-xs', 'font-semibold');
+                inputTabRows.classList.add('text-slate-600');
+
+                bulkSection.classList.remove('hidden');
+                rowsSection.classList.add('hidden');
+                calculate();
+            });
+
+            inputTabRows.addEventListener('click', () => {
+                currentInputMethod = 'rows';
+                inputTabRows.classList.add('bg-white', 'text-slate-800', 'shadow-xs', 'font-semibold');
+                inputTabRows.classList.remove('text-slate-600');
+                inputTabBulk.classList.remove('bg-white', 'text-slate-800', 'shadow-xs', 'font-semibold');
+                inputTabBulk.classList.add('text-slate-600');
+
+                bulkSection.classList.add('hidden');
+                rowsSection.classList.remove('hidden');
+                calculate();
+            });
+
+            // Add Row Listeners
+            addRowBtn.addEventListener('click', () => {
+                rowsContainer.appendChild(createRowInput());
+            });
+
+            addWeightedRowBtn.addEventListener('click', () => {
+                weightedRowsContainer.appendChild(createWeightedRowInput());
+            });
+
+            // Parse Input Numbers
+            function getNumbers() {
+                if (currentMode === 'weighted') return [];
+
+                if (currentInputMethod === 'bulk') {
+                    const raw = bulkTextarea.value;
+                    if (!raw.trim()) return [];
+                    return raw
+                        .split(/[\s,\n]+/)
+                        .map(v => parseFloat(v))
+                        .filter(v => !isNaN(v));
+                } else {
+                    const inputs = rowsContainer.querySelectorAll('.row-num-input');
+                    const nums = [];
+                    inputs.forEach(i => {
+                        const val = parseFloat(i.value);
+                        if (!isNaN(val)) nums.push(val);
+                    });
+                    return nums;
+                }
+            }
+
+            function getWeightedData() {
+                const rows = weightedRowsContainer.querySelectorAll('.weighted-row');
+                const data = [];
+                rows.forEach(r => {
+                    const val = parseFloat(r.querySelector('.weighted-val-input').value);
+                    const weight = parseFloat(r.querySelector('.weighted-weight-input').value);
+                    if (!isNaN(val) && !isNaN(weight)) {
+                        data.push({ val, weight });
+                    }
+                });
+                return data;
+            }
+
+            // Calculation Logic
+            function calculate() {
+                if (currentMode === 'weighted') {
+                    calculateWeighted();
+                    return;
+                }
+
+                const nums = getNumbers();
+
+                if (nums.length === 0) {
+                    primaryResultVal.textContent = '0';
+                    primaryResultSub.textContent = 'Please enter valid numbers to calculate.';
+                    statSum.textContent = '0';
+                    statCount.textContent = '0';
+                    statMin.textContent = '0';
+                    statMax.textContent = '0';
+                    statStddev.textContent = '0';
+                    statVariance.textContent = '0';
+                    stepByStepContent.innerHTML = 'Enter valid numbers to view step-by-step mathematical output.';
+                    return;
+                }
+
+                const count = nums.length;
+                const sum = nums.reduce((acc, curr) => acc + curr, 0);
+                const mean = sum / count;
+                const min = Math.min(...nums);
+                const max = Math.max(...nums);
+
+                // Population Variance & Standard Deviation
+                const variance = nums.reduce((acc, curr) => acc + Math.pow(curr - mean, 2), 0) / count;
+                const stddev = Math.sqrt(variance);
+
+                // Update common stats
+                statSum.textContent = formatNumber(sum);
+                statCount.textContent = count;
+                statMin.textContent = formatNumber(min);
+                statMax.textContent = formatNumber(max);
+                statStddev.textContent = formatNumber(stddev);
+                statVariance.textContent = formatNumber(variance);
+
+                // Mode Specific Calculation
+                if (currentMode === 'mean') {
+                    resultModeTitle.textContent = 'Arithmetic Mean Result';
+                    primaryResultLabel.textContent = 'Arithmetic Mean (Average)';
+                    primaryResultVal.textContent = formatNumber(mean);
+                    primaryResultSub.textContent = `Sum (${formatNumber(sum)}) divided by count (${count})`;
+
+                    stepByStepContent.innerHTML = `
+                        1. Sum of all numbers: ${nums.join(' + ')} = <strong>${formatNumber(sum)}</strong><br>
+                        2. Total quantity of numbers (n): <strong>${count}</strong><br>
+                        3. Formula: Average = Sum ÷ Count<br>
+                        4. Calculation: ${formatNumber(sum)} ÷ ${count} = <strong class="text-brand-300">${formatNumber(mean)}</strong>
+                    `;
+                } else if (currentMode === 'median') {
+                    resultModeTitle.textContent = 'Median Result';
+                    primaryResultLabel.textContent = 'Median Value';
+
+                    const sorted = [...nums].sort((a, b) => a - b);
+                    let medianVal = 0;
+                    let stepsHtml = `1. Sort numbers in ascending order: ${sorted.join(', ')}<br>`;
+
+                    if (count % 2 !== 0) {
+                        const midIndex = Math.floor(count / 2);
+                        medianVal = sorted[midIndex];
+                        stepsHtml += `2. Dataset count is odd (${count}). The median is the middle value at position ${midIndex + 1}.<br>`;
+                        stepsHtml += `3. Median = <strong class="text-brand-300">${formatNumber(medianVal)}</strong>`;
+                    } else {
+                        const mid1 = sorted[count / 2 - 1];
+                        const mid2 = sorted[count / 2];
+                        medianVal = (mid1 + mid2) / 2;
+                        stepsHtml += `2. Dataset count is even (${count}). Take the average of the two central numbers (${mid1} and ${mid2}).<br>`;
+                        stepsHtml += `3. Calculation: (${mid1} + ${mid2}) ÷ 2 = <strong class="text-brand-300">${formatNumber(medianVal)}</strong>`;
+                    }
+
+                    primaryResultVal.textContent = formatNumber(medianVal);
+                    primaryResultSub.textContent = `Middle element in sorted list of ${count} values`;
+                    stepByStepContent.innerHTML = stepsHtml;
+
+                } else if (currentMode === 'mode') {
+                    resultModeTitle.textContent = 'Mode Result';
+                    primaryResultLabel.textContent = 'Mode (Most Frequent)';
+
+                    const freqMap = {};
+                    nums.forEach(n => freqMap[n] = (freqMap[n] || 0) + 1);
+
+                    let maxFreq = 0;
+                    for (const n in freqMap) {
+                        if (freqMap[n] > maxFreq) maxFreq = freqMap[n];
+                    }
+
+                    let modes = [];
+                    for (const n in freqMap) {
+                        if (freqMap[n] === maxFreq) modes.push(parseFloat(n));
+                    }
+
+                    if (maxFreq === 1 || modes.length === nums.length) {
+                        primaryResultVal.textContent = 'No Mode';
+                        primaryResultSub.textContent = 'All numbers appear with equal frequency (1 time).';
+                        stepByStepContent.innerHTML = `1. Frequency count: All values appear exactly once.<br>2. Result: No mode exists in this dataset.`;
+                    } else {
+                        primaryResultVal.textContent = modes.map(m => formatNumber(m)).join(', ');
+                        primaryResultSub.textContent = `Appears ${maxFreq} times in dataset.`;
+                        stepByStepContent.innerHTML = `
+                            1. Frequency breakdown: ${Object.entries(freqMap).map(([k,v]) => `${k} (${v}x)`).join(', ')}<br>
+                            2. Highest frequency: <strong>${maxFreq}</strong> times.<br>
+                            3. Mode(s) = <strong class="text-brand-300">${modes.map(m => formatNumber(m)).join(', ')}</strong>
+                        `;
+                    }
+
+                } else if (currentMode === 'range') {
+                    resultModeTitle.textContent = 'Range Result';
+                    primaryResultLabel.textContent = 'Statistical Range';
+
+                    const rangeVal = max - min;
+                    primaryResultVal.textContent = formatNumber(rangeVal);
+                    primaryResultSub.textContent = `Difference between Max (${formatNumber(max)}) and Min (${formatNumber(min)})`;
+
+                    stepByStepContent.innerHTML = `
+                        1. Maximum value in dataset = <strong>${formatNumber(max)}</strong><br>
+                        2. Minimum value in dataset = <strong>${formatNumber(min)}</strong><br>
+                        3. Formula: Range = Max - Min<br>
+                        4. Calculation: ${formatNumber(max)} - ${formatNumber(min)} = <strong class="text-brand-300">${formatNumber(rangeVal)}</strong>
+                    `;
+                }
+            }
+
+            function calculateWeighted() {
+                const data = getWeightedData();
+                resultModeTitle.textContent = 'Weighted Average Result';
+                primaryResultLabel.textContent = 'Weighted Average';
+
+                if (data.length === 0) {
+                    primaryResultVal.textContent = '0';
+                    primaryResultSub.textContent = 'Please enter valid values and weights.';
+                    statSum.textContent = '0';
+                    statCount.textContent = '0';
+                    statMin.textContent = '0';
+                    statMax.textContent = '0';
+                    statStddev.textContent = '0';
+                    statVariance.textContent = '0';
+                    stepByStepContent.innerHTML = 'Enter values and weights to view step-by-step mathematical output.';
+                    return;
+                }
+
+                let weightedSum = 0;
+                let totalWeight = 0;
+                const stepProducts = [];
+
+                data.forEach((d, idx) => {
+                    const prod = d.val * d.weight;
+                    weightedSum += prod;
+                    totalWeight += d.weight;
+                    stepProducts.push(`(${d.val} × ${d.weight})`);
+                });
+
+                if (totalWeight === 0) {
+                    primaryResultVal.textContent = 'Error';
+                    primaryResultSub.textContent = 'Sum of weights cannot equal zero.';
+                    return;
+                }
+
+                const weightedAvg = weightedSum / totalWeight;
+
+                primaryResultVal.textContent = formatNumber(weightedAvg);
+                primaryResultSub.textContent = `Weighted Sum (${formatNumber(weightedSum)}) ÷ Total Weight (${formatNumber(totalWeight)})`;
+
+                statSum.textContent = formatNumber(weightedSum);
+                statCount.textContent = data.length;
+                statMin.textContent = formatNumber(Math.min(...data.map(d => d.val)));
+                statMax.textContent = formatNumber(Math.max(...data.map(d => d.val)));
+                statStddev.textContent = 'N/A';
+                statVariance.textContent = 'N/A';
+
+                stepByStepContent.innerHTML = `
+                    1. Σ (Value × Weight) = ${stepProducts.join(' + ')} = <strong>${formatNumber(weightedSum)}</strong><br>
+                    2. Σ Weights = <strong>${formatNumber(totalWeight)}</strong><br>
+                    3. Formula: Weighted Average = Σ (x · w) ÷ Σ w<br>
+                    4. Calculation: ${formatNumber(weightedSum)} ÷ ${formatNumber(totalWeight)} = <strong class="text-brand-300">${formatNumber(weightedAvg)}</strong>
+                `;
+            }
+
+            function formatNumber(num) {
+                if (isNaN(num)) return '0';
+                if (Number.isInteger(num)) return num.toString();
+                return parseFloat(num.toFixed(4)).toString();
+            }
+
+            // Real-time Event Listeners
+            bulkTextarea.addEventListener('input', calculate);
+
+            calcBtn.addEventListener('click', calculate);
+
+            clearBtn.addEventListener('click', () => {
+                bulkTextarea.value = '';
+                initDefaultRows();
+                calculate();
+            });
+
+            sampleDataBtn.addEventListener('click', () => {
+                if (currentMode === 'weighted') {
+                    weightedRowsContainer.innerHTML = '';
+                    weightedRowsContainer.appendChild(createWeightedRowInput('85', '0.3'));
+                    weightedRowsContainer.appendChild(createWeightedRowInput('90', '0.5'));
+                    weightedRowsContainer.appendChild(createWeightedRowInput('78', '0.2'));
+                } else {
+                    bulkTextarea.value = '15, 24, 38, 42, 50, 65, 38, 80';
+                    initDefaultRows();
+                }
+                calculate();
+            });
+
+            // Copy Results Button
+            copyResultBtn.addEventListener('click', () => {
+                const textToCopy = `Average Calculator Result (${primaryResultLabel.textContent}): ${primaryResultVal.textContent}\nSum: ${statSum.textContent} | Count: ${statCount.textContent} | Min: ${statMin.textContent} | Max: ${statMax.textContent}\nCalculated with Calculator-Pro`;
+                
+                // Fallback copying mechanism
+                const textarea = document.createElement('textarea');
+                textarea.value = textToCopy;
+                document.body.appendChild(textarea);
+                textarea.select();
+                try {
+                    document.execCommand('copy');
+                    const origHtml = copyResultBtn.innerHTML;
+                    copyResultBtn.innerHTML = `<i class="fa-solid fa-check text-emerald-400"></i> Copied!`;
+                    setTimeout(() => {
+                        copyResultBtn.innerHTML = origHtml;
+                    }, 2000);
+                } catch (err) {
+                    console.error('Copy failed', err);
+                }
+                document.body.removeChild(textarea);
+            });
+
+            // Accordion Interactivity
+            const faqToggles = document.querySelectorAll('.faq-toggle');
+            faqToggles.forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    const content = toggle.nextElementSibling;
+                    const icon = toggle.querySelector('i');
+                    
+                    const isOpen = content.classList.contains('open');
+                    
+                    // Close all open FAQs
+                    document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
+                    document.querySelectorAll('.faq-toggle i').forEach(i => i.classList.remove('rotate-180'));
+
+                    if (!isOpen) {
+                        content.classList.add('open');
+                        icon.classList.add('rotate-180');
+                    }
+                });
+            });
+
+            // Initial Calculation Run
+            calculate();
+        });
+    </script>
+</body>
+</html>

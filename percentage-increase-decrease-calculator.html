@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Percentage Increase & Decrease Calculator | Discount Calculator</title>
+  <meta name="description" content="Free online Percentage Increase & Decrease Calculator and Discount Calculator. Instantly find % change, new value after increase/decrease, sale price & savings. Formulas + examples included.">
+  <meta name="keywords" content="percentage increase calculator, percentage decrease calculator, discount calculator, percentage change calculator, percent off calculator, sale price calculator, how to calculate percentage increase, original price after discount">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://calculatorpro.com/percentage-increase-decrease-calculator">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calculatorpro.com/percentage-increase-decrease-calculator">
+  <meta property="og:title" content="Percentage Increase & Decrease Calculator | Discount Calculator">
+  <meta property="og:description" content="Free online percentage increase calculator, percentage decrease calculator, and discount calculator with instant results, formulas, and real-world examples.">
+  <meta property="og:image" content="https://placehold.co/1200x630/2563eb/ffffff?text=Percentage+Increase+%26+Decrease+Calculator">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://calculatorpro.com/percentage-increase-decrease-calculator">
+  <meta property="twitter:title" content="Percentage Increase & Decrease Calculator | Discount Calculator">
+  <meta property="twitter:description" content="Calculate percentage increase, decrease, discount amount, and sale prices instantly with our free percentage increase calculator.">
+  <meta property="twitter:image" content="https://placehold.co/1200x630/2563eb/ffffff?text=Percentage+Increase+%26+Decrease+Calculator">
+
+  <!-- FontAwesome & Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+
+  <!-- Tailwind CSS CDN & Custom Config -->
+  
+
+  <link rel="stylesheet" href="./css/styles.css">
+
+  <!-- Structured Data JSON-LD (WebApplication, FAQPage, HowTo) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://calculatorpro.com/percentage-increase-decrease-calculator#webapp",
+        "name": "Percentage Increase & Decrease Calculator",
+        "url": "https://calculatorpro.com/percentage-increase-decrease-calculator",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "All",
+        "description": "Calculate percentage increase, percentage decrease, % change, and shopping discounts instantly with precise steps."
+      },
+      {
+        "@type": "HowTo",
+        "name": "How to Calculate Percentage Increase and Decrease",
+        "description": "Follow these steps to calculate the percentage change or discount using Calculator Pro.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Select Calculation Mode",
+            "text": "Choose whether you want to calculate Percentage Change, New Value, Original Value, or Shopping Discount."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Enter Initial Values",
+            "text": "Input the original value and final value, or enter original price and discount percentage."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "View Results and Steps",
+            "text": "Instantly review the total percentage increase, percentage decrease, net change, and step-by-step formula breakdown."
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I calculate percentage increase?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "To calculate percentage increase, subtract the starting value from the final value to find the difference. Divide that difference by the original starting value, then multiply the result by 100 to get the percentage. Using our online percentage increase calculator makes this calculation instant and error-free."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I calculate percentage decrease?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "To calculate percentage decrease, subtract the lower final value from the initial starting value. Divide that positive drop by the original starting number and multiply by 100. Alternatively, subtracting the new value from old value yields a negative result, indicating a clear percentage decrease."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the formula for discount percentage?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The discount percentage formula determines how much you save off the list price. Discount Amount = Original Price × (Discount % / 100). Final Sale Price = Original Price − Discount Amount. You can also calculate original price after discount by dividing the sale price by (1 − Discount % / 100)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How to find original price after discount?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "To find the original price before a discount was applied, convert the discount rate into a decimal, subtract it from 1, and divide the actual sale price by this decimal factor. Formula: Original Price = Sale Price / (1 − Discount / 100). Our discount calculator does this automatically."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Difference between markup and discount?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Markup is an addition to the cost price of a product to determine selling price, creating a profit margin for sellers. Discount is a percentage reduction applied to an existing retail price to lower the cost for customers. Markup increases value whereas discount decreases it."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I calculate successive percentage changes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, successive or stacked percentage changes (like consecutive discounts of 20% and 10%) are calculated sequentially rather than simply adding the percentages together. A 20% discount followed by 10% off equals an effective 28% total discount, not 30%, because the second discount applies to the reduced amount."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is this calculator free to use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! The percentage increase calculator and discount calculator on Calculator Pro are 100% free with unlimited usage. There are no registration forms, hidden fees, or premium subscriptions required. You can use it anytime on mobile, desktop, or tablet devices."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+<!-- Header Provided Code -->
+<header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      
+      <!-- Brand Logo & Name -->
+      <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
+        <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
+          <i class="fa-solid fa-calculator text-lg"></i>
+        </div>
+        <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
+          Calculator<span class="text-indigo-600">-Pro</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-1" aria-label="Main Navigation">
+        
+        <!-- Category 1: Age -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Age
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="age-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="birthday-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Birthday Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="age-difference-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Diffrence Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Time -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Time & Date
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="time-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Time Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="date-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Date Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="work-days-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Work Days Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="time-zone-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">TimeZone Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Converter -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Converter
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="unit-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Unit Converter</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="cgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">CGPA to Percentage</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to Percentage</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sgpa-to-cgpa-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to CGPA</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="marks-to-percentage-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Marks to Percentage</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4: Financial -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Financial
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sip-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SIP Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="emi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">EMI Loan Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="Compound-Interest-Calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Compound Interest Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 5: Health -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Health
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute right-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="bmi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">BMI Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="waist-to-hip-ratio-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">WHR Calculator</a>
+            </div>
+          </div>
+        </div>
+		  
+		 
+
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex md:hidden">
+        <button id="calc-mobile-menu-btn" type="button" class="p-2.5 rounded-xl text-slate-600 hover:text-indigo-600 hover:bg-slate-100/80 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors duration-200" aria-controls="calc-mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+          <svg id="calc-menu-icon" class="w-6 h-6 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="calc-close-icon" class="w-6 h-6 hidden transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile Full-Width Menu Container -->
+  <div id="calc-mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white shadow-xl transition-all duration-200 ease-in-out">
+    <div class="px-4 pt-3 pb-6 space-y-4">
+      
+      <!-- Mobile Category: Age -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Age</div>
+        <a href="age-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Calculator</a>
+		  <a href="birthday-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Birthday Calculator</a>
+		  <a href="age-difference-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Diffrence Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Time -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Time & Date</div>
+        <a href="time-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Time Calculator</a>
+		  <a href="date-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Date Calculator</a>
+		  <a href="work-days-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Work Days Calculator</a>
+		  <a href="time-zone-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">TimeZone Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Converter -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Converter</div>
+        <a href="javascript:void(0)" onclick="openCalculator('length')" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Unit Converter</a>
+		  <a href="cgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">CGPA to Percentage</a>
+		  <a href="sgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to Percentage</a>
+		  <a href="sgpa-to-cgpa-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to CGPA</a>
+		  <a href="marks-to-percentage-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Marks to Percentage</a>
+      </div>
+
+      <!-- Mobile Category: Financial -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Financial</div>
+        <a href="sip-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SIP Calculator</a>
+		  <a href="emi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">EMI Loan Calculator</a>
+		  <a href="Compound-Interest-Calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Compound Interest Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Health -->
+      <div>
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Health</div>
+        <a href="bmi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">BMI Calculator</a>
+		  <a href="waist-to-hip-ratio-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">WHR Calculator</a>
+      </div>
+		
+		
+
+    </div>
+  </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+
+  <!-- Hero Section -->
+  <section class="text-center max-w-4xl mx-auto mb-10">
+    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-50 border border-brand-200 text-brand-700 text-xs font-semibold uppercase tracking-wide mb-4 animate-pulse-glow">
+      <i class="fa-solid fa-bolt text-brand-500"></i> Free &amp; Instant Financial Tool
+    </div>
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+      Percentage Increase &amp; Decrease Calculator <span class="text-brand-600">+ Discount Calculator</span>
+    </h1>
+    <p class="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
+      Use this free <strong>Percentage Increase &amp; Decrease Calculator</strong> to find how much a value has gone up or down. Easily evaluate percentage changes, price markups, and calculate shopping savings with our integrated <strong>Discount Calculator</strong>. Instant accurate results with step-by-step formulas and real-life examples.
+    </p>
+  </section>
+
+  <!-- Main Calculator Card -->
+  <section class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl shadow-slate-200/60 border border-slate-100 overflow-hidden mb-16">
+    
+    <!-- Outer Tabs -->
+    <div class="flex border-b border-slate-200 bg-slate-50/80 p-1.5 gap-1.5 sm:gap-2">
+      <button id="tab-pct-btn" onclick="switchMainTab('pct')" class="flex-1 py-3 px-4 rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center gap-2 transition-all duration-200 bg-white text-brand-600 shadow-sm border border-slate-200/60">
+        <i class="fa-solid fa-chart-line"></i> Percentage Increase / Decrease Calculator
+      </button>
+      <button id="tab-disc-btn" onclick="switchMainTab('disc')" class="flex-1 py-3 px-4 rounded-xl text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-slate-100/60">
+        <i class="fa-solid fa-tags"></i> Discount Calculator
+      </button>
+    </div>
+
+    <!-- TAB 1: PERCENTAGE INCREASE / DECREASE CALCULATOR -->
+    <div id="tab-pct-content" class="p-6 sm:p-8">
+      
+      <!-- Sub Modes Selector -->
+      <div class="mb-6 flex flex-wrap gap-2">
+        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider w-full mb-1">Select Mode:</span>
+        <button id="mode-pct-change" onclick="setPctMode('change')" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-brand-50 text-brand-700 border border-brand-200 transition-all">
+          1. Calculate % Change
+        </button>
+        <button id="mode-pct-apply" onclick="setPctMode('apply')" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all">
+          2. Calculate New Value after Increase/Decrease
+        </button>
+        <button id="mode-pct-orig" onclick="setPctMode('orig')" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all">
+          3. Find Original Value
+        </button>
+      </div>
+
+      <!-- Mode 1: % Change Fields -->
+      <div id="pct-fields-change" class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div>
+          <label for="pct-old-val" class="block text-sm font-medium text-slate-700 mb-1">Starting / Original Value</label>
+          <div class="relative">
+            <input type="number" id="pct-old-val" placeholder="e.g. 100" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-slate-800 transition-all" oninput="calcPctChange()">
+            <span class="absolute right-3 top-2.5 text-slate-400 text-sm"><i class="fa-solid fa-hashtag"></i></span>
+          </div>
+        </div>
+        <div>
+          <label for="pct-new-val" class="block text-sm font-medium text-slate-700 mb-1">Final / New Value</label>
+          <div class="relative">
+            <input type="number" id="pct-new-val" placeholder="e.g. 150" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-slate-800 transition-all" oninput="calcPctChange()">
+            <span class="absolute right-3 top-2.5 text-slate-400 text-sm"><i class="fa-solid fa-hashtag"></i></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mode 2: New Value Fields -->
+      <div id="pct-fields-apply" class="grid grid-cols-1 md:grid-cols-3 gap-5 hidden">
+        <div>
+          <label for="pct-base-val" class="block text-sm font-medium text-slate-700 mb-1">Original Price / Amount</label>
+          <input type="number" id="pct-base-val" placeholder="e.g. 200" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-slate-800" oninput="calcPctApply()">
+        </div>
+        <div>
+          <label for="pct-rate-val" class="block text-sm font-medium text-slate-700 mb-1">Percentage Rate (%)</label>
+          <input type="number" id="pct-rate-val" placeholder="e.g. 15" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-slate-800" oninput="calcPctApply()">
+        </div>
+        <div>
+          <label for="pct-type-select" class="block text-sm font-medium text-slate-700 mb-1">Action Type</label>
+          <select id="pct-type-select" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-slate-800 bg-white" onchange="calcPctApply()">
+            <option value="increase">Increase (+)</option>
+            <option value="decrease">Decrease (-)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Mode 3: Original Value Fields -->
+      <div id="pct-fields-orig" class="grid grid-cols-1 md:grid-cols-3 gap-5 hidden">
+        <div>
+          <label for="pct-final-orig" class="block text-sm font-medium text-slate-700 mb-1">Final Result / Price</label>
+          <input type="number" id="pct-final-orig" placeholder="e.g. 120" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-slate-800" oninput="calcPctOrig()">
+        </div>
+        <div>
+          <label for="pct-change-rate" class="block text-sm font-medium text-slate-700 mb-1">Percentage Rate (%)</label>
+          <input type="number" id="pct-change-rate" placeholder="e.g. 20" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-slate-800" oninput="calcPctOrig()">
+        </div>
+        <div>
+          <label for="pct-orig-type" class="block text-sm font-medium text-slate-700 mb-1">Applied Change</label>
+          <select id="pct-orig-type" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-slate-800 bg-white" onchange="calcPctOrig()">
+            <option value="increase">It Was Increased (+)</option>
+            <option value="decrease">It Was Decreased (-)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Percentage Results Box -->
+      <div class="mt-8 p-6 bg-slate-900 text-white rounded-xl shadow-inner relative overflow-hidden">
+        <div class="absolute -right-8 -bottom-8 w-32 h-32 bg-brand-500/20 rounded-full blur-xl pointer-events-none"></div>
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div>
+            <span class="text-xs font-semibold text-brand-300 uppercase tracking-widest block mb-1">Primary Result</span>
+            <div class="text-3xl sm:text-4xl font-extrabold tracking-tight flex items-center gap-3">
+              <span id="pct-primary-result">0%</span>
+              <span id="pct-badge" class="text-xs font-bold px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 hidden">
+                <i class="fa-solid fa-arrow-up"></i> Increase
+              </span>
+            </div>
+            <p id="pct-sub-result" class="text-sm text-slate-300 mt-1">Difference: 0</p>
+          </div>
+          <button onclick="resetPctCalc()" class="self-start sm:self-auto px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white text-xs font-semibold transition-colors border border-slate-700 flex items-center gap-1.5">
+            <i class="fa-solid fa-rotate-right"></i> Reset
+          </button>
+        </div>
+
+        <!-- Formula Breakdown Accordion -->
+        <div class="mt-4 pt-4 border-t border-slate-800 text-xs text-slate-400">
+          <p id="pct-formula-text"><strong class="text-slate-200">Formula Step:</strong> Percentage Change = ((New Value - Old Value) / Old Value) × 100</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TAB 2: DISCOUNT CALCULATOR -->
+    <div id="tab-disc-content" class="p-6 sm:p-8 hidden">
+      
+      <!-- Sub Modes Selector -->
+      <div class="mb-6 flex flex-wrap gap-2">
+        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider w-full mb-1">Discount Mode:</span>
+        <button id="mode-disc-standard" onclick="setDiscMode('standard')" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-brand-50 text-brand-700 border border-brand-200 transition-all">
+          Standard Discount
+        </button>
+        <button id="mode-disc-orig" onclick="setDiscMode('orig')" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all">
+          Find Original Price
+        </button>
+        <button id="mode-disc-stacked" onclick="setDiscMode('stacked')" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all">
+          Stacked / Double Coupons
+        </button>
+      </div>
+
+      <!-- Mode 1: Standard Discount Fields -->
+      <div id="disc-fields-standard" class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div>
+          <label for="disc-orig-price" class="block text-sm font-medium text-slate-700 mb-1">Original Retail Price ($)</label>
+          <input type="number" id="disc-orig-price" placeholder="e.g. 80" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-slate-800" oninput="calcDiscStandard()">
+        </div>
+        <div>
+          <label for="disc-percent" class="block text-sm font-medium text-slate-700 mb-1">Discount Rate (% Off)</label>
+          <input type="number" id="disc-percent" placeholder="e.g. 25" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-slate-800" oninput="calcDiscStandard()">
+        </div>
+      </div>
+
+      <!-- Mode 2: Find Original Price Fields -->
+      <div id="disc-fields-orig" class="grid grid-cols-1 md:grid-cols-2 gap-5 hidden">
+        <div>
+          <label for="disc-sale-price-input" class="block text-sm font-medium text-slate-700 mb-1">Final Sale Price ($)</label>
+          <input type="number" id="disc-sale-price-input" placeholder="e.g. 60" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-slate-800" oninput="calcDiscOrig()">
+        </div>
+        <div>
+          <label for="disc-percent-applied" class="block text-sm font-medium text-slate-700 mb-1">Discount Rate Applied (%)</label>
+          <input type="number" id="disc-percent-applied" placeholder="e.g. 20" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-slate-800" oninput="calcDiscOrig()">
+        </div>
+      </div>
+
+      <!-- Mode 3: Stacked Coupons Fields -->
+      <div id="disc-fields-stacked" class="grid grid-cols-1 md:grid-cols-3 gap-5 hidden">
+        <div>
+          <label for="disc-stacked-price" class="block text-sm font-medium text-slate-700 mb-1">Original Price ($)</label>
+          <input type="number" id="disc-stacked-price" placeholder="e.g. 100" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-slate-800" oninput="calcDiscStacked()">
+        </div>
+        <div>
+          <label for="disc-coupon1" class="block text-sm font-medium text-slate-700 mb-1">First Discount (%)</label>
+          <input type="number" id="disc-coupon1" placeholder="e.g. 20" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-slate-800" oninput="calcDiscStacked()">
+        </div>
+        <div>
+          <label for="disc-coupon2" class="block text-sm font-medium text-slate-700 mb-1">Extra Coupon (%)</label>
+          <input type="number" id="disc-coupon2" placeholder="e.g. 10" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-slate-800" oninput="calcDiscStacked()">
+        </div>
+      </div>
+
+      <!-- Discount Results Box -->
+      <div class="mt-8 p-6 bg-slate-900 text-white rounded-xl shadow-inner relative overflow-hidden">
+        <div class="absolute -right-8 -bottom-8 w-32 h-32 bg-emerald-500/20 rounded-full blur-xl pointer-events-none"></div>
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div>
+            <span class="text-xs font-semibold text-emerald-400 uppercase tracking-widest block mb-1">Final Sale Price</span>
+            <div class="text-3xl sm:text-4xl font-extrabold tracking-tight flex items-center gap-3">
+              <span id="disc-primary-result">$0.00</span>
+              <span id="disc-savings-badge" class="text-xs font-bold px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                You Save: $0.00
+              </span>
+            </div>
+            <p id="disc-sub-result" class="text-sm text-slate-300 mt-1">Total Discount Percentage: 0%</p>
+          </div>
+          <button onclick="resetDiscCalc()" class="self-start sm:self-auto px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white text-xs font-semibold transition-colors border border-slate-700 flex items-center gap-1.5">
+            <i class="fa-solid fa-rotate-right"></i> Reset
+          </button>
+        </div>
+
+        <div class="mt-4 pt-4 border-t border-slate-800 text-xs text-slate-400">
+          <p id="disc-formula-text"><strong class="text-slate-200">Discount Calculation:</strong> Sale Price = Original Price - (Original Price × Discount / 100)</p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Main Grid Content with Sticky TOC -->
+  <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+
+    <!-- Sticky Table of Contents (Desktop Sidebar) -->
+    <aside class="hidden lg:block lg:col-span-1">
+      <div class="sticky top-24 bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm space-y-3">
+        <div class="flex items-center gap-2 pb-3 border-b border-slate-100 font-bold text-slate-800 text-sm">
+          <i class="fa-solid fa-list-ul text-brand-600"></i> Table of Contents
+        </div>
+        <nav class="space-y-2 text-xs font-medium text-slate-600">
+          <a href="#how-to-use-pct" class="block hover:text-brand-600 transition-colors">1. Use Percentage Calculator</a>
+          <a href="#pct-formula" class="block hover:text-brand-600 transition-colors">2. Percentage Formulas</a>
+          <a href="#how-to-use-disc" class="block hover:text-brand-600 transition-colors">3. Use Discount Calculator</a>
+          <a href="#disc-formula" class="block hover:text-brand-600 transition-colors">4. Discount Formulas</a>
+          <a href="#real-life-examples" class="block hover:text-brand-600 transition-colors">5. Real-Life Examples</a>
+          <a href="#comparison-table" class="block hover:text-brand-600 transition-colors">6. Key Differences</a>
+          <a href="#common-mistakes" class="block hover:text-brand-600 transition-colors">7. Common Pitfalls</a>
+          <a href="#faq-section" class="block hover:text-brand-600 transition-colors">8. FAQ Schema Answers</a>
+          <a href="#related-calcs" class="block hover:text-brand-600 transition-colors">9. Related Calculators</a>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Detailed Content Area -->
+    <article class="lg:col-span-3 space-y-12">
+
+      <!-- Section C: How to Use Percentage Calculator -->
+      <section id="how-to-use-pct" class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm scroll-mt-24">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+          <i class="fa-solid fa-circle-info text-brand-600"></i> How to Use the Percentage Increase &amp; Decrease Calculator
+        </h2>
+        <p class="text-slate-600 leading-relaxed mb-4">
+          Calculating relative changes between two numerical values is essential for budgeting, stock analysis, business reports, and academic study. Our online <strong>percentage increase calculator</strong> simplifies these multi-step math problems into immediate results:
+        </p>
+        <ol class="list-decimal pl-5 space-y-2 text-slate-600 text-sm sm:text-base leading-relaxed">
+          <li><strong>Select your calculation goal:</strong> Choose between measuring the percentage change between two numbers, computing a new final amount after applying a known percentage, or finding the initial original starting number.</li>
+          <li><strong>Enter original starting value:</strong> Input your initial baseline number (e.g., last year's revenue, starting weight, or previous salary).</li>
+          <li><strong>Input new final value or percentage rate:</strong> Provide the ending number or the percentage adjustment rate.</li>
+          <li><strong>Review instant results:</strong> Read the clear net percentage change, total difference, and full equation explanation below.</li>
+        </ol>
+      </section>
+
+      <!-- Section D: Percentage Increase & Decrease Formula -->
+      <section id="pct-formula" class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm scroll-mt-24">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+          <i class="fa-solid fa-square-root-variable text-brand-600"></i> Percentage Increase &amp; Decrease Formula
+        </h2>
+        <p class="text-slate-600 leading-relaxed mb-4">
+          To measure the proportional shift between an initial value ($V_{old}$) and a final value ($V_{new}$), mathematical formulas evaluate the relative difference against the starting base:
+        </p>
+
+        <!-- Formula Highlight Box -->
+        <div class="bg-brand-50/70 border-l-4 border-brand-600 p-4 rounded-r-xl my-4 text-slate-800 font-mono text-xs sm:text-sm space-y-1">
+          <p><strong>Percentage Change</strong> = ((New Value − Old Value) / Old Value) × 100</p>
+          <p><strong>New Value After Increase</strong> = Original Value × (1 + Percentage / 100)</p>
+          <p><strong>New Value After Decrease</strong> = Original Value × (1 − Percentage / 100)</p>
+        </div>
+
+        <div class="space-y-6 mt-6">
+          <!-- H3 Percentage Increase Example -->
+          <div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Percentage Increase Example</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Suppose an employee's hourly wage increases from <strong>$20</strong> to <strong>$25</strong>. What is the total percentage increase?
+            </p>
+            <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs text-slate-700 font-mono mt-2">
+              Step 1: Difference = 25 − 20 = 5<br>
+              Step 2: Divide by Old Value = 5 / 20 = 0.25<br>
+              Step 3: Multiply by 100 = 0.25 × 100 = <strong>+25% Percentage Increase</strong>
+            </div>
+          </div>
+
+          <!-- H3 Percentage Decrease Example -->
+          <div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Percentage Decrease Example</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              A laptop's price drops from <strong>$800</strong> down to <strong>$600</strong> during a promotional clearance sale. What is the total percentage decrease?
+            </p>
+            <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs text-slate-700 font-mono mt-2">
+              Step 1: Difference = 600 − 800 = -200<br>
+              Step 2: Divide by Old Value = -200 / 800 = -0.25<br>
+              Step 3: Multiply by 100 = -0.25 × 100 = <strong>-25% Percentage Decrease</strong>
+            </div>
+          </div>
+
+          <!-- H3 Reverse Calculation -->
+          <div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Reverse Calculation (Find Original Value)</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              If a product costs <strong>$120</strong> after experiencing a <strong>20% price hike</strong>, what was the initial original price?
+            </p>
+            <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs text-slate-700 font-mono mt-2">
+              Formula: Original = Final / (1 + Rate/100)<br>
+              Original = 120 / (1 + 0.20) = 120 / 1.20 = <strong>$100 Original Price</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section E: How to Use Discount Calculator -->
+      <section id="how-to-use-disc" class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm scroll-mt-24">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+          <i class="fa-solid fa-basket-shopping text-brand-600"></i> How to Use the Discount Calculator
+        </h2>
+        <p class="text-slate-600 leading-relaxed mb-4">
+          Finding exact sale prices while shopping ensures you stay within budget and recognize true savings. Our <strong>discount calculator</strong> handles simple percentage off, reverse price calculations, and complex stacked store coupons:
+        </p>
+        <ol class="list-decimal pl-5 space-y-2 text-slate-600 text-sm sm:text-base leading-relaxed">
+          <li><strong>Enter Retail Price:</strong> Type the sticker price printed on the store tag.</li>
+          <li><strong>Input Discount Percentage:</strong> Specify the percentage discount offer (e.g., 15%, 30%, 50% off).</li>
+          <li><strong>Add Stacked Coupons (Optional):</strong> If you have an extra promo code or store loyalty coupon, switch to stacked mode to calculate combined discounts.</li>
+          <li><strong>View Exact Savings:</strong> Check your final checkout total alongside total dollars saved.</li>
+        </ol>
+      </section>
+
+      <!-- Section F: Discount Calculator Formula -->
+      <section id="disc-formula" class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm scroll-mt-24">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+          <i class="fa-solid fa-percent text-brand-600"></i> Discount Calculator Formula
+        </h2>
+        <p class="text-slate-600 leading-relaxed mb-4">
+          Calculating promotional discounts requires determining the exact savings amount subtracted from retail sticker price:
+        </p>
+
+        <div class="bg-emerald-50/80 border-l-4 border-emerald-600 p-4 rounded-r-xl my-4 text-slate-800 font-mono text-xs sm:text-sm space-y-1">
+          <p><strong>Discount Amount</strong> = Original Price × (Discount % / 100)</p>
+          <p><strong>Sale Price</strong> = Original Price − Discount Amount</p>
+          <p><strong>Reverse Original Price</strong> = Sale Price / (1 − Discount % / 100)</p>
+        </div>
+
+        <div class="space-y-6 mt-6">
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Discount Example (With Numbers)</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            A jacket listed at <strong>$150</strong> is offered at a <strong>30% percent off discount</strong>.
+          </p>
+          <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs text-slate-700 font-mono">
+            Discount Amount = $150 × (30 / 100) = $45 Savings<br>
+            Final Sale Price = $150 − $45 = <strong>$105 Checkout Price</strong>
+          </div>
+
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Multiple Discounts / Stacked Coupons</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            When combining a <strong>20% store sale</strong> with an <strong>extra 10% coupon code</strong> on a $100 item, percentages are non-additive:
+          </p>
+          <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs text-slate-700 font-mono">
+            After 1st Discount (20%): $100 − $20 = $80<br>
+            After 2nd Discount (10% of $80): $80 − $8 = <strong>$72 Final Price</strong><br>
+            Effective Combined Discount = <strong>28% Off</strong> (Not 30%)
+          </div>
+        </div>
+      </section>
+
+      <!-- Section G: Real-Life Examples Table -->
+      <section id="real-life-examples" class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm scroll-mt-24">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+          <i class="fa-solid fa-briefcase text-brand-600"></i> Real-Life Calculation Examples
+        </h2>
+        <p class="text-slate-600 leading-relaxed mb-6">
+          Here is a breakdown showing how percentage changes and discount calculations apply in common everyday finance, career, and retail scenarios:
+        </p>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm text-slate-600 border-collapse">
+            <thead class="bg-slate-100 text-slate-800 font-bold uppercase text-xs">
+              <tr>
+                <th class="p-3 border border-slate-200">Scenario</th>
+                <th class="p-3 border border-slate-200">Original Value</th>
+                <th class="p-3 border border-slate-200">New Value / Rate</th>
+                <th class="p-3 border border-slate-200">Formula Applied</th>
+                <th class="p-3 border border-slate-200">Final Result</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200">
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 border border-slate-200 font-semibold text-slate-800">Annual Salary Raise</td>
+                <td class="p-3 border border-slate-200">$50,000</td>
+                <td class="p-3 border border-slate-200">$55,000</td>
+                <td class="p-3 border border-slate-200">((55k − 50k) / 50k) × 100</td>
+                <td class="p-3 border border-slate-200 font-bold text-emerald-600">+10% Increase</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 border border-slate-200 font-semibold text-slate-800">Stock Price Portfolio Drop</td>
+                <td class="p-3 border border-slate-200">$200 / share</td>
+                <td class="p-3 border border-slate-200">$150 / share</td>
+                <td class="p-3 border border-slate-200">((150 − 200) / 200) × 100</td>
+                <td class="p-3 border border-slate-200 font-bold text-rose-600">-25% Decrease</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 border border-slate-200 font-semibold text-slate-800">Black Friday Shopping Deal</td>
+                <td class="p-3 border border-slate-200">$120 Retail</td>
+                <td class="p-3 border border-slate-200">40% Off Discount</td>
+                <td class="p-3 border border-slate-200">120 × (1 − 0.40)</td>
+                <td class="p-3 border border-slate-200 font-bold text-brand-600">$72 Sale Price ($48 Saved)</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 border border-slate-200 font-semibold text-slate-800">Real Estate Property Markup</td>
+                <td class="p-3 border border-slate-200">$300,000</td>
+                <td class="p-3 border border-slate-200">$345,000</td>
+                <td class="p-3 border border-slate-200">((345k − 300k) / 300k) × 100</td>
+                <td class="p-3 border border-slate-200 font-bold text-emerald-600">+15% Gain</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section H: Comparison Table -->
+      <section id="comparison-table" class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm scroll-mt-24">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+          <i class="fa-solid fa-code-compare text-brand-600"></i> Difference Between Percentage Increase, Percentage Change &amp; Discount
+        </h2>
+        <p class="text-slate-600 leading-relaxed mb-6">
+          While these statistical terms overlap, understanding their distinct applications prevents confusion in financial reporting:
+        </p>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm text-slate-600 border-collapse">
+            <thead class="bg-slate-100 text-slate-800 font-bold uppercase text-xs">
+              <tr>
+                <th class="p-3 border border-slate-200">Metric Concept</th>
+                <th class="p-3 border border-slate-200">Primary Focus</th>
+                <th class="p-3 border border-slate-200">Direction</th>
+                <th class="p-3 border border-slate-200">Typical Context</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200">
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 border border-slate-200 font-semibold text-slate-800">Percentage Increase</td>
+                <td class="p-3 border border-slate-200">Growth relative to original base</td>
+                <td class="p-3 border border-slate-200 text-emerald-600 font-semibold">Positive (+) Upward</td>
+                <td class="p-3 border border-slate-200">Salary raises, inflation, profits</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 border border-slate-200 font-semibold text-slate-800">Percentage Change</td>
+                <td class="p-3 border border-slate-200">Overall relative shift magnitude</td>
+                <td class="p-3 border border-slate-200 text-brand-600 font-semibold">Bi-directional (+ or −)</td>
+                <td class="p-3 border border-slate-200">Stock price shifts, weight change</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 border border-slate-200 font-semibold text-slate-800">Shopping Discount</td>
+                <td class="p-3 border border-slate-200">Retail price reduction markdown</td>
+                <td class="p-3 border border-slate-200 text-rose-600 font-semibold">Negative (−) Downward</td>
+                <td class="p-3 border border-slate-200">Coupons, retail sales, savings</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section I: Common Mistakes -->
+      <section id="common-mistakes" class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm scroll-mt-24">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+          <i class="fa-solid fa-triangle-exclamation text-amber-500"></i> Common Mistakes While Calculating Percentage Increase/Decrease &amp; Discounts
+        </h2>
+        <ul class="space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed">
+          <li class="flex items-start gap-3">
+            <span class="p-1 rounded bg-rose-100 text-rose-600 mt-0.5"><i class="fa-solid fa-xmark"></i></span>
+            <div>
+              <strong>Using the Wrong Base Value:</strong> Always divide difference by the <em>original starting value</em>, not the final new value. Dividing by the wrong number severely distorts percentage calculations.
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="p-1 rounded bg-rose-100 text-rose-600 mt-0.5"><i class="fa-solid fa-xmark"></i></span>
+            <div>
+              <strong>Confusing Percentage Points with Percentage:</strong> Moving interest rates from 4% to 5% is a 1 percentage point increase, but a <strong>25% relative percentage increase</strong>.
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="p-1 rounded bg-rose-100 text-rose-600 mt-0.5"><i class="fa-solid fa-xmark"></i></span>
+            <div>
+              <strong>Adding Multiple Discount Coupons Linearly:</strong> Stacking a 20% coupon and a 10% coupon equals 28% total savings, not 30%, because the second discount applies to the already discounted subtotal.
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="p-1 rounded bg-rose-100 text-rose-600 mt-0.5"><i class="fa-solid fa-xmark"></i></span>
+            <div>
+              <strong>Assuming Reversibility is Equal:</strong> If a $100 stock drops by 50% to $50, it requires a <strong>100% percentage increase</strong> (not 50%) just to return to its original $100 baseline.
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Section J: Accordion FAQ Section -->
+      <section id="faq-section" class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm scroll-mt-24">
+        <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+          <i class="fa-solid fa-circle-question text-brand-600"></i> Frequently Asked Questions (FAQ)
+        </h2>
+
+        <div class="space-y-3">
+
+          <!-- FAQ Item 1 -->
+          <div class="border border-slate-200 rounded-xl overflow-hidden">
+            <button onclick="toggleAccordion('faq1')" class="w-full text-left p-4 bg-slate-50 hover:bg-slate-100 font-semibold text-slate-800 flex items-center justify-between transition-colors text-sm sm:text-base">
+              <span>How do I calculate percentage increase?</span>
+              <i id="faq1-icon" class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+            </button>
+            <div id="faq1" class="accordion-content">
+              <p class="p-4 text-slate-600 text-sm leading-relaxed border-t border-slate-100">
+                To calculate percentage increase, subtract the starting value from the final new value to find the exact difference. Next, divide that difference by the original starting value. Finally, multiply the decimal result by 100 to convert it into a percentage. Using our percentage increase calculator automates this calculation instantly while displaying the step-by-step math.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="border border-slate-200 rounded-xl overflow-hidden">
+            <button onclick="toggleAccordion('faq2')" class="w-full text-left p-4 bg-slate-50 hover:bg-slate-100 font-semibold text-slate-800 flex items-center justify-between transition-colors text-sm sm:text-base">
+              <span>How do I calculate percentage decrease?</span>
+              <i id="faq2-icon" class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+            </button>
+            <div id="faq2" class="accordion-content">
+              <p class="p-4 text-slate-600 text-sm leading-relaxed border-t border-slate-100">
+                To calculate percentage decrease, subtract the lower final value from the initial starting value to measure the absolute drop. Divide this drop amount by the original starting number and multiply by 100. If you subtract the old value from the new value directly, a negative percentage result indicates a clear percentage decrease.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="border border-slate-200 rounded-xl overflow-hidden">
+            <button onclick="toggleAccordion('faq3')" class="w-full text-left p-4 bg-slate-50 hover:bg-slate-100 font-semibold text-slate-800 flex items-center justify-between transition-colors text-sm sm:text-base">
+              <span>What is the formula for discount percentage?</span>
+              <i id="faq3-icon" class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+            </button>
+            <div id="faq3" class="accordion-content">
+              <p class="p-4 text-slate-600 text-sm leading-relaxed border-t border-slate-100">
+                The discount percentage formula determines how much money you save off retail list prices. First, multiply original sticker price by discount percentage divided by 100 to get dollar savings. Subtract dollar savings from retail price to find final checkout price: Sale Price = Original Price × (1 − Discount % / 100).
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="border border-slate-200 rounded-xl overflow-hidden">
+            <button onclick="toggleAccordion('faq4')" class="w-full text-left p-4 bg-slate-50 hover:bg-slate-100 font-semibold text-slate-800 flex items-center justify-between transition-colors text-sm sm:text-base">
+              <span>How to find original price after discount?</span>
+              <i id="faq4-icon" class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+            </button>
+            <div id="faq4" class="accordion-content">
+              <p class="p-4 text-slate-600 text-sm leading-relaxed border-t border-slate-100">
+                To find the original list price before a promotional discount was applied, divide the final sale price by (1 minus the discount rate expressed as a decimal). Formula: Original Price = Sale Price / (1 − Discount % / 100). For instance, a $80 sale item after a 20% off promotion originally cost $100.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 5 -->
+          <div class="border border-slate-200 rounded-xl overflow-hidden">
+            <button onclick="toggleAccordion('faq5')" class="w-full text-left p-4 bg-slate-50 hover:bg-slate-100 font-semibold text-slate-800 flex items-center justify-between transition-colors text-sm sm:text-base">
+              <span>Difference between markup and discount?</span>
+              <i id="faq5-icon" class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+            </button>
+            <div id="faq5" class="accordion-content">
+              <p class="p-4 text-slate-600 text-sm leading-relaxed border-t border-slate-100">
+                Markup refers to an percentage addition made to wholesale cost price to establish retail selling price, generating profit margin for merchants. A discount is a percentage price reduction applied to existing retail price to make items more affordable for consumers. Markup increases item cost whereas discount reduces it.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 6 -->
+          <div class="border border-slate-200 rounded-xl overflow-hidden">
+            <button onclick="toggleAccordion('faq6')" class="w-full text-left p-4 bg-slate-50 hover:bg-slate-100 font-semibold text-slate-800 flex items-center justify-between transition-colors text-sm sm:text-base">
+              <span>Can I calculate successive percentage changes?</span>
+              <i id="faq6-icon" class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+            </button>
+            <div id="faq6" class="accordion-content">
+              <p class="p-4 text-slate-600 text-sm leading-relaxed border-t border-slate-100">
+                Yes, successive or compound percentage changes apply sequentially rather than simply adding rates together. For example, applying consecutive discounts of 20% and 10% on a $100 item yields $80 after the first reduction and $72 after the second reduction, representing an effective combined 28% discount rather than 30%.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 7 -->
+          <div class="border border-slate-200 rounded-xl overflow-hidden">
+            <button onclick="toggleAccordion('faq7')" class="w-full text-left p-4 bg-slate-50 hover:bg-slate-100 font-semibold text-slate-800 flex items-center justify-between transition-colors text-sm sm:text-base">
+              <span>Is this calculator free to use?</span>
+              <i id="faq7-icon" class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+            </button>
+            <div id="faq7" class="accordion-content">
+              <p class="p-4 text-slate-600 text-sm leading-relaxed border-t border-slate-100">
+                Yes! The percentage increase calculator, percentage decrease calculator, and discount calculator on Calculator Pro are 100% free with unlimited usage. There are no registration requirements, subscriptions, or hidden charges. It works smoothly across all mobile smartphones, tablets, and desktop computers.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section K: Related Calculators -->
+      <section id="related-calcs" class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm scroll-mt-24">
+        <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+          <i class="fa-solid fa-calculator text-brand-600"></i> Related Financial Calculators
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a href="#" class="p-4 rounded-xl border border-slate-200 hover:border-brand-500 hover:shadow-md transition-all group flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center font-bold group-hover:bg-brand-600 group-hover:text-white transition-colors">
+              %
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-800 group-hover:text-brand-600 transition-colors text-sm">Percentage Calculator</h3>
+              <p class="text-xs text-slate-500">Calculate basic fractions &amp; ratios</p>
+            </div>
+          </a>
+          <a href="#" class="p-4 rounded-xl border border-slate-200 hover:border-brand-500 hover:shadow-md transition-all group flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center font-bold group-hover:bg-brand-600 group-hover:text-white transition-colors">
+              <i class="fa-solid fa-receipt"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-800 group-hover:text-brand-600 transition-colors text-sm">GST Calculator</h3>
+              <p class="text-xs text-slate-500">Calculate inclusive &amp; exclusive tax</p>
+            </div>
+          </a>
+          <a href="#" class="p-4 rounded-xl border border-slate-200 hover:border-brand-500 hover:shadow-md transition-all group flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center font-bold group-hover:bg-brand-600 group-hover:text-white transition-colors">
+              <i class="fa-solid fa-chart-pie"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-800 group-hover:text-brand-600 transition-colors text-sm">Profit Margin Calculator</h3>
+              <p class="text-xs text-slate-500">Gross &amp; net business profit margins</p>
+            </div>
+          </a>
+          <a href="#" class="p-4 rounded-xl border border-slate-200 hover:border-brand-500 hover:shadow-md transition-all group flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center font-bold group-hover:bg-brand-600 group-hover:text-white transition-colors">
+              <i class="fa-solid fa-piggy-bank"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-800 group-hover:text-brand-600 transition-colors text-sm">Compound Interest Calculator</h3>
+              <p class="text-xs text-slate-500">Investment exponential growth</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+    </article>
+  </div>
+
+</main>
+
+<!-- Multi-column Footer -->
+
+<footer class="bg-slate-900 text-slate-400 text-sm border-t border-slate-800 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <!-- Col 1: About -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2 text-white font-bold text-lg">
+            <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
+              <i class="fa-solid fa-calculator"></i>
+            </div>
+            <span>Calculator<span class="text-indigo-400">-Pro</span></span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Calculator Pro provides free, fast, and clinically accurate online tools for health, financial, mathematical, and everyday conversion needs.
+          </p>
+          <div class="text-xs text-slate-500">
+            &copy; <span id="current-year">2026</span> Calculator Pro. All rights reserved.
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Quick Links</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Unit Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Length Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Weight Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Temperature Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Volume & Area Converter</a></li>
+          </ul>
+        </div>
+        <!-- Column 3: Tools & Resources -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Calculators</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="age-calculator.html" class="hover:text-white transition-colors">Age Calculator</a></li>
+            <li><a href="time-calculator.html" class="hover:text-white transition-colors">Time Calculator</a></li>
+            <li><a href="sip-calculator.html" class="hover:text-white transition-colors">SIP Financial Calculator</a></li>
+            <li><a href="bmi-calculator.html" class="hover:text-white transition-colors">BMI Health Calculator</a></li>
+            <li><a href="percentage-calculator.html" class="hover:text-white transition-colors">Percentage Calculator</a></li>
+          </ul>
+        </div>
+
+         <!-- Column 4: Legal & Contact -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Legal & Info</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Editorial Guidelines</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+<!-- Vanilla JavaScript Logic -->
+<script>
+	<!-- Inline JavaScript for Toggle -->
+  
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('calc-mobile-menu-btn');
+      const menu = document.getElementById('calc-mobile-menu');
+      const menuIcon = document.getElementById('calc-menu-icon');
+      const closeIcon = document.getElementById('calc-close-icon');
+
+      if (btn && menu) {
+        btn.addEventListener('click', () => {
+          const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', !isExpanded);
+          menu.classList.toggle('hidden');
+          menuIcon.classList.toggle('hidden');
+          closeIcon.classList.toggle('hidden');
+        });
+      }
+    });
+	
+  // State management
+  let activeMainTab = 'pct';
+  let activePctMode = 'change';
+  let activeDiscMode = 'standard';
+
+  // Tab Switchers
+  function switchMainTab(tab) {
+    activeMainTab = tab;
+    const pctBtn = document.getElementById('tab-pct-btn');
+    const discBtn = document.getElementById('tab-disc-btn');
+    const pctContent = document.getElementById('tab-pct-content');
+    const discContent = document.getElementById('tab-disc-content');
+
+    if (tab === 'pct') {
+      pctBtn.className = "flex-1 py-3 px-4 rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center gap-2 transition-all duration-200 bg-white text-brand-600 shadow-sm border border-slate-200/60";
+      discBtn.className = "flex-1 py-3 px-4 rounded-xl text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-slate-100/60";
+      pctContent.classList.remove('hidden');
+      discContent.classList.add('hidden');
+    } else {
+      discBtn.className = "flex-1 py-3 px-4 rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center gap-2 transition-all duration-200 bg-white text-emerald-600 shadow-sm border border-slate-200/60";
+      pctBtn.className = "flex-1 py-3 px-4 rounded-xl text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-slate-100/60";
+      discContent.classList.remove('hidden');
+      pctContent.classList.add('hidden');
+    }
+  }
+
+  // Percentage Calculator Modes Switcher
+  function setPctMode(mode) {
+    activePctMode = mode;
+    const btnChange = document.getElementById('mode-pct-change');
+    const btnApply = document.getElementById('mode-pct-apply');
+    const btnOrig = document.getElementById('mode-pct-orig');
+
+    const fieldsChange = document.getElementById('pct-fields-change');
+    const fieldsApply = document.getElementById('pct-fields-apply');
+    const fieldsOrig = document.getElementById('pct-fields-orig');
+
+    // Reset button styles
+    [btnChange, btnApply, btnOrig].forEach(b => b.className = "px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all");
+    [fieldsChange, fieldsApply, fieldsOrig].forEach(f => f.classList.add('hidden'));
+
+    if (mode === 'change') {
+      btnChange.className = "px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-brand-50 text-brand-700 border border-brand-200 transition-all";
+      fieldsChange.classList.remove('hidden');
+      calcPctChange();
+    } else if (mode === 'apply') {
+      btnApply.className = "px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-brand-50 text-brand-700 border border-brand-200 transition-all";
+      fieldsApply.classList.remove('hidden');
+      calcPctApply();
+    } else {
+      btnOrig.className = "px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-brand-50 text-brand-700 border border-brand-200 transition-all";
+      fieldsOrig.classList.remove('hidden');
+      calcPctOrig();
+    }
+  }
+
+  // Discount Calculator Modes Switcher
+  function setDiscMode(mode) {
+    activeDiscMode = mode;
+    const btnStandard = document.getElementById('mode-disc-standard');
+    const btnOrig = document.getElementById('mode-disc-orig');
+    const btnStacked = document.getElementById('mode-disc-stacked');
+
+    const fieldsStandard = document.getElementById('disc-fields-standard');
+    const fieldsOrig = document.getElementById('disc-fields-orig');
+    const fieldsStacked = document.getElementById('disc-fields-stacked');
+
+    [btnStandard, btnOrig, btnStacked].forEach(b => b.className = "px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all");
+    [fieldsStandard, fieldsOrig, fieldsStacked].forEach(f => f.classList.add('hidden'));
+
+    if (mode === 'standard') {
+      btnStandard.className = "px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-brand-50 text-brand-700 border border-brand-200 transition-all";
+      fieldsStandard.classList.remove('hidden');
+      calcDiscStandard();
+    } else if (mode === 'orig') {
+      btnOrig.className = "px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-brand-50 text-brand-700 border border-brand-200 transition-all";
+      fieldsOrig.classList.remove('hidden');
+      calcDiscOrig();
+    } else {
+      btnStacked.className = "px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-brand-50 text-brand-700 border border-brand-200 transition-all";
+      fieldsStacked.classList.remove('hidden');
+      calcDiscStacked();
+    }
+  }
+
+  // Percentage Calculations
+  function calcPctChange() {
+    const oldVal = parseFloat(document.getElementById('pct-old-val').value);
+    const newVal = parseFloat(document.getElementById('pct-new-val').value);
+    const resultElem = document.getElementById('pct-primary-result');
+    const subResult = document.getElementById('pct-sub-result');
+    const badge = document.getElementById('pct-badge');
+    const formulaText = document.getElementById('pct-formula-text');
+
+    if (isNaN(oldVal) || isNaN(newVal) || oldVal === 0) {
+      resultElem.textContent = '0%';
+      subResult.textContent = 'Difference: 0';
+      badge.classList.add('hidden');
+      formulaText.innerHTML = '<strong class="text-slate-200">Formula Step:</strong> Percentage Change = ((New Value - Old Value) / Old Value) × 100';
+      return;
+    }
+
+    const diff = newVal - oldVal;
+    const pctChange = (diff / Math.abs(oldVal)) * 100;
+    
+    resultElem.textContent = `${pctChange > 0 ? '+' : ''}${pctChange.toFixed(2)}%`;
+    subResult.textContent = `Absolute Difference: ${diff > 0 ? '+' : ''}${diff.toFixed(2)}`;
+    
+    badge.classList.remove('hidden');
+    if (pctChange >= 0) {
+      badge.className = "text-xs font-bold px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30";
+      badge.innerHTML = '<i class="fa-solid fa-arrow-up"></i> Increase';
+    } else {
+      badge.className = "text-xs font-bold px-2.5 py-1 rounded-full bg-rose-500/20 text-rose-300 border border-rose-500/30";
+      badge.innerHTML = '<i class="fa-solid fa-arrow-down"></i> Decrease';
+    }
+
+    formulaText.innerHTML = `<strong class="text-slate-200">Formula Calculation:</strong> ((${newVal} − ${oldVal}) / ${oldVal}) × 100 = ${pctChange.toFixed(2)}%`;
+  }
+
+  function calcPctApply() {
+    const base = parseFloat(document.getElementById('pct-base-val').value);
+    const rate = parseFloat(document.getElementById('pct-rate-val').value);
+    const type = document.getElementById('pct-type-select').value;
+
+    const resultElem = document.getElementById('pct-primary-result');
+    const subResult = document.getElementById('pct-sub-result');
+    const badge = document.getElementById('pct-badge');
+    const formulaText = document.getElementById('pct-formula-text');
+
+    if (isNaN(base) || isNaN(rate)) {
+      resultElem.textContent = '0';
+      subResult.textContent = 'Difference: 0';
+      badge.classList.add('hidden');
+      return;
+    }
+
+    const changeAmount = base * (rate / 100);
+    const finalVal = type === 'increase' ? base + changeAmount : base - changeAmount;
+
+    resultElem.textContent = finalVal.toFixed(2);
+    subResult.textContent = `Amount Changed: ${type === 'increase' ? '+' : '-'}${changeAmount.toFixed(2)}`;
+
+    badge.classList.remove('hidden');
+    badge.className = type === 'increase' 
+      ? "text-xs font-bold px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30"
+      : "text-xs font-bold px-2.5 py-1 rounded-full bg-rose-500/20 text-rose-300 border border-rose-500/30";
+    badge.innerHTML = type === 'increase' ? '<i class="fa-solid fa-arrow-up"></i> New Increased Value' : '<i class="fa-solid fa-arrow-down"></i> New Decreased Value';
+
+    formulaText.innerHTML = `<strong class="text-slate-200">Formula Step:</strong> ${base} ${type === 'increase' ? '+' : '−'} (${base} × ${rate}%) = ${finalVal.toFixed(2)}`;
+  }
+
+  function calcPctOrig() {
+    const finalVal = parseFloat(document.getElementById('pct-final-orig').value);
+    const rate = parseFloat(document.getElementById('pct-change-rate').value);
+    const type = document.getElementById('pct-orig-type').value;
+
+    const resultElem = document.getElementById('pct-primary-result');
+    const subResult = document.getElementById('pct-sub-result');
+    const badge = document.getElementById('pct-badge');
+    const formulaText = document.getElementById('pct-formula-text');
+
+    if (isNaN(finalVal) || isNaN(rate)) {
+      resultElem.textContent = '0';
+      subResult.textContent = 'Original Value: 0';
+      badge.classList.add('hidden');
+      return;
+    }
+
+    const factor = type === 'increase' ? (1 + rate / 100) : (1 - rate / 100);
+    if (factor === 0) return;
+    const origVal = finalVal / factor;
+
+    resultElem.textContent = origVal.toFixed(2);
+    subResult.textContent = `Original Value Before ${rate}% ${type}`;
+
+    badge.classList.remove('hidden');
+    badge.className = "text-xs font-bold px-2.5 py-1 rounded-full bg-brand-500/20 text-brand-300 border border-brand-500/30";
+    badge.innerHTML = '<i class="fa-solid fa-rotate-left"></i> Original Base Value';
+
+    formulaText.innerHTML = `<strong class="text-slate-200">Reverse Formula Step:</strong> ${finalVal} / (1 ${type === 'increase' ? '+' : '−'} ${rate/100}) = ${origVal.toFixed(2)}`;
+  }
+
+  // Discount Calculations
+  function calcDiscStandard() {
+    const price = parseFloat(document.getElementById('disc-orig-price').value);
+    const percent = parseFloat(document.getElementById('disc-percent').value);
+
+    const primary = document.getElementById('disc-primary-result');
+    const badge = document.getElementById('disc-savings-badge');
+    const sub = document.getElementById('disc-sub-result');
+    const formula = document.getElementById('disc-formula-text');
+
+    if (isNaN(price) || isNaN(percent)) {
+      primary.textContent = '$0.00';
+      badge.textContent = 'You Save: $0.00';
+      sub.textContent = 'Total Discount Percentage: 0%';
+      return;
+    }
+
+    const savings = price * (percent / 100);
+    const finalPrice = price - savings;
+
+    primary.textContent = `$${finalPrice.toFixed(2)}`;
+    badge.textContent = `You Save: $${savings.toFixed(2)}`;
+    sub.textContent = `Applied Discount: ${percent}% Off Original $${price.toFixed(2)}`;
+    formula.innerHTML = `<strong class="text-slate-200">Savings Calculation:</strong> $${price} − ($${price} × ${percent}%) = $${finalPrice.toFixed(2)}`;
+  }
+
+  function calcDiscOrig() {
+    const salePrice = parseFloat(document.getElementById('disc-sale-price-input').value);
+    const percent = parseFloat(document.getElementById('disc-percent-applied').value);
+
+    const primary = document.getElementById('disc-primary-result');
+    const badge = document.getElementById('disc-savings-badge');
+    const sub = document.getElementById('disc-sub-result');
+    const formula = document.getElementById('disc-formula-text');
+
+    if (isNaN(salePrice) || isNaN(percent) || percent >= 100) {
+      primary.textContent = '$0.00';
+      badge.textContent = 'Original Price: $0.00';
+      return;
+    }
+
+    const origPrice = salePrice / (1 - percent / 100);
+    const savings = origPrice - salePrice;
+
+    primary.textContent = `$${origPrice.toFixed(2)}`;
+    badge.textContent = `Original Retail Price`;
+    sub.textContent = `Discount Amount Saved: $${savings.toFixed(2)}`;
+    formula.innerHTML = `<strong class="text-slate-200">Reverse Discount Step:</strong> $${salePrice} / (1 − ${percent/100}) = $${origPrice.toFixed(2)}`;
+  }
+
+  function calcDiscStacked() {
+    const price = parseFloat(document.getElementById('disc-stacked-price').value);
+    const c1 = parseFloat(document.getElementById('disc-coupon1').value);
+    const c2 = parseFloat(document.getElementById('disc-coupon2').value);
+
+    const primary = document.getElementById('disc-primary-result');
+    const badge = document.getElementById('disc-savings-badge');
+    const sub = document.getElementById('disc-sub-result');
+    const formula = document.getElementById('disc-formula-text');
+
+    if (isNaN(price) || isNaN(c1)) {
+      primary.textContent = '$0.00';
+      badge.textContent = 'You Save: $0.00';
+      return;
+    }
+
+    const c2Val = isNaN(c2) ? 0 : c2;
+    const priceAfter1 = price * (1 - c1 / 100);
+    const finalPrice = priceAfter1 * (1 - c2Val / 100);
+    const totalSavings = price - finalPrice;
+    const effectivePct = (totalSavings / price) * 100;
+
+    primary.textContent = `$${finalPrice.toFixed(2)}`;
+    badge.textContent = `You Save: $${totalSavings.toFixed(2)}`;
+    sub.textContent = `Effective Combined Discount: ${effectivePct.toFixed(2)}% Off`;
+    formula.innerHTML = `<strong class="text-slate-200">Stacked Calculation:</strong> $${price} → -${c1}% = $${priceAfter1.toFixed(2)} → -${c2Val}% = $${finalPrice.toFixed(2)}`;
+  }
+
+  // Resets
+  function resetPctCalc() {
+    document.getElementById('pct-old-val').value = '';
+    document.getElementById('pct-new-val').value = '';
+    document.getElementById('pct-base-val').value = '';
+    document.getElementById('pct-rate-val').value = '';
+    document.getElementById('pct-final-orig').value = '';
+    document.getElementById('pct-change-rate').value = '';
+    calcPctChange();
+  }
+
+  function resetDiscCalc() {
+    document.getElementById('disc-orig-price').value = '';
+    document.getElementById('disc-percent').value = '';
+    document.getElementById('disc-sale-price-input').value = '';
+    document.getElementById('disc-percent-applied').value = '';
+    document.getElementById('disc-stacked-price').value = '';
+    document.getElementById('disc-coupon1').value = '';
+    document.getElementById('disc-coupon2').value = '';
+    calcDiscStandard();
+  }
+
+  // Accordion Toggle
+  function toggleAccordion(id) {
+    const content = document.getElementById(id);
+    const icon = document.getElementById(`${id}-icon`);
+    
+    if (content.classList.contains('open')) {
+      content.classList.remove('open');
+      icon.style.transform = 'rotate(0deg)';
+    } else {
+      content.classList.add('open');
+      icon.style.transform = 'rotate(180deg)';
+    }
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Days Calculator – Calculate Working Days Between Dates</title>
+    <meta name="description" content="Free work days calculator to count business days between two dates. Exclude weekends, public holidays & custom off-days. Perfect for project deadlines, leave & payroll.">
+    <meta name="keywords" content="Work Days Calculator, Working Days Calculator, Business Days Calculator, Calculate Working Days, Calculate Work Days Between Dates, Number of Working Days Between Two Dates, Working Days Between Dates, Weekdays Calculator, Workday Calculator, Business Days Between Dates">
+    <link rel="canonical" href="https://calculatorpro.com/work-days-calculator">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calculatorpro.com/work-days-calculator">
+    <meta property="og:title" content="Work Days Calculator – Calculate Working Days Between Dates">
+    <meta property="og:description" content="Calculate the exact number of working days between two dates. Exclude weekends, custom holidays, and country-specific public holidays instantly.">
+    <meta property="og:image" content="https://calculatorpro.com/og-image-workdays.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://calculatorpro.com/work-days-calculator">
+    <meta property="twitter:title" content="Work Days Calculator – Calculate Working Days Between Dates">
+    <meta property="twitter:description" content="Free online business days calculator with custom weekend patterns, holiday exclusions, and hours estimator.">
+
+    <!-- CDN External Dependencies -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    
+	
+    
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- JSON-LD Structured Data for WebApplication, FAQPage, and HowTo -->
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Work Days Calculator",
+        "url": "https://calculatorpro.com/work-days-calculator",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "All",
+        "description": "Calculate exact working days, weekends, public holidays, and working hours between any two dates.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to Calculate Working Days Between Two Dates",
+        "description": "Follow these simple steps to count business days, excluding weekends and holidays.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Select Mode",
+            "text": "Choose 'Between Two Dates' to calculate elapsed work days or 'Add/Subtract Days' to find a target date."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Set Dates",
+            "text": "Choose your start date and end date using the date pickers."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Configure Weekend and Holiday Options",
+            "text": "Select your weekly weekend pattern and choose a country holiday preset or add custom company off-days."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "View Results",
+            "text": "Instantly review working days, total calendar days, weekends excluded, and estimated labor hours."
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a Work Days Calculator?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A Work Days Calculator is an online tool designed to calculate the exact number of business or working days between two dates, automatically excluding weekends and official public holidays."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I calculate working days between two dates?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Select your Start Date and End Date, choose your standard weekend days (e.g., Saturday & Sunday), select any public holiday list, and click Calculate."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the Work Days Calculator exclude weekends?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, by default it excludes Saturdays and Sundays. You can also customize weekend patterns to Fri-Sat, Sunday only, or custom days."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I exclude holidays?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, you can choose country presets (US, UK, CA, AU, IN, DE, FR) or manually add custom company off-days."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between calendar days and working days?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Calendar days include every single day on the calendar (all 7 days a week). Working days exclude weekends and designated non-working holidays."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are Saturdays working days?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "In standard 5-day schedules, Saturday is a weekend. However, in 6-day work weeks, Saturday is treated as a regular working day."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are Sundays working days?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "In most global business environments, Sunday is a rest day. However, our calculator allows custom weekend configurations if your schedule includes Sundays."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I calculate business days between dates?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! Business days and working days are synonymous terms for non-weekend, non-holiday days."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the calculator include the start date?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "By default, both the start date and end date are included in the calculation range (inclusive counting). You can adjust this setting."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the calculator include the end date?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, our tool provides an toggle option to include or exclude the start/end dates based on your organization's business logic."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I calculate working days for future dates?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, you can calculate working days for any present or future years including 2026, 2027, and beyond."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is this Work Days Calculator free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "100% free with no registration, no app downloads, and no limits on usage."
+            }
+          }
+        ]
+      }
+    ]
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-indigo-500 selection:text-white">
+
+<header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      
+      <!-- Brand Logo & Name -->
+      <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
+        <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
+          <i class="fa-solid fa-calculator text-lg"></i>
+        </div>
+        <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
+          Calculator<span class="text-indigo-600">-Pro</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-1" aria-label="Main Navigation">
+        
+        <!-- Category 1: Age -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Age
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="age-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="birthday-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Birthday Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="age-difference-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Diffrence Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Time -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Time & Date
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="time-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Time Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="date-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Date Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="work-days-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Work Days Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="time-zone-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">TimeZone Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Converter -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Converter
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="unit-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Unit Converter</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="cgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">CGPA to Percentage</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to Percentage</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sgpa-to-cgpa-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to CGPA</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="marks-to-percentage-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Marks to Percentage</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4: Financial -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Financial
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sip-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SIP Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="emi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">EMI Loan Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="Compound-Interest-Calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Compound Interest Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 5: Health -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Health
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute right-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="bmi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">BMI Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="waist-to-hip-ratio-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">WHR Calculator</a>
+            </div>
+          </div>
+        </div>
+		  
+		 
+
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex md:hidden">
+        <button id="calc-mobile-menu-btn" type="button" class="p-2.5 rounded-xl text-slate-600 hover:text-indigo-600 hover:bg-slate-100/80 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors duration-200" aria-controls="calc-mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+          <svg id="calc-menu-icon" class="w-6 h-6 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="calc-close-icon" class="w-6 h-6 hidden transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile Full-Width Menu Container -->
+  <div id="calc-mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white shadow-xl transition-all duration-200 ease-in-out">
+    <div class="px-4 pt-3 pb-6 space-y-4">
+      
+      <!-- Mobile Category: Age -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Age</div>
+        <a href="age-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Calculator</a>
+		  <a href="birthday-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Birthday Calculator</a>
+		  <a href="age-difference-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Diffrence Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Time -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Time & Date</div>
+        <a href="time-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Time Calculator</a>
+		  <a href="date-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Date Calculator</a>
+		  <a href="work-days-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Work Days Calculator</a>
+		  <a href="time-zone-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">TimeZone Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Converter -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Converter</div>
+        <a href="javascript:void(0)" onclick="openCalculator('length')" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Unit Converter</a>
+		  <a href="cgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">CGPA to Percentage</a>
+		  <a href="sgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to Percentage</a>
+		  <a href="sgpa-to-cgpa-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to CGPA</a>
+		  <a href="marks-to-percentage-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Marks to Percentage</a>
+      </div>
+
+      <!-- Mobile Category: Financial -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Financial</div>
+        <a href="sip-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SIP Calculator</a>
+		  <a href="emi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">EMI Loan Calculator</a>
+		  <a href="Compound-Interest-Calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Compound Interest Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Health -->
+      <div>
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Health</div>
+        <a href="bmi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">BMI Calculator</a>
+		  <a href="waist-to-hip-ratio-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">WHR Calculator</a>
+      </div>
+		
+		
+
+    </div>
+  </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+
+    <!-- HERO SECTION -->
+    <section class="text-center max-w-4xl mx-auto mb-10">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-xs sm:text-sm font-semibold mb-4 shadow-sm">
+            <i class="fa-solid fa-sparkles text-amber-500"></i> Updated for 2026 Calendar &amp; Holidays
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            Work Days Calculator – <span class="text-indigo-600">Count Business Days</span> Between Dates
+        </h1>
+        <p class="mt-4 text-base sm:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            Calculate the number of working days between two dates with our free online Work Days Calculator. Choose a start date and end date, exclude weekends, and optionally account for holidays to determine the number of work days quickly and accurately.
+        </p>
+
+        <!-- Benefit Badges -->
+        <div class="mt-6 flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs sm:text-sm font-medium text-slate-700">
+            <div class="flex items-center gap-1.5 bg-white border border-slate-200/80 px-3 py-1.5 rounded-lg shadow-sm">
+                <i class="fa-solid fa-circle-check text-emerald-500"></i> Free to use
+            </div>
+            <div class="flex items-center gap-1.5 bg-white border border-slate-200/80 px-3 py-1.5 rounded-lg shadow-sm">
+                <i class="fa-solid fa-circle-check text-emerald-500"></i> No registration required
+            </div>
+            <div class="flex items-center gap-1.5 bg-white border border-slate-200/80 px-3 py-1.5 rounded-lg shadow-sm">
+                <i class="fa-solid fa-circle-check text-emerald-500"></i> Fast and accurate
+            </div>
+            <div class="flex items-center gap-1.5 bg-white border border-slate-200/80 px-3 py-1.5 rounded-lg shadow-sm">
+                <i class="fa-solid fa-circle-check text-emerald-500"></i> Works on mobile &amp; desktop
+            </div>
+        </div>
+    </section>
+
+    <!-- CALCULATOR TOOL INTERFACE -->
+    <section id="calculator-tool" class="bg-white border border-slate-200/80 rounded-3xl shadow-xl shadow-slate-200/50 p-4 sm:p-8 mb-16 relative overflow-hidden">
+        
+        <!-- Mode Tabs -->
+        <div class="flex flex-col sm:flex-row items-center justify-between border-b border-slate-100 pb-6 mb-8 gap-4">
+            <div class="flex bg-slate-100 p-1.5 rounded-2xl w-full sm:w-auto">
+                <button id="mode-tab-1" onclick="switchCalcMode('between')" class="flex-1 sm:flex-none px-5 py-2.5 rounded-xl font-semibold text-sm transition-all shadow-sm bg-white text-indigo-600">
+                    <i class="fa-solid fa-calendar-range mr-2"></i> Between Two Dates
+                </button>
+                <button id="mode-tab-2" onclick="switchCalcMode('addsub')" class="flex-1 sm:flex-none px-5 py-2.5 rounded-xl font-semibold text-sm transition-all text-slate-600 hover:text-slate-900">
+                    <i class="fa-solid fa-plus-minus mr-2"></i> Add / Subtract Days
+                </button>
+            </div>
+            <div class="text-xs font-semibold text-slate-500 bg-slate-50 border border-slate-200/60 px-3 py-1.5 rounded-lg flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Mode: <span id="current-mode-label">Days Between Dates</span>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <!-- INPUTS PANEL -->
+            <div class="lg:col-span-7 space-y-6">
+                
+                <!-- MODE 1 INPUTS: BETWEEN DATES -->
+                <div id="mode-between-panel" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label for="start-date" class="block text-sm font-semibold text-slate-700 mb-2">
+                            <i class="fa-regular fa-calendar-check text-indigo-600 mr-1.5"></i> Start Date
+                        </label>
+                        <input type="date" id="start-date" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-slate-800 font-medium shadow-sm transition">
+                    </div>
+                    <div>
+                        <label for="end-date" class="block text-sm font-semibold text-slate-700 mb-2">
+                            <i class="fa-regular fa-calendar-xmark text-indigo-600 mr-1.5"></i> End Date
+                        </label>
+                        <input type="date" id="end-date" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-slate-800 font-medium shadow-sm transition">
+                    </div>
+                </div>
+
+                <!-- MODE 2 INPUTS: ADD / SUBTRACT -->
+                <div id="mode-addsub-panel" class="hidden grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div>
+                        <label for="addsub-start-date" class="block text-sm font-semibold text-slate-700 mb-2">Start Date</label>
+                        <input type="date" id="addsub-start-date" class="w-full px-3.5 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-slate-800 font-medium shadow-sm">
+                    </div>
+                    <div>
+                        <label for="addsub-action" class="block text-sm font-semibold text-slate-700 mb-2">Action</label>
+                        <select id="addsub-action" class="w-full px-3.5 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-slate-800 font-medium bg-white shadow-sm">
+                            <option value="add">Add (+)</option>
+                            <option value="subtract">Subtract (-)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="addsub-days" class="block text-sm font-semibold text-slate-700 mb-2">Work Days</label>
+                        <input type="number" id="addsub-days" min="1" max="3650" value="10" class="w-full px-3.5 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-slate-800 font-medium shadow-sm">
+                    </div>
+                </div>
+
+                <!-- OPTIONS SECTION -->
+                <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200/80 space-y-5">
+                    <h3 class="text-sm font-bold uppercase tracking-wider text-slate-500 flex items-center gap-2">
+                        <i class="fa-solid fa-sliders text-indigo-600"></i> Calculation Options
+                    </h3>
+
+                    <!-- Weekend Pattern -->
+                    <div>
+                        <label for="weekend-pattern" class="block text-sm font-medium text-slate-700 mb-1.5">Weekend Pattern</label>
+                        <select id="weekend-pattern" onchange="handleWeekendPatternChange()" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-slate-800 font-medium bg-white shadow-sm">
+                            <option value="sat-sun">Saturday &amp; Sunday (Standard 5-day week)</option>
+                            <option value="fri-sat">Friday &amp; Saturday (Middle East standard)</option>
+                            <option value="sun-only">Sunday Only (6-day work week)</option>
+                            <option value="custom">Custom Non-Working Days</option>
+                        </select>
+                    </div>
+
+                    <!-- Custom Weekend Days (Hidden by default) -->
+                    <div id="custom-weekends-container" class="hidden p-3 bg-white border border-slate-200 rounded-xl">
+                        <span class="block text-xs font-semibold text-slate-600 mb-2">Select Off Days:</span>
+                        <div class="grid grid-cols-4 sm:grid-cols-7 gap-2 text-xs">
+                            <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="custom-day-check" value="0"> Sun</label>
+                            <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="custom-day-check" value="1"> Mon</label>
+                            <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="custom-day-check" value="2"> Tue</label>
+                            <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="custom-day-check" value="3"> Wed</label>
+                            <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="custom-day-check" value="4"> Thu</label>
+                            <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="custom-day-check" value="5"> Fri</label>
+                            <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="custom-day-check" value="6"> Sat</label>
+                        </div>
+                    </div>
+
+                    <!-- Inclusive Checkboxes -->
+                    <div class="flex flex-wrap gap-4 pt-1 border-t border-slate-200/60">
+                        <label class="inline-flex items-center gap-2 cursor-pointer text-sm text-slate-700">
+                            <input type="checkbox" id="include-start-date" checked class="w-4 h-4 text-indigo-600 rounded border-slate-300 focus:ring-indigo-500">
+                            <span>Include Start Date</span>
+                        </label>
+                        <label class="inline-flex items-center gap-2 cursor-pointer text-sm text-slate-700">
+                            <input type="checkbox" id="include-end-date" checked class="w-4 h-4 text-indigo-600 rounded border-slate-300 focus:ring-indigo-500">
+                            <span>Include End Date</span>
+                        </label>
+                    </div>
+
+                    <!-- Public Holidays & Country Presets -->
+                    <div class="pt-2 border-t border-slate-200/60">
+                        <label for="country-preset" class="block text-sm font-medium text-slate-700 mb-1.5">Exclude Public Holidays Preset</label>
+                        <select id="country-preset" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-slate-800 font-medium bg-white shadow-sm">
+                            <option value="none">None (No auto holidays)</option>
+                            <option value="US">United States (Standard Federal Holidays)</option>
+                            <option value="UK">United Kingdom (Bank Holidays)</option>
+                            <option value="CA">Canada (Statutory Holidays)</option>
+                            <option value="AU">Australia (National Holidays)</option>
+                            <option value="IN">India (Gazetted Holidays)</option>
+                            <option value="DE">Germany (National Holidays)</option>
+                            <option value="FR">France (Public Holidays)</option>
+                        </select>
+                    </div>
+
+                    <!-- Custom Holidays Tool -->
+                    <div>
+                        <span class="block text-sm font-medium text-slate-700 mb-1">Add Custom Company Off-Days</span>
+                        <div class="flex gap-2">
+                            <input type="date" id="custom-holiday-input" class="flex-1 px-3 py-2 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-indigo-500">
+                            <button type="button" onclick="addCustomHoliday()" class="px-4 py-2 bg-slate-800 hover:bg-slate-900 text-white text-sm font-semibold rounded-xl transition">
+                                Add
+                            </button>
+                        </div>
+                        <div id="custom-holidays-list" class="flex flex-wrap gap-2 mt-2"></div>
+                    </div>
+
+                    <!-- Working Hours Per Day -->
+                    <div class="pt-2 border-t border-slate-200/60">
+                        <label for="daily-hours" class="block text-sm font-medium text-slate-700 mb-1">Working Hours per Day (Optional)</label>
+                        <input type="number" id="daily-hours" value="8" min="1" max="24" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 text-slate-800 font-medium bg-white shadow-sm">
+                    </div>
+                </div>
+
+                <!-- ACTION BUTTONS -->
+                <div class="flex items-center gap-3">
+                    <button type="button" onclick="calculateWorkDays()" class="flex-1 py-3.5 px-6 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-base rounded-xl shadow-lg shadow-indigo-200 transition-all transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-calculator"></i> Calculate Work Days
+                    </button>
+                    <button type="button" onclick="resetCalculator()" class="py-3.5 px-5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-sm rounded-xl transition">
+                        Reset
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- RESULTS DISPLAY PANEL -->
+            <div class="lg:col-span-5 flex flex-col justify-between bg-slate-900 text-white rounded-2xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+                <!-- Decorative background elements -->
+                <div class="absolute -top-12 -right-12 w-40 h-40 bg-indigo-500/20 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-12 -left-12 w-40 h-40 bg-blue-500/20 rounded-full blur-3xl"></div>
+
+                <div class="relative z-10">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-6">
+                        <span class="text-xs uppercase font-bold tracking-widest text-indigo-400">Calculation Summary</span>
+                        <span class="text-xs bg-indigo-900/80 text-indigo-200 px-2.5 py-1 rounded-full border border-indigo-700/50">Live Result</span>
+                    </div>
+
+                    <!-- Highlight Result Card -->
+                    <div class="text-center bg-slate-800/80 border border-slate-700/80 p-6 rounded-2xl mb-6 backdrop-blur-sm">
+                        <div class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider mb-1">Total Working Days</div>
+                        <div id="res-working-days" class="text-5xl sm:text-6xl font-black text-indigo-400 tracking-tight my-2">21</div>
+                        <div id="res-target-date-container" class="hidden text-xs text-emerald-400 font-semibold mt-2">
+                            Target Date: <span id="res-target-date-val" class="underline">---</span>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-1">Excludes weekends &amp; selected public holidays</p>
+                    </div>
+
+                    <!-- Result Breakdown Table -->
+                    <div class="space-y-2.5 text-sm">
+                        <div class="flex justify-between items-center py-2 border-b border-slate-800">
+                            <span class="text-slate-300 flex items-center gap-2"><i class="fa-regular fa-calendar text-slate-400 w-4"></i> Calendar Days</span>
+                            <span id="res-calendar-days" class="font-bold text-slate-100">30</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2 border-b border-slate-800">
+                            <span class="text-slate-300 flex items-center gap-2"><i class="fa-regular fa-calendar-minus text-amber-400 w-4"></i> Saturdays</span>
+                            <span id="res-saturdays" class="font-bold text-amber-300">4</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2 border-b border-slate-800">
+                            <span class="text-slate-300 flex items-center gap-2"><i class="fa-regular fa-calendar-minus text-amber-400 w-4"></i> Sundays</span>
+                            <span id="res-sundays" class="font-bold text-amber-300">4</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2 border-b border-slate-800">
+                            <span class="text-slate-300 flex items-center gap-2"><i class="fa-solid fa-umbrella-beach text-rose-400 w-4"></i> Holidays Excluded</span>
+                            <span id="res-holidays" class="font-bold text-rose-300">1</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2 border-b border-slate-800">
+                            <span class="text-slate-300 flex items-center gap-2"><i class="fa-solid fa-business-time text-emerald-400 w-4"></i> Working Weeks</span>
+                            <span id="res-weeks" class="font-bold text-emerald-300">4.2</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2">
+                            <span class="text-slate-300 flex items-center gap-2"><i class="fa-regular fa-clock text-indigo-400 w-4"></i> Total Working Hours</span>
+                            <span id="res-hours" class="font-bold text-indigo-300">168 hrs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Export & Copy Actions -->
+                <div class="relative z-10 pt-6 mt-6 border-t border-slate-800 flex gap-3">
+                    <button type="button" onclick="copyResults()" class="flex-1 py-2.5 bg-slate-800 hover:bg-slate-700 text-xs font-semibold rounded-xl text-slate-200 transition flex items-center justify-center gap-1.5 border border-slate-700">
+                        <i class="fa-regular fa-copy"></i> Copy Summary
+                    </button>
+                    <button type="button" onclick="printResults()" class="flex-1 py-2.5 bg-indigo-600/30 hover:bg-indigo-600/40 text-xs font-semibold rounded-xl text-indigo-300 transition flex items-center justify-center gap-1.5 border border-indigo-500/30">
+                        <i class="fa-solid fa-print"></i> Print / Save PDF
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENT SECTION D: How to Use -->
+    <section class="mb-16 bg-white p-6 sm:p-10 rounded-2xl border border-slate-200/80 shadow-sm">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 text-base">D</span>
+            How to Use This Work Days Calculator
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                <div class="w-8 h-8 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center mb-3">1</div>
+                <h3 class="font-bold text-slate-800 mb-1">Select Mode</h3>
+                <p class="text-xs text-slate-600">Choose between counting days between two dates or adding/subtracting N business days from a baseline date.</p>
+            </div>
+            <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                <div class="w-8 h-8 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center mb-3">2</div>
+                <h3 class="font-bold text-slate-800 mb-1">Pick Date Range</h3>
+                <p class="text-xs text-slate-600">Enter your Start Date and End Date using our interactive date pickers.</p>
+            </div>
+            <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                <div class="w-8 h-8 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center mb-3">3</div>
+                <h3 class="font-bold text-slate-800 mb-1">Set Off-Days</h3>
+                <p class="text-xs text-slate-600">Select your weekend pattern (Sat-Sun, Fri-Sat, or 6-day) and apply country holiday presets or custom company off-days.</p>
+            </div>
+            <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                <div class="w-8 h-8 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center mb-3">4</div>
+                <h3 class="font-bold text-slate-800 mb-1">Instant Results</h3>
+                <p class="text-xs text-slate-600">Review exact working days, excluded weekend counts, holiday subtractions, and calculated labor hours.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENT SECTION E: What is a Work Day / Business Day? -->
+    <section class="mb-16 bg-white p-6 sm:p-10 rounded-2xl border border-slate-200/80 shadow-sm">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">What is a Work Day / Business Day?</h2>
+        <p class="text-slate-600 leading-relaxed mb-4">
+            A <strong>Work Day</strong> (or <strong>Business Day</strong>) refers to any official day of the week where commercial operations, corporate activities, banking institutions, and formal labor occur. Unlike standard calendar days, working days specifically exclude rest days such as weekends and official statutory public holidays.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
+            <div class="p-4 bg-indigo-50/50 rounded-xl border border-indigo-100">
+                <h3 class="font-bold text-indigo-900 text-sm mb-1">Standard 5-Day Week</h3>
+                <p class="text-xs text-slate-600">Monday to Friday. Typical for Western nations, corporate sectors, and global financial markets.</p>
+            </div>
+            <div class="p-4 bg-indigo-50/50 rounded-xl border border-indigo-100">
+                <h3 class="font-bold text-indigo-900 text-sm mb-1">Middle East 5-Day Week</h3>
+                <p class="text-xs text-slate-600">Sunday to Thursday with Friday and Saturday off, aligned with traditional religious schedules.</p>
+            </div>
+            <div class="p-4 bg-indigo-50/50 rounded-xl border border-indigo-100">
+                <h3 class="font-bold text-indigo-900 text-sm mb-1">6-Day Work Week</h3>
+                <p class="text-xs text-slate-600">Monday to Saturday with Sunday off. Common in retail, manufacturing, and emerging economies.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENT SECTION F: Formula & Excel Equivalent -->
+    <section class="mb-16 bg-slate-900 text-white p-6 sm:p-10 rounded-2xl shadow-lg">
+        <h2 class="text-2xl sm:text-3xl font-bold mb-4">How the Calculator Works / Formula</h2>
+        <p class="text-slate-300 leading-relaxed mb-6">
+            Our Work Days Calculator iterates through every single date within your specified timeframe, evaluates whether the day is a designated weekend day or matches an excluded holiday date, and returns the net active work days:
+        </p>
+        <div class="bg-slate-800 p-4 rounded-xl border border-slate-700 font-mono text-sm text-indigo-300 mb-6">
+            Working Days = Total Calendar Days − Weekend Days − Public Holidays (falling on weekdays)
+        </div>
+        <div class="bg-slate-800/60 p-4 rounded-xl border border-slate-700 text-xs sm:text-sm text-slate-300 space-y-2">
+            <p class="font-bold text-white"><i class="fa-solid fa-file-excel text-emerald-400 mr-2"></i> Excel Equivalents:</p>
+            <p>• Standard 5-day week: <code class="bg-slate-900 px-2 py-0.5 rounded text-amber-300">=NETWORKDAYS(start_date, end_date, [holidays])</code></p>
+            <p>• Custom weekends: <code class="bg-slate-900 px-2 py-0.5 rounded text-amber-300">=NETWORKDAYS.INTL(start_date, end_date, weekend, [holidays])</code></p>
+        </div>
+    </section>
+
+    <!-- CONTENT SECTION G: Examples -->
+    <section class="mb-16 bg-white p-6 sm:p-10 rounded-2xl border border-slate-200/80 shadow-sm">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Practical Calculation Examples</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="border border-slate-200 rounded-xl p-5 hover:border-indigo-300 transition">
+                <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider">Example 1: Annual Project Timeline</span>
+                <h3 class="font-bold text-slate-800 text-base mt-1 mb-2">Full Year 2026 (Jan 1, 2026 to Dec 31, 2026)</h3>
+                <ul class="text-xs sm:text-sm space-y-1.5 text-slate-600">
+                    <li>• Total Calendar Days: <strong>365 Days</strong></li>
+                    <li>• Saturdays &amp; Sundays: <strong>104 Days</strong></li>
+                    <li>• US Federal Holidays (Weekdays): <strong>11 Days</strong></li>
+                    <li class="text-indigo-600 font-bold pt-1">• Net Working Days: <strong>250 Days (2,000 Hours @ 8h/day)</strong></li>
+                </ul>
+            </div>
+            <div class="border border-slate-200 rounded-xl p-5 hover:border-indigo-300 transition">
+                <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider">Example 2: Monthly Delivery Window</span>
+                <h3 class="font-bold text-slate-800 text-base mt-1 mb-2">October 2026 (Oct 1, 2026 to Oct 31, 2026)</h3>
+                <ul class="text-xs sm:text-sm space-y-1.5 text-slate-600">
+                    <li>• Total Calendar Days: <strong>31 Days</strong></li>
+                    <li>• Saturdays &amp; Sundays: <strong>9 Days</strong></li>
+                    <li>• Columbus Day / Indigenous Peoples' Day: <strong>1 Day</strong></li>
+                    <li class="text-indigo-600 font-bold pt-1">• Net Working Days: <strong>21 Days</strong></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENT SECTION J & Q: Quick Reference Tables for 2026 -->
+    <section class="mb-16 bg-white p-6 sm:p-10 rounded-2xl border border-slate-200/80 shadow-sm">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">Working Days Quick Reference Tables (2026)</h2>
+        <p class="text-sm text-slate-600 mb-6">Quick breakdown of calendar vs standard 5-day working days across months, quarters, and global regions for 2026.</p>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Monthly Breakdown Table -->
+            <div>
+                <h3 class="font-bold text-slate-800 mb-3 text-sm flex items-center gap-2">
+                    <i class="fa-solid fa-table-cells text-indigo-600"></i> 2026 Monthly Working Days Breakdown
+                </h3>
+                <div class="overflow-x-auto border border-slate-200 rounded-xl">
+                    <table class="w-full text-left text-xs sm:text-sm">
+                        <thead class="bg-slate-50 text-slate-700 font-semibold border-b border-slate-200">
+                            <tr>
+                                <th class="p-3">Month</th>
+                                <th class="p-3">Calendar Days</th>
+                                <th class="p-3">Weekends</th>
+                                <th class="p-3 text-indigo-600">Working Days</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 text-slate-600">
+                            <tr><td class="p-3 font-medium">January 2026</td><td class="p-3">31</td><td class="p-3">9</td><td class="p-3 font-bold text-slate-900">22</td></tr>
+                            <tr><td class="p-3 font-medium">February 2026</td><td class="p-3">28</td><td class="p-3">8</td><td class="p-3 font-bold text-slate-900">20</td></tr>
+                            <tr><td class="p-3 font-medium">March 2026</td><td class="p-3">31</td><td class="p-3">9</td><td class="p-3 font-bold text-slate-900">22</td></tr>
+                            <tr><td class="p-3 font-medium">April 2026</td><td class="p-3">30</td><td class="p-3">8</td><td class="p-3 font-bold text-slate-900">22</td></tr>
+                            <tr><td class="p-3 font-medium">May 2026</td><td class="p-3">31</td><td class="p-3">10</td><td class="p-3 font-bold text-slate-900">21</td></tr>
+                            <tr><td class="p-3 font-medium">June 2026</td><td class="p-3">30</td><td class="p-3">8</td><td class="p-3 font-bold text-slate-900">22</td></tr>
+                            <tr><td class="p-3 font-medium">July 2026</td><td class="p-3">31</td><td class="p-3">8</td><td class="p-3 font-bold text-slate-900">23</td></tr>
+                            <tr><td class="p-3 font-medium">August 2026</td><td class="p-3">31</td><td class="p-3">10</td><td class="p-3 font-bold text-slate-900">21</td></tr>
+                            <tr><td class="p-3 font-medium">September 2026</td><td class="p-3">30</td><td class="p-3">8</td><td class="p-3 font-bold text-slate-900">22</td></tr>
+                            <tr><td class="p-3 font-medium">October 2026</td><td class="p-3">31</td><td class="p-3">9</td><td class="p-3 font-bold text-slate-900">22</td></tr>
+                            <tr><td class="p-3 font-medium">November 2026</td><td class="p-3">30</td><td class="p-3">9</td><td class="p-3 font-bold text-slate-900">21</td></tr>
+                            <tr><td class="p-3 font-medium">December 2026</td><td class="p-3">31</td><td class="p-3">8</td><td class="p-3 font-bold text-slate-900">23</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Global Averages & Quarterly Table -->
+            <div class="space-y-6">
+                <div>
+                    <h3 class="font-bold text-slate-800 mb-3 text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-globe text-indigo-600"></i> Annual Working Days by Country
+                    </h3>
+                    <div class="border border-slate-200 rounded-xl overflow-hidden">
+                        <table class="w-full text-left text-xs sm:text-sm">
+                            <thead class="bg-slate-50 text-slate-700 font-semibold border-b border-slate-200">
+                                <tr>
+                                    <th class="p-3">Country</th>
+                                    <th class="p-3">Avg Holidays</th>
+                                    <th class="p-3 text-indigo-600">Annual Work Days</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100 text-slate-600">
+                                <tr><td class="p-3 font-medium">United States</td><td class="p-3">11 Days</td><td class="p-3 font-bold text-slate-900">~250 Days</td></tr>
+                                <tr><td class="p-3 font-medium">United Kingdom</td><td class="p-3">8 Days</td><td class="p-3 font-bold text-slate-900">~253 Days</td></tr>
+                                <tr><td class="p-3 font-medium">Canada</td><td class="p-3">10–12 Days</td><td class="p-3 font-bold text-slate-900">~249 Days</td></tr>
+                                <tr><td class="p-3 font-medium">India</td><td class="p-3">14–18 Days</td><td class="p-3 font-bold text-slate-900">~244 Days</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-slate-800 mb-3 text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-chart-pie text-indigo-600"></i> 2026 Quarterly Summary
+                    </h3>
+                    <div class="border border-slate-200 rounded-xl overflow-hidden">
+                        <table class="w-full text-left text-xs sm:text-sm">
+                            <thead class="bg-slate-50 text-slate-700 font-semibold border-b border-slate-200">
+                                <tr>
+                                    <th class="p-3">Quarter</th>
+                                    <th class="p-3">Calendar Days</th>
+                                    <th class="p-3 text-indigo-600">Working Days</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100 text-slate-600">
+                                <tr><td class="p-3 font-medium">Q1 (Jan - Mar)</td><td class="p-3">90</td><td class="p-3 font-bold text-slate-900">64 Days</td></tr>
+                                <tr><td class="p-3 font-medium">Q2 (Apr - Jun)</td><td class="p-3">91</td><td class="p-3 font-bold text-slate-900">65 Days</td></tr>
+                                <tr><td class="p-3 font-medium">Q3 (Jul - Sep)</td><td class="p-3">92</td><td class="p-3 font-bold text-slate-900">66 Days</td></tr>
+                                <tr><td class="p-3 font-medium">Q4 (Oct - Dec)</td><td class="p-3">92</td><td class="p-3 font-bold text-slate-900">66 Days</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENT SECTION K & L: Weekdays vs Working Days vs Calendar Days -->
+    <section class="mb-16 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm">
+            <h2 class="text-xl font-bold text-slate-900 mb-3">Weekdays vs. Working Days</h2>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+                <strong>Weekdays</strong> strictly refer to standard calendar days between Monday and Friday, regardless of holidays. 
+                <strong>Working Days</strong>, however, exclude both weekend days AND active public or corporate holidays on which business is suspended.
+            </p>
+            <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 text-xs text-slate-700 space-y-1">
+                <div>• Monday – Thursday: Weekday &amp; Working Day</div>
+                <div>• Friday (Public Holiday): Weekday, but NOT a Working Day</div>
+                <div>• Saturday &amp; Sunday: Weekend</div>
+            </div>
+        </div>
+
+        <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm">
+            <h2 class="text-xl font-bold text-slate-900 mb-3">Work Days vs. Calendar Days</h2>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+                <strong>Calendar Days</strong> encompass every continuous 24-hour cycle from Sunday through Saturday. <strong>Work Days</strong> measure effective operational labor days.
+            </p>
+            <div class="bg-indigo-50/60 p-3.5 rounded-xl border border-indigo-100 text-xs text-indigo-900 font-medium">
+                Example: 7 Calendar Days → 5 Weekdays → 4 Working Days (if 1 public holiday falls on a weekday).
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENT SECTION M: Start Date & End Date Inclusion -->
+    <section class="mb-16 bg-white p-6 sm:p-10 rounded-2xl border border-slate-200/80 shadow-sm">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-3">Are the Start Date and End Date Included?</h2>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            By default, our calculator uses <strong>inclusive counting</strong>. This means both the selected Start Date and End Date are evaluated. If your project starts on Monday and completes on Friday of the same week, inclusive counting yields <strong>5 Working Days</strong>. If you uncheck "Include End Date", the result adjusts to 4 elapsed work days.
+        </p>
+    </section>
+
+    <!-- CONTENT SECTION N & P: Use Cases & Target Audience -->
+    <section class="mb-16 bg-white p-6 sm:p-10 rounded-2xl border border-slate-200/80 shadow-sm">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">What Can You Use It For &amp; Who Is It For?</h2>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50">
+                <h3 class="font-bold text-slate-800 text-base mb-1"><i class="fa-solid fa-users text-indigo-600 mr-2"></i> HR &amp; Payroll Teams</h3>
+                <p class="text-xs text-slate-600">Calculate pro-rated salaries, paid time off (PTO), notice periods, and leave balances accurately.</p>
+            </div>
+            <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50">
+                <h3 class="font-bold text-slate-800 text-base mb-1"><i class="fa-solid fa-diagram-project text-indigo-600 mr-2"></i> Project Managers</h3>
+                <p class="text-xs text-slate-600">Set realistic milestone deadlines, estimate sprint capacities, and track delivery schedules.</p>
+            </div>
+            <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50">
+                <h3 class="font-bold text-slate-800 text-base mb-1"><i class="fa-solid fa-laptop-code text-indigo-600 mr-2"></i> Freelancers &amp; Agency</h3>
+                <p class="text-xs text-slate-600">Estimate turnaround times, contract agreements, and client invoice payment terms (e.g. Net-30 business days).</p>
+            </div>
+            <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50">
+                <h3 class="font-bold text-slate-800 text-base mb-1"><i class="fa-solid fa-truck-fast text-indigo-600 mr-2"></i> Logistics &amp; Shipping</h3>
+                <p class="text-xs text-slate-600">Determine true transit times and business day delivery dates across borders.</p>
+            </div>
+            <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50">
+                <h3 class="font-bold text-slate-800 text-base mb-1"><i class="fa-solid fa-scale-balanced text-indigo-600 mr-2"></i> Legal &amp; Compliance</h3>
+                <p class="text-xs text-slate-600">Calculate statutory notice windows, court filing deadlines, and contractual response periods.</p>
+            </div>
+            <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50">
+                <h3 class="font-bold text-slate-800 text-base mb-1"><i class="fa-solid fa-graduation-cap text-indigo-600 mr-2"></i> Students &amp; Faculty</h3>
+                <p class="text-xs text-slate-600">Plan academic terms, assignment submission schedules, and semester research durations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENT SECTION O: Accordion FAQ Section -->
+    <section class="mb-16 bg-white p-6 sm:p-10 rounded-2xl border border-slate-200/80 shadow-sm">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">Frequently Asked Questions</h2>
+        <p class="text-sm text-slate-600 mb-8">Everything you need to know about calculating work days and business schedules.</p>
+
+        <div class="space-y-4" id="faq-accordion-group">
+            
+            <!-- FAQ ITEM 1 -->
+            <div class="border border-slate-200 rounded-xl overflow-hidden">
+                <button type="button" onclick="toggleAccordion('faq-1')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 flex justify-between items-center bg-slate-50/50 hover:bg-slate-50 transition">
+                    <h3 class="text-base">Q1. What is a Work Days Calculator?</h3>
+                    <i id="icon-faq-1" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                </button>
+                <div id="faq-1" class="accordion-content px-4 sm:px-5">
+                    <p class="py-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                        A Work Days Calculator is an online utility that computes the exact number of active business days between two dates, taking into account non-working weekends and public holidays.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ ITEM 2 -->
+            <div class="border border-slate-200 rounded-xl overflow-hidden">
+                <button type="button" onclick="toggleAccordion('faq-2')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 flex justify-between items-center bg-slate-50/50 hover:bg-slate-50 transition">
+                    <h3 class="text-base">Q2. How do I calculate working days between two dates?</h3>
+                    <i id="icon-faq-2" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                </button>
+                <div id="faq-2" class="accordion-content px-4 sm:px-5">
+                    <p class="py-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                        Simply select your Start Date and End Date in the inputs above, pick your regular weekend schedule, select any public holiday preset, and click Calculate.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ ITEM 3 -->
+            <div class="border border-slate-200 rounded-xl overflow-hidden">
+                <button type="button" onclick="toggleAccordion('faq-3')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 flex justify-between items-center bg-slate-50/50 hover:bg-slate-50 transition">
+                    <h3 class="text-base">Q3. Does the Work Days Calculator exclude weekends?</h3>
+                    <i id="icon-faq-3" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                </button>
+                <div id="faq-3" class="accordion-content px-4 sm:px-5">
+                    <p class="py-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                        Yes! By default, Saturdays and Sundays are excluded. You can also configure the tool for Friday-Saturday weekends or 6-day work weeks.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ ITEM 4 -->
+            <div class="border border-slate-200 rounded-xl overflow-hidden">
+                <button type="button" onclick="toggleAccordion('faq-4')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 flex justify-between items-center bg-slate-50/50 hover:bg-slate-50 transition">
+                    <h3 class="text-base">Q4. Can I exclude public holidays?</h3>
+                    <i id="icon-faq-4" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                </button>
+                <div id="faq-4" class="accordion-content px-4 sm:px-5">
+                    <p class="py-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                        Yes, choose from presets for the US, UK, Canada, Australia, India, Germany, or France, or manually enter custom off-days.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ ITEM 5 -->
+            <div class="border border-slate-200 rounded-xl overflow-hidden">
+                <button type="button" onclick="toggleAccordion('faq-5')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 flex justify-between items-center bg-slate-50/50 hover:bg-slate-50 transition">
+                    <h3 class="text-base">Q5. What is the difference between calendar days and working days?</h3>
+                    <i id="icon-faq-5" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                </button>
+                <div id="faq-5" class="accordion-content px-4 sm:px-5">
+                    <p class="py-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                        Calendar days include every day of the week (7 days). Working days exclude non-working weekends and official statutory holidays.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ ITEM 6 -->
+            <div class="border border-slate-200 rounded-xl overflow-hidden">
+                <button type="button" onclick="toggleAccordion('faq-6')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 flex justify-between items-center bg-slate-50/50 hover:bg-slate-50 transition">
+                    <h3 class="text-base">Q6. Are Saturdays working days?</h3>
+                    <i id="icon-faq-6" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                </button>
+                <div id="faq-6" class="accordion-content px-4 sm:px-5">
+                    <p class="py-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                        In standard 5-day models, Saturday is a weekend. If your business operates 6 days a week, select "Sunday Only" from the weekend options.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ ITEM 7 -->
+            <div class="border border-slate-200 rounded-xl overflow-hidden">
+                <button type="button" onclick="toggleAccordion('faq-7')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 flex justify-between items-center bg-slate-50/50 hover:bg-slate-50 transition">
+                    <h3 class="text-base">Q7. Are Sundays working days?</h3>
+                    <i id="icon-faq-7" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                </button>
+                <div id="faq-7" class="accordion-content px-4 sm:px-5">
+                    <p class="py-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                        Sunday is universally considered a rest day in standard schedules, but our custom configuration allows treats Sunday as a work day if needed.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ ITEM 8 -->
+            <div class="border border-slate-200 rounded-xl overflow-hidden">
+                <button type="button" onclick="toggleAccordion('faq-8')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 flex justify-between items-center bg-slate-50/50 hover:bg-slate-50 transition">
+                    <h3 class="text-base">Q8. Can I calculate business days between dates?</h3>
+                    <i id="icon-faq-8" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                </button>
+                <div id="faq-8" class="accordion-content px-4 sm:px-5">
+                    <p class="py-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                        Yes, "business days" and "working days" are identical terms in commercial practice.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ ITEM 9 -->
+            <div class="border border-slate-200 rounded-xl overflow-hidden">
+                <button type="button" onclick="toggleAccordion('faq-9')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 flex justify-between items-center bg-slate-50/50 hover:bg-slate-50 transition">
+                    <h3 class="text-base">Q9. Does the calculator include the start date?</h3>
+                    <i id="icon-faq-9" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                </button>
+                <div id="faq-9" class="accordion-content px-4 sm:px-5">
+                    <p class="py-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                        Yes, provided the "Include Start Date" option is checked and the date falls on a valid work day.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ ITEM 10 -->
+            <div class="border border-slate-200 rounded-xl overflow-hidden">
+                <button type="button" onclick="toggleAccordion('faq-10')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 flex justify-between items-center bg-slate-50/50 hover:bg-slate-50 transition">
+                    <h3 class="text-base">Q10. Does the calculator include the end date?</h3>
+                    <i id="icon-faq-10" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                </button>
+                <div id="faq-10" class="accordion-content px-4 sm:px-5">
+                    <p class="py-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                        Yes, end dates are included by default (inclusive counting).
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ ITEM 11 -->
+            <div class="border border-slate-200 rounded-xl overflow-hidden">
+                <button type="button" onclick="toggleAccordion('faq-11')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 flex justify-between items-center bg-slate-50/50 hover:bg-slate-50 transition">
+                    <h3 class="text-base">Q11. Can I calculate working days for future dates?</h3>
+                    <i id="icon-faq-11" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                </button>
+                <div id="faq-11" class="accordion-content px-4 sm:px-5">
+                    <p class="py-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                        Yes, our date engine calculates working days indefinitely for future calendar years.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ ITEM 12 -->
+            <div class="border border-slate-200 rounded-xl overflow-hidden">
+                <button type="button" onclick="toggleAccordion('faq-12')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 flex justify-between items-center bg-slate-50/50 hover:bg-slate-50 transition">
+                    <h3 class="text-base">Q12. Is this Work Days Calculator free?</h3>
+                    <i id="icon-faq-12" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                </button>
+                <div id="faq-12" class="accordion-content px-4 sm:px-5">
+                    <p class="py-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                        100% free with no account setup or usage limits required.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- RELATED TOOLS & INTERNAL LINKS -->
+    <section class="mb-16 bg-gradient-to-r from-indigo-900 to-slate-900 text-white p-8 rounded-2xl shadow-lg">
+        <h2 class="text-xl sm:text-2xl font-bold mb-4">Related Calculators &amp; Tools</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <a href="#" class="p-4 bg-white/10 hover:bg-white/20 rounded-xl text-center backdrop-blur-sm transition">
+                <i class="fa-solid fa-piggy-bank text-amber-400 text-xl mb-2"></i>
+                <div class="text-sm font-semibold">SIP Calculator</div>
+            </a>
+            <a href="#" class="p-4 bg-white/10 hover:bg-white/20 rounded-xl text-center backdrop-blur-sm transition">
+                <i class="fa-solid fa-percent text-sky-400 text-xl mb-2"></i>
+                <div class="text-sm font-semibold">Percentage Calculator</div>
+            </a>
+            <a href="#" class="p-4 bg-white/10 hover:bg-white/20 rounded-xl text-center backdrop-blur-sm transition">
+                <i class="fa-solid fa-calendar-day text-emerald-400 text-xl mb-2"></i>
+                <div class="text-sm font-semibold">Date Calculator</div>
+            </a>
+            <a href="#" class="p-4 bg-white/10 hover:bg-white/20 rounded-xl text-center backdrop-blur-sm transition">
+                <i class="fa-solid fa-clock text-rose-400 text-xl mb-2"></i>
+                <div class="text-sm font-semibold">Time Calculator</div>
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<!-- Multi-column Footer -->
+<footer class="bg-slate-900 text-slate-400 text-sm border-t border-slate-800 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <!-- Col 1: About -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2 text-white font-bold text-lg">
+            <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
+              <i class="fa-solid fa-calculator"></i>
+            </div>
+            <span>Calculator<span class="text-indigo-400">-Pro</span></span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Calculator Pro provides free, fast, and clinically accurate online tools for health, financial, mathematical, and everyday conversion needs.
+          </p>
+          <div class="text-xs text-slate-500">
+            &copy; <span id="current-year">2026</span> Calculator Pro. All rights reserved.
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Quick Links</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Unit Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Length Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Weight Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Temperature Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Volume & Area Converter</a></li>
+          </ul>
+        </div>
+        <!-- Column 3: Tools & Resources -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Calculators</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="age-calculator.html" class="hover:text-white transition-colors">Age Calculator</a></li>
+            <li><a href="time-calculator.html" class="hover:text-white transition-colors">Time Calculator</a></li>
+            <li><a href="sip-calculator.html" class="hover:text-white transition-colors">SIP Financial Calculator</a></li>
+            <li><a href="bmi-calculator.html" class="hover:text-white transition-colors">BMI Health Calculator</a></li>
+            <li><a href="percentage-calculator.html" class="hover:text-white transition-colors">Percentage Calculator</a></li>
+          </ul>
+        </div>
+
+         <!-- Column 4: Legal & Contact -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Legal & Info</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Editorial Guidelines</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+<!-- VANILLA JAVASCRIPT ENGINE -->
+<script>
+	<!-- Inline JavaScript for Toggle -->
+      
+        document.addEventListener('DOMContentLoaded', () => {
+          const btn = document.getElementById('calc-mobile-menu-btn');
+          const menu = document.getElementById('calc-mobile-menu');
+          const menuIcon = document.getElementById('calc-menu-icon');
+          const closeIcon = document.getElementById('calc-close-icon');
+
+          if (btn && menu) {
+            btn.addEventListener('click', () => {
+              const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+              btn.setAttribute('aria-expanded', !isExpanded);
+              menu.classList.toggle('hidden');
+              menuIcon.classList.toggle('hidden');
+              closeIcon.classList.toggle('hidden');
+            });
+          }
+        });
+	
+    // State variables
+    let currentCalcMode = 'between'; // 'between' or 'addsub'
+    let customHolidays = [];
+
+    // Country public holiday presets (Sample standard dates for 2026)
+    const HOLIDAY_PRESETS = {
+        US: ['2026-01-01', '2026-01-19', '2026-02-16', '2026-05-25', '2026-06-19', '2026-07-03', '2026-09-07', '2026-10-12', '2026-11-11', '2026-11-26', '2026-12-25'],
+        UK: ['2026-01-01', '2026-04-03', '2026-04-06', '2026-05-04', '2026-05-25', '2026-08-31', '2026-12-25', '2026-12-28'],
+        CA: ['2026-01-01', '2026-04-03', '2026-05-18', '2026-07-01', '2026-09-07', '2026-09-30', '2026-10-12', '2026-11-11', '2026-12-25', '2026-12-26'],
+        AU: ['2026-01-01', '2026-01-26', '2026-04-03', '2026-04-04', '2026-04-06', '2026-04-25', '2026-12-25', '2026-12-26'],
+        IN: ['2026-01-26', '2026-03-04', '2026-03-20', '2026-04-03', '2026-08-15', '2026-10-02', '2026-10-20', '2026-11-08', '2026-12-25'],
+        DE: ['2026-01-01', '2026-04-03', '2026-04-06', '2026-05-01', '2026-05-14', '2026-05-25', '2026-10-03', '2026-12-25', '2026-12-26'],
+        FR: ['2026-01-01', '2026-04-06', '2026-05-01', '2026-05-08', '2026-05-14', '2026-05-25', '2026-07-14', '2026-08-15', '2026-11-01', '2026-11-11', '2026-12-25']
+    };
+
+    // Initialize Default Dates on Load
+    document.addEventListener('DOMContentLoaded', () => {
+        const today = new Date();
+        const thirtyDaysLater = new Date();
+        thirtyDaysLater.setDate(today.getDate() + 30);
+
+        document.getElementById('start-date').value = formatDateIso(today);
+        document.getElementById('end-date').value = formatDateIso(thirtyDaysLater);
+        document.getElementById('addsub-start-date').value = formatDateIso(today);
+
+        // Run initial calculation
+        calculateWorkDays();
+    });
+
+    // Helper: Format Date to YYYY-MM-DD
+    function formatDateIso(d) {
+        const yr = d.getFullYear();
+        const mo = String(d.getMonth() + 1).padStart(2, '0');
+        const dy = String(d.getDate()).padStart(2, '0');
+        return `${yr}-${mo}-${dy}`;
+    }
+
+    // Switch Calculator Mode
+    function switchCalcMode(mode) {
+        currentCalcMode = mode;
+        const tab1 = document.getElementById('mode-tab-1');
+        const tab2 = document.getElementById('mode-tab-2');
+        const panelBetween = document.getElementById('mode-between-panel');
+        const panelAddSub = document.getElementById('mode-addsub-panel');
+        const modeLabel = document.getElementById('current-mode-label');
+        const targetContainer = document.getElementById('res-target-date-container');
+
+        if (mode === 'between') {
+            tab1.className = "flex-1 sm:flex-none px-5 py-2.5 rounded-xl font-semibold text-sm transition-all shadow-sm bg-white text-indigo-600";
+            tab2.className = "flex-1 sm:flex-none px-5 py-2.5 rounded-xl font-semibold text-sm transition-all text-slate-600 hover:text-slate-900";
+            panelBetween.classList.remove('hidden');
+            panelBetween.classList.add('grid');
+            panelAddSub.classList.add('hidden');
+            panelAddSub.classList.remove('grid');
+            modeLabel.innerText = "Days Between Dates";
+            targetContainer.classList.add('hidden');
+        } else {
+            tab2.className = "flex-1 sm:flex-none px-5 py-2.5 rounded-xl font-semibold text-sm transition-all shadow-sm bg-white text-indigo-600";
+            tab1.className = "flex-1 sm:flex-none px-5 py-2.5 rounded-xl font-semibold text-sm transition-all text-slate-600 hover:text-slate-900";
+            panelAddSub.classList.remove('hidden');
+            panelAddSub.classList.add('grid');
+            panelBetween.classList.add('hidden');
+            panelBetween.classList.remove('grid');
+            modeLabel.innerText = "Add/Subtract Days Mode";
+            targetContainer.classList.remove('hidden');
+        }
+        calculateWorkDays();
+    }
+
+    // Toggle Custom Weekend Checkboxes
+    function handleWeekendPatternChange() {
+        const pattern = document.getElementById('weekend-pattern').value;
+        const container = document.getElementById('custom-weekends-container');
+        if (pattern === 'custom') {
+            container.classList.remove('hidden');
+        } else {
+            container.classList.add('hidden');
+        }
+    }
+
+    // Custom Holiday Add Function
+    function addCustomHoliday() {
+        const input = document.getElementById('custom-holiday-input');
+        const val = input.value;
+        if (val && !customHolidays.includes(val)) {
+            customHolidays.push(val);
+            renderCustomHolidays();
+            input.value = '';
+            calculateWorkDays();
+        }
+    }
+
+    function removeCustomHoliday(val) {
+        customHolidays = customHolidays.filter(h => h !== val);
+        renderCustomHolidays();
+        calculateWorkDays();
+    }
+
+    function renderCustomHolidays() {
+        const container = document.getElementById('custom-holidays-list');
+        container.innerHTML = customHolidays.map(h => `
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-indigo-100 text-indigo-800 text-xs font-semibold">
+                ${h}
+                <button type="button" onclick="removeCustomHoliday('${h}')" class="text-indigo-600 hover:text-indigo-900"><i class="fa-solid fa-xmark"></i></button>
+            </span>
+        `).join('');
+    }
+
+    // MAIN CALCULATOR ENGINE
+    function calculateWorkDays() {
+        // Collect Options
+        const pattern = document.getElementById('weekend-pattern').value;
+        const countryPreset = document.getElementById('country-preset').value;
+        const includeStart = document.getElementById('include-start-date').checked;
+        const includeEnd = document.getElementById('include-end-date').checked;
+        const dailyHours = parseFloat(document.getElementById('daily-hours').value) || 8;
+
+        // Build Excluded Weekend Days Set (0 = Sun, 1 = Mon, ..., 6 = Sat)
+        let offDaysSet = new Set();
+        if (pattern === 'sat-sun') {
+            offDaysSet.add(0).add(6);
+        } else if (pattern === 'fri-sat') {
+            offDaysSet.add(5).add(6);
+        } else if (pattern === 'sun-only') {
+            offDaysSet.add(0);
+        } else if (pattern === 'custom') {
+            document.querySelectorAll('.custom-day-check:checked').forEach(cb => {
+                offDaysSet.add(parseInt(cb.value));
+            });
+        }
+
+        // Build Holidays Set
+        let holidaysSet = new Set(customHolidays);
+        if (countryPreset !== 'none' && HOLIDAY_PRESETS[countryPreset]) {
+            HOLIDAY_PRESETS[countryPreset].forEach(h => holidaysSet.add(h));
+        }
+
+        if (currentCalcMode === 'between') {
+            const startVal = document.getElementById('start-date').value;
+            const endVal = document.getElementById('end-date').value;
+
+            if (!startVal || !endVal) return;
+
+            let startDate = new Date(startVal + 'T00:00:00');
+            let endDate = new Date(endVal + 'T00:00:00');
+
+            if (startDate > endDate) {
+                // Swap if inverted
+                const temp = startDate;
+                startDate = endDate;
+                endDate = temp;
+            }
+
+            let calendarDays = Math.round((endDate - startDate) / (1000 * 60 * 60 * 24)) + 1;
+            let workingDays = 0;
+            let saturdays = 0;
+            let sundays = 0;
+            let holidaysCount = 0;
+
+            let curr = new Date(startDate);
+            let totalIter = 0;
+
+            while (curr <= endDate) {
+                totalIter++;
+                const isStart = totalIter === 1;
+                const isEnd = curr.getTime() === endDate.getTime();
+                const dayOfWeek = curr.getDay();
+                const isoStr = formatDateIso(curr);
+
+                if (dayOfWeek === 6) saturdays++;
+                if (dayOfWeek === 0) sundays++;
+
+                // Inclusion check
+                let skipDate = false;
+                if (isStart && !includeStart) skipDate = true;
+                if (isEnd && !includeEnd) skipDate = true;
+
+                if (!skipDate) {
+                    const isWeekend = offDaysSet.has(dayOfWeek);
+                    const isHoliday = holidaysSet.has(isoStr);
+
+                    if (isHoliday && !isWeekend) {
+                        holidaysCount++;
+                    }
+
+                    if (!isWeekend && !isHoliday) {
+                        workingDays++;
+                    }
+                }
+
+                curr.setDate(curr.getDate() + 1);
+            }
+
+            // Adjust calendar days if flags are unchecked
+            let netCalendarDays = calendarDays;
+            if (!includeStart) netCalendarDays--;
+            if (!includeEnd && netCalendarDays > 0) netCalendarDays--;
+
+            // Update UI
+            document.getElementById('res-working-days').innerText = workingDays;
+            document.getElementById('res-calendar-days').innerText = Math.max(0, netCalendarDays);
+            document.getElementById('res-saturdays').innerText = saturdays;
+            document.getElementById('res-sundays').innerText = sundays;
+            document.getElementById('res-holidays').innerText = holidaysCount;
+            document.getElementById('res-weeks').innerText = (workingDays / 5).toFixed(1);
+            document.getElementById('res-hours').innerText = (workingDays * dailyHours) + ' hrs';
+
+        } else {
+            // ADD / SUBTRACT MODE
+            const startVal = document.getElementById('addsub-start-date').value;
+            const action = document.getElementById('addsub-action').value;
+            const targetWorkDays = parseInt(document.getElementById('addsub-days').value) || 0;
+
+            if (!startVal || targetWorkDays <= 0) return;
+
+            let curr = new Date(startVal + 'T00:00:00');
+            let accumulatedWorkDays = 0;
+            let calendarDays = 0;
+            let saturdays = 0;
+            let sundays = 0;
+            let holidaysCount = 0;
+
+            const direction = action === 'add' ? 1 : -1;
+
+            while (accumulatedWorkDays < targetWorkDays) {
+                calendarDays++;
+                const dayOfWeek = curr.getDay();
+                const isoStr = formatDateIso(curr);
+
+                if (dayOfWeek === 6) saturdays++;
+                if (dayOfWeek === 0) sundays++;
+
+                const isWeekend = offDaysSet.has(dayOfWeek);
+                const isHoliday = holidaysSet.has(isoStr);
+
+                if (isHoliday && !isWeekend) holidaysCount++;
+
+                if (!isWeekend && !isHoliday) {
+                    accumulatedWorkDays++;
+                }
+
+                if (accumulatedWorkDays < targetWorkDays) {
+                    curr.setDate(curr.getDate() + direction);
+                }
+            }
+
+            // Update UI
+            document.getElementById('res-working-days').innerText = targetWorkDays;
+            document.getElementById('res-calendar-days').innerText = calendarDays;
+            document.getElementById('res-saturdays').innerText = saturdays;
+            document.getElementById('res-sundays').innerText = sundays;
+            document.getElementById('res-holidays').innerText = holidaysCount;
+            document.getElementById('res-weeks').innerText = (targetWorkDays / 5).toFixed(1);
+            document.getElementById('res-hours').innerText = (targetWorkDays * dailyHours) + ' hrs';
+
+            document.getElementById('res-target-date-container').classList.remove('hidden');
+            document.getElementById('res-target-date-val').innerText = curr.toDateString();
+        }
+    }
+
+    // Reset Form
+    function resetCalculator() {
+        customHolidays = [];
+        renderCustomHolidays();
+        document.getElementById('country-preset').value = 'none';
+        document.getElementById('weekend-pattern').value = 'sat-sun';
+        document.getElementById('custom-weekends-container').classList.add('hidden');
+        document.getElementById('include-start-date').checked = true;
+        document.getElementById('include-end-date').checked = true;
+        document.getElementById('daily-hours').value = 8;
+        
+        const today = new Date();
+        const thirtyDays = new Date();
+        thirtyDays.setDate(today.getDate() + 30);
+        document.getElementById('start-date').value = formatDateIso(today);
+        document.getElementById('end-date').value = formatDateIso(thirtyDays);
+
+        calculateWorkDays();
+    }
+
+    // Accordion Toggle
+    function toggleAccordion(id) {
+        const content = document.getElementById(id);
+        const icon = document.getElementById('icon-' + id);
+        if (content.classList.contains('open')) {
+            content.classList.remove('open');
+            if (icon) icon.style.transform = 'rotate(0deg)';
+        } else {
+            content.classList.add('open');
+            if (icon) icon.style.transform = 'rotate(180deg)';
+        }
+    }
+
+    // Copy Summary Results
+    function copyResults() {
+        const workDays = document.getElementById('res-working-days').innerText;
+        const calDays = document.getElementById('res-calendar-days').innerText;
+        const hrs = document.getElementById('res-hours').innerText;
+        
+        const text = `Calculator Pro Summary:\nWorking Days: ${workDays}\nCalendar Days: ${calDays}\nWorking Hours: ${hrs}`;
+        
+        const dummy = document.createElement('textarea');
+        document.body.appendChild(dummy);
+        dummy.value = text;
+        dummy.select();
+        document.execCommand('copy');
+        document.body.removeChild(dummy);
+
+        alert('Summary copied to clipboard!');
+    }
+
+    // Print Results
+    function printResults() {
+        window.print();
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Calculator – Days Between Dates, Add/Subtract & Business Days</title>
+    <meta name="description" content="Free online date calculator to calculate days between two dates, add or subtract days, weeks, months and years, and find exact date differences quickly.">
+    <meta name="keywords" content="Date calculator, Date difference calculator, Days between dates calculator, Calculate days between two dates, Add days to date calculator, Business days calculator, Date duration calculator, How many days between dates, Days from today calculator, Date calculator online free">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://calculatorpro.com/date-calculator">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Date Calculator – Days Between Dates & Add/Subtract">
+    <meta property="og:description" content="Calculate exact days between two dates, add/subtract time, and find working business days easily with our free date calculator.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calculatorpro.com/date-calculator">
+    <meta property="og:site_name" content="Calculator Pro">
+
+    <!-- Fonts & Icons -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind CSS CDN & Custom Config -->
+   
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- Structured Data (JSON-LD Schemas) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "@id": "https://calculatorpro.com/date-calculator/#webapp",
+          "url": "https://calculatorpro.com/date-calculator",
+          "name": "Calculator Pro Date Calculator",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "All",
+          "browserRequirements": "Requires JavaScript",
+          "description": "Calculate days between dates, add or subtract duration, and compute business days accurately with Calculator Pro.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "HowTo",
+          "name": "How to Calculate Days Between Two Dates",
+          "description": "Step-by-step guide on how to calculate duration or add/subtract time using the Date Calculator.",
+          "step": [
+            {
+              "@type": "HowToStep",
+              "name": "Select Start Date",
+              "text": "Choose your starting calendar date from the date input picker."
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Choose End Date or Duration",
+              "text": "Select an ending date or choose the number of days/weeks/months/years to add or subtract."
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Adjust Options",
+              "text": "Toggle options like including the end date or excluding weekends/holidays for business days."
+            },
+            {
+              "@type": "HowToStep",
+              "name": "View Detailed Results",
+              "text": "Instantly get total days, week breakdowns, month intervals, and total hours."
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How to calculate days between two dates?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Simply pick a start date and end date in the calculator. It automatically measures the exact total calendar days between those dates."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does the calculator include the end date?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "By default, calendar duration counts from day A to day B (excluding the final day itself). However, you can toggle the 'Include End Date (+1 day)' checkbox to include the final day in your calculation."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How are business days calculated?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Business days are calculated by excluding Saturdays and Sundays between the start and end dates. You can also specify custom holidays to deduct."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does it account for leap years?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, our algorithm accounts for leap years (including 2024, 2028, etc.) where February has 29 days instead of 28."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How many days have I been alive?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Enter your birth date as the Start Date and keep Today as the End Date under 'Date Difference' to see your exact total days alive."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the difference between total days and years/months/days breakdown?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Total days counts raw consecutive days. The breakdown splits the duration into full Gregorian calendar years, remaining full calendar months, and remaining days."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I calculate future dates?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, you can calculate dates years into the future or past using the Add / Subtract Days tool."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How to add or subtract days from a date?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Switch to the 'Add / Subtract Days' tab, enter your starting date, choose 'Add (+)' or 'Subtract (-)', enter the amount of time, and view the final calculated target date."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I calculate months between two dates?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, the calculation breakdown shows exact full months and remaining days between any two dates."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does the calculator count weekends?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The standard Date Difference includes weekends. You can switch to 'Business Days' mode to automatically remove weekend days."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is this date calculator free?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes! Calculator Pro's Date Calculator is 100% free with no registration required."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans flex flex-col min-h-screen">
+
+    <!-- Site Header -->
+    <header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      
+      <!-- Brand Logo & Name -->
+      <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
+        <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
+          <i class="fa-solid fa-calculator text-lg"></i>
+        </div>
+        <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
+          Calculator<span class="text-indigo-600">-Pro</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-1" aria-label="Main Navigation">
+        
+        <!-- Category 1: Age -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Age
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="age-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="birthday-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Birthday Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="age-difference-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Diffrence Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Time -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Time & Date
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="time-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Time Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="date-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Date Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="work-days-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Work Days Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="time-zone-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">TimeZone Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Converter -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Converter
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="unit-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Unit Converter</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="cgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">CGPA to Percentage</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to Percentage</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sgpa-to-cgpa-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to CGPA</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="marks-to-percentage-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Marks to Percentage</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4: Financial -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Financial
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sip-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SIP Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="emi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">EMI Loan Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="Compound-Interest-Calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Compound Interest Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 5: Health -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Health
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute right-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="bmi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">BMI Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="waist-to-hip-ratio-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">WHR Calculator</a>
+            </div>
+          </div>
+        </div>
+		  
+		 
+
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex md:hidden">
+        <button id="calc-mobile-menu-btn" type="button" class="p-2.5 rounded-xl text-slate-600 hover:text-indigo-600 hover:bg-slate-100/80 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors duration-200" aria-controls="calc-mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+          <svg id="calc-menu-icon" class="w-6 h-6 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="calc-close-icon" class="w-6 h-6 hidden transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile Full-Width Menu Container -->
+  <div id="calc-mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white shadow-xl transition-all duration-200 ease-in-out">
+    <div class="px-4 pt-3 pb-6 space-y-4">
+      
+      <!-- Mobile Category: Age -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Age</div>
+        <a href="age-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Calculator</a>
+		  <a href="birthday-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Birthday Calculator</a>
+		  <a href="age-difference-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Diffrence Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Time -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Time & Date</div>
+        <a href="time-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Time Calculator</a>
+		  <a href="date-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Date Calculator</a>
+		  <a href="work-days-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Work Days Calculator</a>
+		  <a href="time-zone-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">TimeZone Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Converter -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Converter</div>
+        <a href="javascript:void(0)" onclick="openCalculator('length')" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Unit Converter</a>
+		  <a href="cgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">CGPA to Percentage</a>
+		  <a href="sgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to Percentage</a>
+		  <a href="sgpa-to-cgpa-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to CGPA</a>
+		  <a href="marks-to-percentage-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Marks to Percentage</a>
+      </div>
+
+      <!-- Mobile Category: Financial -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Financial</div>
+        <a href="sip-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SIP Calculator</a>
+		  <a href="emi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">EMI Loan Calculator</a>
+		  <a href="Compound-Interest-Calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Compound Interest Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Health -->
+      <div>
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Health</div>
+        <a href="bmi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">BMI Calculator</a>
+		  <a href="waist-to-hip-ratio-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">WHR Calculator</a>
+      </div>
+		
+		
+
+    </div>
+  </div>
+</header>
+
+    <!-- Hero & Interactive Calculator Section -->
+    <main class="flex-grow">
+        <section class="bg-gradient-to-b from-indigo-50/60 via-white to-slate-50 pt-10 pb-16 px-4 sm:px-6 lg:px-8 border-b border-slate-200/60">
+            <div class="max-w-6xl mx-auto">
+                <!-- Hero Header Content -->
+                <div class="text-center max-w-3xl mx-auto mb-10">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700 mb-4 border border-indigo-200/60 shadow-xs">
+                        <i class="fa-solid fa-sparkles text-xs"></i> Accurate & Fast Date Utility
+                    </span>
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                        Free Online <span class="text-indigo-600 underline decoration-indigo-200 decoration-wavy decoration-2">Date Calculator</span>
+                    </h1>
+                    <p class="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
+                        Calculate the exact difference between two dates or find a new date by adding or subtracting days, weeks, months, or years. Use our free online Date Calculator to perform date calculations quickly and easily.
+                    </p>
+                    
+                    <!-- Quick Benefit Badges -->
+                    <div class="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs sm:text-sm font-medium text-slate-600">
+                        <span class="flex items-center gap-1.5 text-slate-700">
+                            <i class="fa-solid fa-circle-check text-emerald-500"></i> Free to use
+                        </span>
+                        <span class="flex items-center gap-1.5 text-slate-700">
+                            <i class="fa-solid fa-circle-check text-emerald-500"></i> No registration required
+                        </span>
+                        <span class="flex items-center gap-1.5 text-slate-700">
+                            <i class="fa-solid fa-circle-check text-emerald-500"></i> Fast & accurate
+                        </span>
+                        <span class="flex items-center gap-1.5 text-slate-700">
+                            <i class="fa-solid fa-circle-check text-emerald-500"></i> Works on mobile & desktop
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Calculator Main Card -->
+                <div class="bg-white rounded-2xl shadow-xl shadow-slate-200/60 border border-slate-200/80 overflow-hidden transition-all">
+                    
+                    <!-- Mode Navigation Tabs -->
+                    <div class="bg-slate-100/80 p-2 border-b border-slate-200/80 grid grid-cols-1 sm:grid-cols-3 gap-2">
+                        <button type="button" id="tab-diff" onclick="switchTab('diff')" class="tab-btn active flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-semibold transition-all shadow-sm bg-white text-indigo-600 border border-slate-200">
+                            <i class="fa-regular fa-calendar-days text-indigo-500"></i>
+                            Date Difference
+                        </button>
+                        <button type="button" id="tab-addsub" onclick="switchTab('addsub')" class="tab-btn flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-semibold transition-all text-slate-600 hover:text-slate-900 hover:bg-white/60">
+                            <i class="fa-solid fa-plus-minus text-indigo-500"></i>
+                            Add / Subtract Days
+                        </button>
+                        <button type="button" id="tab-business" onclick="switchTab('business')" class="tab-btn flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-semibold transition-all text-slate-600 hover:text-slate-900 hover:bg-white/60">
+                            <i class="fa-solid fa-briefcase text-indigo-500"></i>
+                            Business Days
+                        </button>
+                    </div>
+
+                    <!-- Calculator Form & Output Container -->
+                    <div class="p-5 sm:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                        
+                        <!-- Left Column: Inputs -->
+                        <div class="lg:col-span-6 space-y-6">
+                            
+                            <!-- Mode 1: Date Difference Inputs -->
+                            <div id="mode-diff-inputs" class="mode-panel space-y-5">
+                                <div>
+                                    <label for="diff-start-date" class="block text-sm font-semibold text-slate-700 mb-1">Start Date</label>
+                                    <div class="relative rounded-xl shadow-xs">
+                                        <input type="date" id="diff-start-date" class="w-full pl-3.5 pr-10 py-2.5 bg-slate-50 border border-slate-300 text-slate-800 text-sm rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 focus:bg-white transition-all font-medium">
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="diff-end-date" class="block text-sm font-semibold text-slate-700 mb-1">End Date</label>
+                                    <div class="relative rounded-xl shadow-xs">
+                                        <input type="date" id="diff-end-date" class="w-full pl-3.5 pr-10 py-2.5 bg-slate-50 border border-slate-300 text-slate-800 text-sm rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 focus:bg-white transition-all font-medium">
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-2 pt-1">
+                                    <input type="checkbox" id="diff-include-end" class="w-4 h-4 text-indigo-600 bg-slate-100 border-slate-300 rounded focus:ring-indigo-500">
+                                    <label for="diff-include-end" class="text-sm font-medium text-slate-700 cursor-pointer select-none">
+                                        Include end date in calculation (+1 day)
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Mode 2: Add/Subtract Inputs -->
+                            <div id="mode-addsub-inputs" class="mode-panel hidden space-y-5">
+                                <div>
+                                    <label for="addsub-start-date" class="block text-sm font-semibold text-slate-700 mb-1">Start Date</label>
+                                    <input type="date" id="addsub-start-date" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 text-slate-800 text-sm rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 focus:bg-white transition-all font-medium">
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-semibold text-slate-700 mb-1">Operation</label>
+                                    <div class="grid grid-cols-2 gap-3">
+                                        <label class="flex items-center justify-center gap-2 p-2.5 border rounded-xl cursor-pointer transition-all bg-indigo-50/80 border-indigo-300 text-indigo-700 font-medium text-sm" id="op-add-label">
+                                            <input type="radio" name="addsub-op" value="add" checked class="hidden" onchange="updateOpStyle()">
+                                            <i class="fa-solid fa-plus text-xs"></i> Add (+)
+                                        </label>
+                                        <label class="flex items-center justify-center gap-2 p-2.5 border rounded-xl cursor-pointer transition-all border-slate-200 text-slate-600 font-medium text-sm hover:bg-slate-50" id="op-sub-label">
+                                            <input type="radio" name="addsub-op" value="subtract" class="hidden" onchange="updateOpStyle()">
+                                            <i class="fa-solid fa-minus text-xs"></i> Subtract (-)
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-3">
+                                    <div>
+                                        <label for="addsub-amount" class="block text-sm font-semibold text-slate-700 mb-1">Amount</label>
+                                        <input type="number" id="addsub-amount" value="30" min="1" max="99999" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 text-slate-800 text-sm rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 focus:bg-white transition-all font-medium">
+                                    </div>
+                                    <div>
+                                        <label for="addsub-unit" class="block text-sm font-semibold text-slate-700 mb-1">Unit</label>
+                                        <select id="addsub-unit" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 text-slate-800 text-sm rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 focus:bg-white transition-all font-medium">
+                                            <option value="days">Days</option>
+                                            <option value="weeks">Weeks</option>
+                                            <option value="months">Months</option>
+                                            <option value="years">Years</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Mode 3: Business Days Inputs -->
+                            <div id="mode-business-inputs" class="mode-panel hidden space-y-5">
+                                <div>
+                                    <label for="biz-start-date" class="block text-sm font-semibold text-slate-700 mb-1">Start Date</label>
+                                    <input type="date" id="biz-start-date" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 text-slate-800 text-sm rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 focus:bg-white transition-all font-medium">
+                                </div>
+
+                                <div>
+                                    <label for="biz-end-date" class="block text-sm font-semibold text-slate-700 mb-1">End Date</label>
+                                    <input type="date" id="biz-end-date" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 text-slate-800 text-sm rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 focus:bg-white transition-all font-medium">
+                                </div>
+
+                                <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
+                                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">Excluded Weekend Days</label>
+                                    <div class="flex items-center gap-4">
+                                        <label class="flex items-center gap-1.5 text-sm font-medium text-slate-700 cursor-pointer">
+                                            <input type="checkbox" id="biz-ex-sat" checked class="w-4 h-4 text-indigo-600 bg-white border-slate-300 rounded focus:ring-indigo-500">
+                                            Saturday
+                                        </label>
+                                        <label class="flex items-center gap-1.5 text-sm font-medium text-slate-700 cursor-pointer">
+                                            <input type="checkbox" id="biz-ex-sun" checked class="w-4 h-4 text-indigo-600 bg-white border-slate-300 rounded focus:ring-indigo-500">
+                                            Sunday
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="biz-holidays" class="block text-sm font-semibold text-slate-700 mb-1">
+                                        Custom Holidays Deducted <span class="text-xs font-normal text-slate-500">(Optional)</span>
+                                    </label>
+                                    <input type="number" id="biz-holidays" min="0" value="0" placeholder="Number of public holidays" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 text-slate-800 text-sm rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 focus:bg-white transition-all font-medium">
+                                </div>
+                            </div>
+
+                            <!-- Quick Preset Buttons -->
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Quick Presets</label>
+                                <div class="flex flex-wrap gap-2">
+                                    <button type="button" onclick="setPreset('today')" class="px-3 py-1.5 text-xs font-medium text-slate-700 bg-slate-100 hover:bg-slate-200 hover:text-indigo-600 rounded-lg transition-colors">Today</button>
+                                    <button type="button" onclick="setPreset('eom')" class="px-3 py-1.5 text-xs font-medium text-slate-700 bg-slate-100 hover:bg-slate-200 hover:text-indigo-600 rounded-lg transition-colors">End of Month</button>
+                                    <button type="button" onclick="setPreset('30days')" class="px-3 py-1.5 text-xs font-medium text-slate-700 bg-slate-100 hover:bg-slate-200 hover:text-indigo-600 rounded-lg transition-colors">+30 Days</button>
+                                    <button type="button" onclick="setPreset('90days')" class="px-3 py-1.5 text-xs font-medium text-slate-700 bg-slate-100 hover:bg-slate-200 hover:text-indigo-600 rounded-lg transition-colors">+90 Days</button>
+                                    <button type="button" onclick="setPreset('1year')" class="px-3 py-1.5 text-xs font-medium text-slate-700 bg-slate-100 hover:bg-slate-200 hover:text-indigo-600 rounded-lg transition-colors">+1 Year</button>
+                                </div>
+                            </div>
+
+                            <!-- Calculate Button -->
+                            <button type="button" onclick="calculateAll()" class="w-full py-3.5 px-6 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-base shadow-lg shadow-indigo-200 hover:shadow-indigo-300 active:scale-[0.99] transition-all flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-calculator"></i> Calculate Date Duration
+                            </button>
+
+                        </div>
+
+                        <!-- Right Column: Live Calculated Results -->
+                        <div class="lg:col-span-6 bg-slate-900 text-white rounded-2xl p-6 sm:p-7 shadow-2xl relative overflow-hidden flex flex-col justify-between">
+                            <!-- Subtle Ambient Glow -->
+                            <div class="absolute -top-12 -right-12 w-40 h-40 bg-indigo-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+                            <div>
+                                <!-- Header & Copy Button -->
+                                <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-5">
+                                    <div class="flex items-center gap-2">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+                                        <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Calculation Summary</span>
+                                    </div>
+                                    <button type="button" onclick="copyResults()" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white rounded-lg text-xs font-medium transition-colors border border-slate-700">
+                                        <i class="fa-regular fa-copy"></i>
+                                        <span id="copy-btn-text">Copy Results</span>
+                                    </button>
+                                </div>
+
+                                <!-- Primary Highlight Card -->
+                                <div class="bg-gradient-to-br from-indigo-900/80 to-slate-800 p-5 rounded-xl border border-indigo-500/30 mb-6 shadow-inner">
+                                    <span id="primary-result-label" class="text-xs font-medium text-indigo-300 block mb-1">Formatted Breakdown</span>
+                                    <div id="primary-result-value" class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+                                        0 Years, 0 Months, 0 Days
+                                    </div>
+                                    <div id="primary-result-sub" class="text-xs text-indigo-200/80 mt-1">
+                                        Select start & end date to begin.
+                                    </div>
+                                </div>
+
+                                <!-- Total Metrics Grid -->
+                                <div class="grid grid-cols-2 gap-3 mb-6">
+                                    <div class="bg-slate-800/80 p-3.5 rounded-xl border border-slate-800">
+                                        <span class="text-xs text-slate-400 block font-medium">Total Days</span>
+                                        <span id="metric-total-days" class="text-xl font-bold text-emerald-400">0</span>
+                                    </div>
+                                    <div class="bg-slate-800/80 p-3.5 rounded-xl border border-slate-800">
+                                        <span class="text-xs text-slate-400 block font-medium">Business / Work Days</span>
+                                        <span id="metric-biz-days" class="text-xl font-bold text-sky-400">0</span>
+                                    </div>
+                                    <div class="bg-slate-800/80 p-3.5 rounded-xl border border-slate-800">
+                                        <span class="text-xs text-slate-400 block font-medium">Total Weeks</span>
+                                        <span id="metric-weeks" class="text-lg font-semibold text-slate-200">0 wks, 0 days</span>
+                                    </div>
+                                    <div class="bg-slate-800/80 p-3.5 rounded-xl border border-slate-800">
+                                        <span class="text-xs text-slate-400 block font-medium">Total Months</span>
+                                        <span id="metric-months" class="text-lg font-semibold text-slate-200">0 mos, 0 days</span>
+                                    </div>
+                                </div>
+
+                                <!-- Time Units Breakdown -->
+                                <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-800/80 space-y-2 mb-6">
+                                    <div class="flex justify-between text-xs text-slate-300">
+                                        <span>Total Hours:</span>
+                                        <span id="metric-hours" class="font-mono text-indigo-300 font-semibold">0 hrs</span>
+                                    </div>
+                                    <div class="flex justify-between text-xs text-slate-300">
+                                        <span>Total Minutes:</span>
+                                        <span id="metric-minutes" class="font-mono text-indigo-300 font-semibold">0 mins</span>
+                                    </div>
+                                    <div class="flex justify-between text-xs text-slate-300">
+                                        <span>Total Seconds:</span>
+                                        <span id="metric-seconds" class="font-mono text-indigo-300 font-semibold">0 secs</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Visual Timeline Bar -->
+                            <div>
+                                <div class="flex justify-between items-center text-xs text-slate-400 mb-1">
+                                    <span id="timeline-start-label">Start Date</span>
+                                    <span id="timeline-end-label">End Date</span>
+                                </div>
+                                <div class="w-full h-2.5 bg-slate-800 rounded-full overflow-hidden flex">
+                                    <div id="timeline-progress" class="h-full bg-gradient-to-r from-indigo-500 to-emerald-400 transition-all duration-500" style="width: 100%;"></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comprehensive SEO Content Container -->
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+
+            <!-- C. What Is a Date Calculator? -->
+            <section class="prose prose-slate max-w-none">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 border-b border-slate-200 pb-3 flex items-center gap-3">
+                    <i class="fa-solid fa-circle-info text-indigo-600"></i> What Is a Date Calculator?
+                </h2>
+                <p class="text-slate-600 leading-relaxed mt-4">
+                    A <strong>Date Calculator</strong> is an online precision tool that helps you calculate the exact difference between two dates or determine a future or past date by adding or subtracting a specific amount of time. Depending on the calculation, you can seamlessly work with days, weeks, months, and years.
+                </p>
+                <p class="text-slate-600 leading-relaxed mt-3">
+                    Instead of manually counting calendar days or stressing over leap years and varying month lengths, a date calculator performs the calculation automatically in milliseconds, presenting full total durations alongside working day statistics.
+                </p>
+            </section>
+
+            <!-- D. How to Use This Date Calculator -->
+            <section>
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 border-b border-slate-200 pb-3 flex items-center gap-3">
+                    <i class="fa-solid fa-list-check text-indigo-600"></i> How to Use This Date Calculator
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-4 mt-6">
+                    <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm relative">
+                        <span class="w-7 h-7 rounded-full bg-indigo-100 text-indigo-600 font-bold text-xs flex items-center justify-center mb-3">1</span>
+                        <h3 class="font-bold text-slate-800 text-sm mb-1">Select Start Date</h3>
+                        <p class="text-xs text-slate-600">Pick your baseline starting date from the calendar input.</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm relative">
+                        <span class="w-7 h-7 rounded-full bg-indigo-100 text-indigo-600 font-bold text-xs flex items-center justify-center mb-3">2</span>
+                        <h3 class="font-bold text-slate-800 text-sm mb-1">Select End Date</h3>
+                        <p class="text-xs text-slate-600">Choose the secondary target date or switch modes.</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm relative">
+                        <span class="w-7 h-7 rounded-full bg-indigo-100 text-indigo-600 font-bold text-xs flex items-center justify-center mb-3">3</span>
+                        <h3 class="font-bold text-slate-800 text-sm mb-1">Choose Options</h3>
+                        <p class="text-xs text-slate-600">Toggle "Include End Date" or adjust weekend exclusions.</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm relative">
+                        <span class="w-7 h-7 rounded-full bg-indigo-100 text-indigo-600 font-bold text-xs flex items-center justify-center mb-3">4</span>
+                        <h3 class="font-bold text-slate-800 text-sm mb-1">Click Calculate</h3>
+                        <p class="text-xs text-slate-600">Press the button to initiate instant execution.</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm relative">
+                        <span class="w-7 h-7 rounded-full bg-indigo-100 text-indigo-600 font-bold text-xs flex items-center justify-center mb-3">5</span>
+                        <h3 class="font-bold text-slate-800 text-sm mb-1">Review Results</h3>
+                        <p class="text-xs text-slate-600">Examine full breakdowns, hours, weeks, and business days.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- E. What Can You Calculate With This Date Calculator? -->
+            <section>
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 border-b border-slate-200 pb-3 flex items-center gap-3">
+                    <i class="fa-solid fa-shapes text-indigo-600"></i> What Can You Calculate With This Date Calculator?
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+                    <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm">
+                        <h3 class="font-bold text-slate-800 text-base mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-calendar-day text-indigo-500"></i> Days Between Dates
+                        </h3>
+                        <p class="text-sm text-slate-600">Calculate the exact number of calendar days between a starting date and an ending date instantly.</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm">
+                        <h3 class="font-bold text-slate-800 text-base mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-calendar-week text-indigo-500"></i> Weeks Between Dates
+                        </h3>
+                        <p class="text-sm text-slate-600">Convert the difference into full calendar weeks and remaining days (e.g., 45 days = 6 weeks and 3 days).</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm">
+                        <h3 class="font-bold text-slate-800 text-base mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-calendar-plus text-indigo-500"></i> Add Days to Date
+                        </h3>
+                        <p class="text-sm text-slate-600">Find a future target date by adding days (e.g., January 1 + 30 days = January 31).</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm">
+                        <h3 class="font-bold text-slate-800 text-base mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-calendar-minus text-indigo-500"></i> Subtract Days from Date
+                        </h3>
+                        <p class="text-sm text-slate-600">Find a historical past date by subtracting days or weeks from any baseline point.</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm">
+                        <h3 class="font-bold text-slate-800 text-base mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-arrows-left-right-to-line text-indigo-500"></i> Add or Subtract Months
+                        </h3>
+                        <p class="text-sm text-slate-600">Calculate dates several months in the future or past while respecting end-of-month bounds.</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm">
+                        <h3 class="font-bold text-slate-800 text-base mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-clock-rotate-left text-indigo-500"></i> Add or Subtract Years
+                        </h3>
+                        <p class="text-sm text-slate-600">Project dates decades ahead or behind with full leap year adjustment support.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- F. Dedicated "Days Between Dates" Section -->
+            <section class="bg-indigo-50/50 p-6 sm:p-8 rounded-2xl border border-indigo-100">
+                <h2 class="text-2xl font-bold text-slate-900 mb-3">Days Between Two Dates</h2>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                    Calculating the total days between two dates is the core function of calendar duration math. When you select a Start Date (e.g., January 1) and an End Date (e.g., January 31), standard calendar mathematics calculates 30 days elapsed duration.
+                </p>
+                <div class="bg-white p-4 rounded-xl border border-indigo-200/60 mt-4 text-xs sm:text-sm text-slate-700 font-mono">
+                    <strong>Example Calculation:</strong><br>
+                    Start: Jan 1, 2025 | End: Dec 31, 2025<br>
+                    Result: 364 Total Days (or 365 Days if "Include End Date" is enabled).
+                </div>
+            </section>
+
+            <!-- G. How to Add or Subtract Days From a Date -->
+            <section class="space-y-4">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 border-b border-slate-200 pb-3">
+                    How to Add or Subtract Days From a Date
+                </h2>
+                <p class="text-slate-600 leading-relaxed">
+                    Adding or subtracting days works by advancing or rewinding the timeline starting from a anchor date. The algorithm steps through calendar months, automatically expanding for 31-day months, contracting for 30-day or February lengths, and applying leap day rules as necessary.
+                </p>
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm text-slate-700">
+                    <strong>Example Scenario:</strong> You need to compute a 90-day invoice payment deadline starting from March 15, 2025. Adding 90 days yields June 13, 2025.
+                </div>
+                <p class="text-xs sm:text-sm text-slate-500">
+                    This feature is essential for calculating deadlines, project milestones, rental contract terms, payment dates, study schedules, travel plans, and visa stays.
+                </p>
+            </section>
+
+            <!-- I. Working Days / Business Days -->
+            <section class="space-y-4">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 border-b border-slate-200 pb-3">
+                    Working Days / Business Days Calculation
+                </h2>
+                <p class="text-slate-600 leading-relaxed">
+                    Standard calendar duration includes all 7 days of the week. However, corporate payroll, government processing, banking, and project estimation operate strictly on <strong>Business Days</strong> (typically Monday through Friday).
+                </p>
+                <p class="text-slate-600 leading-relaxed">
+                    Our Business Days feature counts actual working days by checking each day in the date range, ignoring Saturdays and Sundays, and deducting custom statutory public holidays.
+                </p>
+            </section>
+
+            <!-- J. How Does a Date Calculator Work? -->
+            <section class="space-y-6">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 border-b border-slate-200 pb-3">
+                    How Does a Date Calculator Work?
+                </h2>
+                <p class="text-slate-600 leading-relaxed">
+                    Our verified calculation engine uses the Gregorian calendar standard. It processes three critical variables:
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-5 rounded-xl border border-slate-200">
+                        <h3 class="font-bold text-slate-800 text-base mb-2">1. Calendar Days</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Iterates through sequence (Monday through Sunday) accurately accounting for timezone offsets in UTC.
+                        </p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl border border-slate-200">
+                        <h3 class="font-bold text-slate-800 text-base mb-2">2. Leap Years</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Leap years occur every 4 years (e.g. 2024, 2028), adding February 29th to maintain solar synchronization.
+                        </p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl border border-slate-200">
+                        <h3 class="font-bold text-slate-800 text-base mb-2">3. Month Lengths</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Adjusts for 28, 29, 30, and 31-day months (e.g. April/June vs July/August).
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- K. Use Cases / When to Use -->
+            <section>
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 border-b border-slate-200 pb-3 mb-6">
+                    Use Cases & Applications
+                </h2>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                    <div class="p-3.5 bg-white rounded-xl border border-slate-200 text-xs font-semibold text-slate-700 flex items-center gap-2">
+                        <i class="fa-solid fa-list-check text-indigo-500"></i> Project deadlines
+                    </div>
+                    <div class="p-3.5 bg-white rounded-xl border border-slate-200 text-xs font-semibold text-slate-700 flex items-center gap-2">
+                        <i class="fa-solid fa-cake-candles text-indigo-500"></i> Age calculation
+                    </div>
+                    <div class="p-3.5 bg-white rounded-xl border border-slate-200 text-xs font-semibold text-slate-700 flex items-center gap-2">
+                        <i class="fa-solid fa-file-contract text-indigo-500"></i> Rental contracts
+                    </div>
+                    <div class="p-3.5 bg-white rounded-xl border border-slate-200 text-xs font-semibold text-slate-700 flex items-center gap-2">
+                        <i class="fa-solid fa-champagne-glasses text-indigo-500"></i> Event planning
+                    </div>
+                    <div class="p-3.5 bg-white rounded-xl border border-slate-200 text-xs font-semibold text-slate-700 flex items-center gap-2">
+                        <i class="fa-solid fa-baby text-indigo-500"></i> Pregnancy due dates
+                    </div>
+                    <div class="p-3.5 bg-white rounded-xl border border-slate-200 text-xs font-semibold text-slate-700 flex items-center gap-2">
+                        <i class="fa-solid fa-briefcase text-indigo-500"></i> Workdays calculation
+                    </div>
+                    <div class="p-3.5 bg-white rounded-xl border border-slate-200 text-xs font-semibold text-slate-700 flex items-center gap-2">
+                        <i class="fa-solid fa-plane-departure text-indigo-500"></i> Travel planning
+                    </div>
+                    <div class="p-3.5 bg-white rounded-xl border border-slate-200 text-xs font-semibold text-slate-700 flex items-center gap-2">
+                        <i class="fa-solid fa-clock text-indigo-500"></i> Passport / Visa limits
+                    </div>
+                </div>
+            </section>
+
+            <!-- L. Date Calculator Examples -->
+            <section class="space-y-4">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 border-b border-slate-200 pb-3">
+                    Date Calculator Real Examples
+                </h2>
+                <div class="space-y-3">
+                    <div class="p-4 bg-white rounded-xl border border-slate-200 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-sm">
+                        <span class="font-medium text-slate-800">1 Jan 2025 to 31 Dec 2025</span>
+                        <span class="text-xs font-mono font-bold bg-indigo-50 text-indigo-700 px-3 py-1 rounded-lg">364 days (365 days inclusive)</span>
+                    </div>
+                    <div class="p-4 bg-white rounded-xl border border-slate-200 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-sm">
+                        <span class="font-medium text-slate-800">Business days in Jan 2025</span>
+                        <span class="text-xs font-mono font-bold bg-indigo-50 text-indigo-700 px-3 py-1 rounded-lg">23 Working Days</span>
+                    </div>
+                    <div class="p-4 bg-white rounded-xl border border-slate-200 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-sm">
+                        <span class="font-medium text-slate-800">Add 90 days to October 1</span>
+                        <span class="text-xs font-mono font-bold bg-indigo-50 text-indigo-700 px-3 py-1 rounded-lg">December 30</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- M. Key Features -->
+            <section>
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 border-b border-slate-200 pb-3 mb-6">
+                    Key Features of Calculator Pro
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    <div class="p-5 bg-white rounded-xl border border-slate-200">
+                        <i class="fa-solid fa-bolt text-amber-500 text-xl mb-2"></i>
+                        <h3 class="font-bold text-slate-800 text-sm">Instant Calculation</h3>
+                        <p class="text-xs text-slate-500 mt-1">Live updates in real-time as you change dates.</p>
+                    </div>
+                    <div class="p-5 bg-white rounded-xl border border-slate-200">
+                        <i class="fa-solid fa-calendar-check text-emerald-500 text-xl mb-2"></i>
+                        <h3 class="font-bold text-slate-800 text-sm">Calendar Accurate</h3>
+                        <p class="text-xs text-slate-500 mt-1">Full leap year and month-end validation.</p>
+                    </div>
+                    <div class="p-5 bg-white rounded-xl border border-slate-200">
+                        <i class="fa-solid fa-briefcase text-sky-500 text-xl mb-2"></i>
+                        <h3 class="font-bold text-slate-800 text-sm">Business Days Support</h3>
+                        <p class="text-xs text-slate-500 mt-1">Deduct weekends and custom public holidays.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- N. Frequently Asked Questions (FAQ Section - Schema Ready) -->
+            <section class="space-y-6">
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Frequently Asked Questions</h2>
+                    <p class="text-slate-600 text-sm mt-1">Everything you need to know about date calculations and tools.</p>
+                </div>
+
+                <div class="space-y-3" id="faq-accordion">
+                    
+                    <!-- Q1 -->
+                    <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-2xs">
+                        <button type="button" class="faq-btn w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
+                            <span>How to calculate days between two dates?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                        </button>
+                        <div class="accordion-content px-5">
+                            <p class="py-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                                Simply pick a start date and end date in the calculator. It automatically measures the exact total calendar days between those dates.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-2xs">
+                        <button type="button" class="faq-btn w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
+                            <span>Does the calculator include the end date?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                        </button>
+                        <div class="accordion-content px-5">
+                            <p class="py-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                                By default, calendar duration counts from day A to day B (excluding the final day itself). However, you can toggle the "Include End Date (+1 day)" checkbox to include the final day in your calculation.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-2xs">
+                        <button type="button" class="faq-btn w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
+                            <span>How are business days calculated?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                        </button>
+                        <div class="accordion-content px-5">
+                            <p class="py-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                                Business days are calculated by excluding Saturdays and Sundays between the start and end dates. You can also specify custom holidays to deduct.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-2xs">
+                        <button type="button" class="faq-btn w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
+                            <span>Does it account for leap years?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                        </button>
+                        <div class="accordion-content px-5">
+                            <p class="py-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                                Yes, our algorithm accounts for leap years (including 2024, 2028, etc.) where February has 29 days instead of 28.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Q5 -->
+                    <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-2xs">
+                        <button type="button" class="faq-btn w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
+                            <span>How many days have I been alive?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                        </button>
+                        <div class="accordion-content px-5">
+                            <p class="py-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                                Enter your birth date as the Start Date and keep Today as the End Date under "Date Difference" to see your exact total days alive.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Q6 -->
+                    <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-2xs">
+                        <button type="button" class="faq-btn w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
+                            <span>Difference between total days and years/months/days breakdown?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                        </button>
+                        <div class="accordion-content px-5">
+                            <p class="py-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                                Total days counts raw consecutive days. The breakdown splits the duration into full Gregorian calendar years, remaining full calendar months, and remaining days.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Q7 -->
+                    <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-2xs">
+                        <button type="button" class="faq-btn w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
+                            <span>Can I calculate future dates?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                        </button>
+                        <div class="accordion-content px-5">
+                            <p class="py-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                                Yes, you can calculate dates years into the future or past using the Add / Subtract Days tool.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Q8 -->
+                    <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-2xs">
+                        <button type="button" class="faq-btn w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
+                            <span>How to add or subtract days from a date?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                        </button>
+                        <div class="accordion-content px-5">
+                            <p class="py-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                                Switch to the "Add / Subtract Days" tab, enter your starting date, choose "Add (+)" or "Subtract (-)", enter the amount of time, and view the final calculated target date.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Q9 -->
+                    <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-2xs">
+                        <button type="button" class="faq-btn w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
+                            <span>Can I calculate months between two dates?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                        </button>
+                        <div class="accordion-content px-5">
+                            <p class="py-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                                Yes, the calculation breakdown shows exact full months and remaining days between any two dates.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Q10 -->
+                    <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-2xs">
+                        <button type="button" class="faq-btn w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
+                            <span>Does the calculator count weekends?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                        </button>
+                        <div class="accordion-content px-5">
+                            <p class="py-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                                The standard Date Difference includes weekends. You can switch to "Business Days" mode to automatically remove weekend days.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Q11 -->
+                    <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-2xs">
+                        <button type="button" class="faq-btn w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
+                            <span>Is this date calculator free?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                        </button>
+                        <div class="accordion-content px-5">
+                            <p class="py-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                                Yes! Calculator Pro's Date Calculator is 100% free with no registration required.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- M. Related Tools / Internal Links -->
+            <section class="border-t border-slate-200 pt-10">
+                <h2 class="text-xl font-bold text-slate-900 mb-4">Related Date & Time Calculators</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <a href="#" class="p-4 bg-white rounded-xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all group flex items-center justify-between">
+                        <div>
+                            <h3 class="font-bold text-slate-800 text-sm group-hover:text-indigo-600">Age Calculator</h3>
+                            <p class="text-xs text-slate-500">Calculate exact age in years, months & days.</p>
+                        </div>
+                        <i class="fa-solid fa-arrow-right text-slate-300 group-hover:text-indigo-600 group-hover:translate-x-1 transition-all text-xs"></i>
+                    </a>
+                    <a href="#" class="p-4 bg-white rounded-xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all group flex items-center justify-between">
+                        <div>
+                            <h3 class="font-bold text-slate-800 text-sm group-hover:text-indigo-600">Time Zone Converter</h3>
+                            <p class="text-xs text-slate-500">Convert time across world timezones.</p>
+                        </div>
+                        <i class="fa-solid fa-arrow-right text-slate-300 group-hover:text-indigo-600 group-hover:translate-x-1 transition-all text-xs"></i>
+                    </a>
+                    <a href="#" class="p-4 bg-white rounded-xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all group flex items-center justify-between">
+                        <div>
+                            <h3 class="font-bold text-slate-800 text-sm group-hover:text-indigo-600">Age Difference Calculator</h3>
+                            <p class="text-xs text-slate-500">Compare age gap between two people.</p>
+                        </div>
+                        <i class="fa-solid fa-arrow-right text-slate-300 group-hover:text-indigo-600 group-hover:translate-x-1 transition-all text-xs"></i>
+                    </a>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+   <!-- Multi-column Footer -->
+<footer class="bg-slate-900 text-slate-400 text-sm border-t border-slate-800 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <!-- Col 1: About -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2 text-white font-bold text-lg">
+            <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
+              <i class="fa-solid fa-calculator"></i>
+            </div>
+            <span>Calculator<span class="text-indigo-400">-Pro</span></span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Calculator Pro provides free, fast, and clinically accurate online tools for health, financial, mathematical, and everyday conversion needs.
+          </p>
+          <div class="text-xs text-slate-500">
+            &copy; <span id="current-year">2026</span> Calculator Pro. All rights reserved.
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Quick Links</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Unit Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Length Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Weight Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Temperature Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Volume & Area Converter</a></li>
+          </ul>
+        </div>
+        <!-- Column 3: Tools & Resources -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Calculators</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="age-calculator.html" class="hover:text-white transition-colors">Age Calculator</a></li>
+            <li><a href="time-calculator.html" class="hover:text-white transition-colors">Time Calculator</a></li>
+            <li><a href="sip-calculator.html" class="hover:text-white transition-colors">SIP Financial Calculator</a></li>
+            <li><a href="bmi-calculator.html" class="hover:text-white transition-colors">BMI Health Calculator</a></li>
+            <li><a href="percentage-calculator.html" class="hover:text-white transition-colors">Percentage Calculator</a></li>
+          </ul>
+        </div>
+
+         <!-- Column 4: Legal & Contact -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Legal & Info</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Editorial Guidelines</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+    <!-- Application Logic Script -->
+    <script>
+		<!-- Inline JavaScript for Toggle -->
+      
+        document.addEventListener('DOMContentLoaded', () => {
+          const btn = document.getElementById('calc-mobile-menu-btn');
+          const menu = document.getElementById('calc-mobile-menu');
+          const menuIcon = document.getElementById('calc-menu-icon');
+          const closeIcon = document.getElementById('calc-close-icon');
+
+          if (btn && menu) {
+            btn.addEventListener('click', () => {
+              const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+              btn.setAttribute('aria-expanded', !isExpanded);
+              menu.classList.toggle('hidden');
+              menuIcon.classList.toggle('hidden');
+              closeIcon.classList.toggle('hidden');
+            });
+          }
+        });
+		
+        // Global state variable
+        let currentTab = 'diff';
+
+        // Helper to format Date objects to YYYY-MM-DD for input fields
+        function formatDateInput(d) {
+            const year = d.getFullYear();
+            const month = String(d.getMonth() + 1).padStart(2, '0');
+            const day = String(d.getDate()).padStart(2, '0');
+            return `${year}-${month}-${day}`;
+        }
+
+        // Initialize Default Dates on Load
+        window.addEventListener('DOMContentLoaded', () => {
+            const today = new Date();
+            const future30 = new Date();
+            future30.setDate(today.getDate() + 30);
+
+            // Set inputs
+            document.getElementById('diff-start-date').value = formatDateInput(today);
+            document.getElementById('diff-end-date').value = formatDateInput(future30);
+            
+            document.getElementById('addsub-start-date').value = formatDateInput(today);
+            document.getElementById('biz-start-date').value = formatDateInput(today);
+            document.getElementById('biz-end-date').value = formatDateInput(future30);
+
+            // Bind FAQ toggle listeners
+            initAccordion();
+
+            // Perform initial calculation
+            calculateAll();
+
+            // Bind change listeners to all inputs for real-time live updates
+            const inputs = document.querySelectorAll('input, select');
+            inputs.forEach(input => {
+                input.addEventListener('input', calculateAll);
+                input.addEventListener('change', calculateAll);
+            });
+        });
+
+        // Tab Switcher
+        function switchTab(tab) {
+            currentTab = tab;
+            
+            // Toggle active tab buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('bg-white', 'text-indigo-600', 'border', 'border-slate-200', 'shadow-sm');
+                btn.classList.add('text-slate-600');
+            });
+            
+            const activeBtn = document.getElementById(`tab-${tab}`);
+            activeBtn.classList.add('bg-white', 'text-indigo-600', 'border', 'border-slate-200', 'shadow-sm');
+            activeBtn.classList.remove('text-slate-600');
+
+            // Toggle panels
+            document.querySelectorAll('.mode-panel').forEach(panel => panel.classList.add('hidden'));
+            document.getElementById(`mode-${tab}-inputs`).classList.remove('hidden');
+
+            calculateAll();
+        }
+
+        // Add/Subtract Radio Option Styling
+        function updateOpStyle() {
+            const op = document.querySelector('input[name="addsub-op"]:checked').value;
+            const addLabel = document.getElementById('op-add-label');
+            const subLabel = document.getElementById('op-sub-label');
+
+            if (op === 'add') {
+                addLabel.className = "flex items-center justify-center gap-2 p-2.5 border rounded-xl cursor-pointer transition-all bg-indigo-50/80 border-indigo-300 text-indigo-700 font-medium text-sm";
+                subLabel.className = "flex items-center justify-center gap-2 p-2.5 border rounded-xl cursor-pointer transition-all border-slate-200 text-slate-600 font-medium text-sm hover:bg-slate-50";
+            } else {
+                subLabel.className = "flex items-center justify-center gap-2 p-2.5 border rounded-xl cursor-pointer transition-all bg-indigo-50/80 border-indigo-300 text-indigo-700 font-medium text-sm";
+                addLabel.className = "flex items-center justify-center gap-2 p-2.5 border rounded-xl cursor-pointer transition-all border-slate-200 text-slate-600 font-medium text-sm hover:bg-slate-50";
+            }
+        }
+
+        // Quick Preset Action Handlers
+        function setPreset(type) {
+            const today = new Date();
+            
+            if (currentTab === 'diff' || currentTab === 'business') {
+                const startElem = document.getElementById(`${currentTab === 'diff' ? 'diff' : 'biz'}-start-date`);
+                const endElem = document.getElementById(`${currentTab === 'diff' ? 'diff' : 'biz'}-end-date`);
+                
+                startElem.value = formatDateInput(today);
+                
+                let target = new Date(today);
+                if (type === 'eom') {
+                    target = new Date(today.getFullYear(), today.getMonth() + 1, 0);
+                } else if (type === '30days') {
+                    target.setDate(today.getDate() + 30);
+                } else if (type === '90days') {
+                    target.setDate(today.getDate() + 90);
+                } else if (type === '1year') {
+                    target.setFullYear(today.getFullYear() + 1);
+                }
+                
+                endElem.value = formatDateInput(target);
+            } else if (currentTab === 'addsub') {
+                document.getElementById('addsub-start-date').value = formatDateInput(today);
+                if (type === '30days') {
+                    document.getElementById('addsub-amount').value = 30;
+                    document.getElementById('addsub-unit').value = 'days';
+                } else if (type === '90days') {
+                    document.getElementById('addsub-amount').value = 90;
+                    document.getElementById('addsub-unit').value = 'days';
+                } else if (type === '1year') {
+                    document.getElementById('addsub-amount').value = 1;
+                    document.getElementById('addsub-unit').value = 'years';
+                }
+            }
+
+            calculateAll();
+        }
+
+        // Calculation Engine
+        function calculateAll() {
+            if (currentTab === 'diff') {
+                calculateDateDifference();
+            } else if (currentTab === 'addsub') {
+                calculateAddSubtract();
+            } else if (currentTab === 'business') {
+                calculateBusinessDays();
+            }
+        }
+
+        // 1. Calculate Date Difference
+        function calculateDateDifference() {
+            const startVal = document.getElementById('diff-start-date').value;
+            const endVal = document.getElementById('diff-end-date').value;
+            const includeEnd = document.getElementById('diff-include-end').checked;
+
+            if (!startVal || !endVal) return;
+
+            let start = new Date(startVal + 'T00:00:00');
+            let end = new Date(endVal + 'T00:00:00');
+
+            if (isNaN(start) || isNaN(end)) return;
+
+            let isNegative = false;
+            if (end < start) {
+                // Swap for duration calculation
+                const temp = start;
+                start = end;
+                end = temp;
+                isNegative = true;
+            }
+
+            // Raw time diff in milliseconds
+            let diffMs = end - start;
+            let totalDays = Math.round(diffMs / (1000 * 60 * 60 * 24));
+            
+            if (includeEnd) {
+                totalDays += 1;
+            }
+
+            // Breakdown (Years, Months, Days)
+            const breakdown = getExactYMD(start, end, includeEnd);
+
+            // Compute Business Days
+            const bizDays = computeBusinessDaysBetween(start, end, true, true, 0, includeEnd);
+
+            // UI Updates
+            const prefix = isNegative ? '-' : '';
+            document.getElementById('primary-result-label').textContent = 'Date Difference Breakdown';
+            document.getElementById('primary-result-value').textContent = `${prefix}${breakdown.years} Yrs, ${breakdown.months} Mos, ${breakdown.days} Days`;
+            document.getElementById('primary-result-sub').textContent = `From ${start.toDateString()} to ${end.toDateString()}`;
+
+            updateMetricsUI(totalDays, bizDays, startVal, endVal);
+        }
+
+        // 2. Calculate Add/Subtract Days
+        function calculateAddSubtract() {
+            const startVal = document.getElementById('addsub-start-date').value;
+            const amount = parseInt(document.getElementById('addsub-amount').value) || 0;
+            const unit = document.getElementById('addsub-unit').value;
+            const op = document.querySelector('input[name="addsub-op"]:checked').value;
+
+            if (!startVal) return;
+
+            const start = new Date(startVal + 'T00:00:00');
+            if (isNaN(start)) return;
+
+            let target = new Date(start);
+            const multiplier = op === 'add' ? 1 : -1;
+
+            if (unit === 'days') {
+                target.setDate(target.getDate() + (amount * multiplier));
+            } else if (unit === 'weeks') {
+                target.setDate(target.getDate() + (amount * 7 * multiplier));
+            } else if (unit === 'months') {
+                target.setMonth(target.getMonth() + (amount * multiplier));
+            } else if (unit === 'years') {
+                target.setFullYear(target.getFullYear() + (amount * multiplier));
+            }
+
+            const totalDays = Math.abs(Math.round((target - start) / (1000 * 60 * 60 * 24)));
+            const dayOfWeek = target.toLocaleDateString('en-US', { weekday: 'long' });
+            
+            // Compute Business Days
+            const bizDays = computeBusinessDaysBetween(
+                start < target ? start : target, 
+                start < target ? target : start, 
+                true, true, 0, false
+            );
+
+            document.getElementById('primary-result-label').textContent = `Calculated Target Date (${op === 'add' ? '+' : '-'}${amount} ${unit})`;
+            document.getElementById('primary-result-value').textContent = `${target.toDateString()}`;
+            document.getElementById('primary-result-sub').textContent = `Day of week: ${dayOfWeek}`;
+
+            updateMetricsUI(totalDays, bizDays, startVal, formatDateInput(target));
+        }
+
+        // 3. Calculate Business Days Mode
+        function calculateBusinessDays() {
+            const startVal = document.getElementById('biz-start-date').value;
+            const endVal = document.getElementById('biz-end-date').value;
+            const exSat = document.getElementById('biz-ex-sat').checked;
+            const exSun = document.getElementById('biz-ex-sun').checked;
+            const holidays = parseInt(document.getElementById('biz-holidays').value) || 0;
+
+            if (!startVal || !endVal) return;
+
+            let start = new Date(startVal + 'T00:00:00');
+            let end = new Date(endVal + 'T00:00:00');
+
+            if (isNaN(start) || isNaN(end)) return;
+
+            if (end < start) {
+                const temp = start;
+                start = end;
+                end = temp;
+            }
+
+            const totalDays = Math.round((end - start) / (1000 * 60 * 60 * 24));
+            const bizDays = computeBusinessDaysBetween(start, end, exSat, exSun, holidays, false);
+
+            document.getElementById('primary-result-label').textContent = 'Working Business Days';
+            document.getElementById('primary-result-value').textContent = `${bizDays} Business Days`;
+            document.getElementById('primary-result-sub').textContent = `Excluding weekends & ${holidays} public holiday(s)`;
+
+            updateMetricsUI(totalDays, bizDays, startVal, endVal);
+        }
+
+        // Precise YMD Calculation Helper
+        function getExactYMD(d1, d2, includeEnd) {
+            let start = new Date(d1);
+            let end = new Date(d2);
+
+            if (includeEnd) {
+                end.setDate(end.getDate() + 1);
+            }
+
+            let years = end.getFullYear() - start.getFullYear();
+            let months = end.getMonth() - start.getMonth();
+            let days = end.getDate() - start.getDate();
+
+            if (days < 0) {
+                months--;
+                // Days in previous month
+                const copy = new Date(end.getFullYear(), end.getMonth(), 0);
+                days += copy.getDate();
+            }
+
+            if (months < 0) {
+                years--;
+                months += 12;
+            }
+
+            return { years, months, days };
+        }
+
+        // Helper to count Business Days
+        function computeBusinessDaysBetween(start, end, exSat, exSun, holidays, includeEnd) {
+            let count = 0;
+            let cur = new Date(start);
+            let last = new Date(end);
+
+            if (includeEnd) {
+                last.setDate(last.getDate() + 1);
+            }
+
+            while (cur < last) {
+                const day = cur.getDay();
+                const isSat = (day === 6) && exSat;
+                const isSun = (day === 0) && exSun;
+
+                if (!isSat && !isSun) {
+                    count++;
+                }
+                cur.setDate(cur.getDate() + 1);
+            }
+
+            count = Math.max(0, count - holidays);
+            return count;
+        }
+
+        // Update Common Result Metrics Card UI
+        function updateMetricsUI(totalDays, bizDays, startVal, endVal) {
+            document.getElementById('metric-total-days').textContent = totalDays.toLocaleString();
+            document.getElementById('metric-biz-days').textContent = bizDays.toLocaleString();
+
+            const weeks = Math.floor(totalDays / 7);
+            const remWeekDays = totalDays % 7;
+            document.getElementById('metric-weeks').textContent = `${weeks} wks, ${remWeekDays} days`;
+
+            const months = (totalDays / 30.4375).toFixed(1);
+            document.getElementById('metric-months').textContent = `~ ${months} mos`;
+
+            const hours = totalDays * 24;
+            const minutes = hours * 60;
+            const seconds = minutes * 60;
+
+            document.getElementById('metric-hours').textContent = `${hours.toLocaleString()} hrs`;
+            document.getElementById('metric-minutes').textContent = `${minutes.toLocaleString()} mins`;
+            document.getElementById('metric-seconds').textContent = `${seconds.toLocaleString()} secs`;
+
+            // Timeline display
+            document.getElementById('timeline-start-label').textContent = startVal;
+            document.getElementById('timeline-end-label').textContent = endVal;
+        }
+
+        // Copy Results to Clipboard with Feedback
+        function copyResults() {
+            const label = document.getElementById('primary-result-label').textContent;
+            const val = document.getElementById('primary-result-value').textContent;
+            const totalDays = document.getElementById('metric-total-days').textContent;
+            const bizDays = document.getElementById('metric-biz-days').textContent;
+
+            const text = `Calculator Pro Results:\n${label}: ${val}\nTotal Calendar Days: ${totalDays}\nBusiness Days: ${bizDays}`;
+
+            const copyBtnText = document.getElementById('copy-btn-text');
+            
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text).then(() => {
+                    copyBtnText.textContent = 'Copied!';
+                    setTimeout(() => copyBtnText.textContent = 'Copy Results', 2000);
+                });
+            } else {
+                // Fallback for document.execCommand
+                const textarea = document.createElement('textarea');
+                textarea.value = text;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                copyBtnText.textContent = 'Copied!';
+                setTimeout(() => copyBtnText.textContent = 'Copy Results', 2000);
+            }
+        }
+
+        // Accordion Toggle
+        function initAccordion() {
+            const btns = document.querySelectorAll('.faq-btn');
+            btns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const content = btn.nextElementSibling;
+                    const icon = btn.querySelector('i');
+
+                    const isOpen = content.classList.contains('open');
+
+                    // Close all
+                    document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
+                    document.querySelectorAll('.faq-btn i').forEach(i => i.style.transform = 'rotate(0deg)');
+
+                    if (!isOpen) {
+                        content.classList.add('open');
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+</html>

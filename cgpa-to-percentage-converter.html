@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA to Percentage Converter | Percentage to CGPA Calculator (2026)</title>
+    <meta name="description" content="Free CGPA to Percentage Converter & Percentage to CGPA Calculator. Convert 10-point, 4-point & 5-point CGPA to percentage instantly. Accurate formulas for Indian universities, CBSE, AICTE & more.">
+    <meta name="keywords" content="CGPA to Percentage, Percentage to CGPA, CGPA to Percentage Converter, CGPA to percentage calculator, Convert CGPA to percentage, Percentage to CGPA calculator, 10 point CGPA to percentage, How to convert CGPA into percentage, CGPA percentage conversion formula, 10 point scale, university formula, convert cgpa into percentage">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://calculatorpro.com/cgpa-to-percentage">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calculatorpro.com/cgpa-to-percentage">
+    <meta property="og:title" content="CGPA to Percentage Converter | Percentage to CGPA Calculator (2026)">
+    <meta property="og:description" content="Convert CGPA to Percentage and Percentage to CGPA instantly on 10, 4, and 5-point scales using official CBSE, AICTE, UGC, and university formulas.">
+    <meta property="og:image" content="https://calculatorpro.com/og-cgpa-calculator.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://calculatorpro.com/cgpa-to-percentage">
+    <meta name="twitter:title" content="CGPA to Percentage Converter | Percentage to CGPA Calculator (2026)">
+    <meta name="twitter:description" content="Instant CGPA to Percentage conversion tool supporting 10-point, 4-point, and 5-point scales with official university guidelines.">
+    <meta name="twitter:image" content="https://calculatorpro.com/og-cgpa-calculator.jpg">
+
+    <!-- Google Fonts Inter -->
+    
+
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind CSS CDN -->
+    
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- JSON-LD Structured Data Schemas -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "@id": "https://calculatorpro.com/cgpa-to-percentage#webapp",
+          "name": "CGPA to Percentage Converter Pro",
+          "url": "https://calculatorpro.com/cgpa-to-percentage",
+          "applicationCategory": "EducationalApplication",
+          "operatingSystem": "All",
+          "description": "Calculate CGPA to Percentage and Percentage to CGPA easily for 10-point, 4-point, and 5-point grading scales based on CBSE, AICTE, and University guidelines.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "HowTo",
+          "@id": "https://calculatorpro.com/cgpa-to-percentage#howto",
+          "name": "How to Convert CGPA into Percentage",
+          "description": "Step-by-step guide on converting CGPA to Percentage using official formulas.",
+          "step": [
+            {
+              "@type": "HowToStep",
+              "name": "Select Grade Scale",
+              "text": "Choose your academic scale (10-Point, 4-Point, or 5-Point Scale)."
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Enter CGPA Value",
+              "text": "Type your CGPA score into the designated input field."
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Select Conversion Method",
+              "text": "Choose CBSE standard (x 9.5), AICTE standard (x 9.5), or custom factor."
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Calculate Percentage",
+              "text": "Click Convert or view the live computed equivalent percentage instantly."
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://calculatorpro.com/cgpa-to-percentage#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the formula to convert CGPA into percentage?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "For CBSE and most 10-point Indian university grading systems, the standard formula to convert CGPA into percentage is: Percentage (%) = CGPA × 9.5."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How to convert 8.5 CGPA to percentage?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "To convert 8.5 CGPA to percentage using the 10-point CBSE formula, multiply 8.5 by 9.5. Result: 8.5 × 9.5 = 80.75%."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is CGPA to percentage conversion the same for all universities?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No, while CBSE and AICTE follow the standard 9.5 multiplier, some universities like Mumbai University, Anna University, and VTU use specific formulas like (CGPA × 10) - 7.5 or direct 10 multiplier."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How to convert percentage to CGPA in 10 point scale?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "To convert Percentage to CGPA under the standard 10-point scale, divide your overall percentage by 9.5 (CGPA = Percentage / 9.5)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is 7.5 CGPA in percentage?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Under the CBSE 9.5 standard multiplier formula, 7.5 CGPA corresponds to 71.25% (7.5 × 9.5 = 71.25%)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I use this calculator for engineering and medical colleges?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes! This calculator supports standard AICTE engineering guidelines as well as custom multiplier methods used across technical and medical universities."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the difference between GPA and CGPA?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "GPA (Grade Point Average) measures academic performance for a single semester or term, whereas CGPA (Cumulative Grade Point Average) measures overall performance across all completed semesters."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans selection:bg-brand-500 selection:text-white min-h-screen flex flex-col">
+
+<header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      
+      <!-- Brand Logo & Name -->
+      <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
+        <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
+          <i class="fa-solid fa-calculator text-lg"></i>
+        </div>
+        <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
+          Calculator<span class="text-indigo-600">-Pro</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-1" aria-label="Main Navigation">
+        
+        <!-- Category 1: Age -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Age
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="age-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="birthday-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Birthday Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="age-difference-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Diffrence Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Time -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Time & Date
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="time-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Time Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="date-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Date Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="work-days-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Work Days Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="time-zone-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">TimeZone Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Converter -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Converter
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="unit-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Unit Converter</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="cgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">CGPA to Percentage</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to Percentage</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sgpa-to-cgpa-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to CGPA</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="marks-to-percentage-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Marks to Percentage</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4: Financial -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Financial
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sip-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SIP Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="emi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">EMI Loan Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="Compound-Interest-Calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Compound Interest Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 5: Health -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Health
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute right-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="bmi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">BMI Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="waist-to-hip-ratio-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">WHR Calculator</a>
+            </div>
+          </div>
+        </div>
+		  
+		 
+
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex md:hidden">
+        <button id="calc-mobile-menu-btn" type="button" class="p-2.5 rounded-xl text-slate-600 hover:text-indigo-600 hover:bg-slate-100/80 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors duration-200" aria-controls="calc-mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+          <svg id="calc-menu-icon" class="w-6 h-6 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="calc-close-icon" class="w-6 h-6 hidden transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile Full-Width Menu Container -->
+  <div id="calc-mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white shadow-xl transition-all duration-200 ease-in-out">
+    <div class="px-4 pt-3 pb-6 space-y-4">
+      
+      <!-- Mobile Category: Age -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Age</div>
+        <a href="age-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Calculator</a>
+		  <a href="birthday-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Birthday Calculator</a>
+		  <a href="age-difference-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Diffrence Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Time -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Time & Date</div>
+        <a href="time-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Time Calculator</a>
+		  <a href="date-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Date Calculator</a>
+		  <a href="work-days-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Work Days Calculator</a>
+		  <a href="time-zone-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">TimeZone Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Converter -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Converter</div>
+        <a href="javascript:void(0)" onclick="openCalculator('length')" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Unit Converter</a>
+		  <a href="cgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">CGPA to Percentage</a>
+		  <a href="sgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to Percentage</a>
+		  <a href="sgpa-to-cgpa-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to CGPA</a>
+		  <a href="marks-to-percentage-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Marks to Percentage</a>
+      </div>
+
+      <!-- Mobile Category: Financial -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Financial</div>
+        <a href="sip-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SIP Calculator</a>
+		  <a href="emi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">EMI Loan Calculator</a>
+		  <a href="Compound-Interest-Calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Compound Interest Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Health -->
+      <div>
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Health</div>
+        <a href="bmi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">BMI Calculator</a>
+		  <a href="waist-to-hip-ratio-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">WHR Calculator</a>
+      </div>
+		
+		
+
+    </div>
+  </div>
+</header>
+
+<main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-12">
+    
+    <!-- Hero Section -->
+    <section class="text-center max-w-4xl mx-auto space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-xs sm:text-sm font-semibold tracking-wide uppercase">
+            <i class="fa-solid fa-sparkles text-indigo-500"></i> Updated for 2026 Academic Guidelines
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            CGPA to Percentage Converter &amp; Percentage to CGPA Calculator
+        </h1>
+        <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
+            Welcome to the ultimate free online academic converter on <strong>Calculator Pro</strong>. Our high-precision <strong>CGPA to Percentage Converter</strong> and <strong>Percentage to CGPA Calculator</strong> deliver instant, error-free results tailored to official 10-point, 4-point, and 5-point grading scales. Whether you are a student submitting applications for higher education, job placements, or visa processing, easily <strong>convert CGPA to percentage</strong> using official CBSE, AICTE, UGC, and top university guidelines.
+        </p>
+    </section>
+
+    <!-- Calculator Switcher & Tool Container -->
+    <section class="max-w-4xl mx-auto">
+        <!-- Interactive Tabs -->
+        <div class="bg-slate-200/80 p-1.5 rounded-2xl flex gap-2 mb-6 max-w-md mx-auto shadow-inner">
+            <button id="tab-cgpa-to-pct" onclick="switchCalcTab('cgpa-to-pct')" class="flex-1 py-3 px-4 rounded-xl text-sm font-semibold transition-all duration-200 bg-white text-indigo-600 shadow-sm flex items-center justify-center gap-2">
+                <i class="fa-solid fa-arrow-right-arrow-left"></i> CGPA to Percentage
+            </button>
+            <button id="tab-pct-to-cgpa" onclick="switchCalcTab('pct-to-cgpa')" class="flex-1 py-3 px-4 rounded-xl text-sm font-semibold transition-all duration-200 text-slate-600 hover:text-slate-900 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-rotate"></i> Percentage to CGPA
+            </button>
+        </div>
+
+        <!-- Tool 1: CGPA to Percentage Calculator Card -->
+        <div id="tool-cgpa-to-pct" class="bg-white rounded-3xl border border-slate-200/80 shadow-xl shadow-slate-200/50 p-6 sm:p-8 transition-all duration-300">
+            <div class="flex items-center justify-between border-b border-slate-100 pb-4 mb-6">
+                <div>
+                    <h2 class="text-xl sm:text-2xl font-bold text-slate-800">CGPA to Percentage Converter</h2>
+                    <p class="text-xs sm:text-sm text-slate-500">Calculate percentage equivalent from your CGPA score</p>
+                </div>
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">
+                    <i class="fa-solid fa-circle-check mr-1.5 text-emerald-600"></i> Instant Output
+                </span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Controls -->
+                <div class="space-y-4">
+                    <div>
+                        <label for="cgpa-scale-select" class="block text-sm font-semibold text-slate-700 mb-1">Select Grading Scale</label>
+                        <select id="cgpa-scale-select" onchange="onCgpaScaleChange()" class="w-full bg-slate-50 border border-slate-300 text-slate-800 text-sm rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 p-3 transition-colors">
+                            <option value="10" selected>10 Point Scale (CBSE, AICTE, UGC)</option>
+                            <option value="4">4 Point Scale (US / US-WES Standard)</option>
+                            <option value="5">5 Point Scale (European / International)</option>
+                        </select>
+                    </div>
+
+                    <!-- Conversion Multiplier / University preset (for 10 point scale) -->
+                    <div id="cgpa-formula-wrapper">
+                        <label for="cgpa-formula-select" class="block text-sm font-semibold text-slate-700 mb-1">Conversion Formula / University</label>
+                        <select id="cgpa-formula-select" onchange="calculateCgpaToPct()" class="w-full bg-slate-50 border border-slate-300 text-slate-800 text-sm rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 p-3 transition-colors">
+                            <option value="9.5" selected>CBSE / Standard (CGPA × 9.5)</option>
+                            <option value="10">AICTE / Direct Standard (CGPA × 10)</option>
+                            <option value="vtu">VTU Karnataka [(CGPA - 0.75) × 10]</option>
+                            <option value="mumbai">Mumbai University [(CGPA × 7.1) + 11]</option>
+                            <option value="anna">Anna University (CGPA × 10)</option>
+                            <option value="custom">Custom Multiplier</option>
+                        </select>
+                    </div>
+
+                    <div id="custom-multiplier-container" class="hidden">
+                        <label for="custom-cgpa-multiplier" class="block text-sm font-semibold text-slate-700 mb-1">Custom Multiplier Factor</label>
+                        <input type="number" id="custom-cgpa-multiplier" step="0.01" value="9.5" placeholder="e.g. 9.5 or 10" oninput="calculateCgpaToPct()" class="w-full bg-slate-50 border border-slate-300 text-slate-800 text-sm rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 p-3 transition-colors">
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-center mb-1">
+                            <label for="input-cgpa-val" class="block text-sm font-semibold text-slate-700">Enter Your CGPA Score</label>
+                            <span id="cgpa-range-indicator" class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded">Max: 10.0</span>
+                        </div>
+                        <div class="relative">
+                            <input type="number" id="input-cgpa-val" step="0.01" placeholder="e.g. 8.5" oninput="calculateCgpaToPct()" class="w-full bg-slate-50 border border-slate-300 text-slate-900 text-lg font-bold rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 p-3.5 pl-4 pr-12 transition-colors">
+                            <div class="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none text-slate-400 font-bold">
+                                CGPA
+                            </div>
+                        </div>
+                        <p id="cgpa-error-msg" class="text-xs text-rose-500 mt-1 hidden"></p>
+                    </div>
+
+                    <div class="flex gap-3 pt-2">
+                        <button type="button" onclick="calculateCgpaToPct()" class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-4 rounded-xl shadow-md shadow-indigo-200 transition-all duration-200 flex items-center justify-center gap-2 active:scale-95">
+                            <i class="fa-solid fa-calculator"></i> Convert Now
+                        </button>
+                        <button type="button" onclick="resetCgpaTool()" class="bg-slate-100 hover:bg-slate-200 text-slate-600 font-medium py-3 px-4 rounded-xl transition-colors active:scale-95">
+                            <i class="fa-solid fa-arrows-rotate"></i> Reset
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Result Display Box -->
+                <div class="bg-gradient-to-br from-indigo-900 via-slate-900 to-indigo-950 rounded-2xl p-6 text-white flex flex-col justify-between relative overflow-hidden shadow-lg">
+                    <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-indigo-500/10 rounded-full blur-2xl pointer-events-none"></div>
+                    
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs uppercase font-bold tracking-wider text-indigo-300">Equivalent Percentage</span>
+                            <button type="button" onclick="copyResult('cgpa-result-val', 'pct')" class="text-xs bg-white/10 hover:bg-white/20 text-white px-3 py-1.5 rounded-lg border border-white/10 transition-colors flex items-center gap-1.5">
+                                <i class="fa-regular fa-copy"></i> <span id="copy-text-pct">Copy</span>
+                            </button>
+                        </div>
+                        <div class="text-4xl sm:text-5xl font-black text-white tracking-tight mb-2">
+                            <span id="cgpa-result-val">80.75</span><span class="text-indigo-400">%</span>
+                        </div>
+                        <p id="cgpa-division-badge" class="inline-block bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-semibold px-2.5 py-1 rounded-md mb-4">
+                            First Division with Distinction
+                        </p>
+                    </div>
+
+                    <div class="border-t border-white/10 pt-4 space-y-2 text-xs text-indigo-200/80">
+                        <div class="flex justify-between">
+                            <span>Formula Used:</span>
+                            <span id="cgpa-formula-display" class="font-mono text-white font-medium">CGPA × 9.5</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Calculation Breakdown:</span>
+                            <span id="cgpa-calc-step" class="font-mono text-white font-medium">8.5 × 9.5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tool 2: Percentage to CGPA Calculator Card -->
+        <div id="tool-pct-to-cgpa" class="hidden bg-white rounded-3xl border border-slate-200/80 shadow-xl shadow-slate-200/50 p-6 sm:p-8 transition-all duration-300">
+            <div class="flex items-center justify-between border-b border-slate-100 pb-4 mb-6">
+                <div>
+                    <h2 class="text-xl sm:text-2xl font-bold text-slate-800">Percentage to CGPA Calculator</h2>
+                    <p class="text-xs sm:text-sm text-slate-500">Convert aggregate percentage marks back into CGPA</p>
+                </div>
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800">
+                    <i class="fa-solid fa-rotate mr-1.5 text-indigo-600"></i> Reverse Calculator
+                </span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Controls -->
+                <div class="space-y-4">
+                    <div>
+                        <label for="pct-target-scale" class="block text-sm font-semibold text-slate-700 mb-1">Target Grading Scale</label>
+                        <select id="pct-target-scale" onchange="calculatePctToCgpa()" class="w-full bg-slate-50 border border-slate-300 text-slate-800 text-sm rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 p-3 transition-colors">
+                            <option value="10" selected>10 Point Scale (Divide by 9.5 Standard)</option>
+                            <option value="10-direct">10 Point Scale (Direct Divide by 10)</option>
+                            <option value="4">4 Point Scale (Divide by 25 Scale)</option>
+                            <option value="5">5 Point Scale (Divide by 20 Scale)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-center mb-1">
+                            <label for="input-pct-val" class="block text-sm font-semibold text-slate-700">Enter Your Percentage (%)</label>
+                            <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded">Range: 0 - 100%</span>
+                        </div>
+                        <div class="relative">
+                            <input type="number" id="input-pct-val" step="0.01" placeholder="e.g. 80.75" oninput="calculatePctToCgpa()" class="w-full bg-slate-50 border border-slate-300 text-slate-900 text-lg font-bold rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 p-3.5 pl-4 pr-12 transition-colors">
+                            <div class="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none text-slate-400 font-bold">
+                                %
+                            </div>
+                        </div>
+                        <p id="pct-error-msg" class="text-xs text-rose-500 mt-1 hidden"></p>
+                    </div>
+
+                    <div class="flex gap-3 pt-2">
+                        <button type="button" onclick="calculatePctToCgpa()" class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-4 rounded-xl shadow-md shadow-indigo-200 transition-all duration-200 flex items-center justify-center gap-2 active:scale-95">
+                            <i class="fa-solid fa-calculator"></i> Convert to CGPA
+                        </button>
+                        <button type="button" onclick="resetPctTool()" class="bg-slate-100 hover:bg-slate-200 text-slate-600 font-medium py-3 px-4 rounded-xl transition-colors active:scale-95">
+                            <i class="fa-solid fa-arrows-rotate"></i> Reset
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Result Display Box -->
+                <div class="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 rounded-2xl p-6 text-white flex flex-col justify-between relative overflow-hidden shadow-lg">
+                    <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-indigo-500/10 rounded-full blur-2xl pointer-events-none"></div>
+                    
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs uppercase font-bold tracking-wider text-indigo-300">Equivalent CGPA Score</span>
+                            <button type="button" onclick="copyResult('pct-result-val', 'cgpa')" class="text-xs bg-white/10 hover:bg-white/20 text-white px-3 py-1.5 rounded-lg border border-white/10 transition-colors flex items-center gap-1.5">
+                                <i class="fa-regular fa-copy"></i> <span id="copy-text-cgpa">Copy</span>
+                            </button>
+                        </div>
+                        <div class="text-4xl sm:text-5xl font-black text-white tracking-tight mb-2">
+                            <span id="pct-result-val">8.50</span> <span id="pct-scale-badge" class="text-lg font-normal text-indigo-300">/ 10.0</span>
+                        </div>
+                        <p id="pct-performance-badge" class="inline-block bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 text-xs font-semibold px-2.5 py-1 rounded-md mb-4">
+                            Grade: A / Excellent
+                        </p>
+                    </div>
+
+                    <div class="border-t border-white/10 pt-4 space-y-2 text-xs text-indigo-200/80">
+                        <div class="flex justify-between">
+                            <span>Reverse Formula:</span>
+                            <span id="pct-formula-display" class="font-mono text-white font-medium">Percentage / 9.5</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Step Calculation:</span>
+                            <span id="pct-calc-step" class="font-mono text-white font-medium">80.75 / 9.5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section B: How to Convert CGPA to Percentage -->
+    <section class="bg-white rounded-3xl border border-slate-200/80 p-6 sm:p-10 shadow-sm space-y-8">
+        <div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-3">How to Convert CGPA to Percentage?</h2>
+            <p class="text-slate-600 leading-relaxed">
+                Converting Cumulative Grade Point Average (CGPA) into an equivalent percentage requires applying specific conversion factors determined by your educational board or university standard. Below are the official formulas for various scales and institutions.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- 10 Point Formula -->
+            <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 hover:border-indigo-300 transition-colors">
+                <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold mb-4">
+                    10
+                </div>
+                <h3 class="text-lg font-bold text-slate-800 mb-2">CGPA to Percentage Formula (10 Point Scale)</h3>
+                <p class="text-sm text-slate-600 mb-4">Used by CBSE, AICTE, UGC, and major Indian Central Universities.</p>
+                <div class="bg-white p-3 rounded-xl border border-slate-200 font-mono text-sm text-indigo-700 font-bold">
+                    Percentage = CGPA × 9.5
+                </div>
+            </div>
+
+            <!-- 4 Point Formula -->
+            <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 hover:border-indigo-300 transition-colors">
+                <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold mb-4">
+                    4
+                </div>
+                <h3 class="text-lg font-bold text-slate-800 mb-2">CGPA to Percentage Formula (4 Point Scale)</h3>
+                <p class="text-sm text-slate-600 mb-4">Common in the US, Canada, and international institutions.</p>
+                <div class="bg-white p-3 rounded-xl border border-slate-200 font-mono text-sm text-indigo-700 font-bold">
+                    Percentage = (GPA / 4.0) × 100
+                </div>
+            </div>
+
+            <!-- 5 Point Formula -->
+            <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 hover:border-indigo-300 transition-colors">
+                <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold mb-4">
+                    5
+                </div>
+                <h3 class="text-lg font-bold text-slate-800 mb-2">CGPA to Percentage Formula (5 Point Scale)</h3>
+                <p class="text-sm text-slate-600 mb-4">Utilized by European and selective Commonwealth universities.</p>
+                <div class="bg-white p-3 rounded-xl border border-slate-200 font-mono text-sm text-indigo-700 font-bold">
+                    Percentage = (CGPA / 5.0) × 100
+                </div>
+            </div>
+        </div>
+
+        <!-- University-Wise Methods -->
+        <div class="space-y-4 pt-4 border-t border-slate-100">
+            <h3 class="text-xl font-bold text-slate-800">University-wise CGPA to Percentage Conversion Methods</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+                While the 9.5 multiplier recommended by CBSE is widespread, several technical universities follow custom conversion rules.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="p-4 rounded-xl border border-slate-200 bg-white">
+                    <h4 class="font-bold text-slate-800 text-sm mb-1">CBSE / AICTE / UGC</h4>
+                    <p class="text-xs text-slate-500 mb-2">Standard formula across India</p>
+                    <code class="text-xs font-bold text-indigo-600">Percentage = CGPA × 9.5</code>
+                </div>
+                <div class="p-4 rounded-xl border border-slate-200 bg-white">
+                    <h4 class="font-bold text-slate-800 text-sm mb-1">VTU (Visvesvaraya Technological Univ)</h4>
+                    <p class="text-xs text-slate-500 mb-2">Official Engineering formula</p>
+                    <code class="text-xs font-bold text-indigo-600">Percentage = (CGPA - 0.75) × 10</code>
+                </div>
+                <div class="p-4 rounded-xl border border-slate-200 bg-white">
+                    <h4 class="font-bold text-slate-800 text-sm mb-1">Mumbai University</h4>
+                    <p class="text-xs text-slate-500 mb-2">10-Point Choice Based Credit Standard</p>
+                    <code class="text-xs font-bold text-indigo-600">Percentage = (CGPA × 7.1) + 11</code>
+                </div>
+                <div class="p-4 rounded-xl border border-slate-200 bg-white">
+                    <h4 class="font-bold text-slate-800 text-sm mb-1">Anna University</h4>
+                    <p class="text-xs text-slate-500 mb-2">Direct 10 multiplier standard</p>
+                    <code class="text-xs font-bold text-indigo-600">Percentage = CGPA × 10</code>
+                </div>
+                <div class="p-4 rounded-xl border border-slate-200 bg-white">
+                    <h4 class="font-bold text-slate-800 text-sm mb-1">University of Delhi (DU)</h4>
+                    <p class="text-xs text-slate-500 mb-2">UGC Choice Based Credit System</p>
+                    <code class="text-xs font-bold text-indigo-600">Percentage = CGPA × 9.5</code>
+                </div>
+                <div class="p-4 rounded-xl border border-slate-200 bg-white">
+                    <h4 class="font-bold text-slate-800 text-sm mb-1">KTU (Kerala Technological Univ)</h4>
+                    <p class="text-xs text-slate-500 mb-2">Technical degree conversion formula</p>
+                    <code class="text-xs font-bold text-indigo-600">Percentage = (CGPA - 0.5) × 10</code>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section C: How to Convert Percentage to CGPA -->
+    <section class="bg-white rounded-3xl border border-slate-200/80 p-6 sm:p-10 shadow-sm space-y-6">
+        <div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-3">How to Convert Percentage to CGPA?</h2>
+            <p class="text-slate-600 leading-relaxed">
+                When converting overall percentage marks back to Cumulative Grade Point Average (CGPA), you invert the standard university multiplier.
+            </p>
+        </div>
+
+        <div class="bg-indigo-50/50 rounded-2xl p-6 border border-indigo-100 flex flex-col md:flex-row gap-6 items-center">
+            <div class="flex-1 space-y-3">
+                <h3 class="text-lg font-bold text-indigo-950">Percentage to CGPA Formula (10 Point Scale)</h3>
+                <div class="bg-white p-3 rounded-xl border border-indigo-200 font-mono text-base text-indigo-800 font-bold inline-block">
+                    CGPA = Percentage / 9.5
+                </div>
+                <p class="text-sm text-slate-600">
+                    Divide your percentage by 9.5 to obtain your equivalent grade point average on a 10-point scale.
+                </p>
+            </div>
+
+            <!-- Step by step example card -->
+            <div class="w-full md:w-80 bg-white rounded-2xl p-5 border border-slate-200 shadow-sm text-sm space-y-2">
+                <div class="text-xs font-bold uppercase tracking-wider text-indigo-600">Step-by-Step Example</div>
+                <p class="text-slate-700"><strong>Target:</strong> Convert 85.5% to CGPA.</p>
+                <p class="text-slate-700"><strong>Step 1:</strong> Identify percentage = 85.5%.</p>
+                <p class="text-slate-700"><strong>Step 2:</strong> Divide by multiplier 9.5.</p>
+                <div class="p-2 bg-slate-50 rounded font-mono text-xs text-slate-800 font-semibold border">
+                    85.5 ÷ 9.5 = 9.0 CGPA
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section D: CGPA to Percentage Conversion Table -->
+    <section class="bg-white rounded-3xl border border-slate-200/80 p-6 sm:p-10 shadow-sm space-y-6">
+        <div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">CGPA to Percentage Conversion Table (10-Point Scale)</h2>
+            <p class="text-slate-600 text-sm sm:text-base">
+                Quick reference lookup table converting CGPA scores into equivalent percentage and academic performance class under the CBSE/AICTE 9.5 standard.
+            </p>
+        </div>
+
+        <div class="overflow-x-auto rounded-2xl border border-slate-200">
+            <table class="w-full text-left border-collapse text-sm">
+                <thead>
+                    <tr class="bg-slate-100/80 border-b border-slate-200 text-slate-700 font-bold">
+                        <th class="p-3.5">CGPA Score</th>
+                        <th class="p-3.5">Percentage Equivalent (CGPA × 9.5)</th>
+                        <th class="p-3.5">Letter Grade</th>
+                        <th class="p-3.5">Performance Honors</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-200 text-slate-600">
+                    <tr class="hover:bg-slate-50/80 transition-colors font-medium">
+                        <td class="p-3.5 text-indigo-700 font-bold">10.0</td>
+                        <td class="p-3.5 font-bold text-slate-800">95.0%</td>
+                        <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold text-xs">A1</span></td>
+                        <td class="p-3.5">Outstanding / First Class Distinction</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                        <td class="p-3.5 text-indigo-700 font-bold">9.5</td>
+                        <td class="p-3.5 font-bold text-slate-800">90.25%</td>
+                        <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold text-xs">A1</span></td>
+                        <td class="p-3.5">Excellent / First Class Distinction</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                        <td class="p-3.5 text-indigo-700 font-bold">9.0</td>
+                        <td class="p-3.5 font-bold text-slate-800">85.5%</td>
+                        <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-bold text-xs">A2</span></td>
+                        <td class="p-3.5">Very Good / First Class Distinction</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                        <td class="p-3.5 text-indigo-700 font-bold">8.5</td>
+                        <td class="p-3.5 font-bold text-slate-800">80.75%</td>
+                        <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-bold text-xs">A2</span></td>
+                        <td class="p-3.5">Very Good / First Class</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                        <td class="p-3.5 text-indigo-700 font-bold">8.0</td>
+                        <td class="p-3.5 font-bold text-slate-800">76.0%</td>
+                        <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-indigo-100 text-indigo-800 font-bold text-xs">B1</span></td>
+                        <td class="p-3.5">Good / First Class</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                        <td class="p-3.5 text-indigo-700 font-bold">7.5</td>
+                        <td class="p-3.5 font-bold text-slate-800">71.25%</td>
+                        <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-indigo-100 text-indigo-800 font-bold text-xs">B1</span></td>
+                        <td class="p-3.5">Good / First Class</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                        <td class="p-3.5 text-indigo-700 font-bold">7.0</td>
+                        <td class="p-3.5 font-bold text-slate-800">66.5%</td>
+                        <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-bold text-xs">B2</span></td>
+                        <td class="p-3.5">Above Average / First Class</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                        <td class="p-3.5 text-indigo-700 font-bold">6.5</td>
+                        <td class="p-3.5 font-bold text-slate-800">61.75%</td>
+                        <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-bold text-xs">B2</span></td>
+                        <td class="p-3.5">Average / First Class</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                        <td class="p-3.5 text-indigo-700 font-bold">6.0</td>
+                        <td class="p-3.5 font-bold text-slate-800">57.0%</td>
+                        <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-slate-200 text-slate-800 font-bold text-xs">C1</span></td>
+                        <td class="p-3.5">Second Division</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                        <td class="p-3.5 text-indigo-700 font-bold">5.5</td>
+                        <td class="p-3.5 font-bold text-slate-800">52.25%</td>
+                        <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-slate-200 text-slate-800 font-bold text-xs">C2</span></td>
+                        <td class="p-3.5">Second Division</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                        <td class="p-3.5 text-indigo-700 font-bold">5.0</td>
+                        <td class="p-3.5 font-bold text-slate-800">47.5%</td>
+                        <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-rose-100 text-rose-800 font-bold text-xs">D</span></td>
+                        <td class="p-3.5">Pass Grade</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Section F: Why Use Our Converter -->
+    <section class="bg-white rounded-3xl border border-slate-200/80 p-6 sm:p-10 shadow-sm space-y-8">
+        <div class="text-center max-w-2xl mx-auto">
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">Why Use Our CGPA to Percentage Converter?</h2>
+            <p class="text-slate-600 text-sm sm:text-base">
+                Designed with precision and speed for students, academic advisors, and recruiters.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
+                <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-lg shadow-md shadow-indigo-200">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <h3 class="font-bold text-lg text-slate-800">Instant &amp; Accurate</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    Calculates conversion outputs in real-time as you type, eliminating manual calculation errors.
+                </p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
+                <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-lg shadow-md shadow-indigo-200">
+                    <i class="fa-solid fa-sliders"></i>
+                </div>
+                <h3 class="font-bold text-lg text-slate-800">Multiple Grading Scales</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    Full native support for 10-point, 4-point, and 5-point grading systems with custom university multiplier inputs.
+                </p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
+                <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-lg shadow-md shadow-indigo-200">
+                    <i class="fa-solid fa-lock-open"></i>
+                </div>
+                <h3 class="font-bold text-lg text-slate-800">100% Free &amp; Private</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    No sign-up or personal data required. All calculations run client-side securely in your web browser.
+                </p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
+                <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-lg shadow-md shadow-indigo-200">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                </div>
+                <h3 class="font-bold text-lg text-slate-800">Mobile First &amp; Responsive</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    Optimized for seamless performance on smartphones, tablets, and desktop displays.
+                </p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
+                <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-lg shadow-md shadow-indigo-200">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <h3 class="font-bold text-lg text-slate-800">Updated University Guidelines</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    Pre-configured with official formulas from CBSE, AICTE, UGC, VTU, Mumbai University, Anna University, and more.
+                </p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
+                <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-lg shadow-md shadow-indigo-200">
+                    <i class="fa-regular fa-copy"></i>
+                </div>
+                <h3 class="font-bold text-lg text-slate-800">One-Tap Copy &amp; Export</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    Copy calculated values and formulas straight to your clipboard for job applications and resume preparation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section G: Difference Between CGPA and Percentage -->
+    <section class="bg-white rounded-3xl border border-slate-200/80 p-6 sm:p-10 shadow-sm space-y-6">
+        <div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">Difference Between CGPA and Percentage</h2>
+            <p class="text-slate-600 text-sm sm:text-base">
+                While both evaluate academic achievements, CGPA and Percentage differ significantly in structure and measurement methodology.
+            </p>
+        </div>
+
+        <div class="overflow-x-auto rounded-2xl border border-slate-200">
+            <table class="w-full text-left border-collapse text-sm">
+                <thead>
+                    <tr class="bg-slate-100 border-b border-slate-200 text-slate-800 font-bold">
+                        <th class="p-3.5">Feature</th>
+                        <th class="p-3.5">CGPA (Cumulative Grade Point Average)</th>
+                        <th class="p-3.5">Percentage (%)</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-200 text-slate-600">
+                    <tr>
+                        <td class="p-3.5 font-bold text-slate-800">Definition</td>
+                        <td class="p-3.5">Average grade point obtained across all completed courses/semesters.</td>
+                        <td class="p-3.5">Total marks obtained divided by maximum total marks multiplied by 100.</td>
+                    </tr>
+                    <tr>
+                        <td class="p-3.5 font-bold text-slate-800">Scale</td>
+                        <td class="p-3.5">Usually measured on a 10.0, 4.0, or 5.0 scale.</td>
+                        <td class="p-3.5">Measured on a 0 to 100 scale.</td>
+                    </tr>
+                    <tr>
+                        <td class="p-3.5 font-bold text-slate-800">Granularity</td>
+                        <td class="p-3.5">Groups student scores into grade point bands.</td>
+                        <td class="p-3.5">Reflects exact individual marks score.</td>
+                    </tr>
+                    <tr>
+                        <td class="p-3.5 font-bold text-slate-800">Global Recognition</td>
+                        <td class="p-3.5">Widely adopted globally for international higher education.</td>
+                        <td class="p-3.5">Commonly used in traditional competitive exams and job postings.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Section H: Frequently Asked Questions (FAQ) -->
+    <section class="bg-white rounded-3xl border border-slate-200/80 p-6 sm:p-10 shadow-sm space-y-6">
+        <div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">Frequently Asked Questions (FAQ)</h2>
+            <p class="text-slate-600 text-sm sm:text-base">
+                Find clear answers to common questions regarding CGPA to Percentage conversion formulas and rules.
+            </p>
+        </div>
+
+        <div class="space-y-3" id="faq-accordion-group">
+            
+            <!-- FAQ 1 -->
+            <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors">
+                <button type="button" onclick="toggleAccordion('faq-1')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center gap-4 focus:outline-none">
+                    <span>What is the formula to convert CGPA into percentage?</span>
+                    <i id="icon-faq-1" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                </button>
+                <div id="faq-1" class="accordion-content px-4 sm:px-5 pb-5 text-sm text-slate-600 leading-relaxed">
+                    <p>For CBSE and most 10-point Indian university grading systems, the standard formula to convert CGPA into percentage is: <strong>Percentage (%) = CGPA × 9.5</strong>. For example, if your CGPA is 8.0, your percentage is 8.0 × 9.5 = 76.0%.</p>
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors">
+                <button type="button" onclick="toggleAccordion('faq-2')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center gap-4 focus:outline-none">
+                    <span>How to convert 8.5 CGPA to percentage?</span>
+                    <i id="icon-faq-2" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                </button>
+                <div id="faq-2" class="accordion-content px-4 sm:px-5 pb-5 text-sm text-slate-600 leading-relaxed">
+                    <p>To convert 8.5 CGPA to percentage using the official CBSE 10-point formula, multiply 8.5 by 9.5: <strong>8.5 × 9.5 = 80.75%</strong>.</p>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors">
+                <button type="button" onclick="toggleAccordion('faq-3')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center gap-4 focus:outline-none">
+                    <span>Is CGPA to percentage conversion the same for all universities?</span>
+                    <i id="icon-faq-3" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                </button>
+                <div id="faq-3" class="accordion-content px-4 sm:px-5 pb-5 text-sm text-slate-600 leading-relaxed">
+                    <p>No. While CBSE, AICTE, and Delhi University follow the 9.5 multiplier, some autonomous colleges and universities use specific formulas. For instance, VTU uses <code>(CGPA - 0.75) × 10</code>, while Mumbai University uses <code>(CGPA × 7.1) + 11</code>. Always check your university mark sheet guidelines.</p>
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors">
+                <button type="button" onclick="toggleAccordion('faq-4')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center gap-4 focus:outline-none">
+                    <span>How to convert percentage to CGPA in 10 point scale?</span>
+                    <i id="icon-faq-4" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                </button>
+                <div id="faq-4" class="accordion-content px-4 sm:px-5 pb-5 text-sm text-slate-600 leading-relaxed">
+                    <p>To convert Percentage to CGPA under the standard 10-point scale, divide your overall percentage score by 9.5. Formula: <strong>CGPA = Percentage / 9.5</strong>. For example, 76% divided by 9.5 equals 8.0 CGPA.</p>
+                </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors">
+                <button type="button" onclick="toggleAccordion('faq-5')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center gap-4 focus:outline-none">
+                    <span>What is 7.5 CGPA in percentage?</span>
+                    <i id="icon-faq-5" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                </button>
+                <div id="faq-5" class="accordion-content px-4 sm:px-5 pb-5 text-sm text-slate-600 leading-relaxed">
+                    <p>Under the CBSE/AICTE standard formula, a score of 7.5 CGPA converts to <strong>71.25%</strong> (7.5 × 9.5 = 71.25%).</p>
+                </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors">
+                <button type="button" onclick="toggleAccordion('faq-6')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center gap-4 focus:outline-none">
+                    <span>Can I use this calculator for engineering and medical colleges?</span>
+                    <i id="icon-faq-6" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                </button>
+                <div id="faq-6" class="accordion-content px-4 sm:px-5 pb-5 text-sm text-slate-600 leading-relaxed">
+                    <p>Yes, our tool supports both AICTE standard formulas and custom multipliers, making it suitable for B.Tech, BE, MBBS, MBA, and undergraduate/postgraduate degree programs across India and internationally.</p>
+                </div>
+            </div>
+
+            <!-- FAQ 7 -->
+            <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors">
+                <button type="button" onclick="toggleAccordion('faq-7')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center gap-4 focus:outline-none">
+                    <span>What is the difference between GPA and CGPA?</span>
+                    <i id="icon-faq-7" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                </button>
+                <div id="faq-7" class="accordion-content px-4 sm:px-5 pb-5 text-sm text-slate-600 leading-relaxed">
+                    <p>GPA (Grade Point Average) represents academic performance for a single semester or term, whereas CGPA (Cumulative Grade Point Average) represents the cumulative overall performance across all completed semesters of an academic program.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section I: Related Tools / Internal Links -->
+    <section class="bg-white rounded-3xl border border-slate-200/80 p-6 sm:p-10 shadow-sm space-y-6">
+        <div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">Related Academic Calculators</h2>
+            <p class="text-slate-600 text-sm sm:text-base">Explore our suite of academic grading and percentage calculation tools.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <a href="#" class="p-5 rounded-2xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all group bg-slate-50/50">
+                <div class="text-indigo-600 font-bold mb-1 group-hover:translate-x-1 transition-transform inline-block">
+                    SGPA to Percentage Converter <i class="fa-solid fa-arrow-right text-xs ml-1"></i>
+                </div>
+                <p class="text-xs text-slate-500">Convert single semester GPA to percentage easily.</p>
+            </a>
+
+            <a href="#" class="p-5 rounded-2xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all group bg-slate-50/50">
+                <div class="text-indigo-600 font-bold mb-1 group-hover:translate-x-1 transition-transform inline-block">
+                    CGPA Calculator <i class="fa-solid fa-arrow-right text-xs ml-1"></i>
+                </div>
+                <p class="text-xs text-slate-500">Calculate cumulative GPA across multiple semester subjects.</p>
+            </a>
+
+            <a href="#" class="p-5 rounded-2xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all group bg-slate-50/50">
+                <div class="text-indigo-600 font-bold mb-1 group-hover:translate-x-1 transition-transform inline-block">
+                    Percentage to GPA Converter <i class="fa-solid fa-arrow-right text-xs ml-1"></i>
+                </div>
+                <p class="text-xs text-slate-500">Convert aggregate percentage into 4.0 US GPA scale.</p>
+            </a>
+
+            <a href="#" class="p-5 rounded-2xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all group bg-slate-50/50">
+                <div class="text-indigo-600 font-bold mb-1 group-hover:translate-x-1 transition-transform inline-block">
+                    Marks to Percentage Calculator <i class="fa-solid fa-arrow-right text-xs ml-1"></i>
+                </div>
+                <p class="text-xs text-slate-500">Calculate overall percentage from total marks scored.</p>
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<!-- Multi-column Footer -->
+<footer class="bg-slate-900 text-slate-400 text-sm border-t border-slate-800 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <!-- Col 1: About -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2 text-white font-bold text-lg">
+            <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
+              <i class="fa-solid fa-calculator"></i>
+            </div>
+            <span>Calculator<span class="text-indigo-400">-Pro</span></span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Calculator Pro provides free, fast, and clinically accurate online tools for health, financial, mathematical, and everyday conversion needs.
+          </p>
+          <div class="text-xs text-slate-500">
+            &copy; <span id="current-year">2026</span> Calculator Pro. All rights reserved.
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Quick Links</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Unit Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Length Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Weight Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Temperature Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Volume & Area Converter</a></li>
+          </ul>
+        </div>
+        <!-- Column 3: Tools & Resources -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Calculators</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="age-calculator.html" class="hover:text-white transition-colors">Age Calculator</a></li>
+            <li><a href="time-calculator.html" class="hover:text-white transition-colors">Time Calculator</a></li>
+            <li><a href="sip-calculator.html" class="hover:text-white transition-colors">SIP Financial Calculator</a></li>
+            <li><a href="bmi-calculator.html" class="hover:text-white transition-colors">BMI Health Calculator</a></li>
+            <li><a href="percentage-calculator.html" class="hover:text-white transition-colors">Percentage Calculator</a></li>
+          </ul>
+        </div>
+
+         <!-- Column 4: Legal & Contact -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Legal & Info</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Editorial Guidelines</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+<!-- Pure Vanilla JS Logic -->
+<script>
+	<!-- Inline JavaScript for Toggle -->
+      
+        document.addEventListener('DOMContentLoaded', () => {
+          const btn = document.getElementById('calc-mobile-menu-btn');
+          const menu = document.getElementById('calc-mobile-menu');
+          const menuIcon = document.getElementById('calc-menu-icon');
+          const closeIcon = document.getElementById('calc-close-icon');
+
+          if (btn && menu) {
+            btn.addEventListener('click', () => {
+              const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+              btn.setAttribute('aria-expanded', !isExpanded);
+              menu.classList.toggle('hidden');
+              menuIcon.classList.toggle('hidden');
+              closeIcon.classList.toggle('hidden');
+            });
+          }
+        });
+    
+    // Tab Switcher between Tool 1 and Tool 2
+    function switchCalcTab(tabName) {
+        const tool1 = document.getElementById('tool-cgpa-to-pct');
+        const tool2 = document.getElementById('tool-pct-to-cgpa');
+        const btn1 = document.getElementById('tab-cgpa-to-pct');
+        const btn2 = document.getElementById('tab-pct-to-cgpa');
+
+        if (tabName === 'cgpa-to-pct') {
+            tool1.classList.remove('hidden');
+            tool2.classList.add('hidden');
+            
+            btn1.className = "flex-1 py-3 px-4 rounded-xl text-sm font-semibold transition-all duration-200 bg-white text-indigo-600 shadow-sm flex items-center justify-center gap-2";
+            btn2.className = "flex-1 py-3 px-4 rounded-xl text-sm font-semibold transition-all duration-200 text-slate-600 hover:text-slate-900 flex items-center justify-center gap-2";
+        } else {
+            tool1.classList.add('hidden');
+            tool2.classList.remove('hidden');
+
+            btn2.className = "flex-1 py-3 px-4 rounded-xl text-sm font-semibold transition-all duration-200 bg-white text-indigo-600 shadow-sm flex items-center justify-center gap-2";
+            btn1.className = "flex-1 py-3 px-4 rounded-xl text-sm font-semibold transition-all duration-200 text-slate-600 hover:text-slate-900 flex items-center justify-center gap-2";
+        }
+    }
+
+    // Handles scale dropdown changes for Tool 1
+    function onCgpaScaleChange() {
+        const scale = document.getElementById('cgpa-scale-select').value;
+        const formulaWrapper = document.getElementById('cgpa-formula-wrapper');
+        const customContainer = document.getElementById('custom-multiplier-container');
+        const rangeInd = document.getElementById('cgpa-range-indicator');
+
+        if (scale === '10') {
+            formulaWrapper.classList.remove('hidden');
+            rangeInd.innerText = "Max: 10.0";
+        } else if (scale === '4') {
+            formulaWrapper.classList.add('hidden');
+            customContainer.classList.add('hidden');
+            rangeInd.innerText = "Max: 4.0";
+        } else if (scale === '5') {
+            formulaWrapper.classList.add('hidden');
+            customContainer.classList.add('hidden');
+            rangeInd.innerText = "Max: 5.0";
+        }
+
+        calculateCgpaToPct();
+    }
+
+    // Tool 1 Calculation Logic
+    function calculateCgpaToPct() {
+        const scale = document.getElementById('cgpa-scale-select').value;
+        const formulaSelect = document.getElementById('cgpa-formula-select').value;
+        const customContainer = document.getElementById('custom-multiplier-container');
+        const inputVal = parseFloat(document.getElementById('input-cgpa-val').value);
+        const errorMsg = document.getElementById('cgpa-error-msg');
+
+        const resultVal = document.getElementById('cgpa-result-val');
+        const formulaDisp = document.getElementById('cgpa-formula-display');
+        const stepDisp = document.getElementById('cgpa-calc-step');
+        const badge = document.getElementById('cgpa-division-badge');
+
+        // Toggle custom multiplier input
+        if (scale === '10' && formulaSelect === 'custom') {
+            customContainer.classList.remove('hidden');
+        } else {
+            customContainer.classList.add('hidden');
+        }
+
+        if (isNaN(inputVal) || inputVal < 0) {
+            errorMsg.innerText = "";
+            errorMsg.classList.add('hidden');
+            resultVal.innerText = "0.00";
+            stepDisp.innerText = "N/A";
+            return;
+        }
+
+        let maxScale = parseFloat(scale);
+        if (inputVal > maxScale) {
+            errorMsg.innerText = `Value cannot exceed scale maximum (${maxScale})`;
+            errorMsg.classList.remove('hidden');
+        } else {
+            errorMsg.innerText = "";
+            errorMsg.classList.add('hidden');
+        }
+
+        let percentage = 0;
+        let formulaText = "";
+        let calcStepText = "";
+
+        if (scale === '10') {
+            if (formulaSelect === '9.5') {
+                percentage = inputVal * 9.5;
+                formulaText = "CGPA × 9.5";
+                calcStepText = `${inputVal} × 9.5`;
+            } else if (formulaSelect === '10' || formulaSelect === 'anna') {
+                percentage = inputVal * 10;
+                formulaText = "CGPA × 10";
+                calcStepText = `${inputVal} × 10`;
+            } else if (formulaSelect === 'vtu') {
+                percentage = (inputVal - 0.75) * 10;
+                formulaText = "(CGPA - 0.75) × 10";
+                calcStepText = `(${inputVal} - 0.75) × 10`;
+            } else if (formulaSelect === 'mumbai') {
+                percentage = (inputVal * 7.1) + 11;
+                formulaText = "(CGPA × 7.1) + 11";
+                calcStepText = `(${inputVal} × 7.1) + 11`;
+            } else if (formulaSelect === 'custom') {
+                const mult = parseFloat(document.getElementById('custom-cgpa-multiplier').value) || 9.5;
+                percentage = inputVal * mult;
+                formulaText = `CGPA × ${mult}`;
+                calcStepText = `${inputVal} × ${mult}`;
+            }
+        } else if (scale === '4') {
+            percentage = (inputVal / 4.0) * 100;
+            formulaText = "(GPA / 4.0) × 100";
+            calcStepText = `(${inputVal} / 4.0) × 100`;
+        } else if (scale === '5') {
+            percentage = (inputVal / 5.0) * 100;
+            formulaText = "(CGPA / 5.0) × 100";
+            calcStepText = `(${inputVal} / 5.0) × 100`;
+        }
+
+        if (percentage < 0) percentage = 0;
+        if (percentage > 100) percentage = 100;
+
+        resultVal.innerText = percentage.toFixed(2);
+        formulaDisp.innerText = formulaText;
+        stepDisp.innerText = calcStepText;
+
+        // Honor Badge classification
+        if (percentage >= 75) {
+            badge.innerText = "First Class with Distinction";
+            badge.className = "inline-block bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-semibold px-2.5 py-1 rounded-md mb-4";
+        } else if (percentage >= 60) {
+            badge.innerText = "First Division";
+            badge.className = "inline-block bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 text-xs font-semibold px-2.5 py-1 rounded-md mb-4";
+        } else if (percentage >= 50) {
+            badge.innerText = "Second Division";
+            badge.className = "inline-block bg-amber-500/20 text-amber-300 border border-amber-500/30 text-xs font-semibold px-2.5 py-1 rounded-md mb-4";
+        } else {
+            badge.innerText = "Pass Division";
+            badge.className = "inline-block bg-slate-500/20 text-slate-300 border border-slate-500/30 text-xs font-semibold px-2.5 py-1 rounded-md mb-4";
+        }
+    }
+
+    function resetCgpaTool() {
+        document.getElementById('input-cgpa-val').value = '';
+        calculateCgpaToPct();
+    }
+
+    // Tool 2 Calculation Logic
+    function calculatePctToCgpa() {
+        const targetScale = document.getElementById('pct-target-scale').value;
+        const inputVal = parseFloat(document.getElementById('input-pct-val').value);
+        const errorMsg = document.getElementById('pct-error-msg');
+
+        const resultVal = document.getElementById('pct-result-val');
+        const scaleBadge = document.getElementById('pct-scale-badge');
+        const formulaDisp = document.getElementById('pct-formula-display');
+        const stepDisp = document.getElementById('pct-calc-step');
+        const badge = document.getElementById('pct-performance-badge');
+
+        if (isNaN(inputVal) || inputVal < 0) {
+            errorMsg.innerText = "";
+            errorMsg.classList.add('hidden');
+            resultVal.innerText = "0.00";
+            stepDisp.innerText = "N/A";
+            return;
+        }
+
+        if (inputVal > 100) {
+            errorMsg.innerText = "Percentage cannot exceed 100%";
+            errorMsg.classList.remove('hidden');
+        } else {
+            errorMsg.innerText = "";
+            errorMsg.classList.add('hidden');
+        }
+
+        let cgpa = 0;
+        let formulaText = "";
+        let calcStepText = "";
+        let scaleText = "/ 10.0";
+
+        if (targetScale === '10') {
+            cgpa = inputVal / 9.5;
+            formulaText = "Percentage / 9.5";
+            calcStepText = `${inputVal} / 9.5`;
+            scaleText = "/ 10.0";
+        } else if (targetScale === '10-direct') {
+            cgpa = inputVal / 10;
+            formulaText = "Percentage / 10";
+            calcStepText = `${inputVal} / 10`;
+            scaleText = "/ 10.0";
+        } else if (targetScale === '4') {
+            cgpa = (inputVal / 100) * 4.0;
+            formulaText = "(Percentage / 100) × 4.0";
+            calcStepText = `(${inputVal} / 100) × 4.0`;
+            scaleText = "/ 4.0";
+        } else if (targetScale === '5') {
+            cgpa = (inputVal / 100) * 5.0;
+            formulaText = "(Percentage / 100) × 5.0";
+            calcStepText = `(${inputVal} / 100) × 5.0`;
+            scaleText = "/ 5.0";
+        }
+
+        resultVal.innerText = cgpa.toFixed(2);
+        scaleBadge.innerText = scaleText;
+        formulaDisp.innerText = formulaText;
+        stepDisp.innerText = calcStepText;
+
+        if (inputVal >= 80) {
+            badge.innerText = "Grade: Outstanding / A+";
+        } else if (inputVal >= 60) {
+            badge.innerText = "Grade: First Division / A";
+        } else if (inputVal >= 50) {
+            badge.innerText = "Grade: Second Division / B";
+        } else {
+            badge.innerText = "Grade: Pass / C";
+        }
+    }
+
+    function resetPctTool() {
+        document.getElementById('input-pct-val').value = '';
+        calculatePctToCgpa();
+    }
+
+    // Accordion Toggle for FAQs
+    function toggleAccordion(id) {
+        const content = document.getElementById(id);
+        const icon = document.getElementById(`icon-${id}`);
+        const isOpen = content.classList.contains('open');
+
+        // Close all accordions
+        document.querySelectorAll('.accordion-content').forEach(el => el.classList.remove('open'));
+        document.querySelectorAll('[id^="icon-faq-"]').forEach(ic => ic.style.transform = 'rotate(0deg)');
+
+        if (!isOpen) {
+            content.classList.add('open');
+            icon.style.transform = 'rotate(180deg)';
+        }
+    }
+
+    // Copy Result to Clipboard
+    function copyResult(elementId, type) {
+        const val = document.getElementById(elementId).innerText;
+        const textToCopy = type === 'pct' ? `${val}%` : `${val} CGPA`;
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(textToCopy);
+        } else {
+            const textarea = document.createElement('textarea');
+            textarea.value = textToCopy;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+        }
+
+        const btnLabel = document.getElementById(`copy-text-${type}`);
+        const originalText = btnLabel.innerText;
+        btnLabel.innerText = "Copied!";
+        setTimeout(() => {
+            btnLabel.innerText = originalText;
+        }, 2000);
+    }
+
+    // Initialize default state
+    window.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('input-cgpa-val').value = '8.5';
+        document.getElementById('input-pct-val').value = '80.75';
+        calculateCgpaToPct();
+        calculatePctToCgpa();
+    });
+</script>
+</body>
+</html>

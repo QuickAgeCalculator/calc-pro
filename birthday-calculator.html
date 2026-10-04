@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Calculator – Exact Age, Next Birthday & Fun Facts | Free Online</title>
+  <meta name="description" content="Free Birthday Calculator se exact age (years, months, days), next birthday countdown, zodiac sign, birthstone aur life stats nikalo. Instant & accurate.">
+  <meta name="keywords" content="birthday calculator, age calculator, birthday age calculator, exact age calculator, next birthday calculator, how old am I calculator, days until my birthday, birthday calculator with zodiac, leap year birthday calculator, age in years months days">
+  <meta name="author" content="Calculator-Pro">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Birthday Calculator – Exact Age, Next Birthday & Fun Facts">
+  <meta property="og:description" content="Calculate your exact age in years, months, days, hours & seconds. Discover your zodiac, birthstone, heartbeats, planetary ages, and next birthday countdown.">
+  <meta property="og:image" content="https://placehold.co/1200x630/2563eb/ffffff?text=Birthday+Calculator+Pro">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Birthday Calculator – Exact Age & Fun Life Stats">
+  <meta name="twitter:description" content="Free online Birthday Calculator with live ticking age, zodiac sign, planetary age, and milestone countdowns.">
+  <meta name="twitter:image" content="https://placehold.co/1200x630/2563eb/ffffff?text=Birthday+Calculator+Pro">
+
+  <!-- Fonts & Icons -->
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  
+  <link rel="stylesheet" href="./css/styles.css">
+
+  <!-- FAQ Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I calculate my exact age using this birthday calculator?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Simply enter your Date of Birth in the date picker input field, optionally add your time of birth, and click Calculate. The tool instantly displays your age down to exact years, months, days, hours, minutes, and live ticking seconds."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if I was born on a leap year on February 29?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our calculator accounts for leap years with 100% precision. For non-leap years, February 29 birthdays are calculated as maturing on February 28 or March 1 depending on leap year standards, ensuring accurate day counts and milestone calculations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many days until my next birthday?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Birthday Calculator provides a real-time live countdown showing exact days, hours, minutes, and seconds remaining until your next birthday, along with the day of the week it will fall on."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is my zodiac sign based on my birthday?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "When you calculate your age, the tool automatically determines your Western Sun Zodiac sign (e.g., Aries, Leo, Scorpio) with its elemental symbol, as well as your Chinese Zodiac animal sign and birth element."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I check my age on a past or future date?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! You can change the 'As of Date' field from today's date to any past or future date to determine your exact age on a specific day in history or in the future."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between an age calculator and a birthday calculator?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "While an age calculator focuses mainly on total elapsed years and days, this Birthday Calculator offers an all-in-one breakdown including next birthday countdowns, birth day of the week, zodiac traits, birthstones, heartbeats, and planetary ages."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How accurate is this birthday calculator?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "This calculator is 100% accurate. It uses exact Gregorian calendar mathematics, accounting for varying month lengths (28, 29, 30, and 31 days) and leap year rules."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What day of the week was I born?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our calculator immediately determines the exact day of the week (e.g., Monday, Friday) on which you were born based on your birth date."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does planetary age calculation work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Planetary age is calculated by dividing your total days lived on Earth by the orbital period (year length) of other planets in our solar system, such as Mars (687 days) or Mercury (88 days)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is my birth date data saved or private?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your privacy is completely protected. All calculations run locally in your web browser using client-side JavaScript. No date of birth data is ever transmitted or stored on any server."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-indigo-500 selection:text-white min-h-screen flex flex-col">
+
+  <!-- Site Branding & Sticky Navigation Header -->
+  <header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      
+      <!-- Brand Logo & Name -->
+      <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
+        <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
+          <i class="fa-solid fa-calculator text-lg"></i>
+        </div>
+        <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
+          Calculator<span class="text-indigo-600">-Pro</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-1" aria-label="Main Navigation">
+        
+        <!-- Category 1: Age -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Age
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="age-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="birthday-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Birthday Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="age-difference-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Diffrence Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Time -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Time & Date
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="time-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Time Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="date-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Date Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="work-days-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Work Days Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="time-zone-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">TimeZone Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Converter -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Converter
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="unit-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Unit Converter</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="cgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">CGPA to Percentage</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to Percentage</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sgpa-to-cgpa-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to CGPA</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="marks-to-percentage-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Marks to Percentage</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4: Financial -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Financial
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sip-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SIP Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="emi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">EMI Loan Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="Compound-Interest-Calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Compound Interest Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 5: Health -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Health
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute right-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="bmi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">BMI Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="waist-to-hip-ratio-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">WHR Calculator</a>
+            </div>
+          </div>
+        </div>
+		  
+		 
+
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex md:hidden">
+        <button id="calc-mobile-menu-btn" type="button" class="p-2.5 rounded-xl text-slate-600 hover:text-indigo-600 hover:bg-slate-100/80 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors duration-200" aria-controls="calc-mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+          <svg id="calc-menu-icon" class="w-6 h-6 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="calc-close-icon" class="w-6 h-6 hidden transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile Full-Width Menu Container -->
+  <div id="calc-mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white shadow-xl transition-all duration-200 ease-in-out">
+    <div class="px-4 pt-3 pb-6 space-y-4">
+      
+      <!-- Mobile Category: Age -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Age</div>
+        <a href="age-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Calculator</a>
+		  <a href="birthday-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Birthday Calculator</a>
+		  <a href="age-difference-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Diffrence Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Time -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Time & Date</div>
+        <a href="time-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Time Calculator</a>
+		  <a href="date-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Date Calculator</a>
+		  <a href="work-days-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Work Days Calculator</a>
+		  <a href="time-zone-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">TimeZone Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Converter -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Converter</div>
+        <a href="javascript:void(0)" onclick="openCalculator('length')" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Unit Converter</a>
+		  <a href="cgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">CGPA to Percentage</a>
+		  <a href="sgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to Percentage</a>
+		  <a href="sgpa-to-cgpa-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to CGPA</a>
+		  <a href="marks-to-percentage-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Marks to Percentage</a>
+      </div>
+
+      <!-- Mobile Category: Financial -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Financial</div>
+        <a href="sip-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SIP Calculator</a>
+		  <a href="emi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">EMI Loan Calculator</a>
+		  <a href="Compound-Interest-Calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Compound Interest Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Health -->
+      <div>
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Health</div>
+        <a href="bmi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">BMI Calculator</a>
+		  <a href="waist-to-hip-ratio-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">WHR Calculator</a>
+      </div>
+		
+		
+
+    </div>
+  </div>
+</header>
+
+
+  <main class="flex-grow">
+    <!-- Hero Section with Calculator Tool -->
+    <section id="calculator" class="relative pt-8 pb-16 lg:pt-12 lg:pb-24 overflow-hidden bg-gradient-to-b from-indigo-50/50 via-white to-slate-50">
+      
+      <!-- Subtle Background Decorations -->
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 pointer-events-none overflow-hidden opacity-40">
+        <div class="absolute -top-24 left-1/4 w-96 h-96 bg-indigo-300 rounded-full filter blur-3xl opacity-30"></div>
+        <div class="absolute top-10 right-1/4 w-80 h-80 bg-blue-300 rounded-full filter blur-3xl opacity-30"></div>
+      </div>
+
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Hero Header -->
+        <div class="text-center max-w-3xl mx-auto mb-10">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-100/80 border border-indigo-200/60 text-indigo-700 text-xs sm:text-sm font-semibold mb-4 shadow-sm">
+            <i class="fa-solid fa-cake-candles text-indigo-600"></i> Accurate & Free Age Tool
+          </div>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
+            Birthday Calculator – <span class="bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">Exact Age & Fun Facts</span>
+          </h1>
+          <p class="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
+            Date of birth daalo aur instant mein exact age, next birthday countdown, zodiac sign, birthstone aur interesting life stats paao.
+          </p>
+        </div>
+
+        <!-- Calculator Card -->
+        <div class="bg-white rounded-3xl shadow-xl shadow-slate-200/70 border border-slate-100 p-6 sm:p-8 lg:p-10 transition-all">
+          <form id="birthday-form" class="space-y-6" onsubmit="event.preventDefault(); calculateBirthday();">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              
+              <!-- Input: Date of Birth -->
+              <div class="space-y-2">
+                <label for="dob" class="block text-sm font-semibold text-slate-800 flex items-center justify-between">
+                  <span><i class="fa-solid fa-calendar-day text-indigo-600 mr-1.5"></i> Date of Birth <span class="text-rose-500">*</span></span>
+                  <span class="text-xs text-slate-400 font-normal">Required</span>
+                </label>
+                <div class="relative">
+                  <input type="date" id="dob" required class="w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50/50 text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 font-medium transition-all text-base shadow-sm">
+                </div>
+                
+                <!-- Quick Date Presets -->
+                <div class="flex flex-wrap gap-1.5 pt-1">
+                  <span class="text-xs text-slate-400 self-center mr-1">Presets:</span>
+                  <button type="button" onclick="setPresetAge(20)" class="text-xs px-2.5 py-1 rounded-md bg-slate-100 hover:bg-indigo-50 hover:text-indigo-600 text-slate-600 font-medium transition-colors">20 yrs ago</button>
+                  <button type="button" onclick="setPresetAge(25)" class="text-xs px-2.5 py-1 rounded-md bg-slate-100 hover:bg-indigo-50 hover:text-indigo-600 text-slate-600 font-medium transition-colors">25 yrs ago</button>
+                  <button type="button" onclick="setPresetAge(30)" class="text-xs px-2.5 py-1 rounded-md bg-slate-100 hover:bg-indigo-50 hover:text-indigo-600 text-slate-600 font-medium transition-colors">30 yrs ago</button>
+                  <button type="button" onclick="setPresetAge(50)" class="text-xs px-2.5 py-1 rounded-md bg-slate-100 hover:bg-indigo-50 hover:text-indigo-600 text-slate-600 font-medium transition-colors">50 yrs ago</button>
+                </div>
+              </div>
+
+              <!-- Input: As of Date & Time -->
+              <div class="space-y-4">
+                <div>
+                  <label for="as-of-date" class="block text-sm font-semibold text-slate-800 mb-2">
+                    <i class="fa-solid fa-clock text-indigo-600 mr-1.5"></i> As of Date <span class="text-xs font-normal text-slate-400">(Defaults to Today)</span>
+                  </label>
+                  <input type="date" id="as-of-date" class="w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50/50 text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 font-medium transition-all text-base shadow-sm">
+                </div>
+
+                <!-- Optional Birth Time -->
+                <div>
+                  <label for="birth-time" class="block text-xs font-semibold text-slate-500 mb-1">
+                    Time of Birth <span class="font-normal">(Optional for precise hours)</span>
+                  </label>
+                  <input type="time" id="birth-time" value="00:00" class="w-full px-3 py-2 rounded-lg border border-slate-200 bg-slate-50/50 text-slate-700 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Validation Error Alert -->
+            <div id="error-alert" class="hidden p-4 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-sm flex items-center gap-3">
+              <i class="fa-solid fa-circle-exclamation text-rose-500 text-lg"></i>
+              <span id="error-message">Please select a valid date of birth that is earlier than the 'As of Date'.</span>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-col sm:flex-row items-center gap-3 pt-2">
+              <button type="submit" class="w-full sm:w-auto flex-1 bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl shadow-lg shadow-indigo-200 hover:shadow-indigo-300 transition-all duration-200 transform hover:-translate-y-0.5 flex items-center justify-center gap-2 text-base">
+                <i class="fa-solid fa-wand-magic-sparkles"></i> Calculate Birthday Stats
+              </button>
+              <button type="button" onclick="resetCalculator()" class="w-full sm:w-auto px-6 py-4 rounded-xl border border-slate-200 text-slate-600 font-semibold hover:bg-slate-100 hover:text-slate-800 transition-colors duration-150 flex items-center justify-center gap-2 text-base">
+                <i class="fa-solid fa-rotate-left"></i> Reset
+              </button>
+            </div>
+
+          </form>
+        </div>
+
+        <!-- Interactive Results Dashboard (Hidden until calculated) -->
+        <div id="results-dashboard" class="hidden mt-10 space-y-8 animate-fade-in">
+          
+          <!-- Result Hero Summary Card -->
+          <div class="bg-gradient-to-br from-indigo-900 via-indigo-800 to-slate-900 rounded-3xl p-6 sm:p-8 lg:p-10 text-white shadow-2xl relative overflow-hidden">
+            <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-indigo-500/20 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 border-b border-indigo-700/60 pb-8">
+              <div>
+                <span class="inline-block px-3 py-1 rounded-full bg-indigo-500/30 text-indigo-200 text-xs font-semibold uppercase tracking-wider mb-2">Primary Calculation</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Your Exact Age Breakdown</h2>
+                <p id="res-birth-summary" class="text-indigo-200 text-sm mt-1">Born on Thursday, Jan 1, 2000</p>
+              </div>
+
+              <!-- Main Age Highlight Box -->
+              <div class="flex flex-wrap items-baseline gap-3 sm:gap-4 bg-white/10 backdrop-blur-md px-6 py-4 rounded-2xl border border-white/10">
+                <div class="text-center">
+                  <span id="res-years" class="text-3xl sm:text-5xl font-black text-amber-300">0</span>
+                  <span class="block text-xs uppercase tracking-wider text-indigo-200 font-semibold">Years</span>
+                </div>
+                <span class="text-2xl text-indigo-300 font-light">:</span>
+                <div class="text-center">
+                  <span id="res-months" class="text-3xl sm:text-5xl font-black text-amber-300">0</span>
+                  <span class="block text-xs uppercase tracking-wider text-indigo-200 font-semibold">Months</span>
+                </div>
+                <span class="text-2xl text-indigo-300 font-light">:</span>
+                <div class="text-center">
+                  <span id="res-days" class="text-3xl sm:text-5xl font-black text-amber-300">0</span>
+                  <span class="block text-xs uppercase tracking-wider text-indigo-200 font-semibold">Days</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Live Ticking Time Counter -->
+            <div class="pt-6">
+              <p class="text-xs font-semibold text-indigo-300 uppercase tracking-wider mb-3">Live Ticking Time Lived</p>
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                <div class="bg-indigo-950/50 p-4 rounded-xl border border-indigo-700/40 text-center">
+                  <div id="live-hours" class="text-xl sm:text-2xl font-bold text-white font-mono">0</div>
+                  <div class="text-xs text-indigo-300 mt-0.5">Total Hours</div>
+                </div>
+                <div class="bg-indigo-950/50 p-4 rounded-xl border border-indigo-700/40 text-center">
+                  <div id="live-minutes" class="text-xl sm:text-2xl font-bold text-white font-mono">0</div>
+                  <div class="text-xs text-indigo-300 mt-0.5">Total Minutes</div>
+                </div>
+                <div class="bg-indigo-950/50 p-4 rounded-xl border border-indigo-700/40 text-center">
+                  <div id="live-seconds" class="text-xl sm:text-2xl font-bold text-amber-400 font-mono">0</div>
+                  <div class="text-xs text-indigo-300 mt-0.5">Live Seconds</div>
+                </div>
+                <div class="bg-indigo-950/50 p-4 rounded-xl border border-indigo-700/40 text-center">
+                  <div id="res-day-born" class="text-base sm:text-lg font-bold text-emerald-400 truncate">Monday</div>
+                  <div class="text-xs text-indigo-300 mt-0.5">Day You Were Born</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Next Birthday & Countdown Section -->
+          <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-md">
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-6">
+              <div>
+                <span class="text-xs font-bold text-indigo-600 uppercase tracking-wide">Upcoming Celebration</span>
+                <h3 class="text-xl sm:text-2xl font-bold text-slate-800">Next Birthday Countdown</h3>
+                <p id="next-bday-date-str" class="text-slate-500 text-sm">Your next birthday will be on ...</p>
+              </div>
+              <div class="bg-indigo-50 text-indigo-700 font-semibold px-4 py-2 rounded-xl text-sm flex items-center gap-2">
+                <i class="fa-solid fa-gift"></i> <span id="next-bday-weekday">Friday</span>
+              </div>
+            </div>
+
+            <!-- Countdown Timer Blocks -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
+              <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 text-center">
+                <span id="cd-days" class="text-3xl sm:text-4xl font-extrabold text-indigo-600">0</span>
+                <span class="block text-xs font-semibold text-slate-500 mt-1 uppercase">Days</span>
+              </div>
+              <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 text-center">
+                <span id="cd-hours" class="text-3xl sm:text-4xl font-extrabold text-indigo-600">0</span>
+                <span class="block text-xs font-semibold text-slate-500 mt-1 uppercase">Hours</span>
+              </div>
+              <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 text-center">
+                <span id="cd-minutes" class="text-3xl sm:text-4xl font-extrabold text-indigo-600">0</span>
+                <span class="block text-xs font-semibold text-slate-500 mt-1 uppercase">Minutes</span>
+              </div>
+              <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 text-center">
+                <span id="cd-seconds" class="text-3xl sm:text-4xl font-extrabold text-amber-600">0</span>
+                <span class="block text-xs font-semibold text-slate-500 mt-1 uppercase">Seconds</span>
+              </div>
+            </div>
+
+            <!-- Progress Bar to Next Birthday -->
+            <div>
+              <div class="flex justify-between text-xs font-semibold text-slate-500 mb-1.5">
+                <span>Year Completion Progress</span>
+                <span id="progress-percent-text">0%</span>
+              </div>
+              <div class="w-full h-3 bg-slate-100 rounded-full overflow-hidden">
+                <div id="progress-bar" class="h-full bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full transition-all duration-500" style="width: 0%"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Zodiac & Horoscope Details Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <!-- Sun Zodiac Card -->
+            <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <div class="flex items-center gap-3">
+                    <div id="zodiac-icon-bg" class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-2xl font-bold">
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div>
+                      <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400">Sun Sign</h4>
+                      <h3 id="zodiac-name" class="text-2xl font-bold text-slate-800">Aries</h3>
+                    </div>
+                  </div>
+                  <span id="zodiac-symbol" class="text-3xl font-serif text-indigo-600">♈</span>
+                </div>
+                <p id="zodiac-dates" class="text-xs text-slate-500 font-medium mb-3">Mar 21 - Apr 19</p>
+                <p id="zodiac-traits" class="text-sm text-slate-600 leading-relaxed">Courageous, determined, confident, enthusiastic, optimistic, honest, and passionate.</p>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-medium text-slate-500">
+                <span>Element: <strong id="zodiac-element" class="text-slate-800">Fire</strong></span>
+                <span>Ruling Planet: <strong id="zodiac-ruler" class="text-slate-800">Mars</strong></span>
+              </div>
+            </div>
+
+            <!-- Chinese Zodiac & Birthstone -->
+            <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-12 h-12 rounded-2xl bg-rose-100 text-rose-700 flex items-center justify-center text-xl">
+                    <i class="fa-solid fa-dragon"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400">Chinese Zodiac & Astrological Profile</h4>
+                    <h3 id="chinese-zodiac" class="text-2xl font-bold text-slate-800">Year of the Dragon</h3>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3 mt-4">
+                  <div class="bg-slate-50 p-3 rounded-xl">
+                    <span class="block text-xs text-slate-400 font-semibold">Birthstone</span>
+                    <span id="birth-stone" class="text-sm font-bold text-slate-800">Diamond</span>
+                  </div>
+                  <div class="bg-slate-50 p-3 rounded-xl">
+                    <span class="block text-xs text-slate-400 font-semibold">Birth Flower</span>
+                    <span id="birth-flower" class="text-sm font-bold text-slate-800">Daisy</span>
+                  </div>
+                  <div class="bg-slate-50 p-3 rounded-xl col-span-2">
+                    <span class="block text-xs text-slate-400 font-semibold">Lucky Birth Color</span>
+                    <span id="birth-color" class="text-sm font-bold text-indigo-600">Royal Blue & Gold</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-500">
+                Chinese Element: <strong id="chinese-element" class="text-slate-800">Metal</strong>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Life Statistics Grid -->
+          <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-md">
+            <h3 class="text-xl sm:text-2xl font-bold text-slate-800 mb-6 flex items-center gap-2">
+              <i class="fa-solid fa-heart-pulse text-rose-500"></i> Amazing Life Statistics
+            </h3>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+              
+              <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                <i class="fa-solid fa-heart text-rose-500 text-lg mb-2"></i>
+                <div id="stat-heartbeats" class="text-xl sm:text-2xl font-bold text-slate-800 font-mono">0</div>
+                <div class="text-xs text-slate-500 font-medium">Heartbeats (~72 bpm)</div>
+              </div>
+
+              <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                <i class="fa-solid fa-bed text-indigo-500 text-lg mb-2"></i>
+                <div id="stat-sleep" class="text-xl sm:text-2xl font-bold text-slate-800 font-mono">0</div>
+                <div class="text-xs text-slate-500 font-medium">Years Slept (~8 hrs/day)</div>
+              </div>
+
+              <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                <i class="fa-solid fa-moon text-amber-500 text-lg mb-2"></i>
+                <div id="stat-moons" class="text-xl sm:text-2xl font-bold text-slate-800 font-mono">0</div>
+                <div class="text-xs text-slate-500 font-medium">Full Moons Witnessed</div>
+              </div>
+
+              <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                <i class="fa-solid fa-wind text-cyan-500 text-lg mb-2"></i>
+                <div id="stat-breath" class="text-xl sm:text-2xl font-bold text-slate-800 font-mono">0</div>
+                <div class="text-xs text-slate-500 font-medium">Breathing Cycles</div>
+              </div>
+
+              <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                <i class="fa-solid fa-earth-americas text-emerald-500 text-lg mb-2"></i>
+                <div id="stat-revolutions" class="text-xl sm:text-2xl font-bold text-slate-800 font-mono">0</div>
+                <div class="text-xs text-slate-500 font-medium">Earth Orbit Revolutions</div>
+              </div>
+
+              <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                <i class="fa-solid fa-calendar-days text-blue-500 text-lg mb-2"></i>
+                <div id="stat-total-days" class="text-xl sm:text-2xl font-bold text-slate-800 font-mono">0</div>
+                <div class="text-xs text-slate-500 font-medium">Total Days Lived</div>
+              </div>
+
+              <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                <i class="fa-solid fa-clock text-purple-500 text-lg mb-2"></i>
+                <div id="stat-total-weeks" class="text-xl sm:text-2xl font-bold text-slate-800 font-mono">0</div>
+                <div class="text-xs text-slate-500 font-medium">Total Weeks Lived</div>
+              </div>
+
+              <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                <i class="fa-solid fa-face-smile text-amber-500 text-lg mb-2"></i>
+                <div id="stat-smiles" class="text-xl sm:text-2xl font-bold text-slate-800 font-mono">0</div>
+                <div class="text-xs text-slate-500 font-medium">Approximate Smiles</div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Planetary Age Matrix -->
+          <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-md">
+            <h3 class="text-xl sm:text-2xl font-bold text-slate-800 mb-2 flex items-center gap-2">
+              <i class="fa-solid fa-globe text-indigo-600"></i> Your Age on Other Planets
+            </h3>
+            <p class="text-slate-500 text-sm mb-6">Due to varying solar orbital speeds, your age in planetary years differs across the solar system!</p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+              
+              <div class="p-4 rounded-2xl bg-amber-50/60 border border-amber-100 text-center">
+                <span class="text-xs font-bold text-amber-800 uppercase tracking-wider block">Mercury</span>
+                <span id="planet-mercury" class="text-2xl font-extrabold text-amber-900 my-1 block">0.0</span>
+                <span class="text-[11px] text-amber-700">88 Earth Days / year</span>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-orange-50/60 border border-orange-100 text-center">
+                <span class="text-xs font-bold text-orange-800 uppercase tracking-wider block">Venus</span>
+                <span id="planet-venus" class="text-2xl font-extrabold text-orange-900 my-1 block">0.0</span>
+                <span class="text-[11px] text-orange-700">225 Earth Days / year</span>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-rose-50/60 border border-rose-100 text-center">
+                <span class="text-xs font-bold text-rose-800 uppercase tracking-wider block">Mars</span>
+                <span id="planet-mars" class="text-2xl font-extrabold text-rose-900 my-1 block">0.0</span>
+                <span class="text-[11px] text-rose-700">687 Earth Days / year</span>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-yellow-50/60 border border-yellow-100 text-center">
+                <span class="text-xs font-bold text-yellow-800 uppercase tracking-wider block">Jupiter</span>
+                <span id="planet-jupiter" class="text-2xl font-extrabold text-yellow-900 my-1 block">0.0</span>
+                <span class="text-[11px] text-yellow-700">11.86 Earth Years / year</span>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-stone-50 border border-stone-200 text-center">
+                <span class="text-xs font-bold text-stone-700 uppercase tracking-wider block">Saturn</span>
+                <span id="planet-saturn" class="text-2xl font-extrabold text-stone-900 my-1 block">0.0</span>
+                <span class="text-[11px] text-stone-600">29.45 Earth Years / year</span>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-cyan-50/60 border border-cyan-100 text-center">
+                <span class="text-xs font-bold text-cyan-800 uppercase tracking-wider block">Uranus</span>
+                <span id="planet-uranus" class="text-2xl font-extrabold text-cyan-900 my-1 block">0.0</span>
+                <span class="text-[11px] text-cyan-700">84.02 Earth Years / year</span>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-blue-50/60 border border-blue-100 text-center">
+                <span class="text-xs font-bold text-blue-800 uppercase tracking-wider block">Neptune</span>
+                <span id="planet-neptune" class="text-2xl font-extrabold text-blue-900 my-1 block">0.0</span>
+                <span class="text-[11px] text-blue-700">164.8 Earth Years / year</span>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-purple-50/60 border border-purple-100 text-center">
+                <span class="text-xs font-bold text-purple-800 uppercase tracking-wider block">Pluto</span>
+                <span id="planet-pluto" class="text-2xl font-extrabold text-purple-900 my-1 block">0.0</span>
+                <span class="text-[11px] text-purple-700">248 Earth Years / year</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Future Milestone Countdown Table -->
+          <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-md">
+            <h3 class="text-xl sm:text-2xl font-bold text-slate-800 mb-4 flex items-center gap-2">
+              <i class="fa-solid fa-flag-checkered text-indigo-600"></i> Next Major Life Milestones
+            </h3>
+
+            <div class="overflow-x-auto">
+              <table class="w-full text-left border-collapse">
+                <thead>
+                  <tr class="border-b border-slate-200 text-xs font-semibold uppercase text-slate-400">
+                    <th class="py-3 px-4">Milestone Age</th>
+                    <th class="py-3 px-4">Exact Date</th>
+                    <th class="py-3 px-4">Day of Week</th>
+                    <th class="py-3 px-4 text-right">Status / Remaining Days</th>
+                  </tr>
+                </thead>
+                <tbody id="milestones-table-body" class="divide-y divide-slate-100 text-sm font-medium text-slate-700">
+                  <!-- JS populated -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Action Bar: Print & Share -->
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-4 bg-slate-100 p-4 sm:p-6 rounded-2xl">
+            <div class="text-slate-600 text-sm font-medium text-center sm:text-left">
+              Want to save or share your birthday stats?
+            </div>
+            <div class="flex items-center gap-3 w-full sm:w-auto">
+              <button type="button" onclick="shareResults()" class="flex-1 sm:flex-none px-5 py-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 hover:text-indigo-600 hover:border-indigo-300 font-semibold shadow-sm transition-colors flex items-center justify-center gap-2 text-sm">
+                <i class="fa-solid fa-share-nodes"></i> Share Link / Stats
+              </button>
+              <button type="button" onclick="window.print()" class="flex-1 sm:flex-none px-5 py-2.5 rounded-xl bg-indigo-600 text-white hover:bg-indigo-700 font-semibold shadow-sm transition-colors flex items-center justify-center gap-2 text-sm">
+                <i class="fa-solid fa-print"></i> Print / Save PDF
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Supporting SEO Content Section 1: How to Use -->
+    <section class="py-16 bg-white border-t border-slate-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">How to Use This Birthday Calculator</h2>
+          <p class="mt-3 text-slate-600 text-base">Calculate your exact age and birthday fun facts in 4 simple steps.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 relative">
+            <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white font-bold flex items-center justify-center mb-4">1</div>
+            <h3 class="text-lg font-bold text-slate-800 mb-2">Select Birth Date</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">Choose your exact Day, Month, and Year of birth using the calendar picker or quick preset buttons.</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 relative">
+            <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white font-bold flex items-center justify-center mb-4">2</div>
+            <h3 class="text-lg font-bold text-slate-800 mb-2">Set "As of" Date</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">Keep the default today's date or select any past or future date to see how old you were or will be.</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 relative">
+            <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white font-bold flex items-center justify-center mb-4">3</div>
+            <h3 class="text-lg font-bold text-slate-800 mb-2">Click Calculate</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">Hit the calculate button to run high-precision calendar calculations instantly in your browser.</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 relative">
+            <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white font-bold flex items-center justify-center mb-4">4</div>
+            <h3 class="text-lg font-bold text-slate-800 mb-2">Explore & Share</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">View live ticking counters, zodiac traits, heartbeats, planetary ages, and share your results.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Supporting SEO Content Section 2: Features Highlight -->
+    <section class="py-16 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">What Does This Birthday Calculator Show?</h2>
+          <p class="mt-3 text-slate-600 text-base">Comprehensive insight into your age, time lived, and astrological identity.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm">
+            <i class="fa-solid fa-clock text-2xl text-indigo-600 mb-3 block"></i>
+            <h3 class="text-lg font-bold text-slate-800 mb-2">Exact Chronological Age</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">Displays your exact age split cleanly into years, months, days, total hours, minutes, and live ticking seconds.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm">
+            <i class="fa-solid fa-hourglass-half text-2xl text-amber-500 mb-3 block"></i>
+            <h3 class="text-lg font-bold text-slate-800 mb-2">Next Birthday Countdown</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">Know precisely how many days, hours, and minutes remain until your next birthday with an interactive progress bar.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm">
+            <i class="fa-solid fa-wand-magic-sparkles text-2xl text-purple-600 mb-3 block"></i>
+            <h3 class="text-lg font-bold text-slate-800 mb-2">Zodiac & Birth Details</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">Discover your Western Sun Sign, Chinese Zodiac animal, birthstone, birth flower, and lucky birth colors.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm">
+            <i class="fa-solid fa-heart-pulse text-2xl text-rose-500 mb-3 block"></i>
+            <h3 class="text-lg font-bold text-slate-800 mb-2">Life Stats & Heartbeats</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">Fun estimated statistics including total heartbeats, breathing cycles, hours slept, and full moons seen.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm">
+            <i class="fa-solid fa-planet-ringed text-2xl text-blue-600 mb-3 block"></i>
+            <h3 class="text-lg font-bold text-slate-800 mb-2">Planetary Ages</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">Ever wondered how old you are on Mars or Jupiter? Compare your age across all 8 planets in our solar system.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm">
+            <i class="fa-solid fa-flag text-2xl text-emerald-600 mb-3 block"></i>
+            <h3 class="text-lg font-bold text-slate-800 mb-2">Milestone Tracking</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">Track upcoming landmark birthdays (e.g., 18, 21, 30, 50, 100) with exact future dates and countdowns.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Supporting SEO Content Section 3: Technical Explanation -->
+    <section class="py-16 bg-white border-t border-slate-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-6 text-center">How Age & Leap Years Are Calculated</h2>
+        
+        <div class="prose prose-slate max-w-none space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed">
+          <p>
+            Calculating age seems straightforward, but precise calendar arithmetic requires handling fluctuating month lengths (28, 29, 30, or 31 days) and leap year anomalies.
+          </p>
+          <p>
+            <strong>1. Exact Year & Month Difference:</strong> We first compute the difference between the target year/month and birth year/month. If the target day is smaller than the birth day, we borrow a month from the preceding target month, adjusting by the exact number of days in that specific month.
+          </p>
+          <p>
+            <strong>2. Leap Year Rule Handling:</strong> A leap year occurs every 4 years, except for end-of-century years unless divisible by 400 (e.g., year 2000 was a leap year, but 1900 was not). For individuals born on <strong>February 29</strong>, our algorithm dynamically adjusts non-leap year birthdays to February 28 or March 1, ensuring day-accurate progression without date skips.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Tools Grid Section -->
+    <section id="related-tools" class="py-16 bg-slate-50 border-t border-slate-200/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-10">
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Explore Related Calculators</h2>
+          <p class="mt-2 text-slate-600 text-sm">Check out our suite of free online calculation tools.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <a href="#" class="p-6 rounded-2xl bg-white border border-slate-200 hover:border-indigo-300 hover:shadow-md transition-all group">
+            <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+              <i class="fa-solid fa-user-clock"></i>
+            </div>
+            <h3 class="text-base font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Age Calculator</h3>
+            <p class="text-xs text-slate-500 mt-1">Calculate exact age between any two specific dates in history.</p>
+          </a>
+
+          <a href="#" class="p-6 rounded-2xl bg-white border border-slate-200 hover:border-indigo-300 hover:shadow-md transition-all group">
+            <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+              <i class="fa-solid fa-calendar-week"></i>
+            </div>
+            <h3 class="text-base font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Date Difference Calculator</h3>
+            <p class="text-xs text-slate-500 mt-1">Find total days, weeks, or business days between two dates.</p>
+          </a>
+
+          <a href="#" class="p-6 rounded-2xl bg-white border border-slate-200 hover:border-indigo-300 hover:shadow-md transition-all group">
+            <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+              <i class="fa-solid fa-sun"></i>
+            </div>
+            <h3 class="text-base font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Zodiac Sign Finder</h3>
+            <p class="text-xs text-slate-500 mt-1">Discover astrology details, elements, and horoscope compatibilities.</p>
+          </a>
+
+          <a href="#" class="p-6 rounded-2xl bg-white border border-slate-200 hover:border-indigo-300 hover:shadow-md transition-all group">
+            <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+              <i class="fa-solid fa-hourglass"></i>
+            </div>
+            <h3 class="text-base font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Time Calculator</h3>
+            <p class="text-xs text-slate-500 mt-1">Add or subtract hours, minutes, and seconds for time sheets.</p>
+          </a>
+
+          <a href="#" class="p-6 rounded-2xl bg-white border border-slate-200 hover:border-indigo-300 hover:shadow-md transition-all group">
+            <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+              <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+            <h3 class="text-base font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">BMI Calculator</h3>
+            <p class="text-xs text-slate-500 mt-1">Calculate Body Mass Index and ideal weight ranges.</p>
+          </a>
+
+          <a href="#" class="p-6 rounded-2xl bg-white border border-slate-200 hover:border-indigo-300 hover:shadow-md transition-all group">
+            <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <h3 class="text-base font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">SIP Calculator</h3>
+            <p class="text-xs text-slate-500 mt-1">Estimate returns on mutual fund Systematic Investment Plans.</p>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section class="py-16 bg-white border-t border-slate-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-12">
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Frequently Asked Questions (FAQ)</h2>
+          <p class="mt-2 text-slate-600 text-sm">Everything you need to know about calculating your birthday and exact age.</p>
+        </div>
+
+        <!-- Accordions List -->
+        <div class="space-y-4" id="faq-accordion-container">
+          
+          <div class="border border-slate-200 rounded-2xl overflow-hidden">
+            <button type="button" onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50 transition-colors focus:outline-none">
+              <span>How do I calculate my exact age?</span>
+              <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+            </button>
+            <div class="accordion-content px-6 text-slate-600 text-sm leading-relaxed">
+              <div class="py-4 border-t border-slate-100">
+                Simply select your date of birth in the input field above and click "Calculate Birthday Stats". The tool immediately displays your age breakdown in years, months, days, hours, and live seconds.
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-slate-200 rounded-2xl overflow-hidden">
+            <button type="button" onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50 transition-colors focus:outline-none">
+              <span>What if I was born on February 29 during a leap year?</span>
+              <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+            </button>
+            <div class="accordion-content px-6 text-slate-600 text-sm leading-relaxed">
+              <div class="py-4 border-t border-slate-100">
+                Our calculator accurately factors in leap years. For non-leap years, February 29 birthdays are processed cleanly as completing on February 28 / March 1 depending on calendar conventions, keeping day counts 100% precise.
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-slate-200 rounded-2xl overflow-hidden">
+            <button type="button" onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50 transition-colors focus:outline-none">
+              <span>How many days until my next birthday?</span>
+              <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+            </button>
+            <div class="accordion-content px-6 text-slate-600 text-sm leading-relaxed">
+              <div class="py-4 border-t border-slate-100">
+                The results dashboard features a real-time countdown timer that ticks down the exact days, hours, minutes, and seconds left until your next birthday.
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-slate-200 rounded-2xl overflow-hidden">
+            <button type="button" onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50 transition-colors focus:outline-none">
+              <span>What is my zodiac sign based on my birthday?</span>
+              <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+            </button>
+            <div class="accordion-content px-6 text-slate-600 text-sm leading-relaxed">
+              <div class="py-4 border-t border-slate-100">
+                When you input your date of birth, our algorithm automatically maps your day and month to Western Astrology Sun signs (Aries, Taurus, Gemini, etc.) and your birth year to the Chinese Lunar Zodiac animal cycle.
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-slate-200 rounded-2xl overflow-hidden">
+            <button type="button" onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50 transition-colors focus:outline-none">
+              <span>Can I check my age on a future or past date?</span>
+              <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+            </button>
+            <div class="accordion-content px-6 text-slate-600 text-sm leading-relaxed">
+              <div class="py-4 border-t border-slate-100">
+                Yes! Use the "As of Date" field to select any date in the past or future to calculate how old you were or will be on that specific day.
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-slate-200 rounded-2xl overflow-hidden">
+            <button type="button" onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50 transition-colors focus:outline-none">
+              <span>What is the difference between an age calculator and a birthday calculator?</span>
+              <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+            </button>
+            <div class="accordion-content px-6 text-slate-600 text-sm leading-relaxed">
+              <div class="py-4 border-t border-slate-100">
+                A basic age calculator provides numeric years/days, while our Birthday Calculator provides a complete fun-filled profile including zodiac traits, planetary ages, total heartbeats, and next birthday countdowns.
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-slate-200 rounded-2xl overflow-hidden">
+            <button type="button" onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50 transition-colors focus:outline-none">
+              <span>How accurate is this birthday calculator?</span>
+              <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+            </button>
+            <div class="accordion-content px-6 text-slate-600 text-sm leading-relaxed">
+              <div class="py-4 border-t border-slate-100">
+                It is 100% accurate. The logic implements standard Gregorian calendar algorithms, accounting for varying month lengths and leap years.
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-slate-200 rounded-2xl overflow-hidden">
+            <button type="button" onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50 transition-colors focus:outline-none">
+              <span>What day of the week was I born?</span>
+              <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+            </button>
+            <div class="accordion-content px-6 text-slate-600 text-sm leading-relaxed">
+              <div class="py-4 border-t border-slate-100">
+                The results card highlights the exact weekday (e.g. Sunday, Wednesday) on which your birthday fell when you were born.
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-slate-200 rounded-2xl overflow-hidden">
+            <button type="button" onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50 transition-colors focus:outline-none">
+              <span>How does planetary age calculation work?</span>
+              <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+            </button>
+            <div class="accordion-content px-6 text-slate-600 text-sm leading-relaxed">
+              <div class="py-4 border-t border-slate-100">
+                Planetary ages are computed by converting your total Earth days lived divided by the orbital solar revolution time of each planet (e.g. Mars orbital period = 687 Earth days).
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-slate-200 rounded-2xl overflow-hidden">
+            <button type="button" onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50 transition-colors focus:outline-none">
+              <span>Is my birth date data stored on your server?</span>
+              <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+            </button>
+            <div class="accordion-content px-6 text-slate-600 text-sm leading-relaxed">
+              <div class="py-4 border-t border-slate-100">
+                No. All computations occur entirely inside your browser using client-side JavaScript. Your personal information remains 100% private.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Multi-column Footer -->
+<footer class="bg-slate-900 text-slate-400 text-sm border-t border-slate-800 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <!-- Col 1: About -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2 text-white font-bold text-lg">
+            <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
+              <i class="fa-solid fa-calculator"></i>
+            </div>
+            <span>Calculator<span class="text-indigo-400">-Pro</span></span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Calculator Pro provides free, fast, and clinically accurate online tools for health, financial, mathematical, and everyday conversion needs.
+          </p>
+          <div class="text-xs text-slate-500">
+            &copy; <span id="current-year">2026</span> Calculator Pro. All rights reserved.
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Quick Links</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Unit Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Length Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Weight Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Temperature Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Volume & Area Converter</a></li>
+          </ul>
+        </div>
+        <!-- Column 3: Tools & Resources -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Calculators</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="age-calculator.html" class="hover:text-white transition-colors">Age Calculator</a></li>
+            <li><a href="time-calculator.html" class="hover:text-white transition-colors">Time Calculator</a></li>
+            <li><a href="sip-calculator.html" class="hover:text-white transition-colors">SIP Financial Calculator</a></li>
+            <li><a href="bmi-calculator.html" class="hover:text-white transition-colors">BMI Health Calculator</a></li>
+            <li><a href="percentage-calculator.html" class="hover:text-white transition-colors">Percentage Calculator</a></li>
+          </ul>
+        </div>
+
+         <!-- Column 4: Legal & Contact -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Legal & Info</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Editorial Guidelines</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  <!-- Toast Notification Box -->
+  <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none bg-slate-900 text-white text-sm px-4 py-3 rounded-xl shadow-2xl flex items-center gap-3">
+    <i class="fa-solid fa-circle-check text-emerald-400 text-base"></i>
+    <span id="toast-msg">Copied to clipboard!</span>
+  </div>
+
+  <!-- Vanilla JavaScript Logic -->
+  <script>
+	  <!-- Inline JavaScript for Toggle -->
+      
+        document.addEventListener('DOMContentLoaded', () => {
+          const btn = document.getElementById('calc-mobile-menu-btn');
+          const menu = document.getElementById('calc-mobile-menu');
+          const menuIcon = document.getElementById('calc-menu-icon');
+          const closeIcon = document.getElementById('calc-close-icon');
+
+          if (btn && menu) {
+            btn.addEventListener('click', () => {
+              const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+              btn.setAttribute('aria-expanded', !isExpanded);
+              menu.classList.toggle('hidden');
+              menuIcon.classList.toggle('hidden');
+              closeIcon.classList.toggle('hidden');
+            });
+          }
+        });
+	  
+    // Global interval variable for live ticking age
+    let liveTimerInterval = null;
+    let currentBirthDate = null;
+    let currentAsOfDate = null;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Set default "As of Date" to today's date
+      const today = new Date();
+      const todayStr = formatDateForInput(today);
+      document.getElementById('as-of-date').value = todayStr;
+
+      // Set default Date of Birth (25 years ago default for preview)
+      const defaultDob = new Date(today.getFullYear() - 25, today.getMonth(), today.getDate());
+      document.getElementById('dob').value = formatDateForInput(defaultDob);
+
+      // Perform initial calculation
+      calculateBirthday();
+    });
+
+    // Helper: Format Date object to YYYY-MM-DD
+    function formatDateForInput(dateObj) {
+      const year = dateObj.getFullYear();
+      const month = String(dateObj.getMonth() + 1).padStart(2, '0');
+      const day = String(dateObj.getDate()).padStart(2, '0');
+      return `${year}-${month}-${day}`;
+    }
+
+    // Quick Preset Setter
+    function setPresetAge(yearsAgo) {
+      const today = new Date();
+      const presetDate = new Date(today.getFullYear() - yearsAgo, today.getMonth(), today.getDate());
+      document.getElementById('dob').value = formatDateForInput(presetDate);
+      calculateBirthday();
+    }
+
+    // Leap Year Checker
+    function isLeapYear(year) {
+      return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+    }
+
+    // Get days in a specific month of a specific year
+    function getDaysInMonth(year, month) {
+      return new Date(year, month + 1, 0).getDate();
+    }
+
+    // Main Calculation Function
+    function calculateBirthday() {
+      const dobInput = document.getElementById('dob').value;
+      const asOfInput = document.getElementById('as-of-date').value;
+      const timeInput = document.getElementById('birth-time').value || "00:00";
+
+      const errorAlert = document.getElementById('error-alert');
+
+      if (!dobInput) {
+        showError("Please select your date of birth.");
+        return;
+      }
+
+      const [bYear, bMonth, bDay] = dobInput.split('-').map(Number);
+      const [tHours, tMinutes] = timeInput.split(':').map(Number);
+
+      const birthDate = new Date(bYear, bMonth - 1, bDay, tHours, tMinutes, 0);
+
+      let asOfDate;
+      if (asOfInput) {
+        const [aYear, aMonth, aDay] = asOfInput.split('-').map(Number);
+        asOfDate = new Date(aYear, aMonth - 1, aDay, 23, 59, 59);
+      } else {
+        asOfDate = new Date();
+      }
+
+      if (birthDate > asOfDate) {
+        showError("Date of Birth cannot be in the future relative to the 'As of Date'.");
+        return;
+      }
+
+      // Hide errors
+      errorAlert.classList.add('hidden');
+
+      currentBirthDate = birthDate;
+      currentAsOfDate = asOfDate;
+
+      // Reveal dashboard
+      const dashboard = document.getElementById('results-dashboard');
+      dashboard.classList.remove('hidden');
+
+      // 1. Calculate Exact Years, Months, Days
+      let years = asOfDate.getFullYear() - birthDate.getFullYear();
+      let months = asOfDate.getMonth() - birthDate.getMonth();
+      let days = asOfDate.getDate() - birthDate.getDate();
+
+      if (days < 0) {
+        months--;
+        const prevMonthDays = getDaysInMonth(asOfDate.getFullYear(), asOfDate.getMonth() - 1);
+        days += prevMonthDays;
+      }
+
+      if (months < 0) {
+        years--;
+        months += 12;
+      }
+
+      // Render Hero Age
+      document.getElementById('res-years').textContent = years;
+      document.getElementById('res-months').textContent = months;
+      document.getElementById('res-days').textContent = days;
+
+      // Summary Header string
+      const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      const dayBornStr = daysOfWeek[birthDate.getDay()];
+      const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+      document.getElementById('res-birth-summary').textContent = `Born on ${dayBornStr}, ${monthNames[birthDate.getMonth()]} ${birthDate.getDate()}, ${birthDate.getFullYear()}`;
+      document.getElementById('res-day-born').textContent = dayBornStr;
+
+      // 2. Setup Ticking Real-Time Counter & Stats
+      if (liveTimerInterval) clearInterval(liveTimerInterval);
+      updateLiveStats();
+      liveTimerInterval = setInterval(updateLiveStats, 1000);
+
+      // 3. Next Birthday Countdown
+      calculateNextBirthday(birthDate, asOfDate);
+
+      // 4. Zodiac & Astrology Calculations
+      calculateZodiac(bMonth, bDay, bYear);
+
+      // 5. Planetary Ages
+      calculatePlanetaryAges(birthDate, asOfDate);
+
+      // 6. Milestones
+      calculateMilestones(birthDate, asOfDate);
+    }
+
+    function showError(msg) {
+      const errorAlert = document.getElementById('error-alert');
+      document.getElementById('error-message').textContent = msg;
+      errorAlert.classList.remove('hidden');
+      document.getElementById('results-dashboard').classList.add('hidden');
+    }
+
+    // Live Stats Updater
+    function updateLiveStats() {
+      if (!currentBirthDate) return;
+
+      const now = new Date();
+      const diffMs = now - currentBirthDate;
+
+      if (diffMs < 0) return;
+
+      const totalSecs = Math.floor(diffMs / 1000);
+      const totalMins = Math.floor(totalSecs / 60);
+      const totalHours = Math.floor(totalMins / 60);
+      const totalDays = Math.floor(totalHours / 24);
+      const totalWeeks = Math.floor(totalDays / 7);
+
+      document.getElementById('live-hours').textContent = totalHours.toLocaleString();
+      document.getElementById('live-minutes').textContent = totalMins.toLocaleString();
+      document.getElementById('live-seconds').textContent = totalSecs.toLocaleString();
+
+      // Fun Life Stats
+      const heartbeats = Math.floor(totalMins * 72); // avg 72 bpm
+      const sleepYears = (totalDays * (8 / 24) / 365.25).toFixed(1);
+      const moons = Math.floor(totalDays / 29.53); // lunar month ~29.53 days
+      const breaths = Math.floor(totalMins * 16); // avg 16 breaths per min
+      const orbits = (totalDays / 365.2425).toFixed(2);
+      const smiles = Math.floor(totalDays * 20); // avg 20 smiles a day
+
+      document.getElementById('stat-heartbeats').textContent = heartbeats.toLocaleString();
+      document.getElementById('stat-sleep').textContent = sleepYears;
+      document.getElementById('stat-moons').textContent = moons.toLocaleString();
+      document.getElementById('stat-breath').textContent = breaths.toLocaleString();
+      document.getElementById('stat-revolutions').textContent = orbits;
+      document.getElementById('stat-total-days').textContent = totalDays.toLocaleString();
+      document.getElementById('stat-total-weeks').textContent = totalWeeks.toLocaleString();
+      document.getElementById('stat-smiles').textContent = smiles.toLocaleString();
+    }
+
+    // Next Birthday Calculator
+    function calculateNextBirthday(birthDate, asOfDate) {
+      const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+      let nextBdayYear = asOfDate.getFullYear();
+      let nextBday = new Date(nextBdayYear, birthDate.getMonth(), birthDate.getDate(), birthDate.getHours(), birthDate.getMinutes());
+
+      // If already passed this year, move to next year
+      if (nextBday < asOfDate) {
+        nextBdayYear++;
+        nextBday = new Date(nextBdayYear, birthDate.getMonth(), birthDate.getDate(), birthDate.getHours(), birthDate.getMinutes());
+      }
+
+      const diffMs = nextBday - asOfDate;
+      const cdDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+      const cdHours = Math.floor((diffMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const cdMins = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
+      const cdSecs = Math.floor((diffMs % (1000 * 60)) / 1000);
+
+      document.getElementById('cd-days').textContent = cdDays;
+      document.getElementById('cd-hours').textContent = cdHours;
+      document.getElementById('cd-minutes').textContent = cdMins;
+      document.getElementById('cd-seconds').textContent = cdSecs;
+
+      document.getElementById('next-bday-date-str').textContent = `Your next birthday will be on ${monthNames[nextBday.getMonth()]} ${nextBday.getDate()}, ${nextBdayYear}`;
+      document.getElementById('next-bday-weekday').textContent = daysOfWeek[nextBday.getDay()];
+
+      // Year Completion Progress
+      const lastBday = new Date(nextBdayYear - 1, birthDate.getMonth(), birthDate.getDate());
+      const totalYearMs = nextBday - lastBday;
+      const elapsedMs = asOfDate - lastBday;
+      let percent = Math.min(100, Math.max(0, Math.floor((elapsedMs / totalYearMs) * 100)));
+      
+      document.getElementById('progress-bar').style.width = `${percent}%`;
+      document.getElementById('progress-percent-text').textContent = `${percent}% of current age year completed`;
+    }
+
+    // Zodiac & Astrological Details
+    function calculateZodiac(month, day, year) {
+      const zodiacs = [
+        { name: "Capricorn", symbol: "♑", dates: "Dec 22 - Jan 19", element: "Earth", ruler: "Saturn", traits: "Disciplined, responsible, ambitious, practical, and cautious.", icon: "fa-mountain" },
+        { name: "Aquarius", symbol: "♒", dates: "Jan 20 - Feb 18", element: "Air", ruler: "Uranus", traits: "Progressive, original, independent, humanitarian, and intellectual.", icon: "fa-wind" },
+        { name: "Pisces", symbol: "♓", dates: "Feb 19 - Mar 20", element: "Water", ruler: "Neptune", traits: "Compassionate, artistic, intuitive, gentle, wise, and musical.", icon: "fa-fish" },
+        { name: "Aries", symbol: "♈", dates: "Mar 21 - Apr 19", element: "Fire", ruler: "Mars", traits: "Courageous, determined, confident, enthusiastic, and passionate.", icon: "fa-fire" },
+        { name: "Taurus", symbol: "♉", dates: "Apr 20 - May 20", element: "Earth", ruler: "Venus", traits: "Reliable, patient, practical, devoted, responsible, and stable.", icon: "fa-gem" },
+        { name: "Gemini", symbol: "♊", dates: "May 21 - Jun 20", element: "Air", ruler: "Mercury", traits: "Gentle, affectionate, curious, adaptable, and quick learner.", icon: "fa-masks-theater" },
+        { name: "Cancer", symbol: "♋", dates: "Jun 21 - Jul 22", element: "Water", ruler: "Moon", traits: "Tenacious, highly imaginative, loyal, sympathetic, and persuasive.", icon: "fa-moon" },
+        { name: "Leo", symbol: "♌", dates: "Jul 23 - Aug 22", element: "Fire", ruler: "Sun", traits: "Creative, passionate, generous, warm-hearted, cheerful, and humorous.", icon: "fa-sun" },
+        { name: "Virgo", symbol: "♍", dates: "Aug 23 - Sep 22", element: "Earth", ruler: "Mercury", traits: "Loyal, analytical, kind, hardworking, practical, and methodical.", icon: "fa-leaf" },
+        { name: "Libra", symbol: "♎", dates: "Sep 23 - Oct 22", element: "Air", ruler: "Venus", traits: "Cooperative, diplomatic, gracious, fair-minded, and social.", icon: "fa-scale-balanced" },
+        { name: "Scorpio", symbol: "♏", dates: "Oct 23 - Nov 21", element: "Water", ruler: "Pluto", traits: "Resourceful, brave, passionate, stubborn, and a true friend.", icon: "fa-shield-halved" },
+        { name: "Sagittarius", symbol: "♐", dates: "Nov 22 - Dec 21", element: "Fire", ruler: "Jupiter", traits: "Generous, idealistic, great sense of humor, enthusiastic.", icon: "fa-compass" }
+      ];
+
+      let zIndex = 0;
+      if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) zIndex = 0;
+      else if ((month === 1 && day >= 20) || (month === 2 && day <= 18)) zIndex = 1;
+      else if ((month === 2 && day >= 19) || (month === 3 && day <= 20)) zIndex = 2;
+      else if ((month === 3 && day >= 21) || (month === 4 && day <= 19)) zIndex = 3;
+      else if ((month === 4 && day >= 20) || (month === 5 && day <= 20)) zIndex = 4;
+      else if ((month === 5 && day >= 21) || (month === 6 && day <= 20)) zIndex = 5;
+      else if ((month === 6 && day >= 21) || (month === 7 && day <= 22)) zIndex = 6;
+      else if ((month === 7 && day >= 23) || (month === 8 && day <= 22)) zIndex = 7;
+      else if ((month === 8 && day >= 23) || (month === 9 && day <= 22)) zIndex = 8;
+      else if ((month === 9 && day >= 23) || (month === 10 && day <= 22)) zIndex = 9;
+      else if ((month === 10 && day >= 23) || (month === 11 && day <= 21)) zIndex = 10;
+      else zIndex = 11;
+
+      const z = zodiacs[zIndex];
+      document.getElementById('zodiac-name').textContent = z.name;
+      document.getElementById('zodiac-symbol').textContent = z.symbol;
+      document.getElementById('zodiac-dates').textContent = z.dates;
+      document.getElementById('zodiac-traits').textContent = z.traits;
+      document.getElementById('zodiac-element').textContent = z.element;
+      document.getElementById('zodiac-ruler').textContent = z.ruler;
+
+      // Birthstones & Flowers by month
+      const birthstones = ["Garnet", "Amethyst", "Aquamarine", "Diamond", "Emerald", "Pearl", "Ruby", "Peridot", "Sapphire", "Opal", "Topaz", "Turquoise"];
+      const birthFlowers = ["Carnation", "Violet", "Daffodil", "Daisy", "Lily of the Valley", "Rose", "Larkspur", "Gladiolus", "Aster", "Marigold", "Chrysanthemum", "Holly"];
+      const birthColors = ["Deep Red", "Purple", "Sky Blue", "Bright White", "Emerald Green", "Cream", "Vibrant Red", "Lime Green", "Deep Blue", "Pink", "Yellow", "Turquoise"];
+
+      document.getElementById('birth-stone').textContent = birthstones[month - 1];
+      document.getElementById('birth-flower').textContent = birthFlowers[month - 1];
+      document.getElementById('birth-color').textContent = birthColors[month - 1];
+
+      // Chinese Zodiac Animal
+      const chineseAnimals = ["Rat", "Ox", "Tiger", "Rabbit", "Dragon", "Snake", "Horse", "Goat", "Monkey", "Rooster", "Dog", "Pig"];
+      const chineseElements = ["Metal", "Water", "Wood", "Fire", "Earth"];
+      
+      const animalIndex = (year - 4) % 12;
+      const elementIndex = Math.floor(((year - 4) % 10) / 2);
+
+      document.getElementById('chinese-zodiac').textContent = `Year of the ${chineseAnimals[animalIndex]}`;
+      document.getElementById('chinese-element').textContent = chineseElements[elementIndex];
+    }
+
+    // Planetary Ages Calculation
+    function calculatePlanetaryAges(birthDate, asOfDate) {
+      const diffMs = asOfDate - birthDate;
+      const totalEarthDays = diffMs / (1000 * 60 * 60 * 24);
+
+      document.getElementById('planet-mercury').textContent = (totalEarthDays / 87.97).toFixed(1);
+      document.getElementById('planet-venus').textContent = (totalEarthDays / 224.7).toFixed(1);
+      document.getElementById('planet-mars').textContent = (totalEarthDays / 686.98).toFixed(1);
+      document.getElementById('planet-jupiter').textContent = (totalEarthDays / (11.862 * 365.25)).toFixed(2);
+      document.getElementById('planet-saturn').textContent = (totalEarthDays / (29.447 * 365.25)).toFixed(2);
+      document.getElementById('planet-uranus').textContent = (totalEarthDays / (84.017 * 365.25)).toFixed(2);
+      document.getElementById('planet-neptune').textContent = (totalEarthDays / (164.79 * 365.25)).toFixed(2);
+      document.getElementById('planet-pluto').textContent = (totalEarthDays / (248.00 * 365.25)).toFixed(2);
+    }
+
+    // Milestones Calculation Table
+    function calculateMilestones(birthDate, asOfDate) {
+      const milestoneAges = [18, 21, 25, 30, 40, 50, 60, 75, 100];
+      const tbody = document.getElementById('milestones-table-body');
+      tbody.innerHTML = '';
+
+      const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+      milestoneAges.forEach(age => {
+        const milestoneDate = new Date(birthDate.getFullYear() + age, birthDate.getMonth(), birthDate.getDate());
+        const isPassed = milestoneDate < asOfDate;
+        
+        const tr = document.createElement('tr');
+        tr.className = isPassed ? "bg-slate-50/50 text-slate-400" : "hover:bg-indigo-50/30 transition-colors";
+
+        const formattedDate = `${monthNames[milestoneDate.getMonth()]} ${milestoneDate.getDate()}, ${milestoneDate.getFullYear()}`;
+        const weekdayStr = daysOfWeek[milestoneDate.getDay()];
+
+        let statusHtml = '';
+        if (isPassed) {
+          statusHtml = `<span class="inline-flex items-center gap-1 text-xs font-semibold text-slate-400 bg-slate-100 px-2.5 py-1 rounded-md"><i class="fa-solid fa-check"></i> Passed</span>`;
+        } else {
+          const diffMs = milestoneDate - asOfDate;
+          const remainingDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+          statusHtml = `<span class="inline-flex items-center gap-1 text-xs font-bold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-md"><i class="fa-solid fa-hourglass-start"></i> In ${remainingDays.toLocaleString()} days</span>`;
+        }
+
+        tr.innerHTML = `
+          <td class="py-3.5 px-4 font-bold text-slate-800">${age}th Birthday</td>
+          <td class="py-3.5 px-4">${formattedDate}</td>
+          <td class="py-3.5 px-4">${weekdayStr}</td>
+          <td class="py-3.5 px-4 text-right">${statusHtml}</td>
+        `;
+
+        tbody.appendChild(tr);
+      });
+    }
+
+    // Reset Form
+    function resetCalculator() {
+      const today = new Date();
+      document.getElementById('as-of-date').value = formatDateForInput(today);
+      const defaultDob = new Date(today.getFullYear() - 25, today.getMonth(), today.getDate());
+      document.getElementById('dob').value = formatDateForInput(defaultDob);
+      document.getElementById('birth-time').value = "00:00";
+      document.getElementById('error-alert').classList.add('hidden');
+      calculateBirthday();
+      showToast("Form reset to default values.");
+    }
+
+    // Accordion Toggle
+    function toggleFaq(btn) {
+      const content = btn.nextElementSibling;
+      const icon = btn.querySelector('.fa-chevron-down');
+      
+      const isOpen = content.classList.contains('open');
+
+      // Close all accordions
+      document.querySelectorAll('.accordion-content').forEach(el => el.classList.remove('open'));
+      document.querySelectorAll('.fa-chevron-down').forEach(el => el.classList.remove('rotate-180'));
+
+      if (!isOpen) {
+        content.classList.add('open');
+        icon.classList.add('rotate-180');
+      }
+    }
+
+    // Copy / Share Results
+    function shareResults() {
+      const years = document.getElementById('res-years').textContent;
+      const months = document.getElementById('res-months').textContent;
+      const days = document.getElementById('res-days').textContent;
+      const zodiac = document.getElementById('zodiac-name').textContent;
+
+      const shareText = `I am ${years} years, ${months} months, and ${days} days old! Zodiac: ${zodiac}. Check your exact age & birthday stats here: ${window.location.href}`;
+
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(shareText).then(() => {
+          showToast("Results copied to clipboard!");
+        });
+      } else {
+        const input = document.createElement('input');
+        input.value = shareText;
+        document.body.appendChild(input);
+        input.select();
+        document.execCommand('copy');
+        document.body.removeChild(input);
+        showToast("Results copied to clipboard!");
+      }
+    }
+
+    // Toast Popup Helper
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toast-msg').textContent = msg;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 3000);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compound Interest Calculator – Free Online Investment Calculator | Calculator Pro</title>
+    <meta name="description" content="Calculate your investment growth with our free online compound interest calculator. Choose daily, monthly, or yearly compounding. View schedules & charts instantly!">
+    <meta name="keywords" content="compound interest calculator, compound interest calculator online, free compound interest calculator, compound interest calculator with monthly contributions, compound interest calculator with contributions, investment calculator, compound interest formula, calculate compound interest, compound interest calculator monthly, daily compound interest calculator, yearly compound interest calculator, savings calculator, investment growth calculator, compound interest calculator India, compound interest calculator with inflation, future value calculator">
+    <meta name="author" content="Calculator Pro">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Compound Interest Calculator – Free Online Investment Calculator | Calculator Pro">
+    <meta property="og:description" content="Calculate your investment growth with our free online compound interest calculator. Choose daily, monthly, or yearly compounding. View schedules & charts instantly!">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Compound Interest Calculator – Calculator Pro">
+    <meta name="twitter:description" content="Calculate your investment growth with our free online compound interest calculator.">
+
+    <!-- Preconnect for Performance -->
+    
+    
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+    <!-- Tailwind CSS CDN -->
+    
+
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- Structured Data (FAQ Schema) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is compound interest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Compound interest is the interest calculated on the initial principal and also on the accumulated interest from previous periods."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between simple and compound interest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Simple interest is calculated only on the original principal amount, whereas compound interest calculates returns on both principal and interest."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is compound interest better than simple interest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For investors, compound interest is vastly superior because it generates accelerating wealth over long periods due to compounding."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often can interest compound?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Interest can compound at various frequencies, including daily, monthly, quarterly, semi-annually, or annually."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does compound interest work with monthly contributions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Regular monthly contributions drastically accelerate compound growth since each new contribution starts earning interest immediately."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if I increase my monthly contribution?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Increasing monthly deposits exponentially expands your future balance because both principal and interest snowball faster over time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does compound interest guarantee investment returns?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, compound interest is a mathematical formula. Actual market investments fluctuate in return rates and carry risk."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this compound interest calculator Pro free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Calculator Pro's Compound Interest Calculator is 100% free with no registration or fees required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I calculate compound interest monthly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, simply select 'Monthly' in the Compounding Frequency dropdown to see precise monthly compounding growth."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- A. Site Branding & Navigation -->
+    <header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      
+      <!-- Brand Logo & Name -->
+      <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
+        <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
+          <i class="fa-solid fa-calculator text-lg"></i>
+        </div>
+        <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
+          Calculator<span class="text-indigo-600">-Pro</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-1" aria-label="Main Navigation">
+        
+        <!-- Category 1: Age -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Age
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="age-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="birthday-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Birthday Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="age-difference-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Diffrence Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Time -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Time & Date
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="time-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Time Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="date-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Date Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="work-days-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Work Days Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="time-zone-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">TimeZone Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Converter -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Converter
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="unit-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Unit Converter</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="cgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">CGPA to Percentage</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to Percentage</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sgpa-to-cgpa-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to CGPA</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="marks-to-percentage-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Marks to Percentage</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4: Financial -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Financial
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sip-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SIP Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="emi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">EMI Loan Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="Compound-Interest-Calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Compound Interest Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 5: Health -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Health
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute right-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="bmi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">BMI Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="waist-to-hip-ratio-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">WHR Calculator</a>
+            </div>
+          </div>
+        </div>
+		  
+		 
+
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex md:hidden">
+        <button id="calc-mobile-menu-btn" type="button" class="p-2.5 rounded-xl text-slate-600 hover:text-indigo-600 hover:bg-slate-100/80 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors duration-200" aria-controls="calc-mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+          <svg id="calc-menu-icon" class="w-6 h-6 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="calc-close-icon" class="w-6 h-6 hidden transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile Full-Width Menu Container -->
+  <div id="calc-mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white shadow-xl transition-all duration-200 ease-in-out">
+    <div class="px-4 pt-3 pb-6 space-y-4">
+      
+      <!-- Mobile Category: Age -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Age</div>
+        <a href="age-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Calculator</a>
+		  <a href="birthday-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Birthday Calculator</a>
+		  <a href="age-difference-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Diffrence Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Time -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Time & Date</div>
+        <a href="time-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Time Calculator</a>
+		  <a href="date-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Date Calculator</a>
+		  <a href="work-days-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Work Days Calculator</a>
+		  <a href="time-zone-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">TimeZone Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Converter -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Converter</div>
+        <a href="javascript:void(0)" onclick="openCalculator('length')" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Unit Converter</a>
+		  <a href="cgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">CGPA to Percentage</a>
+		  <a href="sgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to Percentage</a>
+		  <a href="sgpa-to-cgpa-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to CGPA</a>
+		  <a href="marks-to-percentage-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Marks to Percentage</a>
+      </div>
+
+      <!-- Mobile Category: Financial -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Financial</div>
+        <a href="sip-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SIP Calculator</a>
+		  <a href="emi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">EMI Loan Calculator</a>
+		  <a href="Compound-Interest-Calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Compound Interest Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Health -->
+      <div>
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Health</div>
+        <a href="bmi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">BMI Calculator</a>
+		  <a href="waist-to-hip-ratio-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">WHR Calculator</a>
+      </div>
+		
+		
+
+    </div>
+  </div>
+</header>
+
+
+    <!-- B. Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-b from-indigo-50/70 via-white to-slate-50 pt-12 pb-8 border-b border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-indigo-100/80 text-indigo-700 mb-4 border border-indigo-200">
+                <i class="fa-solid fa-bolt text-indigo-500"></i> Modern Wealth Building Tool
+            </span>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight max-w-4xl mx-auto">
+                Free Compound Interest Calculator
+            </h1>
+            <p class="mt-4 text-base sm:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                Calculate compound interest online and see how your money can grow over time. Enter your initial investment, interest rate, investment period, compounding frequency, and additional contributions to estimate your future balance.
+            </p>
+        </div>
+        <!-- Decorative subtle grid background -->
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none"></div>
+    </section>
+
+    <!-- C. Calculator Main Section -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- Input Panel (Left Column) -->
+            <div class="lg:col-span-5 bg-white rounded-2xl p-6 sm:p-8 shadow-xl border border-slate-100 relative">
+                <div class="flex items-center justify-between pb-5 border-b border-slate-100 mb-6">
+                    <h2 class="text-lg font-bold text-slate-800 flex items-center gap-2">
+                        <i class="fa-solid fa-sliders text-indigo-600"></i> Investment Parameters
+                    </h2>
+                    <!-- Currency Toggle -->
+                    <div class="inline-flex rounded-lg bg-slate-100 p-1 border border-slate-200 text-xs font-semibold">
+                        <button id="curr-usd" onclick="setCurrency('USD')" class="px-2.5 py-1 rounded-md bg-white shadow-sm text-indigo-600 font-bold transition-all">$ USD</button>
+                        <button id="curr-inr" onclick="setCurrency('INR')" class="px-2.5 py-1 rounded-md text-slate-600 hover:text-slate-900 transition-all">₹ INR</button>
+                    </div>
+                </div>
+
+                <form id="compound-form" onsubmit="return false;" class="space-y-5">
+                    
+                    <!-- Initial Investment -->
+                    <div>
+                        <div class="flex justify-between items-center mb-1.5">
+                            <label for="initial-investment" class="block text-xs font-semibold uppercase tracking-wider text-slate-600">Initial Investment</label>
+                            <span class="text-xs text-indigo-600 font-bold" id="initial-val-display">$10,000</span>
+                        </div>
+                        <div class="relative rounded-xl shadow-sm">
+                            <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400 font-semibold currency-symbol">$</div>
+                            <input type="number" id="initial-investment" value="10000" min="0" step="100" class="block w-full pl-9 pr-4 py-3 bg-slate-50/50 border border-slate-200 rounded-xl text-slate-800 font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition-all text-sm" placeholder="10000">
+                        </div>
+                    </div>
+
+                    <!-- Regular Contribution -->
+                    <div>
+                        <div class="flex justify-between items-center mb-1.5">
+                            <label for="contribution-amount" class="block text-xs font-semibold uppercase tracking-wider text-slate-600">Regular Contribution</label>
+                            <span class="text-xs text-indigo-600 font-bold" id="contrib-val-display">$200 / month</span>
+                        </div>
+                        <div class="grid grid-cols-12 gap-2">
+                            <div class="col-span-7 relative rounded-xl shadow-sm">
+                                <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400 font-semibold currency-symbol">$</div>
+                                <input type="number" id="contribution-amount" value="200" min="0" step="10" class="block w-full pl-9 pr-3 py-3 bg-slate-50/50 border border-slate-200 rounded-xl text-slate-800 font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition-all text-sm" placeholder="200">
+                            </div>
+                            <div class="col-span-5">
+                                <select id="contribution-frequency" class="block w-full py-3 px-3 bg-slate-50/50 border border-slate-200 rounded-xl text-slate-800 font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition-all text-sm">
+                                    <option value="12" selected>Monthly</option>
+                                    <option value="1">Annually</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interest Rate & Term -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="interest-rate" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-1.5">Interest Rate (%)</label>
+                            <div class="relative rounded-xl shadow-sm">
+                                <input type="number" id="interest-rate" value="7" min="0" max="100" step="0.1" class="block w-full pl-3.5 pr-8 py-3 bg-slate-50/50 border border-slate-200 rounded-xl text-slate-800 font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition-all text-sm" placeholder="7">
+                                <div class="absolute inset-y-0 right-0 pr-3.5 flex items-center pointer-events-none text-slate-400 font-bold">%</div>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="investment-years" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-1.5">Term (Years)</label>
+                            <div class="relative rounded-xl shadow-sm">
+                                <input type="number" id="investment-years" value="20" min="1" max="100" step="1" class="block w-full pl-3.5 pr-12 py-3 bg-slate-50/50 border border-slate-200 rounded-xl text-slate-800 font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition-all text-sm" placeholder="20">
+                                <div class="absolute inset-y-0 right-0 pr-3.5 flex items-center pointer-events-none text-slate-400 text-xs font-bold">Yrs</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Compounding Frequency -->
+                    <div>
+                        <label for="compound-frequency" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-1.5">Compounding Frequency</label>
+                        <select id="compound-frequency" class="block w-full py-3 px-3.5 bg-slate-50/50 border border-slate-200 rounded-xl text-slate-800 font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition-all text-sm">
+                            <option value="365">Daily</option>
+                            <option value="12" selected>Monthly</option>
+                            <option value="4">Quarterly</option>
+                            <option value="1">Annually</option>
+                        </select>
+                    </div>
+
+                    <!-- Optional Inflation Rate -->
+                    <div class="pt-2 border-t border-slate-100">
+                        <div class="flex items-center justify-between">
+                            <label for="inflation-rate" class="text-xs font-semibold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+                                Adjust for Inflation (Optional)
+                            </label>
+                            <span class="text-xs text-slate-400 font-medium">Est. CPI</span>
+                        </div>
+                        <div class="relative rounded-xl shadow-sm mt-1.5">
+                            <input type="number" id="inflation-rate" value="0" min="0" max="30" step="0.1" class="block w-full pl-3.5 pr-8 py-2.5 bg-slate-50/50 border border-slate-200 rounded-xl text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all" placeholder="0">
+                            <div class="absolute inset-y-0 right-0 pr-3.5 flex items-center pointer-events-none text-slate-400 text-xs">%</div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+            <!-- Output Display Panel (Right Column) -->
+            <div class="lg:col-span-7 space-y-6">
+                
+                <!-- Main Value Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <!-- Future Value Card -->
+                    <div class="bg-gradient-to-br from-indigo-600 to-indigo-800 rounded-2xl p-5 text-white shadow-lg shadow-indigo-200 relative overflow-hidden">
+                        <div class="text-indigo-200 text-xs font-bold uppercase tracking-wider mb-1">Future Value</div>
+                        <div class="text-2xl sm:text-3xl font-extrabold tracking-tight" id="res-future-value">$0</div>
+                        <div class="text-xs text-indigo-100/80 mt-2 font-medium" id="res-future-tag">Total Wealth Accumulated</div>
+                    </div>
+                    
+                    <!-- Total Principal Card -->
+                    <div class="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm">
+                        <div class="text-slate-400 text-xs font-bold uppercase tracking-wider mb-1">Total Principal</div>
+                        <div class="text-xl sm:text-2xl font-bold text-slate-800" id="res-total-principal">$0</div>
+                        <div class="text-xs text-slate-500 mt-2 font-medium">Your Direct Deposits</div>
+                    </div>
+
+                    <!-- Interest Earned Card -->
+                    <div class="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm">
+                        <div class="text-emerald-600 text-xs font-bold uppercase tracking-wider mb-1">Interest Earned</div>
+                        <div class="text-xl sm:text-2xl font-bold text-emerald-600" id="res-interest-earned">$0</div>
+                        <div class="text-xs text-emerald-700/70 mt-2 font-medium" id="res-interest-ratio">0% Profit Return</div>
+                    </div>
+                </div>
+
+                <!-- Interactive Chart Box -->
+                <div class="bg-white rounded-2xl p-6 shadow-md border border-slate-100">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-base font-bold text-slate-800">Investment Growth Over Time</h3>
+                        <div class="flex items-center gap-4 text-xs font-medium">
+                            <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-slate-300 inline-block"></span> Principal</span>
+                            <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-indigo-600 inline-block"></span> Total Interest</span>
+                        </div>
+                    </div>
+                    <div class="relative h-64 sm:h-72 w-full">
+                        <canvas id="growthChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- D. Important Result Explanation Box -->
+                <div class="bg-indigo-50/70 border border-indigo-100 rounded-2xl p-5 text-indigo-950 text-sm leading-relaxed" id="dynamic-explanation">
+                    <!-- Dynamically calculated sentence populated by JS -->
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Year-by-Year Schedule Table Section -->
+        <div class="mt-10 bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden">
+            <div class="px-6 py-5 border-b border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div>
+                    <h3 class="text-lg font-bold text-slate-800">Annual Compounding Schedule</h3>
+                    <p class="text-xs text-slate-500">Detailed year-by-year breakdown of principal, interest, and final balances.</p>
+                </div>
+                <button onclick="exportToCSV()" class="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-lg transition-colors">
+                    <i class="fa-solid fa-download"></i> Export Schedule (CSV)
+                </button>
+            </div>
+            <div class="overflow-x-auto max-h-96">
+                <table class="w-full text-left text-sm text-slate-600">
+                    <thead class="bg-slate-50 text-xs font-bold text-slate-500 uppercase tracking-wider sticky top-0 z-10 border-b border-slate-200">
+                        <tr>
+                            <th class="py-3.5 px-6">Year</th>
+                            <th class="py-3.5 px-6">Deposits (Year)</th>
+                            <th class="py-3.5 px-6">Total Principal</th>
+                            <th class="py-3.5 px-6">Interest Earned</th>
+                            <th class="py-3.5 px-6">Total Interest</th>
+                            <th class="py-3.5 px-6 text-right">End Balance</th>
+                        </tr>
+                    </thead>
+                    <tbody id="schedule-tbody" class="divide-y divide-slate-100 font-medium">
+                        <!-- Filled by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Content & SEO Sections -->
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+        
+        <!-- E. What Is Compound Interest Section -->
+        <section class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-4 tracking-tight">What Is Compound Interest?</h2>
+            <p class="text-slate-600 leading-relaxed text-base">
+                Compound interest is the interest calculated on the initial principal amount and also on the accumulated interest from previous periods. Often described as <strong>"interest on interest,"</strong> it causes your wealth to grow at an accelerating rate over time. Unlike simple interest, which only pays returns on your original deposit, compound interest continuously expands the base upon which future returns are calculated.
+            </p>
+        </section>
+
+        <!-- F. Compound Interest Formula Section -->
+        <section class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-4 tracking-tight">Compound Interest Formula</h2>
+            <p class="text-slate-600 mb-6 leading-relaxed">
+                The standard mathematical formula used to calculate compound interest without additional deposits is:
+            </p>
+            <div class="bg-slate-900 text-white p-6 rounded-xl text-center font-mono text-lg sm:text-xl shadow-inner mb-6">
+                A = P &times; (1 + r / n)<sup>(n &times; t)</sup>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-600">
+                <div class="bg-slate-50 p-3.5 rounded-lg border border-slate-100"><strong>A</strong> = Final Accumulated Amount (Future Value)</div>
+                <div class="bg-slate-50 p-3.5 rounded-lg border border-slate-100"><strong>P</strong> = Initial Principal Investment</div>
+                <div class="bg-slate-50 p-3.5 rounded-lg border border-slate-100"><strong>r</strong> = Annual Nominal Interest Rate (in decimal form)</div>
+                <div class="bg-slate-50 p-3.5 rounded-lg border border-slate-100"><strong>n</strong> = Compounding Frequency per year</div>
+                <div class="bg-slate-50 p-3.5 rounded-lg border border-slate-100 md:col-span-2"><strong>t</strong> = Number of Years the money is invested</div>
+            </div>
+        </section>
+
+        <!-- G. Interactive Formula Visualization -->
+        <section class="bg-gradient-to-br from-indigo-900 to-slate-900 text-white rounded-2xl p-8 shadow-xl">
+            <h2 class="text-2xl sm:text-3xl font-extrabold mb-2 tracking-tight text-white">Interactive Formula Breakdown</h2>
+            <p class="text-indigo-200 text-sm mb-6">Hover or click on components below to learn how each factor drives exponential financial growth.</p>
+            
+            <div class="flex flex-wrap items-center justify-center gap-3 text-xl sm:text-3xl font-mono py-6 bg-slate-800/60 rounded-xl border border-slate-700">
+                <span class="px-3 py-1 bg-indigo-600 rounded-lg cursor-pointer hover:scale-105 transition-transform" onclick="highlightFactor('A')">A</span>
+                <span>=</span>
+                <span class="px-3 py-1 bg-emerald-600 rounded-lg cursor-pointer hover:scale-105 transition-transform" onclick="highlightFactor('P')">P</span>
+                <span>( 1 +</span>
+                <span class="px-3 py-1 bg-amber-600 rounded-lg cursor-pointer hover:scale-105 transition-transform" onclick="highlightFactor('r')">r</span>
+                <span>/</span>
+                <span class="px-3 py-1 bg-cyan-600 rounded-lg cursor-pointer hover:scale-105 transition-transform" onclick="highlightFactor('n')">n</span>
+                <span>) <sup>(</span>
+                <span class="px-3 py-1 bg-cyan-600 rounded-lg cursor-pointer hover:scale-105 transition-transform" onclick="highlightFactor('n')">n</span>
+                <span>&times;</span>
+                <span class="px-3 py-1 bg-rose-600 rounded-lg cursor-pointer hover:scale-105 transition-transform" onclick="highlightFactor('t')">t</span>
+                <span>)</sup>
+            </div>
+            
+            <div id="formula-explanation" class="mt-6 p-4 bg-slate-800/80 rounded-xl text-sm text-indigo-100 border border-slate-700">
+                Click any highlighted formula variable above to inspect its real-world impact on your investment portfolio.
+            </div>
+        </section>
+
+        <!-- H. How to Use Section -->
+        <section class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-6 tracking-tight">How to Use the Compound Interest Calculator</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="flex gap-4 items-start">
+                    <span class="w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 font-bold flex items-center justify-center shrink-0">1</span>
+                    <div>
+                        <h3 class="font-bold text-slate-800 text-base">Enter Initial Investment</h3>
+                        <p class="text-sm text-slate-600 mt-1">Type in the lump sum starting amount of money you plan to deposit on day one.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <span class="w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 font-bold flex items-center justify-center shrink-0">2</span>
+                    <div>
+                        <h3 class="font-bold text-slate-800 text-base">Add Contributions (Optional)</h3>
+                        <p class="text-sm text-slate-600 mt-1">Specify if you plan to deposit additional savings on a regular monthly or annual schedule.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <span class="w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 font-bold flex items-center justify-center shrink-0">3</span>
+                    <div>
+                        <h3 class="font-bold text-slate-800 text-base">Input Interest Rate</h3>
+                        <p class="text-sm text-slate-600 mt-1">Enter your expected annual return rate (%) based on historical market standards or fixed deposit rates.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <span class="w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 font-bold flex items-center justify-center shrink-0">4</span>
+                    <div>
+                        <h3 class="font-bold text-slate-800 text-base">Select Investment Term</h3>
+                        <p class="text-sm text-slate-600 mt-1">Choose how many years you intend to keep your investment compounding undisturbed.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <span class="w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 font-bold flex items-center justify-center shrink-0">5</span>
+                    <div>
+                        <h3 class="font-bold text-slate-800 text-base">Choose Compounding Frequency</h3>
+                        <p class="text-sm text-slate-600 mt-1">Select daily, monthly, quarterly, or annual compounding intervals.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <span class="w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 font-bold flex items-center justify-center shrink-0">6</span>
+                    <div>
+                        <h3 class="font-bold text-slate-800 text-base">Analyze Results</h3>
+                        <p class="text-sm text-slate-600 mt-1">Instantly view total accumulated wealth, breakdown of principal vs profit, and annual growth tables.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- I. Compound vs Simple Interest -->
+        <section class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-6 tracking-tight">Compound Interest vs Simple Interest</h2>
+            <p class="text-slate-600 mb-6 leading-relaxed">
+                Understanding the distinction between simple and compound growth is crucial for successful long-term financial planning:
+            </p>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm text-left border border-slate-200 rounded-xl overflow-hidden">
+                    <thead class="bg-slate-100 text-slate-700 font-bold">
+                        <tr>
+                            <th class="p-4 border-b">Feature</th>
+                            <th class="p-4 border-b bg-indigo-50/50 text-indigo-900">Compound Interest</th>
+                            <th class="p-4 border-b">Simple Interest</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200">
+                        <tr>
+                            <td class="p-4 font-semibold text-slate-800">Calculation Base</td>
+                            <td class="p-4 bg-indigo-50/20 text-slate-700">Principal + Accumulated Interest</td>
+                            <td class="p-4 text-slate-600">Original Principal Only</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-semibold text-slate-800">Growth Pattern</td>
+                            <td class="p-4 bg-indigo-50/20 text-slate-700 font-semibold text-emerald-600">Exponential Curves</td>
+                            <td class="p-4 text-slate-600">Linear Straight Line</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-semibold text-slate-800">Common Uses</td>
+                            <td class="p-4 bg-indigo-50/20 text-slate-700">Mutual Funds, Stocks, Savings Accounts</td>
+                            <td class="p-4 text-slate-600">Short-term personal loans, Auto loans</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-semibold text-slate-800">Long-term Yield</td>
+                            <td class="p-4 bg-indigo-50/20 font-bold text-indigo-600">Substantially Higher</td>
+                            <td class="p-4 text-slate-600">Lower fixed growth</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- J. Compounding Frequency Section -->
+        <section class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-6 tracking-tight">How Does Compounding Frequency Affect Your Money?</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div class="p-5 bg-slate-50 border border-slate-200/80 rounded-xl">
+                    <h3 class="font-bold text-slate-800 text-lg mb-1">Annually</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">Interest compounds 1 time per year at the end of every 12-month period.</p>
+                </div>
+                <div class="p-5 bg-slate-50 border border-slate-200/80 rounded-xl">
+                    <h3 class="font-bold text-slate-800 text-lg mb-1">Semi-Annually</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">Interest compounds twice per year (every 6 months).</p>
+                </div>
+                <div class="p-5 bg-slate-50 border border-slate-200/80 rounded-xl">
+                    <h3 class="font-bold text-slate-800 text-lg mb-1">Quarterly</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">Interest compounds 4 times per year (every 3 months).</p>
+                </div>
+                <div class="p-5 bg-indigo-50/60 border border-indigo-200 rounded-xl">
+                    <h3 class="font-bold text-indigo-900 text-lg mb-1">Monthly</h3>
+                    <p class="text-xs text-indigo-700 leading-relaxed">Interest compounds 12 times a year. Standard for most savings and SIP accounts.</p>
+                </div>
+                <div class="p-5 bg-slate-50 border border-slate-200/80 rounded-xl sm:col-span-2 lg:col-span-2">
+                    <h3 class="font-bold text-slate-800 text-lg mb-1">Daily</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">Interest compounds approximately 365 times a year. Generates maximum compounding frequency.</p>
+                </div>
+            </div>
+            <div class="mt-5 p-4 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-xs sm:text-sm leading-relaxed">
+                <strong>Important:</strong> Don't claim "daily is always dramatically better"—the actual absolute monetary difference between daily and monthly compounding on modest sums is usually minor compared to the major drivers: interest rate, total duration, and contribution size.
+            </div>
+        </section>
+
+        <!-- K. Compound Interest Example -->
+        <section class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-4 tracking-tight">Compound Interest Example</h2>
+            <p class="text-slate-600 leading-relaxed mb-4">
+                Imagine you invest <strong>$10,000</strong> at an annual interest rate of <strong>8%</strong> compounded monthly, without making any further contributions:
+            </p>
+            <ul class="list-disc list-inside space-y-2 text-slate-600 text-sm pl-2">
+                <li><strong>Year 1:</strong> Your balance grows to $10,830 (Earning $830 in interest).</li>
+                <li><strong>Year 10:</strong> Your balance grows to $22,196 (Earning $12,196 in total interest—more than double your original investment!).</li>
+                <li><strong>Year 30:</strong> Your balance explodes to $109,357 purely through the passive power of compounding.</li>
+            </ul>
+        </section>
+
+        <!-- L. Compound Interest With Monthly Contributions -->
+        <section class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-4 tracking-tight">Compound Interest With Monthly Contributions</h2>
+            <p class="text-slate-600 leading-relaxed mb-4">
+                While a single lump-sum investment grows well, adding recurring monthly contributions accelerates compound growth exponentially. Every new contribution starts earning its own compound interest immediately.
+            </p>
+            <div class="p-5 bg-slate-50 rounded-xl border border-slate-200 text-sm text-slate-700 space-y-2">
+                <p><strong>Example Scenario:</strong></p>
+                <p>Starting Principal: <strong>$5,000</strong> | Monthly Contribution: <strong>$300</strong> | Rate: <strong>8%</strong> | Term: <strong>25 Years</strong></p>
+                <p class="text-indigo-600 font-bold">Result: Total Contributions = $95,000 &rarr; Total Accumulated Portfolio Value = $329,482!</p>
+            </div>
+        </section>
+
+        <!-- Factors Affecting Compound Interest -->
+        <section class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-6 tracking-tight">Factors That Affect Compound Interest</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50">
+                    <h3 class="font-bold text-slate-800 text-base mb-1">1. Initial Investment</h3>
+                    <p class="text-xs text-slate-600">The base seed capital you start with setting the immediate trajectory for year 1 returns.</p>
+                </div>
+                <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50">
+                    <h3 class="font-bold text-slate-800 text-base mb-1">2. Return Rate (%)</h3>
+                    <p class="text-xs text-slate-600">Higher annual rates generate steeper exponential growth slopes over long horizons.</p>
+                </div>
+                <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50">
+                    <h3 class="font-bold text-slate-800 text-base mb-1">3. Time Horizon</h3>
+                    <p class="text-xs text-slate-600">Time is compounding's greatest amplifier. Doubling duration often quadruples final return.</p>
+                </div>
+                <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50">
+                    <h3 class="font-bold text-slate-800 text-base mb-1">4. Compounding Frequency</h3>
+                    <p class="text-xs text-slate-600">More frequent calculation cycles (e.g. daily vs annual) allow interest to compound faster.</p>
+                </div>
+                <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50">
+                    <h3 class="font-bold text-slate-800 text-base mb-1">5. Regular Contributions</h3>
+                    <p class="text-xs text-slate-600">Consistently adding funds smooths out market fluctuations and constantly resets compound base higher.</p>
+                </div>
+                <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50">
+                    <h3 class="font-bold text-slate-800 text-base mb-1">6. Fees & Taxes</h3>
+                    <p class="text-xs text-slate-600">Expense ratios, capital gains taxes, and account management fees can reduce net returns over time.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- M. Compound Interest Calculator India Section -->
+        <section class="bg-gradient-to-r from-orange-50 via-white to-green-50 rounded-2xl p-8 border border-slate-200/80 shadow-sm">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-4 tracking-tight">Compound Interest Calculator India</h2>
+            <p class="text-slate-600 leading-relaxed text-sm sm:text-base mb-4">
+                Use the calculator to estimate compound growth for savings or investments using Indian Rupees (₹). Enter your starting amount, expected annual rate, investment duration, compounding frequency and regular contributions. Ideal for estimating wealth accumulation across instruments like <strong>SIP (Systematic Investment Plans), PPF (Public Provident Fund), Mutual Funds, and Fixed Deposits (FD)</strong>.
+            </p>
+            <div class="flex flex-wrap gap-3">
+                <span class="px-3 py-1 bg-white border border-slate-200 rounded-full text-xs font-semibold text-slate-700">₹ Indian Rupee Native</span>
+                <span class="px-3 py-1 bg-white border border-slate-200 rounded-full text-xs font-semibold text-slate-700">PPF & Mutual Fund Compatible</span>
+            </div>
+        </section>
+
+        <!-- N. Frequently Asked Questions (FAQ Section) -->
+        <section class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-8 tracking-tight">Frequently Asked Questions</h2>
+            <div class="space-y-4" id="faq-accordion">
+                
+                <!-- Q1 -->
+                <div class="border border-slate-200 rounded-xl overflow-hidden">
+                    <button onclick="toggleFAQ(this)" class="w-full text-left p-5 font-bold text-slate-800 flex justify-between items-center bg-slate-50/50 hover:bg-slate-100/50 transition-colors">
+                        <h3>What is compound interest?</h3>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                    </button>
+                    <div class="accordion-content px-5">
+                        <p class="py-4 text-sm text-slate-600 leading-relaxed">
+                            Compound interest is interest earned on both your initial principal investment and on the interest accumulated from previous periods.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="border border-slate-200 rounded-xl overflow-hidden">
+                    <button onclick="toggleFAQ(this)" class="w-full text-left p-5 font-bold text-slate-800 flex justify-between items-center bg-slate-50/50 hover:bg-slate-100/50 transition-colors">
+                        <h3>What is the difference between simple and compound interest?</h3>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                    </button>
+                    <div class="accordion-content px-5">
+                        <p class="py-4 text-sm text-slate-600 leading-relaxed">
+                            Simple interest pays returns strictly on the principal amount, whereas compound interest reinvests earnings so you gain interest on previous interest payouts.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="border border-slate-200 rounded-xl overflow-hidden">
+                    <button onclick="toggleFAQ(this)" class="w-full text-left p-5 font-bold text-slate-800 flex justify-between items-center bg-slate-50/50 hover:bg-slate-100/50 transition-colors">
+                        <h3>Is compound interest better than simple interest?</h3>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                    </button>
+                    <div class="accordion-content px-5">
+                        <p class="py-4 text-sm text-slate-600 leading-relaxed">
+                            Yes, for building wealth and long-term saving, compound interest is far superior due to its exponential growth trajectory over extended periods.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Q4 -->
+                <div class="border border-slate-200 rounded-xl overflow-hidden">
+                    <button onclick="toggleFAQ(this)" class="w-full text-left p-5 font-bold text-slate-800 flex justify-between items-center bg-slate-50/50 hover:bg-slate-100/50 transition-colors">
+                        <h3>How often can interest compound?</h3>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                    </button>
+                    <div class="accordion-content px-5">
+                        <p class="py-4 text-sm text-slate-600 leading-relaxed">
+                            Interest can compound continuously, daily, monthly, quarterly, semi-annually, or annually depending on the specific financial institution or instrument.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Q5 -->
+                <div class="border border-slate-200 rounded-xl overflow-hidden">
+                    <button onclick="toggleFAQ(this)" class="w-full text-left p-5 font-bold text-slate-800 flex justify-between items-center bg-slate-50/50 hover:bg-slate-100/50 transition-colors">
+                        <h3>Does compound interest work with monthly contributions?</h3>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                    </button>
+                    <div class="accordion-content px-5">
+                        <p class="py-4 text-sm text-slate-600 leading-relaxed">
+                            Absolutely! Regular monthly contributions boost growth significantly by consistently enlarging your principal base.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Q6 -->
+                <div class="border border-slate-200 rounded-xl overflow-hidden">
+                    <button onclick="toggleFAQ(this)" class="w-full text-left p-5 font-bold text-slate-800 flex justify-between items-center bg-slate-50/50 hover:bg-slate-100/50 transition-colors">
+                        <h3>What happens if I increase my monthly contribution?</h3>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                    </button>
+                    <div class="accordion-content px-5">
+                        <p class="py-4 text-sm text-slate-600 leading-relaxed">
+                            Increasing your contribution accelerates wealth build-up exponentially because additional principal generates extra interest every cycle.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Q7 -->
+                <div class="border border-slate-200 rounded-xl overflow-hidden">
+                    <button onclick="toggleFAQ(this)" class="w-full text-left p-5 font-bold text-slate-800 flex justify-between items-center bg-slate-50/50 hover:bg-slate-100/50 transition-colors">
+                        <h3>Does compound interest guarantee investment returns?</h3>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                    </button>
+                    <div class="accordion-content px-5">
+                        <p class="py-4 text-sm text-slate-600 leading-relaxed">
+                            No, compound interest is a mathematical calculation. Real investments (like stocks or equity funds) fluctuate and market rates are not guaranteed.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Q8 -->
+                <div class="border border-slate-200 rounded-xl overflow-hidden">
+                    <button onclick="toggleFAQ(this)" class="w-full text-left p-5 font-bold text-slate-800 flex justify-between items-center bg-slate-50/50 hover:bg-slate-100/50 transition-colors">
+                        <h3>Is this compound interest calculator Pro free?</h3>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                    </button>
+                    <div class="accordion-content px-5">
+                        <p class="py-4 text-sm text-slate-600 leading-relaxed">
+                            Yes! Calculator Pro provides 100% free web tools with no hidden charges, required registration, or limitations.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Q9 -->
+                <div class="border border-slate-200 rounded-xl overflow-hidden">
+                    <button onclick="toggleFAQ(this)" class="w-full text-left p-5 font-bold text-slate-800 flex justify-between items-center bg-slate-50/50 hover:bg-slate-100/50 transition-colors">
+                        <h3>Can I calculate compound interest monthly?</h3>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                    </button>
+                    <div class="accordion-content px-5">
+                        <p class="py-4 text-sm text-slate-600 leading-relaxed">
+                            Yes, simply select 'Monthly' in our Compounding Frequency option to see exact monthly compounding results.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Other Useful Calculators (Related) -->
+        <section id="related" class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-6 tracking-tight">Other Useful Calculators</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <a href="#" class="p-6 rounded-2xl border border-slate-200 hover:border-indigo-500 hover:shadow-lg transition-all group">
+                    <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-base group-hover:text-indigo-600 transition-colors">SIP Calculator</h3>
+                    <p class="text-xs text-slate-500 mt-1">Estimate returns on Systematic Investment Plans in mutual funds.</p>
+                </a>
+                <a href="#" class="p-6 rounded-2xl border border-slate-200 hover:border-indigo-500 hover:shadow-lg transition-all group">
+                    <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-base group-hover:text-indigo-600 transition-colors">BMI Calculator</h3>
+                    <p class="text-xs text-slate-500 mt-1">Calculate Body Mass Index and assess ideal weight ranges.</p>
+                </a>
+                <a href="#" class="p-6 rounded-2xl border border-slate-200 hover:border-indigo-500 hover:shadow-lg transition-all group">
+                    <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-cake-candles"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-base group-hover:text-indigo-600 transition-colors">Age Calculator</h3>
+                    <p class="text-xs text-slate-500 mt-1">Find exact age in years, months, days, and seconds.</p>
+                </a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Multi-column Footer -->
+<footer class="bg-slate-900 text-slate-400 text-sm border-t border-slate-800 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <!-- Col 1: About -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2 text-white font-bold text-lg">
+            <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
+              <i class="fa-solid fa-calculator"></i>
+            </div>
+            <span>Calculator<span class="text-indigo-400">-Pro</span></span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Calculator Pro provides free, fast, and clinically accurate online tools for health, financial, mathematical, and everyday conversion needs.
+          </p>
+          <div class="text-xs text-slate-500">
+            &copy; <span id="current-year">2026</span> Calculator Pro. All rights reserved.
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Quick Links</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Unit Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Length Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Weight Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Temperature Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Volume & Area Converter</a></li>
+          </ul>
+        </div>
+        <!-- Column 3: Tools & Resources -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Calculators</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="age-calculator.html" class="hover:text-white transition-colors">Age Calculator</a></li>
+            <li><a href="time-calculator.html" class="hover:text-white transition-colors">Time Calculator</a></li>
+            <li><a href="sip-calculator.html" class="hover:text-white transition-colors">SIP Financial Calculator</a></li>
+            <li><a href="bmi-calculator.html" class="hover:text-white transition-colors">BMI Health Calculator</a></li>
+            <li><a href="percentage-calculator.html" class="hover:text-white transition-colors">Percentage Calculator</a></li>
+          </ul>
+        </div>
+
+         <!-- Column 4: Legal & Contact -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Legal & Info</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Editorial Guidelines</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+    <!-- Vanilla JavaScript Core Engine -->
+    <script>
+		<!-- Inline JavaScript for Toggle -->
+      
+        document.addEventListener('DOMContentLoaded', () => {
+          const btn = document.getElementById('calc-mobile-menu-btn');
+          const menu = document.getElementById('calc-mobile-menu');
+          const menuIcon = document.getElementById('calc-menu-icon');
+          const closeIcon = document.getElementById('calc-close-icon');
+
+          if (btn && menu) {
+            btn.addEventListener('click', () => {
+              const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+              btn.setAttribute('aria-expanded', !isExpanded);
+              menu.classList.toggle('hidden');
+              menuIcon.classList.toggle('hidden');
+              closeIcon.classList.toggle('hidden');
+            });
+          }
+        });
+		
+        // Global variables & state
+        let currentCurrency = 'USD';
+        let currencySymbol = '$';
+        let growthChartInstance = null;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set current footer year
+            document.getElementById('year').textContent = new Date().getFullYear();
+            
+            // Attach event listeners to calculation input controls
+            const inputs = ['initial-investment', 'contribution-amount', 'contribution-frequency', 'interest-rate', 'investment-years', 'compound-frequency', 'inflation-rate'];
+            inputs.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) {
+                    el.addEventListener('input', calculateCompoundInterest);
+                    el.addEventListener('change', calculateCompoundInterest);
+                }
+            });
+
+            // Initial calculation call
+            calculateCompoundInterest();
+        });
+
+        // Set Currency Switcher
+        function setCurrency(curr) {
+            currentCurrency = curr;
+            currencySymbol = curr === 'USD' ? '$' : '₹';
+            
+            // Update UI switchers
+            const usdBtn = document.getElementById('curr-usd');
+            const inrBtn = document.getElementById('curr-inr');
+            if (curr === 'USD') {
+                usdBtn.className = "px-2.5 py-1 rounded-md bg-white shadow-sm text-indigo-600 font-bold transition-all";
+                inrBtn.className = "px-2.5 py-1 rounded-md text-slate-600 hover:text-slate-900 transition-all";
+            } else {
+                inrBtn.className = "px-2.5 py-1 rounded-md bg-white shadow-sm text-indigo-600 font-bold transition-all";
+                usdBtn.className = "px-2.5 py-1 rounded-md text-slate-600 hover:text-slate-900 transition-all";
+            }
+
+            // Update UI Symbol Icons
+            document.querySelectorAll('.currency-symbol').forEach(el => el.textContent = currencySymbol);
+
+            calculateCompoundInterest();
+        }
+
+        // Format Currency Helper
+        function formatMoney(amount) {
+            return new Intl.NumberFormat(currentCurrency === 'USD' ? 'en-US' : 'en-IN', {
+                style: 'currency',
+                currency: currentCurrency,
+                maximumFractionDigits: 0
+            }).format(amount);
+        }
+
+        // Core Calculation Algorithm
+        function calculateCompoundInterest() {
+            const P = parseFloat(document.getElementById('initial-investment').value) || 0;
+            const PMT = parseFloat(document.getElementById('contribution-amount').value) || 0;
+            const pmtFreq = parseInt(document.getElementById('contribution-frequency').value) || 12;
+            const r = (parseFloat(document.getElementById('interest-rate').value) || 0) / 100;
+            const t = parseInt(document.getElementById('investment-years').value) || 1;
+            const n = parseInt(document.getElementById('compound-frequency').value) || 12;
+            const infl = (parseFloat(document.getElementById('inflation-rate').value) || 0) / 100;
+
+            // Update Display tags
+            document.getElementById('initial-val-display').textContent = formatMoney(P);
+            document.getElementById('contrib-val-display').textContent = `${formatMoney(PMT)} / ${pmtFreq === 12 ? 'month' : 'year'}`;
+
+            // Year-by-Year calculation arrays
+            let yearlyData = [];
+            let currentBalance = P;
+            let totalPrincipal = P;
+            let totalInterest = 0;
+
+            let chartLabels = ['Start'];
+            let chartPrincipal = [P];
+            let chartInterest = [0];
+
+            for (let yr = 1; yr <= t; yr++) {
+                let yearlyDeposit = 0;
+                let startOfYearBalance = currentBalance;
+
+                // Calculation month by month or compounding period
+                for (let m = 1; m <= 12; m++) {
+                    // Check contribution timing
+                    if (pmtFreq === 12) {
+                        currentBalance += PMT;
+                        yearlyDeposit += PMT;
+                        totalPrincipal += PMT;
+                    } else if (pmtFreq === 1 && m === 1) {
+                        currentBalance += PMT;
+                        yearlyDeposit += PMT;
+                        totalPrincipal += PMT;
+                    }
+
+                    // Interest accrual per month (r / 12 adjusted based on compounding frequency n)
+                    // Precise compound growth formula for period
+                    let monthlyRate = r / n;
+                    let periodsPerMonth = n / 12;
+                    currentBalance = currentBalance * Math.pow(1 + monthlyRate, periodsPerMonth);
+                }
+
+                // Adjust balance for inflation if set
+                let adjustedBalance = currentBalance;
+                if (infl > 0) {
+                    adjustedBalance = currentBalance / Math.pow(1 + infl, yr);
+                }
+
+                let endOfYearInterest = currentBalance - (startOfYearBalance + yearlyDeposit);
+                totalInterest = currentBalance - totalPrincipal;
+
+                yearlyData.push({
+                    year: yr,
+                    yearlyDeposit: yearlyDeposit,
+                    totalPrincipal: totalPrincipal,
+                    interestEarnedThisYear: Math.max(0, endOfYearInterest),
+                    totalInterestEarned: Math.max(0, totalInterest),
+                    endBalance: currentBalance,
+                    adjustedBalance: adjustedBalance
+                });
+
+                chartLabels.push(`Yr ${yr}`);
+                chartPrincipal.push(Math.round(totalPrincipal));
+                chartInterest.push(Math.round(Math.max(0, totalInterest)));
+            }
+
+            const finalFutureValue = currentBalance;
+            const finalInterest = Math.max(0, finalFutureValue - totalPrincipal);
+            const interestPercentage = totalPrincipal > 0 ? ((finalInterest / totalPrincipal) * 100).toFixed(0) : 0;
+
+            // Update Output Cards
+            document.getElementById('res-future-value').textContent = formatMoney(finalFutureValue);
+            document.getElementById('res-total-principal').textContent = formatMoney(totalPrincipal);
+            document.getElementById('res-interest-earned').textContent = formatMoney(finalInterest);
+            document.getElementById('res-interest-ratio').textContent = `${interestPercentage}% Gain on Principal`;
+
+            // Update Explanation Text (Requirement D)
+            const freqText = n === 365 ? 'daily' : (n === 12 ? 'monthly' : (n === 4 ? 'quarterly' : 'annually'));
+            const contribText = PMT > 0 ? ` plus regular contributions of ${formatMoney(PMT)}` : '';
+            
+            document.getElementById('dynamic-explanation').innerHTML = `
+                <div class="flex gap-3 items-start">
+                    <i class="fa-solid fa-circle-info text-indigo-600 text-lg mt-0.5"></i>
+                    <div>
+                        <strong>Result Summary:</strong> Based on your inputs, your initial investment of <strong>${formatMoney(P)}</strong>${contribText} could grow to approximately <strong>${formatMoney(finalFutureValue)}</strong> after <strong>${t} years</strong> at an estimated annual interest rate of <strong>${(r*100).toFixed(1)}%</strong>, compounded ${freqText}.
+                    </div>
+                </div>
+            `;
+
+            // Render Schedule Table
+            renderScheduleTable(yearlyData);
+
+            // Render Chart
+            renderChart(chartLabels, chartPrincipal, chartInterest);
+        }
+
+        // Render Table Data
+        function renderScheduleTable(data) {
+            const tbody = document.getElementById('schedule-tbody');
+            tbody.innerHTML = '';
+
+            data.forEach(row => {
+                const tr = document.createElement('tr');
+                tr.className = "hover:bg-slate-50/80 transition-colors";
+                tr.innerHTML = `
+                    <td class="py-3.5 px-6 font-bold text-slate-800">Year ${row.year}</td>
+                    <td class="py-3.5 px-6">${formatMoney(row.yearlyDeposit)}</td>
+                    <td class="py-3.5 px-6">${formatMoney(row.totalPrincipal)}</td>
+                    <td class="py-3.5 px-6 text-emerald-600 font-semibold">+${formatMoney(row.interestEarnedThisYear)}</td>
+                    <td class="py-3.5 px-6 text-emerald-600 font-semibold">${formatMoney(row.totalInterestEarned)}</td>
+                    <td class="py-3.5 px-6 text-right font-bold text-slate-900">${formatMoney(row.endBalance)}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // Export to CSV Function
+        function exportToCSV() {
+            const P = parseFloat(document.getElementById('initial-investment').value) || 0;
+            const PMT = parseFloat(document.getElementById('contribution-amount').value) || 0;
+            const r = (parseFloat(document.getElementById('interest-rate').value) || 0) / 100;
+            const t = parseInt(document.getElementById('investment-years').value) || 1;
+            const n = parseInt(document.getElementById('compound-frequency').value) || 12;
+
+            let csv = 'Year,Yearly Deposit,Total Principal,Total Interest Earned,End Balance\n';
+            
+            let currentBalance = P;
+            let totalPrincipal = P;
+
+            for (let yr = 1; yr <= t; yr++) {
+                let yearlyDeposit = PMT * 12;
+                totalPrincipal += yearlyDeposit;
+                
+                for (let m = 1; m <= 12; m++) {
+                    currentBalance += PMT;
+                    currentBalance = currentBalance * Math.pow(1 + (r / n), n / 12);
+                }
+                
+                let totalInterest = Math.max(0, currentBalance - totalPrincipal);
+                csv += `${yr},${yearlyDeposit.toFixed(2)},${totalPrincipal.toFixed(2)},${totalInterest.toFixed(2)},${currentBalance.toFixed(2)}\n`;
+            }
+
+            const blob = new Blob([csv], { type: 'text/csv' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.setAttribute('href', url);
+            a.setAttribute('download', 'Compound_Interest_Schedule.csv');
+            a.click();
+        }
+
+        // Render Chart.js
+        function renderChart(labels, principalData, interestData) {
+            const ctx = document.getElementById('growthChart').getContext('2d');
+
+            if (growthChartInstance) {
+                growthChartInstance.destroy();
+            }
+
+            growthChartInstance = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Total Principal',
+                            data: principalData,
+                            borderColor: '#cbd5e1',
+                            backgroundColor: 'rgba(203, 213, 225, 0.4)',
+                            fill: true,
+                            tension: 0.3,
+                            pointRadius: 0,
+                            pointHoverRadius: 6
+                        },
+                        {
+                            label: 'Total Interest',
+                            data: interestData.map((val, idx) => val + principalData[idx]),
+                            borderColor: '#4f46e5',
+                            backgroundColor: 'rgba(79, 70, 229, 0.25)',
+                            fill: '-1',
+                            tension: 0.3,
+                            pointRadius: 0,
+                            pointHoverRadius: 6
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            mode: 'index',
+                            intersect: false,
+                            callbacks: {
+                                label: function(context) {
+                                    return context.dataset.label + ': ' + formatMoney(context.raw);
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: { display: false }
+                        },
+                        y: {
+                            ticks: {
+                                callback: function(value) {
+                                    return (value >= 1000 ? (value/1000).toFixed(0) + 'k' : value);
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Toggle Accordion
+        function toggleFAQ(btn) {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector('i');
+            
+            content.classList.toggle('open');
+            if (content.classList.contains('open')) {
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Formula Factor Highlight Interaction
+        function highlightFactor(factor) {
+            const display = document.getElementById('formula-explanation');
+            switch (factor) {
+                case 'A':
+                    display.innerHTML = "<strong>A (Future Value):</strong> The final total dollar amount you end up with after compounding interest and principal over time.";
+                    break;
+                case 'P':
+                    display.innerHTML = "<strong>P (Principal):</strong> Your initial lump-sum deposit before earning any interest or adding regular contributions.";
+                    break;
+                case 'r':
+                    display.innerHTML = "<strong>r (Interest Rate):</strong> The annual nominal rate expressed as a percentage (e.g. 7% = 0.07).";
+                    break;
+                case 'n':
+                    display.innerHTML = "<strong>n (Compounding Frequency):</strong> How many times per year interest is calculated (e.g., 12 for monthly, 365 for daily).";
+                    break;
+                case 't':
+                    display.innerHTML = "<strong>t (Time):</strong> The length of time in years that the money is left to grow undisturbed.";
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

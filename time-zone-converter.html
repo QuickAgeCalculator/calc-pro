@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Time Zone Converter - Instant DST-Aware Time Converter</title>
+    <meta name="description" content="Instantly convert time between any two time zones worldwide. Free timezone converter with automatic Daylight Saving Time (DST) adjustment and meeting planner.">
+    <meta name="keywords" content="time zone converter, timezone converter, world clock, IST to EST, PST to EST, meeting planner, GMT converter, UTC offset">
+    <meta name="author" content="Calculator-Pro">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Free Time Zone Converter - Calculator-Pro">
+    <meta property="og:description" content="Instantly convert time between any two time zones worldwide. Automatic DST handling and multi-city meeting scheduler.">
+    <meta property="og:image" content="https://placehold.co/1200x630/2563eb/ffffff?text=Free+Time+Zone+Converter">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Free Time Zone Converter">
+    <meta property="twitter:description" content="Instantly convert time between any two time zones worldwide. Automatic DST handling.">
+
+    <!-- Fonts & Icons -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- JSON-LD FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the time difference between IST and EST?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Indian Standard Time (IST) is 9 hours and 30 minutes ahead of Eastern Standard Time (EST) and 8 hours 30 minutes ahead during Eastern Daylight Time (EDT)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this timezone converter support Daylight Saving Time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, our converter uses native browser IANA time zone rules and automatically accounts for Daylight Saving Time (DST) changes worldwide."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I convert UTC to IST?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Indian Standard Time (IST) is always UTC+5:30. Simply add 5 hours and 30 minutes to any UTC time to get IST."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do some countries have 30-minute or 45-minute timezone offsets?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Certain countries like India, Nepal, and parts of Australia adopted fractional hour offsets to better align solar noon with human activity in their geographical span."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white min-h-screen flex flex-col">
+
+<!-- Header Component -->
+<header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      
+      <!-- Brand Logo & Name -->
+      <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
+        <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
+          <i class="fa-solid fa-calculator text-lg"></i>
+        </div>
+        <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
+          Calculator<span class="text-indigo-600">-Pro</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-1" aria-label="Main Navigation">
+        
+        <!-- Category 1: Age -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Age
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="age-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="birthday-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Birthday Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="age-difference-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Diffrence Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Time -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Time & Date
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="time-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Time Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="date-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Date Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="work-days-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Work Days Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="time-zone-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">TimeZone Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Converter -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Converter
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="unit-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Unit Converter</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="cgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">CGPA to Percentage</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to Percentage</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sgpa-to-cgpa-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to CGPA</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="marks-to-percentage-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Marks to Percentage</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4: Financial -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Financial
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sip-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SIP Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="emi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">EMI Loan Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="Compound-Interest-Calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Compound Interest Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 5: Health -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Health
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute right-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="bmi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">BMI Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="waist-to-hip-ratio-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">WHR Calculator</a>
+            </div>
+          </div>
+        </div>
+		  
+		 
+
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex md:hidden">
+        <button id="calc-mobile-menu-btn" type="button" class="p-2.5 rounded-xl text-slate-600 hover:text-indigo-600 hover:bg-slate-100/80 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors duration-200" aria-controls="calc-mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+          <svg id="calc-menu-icon" class="w-6 h-6 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="calc-close-icon" class="w-6 h-6 hidden transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile Full-Width Menu Container -->
+  <div id="calc-mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white shadow-xl transition-all duration-200 ease-in-out">
+    <div class="px-4 pt-3 pb-6 space-y-4">
+      
+      <!-- Mobile Category: Age -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Age</div>
+        <a href="age-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Calculator</a>
+		  <a href="birthday-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Birthday Calculator</a>
+		  <a href="age-difference-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Diffrence Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Time -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Time & Date</div>
+        <a href="time-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Time Calculator</a>
+		  <a href="date-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Date Calculator</a>
+		  <a href="work-days-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Work Days Calculator</a>
+		  <a href="time-zone-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">TimeZone Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Converter -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Converter</div>
+        <a href="javascript:void(0)" onclick="openCalculator('length')" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Unit Converter</a>
+		  <a href="cgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">CGPA to Percentage</a>
+		  <a href="sgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to Percentage</a>
+		  <a href="sgpa-to-cgpa-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to CGPA</a>
+		  <a href="marks-to-percentage-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Marks to Percentage</a>
+      </div>
+
+      <!-- Mobile Category: Financial -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Financial</div>
+        <a href="sip-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SIP Calculator</a>
+		  <a href="emi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">EMI Loan Calculator</a>
+		  <a href="Compound-Interest-Calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Compound Interest Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Health -->
+      <div>
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Health</div>
+        <a href="bmi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">BMI Calculator</a>
+		  <a href="waist-to-hip-ratio-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">WHR Calculator</a>
+      </div>
+		
+		
+
+    </div>
+  </div>
+</header>
+
+<main class="flex-grow">
+    <!-- Hero Section & Converter Box -->
+    <section id="converter" class="pt-8 pb-16 bg-gradient-to-b from-brand-50/60 via-slate-50 to-slate-50 relative overflow-hidden">
+        <!-- Background decorative blur dots -->
+        <div class="absolute top-10 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-brand-200/20 rounded-full filter blur-3xl pointer-events-none -z-10"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-brand-100 text-brand-700 mb-3">
+                    <i class="fa-solid fa-bolt text-brand-500"></i> Automatic DST Adjustment
+                </span>
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                    Free Time Zone Converter
+                </h1>
+                <p class="mt-3 text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+                    Instantly convert time between any two time zones worldwide. Our free timezone converter automatically adjusts for daylight saving time (DST) and shows the exact current time difference. Perfect for remote teams, international meetings, travel planning, and global collaboration.
+                </p>
+            </div>
+
+            <!-- Main Converter Card -->
+            <div class="bg-white rounded-2xl shadow-xl shadow-slate-200/60 border border-slate-100 p-6 sm:p-8 backdrop-blur-md relative z-10">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-5 items-center">
+                    
+                    <!-- From Timezone Select Box -->
+                    <div class="md:col-span-5 relative" id="from-timezone-container">
+                        <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">From Timezone</label>
+                        <div class="relative">
+                            <button type="button" id="from-tz-btn" class="w-full bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl px-4 py-3 text-left flex items-center justify-between focus:ring-2 focus:ring-brand-500 focus:outline-none transition-colors">
+                                <span class="flex items-center gap-2.5 truncate" id="from-tz-display">
+                                    <span class="text-xl">🇮🇳</span>
+                                    <span class="font-semibold text-slate-800">IST - Asia/Kolkata</span>
+                                    <span class="text-xs text-slate-400">(UTC+05:30)</span>
+                                </span>
+                                <i class="fa-solid fa-chevron-down text-slate-400 text-xs ml-2"></i>
+                            </button>
+                            <!-- Searchable Dropdown Popup -->
+                            <div id="from-tz-dropdown" class="hidden absolute left-0 right-0 top-full mt-2 bg-white rounded-xl shadow-2xl border border-slate-100 z-50 p-2">
+                                <div class="p-1 mb-2 border-b border-slate-100">
+                                    <input type="text" id="from-tz-search" placeholder="Search city or timezone..." class="w-full px-3 py-2 text-sm bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-500">
+                                </div>
+                                <div class="custom-select-options divide-y divide-slate-50" id="from-tz-options">
+                                    <!-- Dynamic options JS populated -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Swap Button -->
+                    <div class="md:col-span-2 flex justify-center py-2 md:py-0">
+                        <button type="button" id="swap-tz-btn" aria-label="Swap Timezones" class="w-12 h-12 rounded-full bg-brand-50 hover:bg-brand-100 text-brand-600 flex items-center justify-center transition-all transform hover:rotate-180 duration-300 shadow-sm border border-brand-200">
+                            <i class="fa-solid fa-arrow-right-arrow-left text-lg"></i>
+                        </button>
+                    </div>
+
+                    <!-- To Timezone Select Box -->
+                    <div class="md:col-span-5 relative" id="to-timezone-container">
+                        <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">To Timezone</label>
+                        <div class="relative">
+                            <button type="button" id="to-tz-btn" class="w-full bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl px-4 py-3 text-left flex items-center justify-between focus:ring-2 focus:ring-brand-500 focus:outline-none transition-colors">
+                                <span class="flex items-center gap-2.5 truncate" id="to-tz-display">
+                                    <span class="text-xl">🇺🇸</span>
+                                    <span class="font-semibold text-slate-800">EDT - America/New_York</span>
+                                    <span class="text-xs text-slate-400">(UTC-04:00)</span>
+                                </span>
+                                <i class="fa-solid fa-chevron-down text-slate-400 text-xs ml-2"></i>
+                            </button>
+                            <!-- Searchable Dropdown Popup -->
+                            <div id="to-tz-dropdown" class="hidden absolute left-0 right-0 top-full mt-2 bg-white rounded-xl shadow-2xl border border-slate-100 z-50 p-2">
+                                <div class="p-1 mb-2 border-b border-slate-100">
+                                    <input type="text" id="to-tz-search" placeholder="Search city or timezone..." class="w-full px-3 py-2 text-sm bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-500">
+                                </div>
+                                <div class="custom-select-options divide-y divide-slate-50" id="to-tz-options">
+                                    <!-- Dynamic options JS populated -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Input Controls Row -->
+                <div class="grid grid-cols-1 sm:grid-cols-12 gap-4 mt-6 items-end">
+                    <div class="sm:col-span-7">
+                        <label for="datetime-picker" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Date & Time</label>
+                        <div class="relative">
+                            <input type="datetime-local" id="datetime-picker" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 font-medium focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                        </div>
+                    </div>
+                    <div class="sm:col-span-5 flex gap-2">
+                        <button type="button" id="use-current-btn" class="w-1/2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium py-3 px-3 rounded-xl transition-colors text-xs sm:text-sm flex items-center justify-center gap-1.5">
+                            <i class="fa-solid fa-clock"></i> Now
+                        </button>
+                        <button type="button" id="convert-btn" class="w-1/2 bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3 px-3 rounded-xl transition-all shadow-md shadow-brand-200 text-xs sm:text-sm flex items-center justify-center gap-1.5">
+                            <i class="fa-solid fa-calculator"></i> Convert
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Live Converted Result Display Box -->
+                <div class="mt-8 bg-gradient-to-r from-brand-600 to-indigo-700 rounded-xl p-6 text-white shadow-lg relative overflow-hidden">
+                    <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-white/10 rounded-full blur-xl pointer-events-none"></div>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 relative z-10">
+                        <div>
+                            <span class="text-xs uppercase tracking-widest text-brand-200 font-bold block mb-1">Converted Result</span>
+                            <div class="text-2xl sm:text-3xl font-extrabold tracking-tight" id="result-formula">
+                                10:30 AM IST = 1:00 AM EDT
+                            </div>
+                            <div class="mt-2 flex flex-wrap items-center gap-2 text-xs sm:text-sm text-brand-100" id="result-details">
+                                <span id="time-diff-badge" class="bg-white/15 px-2.5 py-1 rounded-md font-medium">New York is 9h 30m behind India</span>
+                                <span id="dst-badge" class="bg-emerald-500/20 text-emerald-200 px-2.5 py-1 rounded-md font-medium"><i class="fa-solid fa-sun text-yellow-300"></i> DST Active</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <button id="copy-btn" type="button" class="bg-white/10 hover:bg-white/20 text-white px-4 py-2.5 rounded-lg text-sm font-medium transition-all backdrop-blur-sm flex items-center gap-2 border border-white/20">
+                                <i class="fa-regular fa-copy"></i> <span id="copy-btn-text">Copy</span>
+                            </button>
+                            <button id="share-btn" type="button" class="bg-white text-brand-700 hover:bg-brand-50 px-4 py-2.5 rounded-lg text-sm font-semibold transition-all flex items-center gap-2 shadow-sm">
+                                <i class="fa-solid fa-share-nodes"></i> Share
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Popular Conversions Grid -->
+    <section class="py-12 bg-white border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl font-bold text-slate-900">Popular Time Zone Conversions</h2>
+                <p class="text-sm text-slate-500 mt-1">Click any pair below to load it directly into the converter.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4" id="popular-conversions-grid">
+                <!-- Cards JS rendered -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Current World Clock Section -->
+    <section id="world-clock" class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-brand-600 bg-brand-50 px-3 py-1 rounded-full">Real-time Clocks</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 mt-2">Current Time in Major Cities</h2>
+                </div>
+                <p class="text-sm text-slate-500 mt-2 md:mt-0"><i class="fa-solid fa-arrows-rotate animate-spin text-brand-500 mr-1"></i> Live updating continuously</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="world-clock-grid">
+                <!-- Live city cards populated via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Meeting Planner / Overlap Scheduler -->
+    <section id="meeting-planner" class="py-16 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mb-10">
+                <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full">Collaboration Tool</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mt-2">Schedule Meetings Across Time Zones</h2>
+                <p class="text-slate-600 mt-2">Identify overlap hours between global teammates. Green blocks represent standard working hours (9:00 AM – 5:00 PM local time).</p>
+            </div>
+
+            <div class="bg-slate-50 rounded-2xl border border-slate-200 p-6 shadow-sm overflow-x-auto">
+                <div class="min-w-[700px]">
+                    <div id="planner-rows" class="space-y-6">
+                        <!-- Meeting planner rows JS rendered -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Use Section -->
+    <section class="py-16 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900">How to Use the Time Zone Converter</h2>
+                <p class="text-slate-600 mt-2">Convert times accurately in 4 easy steps</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm relative">
+                    <span class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 font-bold flex items-center justify-center text-lg mb-4">1</span>
+                    <h3 class="font-bold text-slate-800 text-lg mb-2">Select Source Zone</h3>
+                    <p class="text-slate-600 text-sm">Choose your origin city or timezone standard (e.g., IST, London, New York).</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm relative">
+                    <span class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 font-bold flex items-center justify-center text-lg mb-4">2</span>
+                    <h3 class="font-bold text-slate-800 text-lg mb-2">Select Target Zone</h3>
+                    <p class="text-slate-600 text-sm">Choose the target location you wish to convert the time to.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm relative">
+                    <span class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 font-bold flex items-center justify-center text-lg mb-4">3</span>
+                    <h3 class="font-bold text-slate-800 text-lg mb-2">Set Date & Time</h3>
+                    <p class="text-slate-600 text-sm">Pick standard meeting times or use "Now" for instant live conversion.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm relative">
+                    <span class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 font-bold flex items-center justify-center text-lg mb-4">4</span>
+                    <h3 class="font-bold text-slate-800 text-lg mb-2">Get Instant Results</h3>
+                    <p class="text-slate-600 text-sm">View precise converted time, DST flags, and click to copy or share with your team.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO Educational Article Content -->
+    <section class="py-16 bg-white border-t border-slate-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 text-slate-700 leading-relaxed">
+            <div>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">What is a Time Zone Converter?</h2>
+                <p>A time zone converter is an essential digital utility that translates local time from one geographic region into the corresponding local time of another. Whether you are scheduling cross-border business meetings, coordinating remote software development teams, booking international flights, or staying in touch with global family, exact time conversion prevents missed calls and scheduling errors.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">How Time Zones Work</h3>
+                    <p class="text-sm text-slate-600">The Earth is divided vertically into 24 standard longitudinal slices, each roughly 15 degrees wide, representing 1 hour of the Earth's 24-hour rotation. Universal Coordinated Time (UTC) serves as the primary scientific standard reference point from which all local time offset calculations are derived.</p>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Daylight Saving Time (DST)</h3>
+                    <p class="text-sm text-slate-600">Many nations in North America and Europe advance their clocks forward by 1 hour during spring to maximize evening daylight and set them back in autumn. Because DST start and end dates vary by region, automated lookup calculators ensure zero mathematical mistakes.</p>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">UTC vs GMT vs Local Time</h3>
+                <p class="text-sm text-slate-600"><strong>UTC (Coordinated Universal Time)</strong> is a time standard, not a time zone. It never observes DST. <strong>GMT (Greenwich Mean Time)</strong> is a time zone used in parts of Europe and Africa. While UTC and GMT share the same clock time, UTC is used in scientific contexts while GMT represents civil time.</p>
+            </div>
+
+            <!-- Timezone Abbreviation Reference Table -->
+            <div>
+                <h3 class="text-xl font-bold text-slate-900 mb-4">Common Time Zone Abbreviations Reference</h3>
+                <div class="overflow-x-auto rounded-xl border border-slate-200">
+                    <table class="w-full text-left text-sm text-slate-600">
+                        <thead class="bg-slate-100 text-slate-800 text-xs uppercase font-semibold">
+                            <tr>
+                                <th class="p-3.5">Abbreviation</th>
+                                <th class="p-3.5">Full Name</th>
+                                <th class="p-3.5">Standard UTC Offset</th>
+                                <th class="p-3.5">Primary Regions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200 bg-white">
+                            <tr><td class="p-3.5 font-bold text-slate-900">IST</td><td class="p-3.5">Indian Standard Time</td><td class="p-3.5">UTC +5:30</td><td class="p-3.5">India, Sri Lanka</td></tr>
+                            <tr><td class="p-3.5 font-bold text-slate-900">EST / EDT</td><td class="p-3.5">Eastern Standard / Daylight Time</td><td class="p-3.5">UTC -5 / -4</td><td class="p-3.5">US East Coast, Canada</td></tr>
+                            <tr><td class="p-3.5 font-bold text-slate-900">PST / PDT</td><td class="p-3.5">Pacific Standard / Daylight Time</td><td class="p-3.5">UTC -8 / -7</td><td class="p-3.5">US West Coast, Vancouver</td></tr>
+                            <tr><td class="p-3.5 font-bold text-slate-900">GMT / BST</td><td class="p-3.5">Greenwich Mean / British Summer Time</td><td class="p-3.5">UTC +0 / +1</td><td class="p-3.5">United Kingdom, Ireland</td></tr>
+                            <tr><td class="p-3.5 font-bold text-slate-900">CET / CEST</td><td class="p-3.5">Central European Time</td><td class="p-3.5">UTC +1 / +2</td><td class="p-3.5">Germany, France, Italy, Spain</td></tr>
+                            <tr><td class="p-3.5 font-bold text-slate-900">JST</td><td class="p-3.5">Japan Standard Time</td><td class="p-3.5">UTC +9:00</td><td class="p-3.5">Japan, Tokyo</td></tr>
+                            <tr><td class="p-3.5 font-bold text-slate-900">AEST / AEDT</td><td class="p-3.5">Australian Eastern Standard Time</td><td class="p-3.5">UTC +10 / +11</td><td class="p-3.5">Sydney, Melbourne</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900">Frequently Asked Questions</h2>
+                <p class="text-slate-600 mt-2">Find quick answers to common time conversion questions</p>
+            </div>
+
+            <div class="space-y-4" id="faq-accordion">
+                
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button type="button" class="faq-toggle w-full px-6 py-4 text-left font-semibold text-slate-800 flex justify-between items-center hover:bg-slate-50 transition-colors">
+                        <span>What is the time difference between IST and EST?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                    </button>
+                    <div class="accordion-content px-6 text-slate-600 text-sm leading-relaxed border-t border-slate-100">
+                        <div class="py-4">
+                            Indian Standard Time (IST) is 9 hours and 30 minutes ahead of Eastern Standard Time (EST). During Daylight Saving Time in the US (EDT), IST is 8 hours and 30 minutes ahead.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button type="button" class="faq-toggle w-full px-6 py-4 text-left font-semibold text-slate-800 flex justify-between items-center hover:bg-slate-50 transition-colors">
+                        <span>Does this timezone converter support Daylight Saving Time?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                    </button>
+                    <div class="accordion-content px-6 text-slate-600 text-sm leading-relaxed border-t border-slate-100">
+                        <div class="py-4">
+                            Yes! Our converter calculates offsets using standard IANA timezone databases built directly into modern browsers. It automatically applies DST rules based on the selected date.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button type="button" class="faq-toggle w-full px-6 py-4 text-left font-semibold text-slate-800 flex justify-between items-center hover:bg-slate-50 transition-colors">
+                        <span>How do I convert UTC to IST?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                    </button>
+                    <div class="accordion-content px-6 text-slate-600 text-sm leading-relaxed border-t border-slate-100">
+                        <div class="py-4">
+                            Indian Standard Time (IST) is always fixed at UTC +5:30. To convert UTC to IST, add 5 hours and 30 minutes to the UTC time.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button type="button" class="faq-toggle w-full px-6 py-4 text-left font-semibold text-slate-800 flex justify-between items-center hover:bg-slate-50 transition-colors">
+                        <span>Why does time change by 30 or 45 minutes in some countries?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                    </button>
+                    <div class="accordion-content px-6 text-slate-600 text-sm leading-relaxed border-t border-slate-100">
+                        <div class="py-4">
+                            Countries like India, Iran, Afghanistan, and Nepal opted for half-hour or 45-minute offsets so that civil noon aligns more closely with the actual astronomical passage of the sun over their territories.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Tools Grid -->
+    <section class="py-12 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Related Productivity Tools</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <a href="#world-clock" class="p-6 bg-slate-50 hover:bg-brand-50/50 rounded-2xl border border-slate-200 hover:border-brand-200 transition-all group">
+                    <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center text-xl mb-3 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-lg group-hover:text-brand-600 transition-colors">World Clock</h3>
+                    <p class="text-xs text-slate-500 mt-1">View real-time clocks across all major world capitals simultaneously.</p>
+                </a>
+                <a href="#meeting-planner" class="p-6 bg-slate-50 hover:bg-brand-50/50 rounded-2xl border border-slate-200 hover:border-brand-200 transition-all group">
+                    <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center text-xl mb-3 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-lg group-hover:text-brand-600 transition-colors">Meeting Planner</h3>
+                    <p class="text-xs text-slate-500 mt-1">Schedule multi-city meetings with visual working hour overlap indicators.</p>
+                </a>
+                <a href="#" class="p-6 bg-slate-50 hover:bg-brand-50/50 rounded-2xl border border-slate-200 hover:border-brand-200 transition-all group">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-xl mb-3 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-hourglass-half"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-lg group-hover:text-brand-600 transition-colors">Date & Time Calculator</h3>
+                    <p class="text-xs text-slate-500 mt-1">Calculate exact days, hours, and minutes between two dates.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<!-- Multi-column Footer -->
+<footer class="bg-slate-900 text-slate-400 text-sm border-t border-slate-800 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <!-- Col 1: About -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2 text-white font-bold text-lg">
+            <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
+              <i class="fa-solid fa-calculator"></i>
+            </div>
+            <span>Calculator<span class="text-indigo-400">-Pro</span></span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Calculator Pro provides free, fast, and clinically accurate online tools for health, financial, mathematical, and everyday conversion needs.
+          </p>
+          <div class="text-xs text-slate-500">
+            &copy; <span id="current-year">2026</span> Calculator Pro. All rights reserved.
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Quick Links</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Unit Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Length Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Weight Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Temperature Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Volume & Area Converter</a></li>
+          </ul>
+        </div>
+        <!-- Column 3: Tools & Resources -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Calculators</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="age-calculator.html" class="hover:text-white transition-colors">Age Calculator</a></li>
+            <li><a href="time-calculator.html" class="hover:text-white transition-colors">Time Calculator</a></li>
+            <li><a href="sip-calculator.html" class="hover:text-white transition-colors">SIP Financial Calculator</a></li>
+            <li><a href="bmi-calculator.html" class="hover:text-white transition-colors">BMI Health Calculator</a></li>
+            <li><a href="percentage-calculator.html" class="hover:text-white transition-colors">Percentage Calculator</a></li>
+          </ul>
+        </div>
+
+         <!-- Column 4: Legal & Contact -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Legal & Info</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Editorial Guidelines</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+<script>
+// Data Store for Timezones with flags & offsets
+const TIMEZONES = [
+    { name: "India (IST)", zone: "Asia/Kolkata", flag: "🇮🇳", abbr: "IST" },
+    { name: "New York (EST/EDT)", zone: "America/New_York", flag: "🇺🇸", abbr: "EDT" },
+    { name: "Los Angeles (PST/PDT)", zone: "America/Los_Angeles", flag: "🇺🇸", abbr: "PDT" },
+    { name: "London (GMT/BST)", zone: "Europe/London", flag: "🇬🇧", abbr: "BST" },
+    { name: "Paris / Berlin (CET/CEST)", zone: "Europe/Paris", flag: "🇫🇷", abbr: "CEST" },
+    { name: "Dubai (GST)", zone: "Asia/Dubai", flag: "🇦🇪", abbr: "GST" },
+    { name: "Singapore (SGT)", zone: "Asia/Singapore", flag: "🇸🇬", abbr: "SGT" },
+    { name: "Tokyo (JST)", zone: "Asia/Tokyo", flag: "🇯🇵", abbr: "JST" },
+    { name: "Sydney (AEST/AEDT)", zone: "Australia/Sydney", flag: "🇦🇺", abbr: "AEST" },
+    { name: "Universal Time (UTC)", zone: "UTC", flag: "🌐", abbr: "UTC" }
+];
+
+// Popular conversions preset matrix
+const POPULAR_CONVERSIONS = [
+    { from: "Asia/Kolkata", to: "America/New_York", label: "IST ↔ EST / EDT" },
+    { from: "Asia/Kolkata", to: "America/Los_Angeles", label: "IST ↔ PST / PDT" },
+    { from: "Asia/Kolkata", to: "UTC", label: "IST ↔ GMT / UTC" },
+    { from: "Asia/Kolkata", to: "Europe/Paris", label: "IST ↔ CET / CEST" },
+    { from: "America/New_York", to: "America/Los_Angeles", label: "EST ↔ PST" },
+    { from: "UTC", to: "Asia/Kolkata", label: "UTC ↔ IST" },
+    { from: "Europe/London", to: "America/New_York", label: "London ↔ New York" },
+    { from: "Asia/Tokyo", to: "America/New_York", label: "Tokyo ↔ New York" }
+];
+
+// World Clock major city list
+const WORLD_CITIES = [
+    { city: "New York", country: "USA", zone: "America/New_York", flag: "🇺🇸" },
+    { city: "London", country: "UK", zone: "Europe/London", flag: "🇬🇧" },
+    { city: "Dubai", country: "UAE", zone: "Asia/Dubai", flag: "🇦🇪" },
+    { city: "New Delhi", country: "India", zone: "Asia/Kolkata", flag: "🇮🇳" },
+    { city: "Singapore", country: "Singapore", zone: "Asia/Singapore", flag: "🇸🇬" },
+    { city: "Tokyo", country: "Japan", zone: "Asia/Tokyo", flag: "🇯🇵" },
+    { city: "Sydney", country: "Australia", zone: "Australia/Sydney", flag: "🇦🇺" },
+    { city: "Los Angeles", country: "USA", zone: "America/Los_Angeles", flag: "🇺🇸" }
+];
+
+// Selected active state
+let selectedFromTz = TIMEZONES[0];
+let selectedToTz = TIMEZONES[1];
+
+document.addEventListener('DOMContentLoaded', () => {
+    initMobileMenu();
+    initDateTimePicker();
+    renderDropdownOptions('from');
+    renderDropdownOptions('to');
+    bindDropdownEvents();
+    bindPopularConversions();
+    bindAccordion();
+    bindActionButtons();
+    
+    // Initial Conversion calculation
+    calculateConversion();
+
+    // Start Live Clocks
+    renderWorldClockCards();
+    setInterval(updateWorldClockCards, 1000);
+
+    // Render Planner Grid
+    renderMeetingPlanner();
+});
+
+// Mobile Menu Handler
+function initMobileMenu() {
+    const btn = document.getElementById('calc-mobile-menu-btn');
+    const menu = document.getElementById('calc-mobile-menu');
+    const menuIcon = document.getElementById('calc-menu-icon');
+    const closeIcon = document.getElementById('calc-close-icon');
+
+    if (btn && menu) {
+        btn.addEventListener('click', () => {
+            const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+            btn.setAttribute('aria-expanded', !isExpanded);
+            menu.classList.toggle('hidden');
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+    }
+}
+
+// Setup DateTime picker with standard browser local ISO string
+function initDateTimePicker() {
+    const picker = document.getElementById('datetime-picker');
+    const now = new Date();
+    picker.value = formatDateForInput(now);
+
+    picker.addEventListener('change', calculateConversion);
+}
+
+function formatDateForInput(date) {
+    const pad = (n) => n.toString().padStart(2, '0');
+    return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}T${pad(date.getHours())}:${pad(date.getMinutes())}`;
+}
+
+// Calculate Offset Helper
+function getFormattedOffset(zoneName, date = new Date()) {
+    try {
+        const formatter = new Intl.DateTimeFormat('en-US', {
+            timeZone: zoneName,
+            timeZoneName: 'shortOffset'
+        });
+        const parts = formatter.formatToParts(date);
+        const tzPart = parts.find(p => p.type === 'timeZoneName');
+        return tzPart ? tzPart.value : 'UTC';
+    } catch (e) {
+        return 'UTC';
+    }
+}
+
+// Render Select Dropdowns
+function renderDropdownOptions(type) {
+    const container = document.getElementById(`${type}-tz-options`);
+    const searchInput = document.getElementById(`${type}-tz-search`);
+    const query = searchInput.value.toLowerCase();
+    
+    const now = new Date();
+    container.innerHTML = '';
+
+    TIMEZONES.filter(tz => tz.name.toLowerCase().includes(query) || tz.zone.toLowerCase().includes(query)).forEach(tz => {
+        const offset = getFormattedOffset(tz.zone, now);
+        const item = document.createElement('div');
+        item.className = "p-2.5 hover:bg-slate-100 rounded-lg cursor-pointer flex items-center justify-between text-sm transition-colors";
+        item.innerHTML = `
+            <div class="flex items-center gap-2.5 truncate">
+                <span class="text-base">${tz.flag}</span>
+                <span class="font-medium text-slate-800">${tz.name}</span>
+            </div>
+            <span class="text-xs text-slate-400 font-mono">${offset}</span>
+        `;
+        item.addEventListener('click', () => {
+            if (type === 'from') {
+                selectedFromTz = tz;
+                document.getElementById('from-tz-display').innerHTML = `
+                    <span class="text-xl">${tz.flag}</span>
+                    <span class="font-semibold text-slate-800">${tz.name}</span>
+                    <span class="text-xs text-slate-400">(${offset})</span>
+                `;
+                document.getElementById('from-tz-dropdown').classList.add('hidden');
+            } else {
+                selectedToTz = tz;
+                document.getElementById('to-tz-display').innerHTML = `
+                    <span class="text-xl">${tz.flag}</span>
+                    <span class="font-semibold text-slate-800">${tz.name}</span>
+                    <span class="text-xs text-slate-400">(${offset})</span>
+                `;
+                document.getElementById('to-tz-dropdown').classList.add('hidden');
+            }
+            calculateConversion();
+        });
+        container.appendChild(item);
+    });
+}
+
+// Bind Dropdown Toggle & Filter listeners
+function bindDropdownEvents() {
+    const fromBtn = document.getElementById('from-tz-btn');
+    const toBtn = document.getElementById('to-tz-btn');
+    const fromDropdown = document.getElementById('from-tz-dropdown');
+    const toDropdown = document.getElementById('to-tz-dropdown');
+
+    fromBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toDropdown.classList.add('hidden');
+        fromDropdown.classList.toggle('hidden');
+    });
+
+    toBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        fromDropdown.classList.add('hidden');
+        toDropdown.classList.toggle('hidden');
+    });
+
+    document.getElementById('from-tz-search').addEventListener('input', () => renderDropdownOptions('from'));
+    document.getElementById('to-tz-search').addEventListener('input', () => renderDropdownOptions('to'));
+
+    // Click outside to hide
+    document.addEventListener('click', (e) => {
+        if (!document.getElementById('from-timezone-container').contains(e.target)) {
+            fromDropdown.classList.add('hidden');
+        }
+        if (!document.getElementById('to-timezone-container').contains(e.target)) {
+            toDropdown.classList.add('hidden');
+        }
+    });
+
+    // Swap timezones button
+    document.getElementById('swap-tz-btn').addEventListener('click', () => {
+        const temp = selectedFromTz;
+        selectedFromTz = selectedToTz;
+        selectedToTz = temp;
+
+        const now = new Date();
+        document.getElementById('from-tz-display').innerHTML = `
+            <span class="text-xl">${selectedFromTz.flag}</span>
+            <span class="font-semibold text-slate-800">${selectedFromTz.name}</span>
+            <span class="text-xs text-slate-400">(${getFormattedOffset(selectedFromTz.zone, now)})</span>
+        `;
+        document.getElementById('to-tz-display').innerHTML = `
+            <span class="text-xl">${selectedToTz.flag}</span>
+            <span class="font-semibold text-slate-800">${selectedToTz.name}</span>
+            <span class="text-xs text-slate-400">(${getFormattedOffset(selectedToTz.zone, now)})</span>
+        `;
+        calculateConversion();
+    });
+}
+
+// Core Conversion Calculation Logic
+function calculateConversion() {
+    const dateInput = document.getElementById('datetime-picker').value;
+    if (!dateInput) return;
+
+    const sourceDate = new Date(dateInput);
+
+    // Format target time using Intl
+    const targetFormatter = new Intl.DateTimeFormat('en-US', {
+        timeZone: selectedToTz.zone,
+        hour: 'numeric',
+        minute: 'numeric',
+        hour12: true,
+        month: 'short',
+        day: 'numeric'
+    });
+
+    const sourceFormatter = new Intl.DateTimeFormat('en-US', {
+        timeZone: selectedFromTz.zone,
+        hour: 'numeric',
+        minute: 'numeric',
+        hour12: true
+    });
+
+    const formattedSourceTime = sourceFormatter.format(sourceDate);
+    const formattedTargetTime = targetFormatter.format(sourceDate);
+
+    // Render formula string
+    const formulaDisplay = document.getElementById('result-formula');
+    formulaDisplay.textContent = `${formattedSourceTime} ${selectedFromTz.abbr} = ${formattedTargetTime} ${selectedToTz.abbr}`;
+
+    // Calculate time difference in minutes
+    const fromOffsetMinutes = getTzOffsetMinutes(selectedFromTz.zone, sourceDate);
+    const toOffsetMinutes = getTzOffsetMinutes(selectedToTz.zone, sourceDate);
+    const diffMinutes = toOffsetMinutes - fromOffsetMinutes;
+
+    const diffHours = Math.floor(Math.abs(diffMinutes) / 60);
+    const remainingMins = Math.abs(diffMinutes) % 60;
+    
+    let diffText = "";
+    if (diffMinutes === 0) {
+        diffText = "Both locations are in the same time offset";
+    } else {
+        const relation = diffMinutes < 0 ? "behind" : "ahead of";
+        const minStr = remainingMins > 0 ? ` ${remainingMins}m` : '';
+        diffText = `${selectedToTz.name.split(' ')[0]} is ${diffHours}h${minStr} ${relation} ${selectedFromTz.name.split(' ')[0]}`;
+    }
+
+    document.getElementById('time-diff-badge').textContent = diffText;
+}
+
+function getTzOffsetMinutes(timeZone, date) {
+    const utcDate = new Date(date.toLocaleString('en-US', { timeZone: 'UTC' }));
+    const tzDate = new Date(date.toLocaleString('en-US', { timeZone }));
+    return Math.round((tzDate - utcDate) / 60000);
+}
+
+// Popular Conversions Grid
+function bindPopularConversions() {
+    const grid = document.getElementById('popular-conversions-grid');
+    grid.innerHTML = '';
+
+    POPULAR_CONVERSIONS.forEach(item => {
+        const card = document.createElement('button');
+        card.type = 'button';
+        card.className = "p-3.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-brand-50 hover:border-brand-300 transition-all text-left group flex items-center justify-between";
+        card.innerHTML = `
+            <span class="text-xs font-bold text-slate-700 group-hover:text-brand-600 transition-colors">${item.label}</span>
+            <i class="fa-solid fa-arrow-right text-slate-400 group-hover:text-brand-600 group-hover:translate-x-1 transition-all text-xs"></i>
+        `;
+        card.addEventListener('click', () => {
+            const f = TIMEZONES.find(t => t.zone === item.from) || TIMEZONES[0];
+            const t = TIMEZONES.find(tz => tz.zone === item.to) || TIMEZONES[1];
+            
+            selectedFromTz = f;
+            selectedToTz = t;
+
+            const now = new Date();
+            document.getElementById('from-tz-display').innerHTML = `
+                <span class="text-xl">${selectedFromTz.flag}</span>
+                <span class="font-semibold text-slate-800">${selectedFromTz.name}</span>
+                <span class="text-xs text-slate-400">(${getFormattedOffset(selectedFromTz.zone, now)})</span>
+            `;
+            document.getElementById('to-tz-display').innerHTML = `
+                <span class="text-xl">${selectedToTz.flag}</span>
+                <span class="font-semibold text-slate-800">${selectedToTz.name}</span>
+                <span class="text-xs text-slate-400">(${getFormattedOffset(selectedToTz.zone, now)})</span>
+            `;
+            calculateConversion();
+            document.getElementById('converter').scrollIntoView({ behavior: 'smooth' });
+        });
+        grid.appendChild(card);
+    });
+}
+
+// World Clock Render & Update
+function renderWorldClockCards() {
+    const grid = document.getElementById('world-clock-grid');
+    grid.innerHTML = '';
+
+    WORLD_CITIES.forEach(c => {
+        const card = document.createElement('div');
+        card.className = "bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between";
+        card.id = `clock-card-${c.city.replace(/\s+/g, '')}`;
+        grid.appendChild(card);
+    });
+    updateWorldClockCards();
+}
+
+function updateWorldClockCards() {
+    const now = new Date();
+    WORLD_CITIES.forEach(c => {
+        const card = document.getElementById(`clock-card-${c.city.replace(/\s+/g, '')}`);
+        if (!card) return;
+
+        const formatter = new Intl.DateTimeFormat('en-US', {
+            timeZone: c.zone,
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: true
+        });
+
+        const hour24 = parseInt(new Intl.DateTimeFormat('en-US', { timeZone: c.zone, hour: 'numeric', hour12: false }).format(now));
+        const isDay = hour24 >= 6 && hour24 < 18;
+
+        const dateStr = new Intl.DateTimeFormat('en-US', {
+            timeZone: c.zone,
+            weekday: 'short',
+            month: 'short',
+            day: 'numeric'
+        }).format(now);
+
+        card.innerHTML = `
+            <div class="flex items-center justify-between mb-3">
+                <div class="flex items-center gap-2">
+                    <span class="text-xl">${c.flag}</span>
+                    <div>
+                        <h3 class="font-bold text-slate-800 text-sm leading-none">${c.city}</h3>
+                        <span class="text-xs text-slate-400">${c.country}</span>
+                    </div>
+                </div>
+                <span class="${isDay ? 'text-amber-500 bg-amber-50' : 'text-indigo-400 bg-indigo-50'} p-2 rounded-xl text-xs">
+                    <i class="fa-solid ${isDay ? 'fa-sun' : 'fa-moon'}"></i>
+                </span>
+            </div>
+            <div>
+                <div class="text-2xl font-extrabold text-slate-900 tracking-tight font-mono">${formatter.format(now)}</div>
+                <div class="text-xs text-slate-500 mt-1 flex justify-between">
+                    <span>${dateStr}</span>
+                    <span class="font-semibold text-brand-600">${getFormattedOffset(c.zone, now)}</span>
+                </div>
+            </div>
+        `;
+    });
+}
+
+// Interactive Meeting Planner Grid
+function renderMeetingPlanner() {
+    const container = document.getElementById('planner-rows');
+    container.innerHTML = '';
+
+    const sampleCities = [
+        WORLD_CITIES[3], // Delhi
+        WORLD_CITIES[0], // NY
+        WORLD_CITIES[1]  // London
+    ];
+
+    const now = new Date();
+
+    sampleCities.forEach(c => {
+        const row = document.createElement('div');
+        row.className = "flex items-center gap-4";
+
+        let hoursHTML = '';
+        for (let i = 0; i < 24; i++) {
+            // Compute hour in local city offset
+            const hourFormatted = (i % 12 === 0 ? 12 : i % 12) + (i >= 12 ? 'p' : 'a');
+            const isWorkHour = i >= 9 && i <= 17;
+            const bgClass = isWorkHour ? 'bg-emerald-500 text-white font-semibold' : 'bg-slate-100 text-slate-500';
+
+            hoursHTML += `<div class="flex-1 text-center py-2 text-[10px] rounded ${bgClass}">${hourFormatted}</div>`;
+        }
+
+        row.innerHTML = `
+            <div class="w-36 flex-shrink-0 flex items-center gap-2">
+                <span>${c.flag}</span>
+                <span class="font-bold text-xs text-slate-800">${c.city}</span>
+            </div>
+            <div class="flex-grow flex gap-1">
+                ${hoursHTML}
+            </div>
+        `;
+        container.appendChild(row);
+    });
+}
+
+// Action Buttons: Now, Copy, Share
+function bindActionButtons() {
+    document.getElementById('use-current-btn').addEventListener('click', () => {
+        document.getElementById('datetime-picker').value = formatDateForInput(new Date());
+        calculateConversion();
+    });
+
+    document.getElementById('convert-btn').addEventListener('click', calculateConversion);
+
+    // Copy Result
+    document.getElementById('copy-btn').addEventListener('click', () => {
+        const formula = document.getElementById('result-formula').textContent;
+        const diff = document.getElementById('time-diff-badge').textContent;
+        const fullText = `${formula} (${diff})`;
+
+        // ExecCommand fallback
+        const textArea = document.createElement("textarea");
+        textArea.value = fullText;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+
+        const textSpan = document.getElementById('copy-btn-text');
+        textSpan.textContent = 'Copied!';
+        setTimeout(() => textSpan.textContent = 'Copy', 2000);
+    });
+
+    // Share Link
+    document.getElementById('share-btn').addEventListener('click', () => {
+        if (navigator.share) {
+            navigator.share({
+                title: 'Time Zone Converter Result',
+                text: document.getElementById('result-formula').textContent,
+                url: window.location.href,
+            }).catch(() => {});
+        } else {
+            alert('URL copied to clipboard!');
+        }
+    });
+}
+
+// Accordion Logic
+function bindAccordion() {
+    const buttons = document.querySelectorAll('.faq-toggle');
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector('i');
+            const isOpen = content.classList.contains('open');
+
+            document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
+            document.querySelectorAll('.faq-toggle i').forEach(i => i.classList.remove('rotate-180'));
+
+            if (!isOpen) {
+                content.classList.add('open');
+                icon.classList.add('rotate-180');
+            }
+        });
+    });
+}
+</script>
+</body>
+</html>

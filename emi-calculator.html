@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Online EMI Calculator - Loan EMI Calculator | Calculator-Pro</title>
+    <meta name="description" content="Use Calculator Pro's free online EMI loan calculator to instantly calculate your monthly repayments for home, car, or personal loans. View interactive graphs and a full amortization schedule!">
+    <meta name="keywords" content="emi calculator, loan emi calculator, free emi calculator, online emi calculator, home loan emi calculator, car loan emi, personal loan emi Free Online EMI Loan Calculator, Home Loan EMI Calculator, Car Loan EMI Calculator, Personal Loan Calculator, EMI Calculator Formula.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://calculator-pro.com/emi-calculator">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calculator-pro.com/emi-calculator">
+    <meta property="og:title" content="Free Online EMI Calculator - Loan EMI Calculator | Calculator-Pro">
+    <meta property="og:description" content="Calculate your loan EMI in seconds. View interactive chart breakdowns and complete amortization schedules for free.">
+    <meta property="og:image" content="https://placehold.co/1200x630/2563eb/ffffff?text=EMI+Calculator+Pro">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Online EMI Calculator | Calculator-Pro">
+    <meta name="twitter:description" content="Calculate your loan EMI in seconds with live charts and full amortization schedules.">
+    <meta name="twitter:image" content="https://placehold.co/1200x630/2563eb/ffffff?text=EMI+Calculator+Pro">
+
+    <!-- Fonts & Icons -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    
+
+    <!-- Chart.js CDN for Visual Insights -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    
+
+<link rel="stylesheet" href="./css/styles.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is EMI and how is it calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "EMI stands for Equated Monthly Installment. It is a fixed amount paid by a borrower to a lender on a specified date each calendar month. EMI consists of principal and interest components calculated using formula P x r x (1+r)^n / ((1+r)^n - 1)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this EMI calculator free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Calculator Pro's EMI tool is 100% free with no registration, no hidden fees, and unlimited usage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use this calculator for home loan and car loan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely! This versatile calculator supports all types of reducing balance loans including home, car, personal, education, and business loans."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does higher tenure reduce EMI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, choosing a longer loan tenure reduces your monthly EMI amount, but it increases the total interest payable over the lifetime of the loan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between reducing balance and flat interest rate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In a reducing balance method, interest is calculated only on the outstanding principal balance. In flat rate calculation, interest is charged on the original principal amount for the entire loan duration."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How accurate is this online EMI calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our calculator utilizes standard mathematical formulas used by major banks globally, providing near 100% precision. Minor variations may arise based on processing fees or bank specific rounding practices."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I calculate EMI in months instead of years?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, our EMI tool provides a toggle switch allowing you to seamlessly enter loan tenure in either Years or Months."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Section A: Site Branding & Navigation -->
+    <header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      
+      <!-- Brand Logo & Name -->
+      <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
+        <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
+          <i class="fa-solid fa-calculator text-lg"></i>
+        </div>
+        <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
+          Calculator<span class="text-indigo-600">-Pro</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-1" aria-label="Main Navigation">
+        
+        <!-- Category 1: Age -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Age
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="age-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="birthday-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Birthday Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="age-difference-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Diffrence Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Time -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Time & Date
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="time-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Time Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="date-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Date Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="work-days-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Work Days Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="time-zone-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">TimeZone Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Converter -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Converter
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="unit-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Unit Converter</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="cgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">CGPA to Percentage</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to Percentage</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sgpa-to-cgpa-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to CGPA</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="marks-to-percentage-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Marks to Percentage</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4: Financial -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Financial
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sip-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SIP Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="emi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">EMI Loan Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="Compound-Interest-Calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Compound Interest Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 5: Health -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Health
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute right-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="bmi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">BMI Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="waist-to-hip-ratio-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">WHR Calculator</a>
+            </div>
+          </div>
+        </div>
+		  
+		 
+
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex md:hidden">
+        <button id="calc-mobile-menu-btn" type="button" class="p-2.5 rounded-xl text-slate-600 hover:text-indigo-600 hover:bg-slate-100/80 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors duration-200" aria-controls="calc-mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+          <svg id="calc-menu-icon" class="w-6 h-6 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="calc-close-icon" class="w-6 h-6 hidden transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile Full-Width Menu Container -->
+  <div id="calc-mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white shadow-xl transition-all duration-200 ease-in-out">
+    <div class="px-4 pt-3 pb-6 space-y-4">
+      
+      <!-- Mobile Category: Age -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Age</div>
+        <a href="age-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Calculator</a>
+		  <a href="birthday-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Birthday Calculator</a>
+		  <a href="age-difference-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Diffrence Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Time -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Time & Date</div>
+        <a href="time-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Time Calculator</a>
+		  <a href="date-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Date Calculator</a>
+		  <a href="work-days-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Work Days Calculator</a>
+		  <a href="time-zone-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">TimeZone Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Converter -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Converter</div>
+        <a href="javascript:void(0)" onclick="openCalculator('length')" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Unit Converter</a>
+		  <a href="cgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">CGPA to Percentage</a>
+		  <a href="sgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to Percentage</a>
+		  <a href="sgpa-to-cgpa-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to CGPA</a>
+		  <a href="marks-to-percentage-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Marks to Percentage</a>
+      </div>
+
+      <!-- Mobile Category: Financial -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Financial</div>
+        <a href="sip-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SIP Calculator</a>
+		  <a href="emi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">EMI Loan Calculator</a>
+		  <a href="Compound-Interest-Calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Compound Interest Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Health -->
+      <div>
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Health</div>
+        <a href="bmi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">BMI Calculator</a>
+		  <a href="waist-to-hip-ratio-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">WHR Calculator</a>
+      </div>
+		
+		
+
+    </div>
+  </div>
+</header>
+
+    <!-- Section B: Above the fold / Hero section -->
+    <section class="bg-gradient-to-b from-indigo-50/60 via-white to-slate-50 pt-10 pb-12 px-4 sm:px-6 lg:px-8 border-b border-slate-100">
+        <div class="max-w-4xl mx-auto text-center space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-100/80 text-indigo-700 text-xs font-semibold uppercase tracking-wider">
+                <i class="fa-solid fa-bolt text-indigo-600"></i> Smart Financial Planning
+            </div>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                Free Online <span class="text-indigo-600">EMI Calculator</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto font-normal">
+                Calculate your Loan EMI in seconds – Accurate, Fast & Free
+            </p>
+            
+            <!-- Trust Badges -->
+            <div class="pt-2 flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs sm:text-sm font-semibold text-slate-600">
+                <span class="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-full shadow-sm border border-slate-200/80">
+                    <i class="fa-solid fa-circle-check text-emerald-500"></i> 100% Free
+                </span>
+                <span class="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-full shadow-sm border border-slate-200/80">
+                    <i class="fa-solid fa-user-shield text-indigo-500"></i> No Signup Required
+                </span>
+                <span class="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-full shadow-sm border border-slate-200/80">
+                    <i class="fa-solid fa-gauge-high text-blue-500"></i> Instant Calculation
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Tool Container -->
+    <main id="emi-tool" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 mb-16 w-full">
+        <div class="bg-white rounded-3xl shadow-xl shadow-slate-200/60 border border-slate-100 p-6 sm:p-8 md:p-10 transition-all">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+                
+                <!-- Section C: Input Fields Column -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+                        <h2 class="text-xl sm:text-2xl font-bold text-slate-800 flex items-center gap-2.5">
+                            <i class="fa-solid fa-sliders text-indigo-600"></i> Loan Details
+                        </h2>
+                        <span class="text-xs font-medium text-slate-400">Adjust sliders or type values</span>
+                    </div>
+
+                    <!-- Input 1: Loan Amount -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <label for="loanAmountInput" class="text-sm font-semibold text-slate-700">Loan Amount (₹)</label>
+                            <div class="relative rounded-xl border border-slate-200 focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-100 transition-all bg-slate-50/50 px-3 py-1.5 flex items-center">
+                                <span class="text-slate-400 font-medium mr-1">₹</span>
+                                <input type="number" id="loanAmountInput" value="1000000" min="10000" max="100000000" step="10000" class="w-32 sm:w-40 bg-transparent text-right font-bold text-slate-800 focus:outline-none">
+                            </div>
+                        </div>
+                        <input type="range" id="loanAmountSlider" min="10000" max="20000000" step="10000" value="1000000" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                        <div class="flex justify-between text-xs text-slate-400 font-medium px-0.5">
+                            <span>₹10,000</span>
+                            <span>₹1 Cr</span>
+                            <span>₹2 Cr</span>
+                        </div>
+                    </div>
+
+                    <!-- Input 2: Interest Rate -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <label for="interestRateInput" class="text-sm font-semibold text-slate-700">Interest Rate (% p.a.)</label>
+                            <div class="relative rounded-xl border border-slate-200 focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-100 transition-all bg-slate-50/50 px-3 py-1.5 flex items-center">
+                                <input type="number" id="interestRateInput" value="8.5" min="1" max="30" step="0.1" class="w-24 sm:w-28 bg-transparent text-right font-bold text-slate-800 focus:outline-none">
+                                <span class="text-slate-400 font-medium ml-1">%</span>
+                            </div>
+                        </div>
+                        <input type="range" id="interestRateSlider" min="1" max="30" step="0.1" value="8.5" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                        <div class="flex justify-between text-xs text-slate-400 font-medium px-0.5">
+                            <span>1%</span>
+                            <span>15%</span>
+                            <span>30%</span>
+                        </div>
+                    </div>
+
+                    <!-- Input 3: Loan Tenure -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center flex-wrap gap-2">
+                            <label for="tenureInput" class="text-sm font-semibold text-slate-700">Loan Tenure</label>
+                            
+                            <!-- Tenure Unit Toggle -->
+                            <div class="flex items-center gap-3">
+                                <div class="bg-slate-100 p-1 rounded-xl flex items-center text-xs font-semibold">
+                                    <button id="tenureYearsBtn" type="button" class="px-3 py-1 rounded-lg bg-indigo-600 text-white shadow-sm transition-all">Years</button>
+                                    <button id="tenureMonthsBtn" type="button" class="px-3 py-1 rounded-lg text-slate-600 hover:text-slate-900 transition-all">Months</button>
+                                </div>
+
+                                <div class="relative rounded-xl border border-slate-200 focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-100 transition-all bg-slate-50/50 px-3 py-1.5 flex items-center">
+                                    <input type="number" id="tenureInput" value="15" min="1" max="40" step="1" class="w-20 bg-transparent text-right font-bold text-slate-800 focus:outline-none">
+                                    <span id="tenureUnitLabel" class="text-slate-400 font-medium ml-1 text-xs">Yr</span>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="range" id="tenureSlider" min="1" max="30" step="1" value="15" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                        <div class="flex justify-between text-xs text-slate-400 font-medium px-0.5" id="tenureSliderLabels">
+                            <span>1 Year</span>
+                            <span>15 Years</span>
+                            <span>30 Years</span>
+                        </div>
+                    </div>
+
+                    <!-- Calculate Button -->
+                    <div class="pt-2">
+                        <button id="calculateBtn" type="button" class="w-full bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white font-bold py-4 px-6 rounded-2xl shadow-lg shadow-indigo-200 hover:shadow-indigo-300 transition-all duration-200 flex items-center justify-center gap-2 group">
+                            <span>Calculate Loan EMI</span>
+                            <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Section C & G: Results & Visual Insights Column -->
+                <div class="lg:col-span-5 bg-slate-50/80 rounded-2xl p-6 sm:p-8 border border-slate-100 space-y-6 flex flex-col justify-between">
+                    
+                    <div>
+                        <h3 class="text-xs font-extrabold uppercase tracking-widest text-slate-400 mb-4">Repayment Summary</h3>
+                        
+                        <!-- Monthly EMI Highlight -->
+                        <div class="bg-indigo-600 text-white rounded-2xl p-5 shadow-lg shadow-indigo-200 text-center relative overflow-hidden">
+                            <div class="absolute -right-4 -bottom-4 opacity-10 text-8xl font-black">₹</div>
+                            <span class="text-xs uppercase font-semibold tracking-wider text-indigo-100 block mb-1">Your Monthly EMI</span>
+                            <div id="resultEmi" class="text-3xl sm:text-4xl font-black tracking-tight">₹9,847</div>
+                        </div>
+
+                        <!-- Total Interest & Amount Breakdown Cards -->
+                        <div class="grid grid-cols-2 gap-3 mt-4">
+                            <div class="bg-white p-3.5 rounded-xl border border-slate-200/80 shadow-sm">
+                                <span class="text-xs font-semibold text-slate-400 block mb-1">Principal Amount</span>
+                                <span id="resultPrincipal" class="text-base font-bold text-slate-800">₹10,00,000</span>
+                            </div>
+                            <div class="bg-white p-3.5 rounded-xl border border-slate-200/80 shadow-sm">
+                                <span class="text-xs font-semibold text-slate-400 block mb-1">Total Interest</span>
+                                <span id="resultInterest" class="text-base font-bold text-amber-600">₹7,72,501</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-3.5 rounded-xl border border-slate-200/80 shadow-sm mt-3 flex justify-between items-center">
+                            <span class="text-xs font-semibold text-slate-500">Total Payable Amount</span>
+                            <span id="resultTotal" class="text-lg font-extrabold text-indigo-700">₹17,72,501</span>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Pie Chart (Section G) -->
+                    <div class="pt-2">
+                        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 text-center mb-3">Breakdown Chart</div>
+                        <div class="relative max-w-[220px] mx-auto h-[220px] flex items-center justify-center">
+                            <canvas id="emiChart"></canvas>
+                        </div>
+                        <div class="flex justify-center gap-6 text-xs font-semibold mt-4">
+                            <div class="flex items-center gap-1.5">
+                                <span class="w-3 h-3 rounded-full bg-indigo-600 inline-block"></span>
+                                <span class="text-slate-600">Principal</span>
+                            </div>
+                            <div class="flex items-center gap-1.5">
+                                <span class="w-3 h-3 rounded-full bg-amber-500 inline-block"></span>
+                                <span class="text-slate-600">Interest</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Collapsible Amortization Table Toggle -->
+            <div class="mt-10 border-t border-slate-100 pt-6">
+                <button id="toggleAmortizationBtn" type="button" class="w-full py-3 px-4 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold rounded-xl transition-colors flex items-center justify-between">
+                    <span class="flex items-center gap-2">
+                        <i class="fa-solid fa-table text-indigo-600"></i> View Complete Payment Schedule & Amortization Table
+                    </span>
+                    <i id="amortizationChevron" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                </button>
+
+                <!-- Collapsible Table Content -->
+                <div id="amortizationContainer" class="hidden mt-6 overflow-x-auto transition-all">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-lg font-bold text-slate-800">Amortization Schedule</h3>
+                        <div class="flex gap-2">
+                            <button id="viewYearlyBtn" type="button" class="px-3 py-1 text-xs font-semibold rounded-lg bg-indigo-600 text-white">Yearly</button>
+                            <button id="viewMonthlyBtn" type="button" class="px-3 py-1 text-xs font-semibold rounded-lg bg-slate-200 text-slate-700 hover:bg-slate-300">Monthly</button>
+                        </div>
+                    </div>
+                    
+                    <div class="max-h-96 overflow-y-auto rounded-xl border border-slate-200">
+                        <table class="w-full text-sm text-left text-slate-600">
+                            <thead class="text-xs uppercase bg-slate-100 text-slate-700 sticky top-0 font-bold">
+                                <tr>
+                                    <th scope="col" class="px-4 py-3" id="tableHeaderPeriod">Year</th>
+                                    <th scope="col" class="px-4 py-3">Opening Principal</th>
+                                    <th scope="col" class="px-4 py-3">EMI Paid</th>
+                                    <th scope="col" class="px-4 py-3">Principal Paid</th>
+                                    <th scope="col" class="px-4 py-3">Interest Paid</th>
+                                    <th scope="col" class="px-4 py-3">Closing Balance</th>
+                                </tr>
+                            </thead>
+                            <tbody id="amortizationBody" class="divide-y divide-slate-200 bg-white">
+                                <!-- Populated dynamically by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Educational Content Sections Container -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 mb-16">
+        
+        <!-- Section D: How to Use Section -->
+        <section class="bg-white rounded-3xl p-6 sm:p-10 shadow-sm border border-slate-100 space-y-6">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 flex items-center gap-3">
+                <i class="fa-solid fa-circle-info text-indigo-600"></i> How to Use Calculator-Pro's EMI Tool
+            </h2>
+            <p class="text-slate-600">Our EMI loan calculator makes financial planning fast and straightforward. Follow these four effortless steps to analyze your monthly commitments:</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 pt-2">
+                <div class="p-5 rounded-2xl bg-indigo-50/50 border border-indigo-100 space-y-2">
+                    <div class="w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-sm">1</div>
+                    <h3 class="font-bold text-slate-800 text-base">Enter Loan Amount</h3>
+                    <p class="text-xs text-slate-600">Drag the slider or type your required total loan principal in Rupees.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-indigo-50/50 border border-indigo-100 space-y-2">
+                    <div class="w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-sm">2</div>
+                    <h3 class="font-bold text-slate-800 text-base">Set Interest Rate</h3>
+                    <p class="text-xs text-slate-600">Input the annual interest rate (% p.a.) quoted by your lending bank.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-indigo-50/50 border border-indigo-100 space-y-2">
+                    <div class="w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-sm">3</div>
+                    <h3 class="font-bold text-slate-800 text-base">Select Tenure</h3>
+                    <p class="text-xs text-slate-600">Choose loan tenure duration in years or toggle to months for shorter terms.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-indigo-50/50 border border-indigo-100 space-y-2">
+                    <div class="w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-sm">4</div>
+                    <h3 class="font-bold text-slate-800 text-base">Review Insights</h3>
+                    <p class="text-xs text-slate-600">Instantly inspect your monthly EMI, pie chart, and amortization schedule.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section E: What is EMI? -->
+        <section class="bg-white rounded-3xl p-6 sm:p-10 shadow-sm border border-slate-100 space-y-4">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 flex items-center gap-3">
+                <i class="fa-solid fa-book-open text-indigo-600"></i> What is EMI (Equated Monthly Installment)?
+            </h2>
+            <p class="text-slate-600 leading-relaxed">
+                <strong>Equated Monthly Installment (EMI)</strong> is a fixed payment amount made by a borrower to a financial institution or lender on a fixed date each month. Every EMI payment pays off both the accrued interest and part of the original principal amount over a set number of years or months.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                <div class="p-4 rounded-xl border border-slate-200 bg-slate-50">
+                    <h3 class="font-bold text-slate-800 text-sm mb-1">Principal Component</h3>
+                    <p class="text-xs text-slate-600">The portion of the EMI directly paying down the original loan balance borrowed.</p>
+                </div>
+                <div class="p-4 rounded-xl border border-slate-200 bg-slate-50">
+                    <h3 class="font-bold text-slate-800 text-sm mb-1">Interest Component</h3>
+                    <p class="text-xs text-slate-600">The fee charged by the lender for borrowing funds, calculated on the outstanding balance.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section F: EMI Formula Section -->
+        <section class="bg-white rounded-3xl p-6 sm:p-10 shadow-sm border border-slate-100 space-y-6">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 flex items-center gap-3">
+                <i class="fa-solid fa-square-root-variable text-indigo-600"></i> EMI Calculation Formula
+            </h2>
+            <p class="text-slate-600">Financial institutions use a mathematical formula based on reducing balance interest rates to determine your exact monthly repayment:</p>
+
+            <div class="p-6 bg-slate-900 text-white rounded-2xl text-center space-y-3 font-mono shadow-inner">
+                <div class="text-xl sm:text-2xl text-indigo-300 font-bold">E = [P x r x (1+r)^n] / [(1+r)^n - 1]</div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                <div class="p-3 border border-slate-200 rounded-xl">
+                    <strong class="text-indigo-600">P (Principal):</strong> Total loan amount requested from bank.
+                </div>
+                <div class="p-3 border border-slate-200 rounded-xl">
+                    <strong class="text-indigo-600">r (Monthly Rate):</strong> Annual Interest Rate / (12 x 100).
+                </div>
+                <div class="p-3 border border-slate-200 rounded-xl">
+                    <strong class="text-indigo-600">n (Tenure Months):</strong> Loan duration expressed in total months.
+                </div>
+            </div>
+        </section>
+
+        <!-- Section H: Benefits of Calculator Pro -->
+        <section class="bg-white rounded-3xl p-6 sm:p-10 shadow-sm border border-slate-100 space-y-6">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 flex items-center gap-3">
+                <i class="fa-solid fa-star text-indigo-600"></i> Benefits of Using Calculator Pro’s Free EMI Tool
+            </h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="flex gap-4">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center shrink-0 font-bold">1</div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 text-base">100% Free & Instant</h3>
+                        <p class="text-sm text-slate-600 mt-1">No registration required, zero fees. Instant real-time updates as you drag sliders.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center shrink-0 font-bold">2</div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 text-base">Graphical Breakdown</h3>
+                        <p class="text-sm text-slate-600 mt-1">Visualize your total interest ratio versus principal through interactive doughnut charts.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center shrink-0 font-bold">3</div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 text-base">Amortization Schedule</h3>
+                        <p class="text-sm text-slate-600 mt-1">Access month-by-month or year-by-year breakdowns showing closing balances.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center shrink-0 font-bold">4</div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 text-base">Smarter Financial Decisions</h3>
+                        <p class="text-sm text-slate-600 mt-1">Compare different loan structures easily to find repayments that fit your household budget.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section I: Types of Loans -->
+        <section class="bg-white rounded-3xl p-6 sm:p-10 shadow-sm border border-slate-100 space-y-6">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 flex items-center gap-3">
+                <i class="fa-solid fa-layer-group text-indigo-600"></i> Calculate EMI for Different Loans
+            </h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <a href="#emi-tool" class="p-5 rounded-2xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all group">
+                    <i class="fa-solid fa-house-chimney text-2xl text-indigo-600 mb-2 block"></i>
+                    <h3 class="font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Home Loan EMI Calculator</h3>
+                    <p class="text-xs text-slate-500 mt-1">Typically long term (15-30 yrs) with competitive interest rates.</p>
+                </a>
+                <a href="#emi-tool" class="p-5 rounded-2xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all group">
+                    <i class="fa-solid fa-car text-2xl text-indigo-600 mb-2 block"></i>
+                    <h3 class="font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Car Loan EMI Calculator</h3>
+                    <p class="text-xs text-slate-500 mt-1">Medium term tenure (3-7 yrs) for automobile purchases.</p>
+                </a>
+                <a href="#emi-tool" class="p-5 rounded-2xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all group">
+                    <i class="fa-solid fa-user text-2xl text-indigo-600 mb-2 block"></i>
+                    <h3 class="font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Personal Loan Calculator</h3>
+                    <p class="text-xs text-slate-500 mt-1">Unsecured short term loans (1-5 yrs) with higher rates.</p>
+                </a>
+                <a href="#emi-tool" class="p-5 rounded-2xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all group">
+                    <i class="fa-solid fa-graduation-cap text-2xl text-indigo-600 mb-2 block"></i>
+                    <h3 class="font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Education Loan Calculator</h3>
+                    <p class="text-xs text-slate-500 mt-1">Financing higher education with moratorium periods.</p>
+                </a>
+                <a href="#emi-tool" class="p-5 rounded-2xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all group">
+                    <i class="fa-solid fa-briefcase text-2xl text-indigo-600 mb-2 block"></i>
+                    <h3 class="font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Business Loan Calculator</h3>
+                    <p class="text-xs text-slate-500 mt-1">Working capital and expansion financing for enterprises.</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Section J: Factors Affecting EMI -->
+        <section class="bg-white rounded-3xl p-6 sm:p-10 shadow-sm border border-slate-100 space-y-6">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 flex items-center gap-3">
+                <i class="fa-solid fa-chart-line text-indigo-600"></i> Factors That Affect Your Loan EMI
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-slate-600">
+                <div class="space-y-2">
+                    <h3 class="font-bold text-slate-800"><i class="fa-solid fa-sack-dollar text-indigo-500 mr-2"></i>1. Principal Loan Amount</h3>
+                    <p>The total capital borrowed directly impacts monthly EMI. Higher amounts result in higher monthly commitments.</p>
+                </div>
+                <div class="space-y-2">
+                    <h3 class="font-bold text-slate-800"><i class="fa-solid fa-percent text-indigo-500 mr-2"></i>2. Interest Rate</h3>
+                    <p>The rate charged by lenders. Lower interest rates lead to reduced interest burdens and cheaper EMIs.</p>
+                </div>
+                <div class="space-y-2">
+                    <h3 class="font-bold text-slate-800"><i class="fa-solid fa-calendar-days text-indigo-500 mr-2"></i>3. Loan Tenure</h3>
+                    <p>A longer tenure lowers your monthly payment but significantly increases total cumulative interest paid over time.</p>
+                </div>
+                <div class="space-y-2">
+                    <h3 class="font-bold text-slate-800"><i class="fa-solid fa-award text-indigo-500 mr-2"></i>4. Credit Score & Type</h3>
+                    <p>A high credit score (750+) unlocks preferential interest rates. Choice of fixed vs floating rates also alters repayments.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section K: Tips Section -->
+        <section class="bg-gradient-to-br from-indigo-900 to-slate-900 text-white rounded-3xl p-6 sm:p-10 shadow-xl space-y-6">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white flex items-center gap-3">
+                <i class="fa-solid fa-lightbulb text-amber-400"></i> Smart Tips to Reduce Your EMI
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs sm:text-sm">
+                <div class="bg-white/10 p-4 rounded-xl backdrop-blur-sm border border-white/10 space-y-1">
+                    <h3 class="font-bold text-amber-300">Increase Down Payment</h3>
+                    <p class="text-slate-300">Pay more upfront to reduce principal borrowing and lower monthly EMI.</p>
+                </div>
+                <div class="bg-white/10 p-4 rounded-xl backdrop-blur-sm border border-white/10 space-y-1">
+                    <h3 class="font-bold text-amber-300">Optimise Loan Tenure</h3>
+                    <p class="text-slate-300">Choose a tenure that balances manageable EMI with minimal total interest payout.</p>
+                </div>
+                <div class="bg-white/10 p-4 rounded-xl backdrop-blur-sm border border-white/10 space-y-1">
+                    <h3 class="font-bold text-amber-300">Compare Lenders</h3>
+                    <p class="text-slate-300">Always negotiate rates across multiple banks to lock in lowest APR.</p>
+                </div>
+                <div class="bg-white/10 p-4 rounded-xl backdrop-blur-sm border border-white/10 space-y-1">
+                    <h3 class="font-bold text-amber-300">Partial Prepayments</h3>
+                    <p class="text-slate-300">Make occasional lump sum prepayments to cut down remaining tenure and interest.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section L: FAQ Section (Accordion) -->
+        <section class="bg-white rounded-3xl p-6 sm:p-10 shadow-sm border border-slate-100 space-y-6">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 flex items-center gap-3">
+                <i class="fa-solid fa-circle-question text-indigo-600"></i> Frequently Asked Questions (FAQs)
+            </h2>
+
+            <div class="space-y-3" id="faqAccordion">
+                
+                <!-- FAQ Item 1 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                    <button type="button" class="faq-btn w-full px-5 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 flex justify-between items-center transition-colors">
+                        <span>What is EMI and how is it calculated?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-5 text-sm text-slate-600 space-y-2 pb-0">
+                        <p class="pt-2 pb-4">EMI stands for Equated Monthly Installment. It is calculated using the formula: P x r x (1+r)^n / ((1+r)^n - 1), where P is Principal, r is monthly rate, and n is duration in months.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                    <button type="button" class="faq-btn w-full px-5 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 flex justify-between items-center transition-colors">
+                        <span>Is this EMI calculator free to use?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-5 text-sm text-slate-600 space-y-2 pb-0">
+                        <p class="pt-2 pb-4">Yes, Calculator Pro’s EMI tool is completely 100% free with no sign-up or hidden subscriptions.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                    <button type="button" class="faq-btn w-full px-5 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 flex justify-between items-center transition-colors">
+                        <span>Can I use this calculator for home loan and car loan?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-5 text-sm text-slate-600 space-y-2 pb-0">
+                        <p class="pt-2 pb-4">Yes, this online calculator supports all reducing balance loan types including home loans, auto loans, personal loans, and education loans.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                    <button type="button" class="faq-btn w-full px-5 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 flex justify-between items-center transition-colors">
+                        <span>Does higher tenure reduce EMI?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-5 text-sm text-slate-600 space-y-2 pb-0">
+                        <p class="pt-2 pb-4">Yes, longer tenure reduces your monthly EMI amount, but it increases the overall interest paid over the entire tenure.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                    <button type="button" class="faq-btn w-full px-5 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 flex justify-between items-center transition-colors">
+                        <span>What is the difference between reducing balance and flat interest rate?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-5 text-sm text-slate-600 space-y-2 pb-0">
+                        <p class="pt-2 pb-4">In a reducing balance loan, interest is calculated only on the remaining unpaid loan amount each month. In flat interest rates, interest is charged on the initial borrowed principal throughout.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                    <button type="button" class="faq-btn w-full px-5 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 flex justify-between items-center transition-colors">
+                        <span>How accurate is this online EMI calculator?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-5 text-sm text-slate-600 space-y-2 pb-0">
+                        <p class="pt-2 pb-4">The calculator offers 100% mathematical precision based on standard banking formulas used globally.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 7 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                    <button type="button" class="faq-btn w-full px-5 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 flex justify-between items-center transition-colors">
+                        <span>Can I calculate EMI in months instead of years?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-5 text-sm text-slate-600 space-y-2 pb-0">
+                        <p class="pt-2 pb-4">Yes! Simply click the "Months" toggle button in the Loan Tenure input section.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section M: Related Calculators -->
+        <section id="related" class="bg-slate-100/70 rounded-3xl p-6 sm:p-10 border border-slate-200/60 space-y-6">
+            <h2 class="text-2xl font-extrabold text-slate-900 flex items-center gap-3">
+                <i class="fa-solid fa-shapes text-indigo-600"></i> Other Useful Calculators
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <a href="#" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all flex items-center gap-4 group">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-lg">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">SIP Calculator</h3>
+                        <p class="text-xs text-slate-500">Calculate mutual fund returns</p>
+                    </div>
+                </a>
+                <a href="#" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all flex items-center gap-4 group">
+                    <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center font-bold text-lg">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">BMI Calculator</h3>
+                        <p class="text-xs text-slate-500">Check body mass index</p>
+                    </div>
+                </a>
+                <a href="#" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all flex items-center gap-4 group">
+                    <div class="w-12 h-12 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center font-bold text-lg">
+                        <i class="fa-solid fa-cake-candles"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Age Calculator</h3>
+                        <p class="text-xs text-slate-500">Compute exact age in days & years</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Multi-column Footer -->
+<footer class="bg-slate-900 text-slate-400 text-sm border-t border-slate-800 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <!-- Col 1: About -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2 text-white font-bold text-lg">
+            <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
+              <i class="fa-solid fa-calculator"></i>
+            </div>
+            <span>Calculator<span class="text-indigo-400">-Pro</span></span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Calculator Pro provides free, fast, and clinically accurate online tools for health, financial, mathematical, and everyday conversion needs.
+          </p>
+          <div class="text-xs text-slate-500">
+            &copy; <span id="current-year">2026</span> Calculator Pro. All rights reserved.
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Quick Links</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Unit Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Length Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Weight Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Temperature Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Volume & Area Converter</a></li>
+          </ul>
+        </div>
+        <!-- Column 3: Tools & Resources -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Calculators</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="age-calculator.html" class="hover:text-white transition-colors">Age Calculator</a></li>
+            <li><a href="time-calculator.html" class="hover:text-white transition-colors">Time Calculator</a></li>
+            <li><a href="sip-calculator.html" class="hover:text-white transition-colors">SIP Financial Calculator</a></li>
+            <li><a href="bmi-calculator.html" class="hover:text-white transition-colors">BMI Health Calculator</a></li>
+            <li><a href="percentage-calculator.html" class="hover:text-white transition-colors">Percentage Calculator</a></li>
+          </ul>
+        </div>
+
+         <!-- Column 4: Legal & Contact -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Legal & Info</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Editorial Guidelines</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+    <!-- Vanilla JavaScript Application Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Header Mobile Menu Elements
+            const mobileMenuBtn = document.getElementById('calc-mobile-menu-btn');
+            const mobileMenu = document.getElementById('calc-mobile-menu');
+            const menuIcon = document.getElementById('calc-menu-icon');
+            const closeIcon = document.getElementById('calc-close-icon');
+
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+                    mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+                    mobileMenu.classList.toggle('hidden');
+                    menuIcon.classList.toggle('hidden');
+                    closeIcon.classList.toggle('hidden');
+                });
+            }
+
+            // Input Form Elements
+            const loanAmountInput = document.getElementById('loanAmountInput');
+            const loanAmountSlider = document.getElementById('loanAmountSlider');
+            const interestRateInput = document.getElementById('interestRateInput');
+            const interestRateSlider = document.getElementById('interestRateSlider');
+            const tenureInput = document.getElementById('tenureInput');
+            const tenureSlider = document.getElementById('tenureSlider');
+            const tenureYearsBtn = document.getElementById('tenureYearsBtn');
+            const tenureMonthsBtn = document.getElementById('tenureMonthsBtn');
+            const tenureUnitLabel = document.getElementById('tenureUnitLabel');
+            const tenureSliderLabels = document.getElementById('tenureSliderLabels');
+
+            // Result Display Elements
+            const resultEmi = document.getElementById('resultEmi');
+            const resultPrincipal = document.getElementById('resultPrincipal');
+            const resultInterest = document.getElementById('resultInterest');
+            const resultTotal = document.getElementById('resultTotal');
+
+            // Table Elements
+            const toggleAmortizationBtn = document.getElementById('toggleAmortizationBtn');
+            const amortizationContainer = document.getElementById('amortizationContainer');
+            const amortizationChevron = document.getElementById('amortizationChevron');
+            const amortizationBody = document.getElementById('amortizationBody');
+            const viewYearlyBtn = document.getElementById('viewYearlyBtn');
+            const viewMonthlyBtn = document.getElementById('viewMonthlyBtn');
+            const tableHeaderPeriod = document.getElementById('tableHeaderPeriod');
+
+            // State
+            let tenureIsYears = true;
+            let amortizationViewMode = 'yearly'; // 'yearly' or 'monthly'
+            let chartInstance = null;
+
+            // Format Currency Utility
+            function formatCurrency(val) {
+                return new Intl.NumberFormat('en-IN', {
+                    style: 'currency',
+                    currency: 'INR',
+                    maximumFractionDigits: 0
+                }).format(val);
+            }
+
+            // Synchronize Slider & Number Inputs
+            function syncInputs(input, slider, isTenure = false) {
+                input.addEventListener('input', () => {
+                    let val = parseFloat(input.value) || 0;
+                    slider.value = val;
+                    calculateEMI();
+                });
+
+                slider.addEventListener('input', () => {
+                    input.value = slider.value;
+                    calculateEMI();
+                });
+            }
+
+            syncInputs(loanAmountInput, loanAmountSlider);
+            syncInputs(interestRateInput, interestRateSlider);
+            syncInputs(tenureInput, tenureSlider, true);
+
+            // Tenure Unit Switching Toggle
+            tenureYearsBtn.addEventListener('click', () => {
+                if (!tenureIsYears) {
+                    tenureIsYears = true;
+                    tenureYearsBtn.className = 'px-3 py-1 rounded-lg bg-indigo-600 text-white shadow-sm transition-all';
+                    tenureMonthsBtn.className = 'px-3 py-1 rounded-lg text-slate-600 hover:text-slate-900 transition-all';
+                    tenureUnitLabel.textContent = 'Yr';
+                    
+                    // Adjust slider bounds for years
+                    tenureSlider.min = 1;
+                    tenureSlider.max = 30;
+                    tenureSlider.step = 1;
+                    tenureInput.value = Math.max(1, Math.round(tenureInput.value / 12));
+                    tenureSlider.value = tenureInput.value;
+                    
+                    tenureSliderLabels.innerHTML = '<span>1 Year</span><span>15 Years</span><span>30 Years</span>';
+                    calculateEMI();
+                }
+            });
+
+            tenureMonthsBtn.addEventListener('click', () => {
+                if (tenureIsYears) {
+                    tenureIsYears = false;
+                    tenureMonthsBtn.className = 'px-3 py-1 rounded-lg bg-indigo-600 text-white shadow-sm transition-all';
+                    tenureYearsBtn.className = 'px-3 py-1 rounded-lg text-slate-600 hover:text-slate-900 transition-all';
+                    tenureUnitLabel.textContent = 'Mo';
+
+                    // Adjust slider bounds for months
+                    tenureSlider.min = 1;
+                    tenureSlider.max = 360;
+                    tenureSlider.step = 1;
+                    tenureInput.value = tenureInput.value * 12;
+                    tenureSlider.value = tenureInput.value;
+
+                    tenureSliderLabels.innerHTML = '<span>1 Mo</span><span>180 Mo</span><span>360 Mo</span>';
+                    calculateEMI();
+                }
+            });
+
+            // Initialize Doughnut Chart
+            function initChart(principal, interest) {
+                const ctx = document.getElementById('emiChart').getContext('2d');
+                if (chartInstance) {
+                    chartInstance.destroy();
+                }
+
+                chartInstance = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Principal Amount', 'Total Interest'],
+                        datasets: [{
+                            data: [principal, interest],
+                            backgroundColor: ['#2563eb', '#f59e0b'],
+                            borderWidth: 0,
+                            hoverOffset: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { display: false },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        let label = context.label || '';
+                                        let value = context.raw || 0;
+                                        return `${label}: ${formatCurrency(value)}`;
+                                    }
+                                }
+                            }
+                        },
+                        cutout: '70%'
+                    }
+                });
+            }
+
+            // EMI Calculation Core Function
+            function calculateEMI() {
+                const principal = parseFloat(loanAmountInput.value) || 0;
+                const annualRate = parseFloat(interestRateInput.value) || 0;
+                let tenureMonths = parseFloat(tenureInput.value) || 0;
+
+                if (tenureIsYears) {
+                    tenureMonths = tenureMonths * 12;
+                }
+
+                if (principal <= 0 || annualRate <= 0 || tenureMonths <= 0) {
+                    resultEmi.textContent = '₹0';
+                    resultPrincipal.textContent = '₹0';
+                    resultInterest.textContent = '₹0';
+                    resultTotal.textContent = '₹0';
+                    return;
+                }
+
+                const monthlyRate = annualRate / (12 * 100);
+                
+                // EMI Formula: P * r * (1+r)^n / ((1+r)^n - 1)
+                const emi = Math.round(
+                    (principal * monthlyRate * Math.pow(1 + monthlyRate, tenureMonths)) /
+                    (Math.pow(1 + monthlyRate, tenureMonths) - 1)
+                );
+
+                const totalPayable = emi * tenureMonths;
+                const totalInterest = totalPayable - principal;
+
+                // Render Results
+                resultEmi.textContent = formatCurrency(emi);
+                resultPrincipal.textContent = formatCurrency(principal);
+                resultInterest.textContent = formatCurrency(totalInterest);
+                resultTotal.textContent = formatCurrency(totalPayable);
+
+                // Update Doughnut Chart
+                initChart(principal, totalInterest);
+
+                // Render Amortization Table
+                renderAmortization(principal, monthlyRate, tenureMonths, emi);
+            }
+
+            // Amortization Table Generator
+            function renderAmortization(principal, monthlyRate, totalMonths, emi) {
+                amortizationBody.innerHTML = '';
+                let currentBalance = principal;
+                
+                if (amortizationViewMode === 'yearly') {
+                    tableHeaderPeriod.textContent = 'Year';
+                    let yearCounter = 1;
+                    let yearlyPrincipal = 0;
+                    let yearlyInterest = 0;
+                    let yearlyEmiSum = 0;
+                    let openingBalance = principal;
+
+                    for (let month = 1; month <= totalMonths; month++) {
+                        const interestForMonth = currentBalance * monthlyRate;
+                        const principalForMonth = emi - interestForMonth;
+                        currentBalance -= principalForMonth;
+
+                        yearlyInterest += interestForMonth;
+                        yearlyPrincipal += principalForMonth;
+                        yearlyEmiSum += emi;
+
+                        if (month % 12 === 0 || month === totalMonths) {
+                            const tr = document.createElement('tr');
+                            tr.className = 'hover:bg-slate-50 transition-colors';
+                            tr.innerHTML = `
+                                <td class="px-4 py-3 font-semibold text-slate-800">Year ${yearCounter}</td>
+                                <td class="px-4 py-3">${formatCurrency(Math.max(0, openingBalance))}</td>
+                                <td class="px-4 py-3 font-medium text-slate-700">${formatCurrency(yearlyEmiSum)}</td>
+                                <td class="px-4 py-3 text-indigo-600 font-medium">${formatCurrency(yearlyPrincipal)}</td>
+                                <td class="px-4 py-3 text-amber-600 font-medium">${formatCurrency(yearlyInterest)}</td>
+                                <td class="px-4 py-3 font-semibold text-slate-800">${formatCurrency(Math.max(0, currentBalance))}</td>
+                            `;
+                            amortizationBody.appendChild(tr);
+
+                            openingBalance = currentBalance;
+                            yearCounter++;
+                            yearlyPrincipal = 0;
+                            yearlyInterest = 0;
+                            yearlyEmiSum = 0;
+                        }
+                    }
+                } else {
+                    tableHeaderPeriod.textContent = 'Month';
+                    for (let month = 1; month <= totalMonths; month++) {
+                        const openingBalance = currentBalance;
+                        const interestForMonth = currentBalance * monthlyRate;
+                        const principalForMonth = emi - interestForMonth;
+                        currentBalance -= principalForMonth;
+
+                        const tr = document.createElement('tr');
+                        tr.className = 'hover:bg-slate-50 transition-colors';
+                        tr.innerHTML = `
+                            <td class="px-4 py-3 font-semibold text-slate-800">Month ${month}</td>
+                            <td class="px-4 py-3">${formatCurrency(Math.max(0, openingBalance))}</td>
+                            <td class="px-4 py-3 font-medium text-slate-700">${formatCurrency(emi)}</td>
+                            <td class="px-4 py-3 text-indigo-600 font-medium">${formatCurrency(principalForMonth)}</td>
+                            <td class="px-4 py-3 text-amber-600 font-medium">${formatCurrency(interestForMonth)}</td>
+                            <td class="px-4 py-3 font-semibold text-slate-800">${formatCurrency(Math.max(0, currentBalance))}</td>
+                        `;
+                        amortizationBody.appendChild(tr);
+                    }
+                }
+            }
+
+            // Amortization Toggle Controls
+            toggleAmortizationBtn.addEventListener('click', () => {
+                amortizationContainer.classList.toggle('hidden');
+                amortizationChevron.classList.toggle('rotate-180');
+            });
+
+            viewYearlyBtn.addEventListener('click', () => {
+                amortizationViewMode = 'yearly';
+                viewYearlyBtn.className = 'px-3 py-1 text-xs font-semibold rounded-lg bg-indigo-600 text-white';
+                viewMonthlyBtn.className = 'px-3 py-1 text-xs font-semibold rounded-lg bg-slate-200 text-slate-700 hover:bg-slate-300';
+                calculateEMI();
+            });
+
+            viewMonthlyBtn.addEventListener('click', () => {
+                amortizationViewMode = 'monthly';
+                viewMonthlyBtn.className = 'px-3 py-1 text-xs font-semibold rounded-lg bg-indigo-600 text-white';
+                viewYearlyBtn.className = 'px-3 py-1 text-xs font-semibold rounded-lg bg-slate-200 text-slate-700 hover:bg-slate-300';
+                calculateEMI();
+            });
+
+            // Calculate Button Trigger
+            document.getElementById('calculateBtn').addEventListener('click', calculateEMI);
+
+            // Accordion FAQ Interactivity
+            const faqBtns = document.querySelectorAll('.faq-btn');
+            faqBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const content = btn.nextElementSibling;
+                    const icon = btn.querySelector('i');
+                    const isOpen = content.classList.contains('open');
+
+                    // Close other accordions
+                    document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
+                    document.querySelectorAll('.faq-btn i').forEach(i => i.classList.remove('rotate-180'));
+
+                    if (!isOpen) {
+                        content.classList.add('open');
+                        icon.classList.add('rotate-180');
+                    }
+                });
+            });
+
+            // Initial calculation run on page load
+            calculateEMI();
+        });
+    </script>
+</body>
+</html>

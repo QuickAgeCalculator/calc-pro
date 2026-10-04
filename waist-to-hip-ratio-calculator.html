@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waist to Hip Ratio Calculator – Free WHR Calculator | Calculator Pro</title>
+    <meta name="description" content="Calculate your waist-to-hip ratio (WHR) online for free. Enter your waist and hip measurements to instantly calculate your WHR and understand what the ratio means for your health.">
+    <meta name="keywords" content="waist to hip ratio calculator, waist hip ratio calculator, waist-to-hip ratio calculator, WHR calculator, waist to hip ratio, waist hip ratio formula, calculate waist to hip ratio, waist hip ratio calculator for male, waist hip ratio calculator for female, healthy waist to hip ratio, WHR calculator online, waist circumference calculator, hip circumference calculator, body fat distribution calculator">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://calculatorpro.com/health/waist-to-hip-ratio-calculator">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Waist to Hip Ratio Calculator – Free WHR Calculator | Calculator Pro">
+    <meta property="og:description" content="Calculate your waist-to-hip ratio (WHR) online for free. Get instant body shape and health risk insights based on WHO guidelines.">
+    <meta property="og:url" content="https://calculatorpro.com/health/waist-to-hip-ratio-calculator">
+    <meta property="og:site_name" content="Calculator Pro">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=630&fit=crop">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Waist to Hip Ratio Calculator – Calculator Pro">
+    <meta name="twitter:description" content="Calculate your WHR ratio quickly and accurately. Free online tool with WHO health risk categories.">
+
+    <!-- Tailwind CSS CDN -->
+   
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom CSS Styles -->
+    
+
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- JSON-LD Structured Data (WebApplication, FAQPage, HowTo) -->
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Waist to Hip Ratio Calculator",
+        "url": "https://calculatorpro.com/health/waist-to-hip-ratio-calculator",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript and HTML5 support",
+        "description": "Calculate your waist-to-hip ratio (WHR) instantly to determine body shape and health risk based on WHO guidelines.",
+        "creator": {
+          "@type": "Organization",
+          "name": "Calculator Pro"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to Calculate Waist to Hip Ratio",
+        "description": "Follow these steps to accurately measure and calculate your Waist-to-Hip Ratio (WHR).",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Measure Waist",
+            "text": "Measure your waist at the narrowest point, usually just above the belly button."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Measure Hips",
+            "text": "Measure your hips at the widest point around your buttocks."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Select Units and Gender",
+            "text": "Choose your preferred measurement unit (cm or inches) and your biological sex."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Calculate WHR",
+            "text": "Click the Calculate button to view your WHR value, body shape type, and health risk level."
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a good waist to hip ratio?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "According to the World Health Organization (WHO), a healthy WHR is 0.85 or less for women, and 0.90 or less for men."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is waist to hip ratio accurate?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, WHR is considered a highly reliable metric for evaluating body fat distribution and central obesity, which correlates strongly with cardiovascular and metabolic risks."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I calculate WHR without measuring tape?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For accurate numerical results, a non-stretch measuring tape is recommended. Alternatively, you can use a string and measure it against a ruler."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does age affect ideal WHR?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "While body composition naturally shifts with age, WHO standard cut-offs remain constant as baseline indicators of cardiovascular and health risks."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How often should I check my WHR?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Checking once every 2 to 4 weeks is sufficient when tracking fitness or weight management progress."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is WHR better than body fat percentage?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "WHR specifically measures abdominal fat distribution, making it superior to BMI and highly complementary to total body fat percentage for assessing disease risk."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is this WHR calculator free forever?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, Calculator Pro's WHR calculator is 100% free with no registration required."
+            }
+          }
+        ]
+      }
+    ]
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+  <!-- A. Site Branding & Navigation -->
+  <header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      
+      <!-- Brand Logo & Name -->
+      <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
+        <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
+          <i class="fa-solid fa-calculator text-lg"></i>
+        </div>
+        <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
+          Calculator<span class="text-indigo-600">-Pro</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-1" aria-label="Main Navigation">
+        
+        <!-- Category 1: Age -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Age
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="age-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="birthday-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Birthday Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="age-difference-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Diffrence Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Time -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Time & Date
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="time-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Time Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="date-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Date Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="work-days-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Work Days Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="time-zone-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">TimeZone Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Converter -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Converter
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="unit-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Unit Converter</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="cgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">CGPA to Percentage</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to Percentage</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sgpa-to-cgpa-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to CGPA</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="marks-to-percentage-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Marks to Percentage</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4: Financial -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Financial
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sip-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SIP Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="emi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">EMI Loan Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="Compound-Interest-Calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Compound Interest Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 5: Health -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Health
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute right-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="bmi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">BMI Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="waist-to-hip-ratio-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">WHR Calculator</a>
+            </div>
+          </div>
+        </div>
+		  
+		 
+
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex md:hidden">
+        <button id="calc-mobile-menu-btn" type="button" class="p-2.5 rounded-xl text-slate-600 hover:text-indigo-600 hover:bg-slate-100/80 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors duration-200" aria-controls="calc-mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+          <svg id="calc-menu-icon" class="w-6 h-6 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="calc-close-icon" class="w-6 h-6 hidden transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile Full-Width Menu Container -->
+  <div id="calc-mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white shadow-xl transition-all duration-200 ease-in-out">
+    <div class="px-4 pt-3 pb-6 space-y-4">
+      
+      <!-- Mobile Category: Age -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Age</div>
+        <a href="age-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Calculator</a>
+		  <a href="birthday-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Birthday Calculator</a>
+		  <a href="age-difference-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Diffrence Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Time -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Time & Date</div>
+        <a href="time-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Time Calculator</a>
+		  <a href="date-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Date Calculator</a>
+		  <a href="work-days-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Work Days Calculator</a>
+		  <a href="time-zone-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">TimeZone Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Converter -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Converter</div>
+        <a href="javascript:void(0)" onclick="openCalculator('length')" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Unit Converter</a>
+		  <a href="cgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">CGPA to Percentage</a>
+		  <a href="sgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to Percentage</a>
+		  <a href="sgpa-to-cgpa-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to CGPA</a>
+		  <a href="marks-to-percentage-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Marks to Percentage</a>
+      </div>
+
+      <!-- Mobile Category: Financial -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Financial</div>
+        <a href="sip-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SIP Calculator</a>
+		  <a href="emi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">EMI Loan Calculator</a>
+		  <a href="Compound-Interest-Calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Compound Interest Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Health -->
+      <div>
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Health</div>
+        <a href="bmi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">BMI Calculator</a>
+		  <a href="waist-to-hip-ratio-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">WHR Calculator</a>
+      </div>
+		
+		
+
+    </div>
+  </div>
+</header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="flex-grow">
+    
+    <!-- B. Above the fold / Hero section with Interactive Tool -->
+    <section class="relative bg-gradient-to-b from-indigo-50/60 via-slate-50 to-slate-50 pt-10 pb-16 px-4 sm:px-6 lg:px-8 border-b border-slate-200/60">
+      <div class="max-w-5xl mx-auto">
+        
+        <!-- Hero Title Header -->
+        <div class="text-center max-w-3xl mx-auto mb-10">
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold tracking-wide uppercase mb-4">
+            <i class="fa-solid fa-heart-pulse"></i> WHO Standard Compliant
+          </span>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            Waist to Hip Ratio Calculator
+          </h1>
+          <p class="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
+            Calculate your Waist-to-Hip Ratio (WHR) instantly with our free online tool. WHR is a simple yet powerful indicator of body fat distribution and health risks related to heart disease, diabetes, and metabolic syndrome. Enter your waist and hip measurements below to get accurate results for both men and women.
+          </p>
+        </div>
+
+        <!-- WHR Calculator Tool Card -->
+        <div id="calculator" class="bg-white rounded-3xl shadow-xl shadow-slate-200/60 border border-slate-100 p-6 sm:p-8 md:p-10 transition-all duration-300">
+          
+          <form id="whr-form" onsubmit="event.preventDefault(); calculateWHR();" class="space-y-6">
+            
+            <!-- Unit & Gender Control Bar -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-slate-50 p-2 rounded-2xl border border-slate-100">
+              
+              <!-- Gender Selection -->
+              <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1 px-1">Biological Sex</label>
+                <div class="grid grid-cols-2 gap-1 bg-white p-1 rounded-xl border border-slate-200 shadow-sm">
+                  <button type="button" id="btn-female" onclick="setGender('female')" class="py-2.5 px-3 text-sm font-semibold rounded-lg flex items-center justify-center gap-2 transition-all bg-indigo-600 text-white shadow-sm">
+                    <i class="fa-solid fa-venus"></i> Female
+                  </button>
+                  <button type="button" id="btn-male" onclick="setGender('male')" class="py-2.5 px-3 text-sm font-semibold rounded-lg flex items-center justify-center gap-2 transition-all text-slate-600 hover:text-slate-900">
+                    <i class="fa-solid fa-mars"></i> Male
+                  </button>
+                </div>
+              </div>
+
+              <!-- Unit Toggle -->
+              <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1 px-1">Unit of Measurement</label>
+                <div class="grid grid-cols-2 gap-1 bg-white p-1 rounded-xl border border-slate-200 shadow-sm">
+                  <button type="button" id="btn-cm" onclick="setUnit('cm')" class="py-2.5 px-3 text-sm font-semibold rounded-lg flex items-center justify-center gap-1.5 transition-all bg-indigo-600 text-white shadow-sm">
+                    Centimeters (cm)
+                  </button>
+                  <button type="button" id="btn-in" onclick="setUnit('in')" class="py-2.5 px-3 text-sm font-semibold rounded-lg flex items-center justify-center gap-1.5 transition-all text-slate-600 hover:text-slate-900">
+                    Inches (in)
+                  </button>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Input Fields Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              
+              <!-- Waist Circumference Input -->
+              <div>
+                <div class="flex justify-between items-center mb-2">
+                  <label for="waist-input" class="block text-sm font-semibold text-slate-700">
+                    Waist Circumference
+                  </label>
+                  <span class="unit-label text-xs font-medium text-slate-500">(cm)</span>
+                </div>
+                <div class="relative rounded-xl shadow-sm">
+                  <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                    <i class="fa-solid fa-ruler-horizontal"></i>
+                  </div>
+                  <input type="number" step="0.1" min="10" max="300" id="waist-input" placeholder="e.g. 75" required class="block w-full pl-10 pr-12 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 font-semibold focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-base transition-colors" oninput="liveUpdate()">
+                  <div class="absolute inset-y-0 right-0 pr-3.5 flex items-center pointer-events-none text-slate-400 font-medium text-sm unit-label">
+                    cm
+                  </div>
+                </div>
+                <p class="mt-1.5 text-xs text-slate-500">Narrowest part above navel</p>
+              </div>
+
+              <!-- Hip Circumference Input -->
+              <div>
+                <div class="flex justify-between items-center mb-2">
+                  <label for="hip-input" class="block text-sm font-semibold text-slate-700">
+                    Hip Circumference
+                  </label>
+                  <span class="unit-label text-xs font-medium text-slate-500">(cm)</span>
+                </div>
+                <div class="relative rounded-xl shadow-sm">
+                  <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                    <i class="fa-solid fa-tape"></i>
+                  </div>
+                  <input type="number" step="0.1" min="10" max="300" id="hip-input" placeholder="e.g. 95" required class="block w-full pl-10 pr-12 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 font-semibold focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-base transition-colors" oninput="liveUpdate()">
+                  <div class="absolute inset-y-0 right-0 pr-3.5 flex items-center pointer-events-none text-slate-400 font-medium text-sm unit-label">
+                    cm
+                  </div>
+                </div>
+                <p class="mt-1.5 text-xs text-slate-500">Widest part around buttocks</p>
+              </div>
+
+            </div>
+
+            <!-- Action Button -->
+            <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-emerald-200 hover:shadow-xl hover:shadow-emerald-300 transition-all duration-200 text-lg flex items-center justify-center gap-2 group">
+              <i class="fa-solid fa-calculator group-hover:scale-110 transition-transform"></i> Calculate Waist to Hip Ratio
+            </button>
+
+          </form>
+
+          <!-- Result Card Output (Hidden initially or dynamic) -->
+          <div id="result-box" class="mt-8 pt-8 border-t border-slate-100 hidden">
+            
+            <div class="bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-200/80">
+              
+              <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+                
+                <!-- Main Value Display -->
+                <div class="md:col-span-5 text-center md:text-left border-b md:border-b-0 md:border-r border-slate-200 pb-6 md:pb-0 md:pr-6">
+                  <span class="text-xs font-bold uppercase tracking-wider text-slate-400 block mb-1">Your Waist-to-Hip Ratio</span>
+                  <div id="whr-value-display" class="text-5xl font-extrabold text-slate-900 my-2">
+                    0.00
+                  </div>
+                  <div id="risk-badge" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-sm font-bold bg-emerald-100 text-emerald-800 my-1">
+                    <span id="risk-badge-dot" class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                    <span id="risk-category-text">Low Risk</span>
+                  </div>
+                  <p id="gender-range-notice" class="text-xs text-slate-500 mt-2">Ideal range for females: &lt; 0.80</p>
+                </div>
+
+                <!-- Visual Gauge / Scale Meter -->
+                <div class="md:col-span-7 flex flex-col justify-center">
+                  <span class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3 text-center md:text-left">Health Risk Level Gauge</span>
+                  
+                  <!-- Color Scale Bar -->
+                  <div class="relative w-full">
+                    <div class="h-4 w-full rounded-full bg-gradient-to-r from-emerald-500 via-amber-400 to-rose-600 flex overflow-hidden shadow-inner"></div>
+                    
+                    <!-- Gauge Marker Needle -->
+                    <div id="gauge-marker" class="absolute -top-2 left-[10%] -translate-x-1/2 flex flex-col items-center transition-all duration-500 ease-out">
+                      <div class="w-0 h-0 border-l-[7px] border-l-transparent border-r-[7px] border-r-transparent border-t-[9px] border-t-slate-900"></div>
+                      <div class="w-2 h-3 bg-slate-900 rounded-full"></div>
+                    </div>
+                  </div>
+
+                  <!-- Range Scale Labels -->
+                  <div class="flex justify-between text-[11px] font-semibold text-slate-500 mt-2 px-1">
+                    <span class="text-emerald-600">Low Risk</span>
+                    <span class="text-amber-600">Moderate Risk</span>
+                    <span class="text-rose-600">High Risk</span>
+                  </div>
+
+                  <p id="risk-description" class="text-xs text-slate-600 mt-4 leading-relaxed bg-white p-3 rounded-xl border border-slate-200">
+                    Your ratio indicates a healthy lower body fat distribution with low metabolic risk.
+                  </p>
+                </div>
+
+              </div>
+
+              <!-- Share & Print Toolbar -->
+              <div class="mt-6 pt-4 border-t border-slate-200/60 flex flex-wrap items-center justify-between gap-3 text-xs">
+                <button type="button" onclick="copyResult()" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 transition-colors font-medium">
+                  <i class="fa-regular fa-copy"></i> Copy Result
+                </button>
+                <button type="button" onclick="window.print()" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 transition-colors font-medium">
+                  <i class="fa-solid fa-print"></i> Print / Save PDF
+                </button>
+                <button type="button" onclick="resetForm()" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 transition-colors font-medium text-rose-600">
+                  <i class="fa-solid fa-rotate-right"></i> Reset Calculator
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- B. How to Use the Waist to Hip Ratio Calculator -->
+    <section class="py-12 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-sm">
+        <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+          <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 text-sm">
+            <i class="fa-solid fa-list-check"></i>
+          </span>
+          How to Use the Waist to Hip Ratio Calculator
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+          
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-100 flex flex-col justify-between">
+            <div>
+              <span class="w-7 h-7 rounded-full bg-indigo-600 text-white font-bold text-xs flex items-center justify-center mb-3">1</span>
+              <h3 class="font-bold text-slate-800 text-sm mb-1">Measure Waist</h3>
+              <p class="text-xs text-slate-600">Measure your waist at the narrowest point (usually just above belly button).</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-100 flex flex-col justify-between">
+            <div>
+              <span class="w-7 h-7 rounded-full bg-indigo-600 text-white font-bold text-xs flex items-center justify-center mb-3">2</span>
+              <h3 class="font-bold text-slate-800 text-sm mb-1">Measure Hips</h3>
+              <p class="text-xs text-slate-600">Measure your hips at the widest point around your buttocks.</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-100 flex flex-col justify-between">
+            <div>
+              <span class="w-7 h-7 rounded-full bg-indigo-600 text-white font-bold text-xs flex items-center justify-center mb-3">3</span>
+              <h3 class="font-bold text-slate-800 text-sm mb-1">Enter Values</h3>
+              <p class="text-xs text-slate-600">Input both measurements in the calculator input fields above.</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-100 flex flex-col justify-between">
+            <div>
+              <span class="w-7 h-7 rounded-full bg-indigo-600 text-white font-bold text-xs flex items-center justify-center mb-3">4</span>
+              <h3 class="font-bold text-slate-800 text-sm mb-1">Select Unit &amp; Gender</h3>
+              <p class="text-xs text-slate-600">Toggle between cm or inches and choose biological sex for WHO accuracy.</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-100 flex flex-col justify-between">
+            <div>
+              <span class="w-7 h-7 rounded-full bg-indigo-600 text-white font-bold text-xs flex items-center justify-center mb-3">5</span>
+              <h3 class="font-bold text-slate-800 text-sm mb-1">Get Result</h3>
+              <p class="text-xs text-slate-600">Click Calculate to view your WHR value, health risk category, and guidance.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- C. What is Waist-to-Hip Ratio (WHR)? -->
+    <section class="py-10 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-sm space-y-6">
+        <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-3">
+          <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 text-sm">
+            <i class="fa-solid fa-circle-info"></i>
+          </span>
+          What is Waist-to-Hip Ratio (WHR)?
+        </h2>
+        
+        <p class="text-slate-600 text-base leading-relaxed">
+          The <strong>Waist-to-Hip Ratio (WHR)</strong> is a dimensionless anthropometric measurement calculated by dividing waist circumference by hip circumference. Established as a clinical benchmark by health organizations such as the <strong>World Health Organization (WHO)</strong> and the <strong>Centers for Disease Control and Prevention (CDC)</strong>, WHR assesses how fat is distributed across your upper and lower body.
+        </p>
+
+        <!-- Formula Box -->
+        <div class="p-5 rounded-xl bg-indigo-50/70 border border-indigo-100 text-center my-4">
+          <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 block mb-1">Mathematical Formula</span>
+          <div class="text-xl sm:text-2xl font-extrabold text-indigo-950 font-mono">
+            WHR = Waist Circumference ÷ Hip Circumference
+          </div>
+          <p class="text-xs text-indigo-700 mt-2">Both measurements must be in the same unit (cm or inches).</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+          
+          <!-- Apple Shape -->
+          <div class="p-5 rounded-xl bg-rose-50/50 border border-rose-100">
+            <div class="flex items-center gap-3 mb-2">
+              <div class="w-9 h-9 rounded-lg bg-rose-100 text-rose-600 flex items-center justify-center font-bold">
+                <i class="fa-solid fa-apple-whole"></i>
+              </div>
+              <h3 class="font-bold text-slate-800 text-lg">Apple Body Shape (Android Fat)</h3>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Carrying more weight around the abdomen (visceral fat stored around vital organs) results in an "apple" shape. This distribution carries higher risks for cardiovascular conditions, hypertension, and Type 2 diabetes.
+            </p>
+          </div>
+
+          <!-- Pear Shape -->
+          <div class="p-5 rounded-xl bg-emerald-50/50 border border-emerald-100">
+            <div class="flex items-center gap-3 mb-2">
+              <div class="w-9 h-9 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">
+                <i class="fa-solid fa-weight-scale"></i>
+              </div>
+              <h3 class="font-bold text-slate-800 text-lg">Pear Body Shape (Gynoid Fat)</h3>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Carrying weight around hips and thighs (subcutaneous fat) results in a "pear" shape. Subcutaneous fat is less metabolically active and associated with significantly lower health risks compared to visceral fat.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- D. Ideal Waist to Hip Ratio Chart for Men and Women -->
+    <section class="py-10 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-sm">
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-6">
+          <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-3">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 text-sm">
+              <i class="fa-solid fa-table"></i>
+            </span>
+            Ideal Waist to Hip Ratio Chart for Men and Women
+          </h2>
+          <span class="text-xs font-semibold px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md">
+            Based on WHO Guidelines
+          </span>
+        </div>
+
+        <!-- Table Responsive Container -->
+        <div class="overflow-x-auto rounded-xl border border-slate-200">
+          <table class="w-full text-left text-sm text-slate-700">
+            <thead class="bg-slate-100/80 text-xs uppercase tracking-wider text-slate-700 border-b border-slate-200">
+              <tr>
+                <th scope="col" class="py-4 px-6 font-bold">Gender</th>
+                <th scope="col" class="py-4 px-6 font-bold text-emerald-700 bg-emerald-50/50">Low Risk (Ideal)</th>
+                <th scope="col" class="py-4 px-6 font-bold text-amber-700 bg-amber-50/50">Moderate Risk</th>
+                <th scope="col" class="py-4 px-6 font-bold text-rose-700 bg-rose-50/50">High Risk</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 font-medium">
+              <tr class="hover:bg-slate-50/50 transition-colors">
+                <td class="py-4 px-6 font-bold text-slate-900 flex items-center gap-2">
+                  <i class="fa-solid fa-venus text-pink-500"></i> Women
+                </td>
+                <td class="py-4 px-6 bg-emerald-50/20 text-emerald-800 font-semibold">&lt; 0.80</td>
+                <td class="py-4 px-6 bg-amber-50/20 text-amber-800 font-semibold">0.80 – 0.85</td>
+                <td class="py-4 px-6 bg-rose-50/20 text-rose-800 font-semibold">&gt; 0.85</td>
+              </tr>
+              <tr class="hover:bg-slate-50/50 transition-colors">
+                <td class="py-4 px-6 font-bold text-slate-900 flex items-center gap-2">
+                  <i class="fa-solid fa-mars text-blue-500"></i> Men
+                </td>
+                <td class="py-4 px-6 bg-emerald-50/20 text-emerald-800 font-semibold">&lt; 0.90</td>
+                <td class="py-4 px-6 bg-amber-50/20 text-amber-800 font-semibold">0.90 – 0.95</td>
+                <td class="py-4 px-6 bg-rose-50/20 text-rose-800 font-semibold">&gt; 0.95</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-xs text-slate-500 mt-4 leading-relaxed">
+          * Note: World Health Organization (WHO) standards identify waist-to-hip ratios greater than 0.85 for women and 0.90 for men as key clinical cut-off points indicating substantial central obesity and elevated metabolic disease risk.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- F. How to Measure Your Waist and Hips Accurately -->
+    <section class="py-10 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-sm space-y-6">
+        <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-3">
+          <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 text-sm">
+            <i class="fa-solid fa-ruler"></i>
+          </span>
+          How to Measure Your Waist and Hips Accurately
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <!-- Instructions -->
+          <div class="space-y-4">
+            <h3 class="font-bold text-slate-800 text-base flex items-center gap-2">
+              <i class="fa-solid fa-circle-check text-emerald-600"></i> Step-by-Step Instructions
+            </h3>
+            <ul class="space-y-3 text-sm text-slate-600">
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-caret-right text-indigo-500 mt-1"></i>
+                <span><strong>Waist Measurement:</strong> Wrap the tape around your bare abdomen at the narrowest point, usually right above your navel. Keep tape snug but not tight.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-caret-right text-indigo-500 mt-1"></i>
+                <span><strong>Hip Measurement:</strong> Stand with feet together and measure around the widest part of your buttocks and hips.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-caret-right text-indigo-500 mt-1"></i>
+                <span><strong>Best Timing:</strong> Take measurements in the morning before eating or drinking for standard baseline consistency.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Common Mistakes -->
+          <div class="space-y-4 bg-amber-50/60 p-5 rounded-xl border border-amber-100">
+            <h3 class="font-bold text-amber-900 text-base flex items-center gap-2">
+              <i class="fa-solid fa-triangle-exclamation text-amber-600"></i> Common Mistakes to Avoid
+            </h3>
+            <ul class="space-y-2.5 text-sm text-amber-950">
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-xmark text-rose-500 mt-1"></i>
+                <span>Holding your breath or sucking in your stomach during waist measurement.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-xmark text-rose-500 mt-1"></i>
+                <span>Measuring over heavy clothing or bulky jeans.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-xmark text-rose-500 mt-1"></i>
+                <span>Pulling the measuring tape so tightly that it depresses skin tissues.</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- G & H. Health Risks & How to Lower WHR -->
+    <section class="py-10 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- Health Risks -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm space-y-4">
+          <h2 class="text-xl font-bold text-slate-900 flex items-center gap-3">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-rose-100 text-rose-600 text-sm">
+              <i class="fa-solid fa-heart-crack"></i>
+            </span>
+            Health Risks of High WHR
+          </h2>
+          <p class="text-xs text-slate-500 leading-relaxed">
+            Elevated abdominal obesity (high WHR) is directly linked to an increased risk of several metabolic and cardiovascular conditions:
+          </p>
+          <ul class="space-y-2.5 text-sm text-slate-700">
+            <li class="flex items-center gap-2.5">
+              <i class="fa-solid fa-circle-exclamation text-rose-500 text-xs"></i> Coronary Heart Disease &amp; Hypertension
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fa-solid fa-circle-exclamation text-rose-500 text-xs"></i> Type 2 Diabetes &amp; Insulin Resistance
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fa-solid fa-circle-exclamation text-rose-500 text-xs"></i> Metabolic Syndrome &amp; High Cholesterol
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fa-solid fa-circle-exclamation text-rose-500 text-xs"></i> Ischemic Stroke Risk
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fa-solid fa-circle-exclamation text-rose-500 text-xs"></i> Certain Chronic Inflammatory Conditions
+            </li>
+          </ul>
+        </div>
+
+        <!-- How to Lower WHR -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm space-y-4">
+          <h2 class="text-xl font-bold text-slate-900 flex items-center gap-3">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-emerald-100 text-emerald-600 text-sm">
+              <i class="fa-solid fa-arrow-trend-down"></i>
+            </span>
+            How to Lower Your WHR Naturally
+          </h2>
+          <p class="text-xs text-slate-500 leading-relaxed">
+            Reducing visceral abdominal fat requires consistent lifestyle habits over time:
+          </p>
+          <ul class="space-y-2.5 text-sm text-slate-700">
+            <li class="flex items-center gap-2.5">
+              <i class="fa-solid fa-check text-emerald-600 text-xs"></i> <strong>Strength &amp; Cardio:</strong> Combine resistance training with brisk cardio.
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fa-solid fa-check text-emerald-600 text-xs"></i> <strong>Reduce Refined Carbs:</strong> Cut added sugars and ultra-processed foods.
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fa-solid fa-check text-emerald-600 text-xs"></i> <strong>Fiber &amp; Protein:</strong> Increase soluble fiber and lean protein intake.
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fa-solid fa-check text-emerald-600 text-xs"></i> <strong>Manage Stress &amp; Sleep:</strong> Cortisol management helps prevent visceral fat store.
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fa-solid fa-check text-emerald-600 text-xs"></i> <strong>Avoid Crash Diets:</strong> Prioritize sustainable long-term caloric balance.
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- H. Waist to Hip Ratio vs BMI – Which is Better? -->
+    <section class="py-10 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-sm space-y-6">
+        <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-3">
+          <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 text-sm">
+            <i class="fa-solid fa-scale-balanced"></i>
+          </span>
+          Waist to Hip Ratio vs BMI – Which is Better?
+        </h2>
+
+        <p class="text-slate-600 text-sm leading-relaxed">
+          While Body Mass Index (BMI) measures overall weight relative to height, it fails to distinguish between muscle mass and fat or identify where fat is stored. Waist-to-Hip Ratio (WHR) specifically measures <strong>abdominal fat distribution</strong>, making it a superior metric for detecting hidden visceral fat risks in muscular individuals or normal-weight individuals with abdominal obesity.
+        </p>
+
+        <!-- Comparison Table -->
+        <div class="overflow-x-auto rounded-xl border border-slate-200">
+          <table class="w-full text-left text-sm text-slate-700">
+            <thead class="bg-slate-100/80 text-xs uppercase tracking-wider text-slate-700 border-b border-slate-200">
+              <tr>
+                <th scope="col" class="py-3.5 px-5 font-bold">Feature</th>
+                <th scope="col" class="py-3.5 px-5 font-bold text-indigo-700 bg-indigo-50/40">Waist-to-Hip Ratio (WHR)</th>
+                <th scope="col" class="py-3.5 px-5 font-bold text-slate-700">Body Mass Index (BMI)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 text-xs sm:text-sm">
+              <tr>
+                <td class="py-3.5 px-5 font-semibold text-slate-900">What It Measures</td>
+                <td class="py-3.5 px-5 bg-indigo-50/20">Fat distribution &amp; abdominal obesity</td>
+                <td class="py-3.5 px-5">Total body weight relative to height</td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-5 font-semibold text-slate-900">Differentiates Muscle/Fat</td>
+                <td class="py-3.5 px-5 bg-indigo-50/20 text-emerald-700 font-semibold"><i class="fa-solid fa-check me-1"></i> Yes</td>
+                <td class="py-3.5 px-5 text-rose-600 font-semibold"><i class="fa-solid fa-xmark me-1"></i> No (Athletes may misclassify)</td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-5 font-semibold text-slate-900">Heart Risk Precision</td>
+                <td class="py-3.5 px-5 bg-indigo-50/20 font-medium">Very High (Visceral fat correlation)</td>
+                <td class="py-3.5 px-5 font-medium">Moderate</td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-5 font-semibold text-slate-900">Best Used For</td>
+                <td class="py-3.5 px-5 bg-indigo-50/20">Cardiovascular &amp; metabolic risk screening</td>
+                <td class="py-3.5 px-5">General population weight categorization</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- I. Frequently Asked Questions (FAQ Accordion with Schema Support) -->
+    <section class="py-10 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-sm">
+        <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+          <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 text-sm">
+            <i class="fa-solid fa-circle-question"></i>
+          </span>
+          Frequently Asked Questions About Waist to Hip Ratio
+        </h2>
+
+        <div class="space-y-3" id="faq-accordion">
+          
+          <!-- FAQ Item 1 -->
+          <div class="border border-slate-200 rounded-xl overflow-hidden">
+            <button type="button" onclick="toggleAccordion(1)" class="w-full text-left px-5 py-4 font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center transition-colors focus:outline-none bg-slate-50/50">
+              <span class="text-base">Q1. What is a good waist to hip ratio?</span>
+              <i id="faq-icon-1" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+            </button>
+            <div id="faq-content-1" class="accordion-content px-5">
+              <p class="py-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                According to WHO guidelines, a healthy WHR is <strong>0.85 or less for women</strong> and <strong>0.90 or less for men</strong>. Values above these benchmarks indicate higher levels of abdominal fat and moderate-to-high health risks.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="border border-slate-200 rounded-xl overflow-hidden">
+            <button type="button" onclick="toggleAccordion(2)" class="w-full text-left px-5 py-4 font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center transition-colors focus:outline-none bg-slate-50/50">
+              <span class="text-base">Q2. Is waist to hip ratio accurate?</span>
+              <i id="faq-icon-2" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+            </button>
+            <div id="faq-content-2" class="accordion-content px-5">
+              <p class="py-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                Yes. Epidemiological studies show WHR is highly effective at forecasting risks for diabetes, hypertension, and cardiovascular events because it measures central visceral fat accurately.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="border border-slate-200 rounded-xl overflow-hidden">
+            <button type="button" onclick="toggleAccordion(3)" class="w-full text-left px-5 py-4 font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center transition-colors focus:outline-none bg-slate-50/50">
+              <span class="text-base">Q3. Can I calculate WHR without measuring tape?</span>
+              <i id="faq-icon-3" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+            </button>
+            <div id="faq-content-3" class="accordion-content px-5">
+              <p class="py-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                For standard numerical calculations, a soft measuring tape is ideal. If unavailable, you can wrap a non-stretching piece of string around your waist and hips and measure the length against a rigid standard ruler.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="border border-slate-200 rounded-xl overflow-hidden">
+            <button type="button" onclick="toggleAccordion(4)" class="w-full text-left px-5 py-4 font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center transition-colors focus:outline-none bg-slate-50/50">
+              <span class="text-base">Q4. Does age affect ideal WHR?</span>
+              <i id="faq-icon-4" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+            </button>
+            <div id="faq-content-4" class="accordion-content px-5">
+              <p class="py-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                Although body fat distribution naturally shifts somewhat as people age, clinical cut-off points (0.85 for women, 0.90 for men) remain the standard baseline markers for disease risk across adult age groups.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 5 -->
+          <div class="border border-slate-200 rounded-xl overflow-hidden">
+            <button type="button" onclick="toggleAccordion(5)" class="w-full text-left px-5 py-4 font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center transition-colors focus:outline-none bg-slate-50/50">
+              <span class="text-base">Q5. How often should I check my WHR?</span>
+              <i id="faq-icon-5" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+            </button>
+            <div id="faq-content-5" class="accordion-content px-5">
+              <p class="py-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                Checking your measurements once every 2 to 4 weeks is optimal when following a weight loss or fitness regimen, as body shape changes occur gradually over weeks rather than days.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 6 -->
+          <div class="border border-slate-200 rounded-xl overflow-hidden">
+            <button type="button" onclick="toggleAccordion(6)" class="w-full text-left px-5 py-4 font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center transition-colors focus:outline-none bg-slate-50/50">
+              <span class="text-base">Q6. Is WHR better than body fat percentage?</span>
+              <i id="faq-icon-6" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+            </button>
+            <div id="faq-content-6" class="accordion-content px-5">
+              <p class="py-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                WHR and body fat percentage measure different aspects. WHR specifically isolates <em>where</em> fat is stored (abdominal vs hips), which is uniquely relevant to metabolic disease risk.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 7 -->
+          <div class="border border-slate-200 rounded-xl overflow-hidden">
+            <button type="button" onclick="toggleAccordion(7)" class="w-full text-left px-5 py-4 font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center transition-colors focus:outline-none bg-slate-50/50">
+              <span class="text-base">Q7. Is this WHR calculator free forever?</span>
+              <i id="faq-icon-7" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+            </button>
+            <div id="faq-content-7" class="accordion-content px-5">
+              <p class="py-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                Yes, Calculator Pro provides this WHR calculator completely free of charge with no registration or hidden fees.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- N. Related Tools / Internal Links -->
+    <section class="py-10 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      <div class="bg-gradient-to-br from-indigo-900 to-slate-900 rounded-3xl p-6 sm:p-8 text-white shadow-xl">
+        <h2 class="text-xl sm:text-2xl font-bold mb-2">Explore Related Health Calculators</h2>
+        <p class="text-indigo-200 text-sm mb-6">Complement your health tracking with these free Calculator Pro tools:</p>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <a href="#" class="p-4 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md transition-all text-center border border-white/10 group">
+            <div class="w-10 h-10 rounded-lg bg-indigo-500/30 flex items-center justify-center mx-auto mb-2 text-indigo-300 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-percent"></i>
+            </div>
+            <span class="text-xs font-semibold block text-slate-100">Body Fat Calculator</span>
+          </a>
+
+          <a href="#" class="p-4 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md transition-all text-center border border-white/10 group">
+            <div class="w-10 h-10 rounded-lg bg-indigo-500/30 flex items-center justify-center mx-auto mb-2 text-indigo-300 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-weight-scale"></i>
+            </div>
+            <span class="text-xs font-semibold block text-slate-100">Ideal Weight Calculator</span>
+          </a>
+
+          <a href="#" class="p-4 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md transition-all text-center border border-white/10 group">
+            <div class="w-10 h-10 rounded-lg bg-indigo-500/30 flex items-center justify-center mx-auto mb-2 text-indigo-300 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+            <span class="text-xs font-semibold block text-slate-100">BMI Calculator</span>
+          </a>
+
+          <a href="#" class="p-4 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md transition-all text-center border border-white/10 group">
+            <div class="w-10 h-10 rounded-lg bg-indigo-500/30 flex items-center justify-center mx-auto mb-2 text-indigo-300 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-fire"></i>
+            </div>
+            <span class="text-xs font-semibold block text-slate-100">BMR Calculator</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+<div class="flex items-center text-center my-6">
+  <!-- Left Side Line -->
+  <div class="flex-grow border-t border-indigo-500"></div>
+  
+  <!-- Your Text -->
+  <span class="flex-shrink mx-4 text-indigo-600 font-semibold text-lg">Mindu-Googly</span>
+  
+  <!-- Right Side Line -->
+  <div class="flex-grow border-t border-indigo-500"></div>
+</div>
+  
+  <!-- Multi-column Footer -->
+<footer class="bg-slate-900 text-slate-400 text-sm border-t border-slate-800 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <!-- Col 1: About -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2 text-white font-bold text-lg">
+            <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
+              <i class="fa-solid fa-calculator"></i>
+            </div>
+            <span>Calculator<span class="text-indigo-400">-Pro</span></span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Calculator Pro provides free, fast, and clinically accurate online tools for health, financial, mathematical, and everyday conversion needs.
+          </p>
+          <div class="text-xs text-slate-500">
+            &copy; <span id="current-year">2026</span> Calculator Pro. All rights reserved.
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Quick Links</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Unit Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Length Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Weight Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Temperature Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Volume & Area Converter</a></li>
+          </ul>
+        </div>
+        <!-- Column 3: Tools & Resources -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Calculators</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="age-calculator.html" class="hover:text-white transition-colors">Age Calculator</a></li>
+            <li><a href="time-calculator.html" class="hover:text-white transition-colors">Time Calculator</a></li>
+            <li><a href="sip-calculator.html" class="hover:text-white transition-colors">SIP Financial Calculator</a></li>
+            <li><a href="bmi-calculator.html" class="hover:text-white transition-colors">BMI Health Calculator</a></li>
+            <li><a href="percentage-calculator.html" class="hover:text-white transition-colors">Percentage Calculator</a></li>
+          </ul>
+        </div>
+
+         <!-- Column 4: Legal & Contact -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Legal & Info</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Editorial Guidelines</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  <!-- Vanilla JavaScript Logic -->
+  <script>
+	  <!-- Inline JavaScript for Toggle -->
+      
+        document.addEventListener('DOMContentLoaded', () => {
+          const btn = document.getElementById('calc-mobile-menu-btn');
+          const menu = document.getElementById('calc-mobile-menu');
+          const menuIcon = document.getElementById('calc-menu-icon');
+          const closeIcon = document.getElementById('calc-close-icon');
+
+          if (btn && menu) {
+            btn.addEventListener('click', () => {
+              const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+              btn.setAttribute('aria-expanded', !isExpanded);
+              menu.classList.toggle('hidden');
+              menuIcon.classList.toggle('hidden');
+              closeIcon.classList.toggle('hidden');
+            });
+          }
+        });
+	  
+    // State management
+    let currentGender = 'female';
+    let currentUnit = 'cm';
+
+    // Set Biological Sex
+    function setGender(gender) {
+      currentGender = gender;
+      const btnFemale = document.getElementById('btn-female');
+      const btnMale = document.getElementById('btn-male');
+
+      if (gender === 'female') {
+        btnFemale.className = 'py-2.5 px-3 text-sm font-semibold rounded-lg flex items-center justify-center gap-2 transition-all bg-indigo-600 text-white shadow-sm';
+        btnMale.className = 'py-2.5 px-3 text-sm font-semibold rounded-lg flex items-center justify-center gap-2 transition-all text-slate-600 hover:text-slate-900';
+      } else {
+        btnMale.className = 'py-2.5 px-3 text-sm font-semibold rounded-lg flex items-center justify-center gap-2 transition-all bg-indigo-600 text-white shadow-sm';
+        btnFemale.className = 'py-2.5 px-3 text-sm font-semibold rounded-lg flex items-center justify-center gap-2 transition-all text-slate-600 hover:text-slate-900';
+      }
+
+      // Re-calculate if numbers are present
+      if (document.getElementById('waist-input').value && document.getElementById('hip-input').value) {
+        calculateWHR();
+      }
+    }
+
+    // Set Measurement Unit (cm or inches)
+    function setUnit(unit) {
+      if (currentUnit === unit) return;
+      
+      const waistInput = document.getElementById('waist-input');
+      const hipInput = document.getElementById('hip-input');
+      const btnCm = document.getElementById('btn-cm');
+      const btnIn = document.getElementById('btn-in');
+      const unitLabels = document.querySelectorAll('.unit-label');
+
+      // Value conversion on unit switch
+      if (waistInput.value) {
+        if (unit === 'in') waistInput.value = (parseFloat(waistInput.value) / 2.54).toFixed(1);
+        else waistInput.value = (parseFloat(waistInput.value) * 2.54).toFixed(1);
+      }
+      if (hipInput.value) {
+        if (unit === 'in') hipInput.value = (parseFloat(hipInput.value) / 2.54).toFixed(1);
+        else hipInput.value = (parseFloat(hipInput.value) * 2.54).toFixed(1);
+      }
+
+      currentUnit = unit;
+
+      if (unit === 'cm') {
+        btnCm.className = 'py-2.5 px-3 text-sm font-semibold rounded-lg flex items-center justify-center gap-1.5 transition-all bg-indigo-600 text-white shadow-sm';
+        btnIn.className = 'py-2.5 px-3 text-sm font-semibold rounded-lg flex items-center justify-center gap-1.5 transition-all text-slate-600 hover:text-slate-900';
+        unitLabels.forEach(el => el.textContent = 'cm');
+      } else {
+        btnIn.className = 'py-2.5 px-3 text-sm font-semibold rounded-lg flex items-center justify-center gap-1.5 transition-all bg-indigo-600 text-white shadow-sm';
+        btnCm.className = 'py-2.5 px-3 text-sm font-semibold rounded-lg flex items-center justify-center gap-1.5 transition-all text-slate-600 hover:text-slate-900';
+        unitLabels.forEach(el => el.textContent = 'in');
+      }
+
+      if (waistInput.value && hipInput.value) {
+        calculateWHR();
+      }
+    }
+
+    // Live update on input change
+    function liveUpdate() {
+      const waist = parseFloat(document.getElementById('waist-input').value);
+      const hip = parseFloat(document.getElementById('hip-input').value);
+      if (waist > 0 && hip > 0) {
+        calculateWHR();
+      }
+    }
+
+    // Main Calculation Logic
+    function calculateWHR() {
+      const waistVal = parseFloat(document.getElementById('waist-input').value);
+      const hipVal = parseFloat(document.getElementById('hip-input').value);
+      const resultBox = document.getElementById('result-box');
+
+      if (!waistVal || !hipVal || waistVal <= 0 || hipVal <= 0) {
+        return;
+      }
+
+      // WHR Ratio calculation
+      const whr = (waistVal / hipVal);
+      const formattedWHR = whr.toFixed(2);
+
+      // Display Value
+      document.getElementById('whr-value-display').textContent = formattedWHR;
+
+      // Risk Evaluation based on WHO cutoffs
+      let category = 'Low Risk';
+      let badgeBg = 'bg-emerald-100 text-emerald-800';
+      let dotColor = 'bg-emerald-500';
+      let description = '';
+      let markerPos = 15; // percentage on gauge
+
+      if (currentGender === 'female') {
+        document.getElementById('gender-range-notice').textContent = 'WHO ideal range for females: < 0.80';
+        if (whr < 0.80) {
+          category = 'Low Risk (Pear Shape)';
+          badgeBg = 'bg-emerald-100 text-emerald-800';
+          dotColor = 'bg-emerald-500';
+          description = 'Your ratio indicates a healthy body fat distribution with low cardiovascular and metabolic risk.';
+          markerPos = Math.min(Math.max((whr / 0.80) * 33, 5), 33);
+        } else if (whr <= 0.85) {
+          category = 'Moderate Risk';
+          badgeBg = 'bg-amber-100 text-amber-800';
+          dotColor = 'bg-amber-500';
+          description = 'Your ratio indicates moderate abdominal fat concentration. Adopting balanced nutrition can help lower risk.';
+          markerPos = 33 + Math.min(Math.max(((whr - 0.80) / 0.05) * 33, 0), 33);
+        } else {
+          category = 'High Risk (Apple Shape)';
+          badgeBg = 'bg-rose-100 text-rose-800';
+          dotColor = 'bg-rose-500';
+          description = 'Your ratio indicates central obesity with elevated risk for heart disease and diabetes. Consult a healthcare provider.';
+          markerPos = 66 + Math.min(Math.max(((whr - 0.85) / 0.20) * 34, 0), 29);
+        }
+      } else { // Male
+        document.getElementById('gender-range-notice').textContent = 'WHO ideal range for males: < 0.90';
+        if (whr < 0.90) {
+          category = 'Low Risk (Pear Shape)';
+          badgeBg = 'bg-emerald-100 text-emerald-800';
+          dotColor = 'bg-emerald-500';
+          description = 'Your ratio indicates healthy fat distribution with low metabolic risk.';
+          markerPos = Math.min(Math.max((whr / 0.90) * 33, 5), 33);
+        } else if (whr <= 0.95) {
+          category = 'Moderate Risk';
+          badgeBg = 'bg-amber-100 text-amber-800';
+          dotColor = 'bg-amber-500';
+          description = 'Your ratio indicates moderate abdominal fat concentration.';
+          markerPos = 33 + Math.min(Math.max(((whr - 0.90) / 0.05) * 33, 0), 33);
+        } else {
+          category = 'High Risk (Apple Shape)';
+          badgeBg = 'bg-rose-100 text-rose-800';
+          dotColor = 'bg-rose-500';
+          description = 'Your ratio indicates higher visceral abdominal fat. Consistent lifestyle and cardio exercise is recommended.';
+          markerPos = 66 + Math.min(Math.max(((whr - 0.95) / 0.20) * 34, 0), 29);
+        }
+      }
+
+      // Update UI elements
+      const badge = document.getElementById('risk-badge');
+      badge.className = `inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-sm font-bold ${badgeBg} my-1`;
+      document.getElementById('risk-badge-dot').className = `w-2.5 h-2.5 rounded-full ${dotColor}`;
+      document.getElementById('risk-category-text').textContent = category;
+      document.getElementById('risk-description').textContent = description;
+      document.getElementById('gauge-marker').style.left = `${markerPos}%`;
+
+      // Show result section with smooth entrance
+      resultBox.classList.remove('hidden');
+    }
+
+    // Reset Calculator Form
+    function resetForm() {
+      document.getElementById('whr-form').reset();
+      document.getElementById('result-box').classList.add('hidden');
+    }
+
+    // Copy Result to Clipboard
+    function copyResult() {
+      const whrVal = document.getElementById('whr-value-display').textContent;
+      const category = document.getElementById('risk-category-text').textContent;
+      const copyText = `My Waist-to-Hip Ratio (WHR) is ${whrVal} (${category}) calculated via Calculator Pro.`;
+
+      const tempInput = document.createElement('textarea');
+      tempInput.value = copyText;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempInput);
+
+      alert('Result copied to clipboard!');
+    }
+
+    // Accordion Toggle for FAQ Section
+    function toggleAccordion(index) {
+      const content = document.getElementById(`faq-content-${index}`);
+      const icon = document.getElementById(`faq-icon-${index}`);
+
+      const isOpen = content.classList.contains('open');
+
+      // Close all accordion contents
+      document.querySelectorAll('.accordion-content').forEach(el => el.classList.remove('open'));
+      document.querySelectorAll('#faq-accordion i').forEach(el => el.classList.remove('rotate-180'));
+
+      // If clicked item was not open, open it
+      if (!isOpen) {
+        content.classList.add('open');
+        icon.classList.add('rotate-180');
+      }
+    }
+
+    // Dynamic Copyright Year update
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>

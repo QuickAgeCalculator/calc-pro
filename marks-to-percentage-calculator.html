@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks to Percentage Calculator | Convert Marks into Percentage (2026)</title>
+    <meta name="description" content="Free Marks to Percentage Calculator. Instantly convert marks obtained into percentage. Supports single subject, multiple subjects & overall percentage. Easy formula with examples for CBSE, ICSE & all boards.">
+    <meta name="keywords" content="marks to percentage, marks to percentage calculator, convert marks to percentage, percentage calculator from marks, how to calculate percentage from marks, marks percentage converter, percentage of 5 subjects, calculate percentage of marks">
+    <meta name="author" content="Calculator Pro">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Marks to Percentage Calculator | Convert Marks into Percentage (2026)">
+    <meta property="og:description" content="Free Marks to Percentage Calculator. Instantly convert marks obtained into percentage. Supports single subject, multiple subjects & overall percentage. Easy formula with examples for CBSE, ICSE & all boards.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.calculatorpro.com/marks-to-percentage">
+    <meta property="og:image" content="https://placehold.co/1200x630/2563eb/ffffff?text=Marks+to+Percentage+Calculator">
+
+    <!-- Twitter Card Metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Marks to Percentage Calculator | Convert Marks into Percentage (2026)">
+    <meta name="twitter:description" content="Free online tool to calculate percentage from marks obtained for single or multiple subjects.">
+
+    <!-- Tailwind CSS CDN -->
+    
+
+    <!-- Google Fonts Inter -->
+    
+
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind Configuration -->
+    
+
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- JSON-LD Structured Data (WebApplication, FAQPage, HowTo) -->
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Marks to Percentage Calculator",
+        "url": "https://www.calculatorpro.com/marks-to-percentage",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript. Requires HTML5.",
+        "description": "Convert marks obtained into accurate percentage for single and multiple subjects with instant grade breakdown.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to Convert Marks to Percentage",
+        "description": "Step-by-step guide to calculate percentage from total marks obtained.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Note Total Obtained Marks",
+            "text": "Add up all marks scored across all subjects or note the single subject score."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Note Total Maximum Marks",
+            "text": "Add up maximum possible marks for all subjects (e.g., 500 for 5 subjects of 100 each)."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Apply Percentage Formula",
+            "text": "Divide obtained marks by total maximum marks and multiply the result by 100."
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How to calculate percentage from marks?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "To calculate percentage from marks, divide total obtained marks by total maximum marks and multiply by 100. Formula: (Marks Obtained / Total Marks) * 100."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the formula to convert marks into percentage?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The formula is: Percentage (%) = (Total Marks Obtained ÷ Total Maximum Marks) × 100."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How to calculate percentage of 5 subjects?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sum the marks obtained in all 5 subjects, sum the total maximum marks (usually 500), then divide total obtained by maximum total and multiply by 100."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How to convert 450 marks out of 500 into percentage?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "(450 ÷ 500) × 100 = 0.9 × 100 = 90%."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I calculate percentage if total marks are different?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! Add all different obtained marks together, add all different total maximum marks together, and apply the formula."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How to calculate percentage in CBSE / ICSE / State Board?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most boards consider either top 5 subjects or all main subjects. Add the marks scored in those subjects, divide by total aggregate marks, and multiply by 100."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is 75 marks out of 100 in percentage?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "75 marks out of 100 is equal to 75%."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How to convert percentage back to marks?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "To find required marks from percentage: Marks Obtained = (Percentage × Total Maximum Marks) ÷ 100."
+            }
+          }
+        ]
+      }
+    ]
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white min-h-screen flex flex-col">
+
+    <!-- SECTION A: Header & Navigation -->
+    <header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      
+      <!-- Brand Logo & Name -->
+      <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
+        <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
+          <i class="fa-solid fa-calculator text-lg"></i>
+        </div>
+        <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
+          Calculator<span class="text-indigo-600">-Pro</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-1" aria-label="Main Navigation">
+        
+        <!-- Category 1: Age -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Age
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="age-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="birthday-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Birthday Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="age-difference-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Diffrence Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Time -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Time & Date
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="time-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Time Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="date-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Date Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="work-days-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Work Days Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="time-zone-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">TimeZone Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Converter -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Converter
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="unit-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Unit Converter</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="cgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">CGPA to Percentage</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to Percentage</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sgpa-to-cgpa-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to CGPA</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="marks-to-percentage-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Marks to Percentage</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4: Financial -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Financial
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sip-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SIP Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="emi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">EMI Loan Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="Compound-Interest-Calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Compound Interest Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 5: Health -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Health
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute right-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="bmi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">BMI Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="waist-to-hip-ratio-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">WHR Calculator</a>
+            </div>
+          </div>
+        </div>
+		  
+		 
+
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex md:hidden">
+        <button id="calc-mobile-menu-btn" type="button" class="p-2.5 rounded-xl text-slate-600 hover:text-indigo-600 hover:bg-slate-100/80 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors duration-200" aria-controls="calc-mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+          <svg id="calc-menu-icon" class="w-6 h-6 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="calc-close-icon" class="w-6 h-6 hidden transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile Full-Width Menu Container -->
+  <div id="calc-mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white shadow-xl transition-all duration-200 ease-in-out">
+    <div class="px-4 pt-3 pb-6 space-y-4">
+      
+      <!-- Mobile Category: Age -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Age</div>
+        <a href="age-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Calculator</a>
+		  <a href="birthday-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Birthday Calculator</a>
+		  <a href="age-difference-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Diffrence Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Time -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Time & Date</div>
+        <a href="time-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Time Calculator</a>
+		  <a href="date-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Date Calculator</a>
+		  <a href="work-days-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Work Days Calculator</a>
+		  <a href="time-zone-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">TimeZone Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Converter -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Converter</div>
+        <a href="javascript:void(0)" onclick="openCalculator('length')" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Unit Converter</a>
+		  <a href="cgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">CGPA to Percentage</a>
+		  <a href="sgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to Percentage</a>
+		  <a href="sgpa-to-cgpa-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to CGPA</a>
+		  <a href="marks-to-percentage-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Marks to Percentage</a>
+      </div>
+
+      <!-- Mobile Category: Financial -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Financial</div>
+        <a href="sip-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SIP Calculator</a>
+		  <a href="emi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">EMI Loan Calculator</a>
+		  <a href="Compound-Interest-Calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Compound Interest Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Health -->
+      <div>
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Health</div>
+        <a href="bmi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">BMI Calculator</a>
+		  <a href="waist-to-hip-ratio-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">WHR Calculator</a>
+      </div>
+		
+		
+
+    </div>
+  </div>
+</header>
+
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-12 sm:space-y-16">
+
+        <!-- HERO SECTION ABOVE THE FOLD -->
+        <section class="text-center max-w-4xl mx-auto space-y-4">
+            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-indigo-50 text-indigo-700 border border-indigo-100">
+                <i class="fa-solid fa-sparkles text-indigo-500"></i> Updated for 2026 Academic Standards
+            </span>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                Marks to Percentage Calculator – Convert Marks into Percentage
+            </h1>
+            <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
+                Use our free <strong class="text-slate-800">Marks to Percentage Calculator</strong> to instantly convert your obtained marks into percentage. Whether it is a single subject or multiple subjects, our smart <strong class="text-slate-800">marks percentage converter</strong> uses standard CBSE, ICSE, and university formulas to deliver accurate results in seconds.
+            </p>
+        </section>
+
+        <!-- SECTION B: Interactive Calculator Tool Component -->
+        <section class="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl shadow-slate-200/60 border border-slate-100 overflow-hidden" id="calculator-section">
+            <div class="bg-gradient-to-r from-indigo-600 to-brand-600 p-6 text-white text-center">
+                <h2 class="text-2xl font-bold">Marks to Percentage Calculator Tool</h2>
+                <p class="text-indigo-100 text-sm mt-1">Select your calculation mode and enter marks obtained below</p>
+            </div>
+
+            <div class="p-6 sm:p-8 space-y-6">
+                <!-- Tool Switcher Tabs -->
+                <div class="flex flex-col sm:flex-row gap-2 p-1.5 bg-slate-100/80 rounded-2xl">
+                    <button id="tab-marks-to-pct" type="button" class="flex-1 py-3 px-4 rounded-xl text-sm font-semibold transition-all shadow-sm bg-white text-indigo-600 flex items-center justify-center gap-2" onclick="switchToolTab('marks-to-pct')">
+                        <i class="fa-solid fa-calculator"></i> Marks to Percentage
+                    </button>
+                    <button id="tab-pct-to-marks" type="button" class="flex-1 py-3 px-4 rounded-xl text-sm font-semibold transition-all text-slate-600 hover:text-slate-900 flex items-center justify-center gap-2" onclick="switchToolTab('pct-to-marks')">
+                        <i class="fa-solid fa-arrows-rotate"></i> Percentage to Marks (Reverse)
+                    </button>
+                </div>
+
+                <!-- TAB 1: MARKS TO PERCENTAGE CALCULATOR -->
+                <div id="panel-marks-to-pct" class="space-y-6">
+                    <!-- Mode Radio Switcher -->
+                    <div class="flex items-center justify-center gap-6 pb-2 border-b border-slate-100">
+                        <label class="inline-flex items-center gap-2 cursor-pointer font-medium text-slate-700 text-sm">
+                            <input type="radio" name="calc-mode" value="single" checked onchange="handleModeChange(this.value)" class="w-4 h-4 text-indigo-600 focus:ring-indigo-500 border-slate-300">
+                            Single Subject
+                        </label>
+                        <label class="inline-flex items-center gap-2 cursor-pointer font-medium text-slate-700 text-sm">
+                            <input type="radio" name="calc-mode" value="multiple" onchange="handleModeChange(this.value)" class="w-4 h-4 text-indigo-600 focus:ring-indigo-500 border-slate-300">
+                            Multiple Subjects
+                        </label>
+                    </div>
+
+                    <!-- MODE 1: SINGLE SUBJECT INPUTS -->
+                    <div id="mode-single-container" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="single-obtained" class="block text-sm font-semibold text-slate-700 mb-1.5">Marks Obtained</label>
+                            <div class="relative">
+                                <input type="number" id="single-obtained" min="0" step="any" placeholder="e.g. 85" oninput="calculateSingleSubject()" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition text-slate-800 font-medium">
+                                <span class="absolute right-3.5 top-3.5 text-xs font-semibold text-slate-400">PTS</span>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="single-total" class="block text-sm font-semibold text-slate-700 mb-1.5">Total Maximum Marks</label>
+                            <div class="relative">
+                                <input type="number" id="single-total" min="1" step="any" placeholder="e.g. 100" value="100" oninput="calculateSingleSubject()" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition text-slate-800 font-medium">
+                                <span class="absolute right-3.5 top-3.5 text-xs font-semibold text-slate-400">MAX</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MODE 2: MULTIPLE SUBJECTS CONTAINER -->
+                    <div id="mode-multiple-container" class="hidden space-y-4">
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr class="text-xs font-bold uppercase tracking-wider text-slate-500 border-b border-slate-200">
+                                        <th class="py-2 px-3">Subject</th>
+                                        <th class="py-2 px-3">Marks Obtained</th>
+                                        <th class="py-2 px-3">Total Marks</th>
+                                        <th class="py-2 px-3 text-center">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="multi-subject-rows" class="divide-y divide-slate-100">
+                                    <!-- Dynamic rows generated here -->
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="flex flex-wrap items-center justify-between gap-3 pt-2">
+                            <button type="button" onclick="addSubjectRow()" class="px-4 py-2 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 rounded-xl text-sm font-semibold transition flex items-center gap-2">
+                                <i class="fa-solid fa-plus text-xs"></i> Add Subject
+                            </button>
+                            <div class="text-xs text-slate-500">
+                                Total Subjects: <span id="subject-count-badge" class="font-bold text-slate-800">5</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CALCULATOR BUTTON ACTIONS -->
+                    <div class="flex flex-col sm:flex-row gap-3 pt-4 border-t border-slate-100">
+                        <button type="button" onclick="triggerMainCalculate()" class="flex-1 py-3.5 px-6 bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white font-bold rounded-xl shadow-lg shadow-indigo-200 transition text-center flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-calculator"></i> Calculate Percentage
+                        </button>
+                        <button type="button" onclick="resetCalculator()" class="py-3.5 px-6 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold rounded-xl transition text-center flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-arrow-rotate-left"></i> Reset
+                        </button>
+                    </div>
+
+                    <!-- DISPLAY RESULTS BOX -->
+                    <div id="result-box" class="bg-slate-900 text-white p-6 rounded-2xl space-y-4 transition-all duration-300 relative overflow-hidden">
+                        <div class="flex flex-wrap items-center justify-between gap-4">
+                            <div>
+                                <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Calculated Result</span>
+                                <div class="flex items-baseline gap-2 mt-1">
+                                    <span id="result-percentage" class="text-4xl sm:text-5xl font-black text-indigo-400">0.00%</span>
+                                    <span id="result-grade-badge" class="px-3 py-1 rounded-full text-xs font-bold bg-slate-800 text-slate-300 border border-slate-700">--</span>
+                                </div>
+                            </div>
+                            <button type="button" onclick="copyResultToClipboard()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-xl text-xs font-semibold transition flex items-center gap-2 border border-slate-700">
+                                <i class="fa-solid fa-copy"></i> Copy Result
+                            </button>
+                        </div>
+
+                        <!-- Visual Progress Bar -->
+                        <div class="space-y-1.5">
+                            <div class="flex justify-between text-xs text-slate-400">
+                                <span>Progress</span>
+                                <span id="progress-percentage-label">0%</span>
+                            </div>
+                            <div class="w-full bg-slate-800 h-3 rounded-full overflow-hidden p-0.5 border border-slate-700">
+                                <div id="result-progress-bar" class="h-full bg-gradient-to-r from-indigo-500 to-cyan-400 rounded-full transition-all duration-500" style="width: 0%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Score Summary -->
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-3 border-t border-slate-800 text-xs">
+                            <div class="bg-slate-800/60 p-2.5 rounded-xl border border-slate-800">
+                                <span class="text-slate-400 block">Marks Obtained</span>
+                                <span id="summary-obtained" class="text-sm font-bold text-white">0</span>
+                            </div>
+                            <div class="bg-slate-800/60 p-2.5 rounded-xl border border-slate-800">
+                                <span class="text-slate-400 block">Maximum Marks</span>
+                                <span id="summary-total" class="text-sm font-bold text-white">100</span>
+                            </div>
+                            <div class="bg-slate-800/60 p-2.5 rounded-xl border border-slate-800 col-span-2 sm:col-span-1">
+                                <span class="text-slate-400 block">Performance Remark</span>
+                                <span id="summary-remark" class="text-sm font-bold text-indigo-300">Enter your marks</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 2: PERCENTAGE TO MARKS (REVERSE) CALCULATOR -->
+                <div id="panel-pct-to-marks" class="hidden space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="reverse-pct" class="block text-sm font-semibold text-slate-700 mb-1.5">Target Percentage (%)</label>
+                            <div class="relative">
+                                <input type="number" id="reverse-pct" min="0" max="100" step="any" placeholder="e.g. 85" oninput="calculateReverseMarks()" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition text-slate-800 font-medium">
+                                <span class="absolute right-3.5 top-3.5 text-xs font-semibold text-slate-400">%</span>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="reverse-total" class="block text-sm font-semibold text-slate-700 mb-1.5">Total Maximum Marks</label>
+                            <div class="relative">
+                                <input type="number" id="reverse-total" min="1" step="any" placeholder="e.g. 500" value="500" oninput="calculateReverseMarks()" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition text-slate-800 font-medium">
+                                <span class="absolute right-3.5 top-3.5 text-xs font-semibold text-slate-400">MAX</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-indigo-900 text-white p-6 rounded-2xl space-y-2">
+                        <span class="text-xs font-bold uppercase tracking-wider text-indigo-300">Required Marks Scored</span>
+                        <div id="reverse-result-value" class="text-4xl font-black text-cyan-300">0 / 500</div>
+                        <p class="text-xs text-indigo-200">You need to score <strong id="reverse-needed-marks" class="text-white">0 marks</strong> out of <span id="reverse-out-of">500</span> to achieve your percentage goal.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION C: How to Convert Marks to Percentage -->
+        <section class="max-w-4xl mx-auto space-y-6">
+            <div class="border-l-4 border-indigo-600 pl-4">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">How to Convert Marks to Percentage?</h2>
+                <p class="text-slate-600 text-sm mt-1">Understanding the fundamental mathematical formula used worldwide by schools and universities.</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100 space-y-6">
+                <div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-square-root-variable text-indigo-600"></i> Basic Formula
+                    </h3>
+                    <div class="bg-slate-50 border border-slate-200 p-4 rounded-xl text-center text-lg sm:text-xl font-bold text-indigo-700">
+                        Percentage (%) = (Marks Obtained ÷ Total Marks) × 100
+                    </div>
+                </div>
+
+                <div class="space-y-3">
+                    <h3 class="text-xl font-bold text-slate-800">Step-by-Step Calculation</h3>
+                    <ol class="list-decimal list-inside space-y-2 text-slate-600 leading-relaxed">
+                        <li><strong class="text-slate-800">Sum the Marks Obtained:</strong> Calculate the total aggregate marks scored across all your subjects.</li>
+                        <li><strong class="text-slate-800">Sum the Maximum Marks:</strong> Determine the maximum potential aggregate total (for example, 5 subjects of 100 marks each equals 500 total).</li>
+                        <li><strong class="text-slate-800">Divide:</strong> Divide your total obtained marks by the maximum total marks.</li>
+                        <li><strong class="text-slate-800">Multiply by 100:</strong> Multiply the decimal result by 100 to yield your final overall percentage.</li>
+                    </ol>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t border-slate-100">
+                    <div class="bg-indigo-50/50 p-5 rounded-2xl border border-indigo-100">
+                        <h3 class="text-base font-bold text-indigo-900 mb-2">Example 1 – Single Subject</h3>
+                        <p class="text-sm text-slate-600 space-y-1">
+                            If a student scores <strong>82 marks out of 100</strong> in Mathematics:<br>
+                            • Calculation: (82 ÷ 100) × 100<br>
+                            • Result = <strong>82%</strong>
+                        </p>
+                    </div>
+
+                    <div class="bg-indigo-50/50 p-5 rounded-2xl border border-indigo-100">
+                        <h3 class="text-base font-bold text-indigo-900 mb-2">Example 2 – Multiple Subjects</h3>
+                        <p class="text-sm text-slate-600 space-y-1">
+                            If a student scores <strong>425 marks out of 500</strong> total in 5 subjects:<br>
+                            • Calculation: (425 ÷ 500) × 100<br>
+                            • Result = <strong>85%</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION D: Conversion Table Reference -->
+        <section class="max-w-4xl mx-auto space-y-6">
+            <div class="border-l-4 border-indigo-600 pl-4">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Marks to Percentage Conversion Table</h2>
+                <p class="text-slate-600 text-sm mt-1">Quick look-up reference for marks scored out of standard maximum totals.</p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse text-sm">
+                        <thead>
+                            <tr class="bg-slate-800 text-white">
+                                <th class="p-3.5 sm:p-4">Marks Obtained</th>
+                                <th class="p-3.5 sm:p-4">Out of 50</th>
+                                <th class="p-3.5 sm:p-4">Out of 80</th>
+                                <th class="p-3.5 sm:p-4">Out of 100</th>
+                                <th class="p-3.5 sm:p-4">Out of 500</th>
+                                <th class="p-3.5 sm:p-4">Out of 600</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 text-slate-700">
+                            <tr class="hover:bg-slate-50 transition">
+                                <td class="p-3.5 sm:p-4 font-bold text-slate-900">Pass / Benchmark</td>
+                                <td class="p-3.5 sm:p-4">20 (40%)</td>
+                                <td class="p-3.5 sm:p-4">32 (40%)</td>
+                                <td class="p-3.5 sm:p-4 font-semibold text-indigo-600">40 (40%)</td>
+                                <td class="p-3.5 sm:p-4">200 (40%)</td>
+                                <td class="p-3.5 sm:p-4">240 (40%)</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition">
+                                <td class="p-3.5 sm:p-4 font-bold text-slate-900">Average Score</td>
+                                <td class="p-3.5 sm:p-4">27.5 (55%)</td>
+                                <td class="p-3.5 sm:p-4">44 (55%)</td>
+                                <td class="p-3.5 sm:p-4 font-semibold text-indigo-600">55 (55%)</td>
+                                <td class="p-3.5 sm:p-4">275 (55%)</td>
+                                <td class="p-3.5 sm:p-4">330 (55%)</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition">
+                                <td class="p-3.5 sm:p-4 font-bold text-slate-900">First Class</td>
+                                <td class="p-3.5 sm:p-4">35 (70%)</td>
+                                <td class="p-3.5 sm:p-4">56 (70%)</td>
+                                <td class="p-3.5 sm:p-4 font-semibold text-indigo-600">70 (70%)</td>
+                                <td class="p-3.5 sm:p-4">350 (70%)</td>
+                                <td class="p-3.5 sm:p-4">420 (70%)</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition">
+                                <td class="p-3.5 sm:p-4 font-bold text-slate-900">Distinction</td>
+                                <td class="p-3.5 sm:p-4">42.5 (85%)</td>
+                                <td class="p-3.5 sm:p-4">68 (85%)</td>
+                                <td class="p-3.5 sm:p-4 font-semibold text-indigo-600">85 (85%)</td>
+                                <td class="p-3.5 sm:p-4">425 (85%)</td>
+                                <td class="p-3.5 sm:p-4">510 (85%)</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition">
+                                <td class="p-3.5 sm:p-4 font-bold text-slate-900">Outstanding</td>
+                                <td class="p-3.5 sm:p-4">47.5 (95%)</td>
+                                <td class="p-3.5 sm:p-4">76 (95%)</td>
+                                <td class="p-3.5 sm:p-4 font-semibold text-indigo-600">95 (95%)</td>
+                                <td class="p-3.5 sm:p-4">475 (95%)</td>
+                                <td class="p-3.5 sm:p-4">570 (95%)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION E: Multiple Subjects Deep-Dive Breakdown -->
+        <section class="max-w-4xl mx-auto space-y-6">
+            <div class="border-l-4 border-indigo-600 pl-4">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">How to Calculate Percentage from Marks of Multiple Subjects?</h2>
+                <p class="text-slate-600 text-sm mt-1">Detailed guide for calculating overall aggregate percentage across 5 to 6 subjects.</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100 space-y-6">
+                <div>
+                    <h3 class="text-lg font-bold text-slate-800 mb-2">Formula for Overall Percentage</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        When dealing with multiple subjects, do not average individual subject percentages unless all subjects share the exact same maximum mark. Instead, compute the sum of all obtained marks and divide by the sum of all maximum marks:
+                    </p>
+                    <div class="bg-indigo-50 border border-indigo-100 p-4 rounded-xl my-3 text-center text-slate-800 font-bold text-sm sm:text-base">
+                        Overall Percentage = (Sum of Obtained Marks in All Subjects ÷ Total Maximum Marks of All Subjects) × 100
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <h3 class="text-lg font-bold text-slate-800">Step-by-Step 5-Subject Example</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-xs sm:text-sm border-collapse">
+                            <thead>
+                                <tr class="bg-slate-100 text-slate-700">
+                                    <th class="p-2.5">Subject</th>
+                                    <th class="p-2.5">Marks Obtained</th>
+                                    <th class="p-2.5">Maximum Marks</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100 text-slate-600">
+                                <tr><td class="p-2.5">English</td><td class="p-2.5 font-semibold">88</td><td class="p-2.5">100</td></tr>
+                                <tr><td class="p-2.5">Mathematics</td><td class="p-2.5 font-semibold">95</td><td class="p-2.5">100</td></tr>
+                                <tr><td class="p-2.5">Physics</td><td class="p-2.5 font-semibold">82</td><td class="p-2.5">100</td></tr>
+                                <tr><td class="p-2.5">Chemistry</td><td class="p-2.5 font-semibold">78</td><td class="p-2.5">100</td></tr>
+                                <tr><td class="p-2.5">Computer Science</td><td class="p-2.5 font-semibold">92</td><td class="p-2.5">100</td></tr>
+                                <tr class="bg-indigo-50/70 font-bold text-indigo-950">
+                                    <td class="p-2.5">TOTAL AGGREGATE</td>
+                                    <td class="p-2.5 text-indigo-600">435 Marks</td>
+                                    <td class="p-2.5">500 Marks</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="text-sm text-slate-700 font-medium">
+                        Calculation: (435 ÷ 500) × 100 = <strong>87.00%</strong>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        
+        <!-- SECTION H: Frequently Asked Questions (FAQ) Accordion -->
+        <section class="max-w-4xl mx-auto space-y-6">
+            <div class="border-l-4 border-indigo-600 pl-4">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Frequently Asked Questions (FAQ)</h2>
+                <p class="text-slate-600 text-sm mt-1">Get answers to popular queries about percentage calculations and grading standards.</p>
+            </div>
+
+            <div class="space-y-3" id="faq-accordion-group">
+                
+                <!-- FAQ Item 1 -->
+                <div class="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm transition">
+                    <button type="button" class="w-full p-5 text-left font-bold text-slate-800 hover:text-indigo-600 flex items-center justify-between gap-4 focus:outline-none" onclick="toggleAccordion('faq-1')">
+                        <span>How to calculate percentage from marks?</span>
+                        <i id="icon-faq-1" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq-1" class="accordion-content px-5 pb-5 text-sm text-slate-600 leading-relaxed">
+                        To calculate percentage from marks, divide the total marks obtained by the total maximum possible marks, and then multiply by 100. For instance, if you score 400 out of 500, (400 ÷ 500) × 100 = 80%.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm transition">
+                    <button type="button" class="w-full p-5 text-left font-bold text-slate-800 hover:text-indigo-600 flex items-center justify-between gap-4 focus:outline-none" onclick="toggleAccordion('faq-2')">
+                        <span>What is the formula to convert marks into percentage?</span>
+                        <i id="icon-faq-2" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq-2" class="accordion-content px-5 pb-5 text-sm text-slate-600 leading-relaxed">
+                        The universally accepted formula is: <br><strong>Percentage (%) = (Marks Obtained ÷ Total Marks) × 100</strong>.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm transition">
+                    <button type="button" class="w-full p-5 text-left font-bold text-slate-800 hover:text-indigo-600 flex items-center justify-between gap-4 focus:outline-none" onclick="toggleAccordion('faq-3')">
+                        <span>How to calculate percentage of 5 subjects?</span>
+                        <i id="icon-faq-3" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq-3" class="accordion-content px-5 pb-5 text-sm text-slate-600 leading-relaxed">
+                        Add up your marks across all 5 subjects. Assuming each subject is out of 100 (total 500 marks), divide your total scored marks by 500 and multiply by 100.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm transition">
+                    <button type="button" class="w-full p-5 text-left font-bold text-slate-800 hover:text-indigo-600 flex items-center justify-between gap-4 focus:outline-none" onclick="toggleAccordion('faq-4')">
+                        <span>How to convert 450 marks out of 500 into percentage?</span>
+                        <i id="icon-faq-4" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq-4" class="accordion-content px-5 pb-5 text-sm text-slate-600 leading-relaxed">
+                        Divide 450 by 500 to get 0.9. Multiply 0.9 by 100 to get <strong>90%</strong>.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm transition">
+                    <button type="button" class="w-full p-5 text-left font-bold text-slate-800 hover:text-indigo-600 flex items-center justify-between gap-4 focus:outline-none" onclick="toggleAccordion('faq-5')">
+                        <span>Can I calculate percentage if total marks are different for subjects?</span>
+                        <i id="icon-faq-5" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq-5" class="accordion-content px-5 pb-5 text-sm text-slate-600 leading-relaxed">
+                        Yes! Simply sum all the marks you obtained in all subjects, sum all the different maximum marks together, and divide total obtained by overall maximum marks, then multiply by 100.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm transition">
+                    <button type="button" class="w-full p-5 text-left font-bold text-slate-800 hover:text-indigo-600 flex items-center justify-between gap-4 focus:outline-none" onclick="toggleAccordion('faq-6')">
+                        <span>How to calculate percentage in CBSE / ICSE / State Board?</span>
+                        <i id="icon-faq-6" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq-6" class="accordion-content px-5 pb-5 text-sm text-slate-600 leading-relaxed">
+                        Most board exams evaluate percentage based on the main 5 subjects (or best of 5 depending on specific board guidelines). Sum the marks of those 5 subjects and divide by 500.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 7 -->
+                <div class="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm transition">
+                    <button type="button" class="w-full p-5 text-left font-bold text-slate-800 hover:text-indigo-600 flex items-center justify-between gap-4 focus:outline-none" onclick="toggleAccordion('faq-7')">
+                        <span>What is 75 marks out of 100 in percentage?</span>
+                        <i id="icon-faq-7" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq-7" class="accordion-content px-5 pb-5 text-sm text-slate-600 leading-relaxed">
+                        Since the maximum base is 100, 75 marks out of 100 equals exactly <strong>75%</strong>.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 8 -->
+                <div class="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm transition">
+                    <button type="button" class="w-full p-5 text-left font-bold text-slate-800 hover:text-indigo-600 flex items-center justify-between gap-4 focus:outline-none" onclick="toggleAccordion('faq-8')">
+                        <span>How to convert percentage back to marks?</span>
+                        <i id="icon-faq-8" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq-8" class="accordion-content px-5 pb-5 text-sm text-slate-600 leading-relaxed">
+                        To find marks from percentage: Multiply your percentage target by the total maximum marks and divide by 100. Example: 80% of 500 = (80 × 500) ÷ 100 = 400 marks.
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION I: Related Calculators & Internal Links -->
+        <section class="max-w-4xl mx-auto space-y-6">
+            <div class="border-l-4 border-indigo-600 pl-4">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Related Calculators</h2>
+                <p class="text-slate-600 text-sm mt-1">Explore our suite of academic and grade conversion tools.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <a href="#" class="p-5 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:border-indigo-200 transition group">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800 group-hover:text-indigo-600 transition">CGPA to Percentage</h3>
+                    <p class="text-xs text-slate-500 mt-1">Convert cumulative GPA to overall percentage easily.</p>
+                </a>
+
+                <a href="#" class="p-5 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:border-indigo-200 transition group">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800 group-hover:text-indigo-600 transition">SGPA to Percentage</h3>
+                    <p class="text-xs text-slate-500 mt-1">Semester grade point converter for college students.</p>
+                </a>
+
+                <a href="#" class="p-5 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:border-indigo-200 transition group">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-percent"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800 group-hover:text-indigo-600 transition">Percentage to CGPA</h3>
+                    <p class="text-xs text-slate-500 mt-1">Turn your board percentage back into CGPA format.</p>
+                </a>
+
+                <a href="#" class="p-5 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:border-indigo-200 transition group">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800 group-hover:text-indigo-600 transition">SGPA to CGPA</h3>
+                    <p class="text-xs text-slate-500 mt-1">Calculate CGPA from multiple semester SGPA scores.</p>
+                </a>
+
+                <a href="#" class="p-5 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:border-indigo-200 transition group">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800 group-hover:text-indigo-600 transition">Grade Calculator</h3>
+                    <p class="text-xs text-slate-500 mt-1">Determine final letter grades and honors pass status.</p>
+                </a>
+
+                <a href="#" class="p-5 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:border-indigo-200 transition group">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800 group-hover:text-indigo-600 transition">Time Zone Calculator</h3>
+                    <p class="text-xs text-slate-500 mt-1">Convert times across globally distributed zones.</p>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Multi-column Footer -->
+<footer class="bg-slate-900 text-slate-400 text-sm border-t border-slate-800 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <!-- Col 1: About -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2 text-white font-bold text-lg">
+            <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
+              <i class="fa-solid fa-calculator"></i>
+            </div>
+            <span>Calculator<span class="text-indigo-400">-Pro</span></span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Calculator Pro provides free, fast, and clinically accurate online tools for health, financial, mathematical, and everyday conversion needs.
+          </p>
+          <div class="text-xs text-slate-500">
+            &copy; <span id="current-year">2026</span> Calculator Pro. All rights reserved.
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Quick Links</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Unit Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Length Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Weight Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Temperature Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Volume & Area Converter</a></li>
+          </ul>
+        </div>
+        <!-- Column 3: Tools & Resources -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Calculators</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="age-calculator.html" class="hover:text-white transition-colors">Age Calculator</a></li>
+            <li><a href="time-calculator.html" class="hover:text-white transition-colors">Time Calculator</a></li>
+            <li><a href="sip-calculator.html" class="hover:text-white transition-colors">SIP Financial Calculator</a></li>
+            <li><a href="bmi-calculator.html" class="hover:text-white transition-colors">BMI Health Calculator</a></li>
+            <li><a href="percentage-calculator.html" class="hover:text-white transition-colors">Percentage Calculator</a></li>
+          </ul>
+        </div>
+
+         <!-- Column 4: Legal & Contact -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Legal & Info</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Editorial Guidelines</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+        <div class="bg-slate-900 text-white px-4 py-3 rounded-xl shadow-xl border border-slate-700 flex items-center gap-3 text-sm">
+            <i class="fa-solid fa-circle-check text-emerald-400"></i>
+            <span id="toast-message">Result copied to clipboard!</span>
+        </div>
+    </div>
+
+    <!-- Vanilla JavaScript Functionality -->
+
+    <script>
+		<!-- Inline JavaScript for Toggle -->
+      
+        document.addEventListener('DOMContentLoaded', () => {
+          const btn = document.getElementById('calc-mobile-menu-btn');
+          const menu = document.getElementById('calc-mobile-menu');
+          const menuIcon = document.getElementById('calc-menu-icon');
+          const closeIcon = document.getElementById('calc-close-icon');
+
+          if (btn && menu) {
+            btn.addEventListener('click', () => {
+              const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+              btn.setAttribute('aria-expanded', !isExpanded);
+              menu.classList.toggle('hidden');
+              menuIcon.classList.toggle('hidden');
+              closeIcon.classList.toggle('hidden');
+            });
+          }
+        });
+		
+        // State management
+        let currentMode = 'single'; // 'single' or 'multiple'
+        let subjects = [
+            { id: 1, name: 'Subject 1', obtained: 85, total: 100 },
+            { id: 2, name: 'Subject 2', obtained: 90, total: 100 },
+            { id: 3, name: 'Subject 3', obtained: 78, total: 100 },
+            { id: 4, name: 'Subject 4', obtained: 88, total: 100 },
+            { id: 5, name: 'Subject 5', obtained: 92, total: 100 }
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Render initial multi-subject rows
+            renderSubjectRows();
+            // Perform default initial calculation
+            calculateSingleSubject();
+        });
+
+        // Tab Switcher Function (Marks to % vs % to Marks)
+        function switchToolTab(tab) {
+            const btnPct = document.getElementById('tab-marks-to-pct');
+            const btnReverse = document.getElementById('tab-pct-to-marks');
+            const panelPct = document.getElementById('panel-marks-to-pct');
+            const panelReverse = document.getElementById('panel-pct-to-marks');
+
+            if (tab === 'marks-to-pct') {
+                btnPct.className = "flex-1 py-3 px-4 rounded-xl text-sm font-semibold transition-all shadow-sm bg-white text-indigo-600 flex items-center justify-center gap-2";
+                btnReverse.className = "flex-1 py-3 px-4 rounded-xl text-sm font-semibold transition-all text-slate-600 hover:text-slate-900 flex items-center justify-center gap-2";
+                panelPct.classList.remove('hidden');
+                panelReverse.classList.add('hidden');
+            } else {
+                btnReverse.className = "flex-1 py-3 px-4 rounded-xl text-sm font-semibold transition-all shadow-sm bg-white text-indigo-600 flex items-center justify-center gap-2";
+                btnPct.className = "flex-1 py-3 px-4 rounded-xl text-sm font-semibold transition-all text-slate-600 hover:text-slate-900 flex items-center justify-center gap-2";
+                panelReverse.classList.remove('hidden');
+                panelPct.classList.add('hidden');
+                calculateReverseMarks();
+            }
+        }
+
+        // Mode Change Handler (Single vs Multiple)
+        function handleModeChange(mode) {
+            currentMode = mode;
+            const singleContainer = document.getElementById('mode-single-container');
+            const multiContainer = document.getElementById('mode-multiple-container');
+
+            if (mode === 'single') {
+                singleContainer.classList.remove('hidden');
+                multiContainer.classList.add('hidden');
+                calculateSingleSubject();
+            } else {
+                singleContainer.classList.add('hidden');
+                multiContainer.classList.remove('hidden');
+                calculateMultipleSubjects();
+            }
+        }
+
+        // Calculate Single Subject
+        function calculateSingleSubject() {
+            const obtainedInput = document.getElementById('single-obtained');
+            const totalInput = document.getElementById('single-total');
+
+            const obtained = parseFloat(obtainedInput.value) || 0;
+            const total = parseFloat(totalInput.value) || 0;
+
+            updateResultUI(obtained, total);
+        }
+
+        // Render Multi-Subject Rows
+        function renderSubjectRows() {
+            const tbody = document.getElementById('multi-subject-rows');
+            tbody.innerHTML = '';
+
+            subjects.forEach((subj, index) => {
+                const tr = document.createElement('tr');
+                tr.className = "hover:bg-slate-50 transition";
+                tr.innerHTML = `
+                    <td class="py-2.5 px-3">
+                        <input type="text" value="${subj.name}" onchange="updateSubjectName(${subj.id}, this.value)" class="w-full px-2.5 py-1.5 text-xs sm:text-sm font-medium rounded-lg border border-slate-200 focus:border-indigo-500 outline-none">
+                    </td>
+                    <td class="py-2.5 px-3">
+                        <input type="number" min="0" step="any" value="${subj.obtained !== null ? subj.obtained : ''}" placeholder="0" oninput="updateSubjectObtained(${subj.id}, this.value)" class="w-full px-2.5 py-1.5 text-xs sm:text-sm font-medium rounded-lg border border-slate-200 focus:border-indigo-500 outline-none">
+                    </td>
+                    <td class="py-2.5 px-3">
+                        <input type="number" min="1" step="any" value="${subj.total}" placeholder="100" oninput="updateSubjectTotal(${subj.id}, this.value)" class="w-full px-2.5 py-1.5 text-xs sm:text-sm font-medium rounded-lg border border-slate-200 focus:border-indigo-500 outline-none">
+                    </td>
+                    <td class="py-2.5 px-3 text-center">
+                        <button type="button" onclick="removeSubjectRow(${subj.id})" class="p-1.5 text-slate-400 hover:text-rose-600 rounded-lg transition" title="Remove Subject">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+
+            document.getElementById('subject-count-badge').textContent = subjects.length;
+        }
+
+        function addSubjectRow() {
+            const nextId = subjects.length ? Math.max(...subjects.map(s => s.id)) + 1 : 1;
+            subjects.push({
+                id: nextId,
+                name: `Subject ${subjects.length + 1}`,
+                obtained: 80,
+                total: 100
+            });
+            renderSubjectRows();
+            calculateMultipleSubjects();
+        }
+
+        function removeSubjectRow(id) {
+            if (subjects.length <= 1) {
+                showToast("At least one subject is required.");
+                return;
+            }
+            subjects = subjects.filter(s => s.id !== id);
+            renderSubjectRows();
+            calculateMultipleSubjects();
+        }
+
+        function updateSubjectName(id, val) {
+            const s = subjects.find(item => item.id === id);
+            if (s) s.name = val;
+        }
+
+        function updateSubjectObtained(id, val) {
+            const s = subjects.find(item => item.id === id);
+            if (s) {
+                s.obtained = val === '' ? 0 : parseFloat(val);
+                calculateMultipleSubjects();
+            }
+        }
+
+        function updateSubjectTotal(id, val) {
+            const s = subjects.find(item => item.id === id);
+            if (s) {
+                s.total = val === '' ? 0 : parseFloat(val);
+                calculateMultipleSubjects();
+            }
+        }
+
+        function calculateMultipleSubjects() {
+            let totalObtained = 0;
+            let totalMax = 0;
+
+            subjects.forEach(s => {
+                totalObtained += (s.obtained || 0);
+                totalMax += (s.total || 0);
+            });
+
+            updateResultUI(totalObtained, totalMax);
+        }
+
+        function triggerMainCalculate() {
+            if (currentMode === 'single') {
+                calculateSingleSubject();
+            } else {
+                calculateMultipleSubjects();
+            }
+            showToast("Percentage calculated successfully!");
+        }
+
+        // Shared Result UI Update logic
+        function updateResultUI(obtained, total) {
+            const resultPctElem = document.getElementById('result-percentage');
+            const resultGradeBadge = document.getElementById('result-grade-badge');
+            const progressBar = document.getElementById('result-progress-bar');
+            const progressLabel = document.getElementById('progress-percentage-label');
+            const summaryObtained = document.getElementById('summary-obtained');
+            const summaryTotal = document.getElementById('summary-total');
+            const summaryRemark = document.getElementById('summary-remark');
+
+            summaryObtained.textContent = obtained;
+            summaryTotal.textContent = total;
+
+            if (total <= 0 || isNaN(obtained) || isNaN(total)) {
+                resultPctElem.textContent = "0.00%";
+                progressBar.style.width = "0%";
+                progressLabel.textContent = "0%";
+                resultGradeBadge.textContent = "Invalid";
+                summaryRemark.textContent = "Check inputs";
+                return;
+            }
+
+            let percentage = (obtained / total) * 100;
+            if (percentage < 0) percentage = 0;
+
+            const formattedPct = percentage.toFixed(2);
+            resultPctElem.textContent = `${formattedPct}%`;
+            
+            const cappedWidth = Math.min(Math.max(percentage, 0), 100);
+            progressBar.style.width = `${cappedWidth}%`;
+            progressLabel.textContent = `${formattedPct}%`;
+
+            // Calculate Grade & Remark
+            let grade = 'F';
+            let remark = 'Needs Improvement';
+            let badgeClass = 'bg-rose-900/50 text-rose-300 border-rose-700';
+
+            if (percentage >= 90) {
+                grade = 'A+';
+                remark = 'Outstanding Performance!';
+                badgeClass = 'bg-emerald-900/50 text-emerald-300 border-emerald-700';
+            } else if (percentage >= 80) {
+                grade = 'A';
+                remark = 'Excellent Marks';
+                badgeClass = 'bg-teal-900/50 text-teal-300 border-teal-700';
+            } else if (percentage >= 70) {
+                grade = 'B';
+                remark = 'Very Good Score';
+                badgeClass = 'bg-indigo-900/50 text-indigo-300 border-indigo-700';
+            } else if (percentage >= 60) {
+                grade = 'C';
+                remark = 'Good Progress';
+                badgeClass = 'bg-amber-900/50 text-amber-300 border-amber-700';
+            } else if (percentage >= 40) {
+                grade = 'D';
+                remark = 'Satisfactory Pass';
+                badgeClass = 'bg-orange-900/50 text-orange-300 border-orange-700';
+            }
+
+            resultGradeBadge.textContent = `Grade ${grade}`;
+            resultGradeBadge.className = `px-3 py-1 rounded-full text-xs font-bold border ${badgeClass}`;
+            summaryRemark.textContent = remark;
+        }
+
+        // Reverse Percentage to Marks Calculator
+        function calculateReverseMarks() {
+            const pctInput = document.getElementById('reverse-pct');
+            const totalInput = document.getElementById('reverse-total');
+
+            const targetPct = parseFloat(pctInput.value) || 0;
+            const totalMax = parseFloat(totalInput.value) || 0;
+
+            const neededMarks = (targetPct * totalMax) / 100;
+
+            document.getElementById('reverse-result-value').textContent = `${neededMarks.toFixed(1)} / ${totalMax}`;
+            document.getElementById('reverse-needed-marks').textContent = `${neededMarks.toFixed(1)} marks`;
+            document.getElementById('reverse-out-of').textContent = totalMax;
+        }
+
+        // Reset Function
+        function resetCalculator() {
+            document.getElementById('single-obtained').value = '';
+            document.getElementById('single-total').value = '100';
+            
+            subjects = [
+                { id: 1, name: 'Subject 1', obtained: null, total: 100 },
+                { id: 2, name: 'Subject 2', obtained: null, total: 100 },
+                { id: 3, name: 'Subject 3', obtained: null, total: 100 }
+            ];
+            renderSubjectRows();
+
+            if (currentMode === 'single') {
+                calculateSingleSubject();
+            } else {
+                calculateMultipleSubjects();
+            }
+
+            showToast("Calculator reset successfully.");
+        }
+
+        // Copy Result Clipboard Helper
+        function copyResultToClipboard() {
+            const pctText = document.getElementById('result-percentage').textContent;
+            const obtained = document.getElementById('summary-obtained').textContent;
+            const total = document.getElementById('summary-total').textContent;
+            
+            const shareText = `Marks Scored: ${obtained}/${total} | Calculated Percentage: ${pctText} (Calculator Pro)`;
+
+            // execCommand fallback for iframe safety
+            const dummy = document.createElement("textarea");
+            document.body.appendChild(dummy);
+            dummy.value = shareText;
+            dummy.select();
+            document.execCommand("copy");
+            document.body.removeChild(dummy);
+
+            showToast("Results copied to clipboard!");
+        }
+
+        // Accordion Toggle logic
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            const icon = document.getElementById(`icon-${id}`);
+
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                if (icon) icon.style.transform = 'rotate(0deg)';
+            } else {
+                // Close all other open accordions
+                document.querySelectorAll('.accordion-content').forEach(el => el.classList.remove('open'));
+                document.querySelectorAll('[id^="icon-faq-"]').forEach(i => i.style.transform = 'rotate(0deg)');
+
+                content.classList.add('open');
+                if (icon) icon.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // Toast Notification Function
+        function showToast(message) {
+            const container = document.getElementById('toast-container');
+            const msgElem = document.getElementById('toast-message');
+
+            if (msgElem) msgElem.textContent = message;
+
+            container.classList.remove('translate-y-20', 'opacity-0');
+            container.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                container.classList.remove('translate-y-0', 'opacity-100');
+                container.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

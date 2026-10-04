@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free BMI Calculator Online – Body Mass Index Check | Calculator Pro</title>
+  <meta name="description" content="Calculate your BMI instantly with our free online BMI calculator. Get accurate Body Mass Index, healthy weight range, WHO categories & tips. Metric & Imperial units. No signup required.">
+  <meta name="keywords" content="Free Online BMI Calculator, BMI Calculator, Body Mass Index calculator, BMI chart, healthy BMI, BMI for women, BMI for men">
+  <link rel="canonical" href="https://calculatorpro.com/health/bmi-calculator">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Free BMI Calculator Online – Body Mass Index Check | Calculator Pro">
+  <meta property="og:description" content="Calculate your BMI instantly with our free online BMI calculator. Get accurate Body Mass Index, healthy weight range, WHO categories & health insights.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculator Pro">
+  
+  <!-- FontAwesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Tailwind CSS CDN -->
+  
+
+  <link rel="stylesheet" href="./css/styles.css">
+
+  <!-- Structured Data / JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "BMI Calculator - Calculator Pro",
+        "url": "https://calculatorpro.com/health/bmi-calculator",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript. Requires HTML5.",
+        "description": "Free online Body Mass Index (BMI) calculator supporting metric and imperial units with WHO standard categories and healthy weight recommendations."
+      },
+      {
+        "@type": "HowTo",
+        "name": "How to Calculate Your Body Mass Index (BMI)",
+        "description": "Step-by-step instructions for calculating your Body Mass Index using Calculator Pro.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Select Unit System",
+            "text": "Choose either Metric (cm, kg) or Imperial (feet, inches, lbs) measurement unit system."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "Enter Your Height",
+            "text": "Type in your exact height in centimeters or feet and inches."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Enter Your Weight",
+            "text": "Input your current body weight in kilograms or pounds."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "View Instant Results",
+            "text": "Click Calculate or view your instant BMI value, WHO weight category, and healthy weight range."
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a healthy BMI range?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "According to the World Health Organization (WHO), a healthy BMI for adults is between 18.5 and 24.9. Scores under 18.5 indicate underweight, 25 to 29.9 indicate overweight, and 30 or higher indicate obesity."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is BMI calculated?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "In the metric system, BMI is calculated as weight in kilograms divided by height in meters squared (kg/m²). In the imperial system, multiply weight in pounds by 703 and divide by height in inches squared."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is BMI accurate for everyone?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "BMI is a reliable screening tool for most adults, but it does not measure body fat directly. It may overestimate body fat in muscular athletes and underestimate fat in elderly individuals or persons who have lost muscle mass."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between BMI and body fat percentage?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "BMI estimates weight status relative to height, whereas body fat percentage calculates the actual ratio of adipose fat tissue to overall body weight."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use this BMI calculator for children?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "This adult calculator is designed for individuals aged 20 and older. Children and teens require age and sex-specific percentile charts published by the CDC or WHO."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does BMI of 25 mean?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A BMI score of 25.0 marks the starting threshold of the overweight category according to standard WHO guidelines."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How often should I check my BMI?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Checking your BMI once a month or during routine health checkups is generally sufficient to track general fitness and body composition trends."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does muscle mass affect BMI?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, because muscle is denser than fat, muscular athletes may record higher BMI values that classify them as overweight or obese despite having low body fat."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is BMI Prime?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "BMI Prime is a ratio of an individual's actual BMI to the upper limit of an optimal BMI (25.0). A BMI Prime below 0.74 is underweight, 0.74 to 1.0 is optimal, and above 1.0 is overweight."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is this BMI calculator free forever?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, Calculator Pro provides a 100% free BMI calculator with no registration, hidden charges, or data storage."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+  <!-- Site Branding & Navigation Header -->
+  <header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      
+      <!-- Brand Logo & Name -->
+      <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
+        <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
+          <i class="fa-solid fa-calculator text-lg"></i>
+        </div>
+        <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
+          Calculator<span class="text-indigo-600">-Pro</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-1" aria-label="Main Navigation">
+        
+        <!-- Category 1: Age -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Age
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="age-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="birthday-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Birthday Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="age-difference-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Diffrence Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Time -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Time & Date
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="time-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Time Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="date-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Date Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="work-days-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Work Days Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="time-zone-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">TimeZone Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Converter -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Converter
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="unit-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Unit Converter</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="cgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">CGPA to Percentage</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to Percentage</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sgpa-to-cgpa-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to CGPA</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="marks-to-percentage-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Marks to Percentage</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4: Financial -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Financial
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sip-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SIP Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="emi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">EMI Loan Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="Compound-Interest-Calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Compound Interest Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 5: Health -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Health
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute right-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="bmi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">BMI Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="waist-to-hip-ratio-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">WHR Calculator</a>
+            </div>
+          </div>
+        </div>
+		  
+		 
+
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex md:hidden">
+        <button id="calc-mobile-menu-btn" type="button" class="p-2.5 rounded-xl text-slate-600 hover:text-indigo-600 hover:bg-slate-100/80 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors duration-200" aria-controls="calc-mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+          <svg id="calc-menu-icon" class="w-6 h-6 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="calc-close-icon" class="w-6 h-6 hidden transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile Full-Width Menu Container -->
+  <div id="calc-mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white shadow-xl transition-all duration-200 ease-in-out">
+    <div class="px-4 pt-3 pb-6 space-y-4">
+      
+      <!-- Mobile Category: Age -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Age</div>
+        <a href="age-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Calculator</a>
+		  <a href="birthday-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Birthday Calculator</a>
+		  <a href="age-difference-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Diffrence Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Time -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Time & Date</div>
+        <a href="time-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Time Calculator</a>
+		  <a href="date-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Date Calculator</a>
+		  <a href="work-days-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Work Days Calculator</a>
+		  <a href="time-zone-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">TimeZone Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Converter -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Converter</div>
+        <a href="javascript:void(0)" onclick="openCalculator('length')" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Unit Converter</a>
+		  <a href="cgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">CGPA to Percentage</a>
+		  <a href="sgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to Percentage</a>
+		  <a href="sgpa-to-cgpa-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to CGPA</a>
+		  <a href="marks-to-percentage-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Marks to Percentage</a>
+      </div>
+
+      <!-- Mobile Category: Financial -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Financial</div>
+        <a href="sip-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SIP Calculator</a>
+		  <a href="emi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">EMI Loan Calculator</a>
+		  <a href="Compound-Interest-Calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Compound Interest Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Health -->
+      <div>
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Health</div>
+        <a href="bmi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">BMI Calculator</a>
+		  <a href="waist-to-hip-ratio-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">WHR Calculator</a>
+      </div>
+		
+		
+
+    </div>
+  </div>
+</header>
+
+
+  <!-- Hero & Main Calculator Section -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+    
+    <!-- Hero Header Text -->
+    <div class="text-center max-w-3xl mx-auto mb-10">
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-brand-100 text-brand-700 mb-3">
+        <i class="fa-solid fa-heart-pulse"></i> Health & Fitness Tool
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+        Free Online BMI Calculator – <span class="text-brand-600">Check Your Body Mass Index</span>
+      </h1>
+      <p class="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
+        Use our free online BMI calculator to quickly find your Body Mass Index. Just enter your height and weight (metric or imperial) and get instant results with WHO weight categories, healthy weight range, and easy-to-understand health insights. Completely free, no registration, works on mobile.
+      </p>
+    </div>
+
+    <!-- BMI Calculator Main Card -->
+    <div class="bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden mb-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12">
+        
+        <!-- Left Side: Controls & Inputs -->
+        <div class="lg:col-span-7 p-6 sm:p-8 lg:p-10 border-b lg:border-b-0 lg:border-r border-slate-100">
+          
+          <!-- Unit Selector Switch -->
+          <div class="flex items-center justify-between mb-8 pb-4 border-b border-slate-100">
+            <span class="text-sm font-semibold text-slate-700 uppercase tracking-wider">Unit System</span>
+            <div class="inline-flex p-1 bg-slate-100 rounded-xl" role="group" aria-label="Unit Selection">
+              <button type="button" id="unit-metric-btn" class="px-5 py-2 text-sm font-semibold rounded-lg transition-all duration-200 bg-white text-brand-600 shadow-sm">
+                Metric (cm, kg)
+              </button>
+              <button type="button" id="unit-imperial-btn" class="px-5 py-2 text-sm font-semibold rounded-lg transition-all duration-200 text-slate-600 hover:text-slate-900">
+                Imperial (ft, lbs)
+              </button>
+            </div>
+          </div>
+
+          <!-- Input Fields Form -->
+          <form id="bmi-form" onsubmit="event.preventDefault();" class="space-y-6">
+            
+            <!-- Gender & Age Row -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="gender-select" class="block text-sm font-medium text-slate-700 mb-2">Gender</label>
+                <div class="relative">
+                  <select id="gender-select" class="w-full bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 p-3.5 appearance-none pr-10 font-medium transition-all">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
+                  <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-slate-500">
+                    <i class="fa-solid fa-chevron-down text-xs"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <label for="age-input" class="block text-sm font-medium text-slate-700 mb-2">Age (Ages 20+)</label>
+                <div class="relative">
+                  <input type="number" id="age-input" min="20" max="120" value="28" class="w-full bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 p-3.5 font-medium transition-all" placeholder="e.g. 28">
+                  <span class="absolute right-3.5 top-3.5 text-xs font-semibold text-slate-400">yrs</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Height Inputs Container -->
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-2">Height</label>
+
+              <!-- Metric Height Input -->
+              <div id="height-metric-container" class="relative">
+                <input type="number" id="height-cm" min="50" max="250" value="175" step="0.5" class="w-full bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 p-3.5 font-medium transition-all" placeholder="Centimeters">
+                <span class="absolute right-3.5 top-3.5 text-xs font-semibold text-slate-400">cm</span>
+              </div>
+
+              <!-- Imperial Height Input (Hidden by default) -->
+              <div id="height-imperial-container" class="hidden grid grid-cols-2 gap-4">
+                <div class="relative">
+                  <input type="number" id="height-ft" min="1" max="8" value="5" class="w-full bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 p-3.5 font-medium transition-all" placeholder="Feet">
+                  <span class="absolute right-3.5 top-3.5 text-xs font-semibold text-slate-400">ft</span>
+                </div>
+                <div class="relative">
+                  <input type="number" id="height-in" min="0" max="11" value="9" class="w-full bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 p-3.5 font-medium transition-all" placeholder="Inches">
+                  <span class="absolute right-3.5 top-3.5 text-xs font-semibold text-slate-400">in</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Weight Input Container -->
+            <div>
+              <label for="weight-input" class="block text-sm font-medium text-slate-700 mb-2">Weight</label>
+              <div class="relative">
+                <input type="number" id="weight-input" min="20" max="300" value="70" step="0.5" class="w-full bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 p-3.5 font-medium transition-all" placeholder="Kilograms">
+                <span id="weight-unit-label" class="absolute right-3.5 top-3.5 text-xs font-semibold text-slate-400">kg</span>
+              </div>
+            </div>
+
+            <!-- Calculate Action Button -->
+            <button type="button" id="calculate-btn" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-brand-500/25 transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2">
+              <i class="fa-solid fa-calculator"></i> Calculate BMI
+            </button>
+          </form>
+        </div>
+
+        <!-- Right Side: Results Display & Visual Scale -->
+        <div class="lg:col-span-5 bg-slate-900 text-white p-6 sm:p-8 lg:p-10 flex flex-col justify-between">
+          <div>
+            <!-- Result Title Header -->
+            <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+              <span class="text-xs font-bold uppercase tracking-widest text-slate-400">Your Result</span>
+              <span id="result-status-badge" class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                Normal Weight
+              </span>
+            </div>
+
+            <!-- Main Score Display -->
+            <div class="my-6 text-center">
+              <div class="text-xs uppercase font-medium text-slate-400 mb-1">Body Mass Index (BMI)</div>
+              <div id="bmi-score-text" class="text-6xl sm:text-7xl font-black tracking-tight text-white my-2">
+                22.9
+              </div>
+              <p id="bmi-short-summary" class="text-sm text-slate-300 max-w-xs mx-auto mt-2">
+                You have a optimal body weight for your height. Keep up the healthy lifestyle!
+              </p>
+            </div>
+
+            <!-- Horizontal Visual BMI Spectrum Bar -->
+            <div class="mt-8">
+              <div class="flex justify-between text-xs text-slate-400 mb-2 font-medium">
+                <span>15.0</span>
+                <span>18.5</span>
+                <span>25.0</span>
+                <span>30.0</span>
+                <span>40.0</span>
+              </div>
+
+              <!-- Segmented Color Bar -->
+              <div class="relative h-4 rounded-full overflow-hidden flex bg-slate-800 shadow-inner">
+                <div class="w-[14%] bg-sky-400" title="Underweight (<18.5)"></div>
+                <div class="w-[26%] bg-emerald-500" title="Normal Weight (18.5 - 24.9)"></div>
+                <div class="w-[20%] bg-amber-400" title="Overweight (25.0 - 29.9)"></div>
+                <div class="w-[40%] bg-rose-500" title="Obesity (>=30.0)"></div>
+              </div>
+
+              <!-- Animated Marker Indicator -->
+              <div class="relative h-6 mt-1">
+                <div id="bmi-marker" class="absolute transform -translate-x-1/2 transition-all duration-500 ease-out flex flex-col items-center" style="left: 31.6%;">
+                  <i class="fa-solid fa-caret-up text-brand-400 text-lg"></i>
+                </div>
+              </div>
+
+              <!-- Range Labels beneath Spectrum -->
+              <div class="grid grid-cols-4 text-[10px] sm:text-xs text-center font-semibold text-slate-400 mt-1">
+                <span class="text-sky-400">Underweight</span>
+                <span class="text-emerald-400">Normal</span>
+                <span class="text-amber-400">Overweight</span>
+                <span class="text-rose-400">Obese</span>
+              </div>
+            </div>
+
+            <!-- Secondary Metrics Card Grid -->
+            <div class="grid grid-cols-2 gap-4 mt-8 pt-6 border-t border-slate-800">
+              <div class="bg-slate-800/60 p-4 rounded-2xl border border-slate-700/50">
+                <span class="block text-xs text-slate-400 font-medium">Healthy Weight Range</span>
+                <span id="healthy-range-text" class="block text-base font-bold text-slate-100 mt-1">56.7 – 76.3 kg</span>
+              </div>
+              <div class="bg-slate-800/60 p-4 rounded-2xl border border-slate-700/50">
+                <span class="block text-xs text-slate-400 font-medium">BMI Prime</span>
+                <span id="bmi-prime-text" class="block text-base font-bold text-slate-100 mt-1">0.92</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Privacy Note -->
+          <div class="mt-8 text-center text-xs text-slate-500">
+            <i class="fa-solid fa-shield-halved mr-1"></i> Privacy-first: No health data is stored or transmitted.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- How to Use Section (H2) -->
+    <section class="mb-16">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">How to Use This BMI Calculator</h2>
+        <p class="text-slate-600 mt-2">Follow these four simple steps to get an instant, accurate Body Mass Index evaluation.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Step 1 -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm relative hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center font-bold text-lg mb-4">1</div>
+          <h3 class="font-bold text-slate-900 text-lg mb-2">Select Unit System</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Toggle between Metric units (centimeters and kilograms) or Imperial units (feet, inches, and pounds).</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm relative hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center font-bold text-lg mb-4">2</div>
+          <h3 class="font-bold text-slate-900 text-lg mb-2">Enter Your Height</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Input your precise barefoot height. Use centimeters or standard feet and inches depending on your unit toggle.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm relative hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center font-bold text-lg mb-4">3</div>
+          <h3 class="font-bold text-slate-900 text-lg mb-2">Enter Your Weight</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Enter your current weight in kilograms or pounds. Ensure inputs represent your standard daily condition.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm relative hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center font-bold text-lg mb-4">4</div>
+          <h3 class="font-bold text-slate-900 text-lg mb-2">View Instant Results</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">See your real-time score, color-coded health risk indicator, healthy range recommendation, and BMI Prime score.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Section: Educational Articles -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16">
+      
+      <!-- Main Content Area -->
+      <div class="lg:col-span-8 space-y-12">
+        
+        <!-- What is BMI -->
+        <section class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
+          <h2 class="text-2xl font-bold text-slate-900 mb-4">What is BMI (Body Mass Index)?</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Body Mass Index (BMI) is a simple numerical calculation that uses an individual's height and weight to estimate overall body fatness. First devised by Belgian statistician Adolphe Quetelet in the 1830s, BMI has evolved into an internationally recognized screening metric adopted by the World Health Organization (WHO) and the Centers for Disease Control and Prevention (CDC).
+          </p>
+          <p class="text-slate-600 leading-relaxed">
+            While BMI does not measure adipose tissue directly, research shows it correlates strongly with more invasive direct fat measurements (such as underwater weighing or dual-energy X-ray absorptiometry). Healthcare professionals widely use BMI as an economical, non-invasive first line of evaluation to identify potential weight issues in adults.
+          </p>
+        </section>
+
+        <!-- BMI Formulas -->
+        <section class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
+          <h2 class="text-2xl font-bold text-slate-900 mb-4">BMI Formula</h2>
+          <p class="text-slate-600 leading-relaxed mb-6">
+            BMI is calculated by dividing your mass by the square of your height. Depending on your choice of measurement system, use one of the two standard mathematical formulas below:
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/80">
+              <span class="inline-block px-3 py-1 rounded-md text-xs font-bold bg-brand-100 text-brand-700 mb-3">Metric System</span>
+              <div class="text-lg font-mono font-bold text-slate-800 mb-2">BMI = weight (kg) / [height (m)]²</div>
+              <p class="text-xs text-slate-500">Example: A person weighing 70 kg and standing 1.75 m tall has a BMI of 70 / (1.75 × 1.75) = 22.86 kg/m².</p>
+            </div>
+
+            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/80">
+              <span class="inline-block px-3 py-1 rounded-md text-xs font-bold bg-brand-100 text-brand-700 mb-3">Imperial System</span>
+              <div class="text-lg font-mono font-bold text-slate-800 mb-2">BMI = 703 × weight (lbs) / [height (in)]²</div>
+              <p class="text-xs text-slate-500">Example: A person weighing 154 lbs and standing 69 inches tall has a BMI of 703 × 154 / (69 × 69) = 22.73.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Standard WHO Chart Table -->
+        <section class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
+          <h2 class="text-2xl font-bold text-slate-900 mb-4">BMI Categories Chart (WHO Standard)</h2>
+          <p class="text-slate-600 leading-relaxed mb-6">
+            The World Health Organization categorizes adult weight status according to fixed BMI thresholds. These categories help identify potential risks for cardiovascular disease, diabetes, and other metabolic conditions.
+          </p>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="border-b border-slate-200 bg-slate-50/80 text-xs font-bold uppercase tracking-wider text-slate-600">
+                  <th class="py-3.5 px-4 rounded-l-xl">BMI Range</th>
+                  <th class="py-3.5 px-4">Category</th>
+                  <th class="py-3.5 px-4 rounded-r-xl">Health Risk Level</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100 text-sm">
+                <tr class="hover:bg-slate-50/50 transition-colors">
+                  <td class="py-3.5 px-4 font-mono font-semibold text-sky-600">Below 18.5</td>
+                  <td class="py-3.5 px-4 font-medium text-slate-800">Underweight</td>
+                  <td class="py-3.5 px-4 text-slate-600">Increased risk</td>
+                </tr>
+                <tr class="hover:bg-slate-50/50 transition-colors bg-emerald-50/30">
+                  <td class="py-3.5 px-4 font-mono font-semibold text-emerald-600">18.5 – 24.9</td>
+                  <td class="py-3.5 px-4 font-bold text-emerald-800">Normal weight</td>
+                  <td class="py-3.5 px-4 text-emerald-700 font-medium">Low / Optimal</td>
+                </tr>
+                <tr class="hover:bg-slate-50/50 transition-colors">
+                  <td class="py-3.5 px-4 font-mono font-semibold text-amber-600">25.0 – 29.9</td>
+                  <td class="py-3.5 px-4 font-medium text-slate-800">Overweight</td>
+                  <td class="py-3.5 px-4 text-slate-600">Increased risk</td>
+                </tr>
+                <tr class="hover:bg-slate-50/50 transition-colors">
+                  <td class="py-3.5 px-4 font-mono font-semibold text-rose-500">30.0 – 34.9</td>
+                  <td class="py-3.5 px-4 font-medium text-slate-800">Obese Class I</td>
+                  <td class="py-3.5 px-4 text-slate-600">High risk</td>
+                </tr>
+                <tr class="hover:bg-slate-50/50 transition-colors">
+                  <td class="py-3.5 px-4 font-mono font-semibold text-rose-600">35.0 – 39.9</td>
+                  <td class="py-3.5 px-4 font-medium text-slate-800">Obese Class II</td>
+                  <td class="py-3.5 px-4 text-slate-600">Very High risk</td>
+                </tr>
+                <tr class="hover:bg-slate-50/50 transition-colors">
+                  <td class="py-3.5 px-4 font-mono font-semibold text-rose-700">40.0 and above</td>
+                  <td class="py-3.5 px-4 font-medium text-slate-800">Obese Class III</td>
+                  <td class="py-3.5 px-4 text-slate-600">Extremely High risk</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Limitations of BMI -->
+        <section class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
+          <h2 class="text-2xl font-bold text-slate-900 mb-4">Limitations of BMI</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            While BMI serves as a useful statistical tool for population studies, it has recognized limitations when evaluating individual health:
+          </p>
+          <ul class="space-y-3 text-slate-600 list-disc list-inside">
+            <li><strong class="text-slate-800">Does not differentiate muscle from fat:</strong> Muscle tissue is denser than fat. Bodybuilders and trained athletes can record high BMIs despite having very low body fat percentages.</li>
+            <li><strong class="text-slate-800">Does not consider fat distribution:</strong> Visceral fat around abdominal organs carries higher cardiometabolic risk than subcutaneous fat stored elsewhere.</li>
+            <li><strong class="text-slate-800">Ethnic Differences:</strong> Research indicates that health risks associated with obesity may manifest at lower BMI thresholds (e.g., 23.0 for overweight) in individuals of Asian descent.</li>
+            <li><strong class="text-slate-800">Age & Pregnancy:</strong> Muscle loss in older adults can mask excessive fatness, while pregnant and lactating women naturally experience weight changes not reflected accurately by BMI.</li>
+          </ul>
+        </section>
+
+        <!-- Demographics Breakdown -->
+        <section class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm space-y-6">
+          <h2 class="text-2xl font-bold text-slate-900">BMI for Men, Women & Different Age Groups</h2>
+          
+          <div>
+            <h3 class="text-lg font-bold text-slate-800 mb-2">BMI Calculator for Women</h3>
+            <p class="text-slate-600 leading-relaxed text-sm">
+              Women naturally carry a higher percentage of essential body fat than men due to reproductive biology. Although standard WHO adult BMI ranges remain the same across genders, women generally store more subcutaneous fat at identical BMI values.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-bold text-slate-800 mb-2">BMI Calculator for Men</h3>
+            <p class="text-slate-600 leading-relaxed text-sm">
+              Men typically possess higher bone density and muscle mass than women. As a result, men may occasionally register slightly higher BMIs without carrying excessive adipose tissue.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-bold text-slate-800 mb-2">BMI for Adults vs Children / Teens</h3>
+            <p class="text-slate-600 leading-relaxed text-sm">
+              This calculator is intended for adults aged 20 and older. For children and adolescents under 20, raw numerical BMI is not used directly. Instead, health professionals convert BMI into an age- and sex-specific percentile (CDC growth charts) to account for natural childhood growth spurts.
+            </p>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Right Sidebar: Feature Highlights -->
+      <div class="lg:col-span-4 space-y-6">
+        
+        <div class="bg-gradient-to-br from-brand-600 to-indigo-700 text-white p-8 rounded-3xl shadow-lg sticky top-24">
+          <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+            <i class="fa-solid fa-circle-check text-brand-300"></i> Why Use Our Free BMI Calculator?
+          </h2>
+          
+          <ul class="space-y-4 text-sm font-medium">
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-bolt mt-1 text-brand-300"></i>
+              <span><strong>Instant Calculation:</strong> Get real-time metric & imperial results as you type.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-sliders mt-1 text-brand-300"></i>
+              <span><strong>Dual System Support:</strong> Seamlessly toggle between Centimeters/Kilograms and Feet/Pounds.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-lock mt-1 text-brand-300"></i>
+              <span><strong>100% Private:</strong> Zero data stored or logged on external servers.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-mobile-screen mt-1 text-brand-300"></i>
+              <span><strong>Mobile Optimized:</strong> Smooth visual indicators tailored for touch screens.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-bullseye mt-1 text-brand-300"></i>
+              <span><strong>WHO Compliant:</strong> Uses standard international Body Mass Index ranges.</span>
+            </li>
+          </ul>
+
+          <div class="mt-8 pt-6 border-t border-white/20 text-xs text-brand-100">
+            Trusted by over 100,000+ monthly users looking for fast health insights.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- FAQ Section (H2) -->
+    <section class="bg-white p-8 sm:p-12 rounded-3xl border border-slate-100 shadow-sm mb-16">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="text-brand-600 font-bold text-xs uppercase tracking-widest">Got Questions?</span>
+        <h2 class="text-3xl font-bold text-slate-900 mt-1">Frequently Asked Questions</h2>
+        <p class="text-slate-600 text-sm mt-2">Find concise answers regarding Body Mass Index calculations and health indicators.</p>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-4" id="faq-accordion-group">
+        
+        <!-- FAQ 1 -->
+        <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors duration-200">
+          <button type="button" class="faq-btn w-full px-6 py-4 text-left font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50">
+            <span>What is a healthy BMI range?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content px-6 text-sm text-slate-600">
+            <p class="py-4 border-t border-slate-100">
+              According to the World Health Organization (WHO), a healthy BMI for adults is between 18.5 and 24.9. Scores under 18.5 are classified as underweight, 25 to 29.9 as overweight, and 30 or higher as obese.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors duration-200">
+          <button type="button" class="faq-btn w-full px-6 py-4 text-left font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50">
+            <span>How is BMI calculated?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content px-6 text-sm text-slate-600">
+            <p class="py-4 border-t border-slate-100">
+              BMI is calculated by dividing weight in kilograms by height in meters squared (kg/m²). In imperial units, multiply weight in pounds by 703 and divide by height in inches squared.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors duration-200">
+          <button type="button" class="faq-btn w-full px-6 py-4 text-left font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50">
+            <span>Is BMI accurate for everyone?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content px-6 text-sm text-slate-600">
+            <p class="py-4 border-t border-slate-100">
+              BMI is a general screening indicator. It may not be completely accurate for muscular athletes, pregnant women, elderly individuals with sarcopenia, or children under 20.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors duration-200">
+          <button type="button" class="faq-btn w-full px-6 py-4 text-left font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50">
+            <span>What is the difference between BMI and body fat percentage?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content px-6 text-sm text-slate-600">
+            <p class="py-4 border-t border-slate-100">
+              BMI evaluates weight relative to height, while body fat percentage directly measures the proportion of fat tissue compared to lean muscle, bone, and water weight.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors duration-200">
+          <button type="button" class="faq-btn w-full px-6 py-4 text-left font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50">
+            <span>Can I use this BMI calculator for children?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content px-6 text-sm text-slate-600">
+            <p class="py-4 border-t border-slate-100">
+              No. Children and teenagers require age- and sex-adjusted percentile charts provided by pediatric growth standards (such as CDC percentile charts).
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors duration-200">
+          <button type="button" class="faq-btn w-full px-6 py-4 text-left font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50">
+            <span>What does a BMI of 25 mean?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content px-6 text-sm text-slate-600">
+            <p class="py-4 border-t border-slate-100">
+              A score of 25.0 represents the threshold where the overweight category begins under World Health Organization guidelines.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 7 -->
+        <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors duration-200">
+          <button type="button" class="faq-btn w-full px-6 py-4 text-left font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50">
+            <span>How often should I check my BMI?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content px-6 text-sm text-slate-600">
+            <p class="py-4 border-t border-slate-100">
+              Checking your BMI monthly or during periodic medical exams is sufficient to track overall fitness and health trends over time.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 8 -->
+        <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors duration-200">
+          <button type="button" class="faq-btn w-full px-6 py-4 text-left font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50">
+            <span>Does muscle mass affect BMI?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content px-6 text-sm text-slate-600">
+            <p class="py-4 border-t border-slate-100">
+              Yes. Because muscle density is greater than fat density, individuals with high muscle mass may yield elevated BMI scores despite having low fat percentages.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 9 -->
+        <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors duration-200">
+          <button type="button" class="faq-btn w-full px-6 py-4 text-left font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50">
+            <span>What is BMI Prime?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content px-6 text-sm text-slate-600">
+            <p class="py-4 border-t border-slate-100">
+              BMI Prime is a derivative of BMI. It is calculated by dividing an individual's BMI by 25.0 (the upper limit of normal BMI). A value of 0.74 to 1.0 represents optimal weight.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 10 -->
+        <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors duration-200">
+          <button type="button" class="faq-btn w-full px-6 py-4 text-left font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50">
+            <span>Is this BMI calculator free forever?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content px-6 text-sm text-slate-600">
+            <p class="py-4 border-t border-slate-100">
+              Yes, Calculator Pro offers this calculator 100% free with no registration, subscription fees, or account creation needed.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Related Tools Section -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold text-slate-900 mb-6">Related Health & Fitness Calculators</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <a href="#" class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:border-brand-300 transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center text-xl mb-4 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+            <i class="fa-solid fa-ruler-horizontal"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 text-lg mb-1 group-hover:text-brand-600 transition-colors">Waist-to-Hip Ratio Calculator</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">Evaluate body fat distribution and cardiovascular risk using waist and hip measurements.</p>
+        </a>
+
+        <a href="#" class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:border-brand-300 transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center text-xl mb-4 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+            <i class="fa-solid fa-percent"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 text-lg mb-1 group-hover:text-brand-600 transition-colors">Body Fat Percentage Calculator</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">Estimate lean mass and essential body fat percentage using standard skinfold or tape methods.</p>
+        </a>
+
+        <a href="#" class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:border-brand-300 transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center text-xl mb-4 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+            <i class="fa-solid fa-weight-scale"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 text-lg mb-1 group-hover:text-brand-600 transition-colors">Ideal Weight Calculator</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">Discover recommended target weights based on clinical formulas including Devine and Hamwi.</p>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  
+  <!-- Multi-column Footer -->
+<footer class="bg-slate-900 text-slate-400 text-sm border-t border-slate-800 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <!-- Col 1: About -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2 text-white font-bold text-lg">
+            <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
+              <i class="fa-solid fa-calculator"></i>
+            </div>
+            <span>Calculator<span class="text-indigo-400">-Pro</span></span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Calculator Pro provides free, fast, and clinically accurate online tools for health, financial, mathematical, and everyday conversion needs.
+          </p>
+          <div class="text-xs text-slate-500">
+            &copy; <span id="current-year">2026</span> Calculator Pro. All rights reserved.
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Quick Links</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Unit Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Length Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Weight Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Temperature Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Volume & Area Converter</a></li>
+          </ul>
+        </div>
+        <!-- Column 3: Tools & Resources -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Calculators</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="age-calculator.html" class="hover:text-white transition-colors">Age Calculator</a></li>
+            <li><a href="time-calculator.html" class="hover:text-white transition-colors">Time Calculator</a></li>
+            <li><a href="sip-calculator.html" class="hover:text-white transition-colors">SIP Financial Calculator</a></li>
+            <li><a href="bmi-calculator.html" class="hover:text-white transition-colors">BMI Health Calculator</a></li>
+            <li><a href="percentage-calculator.html" class="hover:text-white transition-colors">Percentage Calculator</a></li>
+          </ul>
+        </div>
+
+         <!-- Column 4: Legal & Contact -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Legal & Info</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Editorial Guidelines</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  <!-- JavaScript Controller Logic -->
+  <script>
+    // Navigation toggle functionality
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('calc-mobile-menu-btn');
+      const menu = document.getElementById('calc-mobile-menu');
+      const menuIcon = document.getElementById('calc-menu-icon');
+      const closeIcon = document.getElementById('calc-close-icon');
+
+      if (btn && menu) {
+        btn.addEventListener('click', () => {
+          const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', !isExpanded);
+          menu.classList.toggle('hidden');
+          menuIcon.classList.toggle('hidden');
+          closeIcon.classList.toggle('hidden');
+        });
+      }
+
+      // Initialize Calculator Engine
+      initBMICalculator();
+      
+      // Initialize FAQ Accordion Listeners
+      initAccordions();
+    });
+
+    // BMI Engine Logic
+    function initBMICalculator() {
+      let currentUnit = 'metric'; // 'metric' or 'imperial'
+
+      // DOM Element References
+      const metricBtn = document.getElementById('unit-metric-btn');
+      const imperialBtn = document.getElementById('unit-imperial-btn');
+      const metricHeightContainer = document.getElementById('height-metric-container');
+      const imperialHeightContainer = document.getElementById('height-imperial-container');
+      const weightUnitLabel = document.getElementById('weight-unit-label');
+      
+      const heightCmInput = document.getElementById('height-cm');
+      const heightFtInput = document.getElementById('height-ft');
+      const heightInInput = document.getElementById('height-in');
+      const weightInput = document.getElementById('weight-input');
+      const calculateBtn = document.getElementById('calculate-btn');
+
+      // Outputs
+      const bmiScoreText = document.getElementById('bmi-score-text');
+      const resultBadge = document.getElementById('result-status-badge');
+      const bmiSummary = document.getElementById('bmi-short-summary');
+      const bmiMarker = document.getElementById('bmi-marker');
+      const healthyRangeText = document.getElementById('healthy-range-text');
+      const bmiPrimeText = document.getElementById('bmi-prime-text');
+
+      // Toggle Unit Switcher
+      metricBtn.addEventListener('click', () => switchUnit('metric'));
+      imperialBtn.addEventListener('click', () => switchUnit('imperial'));
+
+      function switchUnit(unit) {
+        if (currentUnit === unit) return;
+        currentUnit = unit;
+
+        if (unit === 'metric') {
+          metricBtn.className = "px-5 py-2 text-sm font-semibold rounded-lg transition-all duration-200 bg-white text-brand-600 shadow-sm";
+          imperialBtn.className = "px-5 py-2 text-sm font-semibold rounded-lg transition-all duration-200 text-slate-600 hover:text-slate-900";
+          metricHeightContainer.classList.remove('hidden');
+          imperialHeightContainer.classList.add('hidden');
+          weightUnitLabel.textContent = 'kg';
+          
+          // Convert imperial values to metric values for continuous user context
+          const feet = parseFloat(heightFtInput.value) || 0;
+          const inches = parseFloat(heightInInput.value) || 0;
+          const totalInches = (feet * 12) + inches;
+          if (totalInches > 0) {
+            heightCmInput.value = Math.round(totalInches * 2.54);
+          }
+          
+          const lbs = parseFloat(weightInput.value) || 0;
+          if (lbs > 0) {
+            weightInput.value = Math.round(lbs / 2.20462);
+          }
+        } else {
+          imperialBtn.className = "px-5 py-2 text-sm font-semibold rounded-lg transition-all duration-200 bg-white text-brand-600 shadow-sm";
+          metricBtn.className = "px-5 py-2 text-sm font-semibold rounded-lg transition-all duration-200 text-slate-600 hover:text-slate-900";
+          metricHeightContainer.classList.add('hidden');
+          imperialHeightContainer.classList.remove('hidden');
+          weightUnitLabel.textContent = 'lbs';
+
+          // Convert metric values to imperial values
+          const cm = parseFloat(heightCmInput.value) || 0;
+          if (cm > 0) {
+            const totalInches = cm / 2.54;
+            heightFtInput.value = Math.floor(totalInches / 12);
+            heightInInput.value = Math.round(totalInches % 12);
+          }
+
+          const kg = parseFloat(weightInput.value) || 0;
+          if (kg > 0) {
+            weightInput.value = Math.round(kg * 2.20462);
+          }
+        }
+
+        calculate();
+      }
+
+      // Calculation Core Logic
+      function calculate() {
+        let heightInMeters = 0;
+        let weightInKg = 0;
+
+        if (currentUnit === 'metric') {
+          const cm = parseFloat(heightCmInput.value);
+          const kg = parseFloat(weightInput.value);
+          if (!cm || !kg || cm <= 0 || kg <= 0) return;
+          heightInMeters = cm / 100;
+          weightInKg = kg;
+        } else {
+          const ft = parseFloat(heightFtInput.value) || 0;
+          const inches = parseFloat(heightInInput.value) || 0;
+          const lbs = parseFloat(weightInput.value) || 0;
+          const totalInches = (ft * 12) + inches;
+          if (!totalInches || !lbs || totalInches <= 0 || lbs <= 0) return;
+          heightInMeters = (totalInches * 2.54) / 100;
+          weightInKg = lbs / 2.20462;
+        }
+
+        // Mathematical Formula
+        const bmi = weightInKg / (heightInMeters * heightInMeters);
+        const bmiPrime = bmi / 25.0;
+
+        // Healthy Weight Bounds (BMI 18.5 to 24.9)
+        const minHealthyKg = 18.5 * (heightInMeters * heightInMeters);
+        const maxHealthyKg = 24.9 * (heightInMeters * heightInMeters);
+
+        // Display Score
+        bmiScoreText.textContent = bmi.toFixed(1);
+        bmiPrimeText.textContent = bmiPrime.toFixed(2);
+
+        // Format Healthy Weight Display
+        if (currentUnit === 'metric') {
+          healthyRangeText.textContent = `${minHealthyKg.toFixed(1)} – ${maxHealthyKg.toFixed(1)} kg`;
+        } else {
+          const minLbs = minHealthyKg * 2.20462;
+          const maxLbs = maxHealthyKg * 2.20462;
+          healthyRangeText.textContent = `${Math.round(minLbs)} – ${Math.round(maxLbs)} lbs`;
+        }
+
+        // Determine WHO Category & Visual Marker Placement
+        let category = '';
+        let badgeClasses = '';
+        let summaryText = '';
+        let markerPercentage = 0;
+
+        if (bmi < 18.5) {
+          category = 'Underweight';
+          badgeClasses = 'px-3 py-1 rounded-full text-xs font-bold bg-sky-500/20 text-sky-400 border border-sky-500/30';
+          summaryText = 'Your weight is below the recommended range. Consider consulting a nutritionist.';
+          // Position scale 15 -> 18.5 maps to 0% -> 14%
+          markerPercentage = Math.max(2, Math.min(14, ((bmi - 15) / (18.5 - 15)) * 14));
+        } else if (bmi >= 18.5 && bmi <= 24.9) {
+          category = 'Normal Weight';
+          badgeClasses = 'px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30';
+          summaryText = 'You have an optimal body weight for your height. Keep up the healthy lifestyle!';
+          // Position scale 18.5 -> 25 maps to 14% -> 40%
+          markerPercentage = 14 + (((bmi - 18.5) / (25 - 18.5)) * 26);
+        } else if (bmi >= 25.0 && bmi <= 29.9) {
+          category = 'Overweight';
+          badgeClasses = 'px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30';
+          summaryText = 'Your weight exceeds the optimal range. Regular exercise and balanced diet are advised.';
+          // Position scale 25 -> 30 maps to 40% -> 60%
+          markerPercentage = 40 + (((bmi - 25) / (30 - 25)) * 20);
+        } else {
+          category = 'Obesity';
+          badgeClasses = 'px-3 py-1 rounded-full text-xs font-bold bg-rose-500/20 text-rose-400 border border-rose-500/30';
+          summaryText = 'Your BMI falls within the obese range. We recommend speaking with a medical professional.';
+          // Position scale 30 -> 40 maps to 60% -> 98%
+          markerPercentage = Math.min(98, 60 + (((bmi - 30) / (40 - 30)) * 38));
+        }
+
+        resultBadge.textContent = category;
+        resultBadge.className = badgeClasses;
+        bmiSummary.textContent = summaryText;
+        bmiMarker.style.left = `${markerPercentage}%`;
+      }
+
+      // Realtime & Button Click Listeners
+      calculateBtn.addEventListener('click', calculate);
+      
+      const allInputs = [heightCmInput, heightFtInput, heightInInput, weightInput];
+      allInputs.forEach(input => {
+        input.addEventListener('input', calculate);
+      });
+
+      // Initial Computation
+      calculate();
+    }
+
+    // Accordions Logic
+    function initAccordions() {
+      const faqBtns = document.querySelectorAll('.faq-btn');
+
+      faqBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const content = btn.nextElementSibling;
+          const icon = btn.querySelector('i');
+          const isOpen = content.classList.contains('open');
+
+          // Close all accordions for clean UX
+          document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
+          document.querySelectorAll('.faq-btn i').forEach(i => i.classList.remove('rotate-180'));
+
+          if (!isOpen) {
+            content.classList.add('open');
+            icon.classList.add('rotate-180');
+          }
+        });
+      });
+    }
+  </script>
+
+</body>
+</html>

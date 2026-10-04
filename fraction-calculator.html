@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Fraction Calculator - Add, Subtract, Multiply & Divide | Calculator Pro</title>
+    <meta name="description" content="Use our free Fraction Calculator to add, subtract, multiply, divide and simplify fractions. Calculate mixed fractions and convert fractions to decimals with step-by-step solutions.">
+    <meta name="keywords" content="fraction calculator, free fraction calculator, fraction calculator online, fractions calculator, calculate fractions, fraction simplifier, simplify fractions calculator, add fractions calculator, subtract fractions calculator, multiply fractions calculator, divide fractions calculator, mixed fraction calculator, improper fraction calculator, fraction to decimal calculator, decimal to fraction calculator, fraction solver, fraction math calculator">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://calculatorpro.com/fraction-calculator">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Free Fraction Calculator - Add, Subtract, Multiply & Divide | Calculator Pro">
+    <meta property="og:description" content="Calculate, simplify, and convert fractions with step-by-step visual solutions. Supports mixed numbers, improper fractions, decimals, and percentage calculations instantly.">
+    <meta property="og:url" content="https://calculatorpro.com/fraction-calculator">
+    <meta property="og:site_name" content="Calculator Pro">
+
+    <!-- Fonts & Icons -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    
+    <!-- Custom Custom Styles & Animations -->
+    
+
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- Structured Data (JSON-LD Schemas) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "@id": "https://calculatorpro.com/fraction-calculator#webapp",
+          "name": "Fraction Calculator Pro",
+          "url": "https://calculatorpro.com/fraction-calculator",
+          "applicationCategory": "EducationalApplication",
+          "operatingSystem": "All",
+          "browserRequirements": "Requires JavaScript. Requires HTML5.",
+          "description": "Free online fraction calculator to add, subtract, multiply, divide, simplify fractions and convert between mixed numbers and decimals with step-by-step explanations.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "HowTo",
+          "name": "How to Use the Free Fraction Calculator",
+          "description": "Calculate and simplify fractions easily in four quick steps.",
+          "step": [
+            {
+              "@type": "HowToStep",
+              "name": "Choose Input Mode",
+              "text": "Select from Simple Fraction, Mixed Number, Simplify Fractions, Fraction to Decimal, or Decimal to Fraction modes."
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Enter Numerator and Denominator",
+              "text": "Enter your whole numbers, numerators, and denominators into the input fields."
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Select Operation",
+              "text": "Choose +, −, ×, or ÷ operation for two-fraction calculations."
+            },
+            {
+              "@type": "HowToStep",
+              "name": "View Results and Solutions",
+              "text": "Click Calculate to view the simplified answer, mixed fraction, decimal format, visual diagram, and complete step-by-step solution."
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Is this Fraction Calculator free to use?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, our fraction calculator is 100% free with unlimited calculations and step-by-step solutions."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does it show step-by-step solutions?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, every calculation generates full step-by-step breakdown explaining LCD, GCD reduction, and cross-multiplication."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I calculate mixed numbers?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes! Switch to Mixed Number mode to perform operations directly on mixed fractions like 2 3/4 + 1 1/2."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I simplify a fraction using this calculator?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Select the Simplify Fractions mode, type your numerator and denominator, and click Calculate to reduce it to lowest terms using the Greatest Common Divisor (GCD)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does it work on mobile?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, Calculator Pro is fully responsive and optimized for smartphones, tablets, and desktop computers."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Are my calculations saved?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Calculations are saved in your local session history so you can review recent problem steps anytime without losing work."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I convert fraction to decimal?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, choose Fraction to Decimal mode or view the auto-generated decimal equivalent in any calculation result."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the difference between proper and improper fraction?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A proper fraction has a numerator smaller than its denominator (e.g. 3/4). An improper fraction has a numerator equal to or greater than its denominator (e.g. 7/4)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How to add fractions with different denominators?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "To add fractions with different denominators, find the Least Common Denominator (LCD), convert each fraction into an equivalent fraction, add the numerators, and simplify the fraction."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is this fraction calculator accurate?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, our free fraction calculator utilizes high-precision integer and floating point math logic to guarantee 100% accurate mathematical output."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col selection:bg-indigo-500 selection:text-white">
+
+<header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      
+      <!-- Brand Logo & Name -->
+      <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
+        <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
+          <i class="fa-solid fa-calculator text-lg"></i>
+        </div>
+        <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
+          Calculator<span class="text-indigo-600">-Pro</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-1" aria-label="Main Navigation">
+        
+        <!-- Category 1: Age -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Age
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="age-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="birthday-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Birthday Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="age-difference-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Diffrence Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Time -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Time & Date
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="time-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Time Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="date-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Date Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="work-days-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Work Days Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="time-zone-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">TimeZone Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Converter -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Converter
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="unit-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Unit Converter</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="cgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">CGPA to Percentage</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to Percentage</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sgpa-to-cgpa-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to CGPA</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="marks-to-percentage-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Marks to Percentage</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4: Financial -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Financial
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sip-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SIP Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="emi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">EMI Loan Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="Compound-Interest-Calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Compound Interest Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 5: Health -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Health
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute right-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="bmi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">BMI Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="waist-to-hip-ratio-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">WHR Calculator</a>
+            </div>
+          </div>
+        </div>
+		  
+		 
+
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex md:hidden">
+        <button id="calc-mobile-menu-btn" type="button" class="p-2.5 rounded-xl text-slate-600 hover:text-indigo-600 hover:bg-slate-100/80 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors duration-200" aria-controls="calc-mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+          <svg id="calc-menu-icon" class="w-6 h-6 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="calc-close-icon" class="w-6 h-6 hidden transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile Full-Width Menu Container -->
+  <div id="calc-mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white shadow-xl transition-all duration-200 ease-in-out">
+    <div class="px-4 pt-3 pb-6 space-y-4">
+      
+      <!-- Mobile Category: Age -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Age</div>
+        <a href="age-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Calculator</a>
+		  <a href="birthday-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Birthday Calculator</a>
+		  <a href="age-difference-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Diffrence Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Time -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Time & Date</div>
+        <a href="time-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Time Calculator</a>
+		  <a href="date-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Date Calculator</a>
+		  <a href="work-days-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Work Days Calculator</a>
+		  <a href="time-zone-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">TimeZone Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Converter -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Converter</div>
+        <a href="javascript:void(0)" onclick="openCalculator('length')" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Unit Converter</a>
+		  <a href="cgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">CGPA to Percentage</a>
+		  <a href="sgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to Percentage</a>
+		  <a href="sgpa-to-cgpa-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to CGPA</a>
+		  <a href="marks-to-percentage-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Marks to Percentage</a>
+      </div>
+
+      <!-- Mobile Category: Financial -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Financial</div>
+        <a href="sip-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SIP Calculator</a>
+		  <a href="emi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">EMI Loan Calculator</a>
+		  <a href="Compound-Interest-Calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Compound Interest Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Health -->
+      <div>
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Health</div>
+        <a href="bmi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">BMI Calculator</a>
+		  <a href="waist-to-hip-ratio-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">WHR Calculator</a>
+      </div>
+		
+		
+
+    </div>
+  </div>
+</header>
+
+<main class="flex-grow">
+    <!-- HERO / ABOVE THE FOLD SECTION -->
+    <section class="relative bg-gradient-to-b from-indigo-50/60 via-slate-50 to-white pt-8 pb-16 px-4 sm:px-6 lg:px-8 border-b border-slate-200/60 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <!-- Hero Heading Block -->
+            <div class="text-center max-w-3xl mx-auto mb-8">
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700 mb-4 shadow-sm border border-indigo-200">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Step-by-Step Solutions
+                </span>
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                    Free Fraction Calculator
+                </h1>
+                <p class="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
+                    Add, subtract, multiply, divide and simplify fractions instantly with our free online fraction calculator. Supports proper fractions, improper fractions, mixed numbers with detailed step-by-step solutions.
+                </p>
+                
+                <!-- Quick Feature Badges -->
+                <div class="mt-6 flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-xs sm:text-sm font-medium text-slate-700">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white shadow-sm border border-slate-200">
+                        <i class="fa-solid fa-check text-emerald-500"></i> Step-by-step solutions
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white shadow-sm border border-slate-200">
+                        <i class="fa-solid fa-check text-emerald-500"></i> Mixed Numbers
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white shadow-sm border border-slate-200">
+                        <i class="fa-solid fa-check text-emerald-500"></i> Instant Results
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white shadow-sm border border-slate-200">
+                        <i class="fa-solid fa-check text-emerald-500"></i> 100% Free
+                    </span>
+                </div>
+            </div>
+
+            <!-- CALCULATOR PRO APP CONTAINER -->
+            <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden ring-1 ring-slate-900/5">
+                <!-- Mode Selection Tabs -->
+                <div class="bg-slate-100/80 p-2 border-b border-slate-200/80 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-1 text-center" role="tablist">
+                    <button type="button" id="tab-simple" onclick="switchMode('simple')" class="tab-btn px-3 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 bg-white text-indigo-600 shadow-sm border border-slate-200/60 focus:outline-none focus:ring-2 focus:ring-indigo-500" role="tab" aria-selected="true">
+                        Simple Fraction
+                    </button>
+                    <button type="button" id="tab-mixed" onclick="switchMode('mixed')" class="tab-btn px-3 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-white/60 focus:outline-none focus:ring-2 focus:ring-indigo-500" role="tab" aria-selected="false">
+                        Mixed Number
+                    </button>
+                    <button type="button" id="tab-simplify" onclick="switchMode('simplify')" class="tab-btn px-3 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-white/60 focus:outline-none focus:ring-2 focus:ring-indigo-500" role="tab" aria-selected="false">
+                        Simplify Fractions
+                    </button>
+                    <button type="button" id="tab-f2d" onclick="switchMode('f2d')" class="tab-btn px-3 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-white/60 focus:outline-none focus:ring-2 focus:ring-indigo-500" role="tab" aria-selected="false">
+                        Fraction to Decimal
+                    </button>
+                    <button type="button" id="tab-d2f" onclick="switchMode('d2f')" class="tab-btn px-3 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-white/60 focus:outline-none focus:ring-2 focus:ring-indigo-500 col-span-2 sm:col-span-1" role="tab" aria-selected="false">
+                        Decimal to Fraction
+                    </button>
+                </div>
+
+                <!-- CALCULATOR INPUT FORM -->
+                <div class="p-6 sm:p-8">
+                    <form id="fraction-form" onsubmit="event.preventDefault(); calculate();" class="space-y-6">
+                        
+                        <!-- Dynamic Input Workspace -->
+                        <div id="calculator-inputs-container" class="flex flex-wrap items-center justify-center gap-4 sm:gap-6 min-h-[140px]">
+                            <!-- JavaScript populates input fields dynamically based on active mode -->
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
+                            <button type="submit" class="w-full sm:w-auto px-8 py-3.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-base rounded-xl shadow-lg shadow-indigo-200 hover:shadow-indigo-300 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-calculator"></i> Calculate
+                            </button>
+                            <button type="button" onclick="resetCalculator()" class="w-full sm:w-auto px-6 py-3.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-base rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-slate-400 flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-rotate-left"></i> Clear
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- ERROR ALERT -->
+                    <div id="error-box" class="hidden mt-6 p-4 bg-rose-50 border border-rose-200 rounded-xl text-rose-700 text-sm flex items-start gap-3" role="alert">
+                        <i class="fa-solid fa-circle-exclamation text-rose-500 text-lg mt-0.5"></i>
+                        <span id="error-message">Please enter valid numeric values.</span>
+                    </div>
+
+                    <!-- RESULT DISPLAY CARD -->
+                    <div id="result-card" class="hidden mt-8 pt-8 border-t border-slate-100 animate-pulse-glow transition-all">
+                        <div class="bg-indigo-50/50 rounded-2xl p-6 border border-indigo-100 shadow-inner">
+                            <div class="flex items-center justify-between flex-wrap gap-2 mb-4">
+                                <h3 class="text-xs font-bold uppercase tracking-wider text-indigo-700">Calculated Result</h3>
+                                <button type="button" onclick="copyResultToClipboard()" class="text-xs font-medium text-indigo-600 hover:text-indigo-800 bg-white px-3 py-1.5 rounded-lg border border-indigo-200 shadow-sm flex items-center gap-1.5 transition-colors">
+                                    <i id="copy-icon" class="fa-regular fa-copy"></i> <span id="copy-text">Copy Result</span>
+                                </button>
+                            </div>
+
+                            <!-- Answer Summary Grid -->
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center mb-6">
+                                <div class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm flex flex-col justify-center items-center">
+                                    <span class="text-xs text-slate-500 font-medium mb-1">Fraction Form</span>
+                                    <div id="result-fraction-display" class="text-2xl font-extrabold text-indigo-600 my-1">--</div>
+                                    <span id="result-type-badge" class="text-[10px] uppercase font-bold px-2 py-0.5 rounded bg-indigo-100 text-indigo-700">Proper</span>
+                                </div>
+                                <div class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm flex flex-col justify-center items-center">
+                                    <span class="text-xs text-slate-500 font-medium mb-1">Decimal Form</span>
+                                    <div id="result-decimal-display" class="text-2xl font-extrabold text-slate-800 my-1">--</div>
+                                    <span class="text-[10px] text-slate-400 font-medium">Rounded to 4 decimals</span>
+                                </div>
+                                <div class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm flex flex-col justify-center items-center">
+                                    <span class="text-xs text-slate-500 font-medium mb-1">Percentage</span>
+                                    <div id="result-percentage-display" class="text-2xl font-extrabold text-emerald-600 my-1">--</div>
+                                    <span class="text-[10px] text-slate-400 font-medium">Value × 100%</span>
+                                </div>
+                            </div>
+
+                            <!-- Interactive Visual Representation Diagram -->
+                            <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm mb-6">
+                                <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3 text-center">Visual Representation</h4>
+                                <div id="visual-diagram-container" class="flex flex-wrap items-center justify-center gap-6 min-h-[100px]">
+                                    <!-- Visual SVG Diagram render here -->
+                                </div>
+                            </div>
+
+                            <!-- Step-by-Step Mathematical Explanation -->
+                            <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm text-left">
+                                <h4 class="text-sm font-bold text-slate-800 mb-3 flex items-center gap-2">
+                                    <i class="fa-solid fa-list-check text-indigo-600"></i> Step-by-Step Solution:
+                                </h4>
+                                <div id="solution-steps-list" class="space-y-3 text-sm text-slate-700 leading-relaxed font-sans">
+                                    <!-- Dynamic calculation steps insertion -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION B: HOW TO USE THIS FRACTION CALCULATOR -->
+    <section class="py-16 bg-white border-b border-slate-100 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">How to Use This Fraction Calculator</h2>
+                <p class="mt-2 text-slate-600 text-sm sm:text-base">Follow these 4 simple steps to calculate and simplify any fraction instantly.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 relative group hover:border-indigo-200 transition-colors">
+                    <span class="w-10 h-10 rounded-xl bg-indigo-600 text-white font-extrabold flex items-center justify-center mb-4 shadow-md shadow-indigo-100 text-lg">1</span>
+                    <h3 class="font-bold text-slate-800 text-base mb-2">Select Calculation Mode</h3>
+                    <p class="text-slate-600 text-sm">Choose Simple Fraction, Mixed Number, Simplify, or Conversion mode.</p>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 relative group hover:border-indigo-200 transition-colors">
+                    <span class="w-10 h-10 rounded-xl bg-indigo-600 text-white font-extrabold flex items-center justify-center mb-4 shadow-md shadow-indigo-100 text-lg">2</span>
+                    <h3 class="font-bold text-slate-800 text-base mb-2">Input Numbers</h3>
+                    <p class="text-slate-600 text-sm">Enter the numerators, denominators, or whole numbers into the designated fields.</p>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 relative group hover:border-indigo-200 transition-colors">
+                    <span class="w-10 h-10 rounded-xl bg-indigo-600 text-white font-extrabold flex items-center justify-center mb-4 shadow-md shadow-indigo-100 text-lg">3</span>
+                    <h3 class="font-bold text-slate-800 text-base mb-2">Select Operation</h3>
+                    <p class="text-slate-600 text-sm">Select +, −, ×, or ÷ for arithmetic operations between two fractions.</p>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 relative group hover:border-indigo-200 transition-colors">
+                    <span class="w-10 h-10 rounded-xl bg-indigo-600 text-white font-extrabold flex items-center justify-center mb-4 shadow-md shadow-indigo-100 text-lg">4</span>
+                    <h3 class="font-bold text-slate-800 text-base mb-2">View Full Solution</h3>
+                    <p class="text-slate-600 text-sm">Click Calculate to get the reduced fraction, mixed number, decimal, and detailed steps.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION C: WHAT CAN THIS FRACTION CALCULATOR DO? -->
+    <section class="py-16 bg-slate-50 border-b border-slate-100 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">What Can This Fraction Calculator Do?</h2>
+                <p class="mt-2 text-slate-600 text-sm sm:text-base">Comprehensive feature suite designed for students, teachers, engineers, and everyday users.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center flex-shrink-0 text-lg">
+                        <i class="fa-solid fa-plus-minus"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 text-base mb-1">Basic Arithmetic</h3>
+                        <p class="text-slate-600 text-sm">Add, subtract, multiply, and divide any two simple or mixed fractions easily.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center flex-shrink-0 text-lg">
+                        <i class="fa-solid fa-compress"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 text-base mb-1">Fraction Simplifier</h3>
+                        <p class="text-slate-600 text-sm">Reduce large fractions to their lowest terms using Greatest Common Divisor (GCD).</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center flex-shrink-0 text-lg">
+                        <i class="fa-solid fa-shuffle"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 text-base mb-1">Improper ↔ Mixed</h3>
+                        <p class="text-slate-600 text-sm">Convert improper fractions into mixed numbers and back seamlessly.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center flex-shrink-0 text-lg">
+                        <i class="fa-solid fa-percent"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 text-base mb-1">Decimal & Percentage</h3>
+                        <p class="text-slate-600 text-sm">Convert fractions directly into precise decimal numbers and percentages.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center flex-shrink-0 text-lg">
+                        <i class="fa-solid fa-minus"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 text-base mb-1">Negative Numbers</h3>
+                        <p class="text-slate-600 text-sm">Full support for negative numerators, denominators, and whole numbers.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center flex-shrink-0 text-lg">
+                        <i class="fa-solid fa-diagram-project"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 text-base mb-1">Detailed LCD Working</h3>
+                        <p class="text-slate-600 text-sm">Shows step-by-step working including LCD, LCM, and cross-multiplication.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION D: ABOUT FRACTION CALCULATOR -->
+    <section class="py-16 bg-white border-b border-slate-100 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight mb-6">About Fraction Calculator</h2>
+            <div class="prose prose-slate max-w-none text-slate-600 space-y-4 text-base leading-relaxed">
+                <p>
+                    Welcome to <strong>Calculator Pro’s Free Fraction Calculator</strong>, the ultimate online tool engineered to help students, educators, carpenters, architects, and math enthusiasts solve complex fraction calculations with ease. Math involving fractions can often feel intimidating due to Least Common Denominators (LCD), improper conversions, and reduction steps. Our tool eliminates guesswork by delivering accurate results instantly.
+                </p>
+                <p>
+                    Built with modern web standards and tailored mathematical algorithms, Calculator Pro ensures high precision whether you are adding fractions with unlike denominators, dividing mixed fractions, or converting decimal values into reduced fraction forms. Every single output is complemented by clear, step-by-step solution breakdowns, turning a simple computation into an educational experience.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION E: WHAT IS A FRACTION? (EDUCATIONAL & DIAGRAMS) -->
+    <section class="py-16 bg-slate-50 border-b border-slate-100 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">What is a Fraction?</h2>
+                <p class="mt-2 text-slate-600 text-sm sm:text-base">A fraction represents a part of a whole number, written as two numbers separated by a fraction line (<sup>a</sup>/<sub>b</sub>).</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <!-- Proper Fraction Card -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-indigo-50 rounded-full flex items-center justify-center">
+                        <svg class="w-10 h-10 text-indigo-600" viewBox="0 0 36 36">
+                            <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="#e0effe"/>
+                            <path d="M18 2.0845 A 15.9155 15.9155 0 0 1 33.9155 18 L 18 18 Z" fill="#2563eb"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-lg mb-1">Proper Fraction</h3>
+                    <p class="text-xs font-semibold text-indigo-600 mb-2">Numerator &lt; Denominator</p>
+                    <p class="text-slate-600 text-xs">The top number is smaller than the bottom number (e.g. <sup>3</sup>/<sub>4</sub> or <sup>1</sup>/<sub>2</sub>).</p>
+                </div>
+
+                <!-- Improper Fraction Card -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-indigo-50 rounded-full flex items-center justify-center">
+                        <svg class="w-10 h-10 text-indigo-600" viewBox="0 0 36 36">
+                            <path d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" fill="#2563eb"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-lg mb-1">Improper Fraction</h3>
+                    <p class="text-xs font-semibold text-indigo-600 mb-2">Numerator ≥ Denominator</p>
+                    <p class="text-slate-600 text-xs">The top number is equal to or larger than the bottom number (e.g. <sup>5</sup>/<sub>4</sub> or <sup>7</sup>/<sub>3</sub>).</p>
+                </div>
+
+                <!-- Mixed Number Card -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-indigo-50 rounded-full flex items-center justify-center">
+                        <span class="text-xl font-black text-indigo-600">2 ½</span>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-lg mb-1">Mixed Number</h3>
+                    <p class="text-xs font-semibold text-indigo-600 mb-2">Whole Number + Fraction</p>
+                    <p class="text-slate-600 text-xs">Combines a whole integer with a proper fraction (e.g. 2 <sup>1</sup>/<sub>2</sub> or 1 <sup>3</sup>/<sub>4</sub>).</p>
+                </div>
+
+                <!-- Equivalent Fraction Card -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-indigo-50 rounded-full flex items-center justify-center">
+                        <span class="text-sm font-bold text-indigo-600">½ = ²/₄</span>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-lg mb-1">Equivalent Fractions</h3>
+                    <p class="text-xs font-semibold text-indigo-600 mb-2">Equal Value</p>
+                    <p class="text-slate-600 text-xs">Fractions that look different but share the same overall numerical value (e.g. <sup>1</sup>/<sub>2</sub> = <sup>2</sup>/<sub>4</sub> = <sup>4</sup>/<sub>8</sub>).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION F: HOW TO PERFORM OPERATIONS ON FRACTIONS -->
+    <section class="py-16 bg-white border-b border-slate-100 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto space-y-12">
+            <div class="text-center max-w-2xl mx-auto">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">How to Perform Operations on Fractions</h2>
+                <p class="mt-2 text-slate-600 text-sm sm:text-base">Formulas and simple steps for fraction math operations.</p>
+            </div>
+
+            <!-- Addition Formula -->
+            <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80">
+                <h3 class="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-plus text-indigo-600"></i> How to Add Fractions
+                </h3>
+                <p class="text-slate-600 text-sm mb-4">
+                    To add fractions with identical denominators, simply add the numerators. If the denominators are different, find the Least Common Denominator (LCD) first:
+                </p>
+                <div class="bg-white p-4 rounded-xl border border-slate-200 text-center font-mono text-base font-bold text-indigo-600 mb-3">
+                    <sup>a</sup>/<sub>b</sub> + <sup>c</sup>/<sub>d</sub> = <sup>(a·d + b·c)</sup>/<sub>(b·d)</sub>
+                </div>
+                <p class="text-xs text-slate-500"><strong>Example:</strong> <sup>1</sup>/<sub>3</sub> + <sup>1</sup>/<sub>4</sub> = <sup>(1×4 + 3×1)</sup>/<sub>12</sub> = <sup>7</sup>/<sub>12</sub></p>
+            </div>
+
+            <!-- Subtraction Formula -->
+            <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80">
+                <h3 class="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-minus text-indigo-600"></i> How to Subtract Fractions
+                </h3>
+                <p class="text-slate-600 text-sm mb-4">
+                    Convert both fractions to common denominators, then subtract the second numerator from the first:
+                </p>
+                <div class="bg-white p-4 rounded-xl border border-slate-200 text-center font-mono text-base font-bold text-indigo-600 mb-3">
+                    <sup>a</sup>/<sub>b</sub> − <sup>c</sup>/<sub>d</sub> = <sup>(a·d − b·c)</sup>/<sub>(b·d)</sub>
+                </div>
+                <p class="text-xs text-slate-500"><strong>Example:</strong> <sup>3</sup>/<sub>4</sub> − <sup>1</sup>/<sub>2</sub> = <sup>3</sup>/<sub>4</sub> − <sup>2</sup>/<sub>4</sub> = <sup>1</sup>/<sub>4</sub></p>
+            </div>
+
+            <!-- Multiplication Formula -->
+            <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80">
+                <h3 class="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-xmark text-indigo-600"></i> How to Multiply Fractions
+                </h3>
+                <p class="text-slate-600 text-sm mb-4">
+                    Multiply top numbers together and bottom numbers together directly:
+                </p>
+                <div class="bg-white p-4 rounded-xl border border-slate-200 text-center font-mono text-base font-bold text-indigo-600 mb-3">
+                    <sup>a</sup>/<sub>b</sub> × <sup>c</sup>/<sub>d</sub> = <sup>(a × c)</sup>/<sub>(b × d)</sub>
+                </div>
+                <p class="text-xs text-slate-500"><strong>Example:</strong> <sup>2</sup>/<sub>3</sub> × <sup>3</sup>/<sub>5</sub> = <sup>6</sup>/<sub>15</sub> = <sup>2</sup>/<sub>5</sub></p>
+            </div>
+
+            <!-- Division Formula -->
+            <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80">
+                <h3 class="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-divide text-indigo-600"></i> How to Divide Fractions (Reciprocal Method)
+                </h3>
+                <p class="text-slate-600 text-sm mb-4">
+                    Multiply the first fraction by the reciprocal (flipped version) of the second fraction:
+                </p>
+                <div class="bg-white p-4 rounded-xl border border-slate-200 text-center font-mono text-base font-bold text-indigo-600 mb-3">
+                    <sup>a</sup>/<sub>b</sub> ÷ <sup>c</sup>/<sub>d</sub> = <sup>a</sup>/<sub>b</sub> × <sup>d</sup>/<sub>c</sub> = <sup>(a × d)</sup>/<sub>(b × c)</sub>
+                </div>
+                <p class="text-xs text-slate-500"><strong>Example:</strong> <sup>1</sup>/<sub>2</sub> ÷ <sup>3</sup>/<sub>4</sub> = <sup>1</sup>/<sub>2</sub> × <sup>4</sup>/<sub>3</sub> = <sup>4</sup>/<sub>6</sub> = <sup>2</sup>/<sub>3</sub></p>
+            </div>
+
+            <!-- Simplifying Formula -->
+            <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80">
+                <h3 class="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-compress text-indigo-600"></i> How to Simplify Fractions
+                </h3>
+                <p class="text-slate-600 text-sm mb-4">
+                    Divide both numerator and denominator by their Greatest Common Divisor (GCD):
+                </p>
+                <div class="bg-white p-4 rounded-xl border border-slate-200 text-center font-mono text-base font-bold text-indigo-600 mb-3">
+                    Simplified = <sup>(a ÷ GCD)</sup>/<sub>(b ÷ GCD)</sub>
+                </div>
+                <p class="text-xs text-slate-500"><strong>Example:</strong> Reduce <sup>8</sup>/<sub>12</sub> with GCD = 4 → <sup>(8÷4)</sup>/<sub>(12÷4)</sub> = <sup>2</sup>/<sub>3</sub></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION G: STEP-BY-STEP EXAMPLES -->
+    <section class="py-16 bg-slate-50 border-b border-slate-100 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">Step-by-Step Examples</h2>
+                <p class="mt-2 text-slate-600 text-sm sm:text-base">Real world problem walkthroughs matching calculator results.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Example 1 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm">
+                    <span class="inline-block px-2.5 py-1 rounded bg-indigo-50 text-indigo-600 text-xs font-bold mb-3">Basic Addition</span>
+                    <h3 class="font-bold text-slate-800 text-base mb-2">Solve <sup>2</sup>/<sub>5</sub> + <sup>3</sup>/<sub>10</sub></h3>
+                    <ol class="text-xs text-slate-600 space-y-2 list-decimal list-inside leading-relaxed">
+                        <li>LCD of 5 and 10 is 10.</li>
+                        <li>Convert <sup>2</sup>/<sub>5</sub> to <sup>4</sup>/<sub>10</sub>.</li>
+                        <li>Add numerators: 4 + 3 = 7.</li>
+                        <li><strong>Final Result: <sup>7</sup>/<sub>10</sub></strong></li>
+                    </ol>
+                </div>
+
+                <!-- Example 2 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm">
+                    <span class="inline-block px-2.5 py-1 rounded bg-indigo-50 text-indigo-600 text-xs font-bold mb-3">Mixed Multiplication</span>
+                    <h3 class="font-bold text-slate-800 text-base mb-2">Solve 1 <sup>1</sup>/<sub>2</sub> × 2 <sup>2</sup>/<sub>3</sub></h3>
+                    <ol class="text-xs text-slate-600 space-y-2 list-decimal list-inside leading-relaxed">
+                        <li>Convert to improper: <sup>3</sup>/<sub>2</sub> × <sup>8</sup>/<sub>3</sub>.</li>
+                        <li>Multiply: (3×8) / (2×3) = <sup>24</sup>/<sub>6</sub>.</li>
+                        <li>Simplify 24 ÷ 6 = 4.</li>
+                        <li><strong>Final Result: 4</strong></li>
+                    </ol>
+                </div>
+
+                <!-- Example 3 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm">
+                    <span class="inline-block px-2.5 py-1 rounded bg-indigo-50 text-indigo-600 text-xs font-bold mb-3">Fraction Simplification</span>
+                    <h3 class="font-bold text-slate-800 text-base mb-2">Simplify <sup>36</sup>/<sub>48</sub></h3>
+                    <ol class="text-xs text-slate-600 space-y-2 list-decimal list-inside leading-relaxed">
+                        <li>Find GCD of 36 and 48 (GCD = 12).</li>
+                        <li>Divide numerator: 36 ÷ 12 = 3.</li>
+                        <li>Divide denominator: 48 ÷ 12 = 4.</li>
+                        <li><strong>Final Result: <sup>3</sup>/<sub>4</sub></strong></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION H: BENEFITS OF USING OUR FRACTION CALCULATOR -->
+    <section class="py-16 bg-white border-b border-slate-100 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">Benefits of Using Our Free Fraction Calculator</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100">
+                    <i class="fa-solid fa-bolt text-indigo-600 text-2xl mb-3"></i>
+                    <h3 class="font-bold text-slate-800 text-base mb-1">Instant Accurate Results</h3>
+                    <p class="text-xs text-slate-600">Calculates precise fraction arithmetic in less than a fraction of a second.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100">
+                    <i class="fa-solid fa-graduation-cap text-indigo-600 text-2xl mb-3"></i>
+                    <h3 class="font-bold text-slate-800 text-base mb-1">Learn While Calculating</h3>
+                    <p class="text-xs text-slate-600">Clear step-by-step mathematical explanations help you understand homework.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100">
+                    <i class="fa-solid fa-mobile-screen-button text-indigo-600 text-2xl mb-3"></i>
+                    <h3 class="font-bold text-slate-800 text-base mb-1">Mobile-Friendly & Offline</h3>
+                    <p class="text-xs text-slate-600">Works smoothly on smartphone, tablet, desktop without slow server lag.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION I: FREQUENTLY ASKED QUESTIONS (SEO ACCORDION) -->
+    <section class="py-16 bg-slate-50 border-b border-slate-100 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">Frequently Asked Questions</h2>
+                <p class="mt-2 text-slate-600 text-sm sm:text-base">Everything you need to know about calculating fractions online.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm">
+                    <button type="button" onclick="toggleAccordion('faq-1')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none focus:bg-slate-50">
+                        <span>Q1. Is this Fraction Calculator free to use?</span>
+                        <i id="faq-1-icon" class="fa-solid fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq-1" class="accordion-content px-6 text-sm text-slate-600 pb-4">
+                        Yes, our fraction calculator is 100% completely free to use without limits, popups, or required registration.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm">
+                    <button type="button" onclick="toggleAccordion('faq-2')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none focus:bg-slate-50">
+                        <span>Q2. Does it show step-by-step solutions?</span>
+                        <i id="faq-2-icon" class="fa-solid fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq-2" class="accordion-content px-6 text-sm text-slate-600 pb-4">
+                        Yes! Every calculation provides a detailed step-by-step mathematical working box that explains how the LCD, cross-multiplication, and reduction were derived.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm">
+                    <button type="button" onclick="toggleAccordion('faq-3')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none focus:bg-slate-50">
+                        <span>Q3. Can I calculate mixed numbers?</span>
+                        <i id="faq-3-icon" class="fa-solid fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq-3" class="accordion-content px-6 text-sm text-slate-600 pb-4">
+                        Absolutely. Switch to "Mixed Number" tab to add, subtract, multiply, or divide whole integers combined with fractions.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm">
+                    <button type="button" onclick="toggleAccordion('faq-4')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none focus:bg-slate-50">
+                        <span>Q4. How do I simplify a fraction using this calculator?</span>
+                        <i id="faq-4-icon" class="fa-solid fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq-4" class="accordion-content px-6 text-sm text-slate-600 pb-4">
+                        Select the "Simplify Fractions" tab, enter your numerator and denominator, and click Calculate to reduce the fraction using its Greatest Common Divisor (GCD).
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm">
+                    <button type="button" onclick="toggleAccordion('faq-5')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none focus:bg-slate-50">
+                        <span>Q5. Does it work on mobile?</span>
+                        <i id="faq-5-icon" class="fa-solid fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq-5" class="accordion-content px-6 text-sm text-slate-600 pb-4">
+                        Yes, Calculator Pro is engineered with a mobile-first fluid design that works perfectly on iOS, Android, tablets, and desktop computers.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm">
+                    <button type="button" onclick="toggleAccordion('faq-6')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none focus:bg-slate-50">
+                        <span>Q6. Are my calculations saved?</span>
+                        <i id="faq-6-icon" class="fa-solid fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq-6" class="accordion-content px-6 text-sm text-slate-600 pb-4">
+                        Calculations are held safely in your active session browser memory so you can easily review recent step solutions.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 7 -->
+                <div class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm">
+                    <button type="button" onclick="toggleAccordion('faq-7')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none focus:bg-slate-50">
+                        <span>Q7. Can I convert fraction to decimal?</span>
+                        <i id="faq-7-icon" class="fa-solid fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq-7" class="accordion-content px-6 text-sm text-slate-600 pb-4">
+                        Yes, click the "Fraction to Decimal" tab or check the auto-generated decimal value in any fraction result screen.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 8 -->
+                <div class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm">
+                    <button type="button" onclick="toggleAccordion('faq-8')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none focus:bg-slate-50">
+                        <span>Q8. What is the difference between proper and improper fraction?</span>
+                        <i id="faq-8-icon" class="fa-solid fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq-8" class="accordion-content px-6 text-sm text-slate-600 pb-4">
+                        A proper fraction has a numerator smaller than its denominator (e.g. 3/4). An improper fraction has a numerator greater than or equal to its denominator (e.g. 7/4).
+                    </div>
+                </div>
+
+                <!-- FAQ Item 9 -->
+                <div class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm">
+                    <button type="button" onclick="toggleAccordion('faq-9')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none focus:bg-slate-50">
+                        <span>Q9. How to add fractions with different denominators?</span>
+                        <i id="faq-9-icon" class="fa-solid fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq-9" class="accordion-content px-6 text-sm text-slate-600 pb-4">
+                        Find the Least Common Denominator (LCD), convert each fraction into an equivalent fraction with that LCD, add the numerators together, and simplify.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 10 -->
+                <div class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm">
+                    <button type="button" onclick="toggleAccordion('faq-10')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none focus:bg-slate-50">
+                        <span>Q10. Is this fraction calculator accurate?</span>
+                        <i id="faq-10-icon" class="fa-solid fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq-10" class="accordion-content px-6 text-sm text-slate-600 pb-4">
+                        Yes, Calculator Pro utilizes client-side math routines to ensure 100% mathematical precision for fractions and decimal outputs.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION N: RELATED TOOLS -->
+    <section class="py-16 bg-white border-b border-slate-100 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight mb-8">Related Tools / Internal Links</h2>
+            <div class="flex flex-wrap justify-center gap-3 text-sm">
+                <a href="#" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-indigo-50 hover:text-indigo-600 text-slate-700 font-medium transition-colors border border-slate-200/60">Ratio Calculator</a>
+                <a href="#" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-indigo-50 hover:text-indigo-600 text-slate-700 font-medium transition-colors border border-slate-200/60">Percentage Calculator</a>
+                <a href="#" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-indigo-50 hover:text-indigo-600 text-slate-700 font-medium transition-colors border border-slate-200/60">Scientific Calculator</a>
+                <a href="#" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-indigo-50 hover:text-indigo-600 text-slate-700 font-medium transition-colors border border-slate-200/60">GST Calculator</a>
+                <a href="#" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-indigo-50 hover:text-indigo-600 text-slate-700 font-medium transition-colors border border-slate-200/60">Simple Interest Calculator</a>
+                <a href="#" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-indigo-50 hover:text-indigo-600 text-slate-700 font-medium transition-colors border border-slate-200/60">Compound Interest Calculator</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Multi-column Footer -->
+<footer class="bg-slate-900 text-slate-400 text-sm border-t border-slate-800 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <!-- Col 1: About -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2 text-white font-bold text-lg">
+            <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
+              <i class="fa-solid fa-calculator"></i>
+            </div>
+            <span>Calculator<span class="text-indigo-400">-Pro</span></span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Calculator Pro provides free, fast, and clinically accurate online tools for health, financial, mathematical, and everyday conversion needs.
+          </p>
+          <div class="text-xs text-slate-500">
+            &copy; <span id="current-year">2026</span> Calculator Pro. All rights reserved.
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Quick Links</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Unit Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Length Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Weight Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Temperature Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Volume & Area Converter</a></li>
+          </ul>
+        </div>
+        <!-- Column 3: Tools & Resources -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Calculators</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="age-calculator.html" class="hover:text-white transition-colors">Age Calculator</a></li>
+            <li><a href="time-calculator.html" class="hover:text-white transition-colors">Time Calculator</a></li>
+            <li><a href="sip-calculator.html" class="hover:text-white transition-colors">SIP Financial Calculator</a></li>
+            <li><a href="bmi-calculator.html" class="hover:text-white transition-colors">BMI Health Calculator</a></li>
+            <li><a href="percentage-calculator.html" class="hover:text-white transition-colors">Percentage Calculator</a></li>
+          </ul>
+        </div>
+
+         <!-- Column 4: Legal & Contact -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Legal & Info</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Editorial Guidelines</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+<!-- VANILLA JAVASCRIPT CALCULATOR LOGIC -->
+<script>
+	<!-- Inline JavaScript for Toggle -->
+      
+        document.addEventListener('DOMContentLoaded', () => {
+          const btn = document.getElementById('calc-mobile-menu-btn');
+          const menu = document.getElementById('calc-mobile-menu');
+          const menuIcon = document.getElementById('calc-menu-icon');
+          const closeIcon = document.getElementById('calc-close-icon');
+
+          if (btn && menu) {
+            btn.addEventListener('click', () => {
+              const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+              btn.setAttribute('aria-expanded', !isExpanded);
+              menu.classList.toggle('hidden');
+              menuIcon.classList.toggle('hidden');
+              closeIcon.classList.toggle('hidden');
+            });
+          }
+        });
+	
+    // State management
+    let activeMode = 'simple'; // 'simple', 'mixed', 'simplify', 'f2d', 'd2f'
+
+    // Math Utility Functions
+    function getGCD(a, b) {
+        a = Math.abs(a);
+        b = Math.abs(b);
+        while (b) {
+            let t = b;
+            b = a % b;
+            a = t;
+        }
+        return a;
+    }
+
+    function getLCM(a, b) {
+        if (a === 0 || b === 0) return 0;
+        return Math.abs((a * b) / getGCD(a, b));
+    }
+
+    // Toggle FAQ Accordion
+    function toggleAccordion(id) {
+        const content = document.getElementById(id);
+        const icon = document.getElementById(id + '-icon');
+        if (!content) return;
+
+        const isOpen = content.classList.contains('open');
+        
+        // Close all accordions
+        document.querySelectorAll('.accordion-content').forEach(el => el.classList.remove('open'));
+        document.querySelectorAll('.fa-chevron-down').forEach(el => el.classList.remove('rotate-180'));
+
+        if (!isOpen) {
+            content.classList.add('open');
+            if (icon) icon.classList.add('rotate-180');
+        }
+    }
+
+    // Switch Calculator Mode
+    function switchMode(mode) {
+        activeMode = mode;
+        
+        // Update tab styling
+        const tabs = ['simple', 'mixed', 'simplify', 'f2d', 'd2f'];
+        tabs.forEach(t => {
+            const btn = document.getElementById('tab-' + t);
+            if (btn) {
+                if (t === mode) {
+                    btn.className = "tab-btn px-3 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 bg-white text-indigo-600 shadow-sm border border-slate-200/60 focus:outline-none focus:ring-2 focus:ring-indigo-500";
+                    btn.setAttribute('aria-selected', 'true');
+                } else {
+                    btn.className = "tab-btn px-3 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-white/60 focus:outline-none focus:ring-2 focus:ring-indigo-500";
+                    btn.setAttribute('aria-selected', 'false');
+                }
+            }
+        });
+
+        // Hide errors and results when switching modes
+        hideError();
+        document.getElementById('result-card').classList.add('hidden');
+
+        // Render Inputs
+        renderInputs();
+    }
+
+    // Render Form Inputs Dynamic Markup
+    function renderInputs() {
+        const container = document.getElementById('calculator-inputs-container');
+        if (!container) return;
+
+        if (activeMode === 'simple') {
+            container.innerHTML = `
+                <!-- Fraction 1 -->
+                <div class="flex flex-col items-center justify-center">
+                    <span class="text-xs font-semibold text-slate-500 mb-1">Fraction 1</span>
+                    <div class="flex flex-col items-center gap-1.5 w-24">
+                        <input type="number" id="f1-num" placeholder="Num" class="w-full text-center px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-base font-bold text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500" value="3">
+                        <div class="w-full h-0.5 bg-slate-800 rounded"></div>
+                        <input type="number" id="f1-den" placeholder="Den" class="w-full text-center px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-base font-bold text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500" value="4">
+                    </div>
+                </div>
+
+                <!-- Operator -->
+                <div class="flex flex-col items-center justify-center px-2">
+                    <span class="text-xs font-semibold text-slate-500 mb-1">Operation</span>
+                    <select id="op-select" class="px-3 py-2.5 bg-indigo-50 border border-indigo-200 rounded-xl text-lg font-bold text-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer">
+                        <option value="+">+</option>
+                        <option value="-">−</option>
+                        <option value="*">×</option>
+                        <option value="/">÷</option>
+                    </select>
+                </div>
+
+                <!-- Fraction 2 -->
+                <div class="flex flex-col items-center justify-center">
+                    <span class="text-xs font-semibold text-slate-500 mb-1">Fraction 2</span>
+                    <div class="flex flex-col items-center gap-1.5 w-24">
+                        <input type="number" id="f2-num" placeholder="Num" class="w-full text-center px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-base font-bold text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500" value="1">
+                        <div class="w-full h-0.5 bg-slate-800 rounded"></div>
+                        <input type="number" id="f2-den" placeholder="Den" class="w-full text-center px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-base font-bold text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500" value="2">
+                    </div>
+                </div>
+            `;
+        } else if (activeMode === 'mixed') {
+            container.innerHTML = `
+                <!-- Mixed Fraction 1 -->
+                <div class="flex flex-col items-center justify-center">
+                    <span class="text-xs font-semibold text-slate-500 mb-1">Mixed Number 1</span>
+                    <div class="flex items-center gap-2">
+                        <input type="number" id="m1-whole" placeholder="Whole" class="w-16 text-center px-2 py-2 bg-slate-50 border border-slate-300 rounded-lg text-base font-bold text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500" value="1">
+                        <div class="flex flex-col items-center gap-1 w-20">
+                            <input type="number" id="m1-num" placeholder="Num" class="w-full text-center px-2 py-1 bg-slate-50 border border-slate-300 rounded-lg text-sm font-bold text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500" value="1">
+                            <div class="w-full h-0.5 bg-slate-800 rounded"></div>
+                            <input type="number" id="m1-den" placeholder="Den" class="w-full text-center px-2 py-1 bg-slate-50 border border-slate-300 rounded-lg text-sm font-bold text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500" value="2">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Operator -->
+                <div class="flex flex-col items-center justify-center px-2">
+                    <span class="text-xs font-semibold text-slate-500 mb-1">Operation</span>
+                    <select id="op-select" class="px-3 py-2.5 bg-indigo-50 border border-indigo-200 rounded-xl text-lg font-bold text-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer">
+                        <option value="+">+</option>
+                        <option value="-">−</option>
+                        <option value="*">×</option>
+                        <option value="/">÷</option>
+                    </select>
+                </div>
+
+                <!-- Mixed Fraction 2 -->
+                <div class="flex flex-col items-center justify-center">
+                    <span class="text-xs font-semibold text-slate-500 mb-1">Mixed Number 2</span>
+                    <div class="flex items-center gap-2">
+                        <input type="number" id="m2-whole" placeholder="Whole" class="w-16 text-center px-2 py-2 bg-slate-50 border border-slate-300 rounded-lg text-base font-bold text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500" value="2">
+                        <div class="flex flex-col items-center gap-1 w-20">
+                            <input type="number" id="m2-num" placeholder="Num" class="w-full text-center px-2 py-1 bg-slate-50 border border-slate-300 rounded-lg text-sm font-bold text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500" value="1">
+                            <div class="w-full h-0.5 bg-slate-800 rounded"></div>
+                            <input type="number" id="m2-den" placeholder="Den" class="w-full text-center px-2 py-1 bg-slate-50 border border-slate-300 rounded-lg text-sm font-bold text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500" value="4">
+                        </div>
+                    </div>
+                </div>
+            `;
+        } else if (activeMode === 'simplify') {
+            container.innerHTML = `
+                <div class="flex flex-col items-center justify-center">
+                    <span class="text-xs font-semibold text-slate-500 mb-1">Fraction to Simplify</span>
+                    <div class="flex flex-col items-center gap-1.5 w-28">
+                        <input type="number" id="simp-num" placeholder="Numerator" class="w-full text-center px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-base font-bold text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500" value="24">
+                        <div class="w-full h-0.5 bg-slate-800 rounded"></div>
+                        <input type="number" id="simp-den" placeholder="Denominator" class="w-full text-center px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-base font-bold text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500" value="36">
+                    </div>
+                </div>
+            `;
+        } else if (activeMode === 'f2d') {
+            container.innerHTML = `
+                <div class="flex flex-col items-center justify-center">
+                    <span class="text-xs font-semibold text-slate-500 mb-1">Fraction</span>
+                    <div class="flex flex-col items-center gap-1.5 w-28">
+                        <input type="number" id="f2d-num" placeholder="Numerator" class="w-full text-center px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-base font-bold text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500" value="5">
+                        <div class="w-full h-0.5 bg-slate-800 rounded"></div>
+                        <input type="number" id="f2d-den" placeholder="Denominator" class="w-full text-center px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-base font-bold text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500" value="8">
+                    </div>
+                </div>
+            `;
+        } else if (activeMode === 'd2f') {
+            container.innerHTML = `
+                <div class="flex flex-col items-center justify-center w-full max-w-xs">
+                    <span class="text-xs font-semibold text-slate-500 mb-1">Decimal Number</span>
+                    <input type="number" step="any" id="d2f-val" placeholder="e.g. 0.75" class="w-full text-center px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-lg font-bold text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500" value="0.75">
+                </div>
+            `;
+        }
+    }
+
+    function showError(msg) {
+        const errorBox = document.getElementById('error-box');
+        const errorMsg = document.getElementById('error-message');
+        if (errorBox && errorMsg) {
+            errorMsg.textContent = msg;
+            errorBox.classList.remove('hidden');
+        }
+    }
+
+    function hideError() {
+        const errorBox = document.getElementById('error-box');
+        if (errorBox) errorBox.classList.add('hidden');
+    }
+
+    function resetCalculator() {
+        hideError();
+        document.getElementById('result-card').classList.add('hidden');
+        renderInputs();
+    }
+
+    // MAIN CALCULATE SOLVER ENGINE
+    function calculate() {
+        hideError();
+        let resNum = 0, resDen = 1, steps = [];
+
+        try {
+            if (activeMode === 'simple' || activeMode === 'mixed') {
+                let num1 = 0, den1 = 1, num2 = 0, den2 = 1;
+                const op = document.getElementById('op-select').value;
+
+                if (activeMode === 'simple') {
+                    num1 = parseInt(document.getElementById('f1-num').value);
+                    den1 = parseInt(document.getElementById('f1-den').value);
+                    num2 = parseInt(document.getElementById('f2-num').value);
+                    den2 = parseInt(document.getElementById('f2-den').value);
+
+                    if (isNaN(num1) || isNaN(den1) || isNaN(num2) || isNaN(den2)) {
+                        showError("Please fill in all fraction input fields with valid integers.");
+                        return;
+                    }
+                    if (den1 === 0 || den2 === 0) {
+                        showError("Denominator cannot be zero (division by zero is undefined).");
+                        return;
+                    }
+
+                    steps.push(`<strong>Starting problem:</strong> <sup>${num1}</sup>/<sub>${den1}</sub> ${op} <sup>${num2}</sup>/<sub>${den2}</sub>`);
+                } else {
+                    const w1 = parseInt(document.getElementById('m1-whole').value) || 0;
+                    const n1 = parseInt(document.getElementById('m1-num').value) || 0;
+                    const d1 = parseInt(document.getElementById('m1-den').value) || 1;
+
+                    const w2 = parseInt(document.getElementById('m2-whole').value) || 0;
+                    const n2 = parseInt(document.getElementById('m2-num').value) || 0;
+                    const d2 = parseInt(document.getElementById('m2-den').value) || 1;
+
+                    if (d1 === 0 || d2 === 0) {
+                        showError("Denominator cannot be zero.");
+                        return;
+                    }
+
+                    num1 = (Math.abs(w1) * d1 + n1) * (w1 < 0 ? -1 : 1);
+                    den1 = d1;
+                    num2 = (Math.abs(w2) * d2 + n2) * (w2 < 0 ? -1 : 1);
+                    den2 = d2;
+
+                    steps.push(`<strong>Step 1: Convert mixed numbers to improper fractions:</strong>`);
+                    steps.push(`• ${w1} <sup>${n1}</sup>/<sub>${d1}</sub> = <sup>(${w1} × ${d1} + ${n1})</sup>/<sub>${d1}</sub> = <sup>${num1}</sup>/<sub>${den1}</sub>`);
+                    steps.push(`• ${w2} <sup>${n2}</sup>/<sub>${d2}</sub> = <sup>(${w2} × ${d2} + ${n2})</sup>/<sub>${d2}</sub> = <sup>${num2}</sup>/<sub>${den2}</sub>`);
+                }
+
+                if (op === '+') {
+                    const lcm = getLCM(den1, den2);
+                    const m1 = lcm / den1;
+                    const m2 = lcm / den2;
+                    resNum = num1 * m1 + num2 * m2;
+                    resDen = lcm;
+
+                    steps.push(`<strong>Step 2: Find Least Common Denominator (LCD):</strong>`);
+                    steps.push(`• LCD of ${den1} and ${den2} is <strong>${lcm}</strong>.`);
+                    steps.push(`• Convert fractions: <sup>(${num1} × ${m1})</sup>/<sub>${lcm}</sub> + <sup>(${num2} × ${m2})</sup>/<sub>${lcm}</sub> = <sup>${num1 * m1}</sup>/<sub>${lcm}</sub> + <sup>${num2 * m2}</sup>/<sub>${lcm}</sub>`);
+                    steps.push(`• Add numerators: ${num1 * m1} + ${num2 * m2} = ${resNum}`);
+                } else if (op === '-') {
+                    const lcm = getLCM(den1, den2);
+                    const m1 = lcm / den1;
+                    const m2 = lcm / den2;
+                    resNum = num1 * m1 - num2 * m2;
+                    resDen = lcm;
+
+                    steps.push(`<strong>Step 2: Find Least Common Denominator (LCD):</strong>`);
+                    steps.push(`• LCD of ${den1} and ${den2} is <strong>${lcm}</strong>.`);
+                    steps.push(`• Convert fractions: <sup>(${num1} × ${m1})</sup>/<sub>${lcm}</sub> − <sup>(${num2} × ${m2})</sup>/<sub>${lcm}</sub> = <sup>${num1 * m1}</sup>/<sub>${lcm}</sub> − <sup>${num2 * m2}</sup>/<sub>${lcm}</sub>`);
+                    steps.push(`• Subtract numerators: ${num1 * m1} − ${num2 * m2} = ${resNum}`);
+                } else if (op === '*') {
+                    resNum = num1 * num2;
+                    resDen = den1 * den2;
+
+                    steps.push(`<strong>Step 2: Multiply numerators and denominators:</strong>`);
+                    steps.push(`• Numerator: ${num1} × ${num2} = ${resNum}`);
+                    steps.push(`• Denominator: ${den1} × ${den2} = ${resDen}`);
+                } else if (op === '/') {
+                    if (num2 === 0) {
+                        showError("Cannot divide by a fraction equal to zero.");
+                        return;
+                    }
+                    resNum = num1 * den2;
+                    resDen = den1 * num2;
+
+                    steps.push(`<strong>Step 2: Multiply by reciprocal of second fraction:</strong>`);
+                    steps.push(`• <sup>${num1}</sup>/<sub>${den1}</sub> ÷ <sup>${num2}</sup>/<sub>${den2}</sub> = <sup>${num1}</sup>/<sub>${den1}</sub> × <sup>${den2}</sup>/<sub>${num2}</sub>`);
+                    steps.push(`• Numerator: ${num1} × ${den2} = ${resNum}`);
+                    steps.push(`• Denominator: ${den1} × ${num2} = ${resDen}`);
+                }
+            } else if (activeMode === 'simplify') {
+                const n = parseInt(document.getElementById('simp-num').value);
+                const d = parseInt(document.getElementById('simp-den').value);
+
+                if (isNaN(n) || isNaN(d)) {
+                    showError("Please enter valid integers for numerator and denominator.");
+                    return;
+                }
+                if (d === 0) {
+                    showError("Denominator cannot be zero.");
+                    return;
+                }
+
+                resNum = n;
+                resDen = d;
+                steps.push(`<strong>Starting fraction:</strong> <sup>${n}</sup>/<sub>${d}</sub>`);
+            } else if (activeMode === 'f2d') {
+                const n = parseInt(document.getElementById('f2d-num').value);
+                const d = parseInt(document.getElementById('f2d-den').value);
+
+                if (isNaN(n) || isNaN(d)) {
+                    showError("Please enter valid integers.");
+                    return;
+                }
+                if (d === 0) {
+                    showError("Denominator cannot be zero.");
+                    return;
+                }
+
+                resNum = n;
+                resDen = d;
+                steps.push(`<strong>Conversion method:</strong> Divide numerator by denominator directly.`);
+                steps.push(`• ${n} ÷ ${d} = ${(n / d).toFixed(6)}`);
+            } else if (activeMode === 'd2f') {
+                const val = parseFloat(document.getElementById('d2f-val').value);
+                if (isNaN(val)) {
+                    showError("Please enter a valid decimal number.");
+                    return;
+                }
+
+                const strVal = val.toString();
+                if (strVal.includes('.')) {
+                    const decPlaces = strVal.split('.')[1].length;
+                    resDen = Math.pow(10, decPlaces);
+                    resNum = Math.round(val * resDen);
+                    steps.push(`<strong>Step 1: Write decimal over power of 10:</strong>`);
+                    steps.push(`• ${val} = <sup>${resNum}</sup>/<sub>${resDen}</sub> (${decPlaces} decimal place(s))`);
+                } else {
+                    resNum = val;
+                    resDen = 1;
+                    steps.push(`• ${val} is a whole integer = <sup>${val}</sup>/<sub>1</sub>`);
+                }
+            }
+
+            // SIMPLIFICATION & FINAL DISPLAY RENDERING
+            const gcd = getGCD(resNum, resDen);
+            const simplifiedNum = resNum / gcd;
+            const simplifiedDen = resDen / gcd;
+
+            if (gcd > 1) {
+                steps.push(`<strong>Simplification step:</strong>`);
+                steps.push(`• Find Greatest Common Divisor (GCD) of ${resNum} and ${resDen}: <strong>GCD = ${gcd}</strong>`);
+                steps.push(`• Divide both numerator and denominator by ${gcd}: <sup>(${resNum} ÷ ${gcd})</sup>/<sub>(${resDen} ÷ ${gcd})</sub> = <strong><sup>${simplifiedNum}</sup>/<sub>${simplifiedDen}</sub></strong>`);
+            } else {
+                steps.push(`<strong>Reduction:</strong> Fraction is already in its simplest terms (GCD = 1).`);
+            }
+
+            // Render Output Elements
+            const decVal = simplifiedNum / simplifiedDen;
+            const percVal = (decVal * 100).toFixed(2) + '%';
+
+            // Fraction Text Formatting
+            let fractionString = `<sup>${simplifiedNum}</sup>/<sub>${simplifiedDen}</sub>`;
+            let badgeType = "Proper Fraction";
+
+            if (Math.abs(simplifiedNum) >= Math.abs(simplifiedDen) && simplifiedDen !== 1) {
+                badgeType = "Improper Fraction";
+                const wholePart = Math.floor(Math.abs(simplifiedNum) / simplifiedDen) * (simplifiedNum < 0 ? -1 : 1);
+                const remNum = Math.abs(simplifiedNum) % simplifiedDen;
+                if (remNum !== 0) {
+                    fractionString += ` <span class="text-slate-400 font-normal text-lg">or</span> ${wholePart} <sup>${remNum}</sup>/<sub>${simplifiedDen}</sub>`;
+                }
+            } else if (simplifiedDen === 1) {
+                badgeType = "Whole Integer";
+                fractionString = `${simplifiedNum}`;
+            }
+
+            document.getElementById('result-fraction-display').innerHTML = fractionString;
+            document.getElementById('result-decimal-display').textContent = decVal % 1 === 0 ? decVal : decVal.toFixed(4);
+            document.getElementById('result-percentage-display').textContent = percVal;
+            document.getElementById('result-type-badge').textContent = badgeType;
+
+            // Render Steps List
+            const stepsContainer = document.getElementById('solution-steps-list');
+            stepsContainer.innerHTML = steps.map(s => `<p class="border-l-2 border-indigo-200 pl-3 py-1">${s}</p>`).join('');
+
+            // Render Visual Diagram SVG
+            renderVisualDiagram(simplifiedNum, simplifiedDen);
+
+            // Display Results Box
+            document.getElementById('result-card').classList.remove('hidden');
+
+        } catch (e) {
+            console.error(e);
+            showError("An unexpected calculation error occurred. Please check your inputs.");
+        }
+    }
+
+    // Render Dynamic SVG Visual Representation (Pie / Bar diagram)
+    function renderVisualDiagram(num, den) {
+        const container = document.getElementById('visual-diagram-container');
+        if (!container) return;
+
+        // Ensure safe render boundaries
+        const absNum = Math.min(Math.abs(num), 20);
+        const absDen = Math.min(Math.abs(den), 20);
+
+        if (absDen > 16 || absNum > 16) {
+            container.innerHTML = `<span class="text-xs text-slate-400 italic">Visual diagram omitted for high values (${num}/${den})</span>`;
+            return;
+        }
+
+        // Generate SVG Pie Chart
+        const size = 120;
+        const center = size / 2;
+        const radius = center - 8;
+
+        let slicesSVG = '';
+        for (let i = 0; i < absDen; i++) {
+            const startAngle = (i * 360) / absDen;
+            const endAngle = ((i + 1) * 360) / absDen;
+
+            const x1 = center + radius * Math.cos((Math.PI * (startAngle - 90)) / 180);
+            const y1 = center + radius * Math.sin((Math.PI * (startAngle - 90)) / 180);
+            const x2 = center + radius * Math.cos((Math.PI * (endAngle - 90)) / 180);
+            const y2 = center + radius * Math.sin((Math.PI * (endAngle - 90)) / 180);
+
+            const largeArcFlag = endAngle - startAngle <= 180 ? 0 : 1;
+            const isFilled = i < absNum;
+
+            const pathData = `M ${center} ${center} L ${x1} ${y1} A ${radius} ${radius} 0 ${largeArcFlag} 1 ${x2} ${y2} Z`;
+
+            slicesSVG += `<path d="${pathData}" fill="${isFilled ? '#2563eb' : '#e0effe'}" stroke="#ffffff" stroke-width="2" />`;
+        }
+
+        // Horizontal Bar Visual
+        let barSVG = '<div class="flex items-center gap-1 bg-slate-100 p-1 rounded-lg border border-slate-200 h-8 max-w-xs w-full">';
+        for (let i = 0; i < absDen; i++) {
+            const isFilled = i < absNum;
+            barSVG += `<div class="h-full flex-1 rounded ${isFilled ? 'bg-indigo-600' : 'bg-slate-200'} transition-colors"></div>`;
+        }
+        barSVG += '</div>';
+
+        container.innerHTML = `
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6 w-full">
+                <div class="flex flex-col items-center">
+                    <svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" class="drop-shadow-sm">
+                        ${slicesSVG}
+                    </svg>
+                    <span class="text-[11px] text-slate-500 font-medium mt-1">Pie Chart (${absNum}/${absDen})</span>
+                </div>
+                <div class="flex flex-col items-center flex-1 max-w-xs w-full">
+                    ${barSVG}
+                    <span class="text-[11px] text-slate-500 font-medium mt-1.5">Fraction Bar (${absNum} of ${absDen} parts shaded)</span>
+                </div>
+            </div>
+        `;
+    }
+
+    // Copy Result to Clipboard
+    function copyResultToClipboard() {
+        const frac = document.getElementById('result-fraction-display').innerText;
+        const dec = document.getElementById('result-decimal-display').innerText;
+        const perc = document.getElementById('result-percentage-display').innerText;
+
+        const textToCopy = `Fraction Result: ${frac} | Decimal: ${dec} | Percentage: ${perc} (via Calculator Pro)`;
+
+        // Fallback robust clipboard method
+        const dummy = document.createElement("textarea");
+        document.body.appendChild(dummy);
+        dummy.value = textToCopy;
+        dummy.select();
+        document.execCommand("copy");
+        document.body.removeChild(dummy);
+
+        const icon = document.getElementById('copy-icon');
+        const label = document.getElementById('copy-text');
+
+        if (icon && label) {
+            icon.className = "fa-solid fa-check text-emerald-600";
+            label.textContent = "Copied!";
+            setTimeout(() => {
+                icon.className = "fa-regular fa-copy";
+                label.textContent = "Copy Result";
+            }, 2000);
+        }
+    }
+
+    // Initialize Calculator Form on page load
+    document.addEventListener('DOMContentLoaded', () => {
+        renderInputs();
+    });
+</script>
+</body>
+</html>

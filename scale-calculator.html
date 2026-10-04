@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scale Calculator - Free Scale Conversion & Scale Factor Tool</title>
+    <meta name="description" content="Free online Scale Calculator to convert real size to scale size and vice versa. Calculate scale factor for architecture, maps, models & drawings. Instant results with formulas & examples.">
+    <meta name="keywords" content="scale calculator, scale conversion calculator, scale factor calculator, architectural scale calculator, map scale calculator">
+    <meta name="author" content="Calculator Pro">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Scale Calculator - Free Scale Conversion & Scale Factor Tool">
+    <meta property="og:description" content="Convert real measurements to scale dimensions easily. Perfect for architecture, blueprints, maps, and model making.">
+    <meta property="og:site_name" content="Calculator Pro">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Scale Calculator - Free Scale Conversion & Scale Factor Tool">
+    <meta name="twitter:description" content="Free online tool to calculate scale factors, real lengths, and scaled sizes instantly.">
+
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Fonts Inter -->
+    
+
+    <!-- Tailwind CSS CDN -->
+    
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "Scale Calculator",
+          "url": "https://calculatorpro.com/scale-calculator",
+          "applicationCategory": "UtilityApplication",
+          "operatingSystem": "All",
+          "description": "Calculate scaled lengths, real sizes, and scale factors with instant multi-unit conversions.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "HowTo",
+          "name": "How to Use the Scale Calculator",
+          "description": "A quick guide on converting real measurements to scale model lengths.",
+          "step": [
+            {
+              "@type": "HowToStep",
+              "name": "Select Mode",
+              "text": "Choose whether you want to calculate Scaled Size, Real Size, or find the Scale Factor."
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Enter Scale Ratio",
+              "text": "Input your desired scale ratio, for instance 1:50 or select from presets."
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Enter Measurement & Unit",
+              "text": "Provide your known dimension along with its measurement unit (m, cm, ft, etc.)."
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Get Instant Results",
+              "text": "View the precise converted size across multiple unit standards immediately."
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How do I calculate scale factor?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "To calculate the scale factor, divide the real size length by the scaled size length in the same unit. For instance, if a real wall of 1000 cm is represented by 10 cm on paper, 1000 divided by 10 gives a scale ratio denominator of 100, which means a 1:100 scale factor."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the difference between scale and scale factor?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Scale is a proportional ratio comparing drawing or model dimensions to real-world measurements, such as 1:50 or 1/4 inch = 1 foot. Scale factor is the numerical multiplier or conversion factor used to scale dimensions up or down proportionately."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I use this for area and volume scaling?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "This scale calculator focuses on linear length dimensions. For area calculations, square the scale factor (N²). For volume calculations, cube the scale factor (N³). For example, a 1:10 linear scale equals a 1:100 area scale and a 1:1000 volume scale."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Which scale is used for floor plans?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Architectural floor plans commonly use metric scales of 1:50 or 1:100 for residential layouts, and 1:200 for larger commercial site plans. Imperial blueprints frequently use 1/4 inch = 1 foot (1:48) or 1/8 inch = 1 foot (1:96)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How to convert between different scales?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "To convert a drawing from one scale to another, first determine the true real-world dimension by multiplying the original drawing size by its scale denominator. Then divide that real-world measurement by the new scale denominator to obtain the updated scale drawing length."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col selection:bg-brand-500 selection:text-white">
+
+    <!-- Site Branding & Navigation Header -->
+    <header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      
+      <!-- Brand Logo & Name -->
+      <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
+        <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
+          <i class="fa-solid fa-calculator text-lg"></i>
+        </div>
+        <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
+          Calculator<span class="text-indigo-600">-Pro</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-1" aria-label="Main Navigation">
+        
+        <!-- Category 1: Age -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Age
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="age-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="birthday-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Birthday Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="age-difference-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Diffrence Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Time -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Time & Date
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="time-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Time Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="date-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Date Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="work-days-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Work Days Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="time-zone-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">TimeZone Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Converter -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Converter
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="unit-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Unit Converter</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="cgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">CGPA to Percentage</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to Percentage</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sgpa-to-cgpa-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to CGPA</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="marks-to-percentage-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Marks to Percentage</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4: Financial -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Financial
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sip-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SIP Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="emi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">EMI Loan Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="Compound-Interest-Calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Compound Interest Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 5: Health -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Health
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute right-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="bmi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">BMI Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="waist-to-hip-ratio-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">WHR Calculator</a>
+            </div>
+          </div>
+        </div>
+		  
+		 
+
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex md:hidden">
+        <button id="calc-mobile-menu-btn" type="button" class="p-2.5 rounded-xl text-slate-600 hover:text-indigo-600 hover:bg-slate-100/80 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors duration-200" aria-controls="calc-mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+          <svg id="calc-menu-icon" class="w-6 h-6 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="calc-close-icon" class="w-6 h-6 hidden transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile Full-Width Menu Container -->
+  <div id="calc-mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white shadow-xl transition-all duration-200 ease-in-out">
+    <div class="px-4 pt-3 pb-6 space-y-4">
+      
+      <!-- Mobile Category: Age -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Age</div>
+        <a href="age-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Calculator</a>
+		  <a href="birthday-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Birthday Calculator</a>
+		  <a href="age-difference-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Diffrence Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Time -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Time & Date</div>
+        <a href="time-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Time Calculator</a>
+		  <a href="date-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Date Calculator</a>
+		  <a href="work-days-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Work Days Calculator</a>
+		  <a href="time-zone-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">TimeZone Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Converter -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Converter</div>
+        <a href="javascript:void(0)" onclick="openCalculator('length')" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Unit Converter</a>
+		  <a href="cgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">CGPA to Percentage</a>
+		  <a href="sgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to Percentage</a>
+		  <a href="sgpa-to-cgpa-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to CGPA</a>
+		  <a href="marks-to-percentage-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Marks to Percentage</a>
+      </div>
+
+      <!-- Mobile Category: Financial -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Financial</div>
+        <a href="sip-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SIP Calculator</a>
+		  <a href="emi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">EMI Loan Calculator</a>
+		  <a href="Compound-Interest-Calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Compound Interest Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Health -->
+      <div>
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Health</div>
+        <a href="bmi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">BMI Calculator</a>
+		  <a href="waist-to-hip-ratio-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">WHR Calculator</a>
+      </div>
+		
+		
+
+    </div>
+  </div>
+</header>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="relative bg-gradient-to-b from-brand-50 via-slate-50 to-white pt-10 pb-12 overflow-hidden border-b border-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center max-w-3xl mx-auto">
+                    <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-brand-100 text-brand-700 mb-4 border border-brand-200/60 shadow-sm">
+                        <i class="fa-solid fa-ruler-combined text-brand-600"></i> Precision Scale Conversion Tool
+                    </span>
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
+                        Scale Calculator – Free Scale Conversion & Scale Factor Tool
+                    </h1>
+                    <p class="text-base sm:text-lg text-slate-600 leading-relaxed mb-6">
+                        Scale Calculator is a free online tool that converts real-world measurements into scaled drawing or model sizes, and vice versa. It is highly useful for architecture, engineering drawings, maps, model making, and blueprints. Simply enter the scale factor (such as 1:50, 1:100, etc.) to get instant results.
+                    </p>
+                    
+                    <!-- Trust Badges -->
+                    <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs sm:text-sm font-medium text-slate-600">
+                        <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-slate-200/80 shadow-sm">
+                            <i class="fa-solid fa-circle-check text-emerald-500"></i> 100% Free
+                        </div>
+                        <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-slate-200/80 shadow-sm">
+                            <i class="fa-solid fa-bolt text-amber-500"></i> Instant Results
+                        </div>
+                        <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-slate-200/80 shadow-sm">
+                            <i class="fa-solid fa-bullseye text-brand-500"></i> Highly Accurate
+                        </div>
+                        <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-slate-200/80 shadow-sm">
+                            <i class="fa-solid fa-mobile-screen text-indigo-500"></i> Mobile Friendly
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Scale Calculator Section -->
+        <section class="py-10 bg-slate-50" id="calculator">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white rounded-2xl shadow-xl border border-slate-200/80 p-5 sm:p-8 md:p-10 relative">
+                    <div class="flex items-center justify-between pb-6 mb-6 border-b border-slate-100 flex-wrap gap-4">
+                        <div>
+                            <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-2.5">
+                                <i class="fa-solid fa-sliders text-brand-600"></i> Scale Calculator
+                            </h2>
+                            <p class="text-sm text-slate-500 mt-1">Select calculation mode and enter dimensions below</p>
+                        </div>
+                        <!-- Mode Selector Tabs -->
+                        <div class="grid grid-cols-3 gap-1 bg-slate-100 p-1 rounded-xl text-xs sm:text-sm font-medium w-full sm:w-auto">
+                            <button type="button" id="tab-mode-1" onclick="switchMode('realToScale')" class="py-2 px-3 sm:px-4 rounded-lg transition-all duration-200 text-center font-semibold bg-white text-brand-600 shadow-sm">Real → Scale</button>
+                            <button type="button" id="tab-mode-2" onclick="switchMode('scaleToReal')" class="py-2 px-3 sm:px-4 rounded-lg transition-all duration-200 text-center font-semibold text-slate-600 hover:text-slate-900">Scale → Real</button>
+                            <button type="button" id="tab-mode-3" onclick="switchMode('findScale')" class="py-2 px-3 sm:px-4 rounded-lg transition-all duration-200 text-center font-semibold text-slate-600 hover:text-slate-900">Find Scale</button>
+                        </div>
+                    </div>
+
+                    <!-- Mode Descriptions -->
+                    <div id="mode-desc-container" class="mb-6 p-3.5 bg-brand-50/60 rounded-xl border border-brand-100/80 text-xs sm:text-sm text-brand-900 flex items-center gap-3">
+                        <i class="fa-solid fa-circle-info text-brand-600 text-base flex-shrink-0"></i>
+                        <span id="mode-description-text">Calculate scaled drawing length from real-world measurement and scale ratio.</span>
+                    </div>
+
+                    <!-- Calculator Form Inputs Container -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        
+                        <!-- Input Group A: Primary Input -->
+                        <div id="input-group-a" class="space-y-2">
+                            <label id="lbl-input-a" for="val-input-a" class="block text-sm font-semibold text-slate-700">Real Length</label>
+                            <div class="flex rounded-xl shadow-sm">
+                                <input type="number" id="val-input-a" step="any" placeholder="e.g. 5" class="block w-full rounded-l-xl border-y border-l border-slate-300 px-4 py-3 text-slate-900 text-base focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 focus:outline-none transition-all" value="5">
+                                <select id="unit-input-a" class="rounded-r-xl border border-slate-300 bg-slate-50 px-3.5 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-100 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 focus:outline-none border-l-0">
+                                    <option value="m" selected>Meters (m)</option>
+                                    <option value="cm">Centimeters (cm)</option>
+                                    <option value="mm">Millimeters (mm)</option>
+                                    <option value="km">Kilometers (km)</option>
+                                    <option value="in">Inches (in)</option>
+                                    <option value="ft">Feet (ft)</option>
+                                    <option value="yd">Yards (yd)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Input Group B: Ratio or Secondary Input -->
+                        <div id="input-group-b" class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <label id="lbl-input-b" for="val-input-b" class="block text-sm font-semibold text-slate-700">Scale Ratio (1 : N)</label>
+                                <span class="text-xs text-slate-400" id="ratio-format-hint">Format: 1 : [Denominator]</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span id="ratio-prefix" class="text-base font-bold text-slate-500 pl-1">1 :</span>
+                                <input type="number" id="val-input-b" step="any" placeholder="e.g. 50" class="block w-full rounded-xl border border-slate-300 px-4 py-3 text-slate-900 text-base focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 focus:outline-none transition-all" value="50">
+                                <select id="unit-input-b" class="hidden rounded-r-xl border border-slate-300 bg-slate-50 px-3.5 py-3 text-sm font-semibold text-slate-700 border-l-0">
+                                    <option value="cm" selected>Centimeters (cm)</option>
+                                    <option value="mm">Millimeters (mm)</option>
+                                    <option value="m">Meters (m)</option>
+                                    <option value="in">Inches (in)</option>
+                                    <option value="ft">Feet (ft)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Preset Scale Ratio Quick Selection Buttons -->
+                    <div id="presets-container" class="mb-8">
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2.5">Popular Preset Ratios</label>
+                        <div class="flex flex-wrap gap-2">
+                            <button type="button" onclick="applyPreset(1)" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 text-slate-700 hover:bg-brand-50 hover:text-brand-600 hover:border-brand-300 border border-transparent transition-all">1:1 (Full)</button>
+                            <button type="button" onclick="applyPreset(10)" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 text-slate-700 hover:bg-brand-50 hover:text-brand-600 border border-transparent transition-all">1:10</button>
+                            <button type="button" onclick="applyPreset(20)" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 text-slate-700 hover:bg-brand-50 hover:text-brand-600 border border-transparent transition-all">1:20</button>
+                            <button type="button" onclick="applyPreset(35)" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 text-slate-700 hover:bg-brand-50 hover:text-brand-600 border border-transparent transition-all">1:35 (Model)</button>
+                            <button type="button" onclick="applyPreset(48)" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 text-slate-700 hover:bg-brand-50 hover:text-brand-600 border border-transparent transition-all">1:48 (1/4")</button>
+                            <button type="button" onclick="applyPreset(50)" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-brand-100 text-brand-700 border border-brand-200 transition-all">1:50 (Arch)</button>
+                            <button type="button" onclick="applyPreset(72)" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 text-slate-700 hover:bg-brand-50 hover:text-brand-600 border border-transparent transition-all">1:72</button>
+                            <button type="button" onclick="applyPreset(100)" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 text-slate-700 hover:bg-brand-50 hover:text-brand-600 border border-transparent transition-all">1:100 (Plan)</button>
+                            <button type="button" onclick="applyPreset(200)" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 text-slate-700 hover:bg-brand-50 hover:text-brand-600 border border-transparent transition-all">1:200</button>
+                            <button type="button" onclick="applyPreset(500)" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 text-slate-700 hover:bg-brand-50 hover:text-brand-600 border border-transparent transition-all">1:500</button>
+                            <button type="button" onclick="applyPreset(25000)" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 text-slate-700 hover:bg-brand-50 hover:text-brand-600 border border-transparent transition-all">1:25,000 (Map)</button>
+                            <button type="button" onclick="applyPreset(50000)" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 text-slate-700 hover:bg-brand-50 hover:text-brand-600 border border-transparent transition-all">1:50,000</button>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex items-center gap-3 mb-8">
+                        <button type="button" onclick="calculateScale()" class="flex-1 bg-brand-600 hover:bg-brand-700 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg shadow-brand-500/25 transition-all duration-200 flex items-center justify-center gap-2 text-base active:scale-[0.99]">
+                            <i class="fa-solid fa-calculator"></i> Calculate
+                        </button>
+                        <button type="button" onclick="resetCalculator()" class="bg-slate-100 hover:bg-slate-200 text-slate-600 font-semibold py-3.5 px-5 rounded-xl transition-all duration-200 flex items-center justify-center gap-2 text-base">
+                            <i class="fa-solid fa-rotate-left"></i> Reset
+                        </button>
+                    </div>
+
+                    <!-- Output Results Card -->
+                    <div id="results-card" class="bg-gradient-to-br from-slate-900 to-brand-950 text-white rounded-2xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+                        <div class="flex items-center justify-between border-b border-slate-700/80 pb-4 mb-6">
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded-full bg-emerald-400 animate-pulse"></span>
+                                <span class="text-xs uppercase tracking-wider font-bold text-slate-300">Conversion Output</span>
+                            </div>
+                            <button type="button" onclick="copyResultToClipboard()" class="text-xs font-semibold text-brand-300 hover:text-white bg-slate-800/80 hover:bg-slate-700 px-3 py-1.5 rounded-lg border border-slate-700 transition-all flex items-center gap-1.5">
+                                <i class="fa-solid fa-copy" id="copy-btn-icon"></i> <span id="copy-btn-text">Copy Result</span>
+                            </button>
+                        </div>
+
+                        <div class="mb-6">
+                            <div class="text-xs text-slate-400 font-medium mb-1" id="primary-result-label">Scaled Dimension Result</div>
+                            <div class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight flex items-baseline gap-3" id="primary-result-value">
+                                10 <span class="text-xl sm:text-2xl font-normal text-brand-300">cm</span>
+                            </div>
+                            <div class="text-xs text-slate-400 mt-2 italic" id="result-formula-used">Formula: Real Size (5 m) ÷ Scale Denominator (50)</div>
+                        </div>
+
+                        <!-- Multi-Unit Converted Output Breakdown Grid -->
+                        <div class="pt-4 border-t border-slate-800">
+                            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-3">Equivalent Measurements</span>
+                            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3" id="multi-unit-grid">
+                                <div class="bg-slate-800/60 p-3 rounded-xl border border-slate-700/50">
+                                    <div class="text-xs text-slate-400">Millimeters</div>
+                                    <div class="text-sm font-bold text-slate-100" id="unit-mm">100 mm</div>
+                                </div>
+                                <div class="bg-slate-800/60 p-3 rounded-xl border border-slate-700/50">
+                                    <div class="text-xs text-slate-400">Centimeters</div>
+                                    <div class="text-sm font-bold text-slate-100" id="unit-cm">10 cm</div>
+                                </div>
+                                <div class="bg-slate-800/60 p-3 rounded-xl border border-slate-700/50">
+                                    <div class="text-xs text-slate-400">Meters</div>
+                                    <div class="text-sm font-bold text-slate-100" id="unit-m">0.1 m</div>
+                                </div>
+                                <div class="bg-slate-800/60 p-3 rounded-xl border border-slate-700/50">
+                                    <div class="text-xs text-slate-400">Inches</div>
+                                    <div class="text-sm font-bold text-slate-100" id="unit-in">3.937 in</div>
+                                </div>
+                                <div class="bg-slate-800/60 p-3 rounded-xl border border-slate-700/50">
+                                    <div class="text-xs text-slate-400">Feet</div>
+                                    <div class="text-sm font-bold text-slate-100" id="unit-ft">0.328 ft</div>
+                                </div>
+                                <div class="bg-slate-800/60 p-3 rounded-xl border border-slate-700/50">
+                                    <div class="text-xs text-slate-400">Yards</div>
+                                    <div class="text-sm font-bold text-slate-100" id="unit-yd">0.109 yd</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dynamic Visual Comparison SVG Diagram -->
+                        <div class="mt-6 pt-5 border-t border-slate-800">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Proportional Visual Comparison</span>
+                                <span class="text-xs text-brand-300" id="visual-scale-ratio-badge">Scale 1 : 50</span>
+                            </div>
+                            <div class="bg-slate-950/80 p-4 rounded-xl border border-slate-800 flex flex-col items-center justify-center gap-4">
+                                <div class="w-full flex items-center justify-between text-xs text-slate-400 px-2">
+                                    <span>Real World Length</span>
+                                    <span id="diagram-real-text" class="font-bold text-slate-200">5 m</span>
+                                </div>
+                                <div class="w-full bg-brand-500/20 h-5 rounded-md relative overflow-hidden border border-brand-500/40 flex items-center">
+                                    <div id="diagram-real-bar" class="h-full bg-gradient-to-r from-brand-500 to-indigo-500 rounded-sm" style="width: 100%;"></div>
+                                </div>
+
+                                <div class="w-full flex items-center justify-between text-xs text-slate-400 px-2 mt-1">
+                                    <span>Scaled Drawing Length</span>
+                                    <span id="diagram-scale-text" class="font-bold text-emerald-400">10 cm</span>
+                                </div>
+                                <div class="w-full bg-emerald-500/20 h-5 rounded-md relative overflow-hidden border border-emerald-500/40 flex items-center">
+                                    <div id="diagram-scale-bar" class="h-full bg-gradient-to-r from-emerald-400 to-teal-400 rounded-sm" style="width: 35%;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Article & Educational Content Container -->
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-14">
+
+            <!-- Section B: How to Use the Scale Calculator -->
+            <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-100 text-brand-600 text-base">
+                        <i class="fa-solid fa-list-check"></i>
+                    </span>
+                    How to Use the Scale Calculator
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
+                        <div class="text-brand-600 font-bold text-sm mb-1">Step 1: Select Calculation Mode</div>
+                        <p class="text-sm text-slate-600">Choose between <strong>Real → Scale</strong>, <strong>Scale → Real</strong>, or <strong>Find Scale Factor</strong> depending on your known variables.</p>
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
+                        <div class="text-brand-600 font-bold text-sm mb-1">Step 2: Enter Scale Ratio</div>
+                        <p class="text-sm text-slate-600">Input your target ratio (e.g., 1:50, 1:100) or pick a standard preset button like architecture or map scales.</p>
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
+                        <div class="text-brand-600 font-bold text-sm mb-1">Step 3: Provide Measurement & Unit</div>
+                        <p class="text-sm text-slate-600">Enter the measurement value and choose your measurement unit (meters, centimeters, feet, or inches).</p>
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
+                        <div class="text-brand-600 font-bold text-sm mb-1">Step 4: View Converted Results</div>
+                        <p class="text-sm text-slate-600">Click <strong>Calculate</strong> to instantly view scaled outputs across all common units alongside a visual proportion graph.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section C: What is Unit Conversion? -->
+            <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm">
+                <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-100 text-brand-600 text-base">
+                        <i class="fa-solid fa-arrows-rotate"></i>
+                    </span>
+                    What is Unit Conversion?
+                </h2>
+                <p class="text-slate-600 leading-relaxed text-base">
+                    Unit conversion is the process of changing a quantity from one unit of measurement to another while keeping the exact same physical value. In technical drafting and model creation, unit conversion allows engineers and architects to seamlessly convert between metric measurements (such as meters and centimeters) and imperial units (such as feet and inches). Utilizing an accurate <strong>scale conversion calculator</strong> ensures that dimensional accuracy is preserved across blueprints, engineering plans, map calculations, and scaled physical models.
+                </p>
+            </section>
+
+            <!-- Section D: What is a Scale Factor? -->
+            <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm">
+                <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-100 text-brand-600 text-base">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </span>
+                    What is a Scale Factor?
+                </h2>
+                <div class="space-y-4 text-slate-600 leading-relaxed text-base">
+                    <p>
+                        A <strong>scale factor</strong> is the ratio between the length of a representation (such as a blueprint, map, or miniature model) and the actual corresponding real-world length. Expressed as 1:N (or 1/N), it represents how many times larger or smaller the real object is compared to its scaled counterpart.
+                    </p>
+                    <p>
+                        For example, a scale factor ratio of <strong>1:100</strong> means that 1 unit on paper or in a model represents 100 of the same units in real life. If a wall is 10 meters (1000 cm) long in real life, it will measure 10 cm on a 1:100 scale architectural drawing. Using a reliable <strong>scale factor calculator</strong> eliminates manual math errors and guarantees exact proportions.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Section E: Scale Conversion Formulas -->
+            <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-100 text-brand-600 text-base">
+                        <i class="fa-solid fa-square-root-variable"></i>
+                    </span>
+                    Scale Conversion Formulas
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-gradient-to-br from-brand-50 to-white p-5 rounded-xl border border-brand-200">
+                        <div class="text-xs uppercase font-bold text-brand-700 tracking-wider mb-2">Scaled Size Formula</div>
+                        <div class="text-sm font-semibold text-slate-900 mb-1">Scaled Size = Real Size ÷ Scale Denominator</div>
+                        <div class="text-xs text-slate-500">Example: 500 cm ÷ 50 = 10 cm</div>
+                    </div>
+                    <div class="bg-gradient-to-br from-indigo-50 to-white p-5 rounded-xl border border-indigo-200">
+                        <div class="text-xs uppercase font-bold text-indigo-700 tracking-wider mb-2">Real Size Formula</div>
+                        <div class="text-sm font-semibold text-slate-900 mb-1">Real Size = Scaled Size × Scale Denominator</div>
+                        <div class="text-xs text-slate-500">Example: 10 cm × 50 = 500 cm (5 m)</div>
+                    </div>
+                    <div class="bg-gradient-to-br from-emerald-50 to-white p-5 rounded-xl border border-emerald-200">
+                        <div class="text-xs uppercase font-bold text-emerald-700 tracking-wider mb-2">Scale Factor Formula</div>
+                        <div class="text-sm font-semibold text-slate-900 mb-1">Scale Factor = Real Size ÷ Scaled Size</div>
+                        <div class="text-xs text-slate-500">Example: 1200 cm ÷ 12 cm = 100 (1:100)</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section F: Common Scale Ratios Table -->
+            <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden">
+                <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-100 text-brand-600 text-base">
+                        <i class="fa-solid fa-table"></i>
+                    </span>
+                    Common Scale Ratios
+                </h2>
+                <p class="text-sm text-slate-600 mb-6">Standard scale conversion factors used across professional fields:</p>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm text-slate-700">
+                        <thead class="bg-slate-100/80 text-xs uppercase font-bold text-slate-600">
+                            <tr>
+                                <th class="py-3.5 px-4 rounded-l-lg">Field</th>
+                                <th class="py-3.5 px-4">Common Scales</th>
+                                <th class="py-3.5 px-4 rounded-r-lg">Typical Use Case</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100">
+                            <tr class="hover:bg-slate-50/80 transition-colors">
+                                <td class="py-3.5 px-4 font-semibold text-slate-900">Architecture</td>
+                                <td class="py-3.5 px-4 font-mono text-brand-600 font-medium">1:50, 1:100, 1:200</td>
+                                <td class="py-3.5 px-4">Floor plans, interior layouts, structural elevations</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/80 transition-colors">
+                                <td class="py-3.5 px-4 font-semibold text-slate-900">Maps & Cartography</td>
+                                <td class="py-3.5 px-4 font-mono text-brand-600 font-medium">1:25,000, 1:50,000</td>
+                                <td class="py-3.5 px-4">Topographic maps, regional hiking blueprints, urban planning</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/80 transition-colors">
+                                <td class="py-3.5 px-4 font-semibold text-slate-900">Scale Models</td>
+                                <td class="py-3.5 px-4 font-mono text-brand-600 font-medium">1:35, 1:48, 1:72</td>
+                                <td class="py-3.5 px-4">Military vehicles, aircraft miniatures, 3D printing dioramas</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/80 transition-colors">
+                                <td class="py-3.5 px-4 font-semibold text-slate-900">Civil Engineering</td>
+                                <td class="py-3.5 px-4 font-mono text-brand-600 font-medium">1:10, 1:20, 1:5</td>
+                                <td class="py-3.5 px-4">Detailed component drawings, mechanical assemblies</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Section G: Worked Examples -->
+            <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm space-y-6">
+                <h2 class="text-2xl font-bold text-slate-900 mb-2 flex items-center gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-100 text-brand-600 text-base">
+                        <i class="fa-solid fa-pen-ruler"></i>
+                    </span>
+                    Worked Examples
+                </h2>
+
+                <div class="space-y-4">
+                    <div class="p-5 rounded-xl bg-slate-50 border border-slate-200/70">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Example 1 – Architectural Floor Plan</h3>
+                        <p class="text-sm text-slate-600 mb-2">
+                            <strong>Problem:</strong> Calculate drawing length for a real wall measuring 5 meters using an <strong>architectural scale calculator</strong> ratio of 1:50.
+                        </p>
+                        <div class="text-xs font-mono bg-white p-3 rounded-lg border border-slate-200 text-slate-800">
+                            Real Length = 5 m = 500 cm<br>
+                            Drawing Length = 500 cm ÷ 50 = <strong>10 cm</strong>
+                        </div>
+                    </div>
+
+                    <div class="p-5 rounded-xl bg-slate-50 border border-slate-200/70">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Example 2 – Map Scale Conversion</h3>
+                        <p class="text-sm text-slate-600 mb-2">
+                            <strong>Problem:</strong> Find real distance if distance on a 1:25,000 scale topographic map measures 4 cm.
+                        </p>
+                        <div class="text-xs font-mono bg-white p-3 rounded-lg border border-slate-200 text-slate-800">
+                            Real Distance = 4 cm × 25,000 = 100,000 cm<br>
+                            Converted = 100,000 cm ÷ 100,000 = <strong>1 km</strong>
+                        </div>
+                    </div>
+
+                    <div class="p-5 rounded-xl bg-slate-50 border border-slate-200/70">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Example 3 – Finding Scale Factor</h3>
+                        <p class="text-sm text-slate-600 mb-2">
+                            <strong>Problem:</strong> Determine scale factor when a real building length of 12 meters is represented as 12 cm on paper.
+                        </p>
+                        <div class="text-xs font-mono bg-white p-3 rounded-lg border border-slate-200 text-slate-800">
+                            Real = 12 m = 1200 cm | Drawing = 12 cm<br>
+                            Scale Factor = 1200 ÷ 12 = 100 → <strong>Ratio 1:100</strong>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section H: Applications of Scale Calculator -->
+            <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-100 text-brand-600 text-base">
+                        <i class="fa-solid fa-drafting-compass"></i>
+                    </span>
+                    Applications of Scale Calculator
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                    <div class="p-4 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-md transition-all">
+                        <div class="text-brand-600 text-lg mb-2"><i class="fa-solid fa-building font-bold"></i></div>
+                        <h3 class="font-bold text-slate-900 text-sm mb-1">Architecture & Interior Design</h3>
+                        <p class="text-xs text-slate-600">Drafting room floor plans, furniture placement diagrams, and building elevations accurately.</p>
+                    </div>
+                    <div class="p-4 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-md transition-all">
+                        <div class="text-brand-600 text-lg mb-2"><i class="fa-solid fa-bridge font-bold"></i></div>
+                        <h3 class="font-bold text-slate-900 text-sm mb-1">Civil Engineering & Site Plans</h3>
+                        <p class="text-xs text-slate-600">Translating real site surveys into manageable technical drawings and construction blueprints.</p>
+                    </div>
+                    <div class="p-4 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-md transition-all">
+                        <div class="text-brand-600 text-lg mb-2"><i class="fa-solid fa-cubes font-bold"></i></div>
+                        <h3 class="font-bold text-slate-900 text-sm mb-1">Model Making & 3D Printing</h3>
+                        <p class="text-xs text-slate-600">Rescaling 3D CAD assets and physical model kits for miniature display and prototyping.</p>
+                    </div>
+                    <div class="p-4 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-md transition-all">
+                        <div class="text-brand-600 text-lg mb-2"><i class="fa-solid fa-map font-bold"></i></div>
+                        <h3 class="font-bold text-slate-900 text-sm mb-1">Cartography & Maps</h3>
+                        <p class="text-xs text-slate-600">Estimating real geographical distances between points on physical or digital maps.</p>
+                    </div>
+                    <div class="p-4 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-md transition-all">
+                        <div class="text-brand-600 text-lg mb-2"><i class="fa-solid fa-gear font-bold"></i></div>
+                        <h3 class="font-bold text-slate-900 text-sm mb-1">Mechanical Drawings</h3>
+                        <p class="text-xs text-slate-600">Scaling precision machine parts and complex mechanical assembly diagrams.</p>
+                    </div>
+                    <div class="p-4 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-md transition-all">
+                        <div class="text-brand-600 text-lg mb-2"><i class="fa-solid fa-graduation-cap font-bold"></i></div>
+                        <h3 class="font-bold text-slate-900 text-sm mb-1">Education & Geometry</h3>
+                        <p class="text-xs text-slate-600">Teaching proportional reasoning, geometry ratios, and spatial transformation concepts.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Visual Architectural & Ratio SVG Diagrams -->
+            <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-100 text-brand-600 text-base">
+                        <i class="fa-solid fa-image"></i>
+                    </span>
+                    Visual Blueprint & Scale Ratio Reference
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+                    <!-- SVG Visual Chart 1: Scale Ratio Illustration -->
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-center">
+                        <div class="text-xs font-bold text-slate-500 uppercase mb-3">Scale Proportionality (1:1 vs 1:50)</div>
+                        <svg viewBox="0 0 300 160" class="w-full h-auto max-h-40 mx-auto rounded bg-white shadow-inner p-2">
+                            <!-- Real Box (1:1) -->
+                            <rect x="20" y="20" width="120" height="120" fill="#2563eb" fill-opacity="0.15" stroke="#2563eb" stroke-width="2" stroke-dasharray="4"/>
+                            <text x="80" y="85" text-anchor="middle" font-size="12" fill="#1e40af" font-weight="bold">Real Size (1:1)</text>
+                            
+                            <!-- Scaled Box (1:50) -->
+                            <rect x="180" y="60" width="40" height="40" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-width="2"/>
+                            <text x="200" y="85" text-anchor="middle" font-size="10" fill="#047857" font-weight="bold">Scale Size</text>
+                        </svg>
+                        <p class="text-xs text-slate-500 mt-2">Comparison of true dimension vs. scaled footprint.</p>
+                    </div>
+
+                    <!-- SVG Visual Chart 2: Architectural Plan Vector -->
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-center">
+                        <div class="text-xs font-bold text-slate-500 uppercase mb-3">Floor Plan Grid (1:100 Scale)</div>
+                        <svg viewBox="0 0 300 160" class="w-full h-auto max-h-40 mx-auto rounded bg-slate-900 p-2">
+                            <!-- Grid lines -->
+                            <path d="M 0,20 L 300,20 M 0,60 L 300,60 M 0,100 L 300,100 M 0,140 L 300,140" stroke="#334155" stroke-width="1"/>
+                            <path d="M 50,0 L 50,160 M 110,0 L 110,160 M 170,0 L 170,160 M 230,0 L 230,160" stroke="#334155" stroke-width="1"/>
+                            <!-- Blueprint Room -->
+                            <rect x="50" y="20" width="120" height="80" fill="none" stroke="#38bdf8" stroke-width="3"/>
+                            <text x="110" y="65" text-anchor="middle" font-size="11" fill="#38bdf8" font-weight="bold">Living Room (5m x 4m)</text>
+                            <!-- Dimension Line -->
+                            <line x1="50" y1="115" x2="170" y2="115" stroke="#f43f5e" stroke-width="1.5" marker-end="url(#arrow)"/>
+                            <text x="110" y="130" text-anchor="middle" font-size="10" fill="#f43f5e">5 cm on drawing</text>
+                        </svg>
+                        <p class="text-xs text-slate-500 mt-2">Architectural Blueprint blueprint layout visualization.</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Section I: Frequently Asked Questions (FAQ) -->
+            <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-100 text-brand-600 text-base">
+                        <i class="fa-solid fa-circle-question"></i>
+                    </span>
+                    Frequently Asked Questions (FAQ)
+                </h2>
+
+                <div class="space-y-3" id="faq-accordion-container">
+                    
+                    <!-- FAQ 1 -->
+                    <div class="border border-slate-200 rounded-xl overflow-hidden">
+                        <button type="button" onclick="toggleAccordion('faq-1')" class="w-full flex items-center justify-between p-4 text-left font-semibold text-slate-800 hover:bg-slate-50 transition-colors">
+                            <span>How do I calculate scale factor?</span>
+                            <i id="faq-1-icon" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                        </button>
+                        <div id="faq-1" class="accordion-content px-4 pb-4 text-sm text-slate-600 leading-relaxed">
+                            To calculate the scale factor, divide the real size length by the scaled size length in the same unit. For instance, if a real wall of 1000 cm is represented by 10 cm on paper, 1000 divided by 10 gives a scale ratio denominator of 100, which means a 1:100 scale factor.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="border border-slate-200 rounded-xl overflow-hidden">
+                        <button type="button" onclick="toggleAccordion('faq-2')" class="w-full flex items-center justify-between p-4 text-left font-semibold text-slate-800 hover:bg-slate-50 transition-colors">
+                            <span>What is the difference between scale and scale factor?</span>
+                            <i id="faq-2-icon" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                        </button>
+                        <div id="faq-2" class="accordion-content px-4 pb-4 text-sm text-slate-600 leading-relaxed">
+                            Scale is a proportional ratio comparing drawing or model dimensions to real-world measurements, such as 1:50 or 1/4 inch = 1 foot. Scale factor is the numerical multiplier or conversion factor used to scale dimensions up or down proportionately.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="border border-slate-200 rounded-xl overflow-hidden">
+                        <button type="button" onclick="toggleAccordion('faq-3')" class="w-full flex items-center justify-between p-4 text-left font-semibold text-slate-800 hover:bg-slate-50 transition-colors">
+                            <span>Can I use this for area and volume scaling?</span>
+                            <i id="faq-3-icon" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                        </button>
+                        <div id="faq-3" class="accordion-content px-4 pb-4 text-sm text-slate-600 leading-relaxed">
+                            This scale calculator focuses on linear length dimensions. For area calculations, square the scale factor (N²). For volume calculations, cube the scale factor (N³). For example, a 1:10 linear scale equals a 1:100 area scale and a 1:1000 volume scale.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="border border-slate-200 rounded-xl overflow-hidden">
+                        <button type="button" onclick="toggleAccordion('faq-4')" class="w-full flex items-center justify-between p-4 text-left font-semibold text-slate-800 hover:bg-slate-50 transition-colors">
+                            <span>Which scale is used for floor plans?</span>
+                            <i id="faq-4-icon" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                        </button>
+                        <div id="faq-4" class="accordion-content px-4 pb-4 text-sm text-slate-600 leading-relaxed">
+                            Architectural floor plans commonly use metric scales of 1:50 or 1:100 for residential layouts, and 1:200 for larger commercial site plans. Imperial blueprints frequently use 1/4 inch = 1 foot (1:48) or 1/8 inch = 1 foot (1:96).
+                        </div>
+                    </div>
+
+                    <!-- FAQ 5 -->
+                    <div class="border border-slate-200 rounded-xl overflow-hidden">
+                        <button type="button" onclick="toggleAccordion('faq-5')" class="w-full flex items-center justify-between p-4 text-left font-semibold text-slate-800 hover:bg-slate-50 transition-colors">
+                            <span>How to convert between different scales?</span>
+                            <i id="faq-5-icon" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                        </button>
+                        <div id="faq-5" class="accordion-content px-4 pb-4 text-sm text-slate-600 leading-relaxed">
+                            To convert a drawing from one scale to another, first determine the true real-world dimension by multiplying the original drawing size by its scale denominator. Then divide that real-world measurement by the new scale denominator to obtain the updated scale drawing length.
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Section J: Related Calculators Grid -->
+            <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm">
+                <h2 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2.5">
+                    <i class="fa-solid fa-grid-2 text-brand-600"></i> Related Calculators
+                </h2>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                    <a href="#" class="p-4 rounded-xl bg-slate-50 hover:bg-brand-50 border border-slate-200/80 hover:border-brand-200 text-center transition-all group">
+                        <i class="fa-solid fa-percent text-xl text-brand-600 mb-2 group-hover:scale-110 transition-transform"></i>
+                        <div class="text-sm font-semibold text-slate-800 group-hover:text-brand-700">Ratio Calculator</div>
+                    </a>
+                    <a href="#" class="p-4 rounded-xl bg-slate-50 hover:bg-brand-50 border border-slate-200/80 hover:border-brand-200 text-center transition-all group">
+                        <i class="fa-solid fa-ruler-horizontal text-xl text-brand-600 mb-2 group-hover:scale-110 transition-transform"></i>
+                        <div class="text-sm font-semibold text-slate-800 group-hover:text-brand-700">Unit Converter</div>
+                    </a>
+                    <a href="#" class="p-4 rounded-xl bg-slate-50 hover:bg-brand-50 border border-slate-200/80 hover:border-brand-200 text-center transition-all group">
+                        <i class="fa-solid fa-calculator text-xl text-brand-600 mb-2 group-hover:scale-110 transition-transform"></i>
+                        <div class="text-sm font-semibold text-slate-800 group-hover:text-brand-700">Percentage Calculator</div>
+                    </a>
+                    <a href="#" class="p-4 rounded-xl bg-slate-50 hover:bg-brand-50 border border-slate-200/80 hover:border-brand-200 text-center transition-all group">
+                        <i class="fa-solid fa-vector-square text-xl text-brand-600 mb-2 group-hover:scale-110 transition-transform"></i>
+                        <div class="text-sm font-semibold text-slate-800 group-hover:text-brand-700">Area Calculator</div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Final CTA Box -->
+            <section class="bg-gradient-to-r from-brand-600 to-indigo-700 text-white p-8 rounded-2xl shadow-xl text-center relative overflow-hidden">
+                <h2 class="text-2xl sm:text-3xl font-extrabold mb-3">Bookmark Calculator Pro for Fast Conversions</h2>
+                <p class="text-brand-100 text-sm sm:text-base max-w-xl mx-auto mb-6">
+                    Bookmark this free scale converter for quick and accurate conversion anytime. Explore more free online tools on Calculator Pro.
+                </p>
+                <button type="button" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" class="bg-white text-brand-700 hover:bg-brand-50 font-bold px-6 py-3 rounded-xl shadow-md transition-all inline-flex items-center gap-2 text-sm">
+                    <i class="fa-solid fa-arrow-up"></i> Back to Top & Calculate
+                </button>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Multi-column Footer -->
+<footer class="bg-slate-900 text-slate-400 text-sm border-t border-slate-800 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <!-- Col 1: About -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2 text-white font-bold text-lg">
+            <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
+              <i class="fa-solid fa-calculator"></i>
+            </div>
+            <span>Calculator<span class="text-indigo-400">-Pro</span></span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Calculator Pro provides free, fast, and clinically accurate online tools for health, financial, mathematical, and everyday conversion needs.
+          </p>
+          <div class="text-xs text-slate-500">
+            &copy; <span id="current-year">2026</span> Calculator Pro. All rights reserved.
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Quick Links</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Unit Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Length Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Weight Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Temperature Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Volume & Area Converter</a></li>
+          </ul>
+        </div>
+        <!-- Column 3: Tools & Resources -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Calculators</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="age-calculator.html" class="hover:text-white transition-colors">Age Calculator</a></li>
+            <li><a href="time-calculator.html" class="hover:text-white transition-colors">Time Calculator</a></li>
+            <li><a href="sip-calculator.html" class="hover:text-white transition-colors">SIP Financial Calculator</a></li>
+            <li><a href="bmi-calculator.html" class="hover:text-white transition-colors">BMI Health Calculator</a></li>
+            <li><a href="percentage-calculator.html" class="hover:text-white transition-colors">Percentage Calculator</a></li>
+          </ul>
+        </div>
+
+         <!-- Column 4: Legal & Contact -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Legal & Info</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Editorial Guidelines</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+    <!-- Pure Vanilla JavaScript Scale Calculator Logic -->
+    <script>
+		<!-- Inline JavaScript for Toggle -->
+  
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('calc-mobile-menu-btn');
+      const menu = document.getElementById('calc-mobile-menu');
+      const menuIcon = document.getElementById('calc-menu-icon');
+      const closeIcon = document.getElementById('calc-close-icon');
+
+      if (btn && menu) {
+        btn.addEventListener('click', () => {
+          const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', !isExpanded);
+          menu.classList.toggle('hidden');
+          menuIcon.classList.toggle('hidden');
+          closeIcon.classList.toggle('hidden');
+        });
+      }
+    });
+		
+        // State variables
+        let currentMode = 'realToScale'; // 'realToScale' | 'scaleToReal' | 'findScale'
+
+        // Conversion factors to standard base meter
+        const unitToMeters = {
+            'm': 1,
+            'cm': 0.01,
+            'mm': 0.001,
+            'km': 1000,
+            'in': 0.0254,
+            'ft': 0.3048,
+            'yd': 0.9144
+        };
+
+        const unitLabels = {
+            'm': 'm',
+            'cm': 'cm',
+            'mm': 'mm',
+            'km': 'km',
+            'in': 'in',
+            'ft': 'ft',
+            'yd': 'yd'
+        };
+
+        // DOM elements initialization on load
+        document.addEventListener('DOMContentLoaded', () => {
+            calculateScale();
+
+            // Add live input listeners
+            document.getElementById('val-input-a').addEventListener('input', calculateScale);
+            document.getElementById('val-input-b').addEventListener('input', calculateScale);
+            document.getElementById('unit-input-a').addEventListener('change', calculateScale);
+            document.getElementById('unit-input-b').addEventListener('change', calculateScale);
+        });
+
+        // Switch modes function
+        function switchMode(mode) {
+            currentMode = mode;
+            
+            const btn1 = document.getElementById('tab-mode-1');
+            const btn2 = document.getElementById('tab-mode-2');
+            const btn3 = document.getElementById('tab-mode-3');
+
+            const lblA = document.getElementById('lbl-input-a');
+            const lblB = document.getElementById('lbl-input-b');
+            const prefixRatio = document.getElementById('ratio-prefix');
+            const unitBSelect = document.getElementById('unit-input-b');
+            const presetsBox = document.getElementById('presets-container');
+            const descText = document.getElementById('mode-description-text');
+            const hintRatio = document.getElementById('ratio-format-hint');
+
+            // Reset tab styles
+            [btn1, btn2, btn3].forEach(btn => {
+                btn.className = "py-2 px-3 sm:px-4 rounded-lg transition-all duration-200 text-center font-semibold text-slate-600 hover:text-slate-900";
+            });
+
+            if (mode === 'realToScale') {
+                btn1.className = "py-2 px-3 sm:px-4 rounded-lg transition-all duration-200 text-center font-semibold bg-white text-brand-600 shadow-sm";
+                lblA.textContent = "Real Length";
+                lblB.textContent = "Scale Ratio (1 : N)";
+                prefixRatio.classList.remove('hidden');
+                unitBSelect.classList.add('hidden');
+                presetsBox.classList.remove('hidden');
+                hintRatio.classList.remove('hidden');
+                descText.textContent = "Calculate scaled drawing length from real-world measurement and scale ratio.";
+            } else if (mode === 'scaleToReal') {
+                btn2.className = "py-2 px-3 sm:px-4 rounded-lg transition-all duration-200 text-center font-semibold bg-white text-brand-600 shadow-sm";
+                lblA.textContent = "Scaled Length on Drawing";
+                lblB.textContent = "Scale Ratio (1 : N)";
+                prefixRatio.classList.remove('hidden');
+                unitBSelect.classList.add('hidden');
+                presetsBox.classList.remove('hidden');
+                hintRatio.classList.remove('hidden');
+                descText.textContent = "Calculate true real-world size from scaled model measurement and ratio.";
+            } else if (mode === 'findScale') {
+                btn3.className = "py-2 px-3 sm:px-4 rounded-lg transition-all duration-200 text-center font-semibold bg-white text-brand-600 shadow-sm";
+                lblA.textContent = "Real Length";
+                lblB.textContent = "Scaled Length on Drawing";
+                prefixRatio.classList.add('hidden');
+                unitBSelect.classList.remove('hidden');
+                presetsBox.classList.add('hidden');
+                hintRatio.classList.add('hidden');
+                descText.textContent = "Determine scale ratio (1:N) from real length and scaled length.";
+            }
+
+            calculateScale();
+        }
+
+        // Apply quick preset ratio
+        function applyPreset(denominator) {
+            document.getElementById('val-input-b').value = denominator;
+            calculateScale();
+        }
+
+        // Core Calculation Engine
+        function calculateScale() {
+            const valA = parseFloat(document.getElementById('val-input-a').value) || 0;
+            const unitA = document.getElementById('unit-input-a').value;
+            const valB = parseFloat(document.getElementById('val-input-b').value) || 0;
+            const unitB = document.getElementById('unit-input-b').value;
+
+            let resultInMeters = 0;
+            let displayPrimaryText = "";
+            let formulaText = "";
+            let displayRatioText = "";
+
+            if (currentMode === 'realToScale') {
+                // Real to scale calculation: Scaled = Real / Ratio
+                const realMeters = valA * unitToMeters[unitA];
+                const ratio = valB > 0 ? valB : 1;
+                resultInMeters = realMeters / ratio;
+
+                // Pick best default unit for display (cm or mm if small)
+                let primaryVal = resultInMeters / unitToMeters['cm'];
+                let primaryUnit = 'cm';
+                if (primaryVal < 1) {
+                    primaryVal = resultInMeters / unitToMeters['mm'];
+                    primaryUnit = 'mm';
+                }
+
+                displayPrimaryText = `${formatNum(primaryVal)} <span class="text-xl sm:text-2xl font-normal text-brand-300">${primaryUnit}</span>`;
+                formulaText = `Formula: Real Size (${valA} ${unitA}) ÷ Scale Denominator (${ratio})`;
+                displayRatioText = `Scale 1 : ${ratio}`;
+                
+                document.getElementById('primary-result-label').textContent = "Scaled Dimension Result";
+
+            } else if (currentMode === 'scaleToReal') {
+                // Scale to Real calculation: Real = Scaled * Ratio
+                const scaledMeters = valA * unitToMeters[unitA];
+                const ratio = valB > 0 ? valB : 1;
+                resultInMeters = scaledMeters * ratio;
+
+                let primaryVal = resultInMeters / unitToMeters['m'];
+                let primaryUnit = 'm';
+                if (primaryVal >= 1000) {
+                    primaryVal = resultInMeters / unitToMeters['km'];
+                    primaryUnit = 'km';
+                }
+
+                displayPrimaryText = `${formatNum(primaryVal)} <span class="text-xl sm:text-2xl font-normal text-brand-300">${primaryUnit}</span>`;
+                formulaText = `Formula: Scaled Size (${valA} ${unitA}) × Scale Denominator (${ratio})`;
+                displayRatioText = `Scale 1 : ${ratio}`;
+
+                document.getElementById('primary-result-label').textContent = "Real-World Dimension Result";
+
+            } else if (currentMode === 'findScale') {
+                // Find Scale Factor calculation: Ratio = Real / Scaled
+                const realMeters = valA * unitToMeters[unitA];
+                const scaledMeters = valB * unitToMeters[unitB];
+                
+                const ratioDenominator = scaledMeters > 0 ? realMeters / scaledMeters : 0;
+                resultInMeters = realMeters;
+
+                displayPrimaryText = `1 : ${formatNum(ratioDenominator, 2)}`;
+                formulaText = `Formula: Real Size (${valA} ${unitA}) ÷ Scaled Size (${valB} ${unitB})`;
+                displayRatioText = `Scale Factor Ratio`;
+
+                document.getElementById('primary-result-label').textContent = "Calculated Scale Ratio";
+            }
+
+            // Update UI Primary Result Box
+            document.getElementById('primary-result-value').innerHTML = displayPrimaryText;
+            document.getElementById('result-formula-used').textContent = formulaText;
+            document.getElementById('visual-scale-ratio-badge').textContent = displayRatioText;
+
+            // Render Multi-Unit Breakdown Table
+            renderMultiUnits(resultInMeters);
+
+            // Update Visual Proportional Diagram
+            updateVisualDiagram(valA, valB, currentMode, resultInMeters);
+        }
+
+        // Format multi-unit outputs
+        function renderMultiUnits(baseMeters) {
+            document.getElementById('unit-mm').textContent = `${formatNum(baseMeters / unitToMeters['mm'])} mm`;
+            document.getElementById('unit-cm').textContent = `${formatNum(baseMeters / unitToMeters['cm'])} cm`;
+            document.getElementById('unit-m').textContent = `${formatNum(baseMeters / unitToMeters['m'])} m`;
+            document.getElementById('unit-in').textContent = `${formatNum(baseMeters / unitToMeters['in'])} in`;
+            document.getElementById('unit-ft').textContent = `${formatNum(baseMeters / unitToMeters['ft'])} ft`;
+            document.getElementById('unit-yd').textContent = `${formatNum(baseMeters / unitToMeters['yd'])} yd`;
+        }
+
+        // Dynamic Visual Bar Proportion Visualizer
+        function updateVisualDiagram(valA, valB, mode, resultMeters) {
+            const realBar = document.getElementById('diagram-real-bar');
+            const scaleBar = document.getElementById('diagram-scale-bar');
+            const realText = document.getElementById('diagram-real-text');
+            const scaleText = document.getElementById('diagram-scale-text');
+
+            if (mode === 'realToScale') {
+                const unitA = document.getElementById('unit-input-a').value;
+                const ratio = valB > 0 ? valB : 1;
+                realText.textContent = `${valA} ${unitA}`;
+                
+                let scaleValCm = resultMeters / unitToMeters['cm'];
+                scaleText.textContent = `${formatNum(scaleValCm)} cm`;
+
+                realBar.style.width = "100%";
+                // Calculate percentage relative size for visualization capped at minimum 5%
+                let percentage = Math.max(5, Math.min(100, (1 / ratio) * 100 * 5));
+                scaleBar.style.width = `${percentage}%`;
+
+            } else if (mode === 'scaleToReal') {
+                const unitA = document.getElementById('unit-input-a').value;
+                const ratio = valB > 0 ? valB : 1;
+                
+                scaleText.textContent = `${valA} ${unitA}`;
+                let realValM = resultMeters / unitToMeters['m'];
+                realText.textContent = `${formatNum(realValM)} m`;
+
+                realBar.style.width = "100%";
+                let percentage = Math.max(5, Math.min(100, (1 / ratio) * 100 * 5));
+                scaleBar.style.width = `${percentage}%`;
+
+            } else {
+                const unitA = document.getElementById('unit-input-a').value;
+                const unitB = document.getElementById('unit-input-b').value;
+                realText.textContent = `${valA} ${unitA}`;
+                scaleText.textContent = `${valB} ${unitB}`;
+
+                realBar.style.width = "100%";
+                const realM = valA * unitToMeters[unitA];
+                const scaleM = valB * unitToMeters[unitB];
+                let ratioPct = realM > 0 ? (scaleM / realM) * 100 : 5;
+                scaleBar.style.width = `${Math.max(5, Math.min(100, ratioPct))}%`;
+            }
+        }
+
+        // Helper number formatter
+        function formatNum(num, decimals = 4) {
+            if (isNaN(num) || !isFinite(num)) return "0";
+            if (num % 1 === 0) return num.toString();
+            return parseFloat(num.toFixed(decimals)).toString();
+        }
+
+        // Reset inputs
+        function resetCalculator() {
+            document.getElementById('val-input-a').value = "5";
+            document.getElementById('val-input-b').value = "50";
+            document.getElementById('unit-input-a').value = "m";
+            document.getElementById('unit-input-b').value = "cm";
+            calculateScale();
+        }
+
+        // Copy to clipboard helper
+        function copyResultToClipboard() {
+            const rawText = document.getElementById('primary-result-value').innerText;
+            const formula = document.getElementById('result-formula-used').innerText;
+            const fullTextToCopy = `Scale Result: ${rawText} (${formula})`;
+
+            navigator.clipboard.writeText(fullTextToCopy).then(() => {
+                const copyBtnText = document.getElementById('copy-btn-text');
+                const copyBtnIcon = document.getElementById('copy-btn-icon');
+
+                copyBtnText.textContent = "Copied!";
+                copyBtnIcon.className = "fa-solid fa-check text-emerald-400";
+
+                setTimeout(() => {
+                    copyBtnText.textContent = "Copy Result";
+                    copyBtnIcon.className = "fa-solid fa-copy";
+                }, 2000);
+            }).catch(err => {
+                console.error("Copy failed", err);
+            });
+        }
+
+        // Accordion Toggle Script
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            const icon = document.getElementById(`${id}-icon`);
+            
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                if (icon) icon.style.transform = "rotate(0deg)";
+            } else {
+                // Close other accordions
+                document.querySelectorAll('.accordion-content').forEach(el => el.classList.remove('open'));
+                document.querySelectorAll('[id$="-icon"]').forEach(ic => ic.style.transform = "rotate(0deg)");
+
+                content.classList.add('open');
+                if (icon) icon.style.transform = "rotate(180deg)";
+            }
+        }
+    </script>
+</body>
+</html>

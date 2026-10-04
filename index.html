@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Online Calculators & Converters Tools | Calculator Pro</title>
+    <meta name="description" content="Use 100+ free online calculators & converters tools instantly. Percentage, age, BMI, currency, unit converters and more. No signup needed – Calculator Pro.">
+    <meta name="keywords" content="free online calculators, calculators & converters, unit converter, percentage calculator, BMI calculator, age calculator">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://calculatorpro.com/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calculatorpro.com/">
+    <meta property="og:title" content="Free Online Calculators & Converters Tools | Calculator Pro">
+    <meta property="og:description" content="Use 100+ free online calculators & converters tools instantly. Percentage, age, BMI, currency, unit converters and more. No signup needed – Calculator Pro.">
+    <meta property="og:image" content="https://placehold.co/1200x630/2563eb/ffffff?text=Calculator+Pro">
+
+    <!-- Twitter Meta -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Online Calculators & Converters Tools | Calculator Pro">
+    <meta name="twitter:description" content="Use 100+ free online calculators & converters tools instantly. Percentage, age, BMI, currency, unit converters and more. No signup needed – Calculator Pro.">
+
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Fonts Inter -->
+    
+
+    <!-- Tailwind CSS CDN -->
+    
+    
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- Structured Data: WebSite & FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://calculatorpro.com/#website",
+          "url": "https://calculatorpro.com/",
+          "name": "Calculator Pro",
+          "description": "Free Online Calculators & Converters Tools",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Calculator Pro"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Are these calculators completely free?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, 100% free! All calculators and converters on Calculator Pro are completely free to use with no hidden subscription fees, trials, or limits."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do I need to create an account?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No registration or account creation is required. You can access and perform unlimited calculations right away without providing personal information."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Are the results accurate?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "All tools utilize standard mathematical formulas, financial algorithms, and verified conversion factors to ensure maximum accuracy across all calculations."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I use these tools on mobile?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes! Calculator Pro is fully responsive and optimized for mobile phones, tablets, laptops, and desktop devices."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you store my calculation data?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We prioritize your privacy. All calculations occur locally in your web browser. No input values or calculated results are ever transmitted or saved on our servers."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How often are new calculators added?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We regularly release new specialized utility calculators, finance calculators, and conversion modules every month based on user requests."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does the offline mode work?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Once loaded into your browser, Calculator Pro caches core calculations so you can compute numbers even when internet connection drops."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I suggest a new calculator?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We welcome user feedback! Feel free to reach out through our contact channel to request any custom calculation or unit conversion tool."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans flex flex-col min-h-screen">
+
+<header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      
+      <!-- Brand Logo & Name -->
+      <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
+        <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
+          <i class="fa-solid fa-calculator text-lg"></i>
+        </div>
+        <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
+          Calculator<span class="text-indigo-600">-Pro</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-1" aria-label="Main Navigation">
+        
+        <!-- Category 1: Age -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Age
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="age-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="birthday-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Birthday Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="age-difference-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Diffrence Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Time -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Time & Date
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="time-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Time Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="date-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Date Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="work-days-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Work Days Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="time-zone-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">TimeZone Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Converter -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Converter
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="unit-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Unit Converter</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="cgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">CGPA to Percentage</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to Percentage</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sgpa-to-cgpa-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to CGPA</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="marks-to-percentage-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Marks to Percentage</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4: Financial -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Financial
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sip-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SIP Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="emi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">EMI Loan Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="Compound-Interest-Calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Compound Interest Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 5: Health -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Health
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute right-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="bmi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">BMI Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="waist-to-hip-ratio-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">WHR Calculator</a>
+            </div>
+          </div>
+        </div>
+		  
+		 
+
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex md:hidden">
+        <button id="calc-mobile-menu-btn" type="button" class="p-2.5 rounded-xl text-slate-600 hover:text-indigo-600 hover:bg-slate-100/80 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors duration-200" aria-controls="calc-mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+          <svg id="calc-menu-icon" class="w-6 h-6 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="calc-close-icon" class="w-6 h-6 hidden transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile Full-Width Menu Container -->
+  <div id="calc-mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white shadow-xl transition-all duration-200 ease-in-out">
+    <div class="px-4 pt-3 pb-6 space-y-4">
+      
+      <!-- Mobile Category: Age -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Age</div>
+        <a href="age-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Calculator</a>
+		  <a href="birthday-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Birthday Calculator</a>
+		  <a href="age-difference-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Diffrence Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Time -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Time & Date</div>
+        <a href="time-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Time Calculator</a>
+		  <a href="date-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Date Calculator</a>
+		  <a href="work-days-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Work Days Calculator</a>
+		  <a href="time-zone-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">TimeZone Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Converter -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Converter</div>
+        <a href="javascript:void(0)" onclick="openCalculator('length')" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Unit Converter</a>
+		  <a href="cgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">CGPA to Percentage</a>
+		  <a href="sgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to Percentage</a>
+		  <a href="sgpa-to-cgpa-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to CGPA</a>
+		  <a href="marks-to-percentage-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Marks to Percentage</a>
+      </div>
+
+      <!-- Mobile Category: Financial -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Financial</div>
+        <a href="sip-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SIP Calculator</a>
+		  <a href="emi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">EMI Loan Calculator</a>
+		  <a href="Compound-Interest-Calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Compound Interest Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Health -->
+      <div>
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Health</div>
+        <a href="bmi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">BMI Calculator</a>
+		  <a href="waist-to-hip-ratio-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">WHR Calculator</a>
+      </div>
+		
+		
+
+    </div>
+  </div>
+</header>
+
+<main class="flex-grow">
+    <!-- Above The Fold / Hero Section -->
+    <section class="relative bg-gradient-to-b from-brand-50/60 via-white to-slate-50 pt-12 pb-16 lg:pt-16 lg:pb-24 overflow-hidden border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Left Column -->
+                <div class="lg:col-span-7 space-y-6 text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-100/70 border border-indigo-200 text-indigo-700 text-xs font-semibold uppercase tracking-wide">
+                        <span class="w-2 h-2 rounded-full bg-indigo-600 animate-ping"></span>
+                        Fast & Free Utility Suite
+                    </div>
+                    
+                    <!-- H1 Main Heading -->
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                        Free Online Calculators & Converters Tools
+                    </h1>
+
+                    <!-- Intro Paragraph -->
+                    <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl">
+                        Welcome to Calculator Pro – your complete collection of free online calculators and converters. Whether you need a percentage calculator, BMI calculator, age calculator, unit converter, currency converter, or scientific calculator, everything is available here in one place. All tools are fast, accurate, mobile-friendly, and completely free to use with no registration required.
+                    </p>
+
+                    <!-- Trust / Benefits Bullet Points -->
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-700 font-medium pt-2">
+                        <li class="flex items-center gap-2.5">
+                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <span><strong>100% Free</strong> – No signup or hidden charges</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <span><strong>Instant Results</strong> – Fast & accurate calculations</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <span><strong>Mobile Friendly</strong> – Phone, tablet & desktop</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <span><strong>Privacy Focused</strong> – No data is stored</span>
+                        </li>
+                        <li class="flex items-center gap-2.5 sm:col-span-2">
+                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <span><strong>Regularly Updated</strong> – New calculators added frequently</span>
+                        </li>
+                    </ul>
+
+                    <!-- CTA Action Button -->
+                    <div class="pt-4 flex flex-wrap gap-4 items-center">
+                        <a href="#categories" class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold shadow-lg shadow-indigo-200 transition-all duration-200 hover:shadow-indigo-300 transform hover:-translate-y-0.5 focus:ring-4 focus:ring-indigo-300">
+                            Explore All Tools
+                            <i class="fa-solid fa-arrow-down ml-2 text-sm"></i>
+                        </a>
+                        <button onclick="openCalculator('age')" class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-300 text-slate-700 font-semibold shadow-sm hover:bg-slate-50 transition-all duration-200">
+                            <i class="fa-solid fa-bolt text-amber-500 mr-2"></i> Try Age Calc
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Hero Right Column: Popular Tools Highlights -->
+                <div class="lg:col-span-5">
+                    <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-xl border border-slate-100 relative">
+                        <div class="flex items-center justify-between pb-4 border-b border-slate-100 mb-4">
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900">Popular Tools</h3>
+                                <p class="text-xs text-slate-500">Most used tools by thousands daily</p>
+                            </div>
+                            <span class="px-2.5 py-1 bg-amber-50 text-amber-700 border border-amber-200 rounded-lg text-xs font-semibold">
+                                <i class="fa-solid fa-fire text-amber-500 mr-1"></i> Trending
+                            </span>
+                        </div>
+
+                        <!-- Popular Calculators Grid Links -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <a href="age-calculator.html" class="flex items-center p-3 rounded-xl bg-slate-50 hover:bg-indigo-50/70 border border-slate-100 hover:border-indigo-100 transition-all group">
+                                <div class="w-9 h-9 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center mr-3 group-hover:scale-105 transition-transform">
+                                    <i class="fa-solid fa-cake-candles"></i>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-semibold text-slate-800 group-hover:text-indigo-600">Age Calculator</div>
+                                    <div class="text-[11px] text-slate-500">Exact age & dates</div>
+                                </div>
+                            </a>
+
+                            <a href="bmi-calculator.html" class="flex items-center p-3 rounded-xl bg-slate-50 hover:bg-indigo-50/70 border border-slate-100 hover:border-indigo-100 transition-all group">
+                                <div class="w-9 h-9 rounded-lg bg-rose-100 text-rose-600 flex items-center justify-center mr-3 group-hover:scale-105 transition-transform">
+                                    <i class="fa-solid fa-heart-pulse"></i>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-semibold text-slate-800 group-hover:text-indigo-600">BMI Calculator</div>
+                                    <div class="text-[11px] text-slate-500">Health index check</div>
+                                </div>
+                            </a>
+
+                            <a href="percentage-calculator.html" class="flex items-center p-3 rounded-xl bg-slate-50 hover:bg-indigo-50/70 border border-slate-100 hover:border-indigo-100 transition-all group">
+                                <div class="w-9 h-9 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center mr-3 group-hover:scale-105 transition-transform">
+                                    <i class="fa-solid fa-percent"></i>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-semibold text-slate-800 group-hover:text-indigo-600">Percentage Calc</div>
+                                    <div class="text-[11px] text-slate-500">Fast ratios & %</div>
+                                </div>
+                            </a>
+
+                            <a href="sip-calculator.html" class="flex items-center p-3 rounded-xl bg-slate-50 hover:bg-indigo-50/70 border border-slate-100 hover:border-indigo-100 transition-all group">
+                                <div class="w-9 h-9 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center mr-3 group-hover:scale-105 transition-transform">
+                                    <i class="fa-solid fa-chart-line"></i>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-semibold text-slate-800 group-hover:text-indigo-600">SIP Calculator</div>
+                                    <div class="text-[11px] text-slate-500">Investment return</div>
+                                </div>
+                            </a>
+
+                            <a href="time-calculator.html" class="flex items-center p-3 rounded-xl bg-slate-50 hover:bg-indigo-50/70 border border-slate-100 hover:border-indigo-100 transition-all group">
+                                <div class="w-9 h-9 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center mr-3 group-hover:scale-105 transition-transform">
+                                    <i class="fa-solid fa-clock"></i>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-semibold text-slate-800 group-hover:text-indigo-600">Time Calculator</div>
+                                    <div class="text-[11px] text-slate-500">Hours & minutes</div>
+                                </div>
+                            </a>
+
+                            <a href="unit-converter.html" class="flex items-center p-3 rounded-xl bg-slate-50 hover:bg-indigo-50/70 border border-slate-100 hover:border-indigo-100 transition-all group">
+                                <div class="w-9 h-9 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center mr-3 group-hover:scale-105 transition-transform">
+                                    <i class="fa-solid fa-ruler-combined"></i>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-semibold text-slate-800 group-hover:text-indigo-600">Unit Converter</div>
+                                    <div class="text-[11px] text-slate-500">Length & area metrics</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Main Categories Section -->
+    <section id="categories" class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                    Popular Calculator & Converters
+                </h2>
+                <p class="text-slate-600 mt-2 text-base">
+                    Browse our organized collection of calculators and unit converters built for everyday accuracy.
+                </p>
+            </div>
+
+            <!-- Categories Grid -->
+            <div id="category-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Category 1: Age Calculators -->
+                <div class="category-card bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-3 mb-4 pb-3 border-b border-slate-100">
+                        <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-cake-candles"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900">Age Calculators</h3>
+                    </div>
+                    <ul class="space-y-2.5">
+                        <li class="tool-item">
+                            <a href="age-calculator.html" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
+                                <span class="font-medium text-sm">Age Calculator</span>
+                                <span class="text-xs bg-indigo-50 text-indigo-600 px-2 py-0.5 rounded font-semibold">Interactive</span>
+                            </a>
+                        </li>
+                        <li class="tool-item">
+                            <a href="birthday-calculator.html" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
+                                <span class="font-medium text-sm">Birthday Calculator</span>
+                                <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
+                            </a>
+                        </li>
+                        <li class="tool-item">
+                            <a href="age-difference-calculator.html" onclick="openCalculator('age')" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
+                                <span class="font-medium text-sm">Age Difference Calculator</span>
+                                <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Category 2: Date & Time Calculators -->
+                <div class="category-card bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-3 mb-4 pb-3 border-b border-slate-100">
+                        <div class="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900">Date & Time Calculators</h3>
+                    </div>
+                    <ul class="space-y-2.5">
+                        <li class="tool-item">
+                            <a href="time-calculator.html" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
+                                <span class="font-medium text-sm">Time Calculator</span>
+                                <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
+                            </a>
+                        </li>
+                        <li class="tool-item">
+                            <a href="date-calculator.html" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
+                                <span class="font-medium text-sm">Date Calculator</span>
+                                <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
+                            </a>
+                        </li>
+                        <li class="tool-item">
+                            <a href="work-days-calculator.html" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
+                                <span class="font-medium text-sm">Work Days Calculator</span>
+                                <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
+                            </a>
+                        </li>
+                        <li class="tool-item">
+                            <a href="time-zone-converter.html" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
+                                <span class="font-medium text-sm">Time Zone Converter</span>
+                                <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Category 3: Finance Calculators -->
+                <div class="category-card bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-3 mb-4 pb-3 border-b border-slate-100">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-coins"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900">Finance Calculators</h3>
+                    </div>
+                    <ul class="space-y-2.5">
+                        <li class="tool-item">
+                            <a href="emi-calculator.html" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
+                                <span class="font-medium text-sm">Loan EMI Calculator</span>
+                                <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
+                            </a>
+                        </li>
+                        <li class="tool-item">
+                            <a href="Compound-Interest-Calculator.html" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
+                                <span class="font-medium text-sm">Compound Interest Calculator</span>
+                                <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
+                            </a>
+                        </li>
+                        <li class="tool-item">
+                            <a href="sip-calculator.html" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
+                                <span class="font-medium text-sm">SIP Calculator</span>
+                                <span class="text-xs bg-emerald-50 text-emerald-600 px-2 py-0.5 rounded font-semibold">Interactive</span>
+                            </a>
+                        </li>
+                        <li class="tool-item">
+                            <a href="javascript:void(0)" onclick="openCalculator('percentage')" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
+                                <span class="font-medium text-sm">Percentage Increase/Decrease</span>
+                                <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
+                            </a>
+                        </li>
+                        <li class="tool-item">
+                            <a href="javascript:void(0)" onclick="openCalculator('percentage')" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
+                                <span class="font-medium text-sm">Discount Calculator</span>
+                                <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Category 4: Math & Basic Calculators -->
+                <div class="category-card bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-3 mb-4 pb-3 border-b border-slate-100">
+                        <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-calculator"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900">Math & Basic Calculators</h3>
+                    </div>
+                    <ul class="space-y-2.5">
+                        <li class="tool-item">
+                            <a href="percentage-calculator.html" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
+                                <span class="font-medium text-sm">Percentage Calculator</span>
+                                <span class="text-xs bg-blue-50 text-blue-600 px-2 py-0.5 rounded font-semibold">Interactive</span>
+                            </a>
+                        </li>
+                        <li class="tool-item">
+                            <a href="average-calculator.html" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
+                                <span class="font-medium text-sm">Average Calculator</span>
+                                <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
+                            </a>
+                        </li>
+                        <li class="tool-item">
+                            <a href="fraction-calculator.html" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
+                                <span class="font-medium text-sm">Fraction Calculator</span>
+                                <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
+                            </a>
+                        </li>
+                        <li class="tool-item">
+                            <a href="ratio-calculator.html" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
+                                <span class="font-medium text-sm">Ratio Calculator</span>
+                                <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Category 5: Unit Converters -->
+                <div class="category-card bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-3 mb-4 pb-3 border-b border-slate-100">
+                        <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-ruler-combined"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900">Unit Converters</h3>
+                    </div>
+                    <ul class="space-y-2.5">
+                        <li class="tool-item">
+                            <a href="unit-converter.html" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
+                                <span class="font-medium text-sm">Length Converter</span>
+                                <span class="text-xs bg-amber-50 text-amber-600 px-2 py-0.5 rounded font-semibold">Interactive</span>
+                            </a>
+                        </li>
+                        <li class="tool-item">
+                            <a href="unit-converter.html" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
+                                <span class="font-medium text-sm">Weight Converter</span>
+                                <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
+                            </a>
+                        </li>
+                        <li class="tool-item">
+                            <a href="unit-converter.html" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
+                                <span class="font-medium text-sm">Temperature Converter</span>
+                                <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
+                            </a>
+                        </li>
+                        <li class="tool-item">
+                            <a href="unit-converter.html" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
+                                <span class="font-medium text-sm">Area Converter</span>
+                                <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
+                            </a>
+                        </li>
+                        <li class="tool-item">
+                            <a href="unit-converter.html" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
+                                <span class="font-medium text-sm">Volume Converter</span>
+                                <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
+                            </a>
+                        </li>
+                        <li class="tool-item">
+                            <a href="unit-converter.html" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
+                                <span class="font-medium text-sm">Speed Converter</span>
+                                <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Category 6: Health -->
+                <div class="category-card bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-3 mb-4 pb-3 border-b border-slate-100">
+                        <div class="w-10 h-10 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900">Health</h3>
+                    </div>
+                    <ul class="space-y-2.5">
+                        <li class="tool-item">
+                            <a href="bmi-calculator.html" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
+                                <span class="font-medium text-sm">BMI Calculator</span>
+                                <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
+                            </a>
+                        </li>
+                        <li class="tool-item">
+                            <a href="waist-to-hip-ratio-calculator.html" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
+                                <span class="font-medium text-sm">Waist to Hip Ratio Calculator</span>
+                                <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-16 bg-white border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                    How to Use Our Free Calculators
+                </h2>
+                <p class="text-slate-600 mt-2 text-base">Get instant and accurate results in four simple steps.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100 relative group hover:bg-indigo-50/40 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-bold text-lg mb-4 shadow-md shadow-indigo-200">
+                        1
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Choose Tool</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">Select the calculator or converter you need from our comprehensive category catalog.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100 relative group hover:bg-indigo-50/40 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-bold text-lg mb-4 shadow-md shadow-indigo-200">
+                        2
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Enter Values</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">Fill in the required numbers or select units using our clean input forms.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100 relative group hover:bg-indigo-50/40 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-bold text-lg mb-4 shadow-md shadow-indigo-200">
+                        3
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Instant Results</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">Calculations update dynamically in real time using verified standard formulas.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100 relative group hover:bg-indigo-50/40 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-bold text-lg mb-4 shadow-md shadow-indigo-200">
+                        4
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Copy & Share</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">Copy the calculated metrics or share the clean results instantly with one tap.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Calculator Pro Section -->
+    <section class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                    Why Choose Calculator Pro
+                </h2>
+                <p class="text-slate-600 mt-2 text-base">Engineered for speed, privacy, and precision.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm flex gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex-shrink-0 flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-gift"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-bold text-slate-900 mb-1">Completely Free Forever</h3>
+                        <p class="text-sm text-slate-600">Enjoy unlimited computations without paywalls or hidden subscriptions.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm flex gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex-shrink-0 flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-ban"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-bold text-slate-900 mb-1">Minimal & Clean Design</h3>
+                        <p class="text-sm text-slate-600">Clean, non-intrusive layout designed for swift focus without clutter.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm flex gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex-shrink-0 flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-wifi"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-bold text-slate-900 mb-1">Works Offline</h3>
+                        <p class="text-sm text-slate-600">Calculations run locally in browser so you can compute even without internet.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm flex gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex-shrink-0 flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-bold text-slate-900 mb-1">Accurate Formulas</h3>
+                        <p class="text-sm text-slate-600">Built using industry-standard formulas verified by financial and technical pros.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm flex gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex-shrink-0 flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-bold text-slate-900 mb-1">Multi-Unit Support</h3>
+                        <p class="text-sm text-slate-600">Easily switch between metric, imperial, and global currency standard units.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm flex gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-600 flex-shrink-0 flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-bold text-slate-900 mb-1">100% Data Privacy</h3>
+                        <p class="text-sm text-slate-600">Your inputs stay private in your browser; no user data is sent to external servers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white border-t border-slate-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-slate-600 mt-2 text-base">Find quick answers to common questions about Calculator Pro.</p>
+            </div>
+
+            <!-- Accordion Items -->
+            <div class="space-y-4" id="faq-accordion">
+
+                <!-- Question 1 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden bg-slate-50/50">
+                    <button type="button" class="faq-toggle w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center hover:bg-slate-100/60 transition-colors">
+                        <h3 class="text-base">Are these calculators completely free?</h3>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                    </button>
+                    <div class="accordion-content px-6">
+                        <p class="py-4 text-slate-600 text-sm leading-relaxed border-t border-slate-200/60">
+                            Yes, 100% free! All calculators and converters on Calculator Pro are completely free to use with no hidden subscription fees, trials, or limits.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden bg-slate-50/50">
+                    <button type="button" class="faq-toggle w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center hover:bg-slate-100/60 transition-colors">
+                        <h3 class="text-base">Do I need to create an account?</h3>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                    </button>
+                    <div class="accordion-content px-6">
+                        <p class="py-4 text-slate-600 text-sm leading-relaxed border-t border-slate-200/60">
+                            No registration or account creation is required. You can access and perform unlimited calculations right away without providing personal information.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden bg-slate-50/50">
+                    <button type="button" class="faq-toggle w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center hover:bg-slate-100/60 transition-colors">
+                        <h3 class="text-base">Are the results accurate?</h3>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                    </button>
+                    <div class="accordion-content px-6">
+                        <p class="py-4 text-slate-600 text-sm leading-relaxed border-t border-slate-200/60">
+                            All tools utilize standard mathematical formulas, financial algorithms, and verified conversion factors to ensure maximum accuracy across all calculations.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden bg-slate-50/50">
+                    <button type="button" class="faq-toggle w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center hover:bg-slate-100/60 transition-colors">
+                        <h3 class="text-base">Can I use these tools on mobile?</h3>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                    </button>
+                    <div class="accordion-content px-6">
+                        <p class="py-4 text-slate-600 text-sm leading-relaxed border-t border-slate-200/60">
+                            Yes! Calculator Pro is fully responsive and optimized for mobile phones, tablets, laptops, and desktop devices.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden bg-slate-50/50">
+                    <button type="button" class="faq-toggle w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center hover:bg-slate-100/60 transition-colors">
+                        <h3 class="text-base">Do you store my calculation data?</h3>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                    </button>
+                    <div class="accordion-content px-6">
+                        <p class="py-4 text-slate-600 text-sm leading-relaxed border-t border-slate-200/60">
+                            We prioritize your privacy. All calculations occur locally in your web browser. No input values or calculated results are ever transmitted or saved on our servers.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden bg-slate-50/50">
+                    <button type="button" class="faq-toggle w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center hover:bg-slate-100/60 transition-colors">
+                        <h3 class="text-base">How often are new calculators added?</h3>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                    </button>
+                    <div class="accordion-content px-6">
+                        <p class="py-4 text-slate-600 text-sm leading-relaxed border-t border-slate-200/60">
+                            We regularly release new specialized utility calculators, finance calculators, and conversion modules every month based on user requests.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden bg-slate-50/50">
+                    <button type="button" class="faq-toggle w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center hover:bg-slate-100/60 transition-colors">
+                        <h3 class="text-base">How does the offline mode work?</h3>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                    </button>
+                    <div class="accordion-content px-6">
+                        <p class="py-4 text-slate-600 text-sm leading-relaxed border-t border-slate-200/60">
+                            Once loaded into your browser, Calculator Pro caches core calculations so you can compute numbers even when internet connection drops.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden bg-slate-50/50">
+                    <button type="button" class="faq-toggle w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center hover:bg-slate-100/60 transition-colors">
+                        <h3 class="text-base">Can I suggest a new calculator?</h3>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                    </button>
+                    <div class="accordion-content px-6">
+                        <p class="py-4 text-slate-600 text-sm leading-relaxed border-t border-slate-200/60">
+                            We welcome user feedback! Feel free to reach out through our contact channel to request any custom calculation or unit conversion tool.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Interactive Modal Suite for Calculators -->
+<div id="calc-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm hidden transition-opacity duration-200">
+    <div class="bg-white rounded-3xl shadow-2xl border border-slate-100 w-full max-w-2xl overflow-hidden transform transition-all duration-300">
+        <!-- Modal Header -->
+        <div class="flex items-center justify-between px-6 py-4 bg-slate-50 border-b border-slate-100">
+            <div class="flex items-center gap-3">
+                <div id="modal-icon-container" class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-bold">
+                    <i id="modal-icon" class="fa-solid fa-calculator"></i>
+                </div>
+                <div>
+                    <h3 id="modal-title" class="text-lg font-bold text-slate-900">Interactive Calculator</h3>
+                    <p id="modal-subtitle" class="text-xs text-slate-500">Fast & precise calculations</p>
+                </div>
+            </div>
+            <button onclick="closeModal()" class="w-9 h-9 rounded-full bg-slate-200/60 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+        </div>
+
+        <!-- Modal Body Container -->
+        <div class="p-6 max-h-[80vh] overflow-y-auto">
+            
+            <!-- Age Calculator Container -->
+            <div id="calc-age-container" class="calc-view hidden space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1">Date of Birth</label>
+                        <input type="date" id="age-dob" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1">Target Date</label>
+                        <input type="date" id="age-target" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                    </div>
+                </div>
+                <button onclick="calculateAge()" class="w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl shadow-md transition-colors">Calculate Age</button>
+                <div id="age-result" class="p-4 bg-indigo-50/60 border border-indigo-100 rounded-2xl hidden text-center">
+                    <div class="text-xs text-indigo-600 font-semibold uppercase tracking-wider">Calculated Age</div>
+                    <div id="age-result-text" class="text-2xl font-extrabold text-indigo-900 mt-1">--</div>
+                </div>
+            </div>
+
+            <!-- BMI Calculator Container -->
+            <div id="calc-bmi-container" class="calc-view hidden space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1">Height (cm)</label>
+                        <input type="number" id="bmi-height" placeholder="e.g. 175" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1">Weight (kg)</label>
+                        <input type="number" id="bmi-weight" placeholder="e.g. 70" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                    </div>
+                </div>
+                <button onclick="calculateBMI()" class="w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl shadow-md transition-colors">Calculate BMI</button>
+                <div id="bmi-result" class="p-4 bg-indigo-50/60 border border-indigo-100 rounded-2xl hidden text-center">
+                    <div class="text-xs text-indigo-600 font-semibold uppercase tracking-wider">Your Body Mass Index</div>
+                    <div id="bmi-score" class="text-3xl font-extrabold text-indigo-900 mt-1">--</div>
+                    <div id="bmi-status" class="text-sm font-semibold text-slate-700 mt-1">--</div>
+                </div>
+            </div>
+
+            <!-- Percentage Calculator Container -->
+            <div id="calc-percentage-container" class="calc-view hidden space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1">Percentage (%)</label>
+                        <input type="number" id="perc-rate" placeholder="e.g. 15" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1">Total Amount</label>
+                        <input type="number" id="perc-total" placeholder="e.g. 250" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                    </div>
+                </div>
+                <button onclick="calculatePercentage()" class="w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl shadow-md transition-colors">Calculate Value</button>
+                <div id="perc-result" class="p-4 bg-indigo-50/60 border border-indigo-100 rounded-2xl hidden text-center">
+                    <div class="text-xs text-indigo-600 font-semibold uppercase tracking-wider">Resulting Value</div>
+                    <div id="perc-value" class="text-3xl font-extrabold text-indigo-900 mt-1">--</div>
+                </div>
+            </div>
+
+            <!-- SIP Calculator Container -->
+            <div id="calc-sip-container" class="calc-view hidden space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1">Monthly Investment ($)</label>
+                        <input type="number" id="sip-monthly" placeholder="500" class="w-full px-3 py-2.5 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1">Expected Rate (% p.a)</label>
+                        <input type="number" id="sip-rate" placeholder="12" class="w-full px-3 py-2.5 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1">Time Period (Years)</label>
+                        <input type="number" id="sip-years" placeholder="10" class="w-full px-3 py-2.5 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                    </div>
+                </div>
+                <button onclick="calculateSIP()" class="w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl shadow-md transition-colors">Calculate Returns</button>
+                <div id="sip-result" class="p-4 bg-indigo-50/60 border border-indigo-100 rounded-2xl hidden">
+                    <div class="grid grid-cols-3 gap-2 text-center">
+                        <div>
+                            <div class="text-[11px] text-slate-500 font-medium">Invested</div>
+                            <div id="sip-invested" class="text-sm font-bold text-slate-800">$0</div>
+                        </div>
+                        <div>
+                            <div class="text-[11px] text-slate-500 font-medium">Est. Returns</div>
+                            <div id="sip-returns" class="text-sm font-bold text-emerald-600">$0</div>
+                        </div>
+                        <div>
+                            <div class="text-[11px] text-slate-500 font-medium">Total Value</div>
+                            <div id="sip-total" class="text-sm font-bold text-indigo-700">$0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Length Converter Container -->
+            <div id="calc-length-container" class="calc-view hidden space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1">Value</label>
+                        <input type="number" id="len-value" placeholder="1" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1">From Unit</label>
+                        <select id="len-from" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                            <option value="m">Meters (m)</option>
+                            <option value="km">Kilometers (km)</option>
+                            <option value="ft">Feet (ft)</option>
+                            <option value="mi">Miles (mi)</option>
+                            <option value="in">Inches (in)</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-600 mb-1">To Unit</label>
+                    <select id="len-to" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                        <option value="ft">Feet (ft)</option>
+                        <option value="m">Meters (m)</option>
+                        <option value="km">Kilometers (km)</option>
+                        <option value="mi">Miles (mi)</option>
+                        <option value="in">Inches (in)</option>
+                    </select>
+                </div>
+                <button onclick="convertLength()" class="w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl shadow-md transition-colors">Convert Units</button>
+                <div id="len-result" class="p-4 bg-indigo-50/60 border border-indigo-100 rounded-2xl hidden text-center">
+                    <div class="text-xs text-indigo-600 font-semibold uppercase tracking-wider">Converted Measurement</div>
+                    <div id="len-converted" class="text-2xl font-extrabold text-indigo-900 mt-1">--</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Multi-column Footer -->
+<footer class="bg-slate-900 text-slate-400 text-sm border-t border-slate-800 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <!-- Col 1: About -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2 text-white font-bold text-lg">
+            <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
+              <i class="fa-solid fa-calculator"></i>
+            </div>
+            <span>Calculator<span class="text-indigo-400">-Pro</span></span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Calculator Pro provides free, fast, and clinically accurate online tools for health, financial, mathematical, and everyday conversion needs.
+          </p>
+          <div class="text-xs text-slate-500">
+            &copy; <span id="current-year">2026</span> Calculator Pro. All rights reserved.
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Quick Links</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Unit Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Length Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Weight Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Temperature Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Volume & Area Converter</a></li>
+          </ul>
+        </div>
+        <!-- Column 3: Tools & Resources -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Calculators</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="age-calculator.html" class="hover:text-white transition-colors">Age Calculator</a></li>
+            <li><a href="time-calculator.html" class="hover:text-white transition-colors">Time Calculator</a></li>
+            <li><a href="sip-calculator.html" class="hover:text-white transition-colors">SIP Financial Calculator</a></li>
+            <li><a href="bmi-calculator.html" class="hover:text-white transition-colors">BMI Health Calculator</a></li>
+            <li><a href="percentage-calculator.html" class="hover:text-white transition-colors">Percentage Calculator</a></li>
+          </ul>
+        </div>
+
+         <!-- Column 4: Legal & Contact -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Legal & Info</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Editorial Guidelines</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+<script>
+	<!-- Inline JavaScript for Toggle -->
+  
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('calc-mobile-menu-btn');
+      const menu = document.getElementById('calc-mobile-menu');
+      const menuIcon = document.getElementById('calc-menu-icon');
+      const closeIcon = document.getElementById('calc-close-icon');
+
+      if (btn && menu) {
+        btn.addEventListener('click', () => {
+          const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', !isExpanded);
+          menu.classList.toggle('hidden');
+          menuIcon.classList.toggle('hidden');
+          closeIcon.classList.toggle('hidden');
+        });
+      }
+    });
+  
+    // FAQ Accordion Logic
+    document.querySelectorAll('.faq-toggle').forEach(button => {
+        button.addEventListener('click', () => {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            const isOpen = content.classList.contains('open');
+
+            // Close all items
+            document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
+            document.querySelectorAll('.faq-toggle i').forEach(i => i.style.transform = 'rotate(0deg)');
+
+            // Toggle clicked item
+            if (!isOpen) {
+                content.classList.add('open');
+                icon.style.transform = 'rotate(180deg)';
+            }
+        });
+    });
+
+    // Real-Time Search / Filter Logic
+    const searchInput = document.getElementById('tool-search-input');
+    const clearBtn = document.getElementById('search-clear-btn');
+    const resultsCounter = document.getElementById('search-results-counter');
+    const categoryCards = document.querySelectorAll('.category-card');
+
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase().trim();
+            let visibleTools = 0;
+
+            if (term.length > 0) {
+                clearBtn.classList.remove('hidden');
+            } else {
+                clearBtn.classList.add('hidden');
+            }
+
+            categoryCards.forEach(card => {
+                const toolItems = card.querySelectorAll('.tool-item');
+                let cardHasMatch = false;
+
+                toolItems.forEach(item => {
+                    const text = item.textContent.toLowerCase();
+                    if (text.includes(term)) {
+                        item.style.display = '';
+                        cardHasMatch = true;
+                        visibleTools++;
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+
+                if (cardHasMatch) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            if (term === '') {
+                resultsCounter.textContent = 'Showing all categories';
+            } else {
+                resultsCounter.textContent = `Found ${visibleTools} matching calculator(s)`;
+            }
+        });
+
+        clearBtn.addEventListener('click', () => {
+            searchInput.value = '';
+            searchInput.dispatchEvent(new Event('input'));
+            searchInput.focus();
+        });
+    }
+
+    // Modal Manager
+    const modal = document.getElementById('calc-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalIcon = document.getElementById('modal-icon');
+
+    function openCalculator(type) {
+        document.querySelectorAll('.calc-view').forEach(v => v.classList.add('hidden'));
+
+        if (type === 'age') {
+            modalTitle.textContent = 'Age Calculator';
+            modalIcon.className = 'fa-solid fa-cake-candles';
+            document.getElementById('calc-age-container').classList.remove('hidden');
+            // Set default date of birth to 2000-01-01 and target to today
+            document.getElementById('age-dob').value = '2000-01-01';
+            document.getElementById('age-target').value = new Date().toISOString().split('T')[0];
+        } else if (type === 'bmi') {
+            modalTitle.textContent = 'BMI Calculator';
+            modalIcon.className = 'fa-solid fa-heart-pulse';
+            document.getElementById('calc-bmi-container').classList.remove('hidden');
+        } else if (type === 'percentage') {
+            modalTitle.textContent = 'Percentage Calculator';
+            modalIcon.className = 'fa-solid fa-percent';
+            document.getElementById('calc-percentage-container').classList.remove('hidden');
+        } else if (type === 'sip') {
+            modalTitle.textContent = 'SIP Return Calculator';
+            modalIcon.className = 'fa-solid fa-chart-line';
+            document.getElementById('calc-sip-container').classList.remove('hidden');
+        } else if (type === 'length') {
+            modalTitle.textContent = 'Length Converter';
+            modalIcon.className = 'fa-solid fa-ruler-combined';
+            document.getElementById('calc-length-container').classList.remove('hidden');
+        }
+
+        modal.classList.remove('hidden');
+    }
+
+    function closeModal() {
+        modal.classList.add('hidden');
+    }
+
+    // Age Calculation Function
+    function calculateAge() {
+        const dobVal = document.getElementById('age-dob').value;
+        const targetVal = document.getElementById('age-target').value;
+
+        if (!dobVal || !targetVal) return;
+
+        const dob = new Date(dobVal);
+        const target = new Date(targetVal);
+
+        let years = target.getFullYear() - dob.getFullYear();
+        let months = target.getMonth() - dob.getMonth();
+        let days = target.getDate() - dob.getDate();
+
+        if (days < 0) {
+            months--;
+            days += new Date(target.getFullYear(), target.getMonth(), 0).getDate();
+        }
+        if (months < 0) {
+            years--;
+            months += 12;
+        }
+
+        const resultBox = document.getElementById('age-result');
+        const resultText = document.getElementById('age-result-text');
+        resultText.textContent = `${years} Years, ${months} Months, ${days} Days`;
+        resultBox.classList.remove('hidden');
+    }
+
+    // BMI Calculation Function
+    function calculateBMI() {
+        const height = parseFloat(document.getElementById('bmi-height').value) / 100;
+        const weight = parseFloat(document.getElementById('bmi-weight').value);
+
+        if (!height || !weight || height <= 0 || weight <= 0) return;
+
+        const bmi = (weight / (height * height)).toFixed(1);
+        let status = '';
+
+        if (bmi < 18.5) status = 'Underweight';
+        else if (bmi < 24.9) status = 'Normal Weight';
+        else if (bmi < 29.9) status = 'Overweight';
+        else status = 'Obese';
+
+        document.getElementById('bmi-score').textContent = bmi;
+        document.getElementById('bmi-status').textContent = status;
+        document.getElementById('bmi-result').classList.remove('hidden');
+    }
+
+    // Percentage Calculation Function
+    function calculatePercentage() {
+        const rate = parseFloat(document.getElementById('perc-rate').value);
+        const total = parseFloat(document.getElementById('perc-total').value);
+
+        if (isNaN(rate) || isNaN(total)) return;
+
+        const val = ((rate / 100) * total).toFixed(2);
+        document.getElementById('perc-value').textContent = val;
+        document.getElementById('perc-result').classList.remove('hidden');
+    }
+
+    // SIP Calculation Function
+    function calculateSIP() {
+        const p = parseFloat(document.getElementById('sip-monthly').value) || 0;
+        const i = (parseFloat(document.getElementById('sip-rate').value) || 0) / 12 / 100;
+        const n = (parseFloat(document.getElementById('sip-years').value) || 0) * 12;
+
+        if (p <= 0 || i <= 0 || n <= 0) return;
+
+        const invested = p * n;
+        const totalValue = p * ((Math.pow(1 + i, n) - 1) / i) * (1 + i);
+        const returns = totalValue - invested;
+
+        document.getElementById('sip-invested').textContent = '$' + Math.round(invested).toLocaleString();
+        document.getElementById('sip-returns').textContent = '$' + Math.round(returns).toLocaleString();
+        document.getElementById('sip-total').textContent = '$' + Math.round(totalValue).toLocaleString();
+        document.getElementById('sip-result').classList.remove('hidden');
+    }
+
+    // Length Conversion Function
+    function convertLength() {
+        const val = parseFloat(document.getElementById('len-value').value);
+        const from = document.getElementById('len-from').value;
+        const to = document.getElementById('len-to').value;
+
+        if (isNaN(val)) return;
+
+        // Base conversion to meters
+        const toMeters = {
+            m: 1,
+            km: 1000,
+            ft: 0.3048,
+            mi: 1609.34,
+            in: 0.0254
+        };
+
+        const inMeters = val * toMeters[from];
+        const converted = (inMeters / toMeters[to]).toFixed(4);
+
+        document.getElementById('len-converted').textContent = `${converted} ${to}`;
+        document.getElementById('len-result').classList.remove('hidden');
+    }
+</script>
+</body>
+</html>
