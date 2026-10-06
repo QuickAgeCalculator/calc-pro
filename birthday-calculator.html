@@ -22,7 +22,7 @@
 
   <!-- Fonts & Icons -->
   
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
 
   <!-- Tailwind CSS CDN -->
   
@@ -128,7 +128,7 @@
       <!-- Brand Logo & Name -->
       <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
         <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
-          <i class="fa-solid fa-calculator text-lg"></i>
+          <span class="icon-[fa6-solid--calculator] text-lg"></span>
         </div>
         <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
           Calculator<span class="text-indigo-600">-Pro</span>
@@ -336,7 +336,7 @@
         <!-- Hero Header -->
         <div class="text-center max-w-3xl mx-auto mb-10">
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-100/80 border border-indigo-200/60 text-indigo-700 text-xs sm:text-sm font-semibold mb-4 shadow-sm">
-            <i class="fa-solid fa-cake-candles text-indigo-600"></i> Accurate & Free Age Tool
+            <span class="icon-[fa6-solid--cake-candles] text-indigo-600"></span> Accurate & Free Age Tool
           </div>
           <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
             Birthday Calculator – <span class="bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">Exact Age & Fun Facts</span>
@@ -355,7 +355,7 @@
               <!-- Input: Date of Birth -->
               <div class="space-y-2">
                 <label for="dob" class="block text-sm font-semibold text-slate-800 flex items-center justify-between">
-                  <span><i class="fa-solid fa-calendar-day text-indigo-600 mr-1.5"></i> Date of Birth <span class="text-rose-500">*</span></span>
+                  <span><span class="icon-[fa6-solid--calendar-day] text-indigo-600 mr-1.5"></span> Date of Birth <span class="text-rose-500">*</span></span>
                   <span class="text-xs text-slate-400 font-normal">Required</span>
                 </label>
                 <div class="relative">
@@ -376,7 +376,7 @@
               <div class="space-y-4">
                 <div>
                   <label for="as-of-date" class="block text-sm font-semibold text-slate-800 mb-2">
-                    <i class="fa-solid fa-clock text-indigo-600 mr-1.5"></i> As of Date <span class="text-xs font-normal text-slate-400">(Defaults to Today)</span>
+                    <span class="icon-[fa6-solid--clock] text-indigo-600 mr-1.5"></span> As of Date <span class="text-xs font-normal text-slate-400">(Defaults to Today)</span>
                   </label>
                   <input type="date" id="as-of-date" class="w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50/50 text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 font-medium transition-all text-base shadow-sm">
                 </div>
@@ -394,17 +394,17 @@
 
             <!-- Validation Error Alert -->
             <div id="error-alert" class="hidden p-4 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-sm flex items-center gap-3">
-              <i class="fa-solid fa-circle-exclamation text-rose-500 text-lg"></i>
+              <span class="icon-[fa6-solid--circle-exclamation] text-rose-500 text-lg"></span>
               <span id="error-message">Please select a valid date of birth that is earlier than the 'As of Date'.</span>
             </div>
 
             <!-- Action Buttons -->
             <div class="flex flex-col sm:flex-row items-center gap-3 pt-2">
               <button type="submit" class="w-full sm:w-auto flex-1 bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl shadow-lg shadow-indigo-200 hover:shadow-indigo-300 transition-all duration-200 transform hover:-translate-y-0.5 flex items-center justify-center gap-2 text-base">
-                <i class="fa-solid fa-wand-magic-sparkles"></i> Calculate Birthday Stats
+                <span class="icon-[fa6-solid--wand-magic-sparkles]"></span> Calculate Birthday Stats
               </button>
               <button type="button" onclick="resetCalculator()" class="w-full sm:w-auto px-6 py-4 rounded-xl border border-slate-200 text-slate-600 font-semibold hover:bg-slate-100 hover:text-slate-800 transition-colors duration-150 flex items-center justify-center gap-2 text-base">
-                <i class="fa-solid fa-rotate-left"></i> Reset
+                <span class="icon-[fa6-solid--rotate-left]"></span> Reset
               </button>
             </div>
 
@@ -478,7 +478,7 @@
                 <p id="next-bday-date-str" class="text-slate-500 text-sm">Your next birthday will be on ...</p>
               </div>
               <div class="bg-indigo-50 text-indigo-700 font-semibold px-4 py-2 rounded-xl text-sm flex items-center gap-2">
-                <i class="fa-solid fa-gift"></i> <span id="next-bday-weekday">Friday</span>
+                <span class="icon-[fa6-solid--gift]"></span> <span id="next-bday-weekday">Friday</span>
               </div>
             </div>
 
@@ -524,7 +524,7 @@
                 <div class="flex items-center justify-between mb-4">
                   <div class="flex items-center gap-3">
                     <div id="zodiac-icon-bg" class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-2xl font-bold">
-                      <i class="fa-solid fa-star"></i>
+                      <span class="icon-[fa6-solid--star]"></span>
                     </div>
                     <div>
                       <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400">Sun Sign</h4>
@@ -548,7 +548,7 @@
               <div>
                 <div class="flex items-center gap-3 mb-4">
                   <div class="w-12 h-12 rounded-2xl bg-rose-100 text-rose-700 flex items-center justify-center text-xl">
-                    <i class="fa-solid fa-dragon"></i>
+                    <span class="icon-[fa6-solid--dragon]"></span>
                   </div>
                   <div>
                     <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400">Chinese Zodiac & Astrological Profile</h4>
@@ -582,55 +582,55 @@
           <!-- Life Statistics Grid -->
           <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-md">
             <h3 class="text-xl sm:text-2xl font-bold text-slate-800 mb-6 flex items-center gap-2">
-              <i class="fa-solid fa-heart-pulse text-rose-500"></i> Amazing Life Statistics
+              <span class="icon-[fa6-solid--heart-pulse] text-rose-500"></span> Amazing Life Statistics
             </h3>
 
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
               
               <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                <i class="fa-solid fa-heart text-rose-500 text-lg mb-2"></i>
+                <span class="icon-[fa6-solid--heart] text-rose-500 text-lg mb-2"></span>
                 <div id="stat-heartbeats" class="text-xl sm:text-2xl font-bold text-slate-800 font-mono">0</div>
                 <div class="text-xs text-slate-500 font-medium">Heartbeats (~72 bpm)</div>
               </div>
 
               <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                <i class="fa-solid fa-bed text-indigo-500 text-lg mb-2"></i>
+                <span class="icon-[fa6-solid--bed] text-indigo-500 text-lg mb-2"></span>
                 <div id="stat-sleep" class="text-xl sm:text-2xl font-bold text-slate-800 font-mono">0</div>
                 <div class="text-xs text-slate-500 font-medium">Years Slept (~8 hrs/day)</div>
               </div>
 
               <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                <i class="fa-solid fa-moon text-amber-500 text-lg mb-2"></i>
+                <span class="icon-[fa6-solid--moon] text-amber-500 text-lg mb-2"></span>
                 <div id="stat-moons" class="text-xl sm:text-2xl font-bold text-slate-800 font-mono">0</div>
                 <div class="text-xs text-slate-500 font-medium">Full Moons Witnessed</div>
               </div>
 
               <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                <i class="fa-solid fa-wind text-cyan-500 text-lg mb-2"></i>
+                <span class="icon-[fa6-solid--wind] text-cyan-500 text-lg mb-2"></span>
                 <div id="stat-breath" class="text-xl sm:text-2xl font-bold text-slate-800 font-mono">0</div>
                 <div class="text-xs text-slate-500 font-medium">Breathing Cycles</div>
               </div>
 
               <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                <i class="fa-solid fa-earth-americas text-emerald-500 text-lg mb-2"></i>
+                <span class="icon-[fa6-solid--earth-americas] text-emerald-500 text-lg mb-2"></span>
                 <div id="stat-revolutions" class="text-xl sm:text-2xl font-bold text-slate-800 font-mono">0</div>
                 <div class="text-xs text-slate-500 font-medium">Earth Orbit Revolutions</div>
               </div>
 
               <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                <i class="fa-solid fa-calendar-days text-blue-500 text-lg mb-2"></i>
+                <span class="icon-[fa6-solid--calendar-days] text-blue-500 text-lg mb-2"></span>
                 <div id="stat-total-days" class="text-xl sm:text-2xl font-bold text-slate-800 font-mono">0</div>
                 <div class="text-xs text-slate-500 font-medium">Total Days Lived</div>
               </div>
 
               <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                <i class="fa-solid fa-clock text-purple-500 text-lg mb-2"></i>
+                <span class="icon-[fa6-solid--clock] text-purple-500 text-lg mb-2"></span>
                 <div id="stat-total-weeks" class="text-xl sm:text-2xl font-bold text-slate-800 font-mono">0</div>
                 <div class="text-xs text-slate-500 font-medium">Total Weeks Lived</div>
               </div>
 
               <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                <i class="fa-solid fa-face-smile text-amber-500 text-lg mb-2"></i>
+                <span class="icon-[fa6-solid--face-smile] text-amber-500 text-lg mb-2"></span>
                 <div id="stat-smiles" class="text-xl sm:text-2xl font-bold text-slate-800 font-mono">0</div>
                 <div class="text-xs text-slate-500 font-medium">Approximate Smiles</div>
               </div>
@@ -641,7 +641,7 @@
           <!-- Planetary Age Matrix -->
           <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-md">
             <h3 class="text-xl sm:text-2xl font-bold text-slate-800 mb-2 flex items-center gap-2">
-              <i class="fa-solid fa-globe text-indigo-600"></i> Your Age on Other Planets
+              <span class="icon-[fa6-solid--globe] text-indigo-600"></span> Your Age on Other Planets
             </h3>
             <p class="text-slate-500 text-sm mb-6">Due to varying solar orbital speeds, your age in planetary years differs across the solar system!</p>
 
@@ -701,7 +701,7 @@
           <!-- Future Milestone Countdown Table -->
           <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-md">
             <h3 class="text-xl sm:text-2xl font-bold text-slate-800 mb-4 flex items-center gap-2">
-              <i class="fa-solid fa-flag-checkered text-indigo-600"></i> Next Major Life Milestones
+              <span class="icon-[fa6-solid--flag-checkered] text-indigo-600"></span> Next Major Life Milestones
             </h3>
 
             <div class="overflow-x-auto">
@@ -728,10 +728,10 @@
             </div>
             <div class="flex items-center gap-3 w-full sm:w-auto">
               <button type="button" onclick="shareResults()" class="flex-1 sm:flex-none px-5 py-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 hover:text-indigo-600 hover:border-indigo-300 font-semibold shadow-sm transition-colors flex items-center justify-center gap-2 text-sm">
-                <i class="fa-solid fa-share-nodes"></i> Share Link / Stats
+                <span class="icon-[fa6-solid--share-nodes]"></span> Share Link / Stats
               </button>
               <button type="button" onclick="window.print()" class="flex-1 sm:flex-none px-5 py-2.5 rounded-xl bg-indigo-600 text-white hover:bg-indigo-700 font-semibold shadow-sm transition-colors flex items-center justify-center gap-2 text-sm">
-                <i class="fa-solid fa-print"></i> Print / Save PDF
+                <span class="icon-[fa6-solid--print]"></span> Print / Save PDF
               </button>
             </div>
           </div>
@@ -793,37 +793,37 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           
           <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm">
-            <i class="fa-solid fa-clock text-2xl text-indigo-600 mb-3 block"></i>
+            <span class="icon-[fa6-solid--clock] text-2xl text-indigo-600 mb-3 block"></span>
             <h3 class="text-lg font-bold text-slate-800 mb-2">Exact Chronological Age</h3>
             <p class="text-sm text-slate-600 leading-relaxed">Displays your exact age split cleanly into years, months, days, total hours, minutes, and live ticking seconds.</p>
           </div>
 
           <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm">
-            <i class="fa-solid fa-hourglass-half text-2xl text-amber-500 mb-3 block"></i>
+            <span class="icon-[fa6-solid--hourglass-half] text-2xl text-amber-500 mb-3 block"></span>
             <h3 class="text-lg font-bold text-slate-800 mb-2">Next Birthday Countdown</h3>
             <p class="text-sm text-slate-600 leading-relaxed">Know precisely how many days, hours, and minutes remain until your next birthday with an interactive progress bar.</p>
           </div>
 
           <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm">
-            <i class="fa-solid fa-wand-magic-sparkles text-2xl text-purple-600 mb-3 block"></i>
+            <span class="icon-[fa6-solid--wand-magic-sparkles] text-2xl text-purple-600 mb-3 block"></span>
             <h3 class="text-lg font-bold text-slate-800 mb-2">Zodiac & Birth Details</h3>
             <p class="text-sm text-slate-600 leading-relaxed">Discover your Western Sun Sign, Chinese Zodiac animal, birthstone, birth flower, and lucky birth colors.</p>
           </div>
 
           <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm">
-            <i class="fa-solid fa-heart-pulse text-2xl text-rose-500 mb-3 block"></i>
+            <span class="icon-[fa6-solid--heart-pulse] text-2xl text-rose-500 mb-3 block"></span>
             <h3 class="text-lg font-bold text-slate-800 mb-2">Life Stats & Heartbeats</h3>
             <p class="text-sm text-slate-600 leading-relaxed">Fun estimated statistics including total heartbeats, breathing cycles, hours slept, and full moons seen.</p>
           </div>
 
           <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm">
-            <i class="fa-solid fa-planet-ringed text-2xl text-blue-600 mb-3 block"></i>
+            <span class="icon-[lucide--orbit] text-2xl text-blue-600 mb-3 block"></span>
             <h3 class="text-lg font-bold text-slate-800 mb-2">Planetary Ages</h3>
             <p class="text-sm text-slate-600 leading-relaxed">Ever wondered how old you are on Mars or Jupiter? Compare your age across all 8 planets in our solar system.</p>
           </div>
 
           <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm">
-            <i class="fa-solid fa-flag text-2xl text-emerald-600 mb-3 block"></i>
+            <span class="icon-[fa6-solid--flag] text-2xl text-emerald-600 mb-3 block"></span>
             <h3 class="text-lg font-bold text-slate-800 mb-2">Milestone Tracking</h3>
             <p class="text-sm text-slate-600 leading-relaxed">Track upcoming landmark birthdays (e.g., 18, 21, 30, 50, 100) with exact future dates and countdowns.</p>
           </div>
@@ -865,7 +865,7 @@
           
           <a href="#" class="p-6 rounded-2xl bg-white border border-slate-200 hover:border-indigo-300 hover:shadow-md transition-all group">
             <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
-              <i class="fa-solid fa-user-clock"></i>
+              <span class="icon-[fa6-solid--user-clock]"></span>
             </div>
             <h3 class="text-base font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Age Calculator</h3>
             <p class="text-xs text-slate-500 mt-1">Calculate exact age between any two specific dates in history.</p>
@@ -873,7 +873,7 @@
 
           <a href="#" class="p-6 rounded-2xl bg-white border border-slate-200 hover:border-indigo-300 hover:shadow-md transition-all group">
             <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
-              <i class="fa-solid fa-calendar-week"></i>
+              <span class="icon-[fa6-solid--calendar-week]"></span>
             </div>
             <h3 class="text-base font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Date Difference Calculator</h3>
             <p class="text-xs text-slate-500 mt-1">Find total days, weeks, or business days between two dates.</p>
@@ -881,7 +881,7 @@
 
           <a href="#" class="p-6 rounded-2xl bg-white border border-slate-200 hover:border-indigo-300 hover:shadow-md transition-all group">
             <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
-              <i class="fa-solid fa-sun"></i>
+              <span class="icon-[fa6-solid--sun]"></span>
             </div>
             <h3 class="text-base font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Zodiac Sign Finder</h3>
             <p class="text-xs text-slate-500 mt-1">Discover astrology details, elements, and horoscope compatibilities.</p>
@@ -889,7 +889,7 @@
 
           <a href="#" class="p-6 rounded-2xl bg-white border border-slate-200 hover:border-indigo-300 hover:shadow-md transition-all group">
             <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
-              <i class="fa-solid fa-hourglass"></i>
+              <span class="icon-[fa6-solid--hourglass]"></span>
             </div>
             <h3 class="text-base font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Time Calculator</h3>
             <p class="text-xs text-slate-500 mt-1">Add or subtract hours, minutes, and seconds for time sheets.</p>
@@ -897,7 +897,7 @@
 
           <a href="#" class="p-6 rounded-2xl bg-white border border-slate-200 hover:border-indigo-300 hover:shadow-md transition-all group">
             <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
-              <i class="fa-solid fa-heart-pulse"></i>
+              <span class="icon-[fa6-solid--heart-pulse]"></span>
             </div>
             <h3 class="text-base font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">BMI Calculator</h3>
             <p class="text-xs text-slate-500 mt-1">Calculate Body Mass Index and ideal weight ranges.</p>
@@ -905,7 +905,7 @@
 
           <a href="#" class="p-6 rounded-2xl bg-white border border-slate-200 hover:border-indigo-300 hover:shadow-md transition-all group">
             <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
-              <i class="fa-solid fa-chart-line"></i>
+              <span class="icon-[fa6-solid--chart-line]"></span>
             </div>
             <h3 class="text-base font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">SIP Calculator</h3>
             <p class="text-xs text-slate-500 mt-1">Estimate returns on mutual fund Systematic Investment Plans.</p>
@@ -931,7 +931,7 @@
           <div class="border border-slate-200 rounded-2xl overflow-hidden">
             <button type="button" onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50 transition-colors focus:outline-none">
               <span>How do I calculate my exact age?</span>
-              <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+              <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
             </button>
             <div class="accordion-content px-6 text-slate-600 text-sm leading-relaxed">
               <div class="py-4 border-t border-slate-100">
@@ -943,7 +943,7 @@
           <div class="border border-slate-200 rounded-2xl overflow-hidden">
             <button type="button" onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50 transition-colors focus:outline-none">
               <span>What if I was born on February 29 during a leap year?</span>
-              <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+              <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
             </button>
             <div class="accordion-content px-6 text-slate-600 text-sm leading-relaxed">
               <div class="py-4 border-t border-slate-100">
@@ -955,7 +955,7 @@
           <div class="border border-slate-200 rounded-2xl overflow-hidden">
             <button type="button" onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50 transition-colors focus:outline-none">
               <span>How many days until my next birthday?</span>
-              <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+              <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
             </button>
             <div class="accordion-content px-6 text-slate-600 text-sm leading-relaxed">
               <div class="py-4 border-t border-slate-100">
@@ -967,7 +967,7 @@
           <div class="border border-slate-200 rounded-2xl overflow-hidden">
             <button type="button" onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50 transition-colors focus:outline-none">
               <span>What is my zodiac sign based on my birthday?</span>
-              <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+              <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
             </button>
             <div class="accordion-content px-6 text-slate-600 text-sm leading-relaxed">
               <div class="py-4 border-t border-slate-100">
@@ -979,7 +979,7 @@
           <div class="border border-slate-200 rounded-2xl overflow-hidden">
             <button type="button" onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50 transition-colors focus:outline-none">
               <span>Can I check my age on a future or past date?</span>
-              <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+              <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
             </button>
             <div class="accordion-content px-6 text-slate-600 text-sm leading-relaxed">
               <div class="py-4 border-t border-slate-100">
@@ -991,7 +991,7 @@
           <div class="border border-slate-200 rounded-2xl overflow-hidden">
             <button type="button" onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50 transition-colors focus:outline-none">
               <span>What is the difference between an age calculator and a birthday calculator?</span>
-              <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+              <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
             </button>
             <div class="accordion-content px-6 text-slate-600 text-sm leading-relaxed">
               <div class="py-4 border-t border-slate-100">
@@ -1003,7 +1003,7 @@
           <div class="border border-slate-200 rounded-2xl overflow-hidden">
             <button type="button" onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50 transition-colors focus:outline-none">
               <span>How accurate is this birthday calculator?</span>
-              <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+              <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
             </button>
             <div class="accordion-content px-6 text-slate-600 text-sm leading-relaxed">
               <div class="py-4 border-t border-slate-100">
@@ -1015,7 +1015,7 @@
           <div class="border border-slate-200 rounded-2xl overflow-hidden">
             <button type="button" onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50 transition-colors focus:outline-none">
               <span>What day of the week was I born?</span>
-              <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+              <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
             </button>
             <div class="accordion-content px-6 text-slate-600 text-sm leading-relaxed">
               <div class="py-4 border-t border-slate-100">
@@ -1027,7 +1027,7 @@
           <div class="border border-slate-200 rounded-2xl overflow-hidden">
             <button type="button" onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50 transition-colors focus:outline-none">
               <span>How does planetary age calculation work?</span>
-              <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+              <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
             </button>
             <div class="accordion-content px-6 text-slate-600 text-sm leading-relaxed">
               <div class="py-4 border-t border-slate-100">
@@ -1039,7 +1039,7 @@
           <div class="border border-slate-200 rounded-2xl overflow-hidden">
             <button type="button" onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50 transition-colors focus:outline-none">
               <span>Is my birth date data stored on your server?</span>
-              <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+              <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
             </button>
             <div class="accordion-content px-6 text-slate-600 text-sm leading-relaxed">
               <div class="py-4 border-t border-slate-100">
@@ -1064,7 +1064,7 @@
         <div class="space-y-4">
           <div class="flex items-center gap-2 text-white font-bold text-lg">
             <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
-              <i class="fa-solid fa-calculator"></i>
+              <span class="icon-[fa6-solid--calculator]"></span>
             </div>
             <span>Calculator<span class="text-indigo-400">-Pro</span></span>
           </div>

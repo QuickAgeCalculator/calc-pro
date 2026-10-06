@@ -24,7 +24,6 @@
   <meta property="twitter:image" content="https://placehold.co/1200x630/2563eb/ffffff?text=Percentage+Increase+%26+Decrease+Calculator">
 
   <!-- FontAwesome & Fonts -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
 
   <!-- Tailwind CSS CDN & Custom Config -->
@@ -143,7 +142,7 @@
       <!-- Brand Logo & Name -->
       <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
         <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
-          <i class="fa-solid fa-calculator text-lg"></i>
+          <span class="icon-[fa6-solid--calculator] text-lg"></span>
         </div>
         <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
           Calculator<span class="text-indigo-600">-Pro</span>
@@ -340,7 +339,7 @@
   <!-- Hero Section -->
   <section class="text-center max-w-4xl mx-auto mb-10">
     <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-50 border border-brand-200 text-brand-700 text-xs font-semibold uppercase tracking-wide mb-4 animate-pulse-glow">
-      <i class="fa-solid fa-bolt text-brand-500"></i> Free &amp; Instant Financial Tool
+      <span class="icon-[fa6-solid--bolt] text-brand-500"></span> Free &amp; Instant Financial Tool
     </div>
     <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
       Percentage Increase &amp; Decrease Calculator <span class="text-brand-600">+ Discount Calculator</span>
@@ -356,10 +355,10 @@
     <!-- Outer Tabs -->
     <div class="flex border-b border-slate-200 bg-slate-50/80 p-1.5 gap-1.5 sm:gap-2">
       <button id="tab-pct-btn" onclick="switchMainTab('pct')" class="flex-1 py-3 px-4 rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center gap-2 transition-all duration-200 bg-white text-brand-600 shadow-sm border border-slate-200/60">
-        <i class="fa-solid fa-chart-line"></i> Percentage Increase / Decrease Calculator
+        <span class="icon-[fa6-solid--chart-line]"></span> Percentage Increase / Decrease Calculator
       </button>
       <button id="tab-disc-btn" onclick="switchMainTab('disc')" class="flex-1 py-3 px-4 rounded-xl text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-slate-100/60">
-        <i class="fa-solid fa-tags"></i> Discount Calculator
+        <span class="icon-[fa6-solid--tags]"></span> Discount Calculator
       </button>
     </div>
 
@@ -386,14 +385,14 @@
           <label for="pct-old-val" class="block text-sm font-medium text-slate-700 mb-1">Starting / Original Value</label>
           <div class="relative">
             <input type="number" id="pct-old-val" placeholder="e.g. 100" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-slate-800 transition-all" oninput="calcPctChange()">
-            <span class="absolute right-3 top-2.5 text-slate-400 text-sm"><i class="fa-solid fa-hashtag"></i></span>
+            <span class="absolute right-3 top-2.5 text-slate-400 text-sm"><span class="icon-[fa6-solid--hashtag]"></span></span>
           </div>
         </div>
         <div>
           <label for="pct-new-val" class="block text-sm font-medium text-slate-700 mb-1">Final / New Value</label>
           <div class="relative">
             <input type="number" id="pct-new-val" placeholder="e.g. 150" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-slate-800 transition-all" oninput="calcPctChange()">
-            <span class="absolute right-3 top-2.5 text-slate-400 text-sm"><i class="fa-solid fa-hashtag"></i></span>
+            <span class="absolute right-3 top-2.5 text-slate-400 text-sm"><span class="icon-[fa6-solid--hashtag]"></span></span>
           </div>
         </div>
       </div>
@@ -445,13 +444,13 @@
             <div class="text-3xl sm:text-4xl font-extrabold tracking-tight flex items-center gap-3">
               <span id="pct-primary-result">0%</span>
               <span id="pct-badge" class="text-xs font-bold px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 hidden">
-                <i class="fa-solid fa-arrow-up"></i> Increase
+                <span class="icon-[fa6-solid--arrow-up]"></span> Increase
               </span>
             </div>
             <p id="pct-sub-result" class="text-sm text-slate-300 mt-1">Difference: 0</p>
           </div>
           <button onclick="resetPctCalc()" class="self-start sm:self-auto px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white text-xs font-semibold transition-colors border border-slate-700 flex items-center gap-1.5">
-            <i class="fa-solid fa-rotate-right"></i> Reset
+            <span class="icon-[fa6-solid--rotate-right]"></span> Reset
           </button>
         </div>
 
@@ -535,7 +534,7 @@
             <p id="disc-sub-result" class="text-sm text-slate-300 mt-1">Total Discount Percentage: 0%</p>
           </div>
           <button onclick="resetDiscCalc()" class="self-start sm:self-auto px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white text-xs font-semibold transition-colors border border-slate-700 flex items-center gap-1.5">
-            <i class="fa-solid fa-rotate-right"></i> Reset
+            <span class="icon-[fa6-solid--rotate-right]"></span> Reset
           </button>
         </div>
 
@@ -555,7 +554,7 @@
     <aside class="hidden lg:block lg:col-span-1">
       <div class="sticky top-24 bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm space-y-3">
         <div class="flex items-center gap-2 pb-3 border-b border-slate-100 font-bold text-slate-800 text-sm">
-          <i class="fa-solid fa-list-ul text-brand-600"></i> Table of Contents
+          <span class="icon-[fa6-solid--list-ul] text-brand-600"></span> Table of Contents
         </div>
         <nav class="space-y-2 text-xs font-medium text-slate-600">
           <a href="#how-to-use-pct" class="block hover:text-brand-600 transition-colors">1. Use Percentage Calculator</a>
@@ -577,7 +576,7 @@
       <!-- Section C: How to Use Percentage Calculator -->
       <section id="how-to-use-pct" class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm scroll-mt-24">
         <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-          <i class="fa-solid fa-circle-info text-brand-600"></i> How to Use the Percentage Increase &amp; Decrease Calculator
+          <span class="icon-[fa6-solid--circle-info] text-brand-600"></span> How to Use the Percentage Increase &amp; Decrease Calculator
         </h2>
         <p class="text-slate-600 leading-relaxed mb-4">
           Calculating relative changes between two numerical values is essential for budgeting, stock analysis, business reports, and academic study. Our online <strong>percentage increase calculator</strong> simplifies these multi-step math problems into immediate results:
@@ -593,7 +592,7 @@
       <!-- Section D: Percentage Increase & Decrease Formula -->
       <section id="pct-formula" class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm scroll-mt-24">
         <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-          <i class="fa-solid fa-square-root-variable text-brand-600"></i> Percentage Increase &amp; Decrease Formula
+          <span class="icon-[fa6-solid--square-root-variable] text-brand-600"></span> Percentage Increase &amp; Decrease Formula
         </h2>
         <p class="text-slate-600 leading-relaxed mb-4">
           To measure the proportional shift between an initial value ($V_{old}$) and a final value ($V_{new}$), mathematical formulas evaluate the relative difference against the starting base:
@@ -650,7 +649,7 @@
       <!-- Section E: How to Use Discount Calculator -->
       <section id="how-to-use-disc" class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm scroll-mt-24">
         <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-          <i class="fa-solid fa-basket-shopping text-brand-600"></i> How to Use the Discount Calculator
+          <span class="icon-[fa6-solid--basket-shopping] text-brand-600"></span> How to Use the Discount Calculator
         </h2>
         <p class="text-slate-600 leading-relaxed mb-4">
           Finding exact sale prices while shopping ensures you stay within budget and recognize true savings. Our <strong>discount calculator</strong> handles simple percentage off, reverse price calculations, and complex stacked store coupons:
@@ -666,7 +665,7 @@
       <!-- Section F: Discount Calculator Formula -->
       <section id="disc-formula" class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm scroll-mt-24">
         <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-          <i class="fa-solid fa-percent text-brand-600"></i> Discount Calculator Formula
+          <span class="icon-[fa6-solid--percent] text-brand-600"></span> Discount Calculator Formula
         </h2>
         <p class="text-slate-600 leading-relaxed mb-4">
           Calculating promotional discounts requires determining the exact savings amount subtracted from retail sticker price:
@@ -703,7 +702,7 @@
       <!-- Section G: Real-Life Examples Table -->
       <section id="real-life-examples" class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm scroll-mt-24">
         <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-          <i class="fa-solid fa-briefcase text-brand-600"></i> Real-Life Calculation Examples
+          <span class="icon-[fa6-solid--briefcase] text-brand-600"></span> Real-Life Calculation Examples
         </h2>
         <p class="text-slate-600 leading-relaxed mb-6">
           Here is a breakdown showing how percentage changes and discount calculations apply in common everyday finance, career, and retail scenarios:
@@ -757,7 +756,7 @@
       <!-- Section H: Comparison Table -->
       <section id="comparison-table" class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm scroll-mt-24">
         <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-          <i class="fa-solid fa-code-compare text-brand-600"></i> Difference Between Percentage Increase, Percentage Change &amp; Discount
+          <span class="icon-[fa6-solid--code-compare] text-brand-600"></span> Difference Between Percentage Increase, Percentage Change &amp; Discount
         </h2>
         <p class="text-slate-600 leading-relaxed mb-6">
           While these statistical terms overlap, understanding their distinct applications prevents confusion in financial reporting:
@@ -800,29 +799,29 @@
       <!-- Section I: Common Mistakes -->
       <section id="common-mistakes" class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm scroll-mt-24">
         <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-          <i class="fa-solid fa-triangle-exclamation text-amber-500"></i> Common Mistakes While Calculating Percentage Increase/Decrease &amp; Discounts
+          <span class="icon-[fa6-solid--triangle-exclamation] text-amber-500"></span> Common Mistakes While Calculating Percentage Increase/Decrease &amp; Discounts
         </h2>
         <ul class="space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed">
           <li class="flex items-start gap-3">
-            <span class="p-1 rounded bg-rose-100 text-rose-600 mt-0.5"><i class="fa-solid fa-xmark"></i></span>
+            <span class="p-1 rounded bg-rose-100 text-rose-600 mt-0.5"><span class="icon-[fa6-solid--xmark]"></span></span>
             <div>
               <strong>Using the Wrong Base Value:</strong> Always divide difference by the <em>original starting value</em>, not the final new value. Dividing by the wrong number severely distorts percentage calculations.
             </div>
           </li>
           <li class="flex items-start gap-3">
-            <span class="p-1 rounded bg-rose-100 text-rose-600 mt-0.5"><i class="fa-solid fa-xmark"></i></span>
+            <span class="p-1 rounded bg-rose-100 text-rose-600 mt-0.5"><span class="icon-[fa6-solid--xmark]"></span></span>
             <div>
               <strong>Confusing Percentage Points with Percentage:</strong> Moving interest rates from 4% to 5% is a 1 percentage point increase, but a <strong>25% relative percentage increase</strong>.
             </div>
           </li>
           <li class="flex items-start gap-3">
-            <span class="p-1 rounded bg-rose-100 text-rose-600 mt-0.5"><i class="fa-solid fa-xmark"></i></span>
+            <span class="p-1 rounded bg-rose-100 text-rose-600 mt-0.5"><span class="icon-[fa6-solid--xmark]"></span></span>
             <div>
               <strong>Adding Multiple Discount Coupons Linearly:</strong> Stacking a 20% coupon and a 10% coupon equals 28% total savings, not 30%, because the second discount applies to the already discounted subtotal.
             </div>
           </li>
           <li class="flex items-start gap-3">
-            <span class="p-1 rounded bg-rose-100 text-rose-600 mt-0.5"><i class="fa-solid fa-xmark"></i></span>
+            <span class="p-1 rounded bg-rose-100 text-rose-600 mt-0.5"><span class="icon-[fa6-solid--xmark]"></span></span>
             <div>
               <strong>Assuming Reversibility is Equal:</strong> If a $100 stock drops by 50% to $50, it requires a <strong>100% percentage increase</strong> (not 50%) just to return to its original $100 baseline.
             </div>
@@ -833,7 +832,7 @@
       <!-- Section J: Accordion FAQ Section -->
       <section id="faq-section" class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm scroll-mt-24">
         <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
-          <i class="fa-solid fa-circle-question text-brand-600"></i> Frequently Asked Questions (FAQ)
+          <span class="icon-[fa6-solid--circle-question] text-brand-600"></span> Frequently Asked Questions (FAQ)
         </h2>
 
         <div class="space-y-3">
@@ -842,7 +841,7 @@
           <div class="border border-slate-200 rounded-xl overflow-hidden">
             <button onclick="toggleAccordion('faq1')" class="w-full text-left p-4 bg-slate-50 hover:bg-slate-100 font-semibold text-slate-800 flex items-center justify-between transition-colors text-sm sm:text-base">
               <span>How do I calculate percentage increase?</span>
-              <i id="faq1-icon" class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+              <span id="faq1-icon" class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
             </button>
             <div id="faq1" class="accordion-content">
               <p class="p-4 text-slate-600 text-sm leading-relaxed border-t border-slate-100">
@@ -855,7 +854,7 @@
           <div class="border border-slate-200 rounded-xl overflow-hidden">
             <button onclick="toggleAccordion('faq2')" class="w-full text-left p-4 bg-slate-50 hover:bg-slate-100 font-semibold text-slate-800 flex items-center justify-between transition-colors text-sm sm:text-base">
               <span>How do I calculate percentage decrease?</span>
-              <i id="faq2-icon" class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+              <span id="faq2-icon" class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
             </button>
             <div id="faq2" class="accordion-content">
               <p class="p-4 text-slate-600 text-sm leading-relaxed border-t border-slate-100">
@@ -868,7 +867,7 @@
           <div class="border border-slate-200 rounded-xl overflow-hidden">
             <button onclick="toggleAccordion('faq3')" class="w-full text-left p-4 bg-slate-50 hover:bg-slate-100 font-semibold text-slate-800 flex items-center justify-between transition-colors text-sm sm:text-base">
               <span>What is the formula for discount percentage?</span>
-              <i id="faq3-icon" class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+              <span id="faq3-icon" class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
             </button>
             <div id="faq3" class="accordion-content">
               <p class="p-4 text-slate-600 text-sm leading-relaxed border-t border-slate-100">
@@ -881,7 +880,7 @@
           <div class="border border-slate-200 rounded-xl overflow-hidden">
             <button onclick="toggleAccordion('faq4')" class="w-full text-left p-4 bg-slate-50 hover:bg-slate-100 font-semibold text-slate-800 flex items-center justify-between transition-colors text-sm sm:text-base">
               <span>How to find original price after discount?</span>
-              <i id="faq4-icon" class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+              <span id="faq4-icon" class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
             </button>
             <div id="faq4" class="accordion-content">
               <p class="p-4 text-slate-600 text-sm leading-relaxed border-t border-slate-100">
@@ -894,7 +893,7 @@
           <div class="border border-slate-200 rounded-xl overflow-hidden">
             <button onclick="toggleAccordion('faq5')" class="w-full text-left p-4 bg-slate-50 hover:bg-slate-100 font-semibold text-slate-800 flex items-center justify-between transition-colors text-sm sm:text-base">
               <span>Difference between markup and discount?</span>
-              <i id="faq5-icon" class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+              <span id="faq5-icon" class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
             </button>
             <div id="faq5" class="accordion-content">
               <p class="p-4 text-slate-600 text-sm leading-relaxed border-t border-slate-100">
@@ -907,7 +906,7 @@
           <div class="border border-slate-200 rounded-xl overflow-hidden">
             <button onclick="toggleAccordion('faq6')" class="w-full text-left p-4 bg-slate-50 hover:bg-slate-100 font-semibold text-slate-800 flex items-center justify-between transition-colors text-sm sm:text-base">
               <span>Can I calculate successive percentage changes?</span>
-              <i id="faq6-icon" class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+              <span id="faq6-icon" class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
             </button>
             <div id="faq6" class="accordion-content">
               <p class="p-4 text-slate-600 text-sm leading-relaxed border-t border-slate-100">
@@ -920,7 +919,7 @@
           <div class="border border-slate-200 rounded-xl overflow-hidden">
             <button onclick="toggleAccordion('faq7')" class="w-full text-left p-4 bg-slate-50 hover:bg-slate-100 font-semibold text-slate-800 flex items-center justify-between transition-colors text-sm sm:text-base">
               <span>Is this calculator free to use?</span>
-              <i id="faq7-icon" class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+              <span id="faq7-icon" class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
             </button>
             <div id="faq7" class="accordion-content">
               <p class="p-4 text-slate-600 text-sm leading-relaxed border-t border-slate-100">
@@ -935,7 +934,7 @@
       <!-- Section K: Related Calculators -->
       <section id="related-calcs" class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm scroll-mt-24">
         <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
-          <i class="fa-solid fa-calculator text-brand-600"></i> Related Financial Calculators
+          <span class="icon-[fa6-solid--calculator] text-brand-600"></span> Related Financial Calculators
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <a href="#" class="p-4 rounded-xl border border-slate-200 hover:border-brand-500 hover:shadow-md transition-all group flex items-center gap-3">
@@ -949,7 +948,7 @@
           </a>
           <a href="#" class="p-4 rounded-xl border border-slate-200 hover:border-brand-500 hover:shadow-md transition-all group flex items-center gap-3">
             <div class="w-10 h-10 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center font-bold group-hover:bg-brand-600 group-hover:text-white transition-colors">
-              <i class="fa-solid fa-receipt"></i>
+              <span class="icon-[fa6-solid--receipt]"></span>
             </div>
             <div>
               <h3 class="font-bold text-slate-800 group-hover:text-brand-600 transition-colors text-sm">GST Calculator</h3>
@@ -958,7 +957,7 @@
           </a>
           <a href="#" class="p-4 rounded-xl border border-slate-200 hover:border-brand-500 hover:shadow-md transition-all group flex items-center gap-3">
             <div class="w-10 h-10 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center font-bold group-hover:bg-brand-600 group-hover:text-white transition-colors">
-              <i class="fa-solid fa-chart-pie"></i>
+              <span class="icon-[fa6-solid--chart-pie]"></span>
             </div>
             <div>
               <h3 class="font-bold text-slate-800 group-hover:text-brand-600 transition-colors text-sm">Profit Margin Calculator</h3>
@@ -967,7 +966,7 @@
           </a>
           <a href="#" class="p-4 rounded-xl border border-slate-200 hover:border-brand-500 hover:shadow-md transition-all group flex items-center gap-3">
             <div class="w-10 h-10 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center font-bold group-hover:bg-brand-600 group-hover:text-white transition-colors">
-              <i class="fa-solid fa-piggy-bank"></i>
+              <span class="icon-[fa6-solid--piggy-bank]"></span>
             </div>
             <div>
               <h3 class="font-bold text-slate-800 group-hover:text-brand-600 transition-colors text-sm">Compound Interest Calculator</h3>
@@ -992,7 +991,7 @@
         <div class="space-y-4">
           <div class="flex items-center gap-2 text-white font-bold text-lg">
             <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
-              <i class="fa-solid fa-calculator"></i>
+              <span class="icon-[fa6-solid--calculator]"></span>
             </div>
             <span>Calculator<span class="text-indigo-400">-Pro</span></span>
           </div>

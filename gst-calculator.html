@@ -28,7 +28,7 @@
     
 
     <!-- FontAwesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
 
     <!-- Tailwind Custom Configuration -->
     
@@ -145,7 +145,7 @@
       <!-- Brand Logo & Name -->
       <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
         <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
-          <i class="fa-solid fa-calculator text-lg"></i>
+          <span class="icon-[fa6-solid--calculator] text-lg"></span>
         </div>
         <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
           Calculator<span class="text-indigo-600">-Pro</span>
@@ -343,7 +343,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto space-y-4">
                     <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-100 text-brand-700 text-xs font-semibold tracking-wide uppercase shadow-sm">
-                        <i class="fa-solid fa-sparkles text-brand-500"></i> GST 2.0 Compliant
+                        <span class="icon-[lucide--sparkles] text-brand-500"></span> GST 2.0 Compliant
                     </div>
                     <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
                         GST Calculator 2026 – Free GST Calculator
@@ -357,9 +357,9 @@
                 <div class="mt-10 max-w-5xl mx-auto bg-white rounded-2xl shadow-xl shadow-slate-200/60 border border-slate-100 overflow-hidden">
                     <div class="bg-slate-900 text-white px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-2">
                         <h2 class="text-xl font-bold flex items-center gap-2">
-                            <i class="fa-solid fa-calculator text-brand-400"></i> GST Calculator <span class="text-xs font-normal bg-brand-600/60 text-brand-100 px-2.5 py-0.5 rounded-full">(Updated as per GST 2.0 – 2026)</span>
+                            <span class="icon-[fa6-solid--calculator] text-brand-400"></span> GST Calculator <span class="text-xs font-normal bg-brand-600/60 text-brand-100 px-2.5 py-0.5 rounded-full">(Updated as per GST 2.0 – 2026)</span>
                         </h2>
-                        <span class="text-xs text-slate-400"><i class="fa-solid fa-clock-rotate-left mr-1"></i> Live Calculation</span>
+                        <span class="text-xs text-slate-400"><span class="icon-[fa6-solid--clock-rotate-left] mr-1"></span> Live Calculation</span>
                     </div>
 
                     <div class="p-6 sm:p-8 lg:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -439,10 +439,10 @@
                             <!-- Action Buttons -->
                             <div class="flex items-center gap-4 pt-2">
                                 <button type="button" id="btn-calculate" class="flex-1 py-3.5 px-6 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl shadow-lg shadow-brand-500/30 transition-all duration-200 transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-brand-500 flex items-center justify-center gap-2">
-                                    <i class="fa-solid fa-calculator"></i> Calculate GST
+                                    <span class="icon-[fa6-solid--calculator]"></span> Calculate GST
                                 </button>
                                 <button type="button" id="btn-reset" class="py-3.5 px-5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-slate-400 flex items-center gap-2">
-                                    <i class="fa-solid fa-rotate-left"></i> Reset
+                                    <span class="icon-[fa6-solid--rotate-left]"></span> Reset
                                 </button>
                             </div>
 
@@ -453,7 +453,7 @@
                             <div>
                                 <div class="flex items-center justify-between pb-4 border-b border-slate-700/60 mb-6">
                                     <h3 class="text-lg font-bold text-white flex items-center gap-2">
-                                        <i class="fa-solid fa-receipt text-brand-400"></i> GST Calculation Result
+                                        <span class="icon-[fa6-solid--receipt] text-brand-400"></span> GST Calculation Result
                                     </h3>
                                     <span class="text-xs px-2.5 py-1 bg-brand-500/20 text-brand-300 rounded-full border border-brand-500/30 font-mono">Live</span>
                                 </div>
@@ -505,7 +505,7 @@
                 </div>
 
                 <p class="text-center text-xs text-slate-500 mt-4">
-                    <i class="fa-regular fa-calendar-check mr-1"></i> Last Updated: <strong>October 2026</strong>
+                    <span class="icon-[fa6-regular--calendar-check] mr-1"></span> Last Updated: <strong>October 2026</strong>
                 </p>
             </div>
         </section>
@@ -591,7 +591,7 @@
                     <!-- Exclusive Formula -->
                     <div class="p-5 bg-slate-50 rounded-xl border border-slate-200 space-y-3">
                         <h3 class="text-base font-bold text-brand-700 flex items-center gap-2">
-                            <i class="fa-solid fa-plus-circle"></i> Exclusive GST (Add GST)
+                            <span class="icon-[fa6-solid--circle-plus]"></span> Exclusive GST (Add GST)
                         </h3>
                         <div class="p-3 bg-white rounded-lg font-mono text-xs text-slate-800 border border-slate-200">
                             GST Amount = (Original Amount × GST Rate) / 100
@@ -604,7 +604,7 @@
                     <!-- Inclusive Formula -->
                     <div class="p-5 bg-slate-50 rounded-xl border border-slate-200 space-y-3">
                         <h3 class="text-base font-bold text-brand-700 flex items-center gap-2">
-                            <i class="fa-solid fa-minus-circle"></i> Inclusive GST (Remove GST)
+                            <span class="icon-[fa6-solid--circle-minus]"></span> Inclusive GST (Remove GST)
                         </h3>
                         <div class="p-3 bg-white rounded-lg font-mono text-xs text-slate-800 border border-slate-200">
                             Original Amount = Final Amount × 100 / (100 + GST Rate)
@@ -617,7 +617,7 @@
                     <!-- CGST + SGST -->
                     <div class="p-5 bg-slate-50 rounded-xl border border-slate-200 space-y-3">
                         <h3 class="text-base font-bold text-slate-800 flex items-center gap-2">
-                            <i class="fa-solid fa-code-branch"></i> CGST + SGST (Intra-state)
+                            <span class="icon-[fa6-solid--code-branch]"></span> CGST + SGST (Intra-state)
                         </h3>
                         <div class="p-3 bg-white rounded-lg font-mono text-xs text-slate-800 border border-slate-200">
                             CGST = GST Amount / 2
@@ -630,7 +630,7 @@
                     <!-- IGST -->
                     <div class="p-5 bg-slate-50 rounded-xl border border-slate-200 space-y-3">
                         <h3 class="text-base font-bold text-slate-800 flex items-center gap-2">
-                            <i class="fa-solid fa-arrow-right-arrow-left"></i> IGST (Inter-state)
+                            <span class="icon-[fa6-solid--arrow-right-arrow-left]"></span> IGST (Inter-state)
                         </h3>
                         <div class="p-3 bg-white rounded-lg font-mono text-xs text-slate-800 border border-slate-200">
                             IGST = Full GST Amount
@@ -666,28 +666,28 @@
                 <h2 class="text-2xl font-bold text-slate-900 mb-4">Types of GST Calculations</h2>
                 <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-700">
                     <li class="flex items-start gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
-                        <i class="fa-solid fa-circle-check text-brand-600 mt-0.5"></i>
+                        <span class="icon-[fa6-solid--circle-check] text-brand-600 mt-0.5"></span>
                         <div>
                             <strong class="block text-slate-900">Exclusive GST Calculator</strong>
                             Calculates tax added on top of net cost price.
                         </div>
                     </li>
                     <li class="flex items-start gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
-                        <i class="fa-solid fa-circle-check text-brand-600 mt-0.5"></i>
+                        <span class="icon-[fa6-solid--circle-check] text-brand-600 mt-0.5"></span>
                         <div>
                             <strong class="block text-slate-900">Inclusive GST Calculator</strong>
                             Extracts built-in tax amount from final MRP price.
                         </div>
                     </li>
                     <li class="flex items-start gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
-                        <i class="fa-solid fa-circle-check text-brand-600 mt-0.5"></i>
+                        <span class="icon-[fa6-solid--circle-check] text-brand-600 mt-0.5"></span>
                         <div>
                             <strong class="block text-slate-900">CGST, SGST & IGST Split</strong>
                             Determines federal vs state tax allocation automatically.
                         </div>
                     </li>
                     <li class="flex items-start gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
-                        <i class="fa-solid fa-circle-check text-brand-600 mt-0.5"></i>
+                        <span class="icon-[fa6-solid--circle-check] text-brand-600 mt-0.5"></span>
                         <div>
                             <strong class="block text-slate-900">Reverse GST Calculator</strong>
                             Helps accounting staff back-calculate net valuation for billing.
@@ -701,19 +701,19 @@
                 <h2 class="text-2xl font-bold text-slate-900 mb-4">Benefits of Using This GST Calculator</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div class="flex items-center gap-3 p-4 bg-slate-50 rounded-xl">
-                        <i class="fa-solid fa-bolt text-amber-500 text-xl"></i>
+                        <span class="icon-[fa6-solid--bolt] text-amber-500 text-xl"></span>
                         <span class="text-sm font-medium text-slate-800">Updated with GST 2.0 rates (2026)</span>
                     </div>
                     <div class="flex items-center gap-3 p-4 bg-slate-50 rounded-xl">
-                        <i class="fa-solid fa-bullseye text-brand-500 text-xl"></i>
+                        <span class="icon-[fa6-solid--bullseye] text-brand-500 text-xl"></span>
                         <span class="text-sm font-medium text-slate-800">Instant & 100% accurate mathematical results</span>
                     </div>
                     <div class="flex items-center gap-3 p-4 bg-slate-50 rounded-xl">
-                        <i class="fa-solid fa-sliders text-emerald-500 text-xl"></i>
+                        <span class="icon-[fa6-solid--sliders] text-emerald-500 text-xl"></span>
                         <span class="text-sm font-medium text-slate-800">Supports both inclusive & exclusive modes</span>
                     </div>
                     <div class="flex items-center gap-3 p-4 bg-slate-50 rounded-xl">
-                        <i class="fa-solid fa-file-invoice-dollar text-indigo-500 text-xl"></i>
+                        <span class="icon-[fa6-solid--file-invoice-dollar] text-indigo-500 text-xl"></span>
                         <span class="text-sm font-medium text-slate-800">Useful for invoices, billing & tax planning</span>
                     </div>
                 </div>
@@ -730,7 +730,7 @@
                 <div class="relative">
                     <label for="hsn-search" class="sr-only">Search HSN Code by Product Name</label>
                     <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span class="icon-[fa6-solid--magnifying-glass]"></span>
                     </div>
                     <input type="text" id="hsn-search" placeholder="Type product name (e.g. mobile phone, cement, soap...)"
                         class="block w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
@@ -791,7 +791,7 @@
             <!-- Section I: Frequently Asked Questions (FAQ) -->
             <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100">
                 <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
-                    <i class="fa-solid fa-circle-question text-brand-600"></i> Frequently Asked Questions (FAQ)
+                    <span class="icon-[fa6-solid--circle-question] text-brand-600"></span> Frequently Asked Questions (FAQ)
                 </h2>
 
                 <div class="space-y-3" id="faq-accordion">
@@ -800,7 +800,7 @@
                     <div class="border border-slate-200 rounded-xl overflow-hidden">
                         <button type="button" class="faq-btn w-full px-5 py-4 text-left font-semibold text-slate-800 hover:text-brand-600 flex justify-between items-center gap-4 bg-slate-50/50">
                             <span>What are the current GST slabs in 2026?</span>
-                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
                         </button>
                         <div class="accordion-content px-5">
                             <p class="py-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100">
@@ -813,7 +813,7 @@
                     <div class="border border-slate-200 rounded-xl overflow-hidden">
                         <button type="button" class="faq-btn w-full px-5 py-4 text-left font-semibold text-slate-800 hover:text-brand-600 flex justify-between items-center gap-4 bg-slate-50/50">
                             <span>How to calculate GST on inclusive price?</span>
-                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
                         </button>
                         <div class="accordion-content px-5">
                             <p class="py-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100">
@@ -826,7 +826,7 @@
                     <div class="border border-slate-200 rounded-xl overflow-hidden">
                         <button type="button" class="faq-btn w-full px-5 py-4 text-left font-semibold text-slate-800 hover:text-brand-600 flex justify-between items-center gap-4 bg-slate-50/50">
                             <span>What is the difference between CGST, SGST and IGST?</span>
-                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
                         </button>
                         <div class="accordion-content px-5">
                             <p class="py-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100">
@@ -839,7 +839,7 @@
                     <div class="border border-slate-200 rounded-xl overflow-hidden">
                         <button type="button" class="faq-btn w-full px-5 py-4 text-left font-semibold text-slate-800 hover:text-brand-600 flex justify-between items-center gap-4 bg-slate-50/50">
                             <span>Has the 12% and 28% GST slab been removed?</span>
-                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
                         </button>
                         <div class="accordion-content px-5">
                             <p class="py-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100">
@@ -852,7 +852,7 @@
                     <div class="border border-slate-200 rounded-xl overflow-hidden">
                         <button type="button" class="faq-btn w-full px-5 py-4 text-left font-semibold text-slate-800 hover:text-brand-600 flex justify-between items-center gap-4 bg-slate-50/50">
                             <span>What is GST rate on gold and jewellery in 2026?</span>
-                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
                         </button>
                         <div class="accordion-content px-5">
                             <p class="py-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100">
@@ -865,7 +865,7 @@
                     <div class="border border-slate-200 rounded-xl overflow-hidden">
                         <button type="button" class="faq-btn w-full px-5 py-4 text-left font-semibold text-slate-800 hover:text-brand-600 flex justify-between items-center gap-4 bg-slate-50/50">
                             <span>Can I use this calculator for inter-state supplies?</span>
-                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
                         </button>
                         <div class="accordion-content px-5">
                             <p class="py-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100">
@@ -880,23 +880,23 @@
             <!-- Related Calculators Section -->
             <section class="bg-gradient-to-r from-brand-900 to-slate-900 rounded-2xl p-6 sm:p-8 text-white shadow-lg">
                 <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
-                    <i class="fa-solid fa-cubes text-brand-400"></i> Related Financial Calculators
+                    <span class="icon-[fa6-solid--cubes] text-brand-400"></span> Related Financial Calculators
                 </h2>
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
                     <a href="#" class="p-4 bg-white/10 hover:bg-white/20 rounded-xl transition-all duration-200 backdrop-blur-sm border border-white/10">
-                        <i class="fa-solid fa-percent text-2xl text-brand-300 mb-2"></i>
+                        <span class="icon-[fa6-solid--percent] text-2xl text-brand-300 mb-2"></span>
                         <span class="block text-xs font-semibold">Percentage Calculator</span>
                     </a>
                     <a href="#" class="p-4 bg-white/10 hover:bg-white/20 rounded-xl transition-all duration-200 backdrop-blur-sm border border-white/10">
-                        <i class="fa-solid fa-chart-line text-2xl text-brand-300 mb-2"></i>
+                        <span class="icon-[fa6-solid--chart-line] text-2xl text-brand-300 mb-2"></span>
                         <span class="block text-xs font-semibold">Profit Margin Calculator</span>
                     </a>
                     <a href="#" class="p-4 bg-white/10 hover:bg-white/20 rounded-xl transition-all duration-200 backdrop-blur-sm border border-white/10">
-                        <i class="fa-solid fa-coins text-2xl text-brand-300 mb-2"></i>
+                        <span class="icon-[fa6-solid--coins] text-2xl text-brand-300 mb-2"></span>
                         <span class="block text-xs font-semibold">Sales Tax Calculator</span>
                     </a>
                     <a href="#" class="p-4 bg-white/10 hover:bg-white/20 rounded-xl transition-all duration-200 backdrop-blur-sm border border-white/10">
-                        <i class="fa-solid fa-piggy-bank text-2xl text-brand-300 mb-2"></i>
+                        <span class="icon-[fa6-solid--piggy-bank] text-2xl text-brand-300 mb-2"></span>
                         <span class="block text-xs font-semibold">SIP Calculator</span>
                     </a>
                 </div>
@@ -915,7 +915,7 @@
         <div class="space-y-4">
           <div class="flex items-center gap-2 text-white font-bold text-lg">
             <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
-              <i class="fa-solid fa-calculator"></i>
+              <span class="icon-[fa6-solid--calculator]"></span>
             </div>
             <span>Calculator<span class="text-indigo-400">-Pro</span></span>
           </div>

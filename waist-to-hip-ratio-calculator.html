@@ -25,7 +25,7 @@
     <!-- Tailwind CSS CDN -->
    
     <!-- FontAwesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
 
     <!-- Custom CSS Styles -->
     
@@ -152,7 +152,7 @@
       <!-- Brand Logo & Name -->
       <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
         <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
-          <i class="fa-solid fa-calculator text-lg"></i>
+          <span class="icon-[fa6-solid--calculator] text-lg"></span>
         </div>
         <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
           Calculator<span class="text-indigo-600">-Pro</span>
@@ -354,7 +354,7 @@
         <!-- Hero Title Header -->
         <div class="text-center max-w-3xl mx-auto mb-10">
           <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold tracking-wide uppercase mb-4">
-            <i class="fa-solid fa-heart-pulse"></i> WHO Standard Compliant
+            <span class="icon-[fa6-solid--heart-pulse]"></span> WHO Standard Compliant
           </span>
           <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
             Waist to Hip Ratio Calculator
@@ -377,10 +377,10 @@
                 <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1 px-1">Biological Sex</label>
                 <div class="grid grid-cols-2 gap-1 bg-white p-1 rounded-xl border border-slate-200 shadow-sm">
                   <button type="button" id="btn-female" onclick="setGender('female')" class="py-2.5 px-3 text-sm font-semibold rounded-lg flex items-center justify-center gap-2 transition-all bg-indigo-600 text-white shadow-sm">
-                    <i class="fa-solid fa-venus"></i> Female
+                    <span class="icon-[fa6-solid--venus]"></span> Female
                   </button>
                   <button type="button" id="btn-male" onclick="setGender('male')" class="py-2.5 px-3 text-sm font-semibold rounded-lg flex items-center justify-center gap-2 transition-all text-slate-600 hover:text-slate-900">
-                    <i class="fa-solid fa-mars"></i> Male
+                    <span class="icon-[fa6-solid--mars]"></span> Male
                   </button>
                 </div>
               </div>
@@ -413,7 +413,7 @@
                 </div>
                 <div class="relative rounded-xl shadow-sm">
                   <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-                    <i class="fa-solid fa-ruler-horizontal"></i>
+                    <span class="icon-[fa6-solid--ruler-horizontal]"></span>
                   </div>
                   <input type="number" step="0.1" min="10" max="300" id="waist-input" placeholder="e.g. 75" required class="block w-full pl-10 pr-12 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 font-semibold focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-base transition-colors" oninput="liveUpdate()">
                   <div class="absolute inset-y-0 right-0 pr-3.5 flex items-center pointer-events-none text-slate-400 font-medium text-sm unit-label">
@@ -433,7 +433,7 @@
                 </div>
                 <div class="relative rounded-xl shadow-sm">
                   <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-                    <i class="fa-solid fa-tape"></i>
+                    <span class="icon-[fa6-solid--tape]"></span>
                   </div>
                   <input type="number" step="0.1" min="10" max="300" id="hip-input" placeholder="e.g. 95" required class="block w-full pl-10 pr-12 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 font-semibold focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-base transition-colors" oninput="liveUpdate()">
                   <div class="absolute inset-y-0 right-0 pr-3.5 flex items-center pointer-events-none text-slate-400 font-medium text-sm unit-label">
@@ -447,7 +447,7 @@
 
             <!-- Action Button -->
             <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-emerald-200 hover:shadow-xl hover:shadow-emerald-300 transition-all duration-200 text-lg flex items-center justify-center gap-2 group">
-              <i class="fa-solid fa-calculator group-hover:scale-110 transition-transform"></i> Calculate Waist to Hip Ratio
+              <span class="icon-[fa6-solid--calculator] group-hover:scale-110 transition-transform"></span> Calculate Waist to Hip Ratio
             </button>
 
           </form>
@@ -504,13 +504,13 @@
               <!-- Share & Print Toolbar -->
               <div class="mt-6 pt-4 border-t border-slate-200/60 flex flex-wrap items-center justify-between gap-3 text-xs">
                 <button type="button" onclick="copyResult()" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 transition-colors font-medium">
-                  <i class="fa-regular fa-copy"></i> Copy Result
+                  <span class="icon-[fa6-regular--copy]"></span> Copy Result
                 </button>
                 <button type="button" onclick="window.print()" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 transition-colors font-medium">
-                  <i class="fa-solid fa-print"></i> Print / Save PDF
+                  <span class="icon-[fa6-solid--print]"></span> Print / Save PDF
                 </button>
                 <button type="button" onclick="resetForm()" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 transition-colors font-medium text-rose-600">
-                  <i class="fa-solid fa-rotate-right"></i> Reset Calculator
+                  <span class="icon-[fa6-solid--rotate-right]"></span> Reset Calculator
                 </button>
               </div>
 
@@ -528,7 +528,7 @@
       <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-sm">
         <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
           <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 text-sm">
-            <i class="fa-solid fa-list-check"></i>
+            <span class="icon-[fa6-solid--list-check]"></span>
           </span>
           How to Use the Waist to Hip Ratio Calculator
         </h2>
@@ -584,7 +584,7 @@
       <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-sm space-y-6">
         <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-3">
           <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 text-sm">
-            <i class="fa-solid fa-circle-info"></i>
+            <span class="icon-[fa6-solid--circle-info]"></span>
           </span>
           What is Waist-to-Hip Ratio (WHR)?
         </h2>
@@ -608,7 +608,7 @@
           <div class="p-5 rounded-xl bg-rose-50/50 border border-rose-100">
             <div class="flex items-center gap-3 mb-2">
               <div class="w-9 h-9 rounded-lg bg-rose-100 text-rose-600 flex items-center justify-center font-bold">
-                <i class="fa-solid fa-apple-whole"></i>
+                <span class="icon-[fa6-solid--apple-whole]"></span>
               </div>
               <h3 class="font-bold text-slate-800 text-lg">Apple Body Shape (Android Fat)</h3>
             </div>
@@ -621,7 +621,7 @@
           <div class="p-5 rounded-xl bg-emerald-50/50 border border-emerald-100">
             <div class="flex items-center gap-3 mb-2">
               <div class="w-9 h-9 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">
-                <i class="fa-solid fa-weight-scale"></i>
+                <span class="icon-[fa6-solid--weight-scale]"></span>
               </div>
               <h3 class="font-bold text-slate-800 text-lg">Pear Body Shape (Gynoid Fat)</h3>
             </div>
@@ -641,7 +641,7 @@
         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-6">
           <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-3">
             <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 text-sm">
-              <i class="fa-solid fa-table"></i>
+              <span class="icon-[fa6-solid--table]"></span>
             </span>
             Ideal Waist to Hip Ratio Chart for Men and Women
           </h2>
@@ -664,7 +664,7 @@
             <tbody class="divide-y divide-slate-200 font-medium">
               <tr class="hover:bg-slate-50/50 transition-colors">
                 <td class="py-4 px-6 font-bold text-slate-900 flex items-center gap-2">
-                  <i class="fa-solid fa-venus text-pink-500"></i> Women
+                  <span class="icon-[fa6-solid--venus] text-pink-500"></span> Women
                 </td>
                 <td class="py-4 px-6 bg-emerald-50/20 text-emerald-800 font-semibold">&lt; 0.80</td>
                 <td class="py-4 px-6 bg-amber-50/20 text-amber-800 font-semibold">0.80 – 0.85</td>
@@ -672,7 +672,7 @@
               </tr>
               <tr class="hover:bg-slate-50/50 transition-colors">
                 <td class="py-4 px-6 font-bold text-slate-900 flex items-center gap-2">
-                  <i class="fa-solid fa-mars text-blue-500"></i> Men
+                  <span class="icon-[fa6-solid--mars] text-blue-500"></span> Men
                 </td>
                 <td class="py-4 px-6 bg-emerald-50/20 text-emerald-800 font-semibold">&lt; 0.90</td>
                 <td class="py-4 px-6 bg-amber-50/20 text-amber-800 font-semibold">0.90 – 0.95</td>
@@ -694,7 +694,7 @@
       <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-sm space-y-6">
         <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-3">
           <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 text-sm">
-            <i class="fa-solid fa-ruler"></i>
+            <span class="icon-[fa6-solid--ruler]"></span>
           </span>
           How to Measure Your Waist and Hips Accurately
         </h2>
@@ -704,19 +704,19 @@
           <!-- Instructions -->
           <div class="space-y-4">
             <h3 class="font-bold text-slate-800 text-base flex items-center gap-2">
-              <i class="fa-solid fa-circle-check text-emerald-600"></i> Step-by-Step Instructions
+              <span class="icon-[fa6-solid--circle-check] text-emerald-600"></span> Step-by-Step Instructions
             </h3>
             <ul class="space-y-3 text-sm text-slate-600">
               <li class="flex items-start gap-2.5">
-                <i class="fa-solid fa-caret-right text-indigo-500 mt-1"></i>
+                <span class="icon-[fa6-solid--caret-right] text-indigo-500 mt-1"></span>
                 <span><strong>Waist Measurement:</strong> Wrap the tape around your bare abdomen at the narrowest point, usually right above your navel. Keep tape snug but not tight.</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <i class="fa-solid fa-caret-right text-indigo-500 mt-1"></i>
+                <span class="icon-[fa6-solid--caret-right] text-indigo-500 mt-1"></span>
                 <span><strong>Hip Measurement:</strong> Stand with feet together and measure around the widest part of your buttocks and hips.</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <i class="fa-solid fa-caret-right text-indigo-500 mt-1"></i>
+                <span class="icon-[fa6-solid--caret-right] text-indigo-500 mt-1"></span>
                 <span><strong>Best Timing:</strong> Take measurements in the morning before eating or drinking for standard baseline consistency.</span>
               </li>
             </ul>
@@ -725,19 +725,19 @@
           <!-- Common Mistakes -->
           <div class="space-y-4 bg-amber-50/60 p-5 rounded-xl border border-amber-100">
             <h3 class="font-bold text-amber-900 text-base flex items-center gap-2">
-              <i class="fa-solid fa-triangle-exclamation text-amber-600"></i> Common Mistakes to Avoid
+              <span class="icon-[fa6-solid--triangle-exclamation] text-amber-600"></span> Common Mistakes to Avoid
             </h3>
             <ul class="space-y-2.5 text-sm text-amber-950">
               <li class="flex items-start gap-2">
-                <i class="fa-solid fa-xmark text-rose-500 mt-1"></i>
+                <span class="icon-[fa6-solid--xmark] text-rose-500 mt-1"></span>
                 <span>Holding your breath or sucking in your stomach during waist measurement.</span>
               </li>
               <li class="flex items-start gap-2">
-                <i class="fa-solid fa-xmark text-rose-500 mt-1"></i>
+                <span class="icon-[fa6-solid--xmark] text-rose-500 mt-1"></span>
                 <span>Measuring over heavy clothing or bulky jeans.</span>
               </li>
               <li class="flex items-start gap-2">
-                <i class="fa-solid fa-xmark text-rose-500 mt-1"></i>
+                <span class="icon-[fa6-solid--xmark] text-rose-500 mt-1"></span>
                 <span>Pulling the measuring tape so tightly that it depresses skin tissues.</span>
               </li>
             </ul>
@@ -756,7 +756,7 @@
         <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm space-y-4">
           <h2 class="text-xl font-bold text-slate-900 flex items-center gap-3">
             <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-rose-100 text-rose-600 text-sm">
-              <i class="fa-solid fa-heart-crack"></i>
+              <span class="icon-[fa6-solid--heart-crack]"></span>
             </span>
             Health Risks of High WHR
           </h2>
@@ -765,19 +765,19 @@
           </p>
           <ul class="space-y-2.5 text-sm text-slate-700">
             <li class="flex items-center gap-2.5">
-              <i class="fa-solid fa-circle-exclamation text-rose-500 text-xs"></i> Coronary Heart Disease &amp; Hypertension
+              <span class="icon-[fa6-solid--circle-exclamation] text-rose-500 text-xs"></span> Coronary Heart Disease &amp; Hypertension
             </li>
             <li class="flex items-center gap-2.5">
-              <i class="fa-solid fa-circle-exclamation text-rose-500 text-xs"></i> Type 2 Diabetes &amp; Insulin Resistance
+              <span class="icon-[fa6-solid--circle-exclamation] text-rose-500 text-xs"></span> Type 2 Diabetes &amp; Insulin Resistance
             </li>
             <li class="flex items-center gap-2.5">
-              <i class="fa-solid fa-circle-exclamation text-rose-500 text-xs"></i> Metabolic Syndrome &amp; High Cholesterol
+              <span class="icon-[fa6-solid--circle-exclamation] text-rose-500 text-xs"></span> Metabolic Syndrome &amp; High Cholesterol
             </li>
             <li class="flex items-center gap-2.5">
-              <i class="fa-solid fa-circle-exclamation text-rose-500 text-xs"></i> Ischemic Stroke Risk
+              <span class="icon-[fa6-solid--circle-exclamation] text-rose-500 text-xs"></span> Ischemic Stroke Risk
             </li>
             <li class="flex items-center gap-2.5">
-              <i class="fa-solid fa-circle-exclamation text-rose-500 text-xs"></i> Certain Chronic Inflammatory Conditions
+              <span class="icon-[fa6-solid--circle-exclamation] text-rose-500 text-xs"></span> Certain Chronic Inflammatory Conditions
             </li>
           </ul>
         </div>
@@ -786,7 +786,7 @@
         <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm space-y-4">
           <h2 class="text-xl font-bold text-slate-900 flex items-center gap-3">
             <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-emerald-100 text-emerald-600 text-sm">
-              <i class="fa-solid fa-arrow-trend-down"></i>
+              <span class="icon-[fa6-solid--arrow-trend-down]"></span>
             </span>
             How to Lower Your WHR Naturally
           </h2>
@@ -795,19 +795,19 @@
           </p>
           <ul class="space-y-2.5 text-sm text-slate-700">
             <li class="flex items-center gap-2.5">
-              <i class="fa-solid fa-check text-emerald-600 text-xs"></i> <strong>Strength &amp; Cardio:</strong> Combine resistance training with brisk cardio.
+              <span class="icon-[fa6-solid--check] text-emerald-600 text-xs"></span> <strong>Strength &amp; Cardio:</strong> Combine resistance training with brisk cardio.
             </li>
             <li class="flex items-center gap-2.5">
-              <i class="fa-solid fa-check text-emerald-600 text-xs"></i> <strong>Reduce Refined Carbs:</strong> Cut added sugars and ultra-processed foods.
+              <span class="icon-[fa6-solid--check] text-emerald-600 text-xs"></span> <strong>Reduce Refined Carbs:</strong> Cut added sugars and ultra-processed foods.
             </li>
             <li class="flex items-center gap-2.5">
-              <i class="fa-solid fa-check text-emerald-600 text-xs"></i> <strong>Fiber &amp; Protein:</strong> Increase soluble fiber and lean protein intake.
+              <span class="icon-[fa6-solid--check] text-emerald-600 text-xs"></span> <strong>Fiber &amp; Protein:</strong> Increase soluble fiber and lean protein intake.
             </li>
             <li class="flex items-center gap-2.5">
-              <i class="fa-solid fa-check text-emerald-600 text-xs"></i> <strong>Manage Stress &amp; Sleep:</strong> Cortisol management helps prevent visceral fat store.
+              <span class="icon-[fa6-solid--check] text-emerald-600 text-xs"></span> <strong>Manage Stress &amp; Sleep:</strong> Cortisol management helps prevent visceral fat store.
             </li>
             <li class="flex items-center gap-2.5">
-              <i class="fa-solid fa-check text-emerald-600 text-xs"></i> <strong>Avoid Crash Diets:</strong> Prioritize sustainable long-term caloric balance.
+              <span class="icon-[fa6-solid--check] text-emerald-600 text-xs"></span> <strong>Avoid Crash Diets:</strong> Prioritize sustainable long-term caloric balance.
             </li>
           </ul>
         </div>
@@ -820,7 +820,7 @@
       <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-sm space-y-6">
         <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-3">
           <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 text-sm">
-            <i class="fa-solid fa-scale-balanced"></i>
+            <span class="icon-[fa6-solid--scale-balanced]"></span>
           </span>
           Waist to Hip Ratio vs BMI – Which is Better?
         </h2>
@@ -847,8 +847,8 @@
               </tr>
               <tr>
                 <td class="py-3.5 px-5 font-semibold text-slate-900">Differentiates Muscle/Fat</td>
-                <td class="py-3.5 px-5 bg-indigo-50/20 text-emerald-700 font-semibold"><i class="fa-solid fa-check me-1"></i> Yes</td>
-                <td class="py-3.5 px-5 text-rose-600 font-semibold"><i class="fa-solid fa-xmark me-1"></i> No (Athletes may misclassify)</td>
+                <td class="py-3.5 px-5 bg-indigo-50/20 text-emerald-700 font-semibold"><span class="icon-[fa6-solid--check] me-1"></span> Yes</td>
+                <td class="py-3.5 px-5 text-rose-600 font-semibold"><span class="icon-[fa6-solid--xmark] me-1"></span> No (Athletes may misclassify)</td>
               </tr>
               <tr>
                 <td class="py-3.5 px-5 font-semibold text-slate-900">Heart Risk Precision</td>
@@ -872,7 +872,7 @@
       <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-sm">
         <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
           <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 text-sm">
-            <i class="fa-solid fa-circle-question"></i>
+            <span class="icon-[fa6-solid--circle-question]"></span>
           </span>
           Frequently Asked Questions About Waist to Hip Ratio
         </h2>
@@ -883,7 +883,7 @@
           <div class="border border-slate-200 rounded-xl overflow-hidden">
             <button type="button" onclick="toggleAccordion(1)" class="w-full text-left px-5 py-4 font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center transition-colors focus:outline-none bg-slate-50/50">
               <span class="text-base">Q1. What is a good waist to hip ratio?</span>
-              <i id="faq-icon-1" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+              <span class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200" id="faq-icon-1"></span>
             </button>
             <div id="faq-content-1" class="accordion-content px-5">
               <p class="py-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100">
@@ -896,7 +896,7 @@
           <div class="border border-slate-200 rounded-xl overflow-hidden">
             <button type="button" onclick="toggleAccordion(2)" class="w-full text-left px-5 py-4 font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center transition-colors focus:outline-none bg-slate-50/50">
               <span class="text-base">Q2. Is waist to hip ratio accurate?</span>
-              <i id="faq-icon-2" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+              <span class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200" id="faq-icon-2"></span>
             </button>
             <div id="faq-content-2" class="accordion-content px-5">
               <p class="py-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100">
@@ -909,7 +909,7 @@
           <div class="border border-slate-200 rounded-xl overflow-hidden">
             <button type="button" onclick="toggleAccordion(3)" class="w-full text-left px-5 py-4 font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center transition-colors focus:outline-none bg-slate-50/50">
               <span class="text-base">Q3. Can I calculate WHR without measuring tape?</span>
-              <i id="faq-icon-3" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+              <span class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200" id="faq-icon-3"></span>
             </button>
             <div id="faq-content-3" class="accordion-content px-5">
               <p class="py-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100">
@@ -922,7 +922,7 @@
           <div class="border border-slate-200 rounded-xl overflow-hidden">
             <button type="button" onclick="toggleAccordion(4)" class="w-full text-left px-5 py-4 font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center transition-colors focus:outline-none bg-slate-50/50">
               <span class="text-base">Q4. Does age affect ideal WHR?</span>
-              <i id="faq-icon-4" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+              <span class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200" id="faq-icon-4"></span>
             </button>
             <div id="faq-content-4" class="accordion-content px-5">
               <p class="py-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100">
@@ -935,7 +935,7 @@
           <div class="border border-slate-200 rounded-xl overflow-hidden">
             <button type="button" onclick="toggleAccordion(5)" class="w-full text-left px-5 py-4 font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center transition-colors focus:outline-none bg-slate-50/50">
               <span class="text-base">Q5. How often should I check my WHR?</span>
-              <i id="faq-icon-5" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+              <span class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200" id="faq-icon-5"></span>
             </button>
             <div id="faq-content-5" class="accordion-content px-5">
               <p class="py-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100">
@@ -948,7 +948,7 @@
           <div class="border border-slate-200 rounded-xl overflow-hidden">
             <button type="button" onclick="toggleAccordion(6)" class="w-full text-left px-5 py-4 font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center transition-colors focus:outline-none bg-slate-50/50">
               <span class="text-base">Q6. Is WHR better than body fat percentage?</span>
-              <i id="faq-icon-6" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+              <span class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200" id="faq-icon-6"></span>
             </button>
             <div id="faq-content-6" class="accordion-content px-5">
               <p class="py-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100">
@@ -961,7 +961,7 @@
           <div class="border border-slate-200 rounded-xl overflow-hidden">
             <button type="button" onclick="toggleAccordion(7)" class="w-full text-left px-5 py-4 font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center transition-colors focus:outline-none bg-slate-50/50">
               <span class="text-base">Q7. Is this WHR calculator free forever?</span>
-              <i id="faq-icon-7" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+              <span class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200" id="faq-icon-7"></span>
             </button>
             <div id="faq-content-7" class="accordion-content px-5">
               <p class="py-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100">
@@ -983,28 +983,28 @@
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
           <a href="#" class="p-4 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md transition-all text-center border border-white/10 group">
             <div class="w-10 h-10 rounded-lg bg-indigo-500/30 flex items-center justify-center mx-auto mb-2 text-indigo-300 group-hover:scale-110 transition-transform">
-              <i class="fa-solid fa-percent"></i>
+              <span class="icon-[fa6-solid--percent]"></span>
             </div>
             <span class="text-xs font-semibold block text-slate-100">Body Fat Calculator</span>
           </a>
 
           <a href="#" class="p-4 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md transition-all text-center border border-white/10 group">
             <div class="w-10 h-10 rounded-lg bg-indigo-500/30 flex items-center justify-center mx-auto mb-2 text-indigo-300 group-hover:scale-110 transition-transform">
-              <i class="fa-solid fa-weight-scale"></i>
+              <span class="icon-[fa6-solid--weight-scale]"></span>
             </div>
             <span class="text-xs font-semibold block text-slate-100">Ideal Weight Calculator</span>
           </a>
 
           <a href="#" class="p-4 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md transition-all text-center border border-white/10 group">
             <div class="w-10 h-10 rounded-lg bg-indigo-500/30 flex items-center justify-center mx-auto mb-2 text-indigo-300 group-hover:scale-110 transition-transform">
-              <i class="fa-solid fa-heart-pulse"></i>
+              <span class="icon-[fa6-solid--heart-pulse]"></span>
             </div>
             <span class="text-xs font-semibold block text-slate-100">BMI Calculator</span>
           </a>
 
           <a href="#" class="p-4 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md transition-all text-center border border-white/10 group">
             <div class="w-10 h-10 rounded-lg bg-indigo-500/30 flex items-center justify-center mx-auto mb-2 text-indigo-300 group-hover:scale-110 transition-transform">
-              <i class="fa-solid fa-fire"></i>
+              <span class="icon-[fa6-solid--fire]"></span>
             </div>
             <span class="text-xs font-semibold block text-slate-100">BMR Calculator</span>
           </a>
@@ -1034,7 +1034,7 @@
         <div class="space-y-4">
           <div class="flex items-center gap-2 text-white font-bold text-lg">
             <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
-              <i class="fa-solid fa-calculator"></i>
+              <span class="icon-[fa6-solid--calculator]"></span>
             </div>
             <span>Calculator<span class="text-indigo-400">-Pro</span></span>
           </div>

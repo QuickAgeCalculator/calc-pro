@@ -28,7 +28,7 @@
     
 
     <!-- FontAwesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
 
     <!-- Tailwind Configuration -->
     
@@ -159,7 +159,7 @@
       <!-- Brand Logo & Name -->
       <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
         <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
-          <i class="fa-solid fa-calculator text-lg"></i>
+          <span class="icon-[fa6-solid--calculator] text-lg"></span>
         </div>
         <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
           Calculator<span class="text-indigo-600">-Pro</span>
@@ -356,7 +356,7 @@
         <!-- HERO SECTION ABOVE THE FOLD -->
         <section class="text-center max-w-4xl mx-auto space-y-4">
             <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-indigo-50 text-indigo-700 border border-indigo-100">
-                <i class="fa-solid fa-sparkles text-indigo-500"></i> Updated for 2026 Academic Standards
+                <span class="icon-[lucide--sparkles] text-indigo-500"></span> Updated for 2026 Academic Standards
             </span>
             <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
                 Marks to Percentage Calculator – Convert Marks into Percentage
@@ -377,10 +377,10 @@
                 <!-- Tool Switcher Tabs -->
                 <div class="flex flex-col sm:flex-row gap-2 p-1.5 bg-slate-100/80 rounded-2xl">
                     <button id="tab-marks-to-pct" type="button" class="flex-1 py-3 px-4 rounded-xl text-sm font-semibold transition-all shadow-sm bg-white text-indigo-600 flex items-center justify-center gap-2" onclick="switchToolTab('marks-to-pct')">
-                        <i class="fa-solid fa-calculator"></i> Marks to Percentage
+                        <span class="icon-[fa6-solid--calculator]"></span> Marks to Percentage
                     </button>
                     <button id="tab-pct-to-marks" type="button" class="flex-1 py-3 px-4 rounded-xl text-sm font-semibold transition-all text-slate-600 hover:text-slate-900 flex items-center justify-center gap-2" onclick="switchToolTab('pct-to-marks')">
-                        <i class="fa-solid fa-arrows-rotate"></i> Percentage to Marks (Reverse)
+                        <span class="icon-[fa6-solid--arrows-rotate]"></span> Percentage to Marks (Reverse)
                     </button>
                 </div>
 
@@ -436,7 +436,7 @@
 
                         <div class="flex flex-wrap items-center justify-between gap-3 pt-2">
                             <button type="button" onclick="addSubjectRow()" class="px-4 py-2 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 rounded-xl text-sm font-semibold transition flex items-center gap-2">
-                                <i class="fa-solid fa-plus text-xs"></i> Add Subject
+                                <span class="icon-[fa6-solid--plus] text-xs"></span> Add Subject
                             </button>
                             <div class="text-xs text-slate-500">
                                 Total Subjects: <span id="subject-count-badge" class="font-bold text-slate-800">5</span>
@@ -447,10 +447,10 @@
                     <!-- CALCULATOR BUTTON ACTIONS -->
                     <div class="flex flex-col sm:flex-row gap-3 pt-4 border-t border-slate-100">
                         <button type="button" onclick="triggerMainCalculate()" class="flex-1 py-3.5 px-6 bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white font-bold rounded-xl shadow-lg shadow-indigo-200 transition text-center flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-calculator"></i> Calculate Percentage
+                            <span class="icon-[fa6-solid--calculator]"></span> Calculate Percentage
                         </button>
                         <button type="button" onclick="resetCalculator()" class="py-3.5 px-6 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold rounded-xl transition text-center flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-arrow-rotate-left"></i> Reset
+                            <span class="icon-[fa6-solid--arrow-rotate-left]"></span> Reset
                         </button>
                     </div>
 
@@ -465,7 +465,7 @@
                                 </div>
                             </div>
                             <button type="button" onclick="copyResultToClipboard()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-xl text-xs font-semibold transition flex items-center gap-2 border border-slate-700">
-                                <i class="fa-solid fa-copy"></i> Copy Result
+                                <span class="icon-[fa6-solid--copy]"></span> Copy Result
                             </button>
                         </div>
 
@@ -536,7 +536,7 @@
             <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100 space-y-6">
                 <div>
                     <h3 class="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
-                        <i class="fa-solid fa-square-root-variable text-indigo-600"></i> Basic Formula
+                        <span class="icon-[fa6-solid--square-root-variable] text-indigo-600"></span> Basic Formula
                     </h3>
                     <div class="bg-slate-50 border border-slate-200 p-4 rounded-xl text-center text-lg sm:text-xl font-bold text-indigo-700">
                         Percentage (%) = (Marks Obtained ÷ Total Marks) × 100
@@ -706,7 +706,7 @@
                 <div class="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm transition">
                     <button type="button" class="w-full p-5 text-left font-bold text-slate-800 hover:text-indigo-600 flex items-center justify-between gap-4 focus:outline-none" onclick="toggleAccordion('faq-1')">
                         <span>How to calculate percentage from marks?</span>
-                        <i id="icon-faq-1" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                        <span id="icon-faq-1" class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
                     </button>
                     <div id="faq-1" class="accordion-content px-5 pb-5 text-sm text-slate-600 leading-relaxed">
                         To calculate percentage from marks, divide the total marks obtained by the total maximum possible marks, and then multiply by 100. For instance, if you score 400 out of 500, (400 ÷ 500) × 100 = 80%.
@@ -717,7 +717,7 @@
                 <div class="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm transition">
                     <button type="button" class="w-full p-5 text-left font-bold text-slate-800 hover:text-indigo-600 flex items-center justify-between gap-4 focus:outline-none" onclick="toggleAccordion('faq-2')">
                         <span>What is the formula to convert marks into percentage?</span>
-                        <i id="icon-faq-2" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                        <span id="icon-faq-2" class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
                     </button>
                     <div id="faq-2" class="accordion-content px-5 pb-5 text-sm text-slate-600 leading-relaxed">
                         The universally accepted formula is: <br><strong>Percentage (%) = (Marks Obtained ÷ Total Marks) × 100</strong>.
@@ -728,7 +728,7 @@
                 <div class="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm transition">
                     <button type="button" class="w-full p-5 text-left font-bold text-slate-800 hover:text-indigo-600 flex items-center justify-between gap-4 focus:outline-none" onclick="toggleAccordion('faq-3')">
                         <span>How to calculate percentage of 5 subjects?</span>
-                        <i id="icon-faq-3" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                        <span id="icon-faq-3" class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
                     </button>
                     <div id="faq-3" class="accordion-content px-5 pb-5 text-sm text-slate-600 leading-relaxed">
                         Add up your marks across all 5 subjects. Assuming each subject is out of 100 (total 500 marks), divide your total scored marks by 500 and multiply by 100.
@@ -739,7 +739,7 @@
                 <div class="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm transition">
                     <button type="button" class="w-full p-5 text-left font-bold text-slate-800 hover:text-indigo-600 flex items-center justify-between gap-4 focus:outline-none" onclick="toggleAccordion('faq-4')">
                         <span>How to convert 450 marks out of 500 into percentage?</span>
-                        <i id="icon-faq-4" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                        <span id="icon-faq-4" class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
                     </button>
                     <div id="faq-4" class="accordion-content px-5 pb-5 text-sm text-slate-600 leading-relaxed">
                         Divide 450 by 500 to get 0.9. Multiply 0.9 by 100 to get <strong>90%</strong>.
@@ -750,7 +750,7 @@
                 <div class="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm transition">
                     <button type="button" class="w-full p-5 text-left font-bold text-slate-800 hover:text-indigo-600 flex items-center justify-between gap-4 focus:outline-none" onclick="toggleAccordion('faq-5')">
                         <span>Can I calculate percentage if total marks are different for subjects?</span>
-                        <i id="icon-faq-5" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                        <span id="icon-faq-5" class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
                     </button>
                     <div id="faq-5" class="accordion-content px-5 pb-5 text-sm text-slate-600 leading-relaxed">
                         Yes! Simply sum all the marks you obtained in all subjects, sum all the different maximum marks together, and divide total obtained by overall maximum marks, then multiply by 100.
@@ -761,7 +761,7 @@
                 <div class="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm transition">
                     <button type="button" class="w-full p-5 text-left font-bold text-slate-800 hover:text-indigo-600 flex items-center justify-between gap-4 focus:outline-none" onclick="toggleAccordion('faq-6')">
                         <span>How to calculate percentage in CBSE / ICSE / State Board?</span>
-                        <i id="icon-faq-6" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                        <span id="icon-faq-6" class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
                     </button>
                     <div id="faq-6" class="accordion-content px-5 pb-5 text-sm text-slate-600 leading-relaxed">
                         Most board exams evaluate percentage based on the main 5 subjects (or best of 5 depending on specific board guidelines). Sum the marks of those 5 subjects and divide by 500.
@@ -772,7 +772,7 @@
                 <div class="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm transition">
                     <button type="button" class="w-full p-5 text-left font-bold text-slate-800 hover:text-indigo-600 flex items-center justify-between gap-4 focus:outline-none" onclick="toggleAccordion('faq-7')">
                         <span>What is 75 marks out of 100 in percentage?</span>
-                        <i id="icon-faq-7" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                        <span id="icon-faq-7" class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
                     </button>
                     <div id="faq-7" class="accordion-content px-5 pb-5 text-sm text-slate-600 leading-relaxed">
                         Since the maximum base is 100, 75 marks out of 100 equals exactly <strong>75%</strong>.
@@ -783,7 +783,7 @@
                 <div class="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm transition">
                     <button type="button" class="w-full p-5 text-left font-bold text-slate-800 hover:text-indigo-600 flex items-center justify-between gap-4 focus:outline-none" onclick="toggleAccordion('faq-8')">
                         <span>How to convert percentage back to marks?</span>
-                        <i id="icon-faq-8" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                        <span id="icon-faq-8" class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
                     </button>
                     <div id="faq-8" class="accordion-content px-5 pb-5 text-sm text-slate-600 leading-relaxed">
                         To find marks from percentage: Multiply your percentage target by the total maximum marks and divide by 100. Example: 80% of 500 = (80 × 500) ÷ 100 = 400 marks.
@@ -803,7 +803,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 <a href="#" class="p-5 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:border-indigo-200 transition group">
                     <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white transition">
-                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span class="icon-[fa6-solid--graduation-cap]"></span>
                     </div>
                     <h3 class="font-bold text-slate-800 group-hover:text-indigo-600 transition">CGPA to Percentage</h3>
                     <p class="text-xs text-slate-500 mt-1">Convert cumulative GPA to overall percentage easily.</p>
@@ -811,7 +811,7 @@
 
                 <a href="#" class="p-5 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:border-indigo-200 transition group">
                     <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white transition">
-                        <i class="fa-solid fa-chart-line"></i>
+                        <span class="icon-[fa6-solid--chart-line]"></span>
                     </div>
                     <h3 class="font-bold text-slate-800 group-hover:text-indigo-600 transition">SGPA to Percentage</h3>
                     <p class="text-xs text-slate-500 mt-1">Semester grade point converter for college students.</p>
@@ -819,7 +819,7 @@
 
                 <a href="#" class="p-5 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:border-indigo-200 transition group">
                     <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white transition">
-                        <i class="fa-solid fa-percent"></i>
+                        <span class="icon-[fa6-solid--percent]"></span>
                     </div>
                     <h3 class="font-bold text-slate-800 group-hover:text-indigo-600 transition">Percentage to CGPA</h3>
                     <p class="text-xs text-slate-500 mt-1">Turn your board percentage back into CGPA format.</p>
@@ -827,7 +827,7 @@
 
                 <a href="#" class="p-5 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:border-indigo-200 transition group">
                     <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white transition">
-                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                        <span class="icon-[fa6-solid--arrow-right-arrow-left]"></span>
                     </div>
                     <h3 class="font-bold text-slate-800 group-hover:text-indigo-600 transition">SGPA to CGPA</h3>
                     <p class="text-xs text-slate-500 mt-1">Calculate CGPA from multiple semester SGPA scores.</p>
@@ -835,7 +835,7 @@
 
                 <a href="#" class="p-5 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:border-indigo-200 transition group">
                     <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white transition">
-                        <i class="fa-solid fa-award"></i>
+                        <span class="icon-[fa6-solid--award]"></span>
                     </div>
                     <h3 class="font-bold text-slate-800 group-hover:text-indigo-600 transition">Grade Calculator</h3>
                     <p class="text-xs text-slate-500 mt-1">Determine final letter grades and honors pass status.</p>
@@ -843,7 +843,7 @@
 
                 <a href="#" class="p-5 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:border-indigo-200 transition group">
                     <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white transition">
-                        <i class="fa-solid fa-clock"></i>
+                        <span class="icon-[fa6-solid--clock]"></span>
                     </div>
                     <h3 class="font-bold text-slate-800 group-hover:text-indigo-600 transition">Time Zone Calculator</h3>
                     <p class="text-xs text-slate-500 mt-1">Convert times across globally distributed zones.</p>
@@ -862,7 +862,7 @@
         <div class="space-y-4">
           <div class="flex items-center gap-2 text-white font-bold text-lg">
             <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
-              <i class="fa-solid fa-calculator"></i>
+              <span class="icon-[fa6-solid--calculator]"></span>
             </div>
             <span>Calculator<span class="text-indigo-400">-Pro</span></span>
           </div>
@@ -914,7 +914,7 @@
     <!-- Toast Notification Container -->
     <div id="toast-container" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
         <div class="bg-slate-900 text-white px-4 py-3 rounded-xl shadow-xl border border-slate-700 flex items-center gap-3 text-sm">
-            <i class="fa-solid fa-circle-check text-emerald-400"></i>
+            <span class="icon-[fa6-solid--circle-check] text-emerald-400"></span>
             <span id="toast-message">Result copied to clipboard!</span>
         </div>
     </div>

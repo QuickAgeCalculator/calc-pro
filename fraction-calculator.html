@@ -18,7 +18,7 @@
 
     <!-- Fonts & Icons -->
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
 
     <!-- Tailwind CSS CDN -->
     
@@ -172,7 +172,7 @@
       <!-- Brand Logo & Name -->
       <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
         <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
-          <i class="fa-solid fa-calculator text-lg"></i>
+          <span class="icon-[fa6-solid--calculator]"></span>
         </div>
         <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
           Calculator<span class="text-indigo-600">-Pro</span>
@@ -371,7 +371,7 @@
             <!-- Hero Heading Block -->
             <div class="text-center max-w-3xl mx-auto mb-8">
                 <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700 mb-4 shadow-sm border border-indigo-200">
-                    <i class="fa-solid fa-wand-magic-sparkles"></i> Step-by-Step Solutions
+                    <span class="icon-[fa6-solid--wand-magic-sparkles]"></span> Step-by-Step Solutions
                 </span>
                 <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
                     Free Fraction Calculator
@@ -383,16 +383,16 @@
                 <!-- Quick Feature Badges -->
                 <div class="mt-6 flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-xs sm:text-sm font-medium text-slate-700">
                     <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white shadow-sm border border-slate-200">
-                        <i class="fa-solid fa-check text-emerald-500"></i> Step-by-step solutions
+                        <span class="icon-[fa6-solid--check] text-emerald-500"></span> Step-by-step solutions
                     </span>
                     <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white shadow-sm border border-slate-200">
-                        <i class="fa-solid fa-check text-emerald-500"></i> Mixed Numbers
+                        <span class="icon-[fa6-solid--check] text-emerald-500"></span> Mixed Numbers
                     </span>
                     <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white shadow-sm border border-slate-200">
-                        <i class="fa-solid fa-check text-emerald-500"></i> Instant Results
+                        <span class="icon-[fa6-solid--check] text-emerald-500"></span> Instant Results
                     </span>
                     <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white shadow-sm border border-slate-200">
-                        <i class="fa-solid fa-check text-emerald-500"></i> 100% Free
+                        <span class="icon-[fa6-solid--check] text-emerald-500"></span> 100% Free
                     </span>
                 </div>
             </div>
@@ -430,17 +430,17 @@
                         <!-- Action Buttons -->
                         <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
                             <button type="submit" class="w-full sm:w-auto px-8 py-3.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-base rounded-xl shadow-lg shadow-indigo-200 hover:shadow-indigo-300 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 flex items-center justify-center gap-2">
-                                <i class="fa-solid fa-calculator"></i> Calculate
+                                <span class="icon-[fa6-solid--calculator]"></span> Calculate
                             </button>
                             <button type="button" onclick="resetCalculator()" class="w-full sm:w-auto px-6 py-3.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-base rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-slate-400 flex items-center justify-center gap-2">
-                                <i class="fa-solid fa-rotate-left"></i> Clear
+                                <span class="icon-[fa6-solid--rotate-left]"></span> Clear
                             </button>
                         </div>
                     </form>
 
                     <!-- ERROR ALERT -->
                     <div id="error-box" class="hidden mt-6 p-4 bg-rose-50 border border-rose-200 rounded-xl text-rose-700 text-sm flex items-start gap-3" role="alert">
-                        <i class="fa-solid fa-circle-exclamation text-rose-500 text-lg mt-0.5"></i>
+                        <span class="icon-[fa6-solid--circle-exclamation] text-rose-500 text-lg mt-0.5"></span>
                         <span id="error-message">Please enter valid numeric values.</span>
                     </div>
 
@@ -450,7 +450,7 @@
                             <div class="flex items-center justify-between flex-wrap gap-2 mb-4">
                                 <h3 class="text-xs font-bold uppercase tracking-wider text-indigo-700">Calculated Result</h3>
                                 <button type="button" onclick="copyResultToClipboard()" class="text-xs font-medium text-indigo-600 hover:text-indigo-800 bg-white px-3 py-1.5 rounded-lg border border-indigo-200 shadow-sm flex items-center gap-1.5 transition-colors">
-                                    <i id="copy-icon" class="fa-regular fa-copy"></i> <span id="copy-text">Copy Result</span>
+                                    <span class="icon-[fa6-regular--copy]"></span> <span id="copy-text">Copy Result</span>
                                 </button>
                             </div>
 
@@ -484,7 +484,7 @@
                             <!-- Step-by-Step Mathematical Explanation -->
                             <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm text-left">
                                 <h4 class="text-sm font-bold text-slate-800 mb-3 flex items-center gap-2">
-                                    <i class="fa-solid fa-list-check text-indigo-600"></i> Step-by-Step Solution:
+                                    <span class="icon-[fa6-solid--list-check] text-indigo-600"></span> Step-by-Step Solution:
                                 </h4>
                                 <div id="solution-steps-list" class="space-y-3 text-sm text-slate-700 leading-relaxed font-sans">
                                     <!-- Dynamic calculation steps insertion -->
@@ -542,7 +542,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm flex items-start gap-4">
                     <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center flex-shrink-0 text-lg">
-                        <i class="fa-solid fa-plus-minus"></i>
+                        <span class="icon-[fa6-solid--plus-minus]"></span>
                     </div>
                     <div>
                         <h3 class="font-bold text-slate-800 text-base mb-1">Basic Arithmetic</h3>
@@ -552,7 +552,7 @@
 
                 <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm flex items-start gap-4">
                     <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center flex-shrink-0 text-lg">
-                        <i class="fa-solid fa-compress"></i>
+                        <span class="icon-[fa6-solid--compress]"></span>
                     </div>
                     <div>
                         <h3 class="font-bold text-slate-800 text-base mb-1">Fraction Simplifier</h3>
@@ -562,7 +562,7 @@
 
                 <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm flex items-start gap-4">
                     <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center flex-shrink-0 text-lg">
-                        <i class="fa-solid fa-shuffle"></i>
+                        <span class="icon-[fa6-solid--shuffle]"></span>
                     </div>
                     <div>
                         <h3 class="font-bold text-slate-800 text-base mb-1">Improper ↔ Mixed</h3>
@@ -572,7 +572,7 @@
 
                 <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm flex items-start gap-4">
                     <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center flex-shrink-0 text-lg">
-                        <i class="fa-solid fa-percent"></i>
+                        <span class="icon-[fa6-solid--percent]"></span>
                     </div>
                     <div>
                         <h3 class="font-bold text-slate-800 text-base mb-1">Decimal & Percentage</h3>
@@ -582,7 +582,7 @@
 
                 <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm flex items-start gap-4">
                     <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center flex-shrink-0 text-lg">
-                        <i class="fa-solid fa-minus"></i>
+                        <span class="icon-[fa6-solid--minus]"></span>
                     </div>
                     <div>
                         <h3 class="font-bold text-slate-800 text-base mb-1">Negative Numbers</h3>
@@ -592,7 +592,7 @@
 
                 <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm flex items-start gap-4">
                     <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center flex-shrink-0 text-lg">
-                        <i class="fa-solid fa-diagram-project"></i>
+                        <span class="icon-[fa6-solid--diagram-project]"></span>
                     </div>
                     <div>
                         <h3 class="font-bold text-slate-800 text-base mb-1">Detailed LCD Working</h3>
@@ -686,7 +686,7 @@
             <!-- Addition Formula -->
             <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80">
                 <h3 class="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
-                    <i class="fa-solid fa-plus text-indigo-600"></i> How to Add Fractions
+                    <span class="icon-[fa6-solid--plus] text-indigo-600"></span> How to Add Fractions
                 </h3>
                 <p class="text-slate-600 text-sm mb-4">
                     To add fractions with identical denominators, simply add the numerators. If the denominators are different, find the Least Common Denominator (LCD) first:
@@ -700,7 +700,7 @@
             <!-- Subtraction Formula -->
             <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80">
                 <h3 class="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
-                    <i class="fa-solid fa-minus text-indigo-600"></i> How to Subtract Fractions
+                    <span class="icon-[fa6-solid--minus] text-indigo-600"></span> How to Subtract Fractions
                 </h3>
                 <p class="text-slate-600 text-sm mb-4">
                     Convert both fractions to common denominators, then subtract the second numerator from the first:
@@ -714,7 +714,7 @@
             <!-- Multiplication Formula -->
             <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80">
                 <h3 class="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
-                    <i class="fa-solid fa-xmark text-indigo-600"></i> How to Multiply Fractions
+                    <span class="icon-[fa6-solid--xmark] text-indigo-600"></span> How to Multiply Fractions
                 </h3>
                 <p class="text-slate-600 text-sm mb-4">
                     Multiply top numbers together and bottom numbers together directly:
@@ -728,7 +728,7 @@
             <!-- Division Formula -->
             <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80">
                 <h3 class="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
-                    <i class="fa-solid fa-divide text-indigo-600"></i> How to Divide Fractions (Reciprocal Method)
+                    <span class="icon-[fa6-solid--divide] text-indigo-600"></span> How to Divide Fractions (Reciprocal Method)
                 </h3>
                 <p class="text-slate-600 text-sm mb-4">
                     Multiply the first fraction by the reciprocal (flipped version) of the second fraction:
@@ -742,7 +742,7 @@
             <!-- Simplifying Formula -->
             <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80">
                 <h3 class="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
-                    <i class="fa-solid fa-compress text-indigo-600"></i> How to Simplify Fractions
+                    <span class="icon-[fa6-solid--compress] text-indigo-600"></span> How to Simplify Fractions
                 </h3>
                 <p class="text-slate-600 text-sm mb-4">
                     Divide both numerator and denominator by their Greatest Common Divisor (GCD):
@@ -812,17 +812,17 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                 <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100">
-                    <i class="fa-solid fa-bolt text-indigo-600 text-2xl mb-3"></i>
+                    <span class="icon-[fa6-solid--bolt] text-indigo-600 text-2xl mb-3"></span>
                     <h3 class="font-bold text-slate-800 text-base mb-1">Instant Accurate Results</h3>
                     <p class="text-xs text-slate-600">Calculates precise fraction arithmetic in less than a fraction of a second.</p>
                 </div>
                 <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100">
-                    <i class="fa-solid fa-graduation-cap text-indigo-600 text-2xl mb-3"></i>
+                    <span class="icon-[fa6-solid--graduation-cap] text-indigo-600 text-2xl mb-3"></span>
                     <h3 class="font-bold text-slate-800 text-base mb-1">Learn While Calculating</h3>
                     <p class="text-xs text-slate-600">Clear step-by-step mathematical explanations help you understand homework.</p>
                 </div>
                 <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100">
-                    <i class="fa-solid fa-mobile-screen-button text-indigo-600 text-2xl mb-3"></i>
+                    <span class="icon-[fa6-solid--mobile-screen-button] text-indigo-600 text-2xl mb-3"></span>
                     <h3 class="font-bold text-slate-800 text-base mb-1">Mobile-Friendly & Offline</h3>
                     <p class="text-xs text-slate-600">Works smoothly on smartphone, tablet, desktop without slow server lag.</p>
                 </div>
@@ -843,7 +843,7 @@
                 <div class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm">
                     <button type="button" onclick="toggleAccordion('faq-1')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none focus:bg-slate-50">
                         <span>Q1. Is this Fraction Calculator free to use?</span>
-                        <i id="faq-1-icon" class="fa-solid fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+                        <span id="faq-1-icon" class="icon-[fa6-solid--chevron-down] text-indigo-600 transition-transform duration-200"></span>
                     </button>
                     <div id="faq-1" class="accordion-content px-6 text-sm text-slate-600 pb-4">
                         Yes, our fraction calculator is 100% completely free to use without limits, popups, or required registration.
@@ -854,7 +854,7 @@
                 <div class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm">
                     <button type="button" onclick="toggleAccordion('faq-2')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none focus:bg-slate-50">
                         <span>Q2. Does it show step-by-step solutions?</span>
-                        <i id="faq-2-icon" class="fa-solid fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+                        <span id="faq-2-icon" class="icon-[fa6-solid--chevron-down] text-indigo-600 transition-transform duration-200"></span>
                     </button>
                     <div id="faq-2" class="accordion-content px-6 text-sm text-slate-600 pb-4">
                         Yes! Every calculation provides a detailed step-by-step mathematical working box that explains how the LCD, cross-multiplication, and reduction were derived.
@@ -865,7 +865,7 @@
                 <div class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm">
                     <button type="button" onclick="toggleAccordion('faq-3')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none focus:bg-slate-50">
                         <span>Q3. Can I calculate mixed numbers?</span>
-                        <i id="faq-3-icon" class="fa-solid fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+                        <span id="faq-3-icon" class="icon-[fa6-solid--chevron-down] text-indigo-600 transition-transform duration-200"></span>
                     </button>
                     <div id="faq-3" class="accordion-content px-6 text-sm text-slate-600 pb-4">
                         Absolutely. Switch to "Mixed Number" tab to add, subtract, multiply, or divide whole integers combined with fractions.
@@ -876,7 +876,7 @@
                 <div class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm">
                     <button type="button" onclick="toggleAccordion('faq-4')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none focus:bg-slate-50">
                         <span>Q4. How do I simplify a fraction using this calculator?</span>
-                        <i id="faq-4-icon" class="fa-solid fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+                        <span id="faq-4-icon" class="icon-[fa6-solid--chevron-down] text-indigo-600 transition-transform duration-200"></span>
                     </button>
                     <div id="faq-4" class="accordion-content px-6 text-sm text-slate-600 pb-4">
                         Select the "Simplify Fractions" tab, enter your numerator and denominator, and click Calculate to reduce the fraction using its Greatest Common Divisor (GCD).
@@ -887,7 +887,7 @@
                 <div class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm">
                     <button type="button" onclick="toggleAccordion('faq-5')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none focus:bg-slate-50">
                         <span>Q5. Does it work on mobile?</span>
-                        <i id="faq-5-icon" class="fa-solid fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+                        <span id="faq-5-icon" class="icon-[fa6-solid--chevron-down] text-indigo-600 transition-transform duration-200"></span>
                     </button>
                     <div id="faq-5" class="accordion-content px-6 text-sm text-slate-600 pb-4">
                         Yes, Calculator Pro is engineered with a mobile-first fluid design that works perfectly on iOS, Android, tablets, and desktop computers.
@@ -898,7 +898,7 @@
                 <div class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm">
                     <button type="button" onclick="toggleAccordion('faq-6')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none focus:bg-slate-50">
                         <span>Q6. Are my calculations saved?</span>
-                        <i id="faq-6-icon" class="fa-solid fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+                        <span id="faq-6-icon" class="icon-[fa6-solid--chevron-down] text-indigo-600 transition-transform duration-200"></span>
                     </button>
                     <div id="faq-6" class="accordion-content px-6 text-sm text-slate-600 pb-4">
                         Calculations are held safely in your active session browser memory so you can easily review recent step solutions.
@@ -909,7 +909,7 @@
                 <div class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm">
                     <button type="button" onclick="toggleAccordion('faq-7')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none focus:bg-slate-50">
                         <span>Q7. Can I convert fraction to decimal?</span>
-                        <i id="faq-7-icon" class="fa-solid fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+                        <span id="faq-7-icon" class="icon-[fa6-solid--chevron-down] text-indigo-600 transition-transform duration-200"></span>
                     </button>
                     <div id="faq-7" class="accordion-content px-6 text-sm text-slate-600 pb-4">
                         Yes, click the "Fraction to Decimal" tab or check the auto-generated decimal value in any fraction result screen.
@@ -920,7 +920,7 @@
                 <div class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm">
                     <button type="button" onclick="toggleAccordion('faq-8')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none focus:bg-slate-50">
                         <span>Q8. What is the difference between proper and improper fraction?</span>
-                        <i id="faq-8-icon" class="fa-solid fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+                        <span id="faq-8-icon" class="icon-[fa6-solid--chevron-down] text-indigo-600 transition-transform duration-200"></span>
                     </button>
                     <div id="faq-8" class="accordion-content px-6 text-sm text-slate-600 pb-4">
                         A proper fraction has a numerator smaller than its denominator (e.g. 3/4). An improper fraction has a numerator greater than or equal to its denominator (e.g. 7/4).
@@ -931,7 +931,7 @@
                 <div class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm">
                     <button type="button" onclick="toggleAccordion('faq-9')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none focus:bg-slate-50">
                         <span>Q9. How to add fractions with different denominators?</span>
-                        <i id="faq-9-icon" class="fa-solid fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+                        <span id="faq-9-icon" class="icon-[fa6-solid--chevron-down] text-indigo-600 transition-transform duration-200"></span>
                     </button>
                     <div id="faq-9" class="accordion-content px-6 text-sm text-slate-600 pb-4">
                         Find the Least Common Denominator (LCD), convert each fraction into an equivalent fraction with that LCD, add the numerators together, and simplify.
@@ -942,7 +942,7 @@
                 <div class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm">
                     <button type="button" onclick="toggleAccordion('faq-10')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none focus:bg-slate-50">
                         <span>Q10. Is this fraction calculator accurate?</span>
-                        <i id="faq-10-icon" class="fa-solid fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+                        <span id="faq-10-icon" class="icon-[fa6-solid--chevron-down] text-indigo-600 transition-transform duration-200"></span>
                     </button>
                     <div id="faq-10" class="accordion-content px-6 text-sm text-slate-600 pb-4">
                         Yes, Calculator Pro utilizes client-side math routines to ensure 100% mathematical precision for fractions and decimal outputs.
@@ -977,7 +977,7 @@
         <div class="space-y-4">
           <div class="flex items-center gap-2 text-white font-bold text-lg">
             <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
-              <i class="fa-solid fa-calculator"></i>
+              <span class="icon-[fa6-solid--calculator]"></span>
             </div>
             <span>Calculator<span class="text-indigo-400">-Pro</span></span>
           </div>

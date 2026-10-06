@@ -24,14 +24,11 @@
     <meta property="twitter:image" content="https://placehold.co/1200x630/2563eb/ffffff?text=Calculator+Pro+-+Age+Calculator">
 
     <!-- FontAwesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
 
+    <!-- Tailwind CSS CDN -->
     
-    <!-- Custom CSS -->
-    
-
-    <link rel="stylesheet" href="./css/styles.css">
-
+<link rel="stylesheet" href="./css/styles.css">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -147,7 +144,7 @@
       <!-- Brand Logo & Name -->
       <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
         <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
-          <i class="fa-solid fa-calculator text-lg"></i>
+          <span class="icon-[fa6-solid--calculator] text-lg"></span>
         </div>
         <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
           Calculator<span class="text-indigo-600">-Pro</span>
@@ -350,7 +347,7 @@
           <!-- Hero Text Left -->
           <div class="lg:col-span-5 space-y-6">
             <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-100/80 border border-indigo-200 text-indigo-700 text-xs font-semibold uppercase tracking-wide">
-              <i class="fa-solid fa-sparkles"></i> Accurate Chronological Tool
+              <span class="icon-[lucide--sparkles]"></span> Accurate Chronological Tool
             </div>
             <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
               Age Calculator – <span class="text-indigo-600">How Old Am I?</span>
@@ -362,23 +359,23 @@
             <!-- Short Benefits -->
             <ul class="space-y-3 pt-2 text-sm sm:text-base text-slate-700">
               <li class="flex items-center gap-3">
-                <span class="flex items-center justify-center w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 font-bold text-xs"><i class="fa-solid fa-check"></i></span>
+                <span class="flex items-center justify-center w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 font-bold text-xs"><span class="icon-[fa6-solid--check]"></span></span>
                 <span><strong>Free to use</strong> – 100% free with no hidden limits</span>
               </li>
               <li class="flex items-center gap-3">
-                <span class="flex items-center justify-center w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 font-bold text-xs"><i class="fa-solid fa-check"></i></span>
+                <span class="flex items-center justify-center w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 font-bold text-xs"><span class="icon-[fa6-solid--check]"></span></span>
                 <span><strong>No registration required</strong> – Immediate instant access</span>
               </li>
               <li class="flex items-center gap-3">
-                <span class="flex items-center justify-center w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 font-bold text-xs"><i class="fa-solid fa-check"></i></span>
+                <span class="flex items-center justify-center w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 font-bold text-xs"><span class="icon-[fa6-solid--check]"></span></span>
                 <span><strong>Fast and accurate</strong> – Accounts for leap years and month counts</span>
               </li>
               <li class="flex items-center gap-3">
-                <span class="flex items-center justify-center w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 font-bold text-xs"><i class="fa-solid fa-check"></i></span>
+                <span class="flex items-center justify-center w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 font-bold text-xs"><span class="icon-[fa6-solid--check]"></span></span>
                 <span><strong>Works on mobile and desktop</strong> – Responsive web experience</span>
               </li>
               <li class="flex items-center gap-3">
-                <span class="flex items-center justify-center w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 font-bold text-xs"><i class="fa-solid fa-check"></i></span>
+                <span class="flex items-center justify-center w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 font-bold text-xs"><span class="icon-[fa6-solid--check]"></span></span>
                 <span><strong>Calculate age from any date</strong> – Past, present, or future</span>
               </li>
             </ul>
@@ -391,12 +388,12 @@
               <div class="flex items-center justify-between pb-6 mb-6 border-b border-slate-100">
                 <div>
                   <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
-                    <i class="fa-solid fa-calendar-days text-indigo-600"></i> Age Calculator Tool
+                    <span class="icon-[fa6-solid--calendar-days] text-indigo-600"></span> Age Calculator Tool
                   </h2>
                   <p class="text-xs sm:text-sm text-slate-500">Select your date of birth and target calculation date.</p>
                 </div>
                 <span id="leap-year-badge" class="hidden sm:inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-amber-50 text-amber-700 border border-amber-200">
-                  <i class="fa-solid fa-circle-info mr-1.5"></i> Leap Years Included
+                  <span class="icon-[fa6-solid--circle-info] mr-1.5"></span> Leap Years Included
                 </span>
               </div>
 
@@ -427,17 +424,17 @@
                 <!-- Form Action Buttons -->
                 <div class="flex flex-col sm:flex-row gap-3">
                   <button type="submit" class="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl shadow-lg shadow-indigo-200 active:scale-[0.99] transition-all duration-150">
-                    <i class="fa-solid fa-wand-magic-sparkles"></i> Calculate Age
+                    <span class="icon-[fa6-solid--wand-magic-sparkles]"></span> Calculate Age
                   </button>
                   <button type="button" onclick="resetCalculator()" class="px-5 py-3.5 bg-slate-100 hover:bg-slate-200 text-slate-600 font-medium rounded-xl transition-colors text-center">
-                    <i class="fa-solid fa-rotate-left mr-1"></i> Reset
+                    <span class="icon-[fa6-solid--rotate-left] mr-1"></span> Reset
                   </button>
                 </div>
               </form>
 
               <!-- Validation Error Alert -->
               <div id="calc-error" class="hidden mt-4 p-4 bg-rose-50 border border-rose-200 rounded-xl text-rose-700 text-sm flex items-center gap-3">
-                <i class="fa-solid fa-triangle-exclamation text-rose-500 text-lg"></i>
+                <span class="icon-[fa6-solid--triangle-exclamation] text-rose-500 text-lg"></span>
                 <span id="calc-error-msg">Please enter a valid Date of Birth.</span>
               </div>
 
@@ -467,7 +464,7 @@
                   <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                     <div>
                       <div class="flex items-center gap-2 text-amber-100 text-xs font-bold uppercase tracking-wide">
-                        <i class="fa-solid fa-cake-candles"></i> Next Birthday Countdown
+                        <span class="icon-[fa6-solid--cake-candles]"></span> Next Birthday Countdown
                       </div>
                       <p class="text-lg font-bold mt-1" id="next-bday-date">Upcoming Birthday</p>
                       <p class="text-xs text-amber-100" id="next-bday-dayname">Day of week</p>
@@ -531,7 +528,7 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
                   <div class="p-3.5 rounded-xl bg-purple-50 border border-purple-100 flex items-center gap-3">
                     <div class="w-9 h-9 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center text-lg">
-                      <i class="fa-solid fa-star text-base"></i>
+                      <span class="icon-[fa6-solid--star] text-base"></span>
                     </div>
                     <div>
                       <span class="text-slate-500 text-xs block">Zodiac Sign</span>
@@ -540,7 +537,7 @@
                   </div>
                   <div class="p-3.5 rounded-xl bg-blue-50 border border-blue-100 flex items-center gap-3">
                     <div class="w-9 h-9 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-lg">
-                      <i class="fa-solid fa-gem text-base"></i>
+                      <span class="icon-[fa6-solid--gem] text-base"></span>
                     </div>
                     <div>
                       <span class="text-slate-500 text-xs block">Birthstone</span>
@@ -563,7 +560,7 @@
       <!-- Section C: What Is an Age Calculator? -->
       <section class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-sm">
         <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-          <i class="fa-solid fa-circle-question text-indigo-600"></i> What Is an Age Calculator?
+          <span class="icon-[fa6-solid--circle-question] text-indigo-600"></span> What Is an Age Calculator?
         </h2>
         <p class="text-slate-600 leading-relaxed mb-4">
           An <strong>Age Calculator</strong> is an online tool that calculates a person's age based on their date of birth and a selected date. Calculator Pro's free Age Calculator can determine your exact age in years, months and days, making it easy to find out how old you are on any given date.
@@ -571,19 +568,19 @@
         <p class="text-slate-600 leading-relaxed mb-4">You can use this DOB age calculator to:</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
           <div class="flex items-center gap-2 bg-slate-50 p-3 rounded-xl border border-slate-100">
-            <i class="fa-solid fa-circle-check text-indigo-600"></i> Calculate your current age instantly
+            <span class="icon-[fa6-solid--circle-check] text-indigo-600"></span> Calculate your current age instantly
           </div>
           <div class="flex items-center gap-2 bg-slate-50 p-3 rounded-xl border border-slate-100">
-            <i class="fa-solid fa-circle-check text-indigo-600"></i> Find your age on a specific future or past date
+            <span class="icon-[fa6-solid--circle-check] text-indigo-600"></span> Find your age on a specific future or past date
           </div>
           <div class="flex items-center gap-2 bg-slate-50 p-3 rounded-xl border border-slate-100">
-            <i class="fa-solid fa-circle-check text-indigo-600"></i> Calculate age from your date of birth accurately
+            <span class="icon-[fa6-solid--circle-check] text-indigo-600"></span> Calculate age from your date of birth accurately
           </div>
           <div class="flex items-center gap-2 bg-slate-50 p-3 rounded-xl border border-slate-100">
-            <i class="fa-solid fa-circle-check text-indigo-600"></i> Find the number of days until your next birthday
+            <span class="icon-[fa6-solid--circle-check] text-indigo-600"></span> Find the number of days until your next birthday
           </div>
           <div class="flex items-center gap-2 bg-slate-50 p-3 rounded-xl border border-slate-100 col-span-1 sm:col-span-2">
-            <i class="fa-solid fa-circle-check text-indigo-600"></i> Calculate age in years, months, days, hours, and seconds
+            <span class="icon-[fa6-solid--circle-check] text-indigo-600"></span> Calculate age in years, months, days, hours, and seconds
           </div>
         </div>
       </section>
@@ -591,7 +588,7 @@
       <!-- Section D: How to Use This Age Calculator -->
       <section class="space-y-6">
         <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
-          <i class="fa-solid fa-list-check text-indigo-600"></i> How to Use This Age Calculator
+          <span class="icon-[fa6-solid--list-check] text-indigo-600"></span> How to Use This Age Calculator
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-4 gap-4">
           <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm space-y-2">
@@ -620,7 +617,7 @@
       <!-- Section E: What is Exact Age / How Age is Calculated -->
       <section class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-sm space-y-4">
         <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
-          <i class="fa-solid fa-calculator text-indigo-600"></i> What is Exact Age & How Age is Calculated
+          <span class="icon-[fa6-solid--calculator] text-indigo-600"></span> What is Exact Age & How Age is Calculated
         </h2>
         <p class="text-slate-600 leading-relaxed">
           <strong>Chronological age</strong> refers to the exact time passed from the day of a person's birth to a specified target date. While it sounds simple, manual age calculation can be tricky because calendar months vary between 28, 30, and 31 days, and leap years occur every four years (adding February 29th).
@@ -643,36 +640,38 @@
       <!-- Section F: Features of Our Age Calculator -->
       <section class="space-y-6">
         <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
-          <i class="fa-solid fa-cubes text-indigo-600"></i> Features of Our Age Calculator
+          <span class="icon-[fa6-solid--cubes] text-indigo-600"></span> Features of Our Age Calculator
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm space-y-2">
-            <i class="fa-solid fa-clock text-indigo-600 text-xl"></i>
+            <span class="icon-[fa6-solid--clock] text-indigo-600 text-xl"></span>
             <h3 class="font-bold text-slate-800">Exact Breakdown</h3>
             <p class="text-xs text-slate-500">Calculates precise years, months, and days based on exact month lengths.</p>
           </div>
           <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm space-y-2">
-            <i class="fa-solid fa-hourglass-half text-indigo-600 text-xl"></i>
+            
+           <span class="icon-[lucide--hourglass] text-indigo-600 text-xl"></span>
+
             <h3 class="font-bold text-slate-800">Total Time Lived</h3>
             <p class="text-xs text-slate-500">Displays total days, weeks, hours, minutes, and seconds lived.</p>
           </div>
           <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm space-y-2">
-            <i class="fa-solid fa-gift text-indigo-600 text-xl"></i>
+            <span class="icon-[fa6-solid--gift] text-indigo-600 text-xl"></span>
             <h3 class="font-bold text-slate-800">Birthday Countdown</h3>
             <p class="text-xs text-slate-500">Live countdown timer showing remaining time until your next birthday.</p>
           </div>
           <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm space-y-2">
-            <i class="fa-solid fa-calendar-alt text-indigo-600 text-xl"></i>
+            <span class="icon-[lucide--calendar] text-indigo-600 text-xl"></span>
             <h3 class="font-bold text-slate-800">Past & Future Dates</h3>
             <p class="text-xs text-slate-500">Supports age checking on custom past or future historical dates.</p>
           </div>
           <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm space-y-2">
-            <i class="fa-solid fa-shield-halved text-indigo-600 text-xl"></i>
+            <span class="icon-[fa6-solid--shield-halved] text-indigo-600 text-xl"></span>
             <h3 class="font-bold text-slate-800">100% Private</h3>
             <p class="text-xs text-slate-500">Calculations run strictly in your browser. No birth dates are saved.</p>
           </div>
           <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm space-y-2">
-            <i class="fa-solid fa-mobile-screen text-indigo-600 text-xl"></i>
+            <span class="icon-[fa6-solid--mobile-screen] text-indigo-600 text-xl"></span>
             <h3 class="font-bold text-slate-800">Mobile Optimized</h3>
             <p class="text-xs text-slate-500">Fully responsive, fast loading, mobile-first design across all devices.</p>
           </div>
@@ -683,7 +682,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <section class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm space-y-3">
           <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
-            <i class="fa-solid fa-lightbulb text-indigo-600"></i> Why Use an Online Age Calculator?
+            <span class="icon-[fa6-solid--lightbulb] text-indigo-600"></span> Why Use an Online Age Calculator?
           </h2>
           <p class="text-slate-600 text-sm leading-relaxed">
             Doing manual date subtraction is prone to human error due to leap years (366 days) and varying lengths of months (28, 30, or 31 days).
@@ -695,7 +694,7 @@
 
         <section class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm space-y-3">
           <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
-            <i class="fa-solid fa-square-root-variable text-indigo-600"></i> Age Calculation Formula
+            <span class="icon-[fa6-solid--square-root-variable] text-indigo-600"></span> Age Calculation Formula
           </h2>
           <div class="bg-slate-50 p-3 rounded-lg text-xs font-mono text-slate-800">
             Age = Current Date − Date of Birth
@@ -711,7 +710,7 @@
       <!-- Section J: Age Calculator Examples -->
       <section class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-sm space-y-4">
         <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
-          <i class="fa-solid fa-table text-indigo-600"></i> Verified Age Calculator Examples
+          <span class="icon-[fa6-solid--table] text-indigo-600"></span> Verified Age Calculator Examples
         </h2>
         <p class="text-slate-600 text-sm">Below are verified examples computed by our chronological date algorithm:</p>
         <div class="overflow-x-auto">
@@ -752,36 +751,36 @@
       <!-- Section K: When Can You Use an Age Calculator? -->
       <section class="space-y-6">
         <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
-          <i class="fa-solid fa-bullseye text-indigo-600"></i> When Can You Use an Age Calculator?
+          <span class="icon-[fa6-solid--bullseye] text-indigo-600"></span> When Can You Use an Age Calculator?
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm space-y-2">
-            <i class="fa-solid fa-cake-candles text-amber-500 text-lg"></i>
+            <span class="icon-[fa6-solid--cake-candles] text-amber-500 text-lg"></span>
             <h3 class="font-bold text-slate-800">Birthday Planning</h3>
             <p class="text-xs text-slate-500">Know exactly how old someone will be on their next birthday milestone.</p>
           </div>
           <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm space-y-2">
-            <i class="fa-solid fa-graduation-cap text-blue-500 text-lg"></i>
+            <span class="icon-[fa6-solid--graduation-cap] text-blue-500 text-lg"></span>
             <h3 class="font-bold text-slate-800">School & Education</h3>
             <p class="text-xs text-slate-500">Calculate student age on precise school admission cutoff dates.</p>
           </div>
           <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm space-y-2">
-            <i class="fa-solid fa-file-signature text-emerald-500 text-lg"></i>
+            <span class="icon-[fa6-solid--file-signature] text-emerald-500 text-lg"></span>
             <h3 class="font-bold text-slate-800">Forms & Applications</h3>
             <p class="text-xs text-slate-500">Determine chronological age required for official government documents.</p>
           </div>
           <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm space-y-2">
-            <i class="fa-solid fa-piggy-bank text-indigo-500 text-lg"></i>
+            <span class="icon-[fa6-solid--piggy-bank] text-indigo-500 text-lg"></span>
             <h3 class="font-bold text-slate-800">Retirement Planning</h3>
             <p class="text-xs text-slate-500">Estimate your age and exact work duration on future retirement dates.</p>
           </div>
           <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm space-y-2">
-            <i class="fa-solid fa-clipboard-user text-purple-500 text-lg"></i>
+            <span class="icon-[fa6-solid--clipboard-user] text-purple-500 text-lg"></span>
             <h3 class="font-bold text-slate-800">Personal Records</h3>
             <p class="text-xs text-slate-500">Calculate exact age differences between two historical family dates.</p>
           </div>
           <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm space-y-2">
-            <i class="fa-solid fa-champagne-glasses text-rose-500 text-lg"></i>
+            <span class="icon-[fa6-solid--champagne-glasses] text-rose-500 text-lg"></span>
             <h3 class="font-bold text-slate-800">Family & Events</h3>
             <p class="text-xs text-slate-500">Calculate age for birthdays, anniversaries, and family milestones.</p>
           </div>
@@ -791,7 +790,7 @@
       <!-- Section L: How Old Am I in Different Units? -->
       <section class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-sm space-y-4">
         <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
-          <i class="fa-solid fa-clock-rotate-left text-indigo-600"></i> How Old Am I in Different Units?
+          <span class="icon-[fa6-solid--clock-rotate-left] text-indigo-600"></span> How Old Am I in Different Units?
         </h2>
         <p class="text-slate-600 text-sm leading-relaxed">
           Age can be represented in various standard time units depending on context. Here is how your calculated age breaks down:
@@ -837,7 +836,7 @@
           <div class="bg-white rounded-xl border border-slate-200/80 shadow-sm overflow-hidden">
             <button type="button" onclick="toggleFaq(this)" class="w-full px-5 py-4 text-left font-semibold text-slate-800 flex justify-between items-center hover:bg-slate-50 transition-colors">
               <span>Q1. How do I calculate my exact age?</span>
-              <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+              <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-sm transition-transform duration-200"></span>
             </button>
             <div class="accordion-content px-5">
               <p class="py-3 text-sm text-slate-600 border-t border-slate-100 leading-relaxed">
@@ -850,7 +849,7 @@
           <div class="bg-white rounded-xl border border-slate-200/80 shadow-sm overflow-hidden">
             <button type="button" onclick="toggleFaq(this)" class="w-full px-5 py-4 text-left font-semibold text-slate-800 flex justify-between items-center hover:bg-slate-50 transition-colors">
               <span>Q2. Does the calculator account for leap years?</span>
-              <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+              <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-sm transition-transform duration-200"></span>
             </button>
             <div class="accordion-content px-5">
               <p class="py-3 text-sm text-slate-600 border-t border-slate-100 leading-relaxed">
@@ -863,7 +862,7 @@
           <div class="bg-white rounded-xl border border-slate-200/80 shadow-sm overflow-hidden">
             <button type="button" onclick="toggleFaq(this)" class="w-full px-5 py-4 text-left font-semibold text-slate-800 flex justify-between items-center hover:bg-slate-50 transition-colors">
               <span>Q3. Can I check age on a future date?</span>
-              <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+              <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-sm transition-transform duration-200"></span>
             </button>
             <div class="accordion-content px-5">
               <p class="py-3 text-sm text-slate-600 border-t border-slate-100 leading-relaxed">
@@ -877,7 +876,7 @@
           <div class="bg-white rounded-xl border border-slate-200/80 shadow-sm overflow-hidden">
             <button type="button" onclick="toggleFaq(this)" class="w-full px-5 py-4 text-left font-semibold text-slate-800 flex justify-between items-center hover:bg-slate-50 transition-colors">
               <span>Q4. What is chronological age?</span>
-              <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+              <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-sm transition-transform duration-200"></span>
             </button>
             <div class="accordion-content px-5">
               <p class="py-3 text-sm text-slate-600 border-t border-slate-100 leading-relaxed">
@@ -890,7 +889,7 @@
           <div class="bg-white rounded-xl border border-slate-200/80 shadow-sm overflow-hidden">
             <button type="button" onclick="toggleFaq(this)" class="w-full px-5 py-4 text-left font-semibold text-slate-800 flex justify-between items-center hover:bg-slate-50 transition-colors">
               <span>Q5. How many days have I been alive?</span>
-              <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+              <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-sm transition-transform duration-200"></span>
             </button>
             <div class="accordion-content px-5">
               <p class="py-3 text-sm text-slate-600 border-t border-slate-100 leading-relaxed">
@@ -903,7 +902,7 @@
           <div class="bg-white rounded-xl border border-slate-200/80 shadow-sm overflow-hidden">
             <button type="button" onclick="toggleFaq(this)" class="w-full px-5 py-4 text-left font-semibold text-slate-800 flex justify-between items-center hover:bg-slate-50 transition-colors">
               <span>Q6. Difference between Korean age and international age?</span>
-              <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+              <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-sm transition-transform duration-200"></span>
             </button>
             <div class="accordion-content px-5">
               <p class="py-3 text-sm text-slate-600 border-t border-slate-100 leading-relaxed">
@@ -916,7 +915,7 @@
           <div class="bg-white rounded-xl border border-slate-200/80 shadow-sm overflow-hidden">
             <button type="button" onclick="toggleFaq(this)" class="w-full px-5 py-4 text-left font-semibold text-slate-800 flex justify-between items-center hover:bg-slate-50 transition-colors">
               <span>Q7. Is there an age calculator for baby / child chronological age?</span>
-              <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+              <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-sm transition-transform duration-200"></span>
             </button>
             <div class="accordion-content px-5">
               <p class="py-3 text-sm text-slate-600 border-t border-slate-100 leading-relaxed">
@@ -931,12 +930,12 @@
       <!-- Section N: Related Tools / Internal Links -->
       <section class="space-y-6">
         <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
-          <i class="fa-solid fa-link text-indigo-600"></i> Related Tools & Calculators
+          <span class="icon-[fa6-solid--link] text-indigo-600"></span> Related Tools & Calculators
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <a href="#" class="block p-5 bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:border-indigo-300 hover:shadow-md transition-all group">
             <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-lg mb-3 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
-              <i class="fa-solid fa-calendar-week"></i>
+              <span class="icon-[fa6-solid--calendar-week]"></span>
             </div>
             <h3 class="font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Date Difference Calculator</h3>
             <p class="text-xs text-slate-500 mt-1">Calculate exact days between two dates.</p>
@@ -944,7 +943,7 @@
 
           <a href="#" class="block p-5 bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:border-indigo-300 hover:shadow-md transition-all group">
             <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-lg mb-3 group-hover:bg-amber-600 group-hover:text-white transition-colors">
-              <i class="fa-solid fa-hourglass-start"></i>
+              <span class="icon-[fa6-solid--hourglass-start]"></span>
             </div>
             <h3 class="font-bold text-slate-800 group-hover:text-amber-600 transition-colors">Birthday Countdown</h3>
             <p class="text-xs text-slate-500 mt-1">Track days remaining for any birthday event.</p>
@@ -952,7 +951,7 @@
 
           <a href="#" class="block p-5 bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:border-indigo-300 hover:shadow-md transition-all group">
             <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg mb-3 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
-              <i class="fa-solid fa-[#000] fa-people-arrows"></i>
+              <span class="icon-[fa6-solid--people-arrows]"></span>
             </div>
             <h3 class="font-bold text-slate-800 group-hover:text-emerald-600 transition-colors">Age Difference Calculator</h3>
             <p class="text-xs text-slate-500 mt-1">Compare ages between two individuals.</p>
@@ -972,7 +971,7 @@
         <div class="space-y-4">
           <div class="flex items-center gap-2 text-white font-bold text-lg">
             <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
-              <i class="fa-solid fa-calculator"></i>
+              <span class="icon-[fa6-solid--calculator]"></span>
             </div>
             <span>Calculator<span class="text-indigo-400">-Pro</span></span>
           </div>

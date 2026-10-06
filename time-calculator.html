@@ -17,7 +17,7 @@
 
     <!-- Google Fonts & FontAwesome -->
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
 
     <!-- Tailwind CSS CDN -->
     
@@ -133,7 +133,7 @@
       <!-- Brand Logo & Name -->
       <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
         <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
-          <i class="fa-solid fa-calculator text-lg"></i>
+          <span class="icon-[fa6-solid--calculator] text-lg"></span>
         </div>
         <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
           Calculator<span class="text-indigo-600">-Pro</span>
@@ -332,7 +332,7 @@
                 <!-- Hero Heading -->
                 <div class="text-center max-w-3xl mx-auto mb-10">
                     <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700 mb-4 shadow-sm">
-                        <i class="fa-solid fa-bolt text-indigo-500"></i> Fast, Precise & Free
+                        <span class="icon-[fa6-solid--bolt] text-indigo-500"></span> Fast, Precise & Free
                     </span>
                     <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
                         Free Online <span class="text-indigo-600">Time Calculator</span>
@@ -343,10 +343,10 @@
 
                     <!-- Short Benefits Checklist -->
                     <div class="mt-6 flex flex-wrap justify-center items-center gap-y-2 gap-x-6 text-xs sm:text-sm font-medium text-slate-700">
-                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> Free to use</div>
-                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> No registration required</div>
-                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> Fast and accurate</div>
-                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> Mobile & Desktop</div>
+                        <div class="flex items-center gap-1.5"><span class="icon-[fa6-solid--circle-check] text-emerald-500"></span> Free to use</div>
+                        <div class="flex items-center gap-1.5"><span class="icon-[fa6-solid--circle-check] text-emerald-500"></span> No registration required</div>
+                        <div class="flex items-center gap-1.5"><span class="icon-[fa6-solid--circle-check] text-emerald-500"></span> Fast and accurate</div>
+                        <div class="flex items-center gap-1.5"><span class="icon-[fa6-solid--circle-check] text-emerald-500"></span> Mobile & Desktop</div>
                     </div>
                 </div>
 
@@ -355,13 +355,13 @@
                     <!-- Calculator Mode Navigation Tabs -->
                     <div class="flex flex-col sm:flex-row p-1.5 bg-slate-100/90 rounded-2xl mb-8 gap-1">
                         <button id="tab-duration" onclick="switchTab('duration')" class="calc-tab-btn flex-1 py-3 px-4 rounded-xl text-sm font-semibold text-slate-700 hover:text-indigo-600 transition-all duration-200 flex items-center justify-center gap-2 bg-white shadow-sm text-indigo-600">
-                            <i class="fa-solid fa-stopwatch"></i> Duration Between Dates
+                            <span class="icon-[fa6-solid--stopwatch]"></span> Duration Between Dates
                         </button>
                         <button id="tab-addsub" onclick="switchTab('addsub')" class="calc-tab-btn flex-1 py-3 px-4 rounded-xl text-sm font-semibold text-slate-600 hover:text-indigo-600 transition-all duration-200 flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-calculator"></i> Add or Subtract Time
+                            <span class="icon-[fa6-solid--calculator]"></span> Add or Subtract Time
                         </button>
                         <button id="tab-converter" onclick="switchTab('converter')" class="calc-tab-btn flex-1 py-3 px-4 rounded-xl text-sm font-semibold text-slate-600 hover:text-indigo-600 transition-all duration-200 flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-right-left"></i> Unit Converter
+                            <span class="icon-[fa6-solid--right-left]"></span> Unit Converter
                         </button>
                     </div>
 
@@ -372,7 +372,7 @@
                                 <!-- Start Time Box -->
                                 <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200/80">
                                     <label class="block text-sm font-semibold text-slate-800 mb-3 flex items-center gap-2">
-                                        <i class="fa-regular fa-calendar-plus text-indigo-600"></i> Start Date & Time
+                                        <span class="icon-[fa6-regular--calendar-plus] text-indigo-600"></span> Start Date & Time
                                     </label>
                                     <div class="space-y-3">
                                         <div>
@@ -389,7 +389,7 @@
                                 <!-- End Time Box -->
                                 <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200/80">
                                     <label class="block text-sm font-semibold text-slate-800 mb-3 flex items-center gap-2">
-                                        <i class="fa-regular fa-calendar-check text-indigo-600"></i> End Date & Time
+                                        <span class="icon-[fa6-regular--calendar-check] text-indigo-600"></span> End Date & Time
                                     </label>
                                     <div class="space-y-3">
                                         <div>
@@ -407,7 +407,7 @@
                             <!-- Optional Deductions -->
                             <div class="mt-6 p-4 bg-indigo-50/50 border border-indigo-100 rounded-2xl flex flex-wrap items-center justify-between gap-4">
                                 <div class="flex items-center gap-3">
-                                    <i class="fa-solid fa-mug-hot text-indigo-600 text-lg"></i>
+                                    <span class="icon-[fa6-solid--mug-hot] text-indigo-600 text-lg"></span>
                                     <div>
                                         <span class="text-sm font-semibold text-slate-800 block">Deduct Break Time (Optional)</span>
                                         <span class="text-xs text-slate-500">Subtract unpaid breaks like lunch hours</span>
@@ -422,7 +422,7 @@
                             <!-- Action Buttons -->
                             <div class="mt-6 flex gap-3">
                                 <button type="submit" class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3.5 px-6 rounded-xl shadow-lg shadow-indigo-200 transition-all duration-200 text-center flex items-center justify-center gap-2">
-                                    <i class="fa-solid fa-calculator"></i> Calculate Duration
+                                    <span class="icon-[fa6-solid--calculator"]"></span> Calculate Duration
                                 </button>
                                 <button type="button" onclick="resetDurationForm()" class="px-5 py-3.5 bg-slate-100 hover:bg-slate-200 text-slate-600 font-semibold rounded-xl transition-colors">
                                     Reset
@@ -435,7 +435,7 @@
                             <div class="flex items-center justify-between border-b border-indigo-800/60 pb-4 mb-4">
                                 <span class="text-xs font-bold uppercase tracking-wider text-indigo-300">Total Calculated Duration</span>
                                 <span id="overnight-badge" class="hidden px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/30">
-                                    <i class="fa-solid fa-moon"></i> Overnight Shift Detected
+                                    <span class="icon-[fa6-solid--moon]"></span> Overnight Shift Detected
                                 </span>
                             </div>
 
@@ -495,11 +495,11 @@
                                 <div class="flex justify-center items-center gap-4">
                                     <label class="inline-flex items-center gap-2 cursor-pointer bg-indigo-50 border border-indigo-200 px-4 py-2 rounded-xl">
                                         <input type="radio" name="as-op" value="add" checked class="text-indigo-600 focus:ring-indigo-500">
-                                        <span class="text-sm font-bold text-indigo-700"><i class="fa-solid fa-plus"></i> Add Time</span>
+                                        <span class="text-sm font-bold text-indigo-700"><span class="icon-[fa6-solid--plus]"></span> Add Time</span>
                                     </label>
                                     <label class="inline-flex items-center gap-2 cursor-pointer bg-slate-100 border border-slate-200 px-4 py-2 rounded-xl">
                                         <input type="radio" name="as-op" value="sub" class="text-indigo-600 focus:ring-indigo-500">
-                                        <span class="text-sm font-bold text-slate-700"><i class="fa-solid fa-minus"></i> Subtract Time</span>
+                                        <span class="text-sm font-bold text-slate-700"><span class="icon-[fa6-solid--minus]"></span> Subtract Time</span>
                                     </label>
                                 </div>
 
@@ -524,7 +524,7 @@
                             </div>
 
                             <button type="submit" class="w-full mt-6 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3.5 px-6 rounded-xl shadow-lg shadow-indigo-200 transition-all duration-200 flex items-center justify-center gap-2">
-                                <i class="fa-solid fa-calculator"></i> Compute Time Operation
+                                <span class="icon-[fa6-solid--calculator]"></span> Compute Time Operation
                             </button>
                         </form>
 
@@ -584,7 +584,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
                     <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex items-start gap-4">
                         <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0">
-                            <i class="fa-solid fa-calendar-day text-lg"></i>
+                            <span class="icon-[fa6-solid--calendar-day] text-lg"></span>
                         </div>
                         <div>
                             <h3 class="text-sm font-bold text-slate-900">Duration Between Dates</h3>
@@ -593,7 +593,7 @@
                     </div>
                     <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex items-start gap-4">
                         <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0">
-                            <i class="fa-solid fa-plus-minus text-lg"></i>
+                            <span class="icon-[fa6-solid--plus-minus] text-lg"></span>
                         </div>
                         <div>
                             <h3 class="text-sm font-bold text-slate-900">Add & Subtract Time</h3>
@@ -602,7 +602,7 @@
                     </div>
                     <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex items-start gap-4">
                         <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0">
-                            <i class="fa-solid fa-clock-rotate-left text-lg"></i>
+                            <span class="icon-[fa6-solid--clock-rotate-left] text-lg"></span>
                         </div>
                         <div>
                             <h3 class="text-sm font-bold text-slate-900">Instant Unit Conversion</h3>
@@ -702,27 +702,27 @@
                 <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">What This Time Calculator Does</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div class="flex items-start gap-3 p-4 bg-white rounded-xl border border-slate-200">
-                        <i class="fa-solid fa-check-circle text-indigo-600 text-lg mt-0.5"></i>
+                        <span class="icon-[fa6-solid--circle-check] text-indigo-600 text-lg mt-0.5"></span>
                         <span class="text-slate-700 text-sm font-medium">Computes precise duration between two specific dates and times</span>
                     </div>
                     <div class="flex items-start gap-3 p-4 bg-white rounded-xl border border-slate-200">
-                        <i class="fa-solid fa-check-circle text-indigo-600 text-lg mt-0.5"></i>
+                        <span class="icon-[fa6-solid--circle-check] text-indigo-600 text-lg mt-0.5"></span>
                         <span class="text-slate-700 text-sm font-medium">Adds or subtracts custom hours, minutes, and seconds</span>
                     </div>
                     <div class="flex items-start gap-3 p-4 bg-white rounded-xl border border-slate-200">
-                        <i class="fa-solid fa-check-circle text-indigo-600 text-lg mt-0.5"></i>
+                        <span class="icon-[fa6-solid--circle-check] text-indigo-600 text-lg mt-0.5"></span>
                         <span class="text-slate-700 text-sm font-medium">Handles overnight work shifts seamlessly across midnight</span>
                     </div>
                     <div class="flex items-start gap-3 p-4 bg-white rounded-xl border border-slate-200">
-                        <i class="fa-solid fa-check-circle text-indigo-600 text-lg mt-0.5"></i>
+                        <span class="icon-[fa6-solid--circle-check] text-indigo-600 text-lg mt-0.5"></span>
                         <span class="text-slate-700 text-sm font-medium">Provides decimal hours for payroll & client billing</span>
                     </div>
                     <div class="flex items-start gap-3 p-4 bg-white rounded-xl border border-slate-200">
-                        <i class="fa-solid fa-check-circle text-indigo-600 text-lg mt-0.5"></i>
+                        <span class="icon-[fa6-solid--circle-check] text-indigo-600 text-lg mt-0.5"></span>
                         <span class="text-slate-700 text-sm font-medium">Converts time units (hours ↔ minutes ↔ seconds)</span>
                     </div>
                     <div class="flex items-start gap-3 p-4 bg-white rounded-xl border border-slate-200">
-                        <i class="fa-solid fa-check-circle text-indigo-600 text-lg mt-0.5"></i>
+                        <span class="icon-[fa6-solid--circle-check] text-indigo-600 text-lg mt-0.5"></span>
                         <span class="text-slate-700 text-sm font-medium">Deducts unpaid breaks for accurate net working hours</span>
                     </div>
                 </div>
@@ -736,7 +736,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                     <!-- Formula Card 1 -->
                     <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
-                        <h3 class="text-base font-bold text-slate-900 mb-3"><i class="fa-solid fa-plus text-indigo-600"></i> Adding Time</h3>
+                        <h3 class="text-base font-bold text-slate-900 mb-3"><span class="icon-[fa6-solid--plus] text-indigo-600"></span> Adding Time</h3>
                         <div class="font-mono text-sm bg-white p-3 rounded-xl border border-slate-200 text-slate-800 space-y-1">
                             <div>&nbsp;2 hours 35 minutes</div>
                             <div>+ 1 hour  45 minutes</div>
@@ -746,7 +746,7 @@
 
                     <!-- Formula Card 2 -->
                     <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
-                        <h3 class="text-base font-bold text-slate-900 mb-3"><i class="fa-solid fa-minus text-indigo-600"></i> Subtracting Time</h3>
+                        <h3 class="text-base font-bold text-slate-900 mb-3"><span class="icon-[fa6-solid--minus] text-indigo-600"></span> Subtracting Time</h3>
                         <div class="font-mono text-sm bg-white p-3 rounded-xl border border-slate-200 text-slate-800 space-y-1">
                             <div>&nbsp;5 hours 20 minutes</div>
                             <div>- 2 hours 45 minutes</div>
@@ -892,7 +892,7 @@
                     <div class="border border-slate-200 rounded-2xl overflow-hidden">
                         <button onclick="toggleFaq(this)" class="w-full p-4 text-left font-semibold text-slate-800 flex justify-between items-center hover:bg-slate-50 transition-colors">
                             <h3 class="text-sm sm:text-base">Q1. How do I calculate time between two times?</h3>
-                            <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-sm transition-transform duration-200"></span>
                         </button>
                         <div class="accordion-content px-4 bg-slate-50/50">
                             <p class="py-3 text-sm text-slate-600 border-t border-slate-200/60">Subtract the start time from the end time. For example, 5:30 PM minus 9:00 AM equals 8 hours and 30 minutes.</p>
@@ -902,7 +902,7 @@
                     <div class="border border-slate-200 rounded-2xl overflow-hidden">
                         <button onclick="toggleFaq(this)" class="w-full p-4 text-left font-semibold text-slate-800 flex justify-between items-center hover:bg-slate-50 transition-colors">
                             <h3 class="text-sm sm:text-base">Q2. How to calculate overnight shift hours?</h3>
-                            <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-sm transition-transform duration-200"></span>
                         </button>
                         <div class="accordion-content px-4 bg-slate-50/50">
                             <p class="py-3 text-sm text-slate-600 border-t border-slate-200/60">For shifts crossing midnight (e.g., 10 PM to 6 AM), our calculator automatically recognizes overnight duration by adding 24 hours to the end time.</p>
@@ -912,7 +912,7 @@
                     <div class="border border-slate-200 rounded-2xl overflow-hidden">
                         <button onclick="toggleFaq(this)" class="w-full p-4 text-left font-semibold text-slate-800 flex justify-between items-center hover:bg-slate-50 transition-colors">
                             <h3 class="text-sm sm:text-base">Q3. What is decimal hours and how to convert?</h3>
-                            <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-sm transition-transform duration-200"></span>
                         </button>
                         <div class="accordion-content px-4 bg-slate-50/50">
                             <p class="py-3 text-sm text-slate-600 border-t border-slate-200/60">Decimal hours express minutes as fractions of 60. For example, 30 minutes = 0.5 hours, and 15 minutes = 0.25 hours.</p>
@@ -922,7 +922,7 @@
                     <div class="border border-slate-200 rounded-2xl overflow-hidden">
                         <button onclick="toggleFaq(this)" class="w-full p-4 text-left font-semibold text-slate-800 flex justify-between items-center hover:bg-slate-50 transition-colors">
                             <h3 class="text-sm sm:text-base">Q4. Can I calculate time across multiple days?</h3>
-                            <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-sm transition-transform duration-200"></span>
                         </button>
                         <div class="accordion-content px-4 bg-slate-50/50">
                             <p class="py-3 text-sm text-slate-600 border-t border-slate-200/60">Yes! Enter specific start and end dates in the Duration tab to calculate spans across days, weeks, or months.</p>
@@ -932,7 +932,7 @@
                     <div class="border border-slate-200 rounded-2xl overflow-hidden">
                         <button onclick="toggleFaq(this)" class="w-full p-4 text-left font-semibold text-slate-800 flex justify-between items-center hover:bg-slate-50 transition-colors">
                             <h3 class="text-sm sm:text-base">Q5. Is the Time Calculator free?</h3>
-                            <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-sm transition-transform duration-200"></span>
                         </button>
                         <div class="accordion-content px-4 bg-slate-50/50">
                             <p class="py-3 text-sm text-slate-600 border-t border-slate-200/60">Yes, Calculator Pro provides this time calculation tool 100% free with unlimited usage.</p>
@@ -973,7 +973,7 @@
         <div class="space-y-4">
           <div class="flex items-center gap-2 text-white font-bold text-lg">
             <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
-              <i class="fa-solid fa-calculator"></i>
+              <span class="icon-[fa6-solid--calculator]"></span>
             </div>
             <span>Calculator<span class="text-indigo-400">-Pro</span></span>
           </div>

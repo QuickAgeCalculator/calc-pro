@@ -21,7 +21,7 @@
 
     <!-- Fonts & Icons -->
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
 
     <!-- Tailwind CSS CDN -->
     
@@ -79,7 +79,7 @@
       <!-- Brand Logo & Name -->
       <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
         <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
-          <i class="fa-solid fa-calculator text-lg"></i>
+          <span class="icon-[fa6-solid--calculator] text-lg"></span>
         </div>
         <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
           Calculator<span class="text-indigo-600">-Pro</span>
@@ -280,7 +280,7 @@
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-8">
                 <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-brand-100 text-brand-700 mb-3">
-                    <i class="fa-solid fa-bolt text-brand-500"></i> Automatic DST Adjustment
+                    <span class="icon-[fa6-solid--bolt] text-brand-500"></span> Automatic DST Adjustment
                 </span>
                 <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
                     Free Time Zone Converter
@@ -321,7 +321,7 @@
                     <!-- Swap Button -->
                     <div class="md:col-span-2 flex justify-center py-2 md:py-0">
                         <button type="button" id="swap-tz-btn" aria-label="Swap Timezones" class="w-12 h-12 rounded-full bg-brand-50 hover:bg-brand-100 text-brand-600 flex items-center justify-center transition-all transform hover:rotate-180 duration-300 shadow-sm border border-brand-200">
-                            <i class="fa-solid fa-arrow-right-arrow-left text-lg"></i>
+                            <span class="icon-[fa6-solid--arrow-right-arrow-left] text-lg"></span>
                         </button>
                     </div>
 
@@ -335,7 +335,7 @@
                                     <span class="font-semibold text-slate-800">EDT - America/New_York</span>
                                     <span class="text-xs text-slate-400">(UTC-04:00)</span>
                                 </span>
-                                <i class="fa-solid fa-chevron-down text-slate-400 text-xs ml-2"></i>
+                                <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs ml-2"></span>
                             </button>
                             <!-- Searchable Dropdown Popup -->
                             <div id="to-tz-dropdown" class="hidden absolute left-0 right-0 top-full mt-2 bg-white rounded-xl shadow-2xl border border-slate-100 z-50 p-2">
@@ -361,10 +361,10 @@
                     </div>
                     <div class="sm:col-span-5 flex gap-2">
                         <button type="button" id="use-current-btn" class="w-1/2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium py-3 px-3 rounded-xl transition-colors text-xs sm:text-sm flex items-center justify-center gap-1.5">
-                            <i class="fa-solid fa-clock"></i> Now
+                            <span class="icon-[fa6-solid--clock]"></span> Now
                         </button>
                         <button type="button" id="convert-btn" class="w-1/2 bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3 px-3 rounded-xl transition-all shadow-md shadow-brand-200 text-xs sm:text-sm flex items-center justify-center gap-1.5">
-                            <i class="fa-solid fa-calculator"></i> Convert
+                            <span class="icon-[fa6-solid--calculator]"></span> Convert
                         </button>
                     </div>
                 </div>
@@ -385,10 +385,10 @@
                         </div>
                         <div class="flex items-center gap-2">
                             <button id="copy-btn" type="button" class="bg-white/10 hover:bg-white/20 text-white px-4 py-2.5 rounded-lg text-sm font-medium transition-all backdrop-blur-sm flex items-center gap-2 border border-white/20">
-                                <i class="fa-regular fa-copy"></i> <span id="copy-btn-text">Copy</span>
+                                <span class="icon-[fa6-regular--copy]"></span> <span id="copy-btn-text">Copy</span>
                             </button>
                             <button id="share-btn" type="button" class="bg-white text-brand-700 hover:bg-brand-50 px-4 py-2.5 rounded-lg text-sm font-semibold transition-all flex items-center gap-2 shadow-sm">
-                                <i class="fa-solid fa-share-nodes"></i> Share
+                                <span class="icon-[fa6-solid--share-nodes]"></span> Share
                             </button>
                         </div>
                     </div>
@@ -420,7 +420,7 @@
                     <span class="text-xs font-bold uppercase tracking-wider text-brand-600 bg-brand-50 px-3 py-1 rounded-full">Real-time Clocks</span>
                     <h2 class="text-3xl font-extrabold text-slate-900 mt-2">Current Time in Major Cities</h2>
                 </div>
-                <p class="text-sm text-slate-500 mt-2 md:mt-0"><i class="fa-solid fa-arrows-rotate animate-spin text-brand-500 mr-1"></i> Live updating continuously</p>
+                <p class="text-sm text-slate-500 mt-2 md:mt-0"><span class="icon-[fa6-solid--arrows-rotate] animate-spin text-brand-500 mr-1"></span> Live updating continuously</p>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="world-clock-grid">
@@ -546,7 +546,7 @@
                 <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
                     <button type="button" class="faq-toggle w-full px-6 py-4 text-left font-semibold text-slate-800 flex justify-between items-center hover:bg-slate-50 transition-colors">
                         <span>What is the time difference between IST and EST?</span>
-                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                        <span class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
                     </button>
                     <div class="accordion-content px-6 text-slate-600 text-sm leading-relaxed border-t border-slate-100">
                         <div class="py-4">
@@ -558,7 +558,7 @@
                 <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
                     <button type="button" class="faq-toggle w-full px-6 py-4 text-left font-semibold text-slate-800 flex justify-between items-center hover:bg-slate-50 transition-colors">
                         <span>Does this timezone converter support Daylight Saving Time?</span>
-                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                        <span class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
                     </button>
                     <div class="accordion-content px-6 text-slate-600 text-sm leading-relaxed border-t border-slate-100">
                         <div class="py-4">
@@ -570,7 +570,7 @@
                 <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
                     <button type="button" class="faq-toggle w-full px-6 py-4 text-left font-semibold text-slate-800 flex justify-between items-center hover:bg-slate-50 transition-colors">
                         <span>How do I convert UTC to IST?</span>
-                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                        <span class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
                     </button>
                     <div class="accordion-content px-6 text-slate-600 text-sm leading-relaxed border-t border-slate-100">
                         <div class="py-4">
@@ -582,7 +582,7 @@
                 <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
                     <button type="button" class="faq-toggle w-full px-6 py-4 text-left font-semibold text-slate-800 flex justify-between items-center hover:bg-slate-50 transition-colors">
                         <span>Why does time change by 30 or 45 minutes in some countries?</span>
-                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                        <span class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
                     </button>
                     <div class="accordion-content px-6 text-slate-600 text-sm leading-relaxed border-t border-slate-100">
                         <div class="py-4">
@@ -602,21 +602,21 @@
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 <a href="#world-clock" class="p-6 bg-slate-50 hover:bg-brand-50/50 rounded-2xl border border-slate-200 hover:border-brand-200 transition-all group">
                     <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center text-xl mb-3 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-globe"></i>
+                        <span class="icon-[fa6-solid--globe]"></span>
                     </div>
                     <h3 class="font-bold text-slate-800 text-lg group-hover:text-brand-600 transition-colors">World Clock</h3>
                     <p class="text-xs text-slate-500 mt-1">View real-time clocks across all major world capitals simultaneously.</p>
                 </a>
                 <a href="#meeting-planner" class="p-6 bg-slate-50 hover:bg-brand-50/50 rounded-2xl border border-slate-200 hover:border-brand-200 transition-all group">
                     <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center text-xl mb-3 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-calendar-days"></i>
+                        <span class="icon-[fa6-solid--calendar-days]"></span>
                     </div>
                     <h3 class="font-bold text-slate-800 text-lg group-hover:text-brand-600 transition-colors">Meeting Planner</h3>
                     <p class="text-xs text-slate-500 mt-1">Schedule multi-city meetings with visual working hour overlap indicators.</p>
                 </a>
                 <a href="#" class="p-6 bg-slate-50 hover:bg-brand-50/50 rounded-2xl border border-slate-200 hover:border-brand-200 transition-all group">
                     <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-xl mb-3 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-hourglass-half"></i>
+                        <span class="icon-[fa6-solid--hourglass-half]"></span>
                     </div>
                     <h3 class="font-bold text-slate-800 text-lg group-hover:text-brand-600 transition-colors">Date & Time Calculator</h3>
                     <p class="text-xs text-slate-500 mt-1">Calculate exact days, hours, and minutes between two dates.</p>
@@ -636,7 +636,7 @@
         <div class="space-y-4">
           <div class="flex items-center gap-2 text-white font-bold text-lg">
             <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
-              <i class="fa-solid fa-calculator"></i>
+              <span class="icon-[fa6-solid--calculator]"></span>
             </div>
             <span>Calculator<span class="text-indigo-400">-Pro</span></span>
           </div>

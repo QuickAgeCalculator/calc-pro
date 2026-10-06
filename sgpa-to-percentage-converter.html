@@ -23,7 +23,7 @@
     <meta property="twitter:image" content="https://placehold.co/1200x630/2563eb/ffffff?text=SGPA+to+Percentage+Converter">
 
     <!-- FontAwesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
 
     <!-- Google Fonts (Inter) -->
     
@@ -151,7 +151,7 @@
       <!-- Brand Logo & Name -->
       <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
         <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
-          <i class="fa-solid fa-calculator text-lg"></i>
+          <span class="icon-[fa6-solid--calculator] text-lg"></span>
         </div>
         <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
           Calculator<span class="text-indigo-600">-Pro</span>
@@ -352,7 +352,7 @@
             <!-- Left Hero Content -->
             <div class="lg:col-span-5 space-y-6 text-center lg:text-left">
               <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-100/80 text-indigo-700 text-xs font-semibold tracking-wide border border-indigo-200/50">
-                <i class="fa-solid fa-graduation-cap text-indigo-600"></i>
+                <span class="icon-[fa6-solid--graduation-cap] text-indigo-600"></span>
                 Updated 10-Point Scale (2026)
               </div>
               
@@ -368,12 +368,12 @@
               <div class="pt-2">
                 <p class="text-xs font-bold uppercase text-slate-400 tracking-wider mb-3">Supported University Formulas</p>
                 <div class="flex flex-wrap justify-center lg:justify-start gap-2">
-                  <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-lg shadow-sm"><i class="fa-solid fa-check text-indigo-500 mr-1"></i> VTU</span>
-                  <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-lg shadow-sm"><i class="fa-solid fa-check text-indigo-500 mr-1"></i> Anna Univ</span>
-                  <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-lg shadow-sm"><i class="fa-solid fa-check text-indigo-500 mr-1"></i> AKTU</span>
-                  <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-lg shadow-sm"><i class="fa-solid fa-check text-indigo-500 mr-1"></i> Mumbai Univ</span>
-                  <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-lg shadow-sm"><i class="fa-solid fa-check text-indigo-500 mr-1"></i> SPPU</span>
-                  <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-lg shadow-sm"><i class="fa-solid fa-check text-indigo-500 mr-1"></i> CBSE / DU</span>
+                  <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-lg shadow-sm"><span class="icon-[fa6-solid--check] text-indigo-500 mr-1"></span> VTU</span>
+                  <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-lg shadow-sm"><span class="icon-[fa6-solid--check] text-indigo-500 mr-1"></span> Anna Univ</span>
+                  <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-lg shadow-sm"><span class="icon-[fa6-solid--check] text-indigo-500 mr-1"></span> AKTU</span>
+                  <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-lg shadow-sm"><span class="icon-[fa6-solid--check] text-indigo-500 mr-1"></span> Mumbai Univ</span>
+                  <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-lg shadow-sm"><span class="icon-[fa6-solid--check] text-indigo-500 mr-1"></span> SPPU</span>
+                  <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-lg shadow-sm"><span class="icon-[fa6-solid--check] text-indigo-500 mr-1"></span> CBSE / DU</span>
                 </div>
               </div>
 
@@ -402,11 +402,11 @@
                 <!-- Tab Switching Navigation -->
                 <div class="flex bg-slate-100 p-1.5 rounded-2xl mb-6 border border-slate-200/60" role="tablist">
                   <button id="tab-sgpa-btn" onclick="switchTab('sgpa')" role="tab" aria-selected="true" class="flex-1 py-3 px-4 rounded-xl text-sm font-bold text-indigo-600 bg-white shadow-sm transition-all duration-200 flex items-center justify-center gap-2 focus:outline-none">
-                    <i class="fa-solid fa-calculator"></i>
+                    <span class="icon-[fa6-solid--calculator]"></span>
                     <span>SGPA to Percentage</span>
                   </button>
                   <button id="tab-pct-btn" onclick="switchTab('pct')" role="tab" aria-selected="false" class="flex-1 py-3 px-4 rounded-xl text-sm font-medium text-slate-600 hover:text-slate-900 transition-all duration-200 flex items-center justify-center gap-2 focus:outline-none">
-                    <i class="fa-solid fa-percent"></i>
+                    <span class="icon-[fa6-solid--percent]"></span>
                     <span>Percentage to SGPA</span>
                   </button>
                 </div>
@@ -510,11 +510,11 @@
                   <!-- Actions -->
                   <div class="flex gap-3">
                     <button onclick="copyResult('sgpa')" class="flex-1 py-2.5 px-4 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-semibold rounded-xl transition-colors duration-150 flex items-center justify-center gap-2">
-                      <i class="fa-regular fa-copy"></i>
+                      <span class="icon-[fa6-regular--copy]"></span>
                       <span>Copy Result</span>
                     </button>
                     <button onclick="shareResult()" class="flex-1 py-2.5 px-4 bg-indigo-50 hover:bg-indigo-100 text-indigo-600 text-sm font-semibold rounded-xl transition-colors duration-150 flex items-center justify-center gap-2">
-                      <i class="fa-solid fa-share-nodes"></i>
+                      <span class="icon-[fa6-solid--share-nodes]"></span>
                       <span>Share</span>
                     </button>
                   </div>
@@ -573,7 +573,7 @@
 
                   <!-- Action -->
                   <button onclick="copyResult('pct')" class="w-full py-2.5 px-4 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-semibold rounded-xl transition-colors flex items-center justify-center gap-2">
-                    <i class="fa-regular fa-copy"></i>
+                    <span class="icon-[fa6-regular--copy]"></span>
                     <span>Copy SGPA Result</span>
                   </button>
 
@@ -664,7 +664,7 @@
           <!-- Step-by-Step Worked Example -->
           <div class="p-6 sm:p-8 bg-indigo-50/70 rounded-2xl border border-indigo-100 space-y-4">
             <h3 class="text-xl font-bold text-indigo-950 flex items-center gap-2">
-              <i class="fa-solid fa-lightbulb text-amber-500"></i>
+              <span class="icon-[fa6-solid--lightbulb] text-amber-500"></span>
               Step-by-Step Example: Converting 8.5 SGPA
             </h3>
             <p class="text-sm text-slate-700">
@@ -715,7 +715,7 @@
             
             <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm space-y-3">
               <div class="flex items-center gap-2">
-                <i class="fa-solid fa-university text-indigo-600"></i>
+                <span class="icon-[fa6-solid--building-columns] text-indigo-600"></span>
                 <h3 class="font-bold text-slate-900">VTU SGPA to Percentage</h3>
               </div>
               <p class="text-xs text-slate-600 leading-relaxed">
@@ -725,7 +725,7 @@
 
             <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm space-y-3">
               <div class="flex items-center gap-2">
-                <i class="fa-solid fa-university text-indigo-600"></i>
+                <span class="icon-[fa6-solid--building-columns] text-indigo-600"></span>
                 <h3 class="font-bold text-slate-900">Anna University SGPA</h3>
               </div>
               <p class="text-xs text-slate-600 leading-relaxed">
@@ -735,7 +735,7 @@
 
             <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm space-y-3">
               <div class="flex items-center gap-2">
-                <i class="fa-solid fa-university text-indigo-600"></i>
+                <span class="icon-[fa6-solid--building-columns] text-indigo-600"></span>
                 <h3 class="font-bold text-slate-900">AKTU / SPPU / MAKAUT</h3>
               </div>
               <p class="text-xs text-slate-600 leading-relaxed">
@@ -745,7 +745,7 @@
 
             <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm space-y-3">
               <div class="flex items-center gap-2">
-                <i class="fa-solid fa-university text-indigo-600"></i>
+                <span class="icon-[fa6-solid--building-columns] text-indigo-600"></span>
                 <h3 class="font-bold text-slate-900">Mumbai University</h3>
               </div>
               <p class="text-xs text-slate-600 leading-relaxed">
@@ -755,7 +755,7 @@
 
             <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm space-y-3">
               <div class="flex items-center gap-2">
-                <i class="fa-solid fa-university text-indigo-600"></i>
+                <span class="icon-[fa6-solid--building-columns] text-indigo-600"></span>
                 <h3 class="font-bold text-slate-900">JNTUH & GTU</h3>
               </div>
               <p class="text-xs text-slate-600 leading-relaxed">
@@ -765,7 +765,7 @@
 
             <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm space-y-3">
               <div class="flex items-center gap-2">
-                <i class="fa-solid fa-university text-indigo-600"></i>
+                <span class="icon-[fa6-solid--building-columns] text-indigo-600"></span>
                 <h3 class="font-bold text-slate-900">Calcutta & RGPV</h3>
               </div>
               <p class="text-xs text-slate-600 leading-relaxed">
@@ -970,7 +970,7 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm space-y-2 text-center">
               <div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl mx-auto">
-                <i class="fa-solid fa-bolt"></i>
+                <span class="icon-[fa6-solid--bolt]"></span>
               </div>
               <h3 class="font-bold text-slate-800 text-base">Instant & Accurate</h3>
               <p class="text-xs text-slate-500">Live dynamic calculations update in real-time as you drag or type.</p>
@@ -978,7 +978,7 @@
 
             <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm space-y-2 text-center">
               <div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl mx-auto">
-                <i class="fa-solid fa-building-columns"></i>
+                <span class="icon-[fa6-solid--building-columns]"></span>
               </div>
               <h3 class="font-bold text-slate-800 text-base">Multi-University Support</h3>
               <p class="text-xs text-slate-500">Includes presets for VTU, Anna, AKTU, Mumbai, SPPU, DU, JNTUH, and custom.</p>
@@ -986,7 +986,7 @@
 
             <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm space-y-2 text-center">
               <div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl mx-auto">
-                <i class="fa-solid fa-mobile-screen-button"></i>
+                <span class="icon-[fa6-solid--mobile-screen-button]"></span>
               </div>
               <h3 class="font-bold text-slate-800 text-base">Mobile-Friendly</h3>
               <p class="text-xs text-slate-500">Optimized responsive UI with sliders designed for tap and swipe.</p>
@@ -994,7 +994,7 @@
 
             <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm space-y-2 text-center">
               <div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl mx-auto">
-                <i class="fa-solid fa-shield-halved"></i>
+                <span class="icon-[fa6-solid--shield-halved]"></span>
               </div>
               <h3 class="font-bold text-slate-800 text-base">100% Free & Private</h3>
               <p class="text-xs text-slate-500">No registration or login needed. All calculations happen locally in your browser.</p>
@@ -1020,7 +1020,7 @@
             <div class="border border-slate-200 rounded-2xl overflow-hidden bg-slate-50/50">
               <button type="button" onclick="toggleAccordion('faq-1')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none hover:bg-slate-100/60 transition-colors">
                 <span>What is the formula to convert SGPA to percentage?</span>
-                <i id="faq-1-icon" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                <span id="faq-1-icon" class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
               </button>
               <div id="faq-1" class="accordion-content">
                 <div class="px-6 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 pt-3">
@@ -1032,7 +1032,7 @@
             <div class="border border-slate-200 rounded-2xl overflow-hidden bg-slate-50/50">
               <button type="button" onclick="toggleAccordion('faq-2')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none hover:bg-slate-100/60 transition-colors">
                 <span>How to convert 8.5 SGPA to percentage?</span>
-                <i id="faq-2-icon" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                <span id="faq-2-icon" class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
               </button>
               <div id="faq-2" class="accordion-content">
                 <div class="px-6 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 pt-3">
@@ -1044,7 +1044,7 @@
             <div class="border border-slate-200 rounded-2xl overflow-hidden bg-slate-50/50">
               <button type="button" onclick="toggleAccordion('faq-3')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none hover:bg-slate-100/60 transition-colors">
                 <span>Is SGPA to percentage the same for all universities?</span>
-                <i id="faq-3-icon" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                <span id="faq-3-icon" class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
               </button>
               <div id="faq-3" class="accordion-content">
                 <div class="px-6 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 pt-3">
@@ -1056,7 +1056,7 @@
             <div class="border border-slate-200 rounded-2xl overflow-hidden bg-slate-50/50">
               <button type="button" onclick="toggleAccordion('faq-4')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none hover:bg-slate-100/60 transition-colors">
                 <span>What is 7.5 SGPA in percentage?</span>
-                <i id="faq-4-icon" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                <span id="faq-4-icon" class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
               </button>
               <div id="faq-4" class="accordion-content">
                 <div class="px-6 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 pt-3">
@@ -1068,7 +1068,7 @@
             <div class="border border-slate-200 rounded-2xl overflow-hidden bg-slate-50/50">
               <button type="button" onclick="toggleAccordion('faq-5')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none hover:bg-slate-100/60 transition-colors">
                 <span>How to convert percentage to SGPA?</span>
-                <i id="faq-5-icon" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                <span id="faq-5-icon" class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
               </button>
               <div id="faq-5" class="accordion-content">
                 <div class="px-6 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 pt-3">
@@ -1080,7 +1080,7 @@
             <div class="border border-slate-200 rounded-2xl overflow-hidden bg-slate-50/50">
               <button type="button" onclick="toggleAccordion('faq-6')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none hover:bg-slate-100/60 transition-colors">
                 <span>What is the difference between SGPA and CGPA?</span>
-                <i id="faq-6-icon" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                <span id="faq-6-icon" class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
               </button>
               <div id="faq-6" class="accordion-content">
                 <div class="px-6 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 pt-3">
@@ -1092,7 +1092,7 @@
             <div class="border border-slate-200 rounded-2xl overflow-hidden bg-slate-50/50">
               <button type="button" onclick="toggleAccordion('faq-7')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none hover:bg-slate-100/60 transition-colors">
                 <span>Which formula should I use for VTU / Anna University / AKTU?</span>
-                <i id="faq-7-icon" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                <span id="faq-7-icon" class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
               </button>
               <div id="faq-7" class="accordion-content">
                 <div class="px-6 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 pt-3">
@@ -1104,7 +1104,7 @@
             <div class="border border-slate-200 rounded-2xl overflow-hidden bg-slate-50/50">
               <button type="button" onclick="toggleAccordion('faq-8')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none hover:bg-slate-100/60 transition-colors">
                 <span>Can I use this calculator for engineering and other courses?</span>
-                <i id="faq-8-icon" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                <span id="faq-8-icon" class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
               </button>
               <div id="faq-8" class="accordion-content">
                 <div class="px-6 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 pt-3">
@@ -1124,19 +1124,19 @@
           <h2 class="text-xl font-bold text-slate-900">Related Academic Tools</h2>
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
             <a href="#" class="p-4 bg-white rounded-xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all text-center space-y-2 group">
-              <i class="fa-solid fa-graduation-cap text-indigo-600 text-xl group-hover:scale-110 transition-transform"></i>
+              <span class="icon-[fa6-solid--graduation-cap] text-indigo-600 text-xl group-hover:scale-110 transition-transform"></span>
               <div class="text-xs font-bold text-slate-800">CGPA to Percentage</div>
             </a>
             <a href="#" class="p-4 bg-white rounded-xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all text-center space-y-2 group">
-              <i class="fa-solid fa-calculator text-indigo-600 text-xl group-hover:scale-110 transition-transform"></i>
+              <span class="icon-[fa6-solid--calculator] text-indigo-600 text-xl group-hover:scale-110 transition-transform"></span>
               <div class="text-xs font-bold text-slate-800">CGPA Calculator</div>
             </a>
             <a href="#" class="p-4 bg-white rounded-xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all text-center space-y-2 group">
-              <i class="fa-solid fa-percent text-indigo-600 text-xl group-hover:scale-110 transition-transform"></i>
+              <span class="icon-[fa6-solid--percent] text-indigo-600 text-xl group-hover:scale-110 transition-transform"></span>
               <div class="text-xs font-bold text-slate-800">Percentage to CGPA</div>
             </a>
             <a href="#" class="p-4 bg-white rounded-xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all text-center space-y-2 group">
-              <i class="fa-solid fa-chart-line text-indigo-600 text-xl group-hover:scale-110 transition-transform"></i>
+              <span class="icon-[fa6-solid--chart-line] text-indigo-600 text-xl group-hover:scale-110 transition-transform"></span>
               <div class="text-xs font-bold text-slate-800">Marks Percentage</div>
             </a>
           </div>
@@ -1155,7 +1155,7 @@
         <div class="space-y-4">
           <div class="flex items-center gap-2 text-white font-bold text-lg">
             <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
-              <i class="fa-solid fa-calculator"></i>
+              <span class="icon-[fa6-solid--calculator]"></span>
             </div>
             <span>Calculator<span class="text-indigo-400">-Pro</span></span>
           </div>

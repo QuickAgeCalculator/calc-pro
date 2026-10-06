@@ -15,8 +15,8 @@
   <meta property="og:site_name" content="Calculator Pro">
   
   <!-- FontAwesome CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   
+   
   <!-- Tailwind CSS CDN -->
   
 
@@ -166,7 +166,7 @@
       <!-- Brand Logo & Name -->
       <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
         <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
-          <i class="fa-solid fa-calculator text-lg"></i>
+          <span class="icon-[fa6-solid--calculator] text-lg"></span>
         </div>
         <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
           Calculator<span class="text-indigo-600">-Pro</span>
@@ -365,7 +365,7 @@
     <!-- Hero Header Text -->
     <div class="text-center max-w-3xl mx-auto mb-10">
       <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-brand-100 text-brand-700 mb-3">
-        <i class="fa-solid fa-heart-pulse"></i> Health & Fitness Tool
+        <span class="icon-[lucide--heart-pulse] text-brand-500"></span> Health & Fitness Tool
       </span>
       <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
         Free Online BMI Calculator – <span class="text-brand-600">Check Your Body Mass Index</span>
@@ -408,7 +408,7 @@
                     <option value="female">Female</option>
                   </select>
                   <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-slate-500">
-                    <i class="fa-solid fa-chevron-down text-xs"></i>
+                    <span class="icon-[lucide--chevron-down] text-xs"></span>
                   </div>
                 </div>
               </div>
@@ -456,7 +456,7 @@
 
             <!-- Calculate Action Button -->
             <button type="button" id="calculate-btn" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-brand-500/25 transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2">
-              <i class="fa-solid fa-calculator"></i> Calculate BMI
+              <span class="icon-[lucide--calculator]"></span> Calculate BMI
             </button>
           </form>
         </div>
@@ -504,7 +504,7 @@
               <!-- Animated Marker Indicator -->
               <div class="relative h-6 mt-1">
                 <div id="bmi-marker" class="absolute transform -translate-x-1/2 transition-all duration-500 ease-out flex flex-col items-center" style="left: 31.6%;">
-                  <i class="fa-solid fa-caret-up text-brand-400 text-lg"></i>
+                  <span class="icon-[fa6-solid--caret-up] text-brand-400 text-lg"></span>
                 </div>
               </div>
 
@@ -532,7 +532,7 @@
 
           <!-- Bottom Privacy Note -->
           <div class="mt-8 text-center text-xs text-slate-500">
-            <i class="fa-solid fa-shield-halved mr-1"></i> Privacy-first: No health data is stored or transmitted.
+            <span class="icon-[lucide--shield-half] mr-1"></span> Privacy-first: No health data is stored or transmitted.
           </div>
         </div>
 
@@ -715,28 +715,28 @@
         
         <div class="bg-gradient-to-br from-brand-600 to-indigo-700 text-white p-8 rounded-3xl shadow-lg sticky top-24">
           <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
-            <i class="fa-solid fa-circle-check text-brand-300"></i> Why Use Our Free BMI Calculator?
+            <span class="icon-[lucide--circle-check] text-brand-300"></span> Why Use Our Free BMI Calculator?
           </h2>
           
           <ul class="space-y-4 text-sm font-medium">
             <li class="flex items-start gap-3">
-              <i class="fa-solid fa-bolt mt-1 text-brand-300"></i>
+              <span class="icon-[fa6-solid--bolt] mt-1 text-brand-300"></span>
               <span><strong>Instant Calculation:</strong> Get real-time metric & imperial results as you type.</span>
             </li>
             <li class="flex items-start gap-3">
-              <i class="fa-solid fa-sliders mt-1 text-brand-300"></i>
+              <span class="icon-[fa6-solid--sliders] mt-1 text-brand-300"></span>
               <span><strong>Dual System Support:</strong> Seamlessly toggle between Centimeters/Kilograms and Feet/Pounds.</span>
             </li>
             <li class="flex items-start gap-3">
-              <i class="fa-solid fa-lock mt-1 text-brand-300"></i>
+              <span class="icon-[fa6-solid--lock] mt-1 text-brand-300"></span>
               <span><strong>100% Private:</strong> Zero data stored or logged on external servers.</span>
             </li>
             <li class="flex items-start gap-3">
-              <i class="fa-solid fa-mobile-screen mt-1 text-brand-300"></i>
+              <span class="icon-[fa6-solid--mobile-screen] mt-1 text-brand-300"></span>
               <span><strong>Mobile Optimized:</strong> Smooth visual indicators tailored for touch screens.</span>
             </li>
             <li class="flex items-start gap-3">
-              <i class="fa-solid fa-bullseye mt-1 text-brand-300"></i>
+              <span class="icon-[lucide--target] mt-1 text-brand-300"></span>
               <span><strong>WHO Compliant:</strong> Uses standard international Body Mass Index ranges.</span>
             </li>
           </ul>
@@ -764,7 +764,7 @@
         <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors duration-200">
           <button type="button" class="faq-btn w-full px-6 py-4 text-left font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50">
             <span>What is a healthy BMI range?</span>
-            <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300"></i>
+            <span class="icon-[lucide--chevron-down] text-xs text-slate-400 transition-transform duration-300"></span>
           </button>
           <div class="accordion-content px-6 text-sm text-slate-600">
             <p class="py-4 border-t border-slate-100">
@@ -777,7 +777,7 @@
         <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors duration-200">
           <button type="button" class="faq-btn w-full px-6 py-4 text-left font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50">
             <span>How is BMI calculated?</span>
-            <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300"></i>
+            <span class="icon-[lucide--chevron-down] text-xs text-slate-400 transition-transform duration-300"></span>
           </button>
           <div class="accordion-content px-6 text-sm text-slate-600">
             <p class="py-4 border-t border-slate-100">
@@ -790,7 +790,7 @@
         <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors duration-200">
           <button type="button" class="faq-btn w-full px-6 py-4 text-left font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50">
             <span>Is BMI accurate for everyone?</span>
-            <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300"></i>
+            <span class="icon-[lucide--chevron-down] text-xs text-slate-400 transition-transform duration-300"></span>
           </button>
           <div class="accordion-content px-6 text-sm text-slate-600">
             <p class="py-4 border-t border-slate-100">
@@ -803,7 +803,7 @@
         <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors duration-200">
           <button type="button" class="faq-btn w-full px-6 py-4 text-left font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50">
             <span>What is the difference between BMI and body fat percentage?</span>
-            <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300"></i>
+            <span class="icon-[lucide--chevron-down] text-xs text-slate-400 transition-transform duration-300"></span>
           </button>
           <div class="accordion-content px-6 text-sm text-slate-600">
             <p class="py-4 border-t border-slate-100">
@@ -816,7 +816,7 @@
         <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors duration-200">
           <button type="button" class="faq-btn w-full px-6 py-4 text-left font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50">
             <span>Can I use this BMI calculator for children?</span>
-            <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300"></i>
+            <span class="icon-[lucide--chevron-down] text-xs text-slate-400 transition-transform duration-300"></span>
           </button>
           <div class="accordion-content px-6 text-sm text-slate-600">
             <p class="py-4 border-t border-slate-100">
@@ -829,7 +829,7 @@
         <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors duration-200">
           <button type="button" class="faq-btn w-full px-6 py-4 text-left font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50">
             <span>What does a BMI of 25 mean?</span>
-            <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300"></i>
+            <span class="icon-[lucide--chevron-down] text-xs text-slate-400 transition-transform duration-300"></span>
           </button>
           <div class="accordion-content px-6 text-sm text-slate-600">
             <p class="py-4 border-t border-slate-100">
@@ -842,7 +842,7 @@
         <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors duration-200">
           <button type="button" class="faq-btn w-full px-6 py-4 text-left font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50">
             <span>How often should I check my BMI?</span>
-            <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300"></i>
+            <span class="icon-[lucide--chevron-down] text-xs text-slate-400 transition-transform duration-300"></span>
           </button>
           <div class="accordion-content px-6 text-sm text-slate-600">
             <p class="py-4 border-t border-slate-100">
@@ -855,7 +855,7 @@
         <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors duration-200">
           <button type="button" class="faq-btn w-full px-6 py-4 text-left font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50">
             <span>Does muscle mass affect BMI?</span>
-            <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300"></i>
+            <span class="icon-[lucide--chevron-down] text-xs text-slate-400 transition-transform duration-300"></span>
           </button>
           <div class="accordion-content px-6 text-sm text-slate-600">
             <p class="py-4 border-t border-slate-100">
@@ -868,7 +868,7 @@
         <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors duration-200">
           <button type="button" class="faq-btn w-full px-6 py-4 text-left font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50">
             <span>What is BMI Prime?</span>
-            <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300"></i>
+            <span class="icon-[lucide--chevron-down] text-xs text-slate-400 transition-transform duration-300"></span>
           </button>
           <div class="accordion-content px-6 text-sm text-slate-600">
             <p class="py-4 border-t border-slate-100">
@@ -881,7 +881,7 @@
         <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors duration-200">
           <button type="button" class="faq-btn w-full px-6 py-4 text-left font-semibold text-slate-800 flex items-center justify-between hover:bg-slate-50">
             <span>Is this BMI calculator free forever?</span>
-            <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300"></i>
+            <span class="icon-[lucide--chevron-down] text-xs text-slate-400 transition-transform duration-300"></span>
           </button>
           <div class="accordion-content px-6 text-sm text-slate-600">
             <p class="py-4 border-t border-slate-100">
@@ -900,7 +900,7 @@
         
         <a href="#" class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:border-brand-300 transition-all group">
           <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center text-xl mb-4 group-hover:bg-brand-600 group-hover:text-white transition-colors">
-            <i class="fa-solid fa-ruler-horizontal"></i>
+            <span class="icon-[fa6-solid--ruler-horizontal]"></span>
           </div>
           <h3 class="font-bold text-slate-900 text-lg mb-1 group-hover:text-brand-600 transition-colors">Waist-to-Hip Ratio Calculator</h3>
           <p class="text-slate-600 text-xs leading-relaxed">Evaluate body fat distribution and cardiovascular risk using waist and hip measurements.</p>
@@ -908,7 +908,7 @@
 
         <a href="#" class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:border-brand-300 transition-all group">
           <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center text-xl mb-4 group-hover:bg-brand-600 group-hover:text-white transition-colors">
-            <i class="fa-solid fa-percent"></i>
+            <span class="icon-[fa6-solid--percent]"></span>
           </div>
           <h3 class="font-bold text-slate-900 text-lg mb-1 group-hover:text-brand-600 transition-colors">Body Fat Percentage Calculator</h3>
           <p class="text-slate-600 text-xs leading-relaxed">Estimate lean mass and essential body fat percentage using standard skinfold or tape methods.</p>
@@ -916,7 +916,7 @@
 
         <a href="#" class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:border-brand-300 transition-all group">
           <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center text-xl mb-4 group-hover:bg-brand-600 group-hover:text-white transition-colors">
-            <i class="fa-solid fa-weight-scale"></i>
+            <span class="icon-[fa6-solid--weight-scale]"></span>
           </div>
           <h3 class="font-bold text-slate-900 text-lg mb-1 group-hover:text-brand-600 transition-colors">Ideal Weight Calculator</h3>
           <p class="text-slate-600 text-xs leading-relaxed">Discover recommended target weights based on clinical formulas including Devine and Hamwi.</p>
@@ -937,7 +937,7 @@
         <div class="space-y-4">
           <div class="flex items-center gap-2 text-white font-bold text-lg">
             <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
-              <i class="fa-solid fa-calculator"></i>
+              <span class="icon-[fa6-solid--calculator]"></span>
             </div>
             <span>Calculator<span class="text-indigo-400">-Pro</span></span>
           </div>

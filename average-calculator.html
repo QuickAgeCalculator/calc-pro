@@ -24,7 +24,7 @@
 
     <!-- Google Fonts & FontAwesome -->
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
 
     <!-- Tailwind CSS CDN & Custom Config -->
     
@@ -169,7 +169,7 @@
       <!-- Brand Logo & Name -->
       <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
         <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
-          <i class="fa-solid fa-calculator text-lg"></i>
+          <span class="icon-[fa6-solid--calculator] text-lg"></span>
         </div>
         <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
           Calculator<span class="text-indigo-600">-Pro</span>
@@ -366,7 +366,7 @@
         <section class="relative bg-gradient-to-b from-brand-50/80 via-slate-50 to-slate-50 pt-8 pb-12 sm:pt-12 sm:pb-16 px-4 sm:px-6 lg:px-8">
             <div class="max-w-4xl mx-auto text-center mb-8 sm:mb-12">
                 <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-brand-100 text-brand-700 border border-brand-200/60 mb-4">
-                    <i class="fa-solid fa-sparkles text-brand-500"></i> Fast, Free & Precise Statistical Calculator
+                    <span class="icon-[lucide--sparkles] text-brand-500"></span> Fast, Free & Precise Statistical Calculator
                 </span>
                 <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
                     Average Calculator – Calculate the Average of Numbers
@@ -386,19 +386,19 @@
                     </div>
                     <div class="grid grid-cols-2 sm:grid-cols-5 gap-1.5 bg-slate-200/60 p-1.5 rounded-2xl text-xs sm:text-sm font-medium">
                         <button type="button" data-mode="mean" class="calc-type-btn flex items-center justify-center py-2.5 px-3 rounded-xl bg-white text-brand-700 font-semibold shadow-sm transition-all duration-200">
-                            <i class="fa-solid fa-calculator mr-1.5 hidden sm:inline"></i> Mean
+                            <span class="icon-[fa6-solid--calculator] mr-1.5 hidden sm:inline"></span> Mean
                         </button>
                         <button type="button" data-mode="median" class="calc-type-btn flex items-center justify-center py-2.5 px-3 rounded-xl text-slate-600 hover:text-slate-900 transition-all duration-200">
-                            <i class="fa-solid fa-arrows-left-right-to-line mr-1.5 hidden sm:inline"></i> Median
+                            <span class="icon-[fa6-solid--arrows-left-right-to-line] mr-1.5 hidden sm:inline"></span> Median
                         </button>
                         <button type="button" data-mode="mode" class="calc-type-btn flex items-center justify-center py-2.5 px-3 rounded-xl text-slate-600 hover:text-slate-900 transition-all duration-200">
-                            <i class="fa-solid fa-layer-group mr-1.5 hidden sm:inline"></i> Mode
+                            <span class="icon-[fa6-solid--layer-group] mr-1.5 hidden sm:inline"></span> Mode
                         </button>
                         <button type="button" data-mode="range" class="calc-type-btn flex items-center justify-center py-2.5 px-3 rounded-xl text-slate-600 hover:text-slate-900 transition-all duration-200">
-                            <i class="fa-solid fa-ruler-horizontal mr-1.5 hidden sm:inline"></i> Range
+                            <span class="icon-[fa6-solid--ruler-horizontal] mr-1.5 hidden sm:inline"></span> Range
                         </button>
                         <button type="button" data-mode="weighted" class="calc-type-btn col-span-2 sm:col-span-1 flex items-center justify-center py-2.5 px-3 rounded-xl text-slate-600 hover:text-slate-900 transition-all duration-200">
-                            <i class="fa-solid fa-weight-hanging mr-1.5 hidden sm:inline"></i> Weighted
+                            <span class="icon-[fa6-solid--weight-hanging] mr-1.5 hidden sm:inline"></span> Weighted
                         </button>
                     </div>
                 </div>
@@ -409,10 +409,10 @@
                         <span class="text-sm font-semibold text-slate-700">Input Method:</span>
                         <div class="flex items-center gap-2 bg-slate-100 p-1 rounded-xl text-xs font-medium">
                             <button type="button" id="input-tab-bulk" class="px-3 py-1.5 rounded-lg bg-white text-slate-800 shadow-xs font-semibold">
-                                <i class="fa-solid fa-paragraph mr-1"></i> Bulk Text
+                                <span class="icon-[fa6-solid--paragraph] mr-1"></span> Bulk Text
                             </button>
                             <button type="button" id="input-tab-rows" class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-800">
-                                <i class="fa-solid fa-list-ol mr-1"></i> Individual Rows
+                                <span class="icon-[fa6-solid--list-ol] mr-1"></span> Individual Rows
                             </button>
                         </div>
                     </div>
@@ -431,7 +431,7 @@
                             <!-- Dynamic Row Elements inserted via JS -->
                         </div>
                         <button type="button" id="add-row-btn" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-600 hover:text-brand-700 bg-brand-50 hover:bg-brand-100 px-3 py-2 rounded-xl transition-colors">
-                            <i class="fa-solid fa-plus"></i> Add Another Row
+                            <span class="icon-[fa6-solid--plus]"></span> Add Another Row
                         </button>
                     </div>
 
@@ -442,7 +442,7 @@
                             <!-- Dynamic Weighted Rows inserted via JS -->
                         </div>
                         <button type="button" id="add-weighted-row-btn" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-600 hover:text-brand-700 bg-brand-50 hover:bg-brand-100 px-3 py-2 rounded-xl transition-colors">
-                            <i class="fa-solid fa-plus"></i> Add Value & Weight
+                            <span class="icon-[fa6-solid--plus]"></span> Add Value & Weight
                         </button>
                     </div>
 
@@ -450,14 +450,14 @@
                     <div class="mt-6 flex flex-wrap items-center justify-between gap-3 pt-2">
                         <div class="flex items-center gap-2">
                             <button type="button" id="calc-btn" class="px-6 py-3 bg-brand-600 hover:bg-brand-700 text-white font-semibold rounded-xl shadow-lg shadow-brand-500/30 hover:shadow-brand-600/40 active:scale-95 transition-all duration-150 inline-flex items-center gap-2 text-sm sm:text-base">
-                                <i class="fa-solid fa-calculator"></i> Calculate
+                                <span class="icon-[fa6-solid--calculator]"></span> Calculate
                             </button>
                             <button type="button" id="clear-btn" class="px-4 py-3 bg-slate-100 hover:bg-slate-200 text-slate-600 font-semibold rounded-xl active:scale-95 transition-all duration-150 text-sm sm:text-base">
                                 Clear
                             </button>
                         </div>
                         <button type="button" id="sample-data-btn" class="px-3 py-2 text-xs font-medium text-slate-500 hover:text-brand-600 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl transition-colors inline-flex items-center gap-1.5">
-                            <i class="fa-solid fa-lightbulb text-amber-500"></i> Load Sample Data
+                            <span class="icon-[fa6-solid--lightbulb] text-amber-500"></span> Load Sample Data
                         </button>
                     </div>
 
@@ -472,7 +472,7 @@
                                 <span class="text-xs font-semibold uppercase tracking-wider text-slate-400" id="result-mode-title">Result Summary</span>
                             </div>
                             <button type="button" id="copy-result-btn" class="text-xs bg-slate-800 hover:bg-slate-700 border border-slate-600 text-slate-200 px-3 py-1.5 rounded-lg transition-colors inline-flex items-center gap-1.5">
-                                <i class="fa-regular fa-copy"></i> Copy Results
+                                <span class="icon-[fa6-regular--copy]"></span> Copy Results
                             </button>
                         </div>
 
@@ -518,7 +518,7 @@
                         <!-- Step-By-Step Solution Container -->
                         <div class="bg-slate-950/60 rounded-xl p-4 border border-slate-800 text-xs sm:text-sm font-mono text-slate-300">
                             <div class="flex items-center gap-2 text-brand-400 font-sans font-semibold mb-2">
-                                <i class="fa-solid fa-list-check"></i> Step-by-Step Calculation:
+                                <span class="icon-[fa6-solid--list-check]"></span> Step-by-Step Calculation:
                             </div>
                             <div id="step-by-step-content" class="space-y-1.5 leading-relaxed text-slate-300">
                                 Enter valid numbers to view step-by-step mathematical output.
@@ -537,7 +537,7 @@
             <section id="how-to-use" class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200/80">
                 <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
                     <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-100 text-brand-600 text-sm">
-                        <i class="fa-solid fa-circle-play"></i>
+                        <span class="icon-[fa6-solid--circle-play]"></span>
                     </span>
                     How to Use the Average Calculator
                 </h2>
@@ -585,7 +585,7 @@
                 <!-- 1. Mean -->
                 <div class="space-y-2">
                     <h3 class="text-lg font-bold text-brand-700 flex items-center gap-2">
-                        <i class="fa-solid fa-calculator text-sm"></i> 1. Arithmetic Mean (Simple Average)
+                        <span class="icon-[fa6-solid--calculator] text-sm"></span> 1. Arithmetic Mean (Simple Average)
                     </h3>
                     <p class="text-sm text-slate-600 leading-relaxed">
                         The arithmetic mean is the most common form of average. It is computed by summing all numbers in a dataset and dividing that total by the quantity of numbers.
@@ -599,7 +599,7 @@
                 <!-- 2. Median -->
                 <div class="space-y-2 pt-4 border-t border-slate-100">
                     <h3 class="text-lg font-bold text-brand-700 flex items-center gap-2">
-                        <i class="fa-solid fa-arrows-left-right-to-line text-sm"></i> 2. Median
+                        <span class="icon-[fa6-solid--arrows-left-right-to-line] text-sm"></span> 2. Median
                     </h3>
                     <p class="text-sm text-slate-600 leading-relaxed">
                         The median is the exact middle value when a dataset is arranged in ascending order. If the dataset has an even count of values, the median is the mean of the two central numbers.
@@ -610,7 +610,7 @@
                 <!-- 3. Mode -->
                 <div class="space-y-2 pt-4 border-t border-slate-100">
                     <h3 class="text-lg font-bold text-brand-700 flex items-center gap-2">
-                        <i class="fa-solid fa-layer-group text-sm"></i> 3. Mode
+                        <span class="icon-[fa6-solid--layer-group] text-sm"></span> 3. Mode
                     </h3>
                     <p class="text-sm text-slate-600 leading-relaxed">
                         The mode is the number that appears most frequently within a dataset. A dataset can have one mode (unimodal), multiple modes (multimodal), or no mode at all.
@@ -621,7 +621,7 @@
                 <!-- 4. Weighted Average -->
                 <div class="space-y-2 pt-4 border-t border-slate-100">
                     <h3 class="text-lg font-bold text-brand-700 flex items-center gap-2">
-                        <i class="fa-solid fa-weight-hanging text-sm"></i> 4. Weighted Average
+                        <span class="icon-[fa6-solid--weight-hanging] text-sm"></span> 4. Weighted Average
                     </h3>
                     <p class="text-sm text-slate-600 leading-relaxed">
                         A weighted average assigns varying levels of importance (weights) to individual values in the dataset before calculating the overall mean.
@@ -635,7 +635,7 @@
                 <!-- 5. Geometric & Harmonic Mean -->
                 <div class="space-y-2 pt-4 border-t border-slate-100">
                     <h3 class="text-lg font-bold text-brand-700 flex items-center gap-2">
-                        <i class="fa-solid fa-chart-line text-sm"></i> 5. Geometric Mean & Harmonic Mean (Advanced)
+                        <span class="icon-[fa6-solid--chart-line] text-sm"></span> 5. Geometric Mean & Harmonic Mean (Advanced)
                     </h3>
                     <p class="text-sm text-slate-600 leading-relaxed">
                         <strong>Geometric Mean:</strong> Calculated by taking the nth root of the product of n numbers. Used for exponential growth rates and financial returns.<br>
@@ -757,32 +757,32 @@
                 <h2 class="text-2xl font-bold text-slate-900 mb-6">Why Use Our Free Online Average Calculator?</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     <div class="p-4 rounded-xl border border-slate-100 bg-slate-50">
-                        <i class="fa-solid fa-bolt text-amber-500 text-xl mb-2"></i>
+                        <span class="icon-[fa6-solid--bolt] text-amber-500 text-xl mb-2"></span>
                         <h3 class="font-bold text-slate-800 text-sm mb-1">Instant Results</h3>
                         <p class="text-xs text-slate-600">Calculations update immediately as you type without waiting.</p>
                     </div>
                     <div class="p-4 rounded-xl border border-slate-100 bg-slate-50">
-                        <i class="fa-solid fa-lock text-emerald-500 text-xl mb-2"></i>
+                        <span class="icon-[fa6-solid--lock] text-emerald-500 text-xl mb-2"></span>
                         <h3 class="font-bold text-slate-800 text-sm mb-1">100% Free & No Signup</h3>
                         <p class="text-xs text-slate-600">Unlimited usage without registrations or paywalls.</p>
                     </div>
                     <div class="p-4 rounded-xl border border-slate-100 bg-slate-50">
-                        <i class="fa-solid fa-mobile-screen text-brand-500 text-xl mb-2"></i>
+                        <span class="icon-[fa6-solid--mobile-screen] text-brand-500 text-xl mb-2"></span>
                         <h3 class="font-bold text-slate-800 text-sm mb-1">Fully Responsive</h3>
                         <p class="text-xs text-slate-600">Optimized for seamless experience on mobile, tablet, or desktop.</p>
                     </div>
                     <div class="p-4 rounded-xl border border-slate-100 bg-slate-50">
-                        <i class="fa-solid fa-database text-purple-500 text-xl mb-2"></i>
+                        <span class="icon-[fa6-solid--database] text-purple-500 text-xl mb-2"></span>
                         <h3 class="font-bold text-slate-800 text-sm mb-1">Supports Large Datasets</h3>
                         <p class="text-xs text-slate-600">Handle hundreds of numbers at once via simple text pasting.</p>
                     </div>
                     <div class="p-4 rounded-xl border border-slate-100 bg-slate-50">
-                        <i class="fa-solid fa-graduation-cap text-indigo-500 text-xl mb-2"></i>
+                        <span class="icon-[fa6-solid--graduation-cap] text-indigo-500 text-xl mb-2"></span>
                         <h3 class="font-bold text-slate-800 text-sm mb-1">Detailed Steps</h3>
                         <p class="text-xs text-slate-600">Learn math concepts easily with step-by-step mathematical explanations.</p>
                     </div>
                     <div class="p-4 rounded-xl border border-slate-100 bg-slate-50">
-                        <i class="fa-solid fa-shield-halved text-blue-500 text-xl mb-2"></i>
+                        <span class="icon-[fa6-solid--shield-halved] text-blue-500 text-xl mb-2"></span>
                         <h3 class="font-bold text-slate-800 text-sm mb-1">Accurate & Reliable</h3>
                         <p class="text-xs text-slate-600">Powered by verified numerical statistical formulas.</p>
                     </div>
@@ -793,31 +793,31 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200/80">
                     <h2 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-                        <i class="fa-solid fa-calendar-check text-brand-600"></i> When to Use an Average Calculator
+                        <span class="icon-[fa6-solid--calendar-check] text-brand-600"></span> When to Use an Average Calculator
                     </h2>
                     <ul class="space-y-2 text-xs sm:text-sm text-slate-600">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Calculate test scores & grades</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Calculate class averages</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Analyze survey results</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Calculate average product prices</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Compare numerical datasets</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Calculate scientific measurements</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Analyze business revenue trends</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Verify manual math homework</li>
+                        <li class="flex items-center gap-2"><span class="icon-[fa6-solid--check] text-emerald-500"></span> Calculate test scores & grades</li>
+                        <li class="flex items-center gap-2"><span class="icon-[fa6-solid--check] text-emerald-500"></span> Calculate class averages</li>
+                        <li class="flex items-center gap-2"><span class="icon-[fa6-solid--check] text-emerald-500"></span> Analyze survey results</li>
+                        <li class="flex items-center gap-2"><span class="icon-[fa6-solid--check] text-emerald-500"></span> Calculate average product prices</li>
+                        <li class="flex items-center gap-2"><span class="icon-[fa6-solid--check] text-emerald-500"></span> Compare numerical datasets</li>
+                        <li class="flex items-center gap-2"><span class="icon-[fa6-solid--check] text-emerald-500"></span> Calculate scientific measurements</li>
+                        <li class="flex items-center gap-2"><span class="icon-[fa6-solid--check] text-emerald-500"></span> Analyze business revenue trends</li>
+                        <li class="flex items-center gap-2"><span class="icon-[fa6-solid--check] text-emerald-500"></span> Verify manual math homework</li>
                     </ul>
                 </section>
 
                 <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200/80">
                     <h2 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-                        <i class="fa-solid fa-users text-brand-600"></i> Who Can Use This Average Calculator?
+                        <span class="icon-[fa6-solid--users] text-brand-600"></span> Who Can Use This Average Calculator?
                     </h2>
                     <ul class="space-y-2 text-xs sm:text-sm text-slate-600">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-user-graduate text-slate-400"></i> <strong>Students:</strong> Quick grade calculations</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-chalkboard-user text-slate-400"></i> <strong>Teachers:</strong> Class performance evaluation</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-microscope text-slate-400"></i> <strong>Researchers:</strong> Scientific statistical aggregation</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-briefcase text-slate-400"></i> <strong>Business Professionals:</strong> Sales tracking</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-chart-pie text-slate-400"></i> <strong>Data Analysts:</strong> Fast distribution metrics</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-house text-slate-400"></i> <strong>Parents:</strong> Homework assistance</li>
+                        <li class="flex items-center gap-2"><span class="icon-[fa6-solid--user-graduate] text-slate-400"></span> <strong>Students:</strong> Quick grade calculations</li>
+                        <li class="flex items-center gap-2"><span class="icon-[fa6-solid--chalkboard-user] text-slate-400"></span> <strong>Teachers:</strong> Class performance evaluation</li>
+                        <li class="flex items-center gap-2"><span class="icon-[fa6-solid--microscope] text-slate-400"></span> <strong>Researchers:</strong> Scientific statistical aggregation</li>
+                        <li class="flex items-center gap-2"><span class="icon-[fa6-solid--briefcase] text-slate-400"></span> <strong>Business Professionals:</strong> Sales tracking</li>
+                        <li class="flex items-center gap-2"><span class="icon-[fa6-solid--chart-pie] text-slate-400"></span> <strong>Data Analysts:</strong> Fast distribution metrics</li>
+                        <li class="flex items-center gap-2"><span class="icon-[fa6-solid--house] text-slate-400"></span> <strong>Parents:</strong> Homework assistance</li>
                     </ul>
                 </section>
             </div>
@@ -858,7 +858,7 @@
                     <div class="border border-slate-200 rounded-xl overflow-hidden">
                         <button type="button" class="faq-toggle w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
                             <span>Q1. How do I calculate the average of numbers?</span>
-                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
                         </button>
                         <div class="accordion-content px-5 text-xs sm:text-sm text-slate-600 leading-relaxed bg-slate-50/50">
                             <div class="py-4">To calculate the average (arithmetic mean) of numbers, add all the numbers together to find their total sum, then divide that sum by the total count of numbers in the dataset.</div>
@@ -869,7 +869,7 @@
                     <div class="border border-slate-200 rounded-xl overflow-hidden">
                         <button type="button" class="faq-toggle w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
                             <span>Q2. What is the difference between mean, median and mode?</span>
-                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
                         </button>
                         <div class="accordion-content px-5 text-xs sm:text-sm text-slate-600 leading-relaxed bg-slate-50/50">
                             <div class="py-4">The <strong>Mean</strong> is the sum of values divided by count. The <strong>Median</strong> is the middle value when data is sorted in numerical order. The <strong>Mode</strong> is the number that appears most frequently.</div>
@@ -880,7 +880,7 @@
                     <div class="border border-slate-200 rounded-xl overflow-hidden">
                         <button type="button" class="faq-toggle w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
                             <span>Q3. How to calculate weighted average?</span>
-                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
                         </button>
                         <div class="accordion-content px-5 text-xs sm:text-sm text-slate-600 leading-relaxed bg-slate-50/50">
                             <div class="py-4">Multiply each number by its specific weight factor, add all those multiplied values together, and divide by the total sum of all weight factors.</div>
@@ -891,7 +891,7 @@
                     <div class="border border-slate-200 rounded-xl overflow-hidden">
                         <button type="button" class="faq-toggle w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
                             <span>Q4. Can I calculate average of percentages?</span>
-                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
                         </button>
                         <div class="accordion-content px-5 text-xs sm:text-sm text-slate-600 leading-relaxed bg-slate-50/50">
                             <div class="py-4">Yes, if all percentages represent equal sample sizes or base values. If the base totals differ, you must calculate a weighted average based on sample sizes.</div>
@@ -902,7 +902,7 @@
                     <div class="border border-slate-200 rounded-xl overflow-hidden">
                         <button type="button" class="faq-toggle w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
                             <span>Q5. Is this average calculator free?</span>
-                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
                         </button>
                         <div class="accordion-content px-5 text-xs sm:text-sm text-slate-600 leading-relaxed bg-slate-50/50">
                             <div class="py-4">Yes, Calculator Pro's Average Calculator is 100% free with no account creation, subscription, or software downloads required.</div>
@@ -913,7 +913,7 @@
                     <div class="border border-slate-200 rounded-xl overflow-hidden">
                         <button type="button" class="faq-toggle w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
                             <span>Q6. Does this tool work offline?</span>
-                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
                         </button>
                         <div class="accordion-content px-5 text-xs sm:text-sm text-slate-600 leading-relaxed bg-slate-50/50">
                             <div class="py-4">Yes! Once the website page is loaded in your browser, all calculation scripts execute locally inside your web browser.</div>
@@ -924,7 +924,7 @@
                     <div class="border border-slate-200 rounded-xl overflow-hidden">
                         <button type="button" class="faq-toggle w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
                             <span>Q7. How accurate is the online average calculator?</span>
-                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
                         </button>
                         <div class="accordion-content px-5 text-xs sm:text-sm text-slate-600 leading-relaxed bg-slate-50/50">
                             <div class="py-4">Our tool utilizes double-precision floating-point arithmetic standards to guarantee precision up to 10 decimal places.</div>
@@ -935,7 +935,7 @@
                     <div class="border border-slate-200 rounded-xl overflow-hidden">
                         <button type="button" class="faq-toggle w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
                             <span>Q8. Can I calculate average of negative numbers?</span>
-                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
                         </button>
                         <div class="accordion-content px-5 text-xs sm:text-sm text-slate-600 leading-relaxed bg-slate-50/50">
                             <div class="py-4">Yes, negative numbers are completely supported. Simply enter the minus sign (-) before negative inputs (e.g. -10, 20, -5).</div>
@@ -946,7 +946,7 @@
                     <div class="border border-slate-200 rounded-xl overflow-hidden">
                         <button type="button" class="faq-toggle w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
                             <span>Q9. What is the formula for average?</span>
-                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
                         </button>
                         <div class="accordion-content px-5 text-xs sm:text-sm text-slate-600 leading-relaxed bg-slate-50/50">
                             <div class="py-4">The basic formula is: <code>Average = Sum of Values ÷ Number of Values</code> or mathematically <code>A = (x₁ + x₂ + ... + xₙ) / n</code>.</div>
@@ -957,7 +957,7 @@
                     <div class="border border-slate-200 rounded-xl overflow-hidden">
                         <button type="button" class="faq-toggle w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
                             <span>Q10. How to find average in Excel vs Online Calculator?</span>
-                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
                         </button>
                         <div class="accordion-content px-5 text-xs sm:text-sm text-slate-600 leading-relaxed bg-slate-50/50">
                             <div class="py-4">In Microsoft Excel, you write `=AVERAGE(A1:A10)`. Our online calculator delivers identical statistical accuracy without launching Excel.</div>
@@ -970,39 +970,39 @@
             <!-- Section N: Related Tools / Internal Links -->
             <section id="related-tools" class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200/80">
                 <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
-                    <i class="fa-solid fa-toolbox text-brand-600"></i> Related Tools & Calculators
+                    <span class="icon-[fa6-solid--toolbox] text-brand-600"></span> Related Tools & Calculators
                 </h2>
                 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                     <a href="#" class="p-4 rounded-xl border border-slate-100 bg-slate-50 hover:bg-brand-50 hover:border-brand-200 transition-all text-center group">
-                        <i class="fa-solid fa-percent text-slate-400 group-hover:text-brand-600 text-xl mb-2 transition-colors"></i>
+                        <span class="icon-[fa6-solid--percent] text-slate-400 group-hover:text-brand-600 text-xl mb-2 transition-colors"></span>
                         <div class="font-semibold text-slate-800 text-xs sm:text-sm group-hover:text-brand-600">Ratio Calculator</div>
                     </a>
                     <a href="#" class="p-4 rounded-xl border border-slate-100 bg-slate-50 hover:bg-brand-50 hover:border-brand-200 transition-all text-center group">
-                        <i class="fa-solid fa-flask text-slate-400 group-hover:text-brand-600 text-xl mb-2 transition-colors"></i>
+                        <span class="icon-[fa6-solid--flask] text-slate-400 group-hover:text-brand-600 text-xl mb-2 transition-colors"></span>
                         <div class="font-semibold text-slate-800 text-xs sm:text-sm group-hover:text-brand-600">Scientific Calculator</div>
                     </a>
                     <a href="#" class="p-4 rounded-xl border border-slate-100 bg-slate-50 hover:bg-brand-50 hover:border-brand-200 transition-all text-center group">
-                        <i class="fa-solid fa-receipt text-slate-400 group-hover:text-brand-600 text-xl mb-2 transition-colors"></i>
+                        <span class="icon-[fa6-solid--receipt] text-slate-400 group-hover:text-brand-600 text-xl mb-2 transition-colors"></span>
                         <div class="font-semibold text-slate-800 text-xs sm:text-sm group-hover:text-brand-600">GST Calculator</div>
                     </a>
                     <a href="#" class="p-4 rounded-xl border border-slate-100 bg-slate-50 hover:bg-brand-50 hover:border-brand-200 transition-all text-center group">
-                        <i class="fa-solid fa-coins text-slate-400 group-hover:text-brand-600 text-xl mb-2 transition-colors"></i>
+                        <span class="icon-[fa6-solid--coins] text-slate-400 group-hover:text-brand-600 text-xl mb-2 transition-colors"></span>
                         <div class="font-semibold text-slate-800 text-xs sm:text-sm group-hover:text-brand-600">Simple Interest</div>
                     </a>
                     <a href="#" class="p-4 rounded-xl border border-slate-100 bg-slate-50 hover:bg-brand-50 hover:border-brand-200 transition-all text-center group">
-                        <i class="fa-solid fa-chart-line text-slate-400 group-hover:text-brand-600 text-xl mb-2 transition-colors"></i>
+                        <span class="icon-[fa6-solid--chart-line] text-slate-400 group-hover:text-brand-600 text-xl mb-2 transition-colors"></span>
                         <div class="font-semibold text-slate-800 text-xs sm:text-sm group-hover:text-brand-600">Compound Interest</div>
                     </a>
                     <a href="#" class="p-4 rounded-xl border border-slate-100 bg-slate-50 hover:bg-brand-50 hover:border-brand-200 transition-all text-center group">
-                        <i class="fa-solid fa-heart-pulse text-slate-400 group-hover:text-brand-600 text-xl mb-2 transition-colors"></i>
+                        <span class="icon-[fa6-solid--heart-pulse] text-slate-400 group-hover:text-brand-600 text-xl mb-2 transition-colors"></span>
                         <div class="font-semibold text-slate-800 text-xs sm:text-sm group-hover:text-brand-600">BMI Calculator</div>
                     </a>
                     <a href="#" class="p-4 rounded-xl border border-slate-100 bg-slate-50 hover:bg-brand-50 hover:border-brand-200 transition-all text-center group">
-                        <i class="fa-solid fa-cake-candles text-slate-400 group-hover:text-brand-600 text-xl mb-2 transition-colors"></i>
+                        <span class="icon-[fa6-solid--cake-candles] text-slate-400 group-hover:text-brand-600 text-xl mb-2 transition-colors"></span>
                         <div class="font-semibold text-slate-800 text-xs sm:text-sm group-hover:text-brand-600">Age Calculator</div>
                     </a>
                     <a href="#" class="p-4 rounded-xl border border-slate-100 bg-slate-50 hover:bg-brand-50 hover:border-brand-200 transition-all text-center group">
-                        <i class="fa-solid fa-clock text-slate-400 group-hover:text-brand-600 text-xl mb-2 transition-colors"></i>
+                        <span class="icon-[fa6-solid--clock] text-slate-400 group-hover:text-brand-600 text-xl mb-2 transition-colors"></span>
                         <div class="font-semibold text-slate-800 text-xs sm:text-sm group-hover:text-brand-600">Time Calculator</div>
                     </a>
                 </div>
@@ -1020,7 +1020,7 @@
         <div class="space-y-4">
           <div class="flex items-center gap-2 text-white font-bold text-lg">
             <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
-              <i class="fa-solid fa-calculator"></i>
+              <span class="icon-[fa6-solid--calculator]"></span>
             </div>
             <span>Calculator<span class="text-indigo-400">-Pro</span></span>
           </div>

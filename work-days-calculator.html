@@ -23,7 +23,7 @@
 
     <!-- CDN External Dependencies -->
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     
     
 	
@@ -189,7 +189,7 @@
       <!-- Brand Logo & Name -->
       <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
         <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
-          <i class="fa-solid fa-calculator text-lg"></i>
+          <span class="icon-[fa6-solid--calculator] text-lg"></span>
         </div>
         <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
           Calculator<span class="text-indigo-600">-Pro</span>
@@ -386,7 +386,7 @@
     <!-- HERO SECTION -->
     <section class="text-center max-w-4xl mx-auto mb-10">
         <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-xs sm:text-sm font-semibold mb-4 shadow-sm">
-            <i class="fa-solid fa-sparkles text-amber-500"></i> Updated for 2026 Calendar &amp; Holidays
+            <span class="icon-[lucide--sparkles] text-amber-500"></span> Updated for 2026 Calendar &amp; Holidays
         </div>
         <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
             Work Days Calculator – <span class="text-indigo-600">Count Business Days</span> Between Dates
@@ -398,16 +398,16 @@
         <!-- Benefit Badges -->
         <div class="mt-6 flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs sm:text-sm font-medium text-slate-700">
             <div class="flex items-center gap-1.5 bg-white border border-slate-200/80 px-3 py-1.5 rounded-lg shadow-sm">
-                <i class="fa-solid fa-circle-check text-emerald-500"></i> Free to use
+                <span class="icon-[fa6-solid--circle-check] text-emerald-500"></span> Free to use
             </div>
             <div class="flex items-center gap-1.5 bg-white border border-slate-200/80 px-3 py-1.5 rounded-lg shadow-sm">
-                <i class="fa-solid fa-circle-check text-emerald-500"></i> No registration required
+                <span class="icon-[fa6-solid--circle-check] text-emerald-500"></span> No registration required
             </div>
             <div class="flex items-center gap-1.5 bg-white border border-slate-200/80 px-3 py-1.5 rounded-lg shadow-sm">
-                <i class="fa-solid fa-circle-check text-emerald-500"></i> Fast and accurate
+                <span class="icon-[fa6-solid--circle-check] text-emerald-500"></span> Fast and accurate
             </div>
             <div class="flex items-center gap-1.5 bg-white border border-slate-200/80 px-3 py-1.5 rounded-lg shadow-sm">
-                <i class="fa-solid fa-circle-check text-emerald-500"></i> Works on mobile &amp; desktop
+                <span class="icon-[fa6-solid--circle-check] text-emerald-500"></span> Works on mobile &amp; desktop
             </div>
         </div>
     </section>
@@ -419,10 +419,10 @@
         <div class="flex flex-col sm:flex-row items-center justify-between border-b border-slate-100 pb-6 mb-8 gap-4">
             <div class="flex bg-slate-100 p-1.5 rounded-2xl w-full sm:w-auto">
                 <button id="mode-tab-1" onclick="switchCalcMode('between')" class="flex-1 sm:flex-none px-5 py-2.5 rounded-xl font-semibold text-sm transition-all shadow-sm bg-white text-indigo-600">
-                    <i class="fa-solid fa-calendar-range mr-2"></i> Between Two Dates
+                    <span class="icon-[lucide--calendar-range] mr-2"></span> Between Two Dates
                 </button>
                 <button id="mode-tab-2" onclick="switchCalcMode('addsub')" class="flex-1 sm:flex-none px-5 py-2.5 rounded-xl font-semibold text-sm transition-all text-slate-600 hover:text-slate-900">
-                    <i class="fa-solid fa-plus-minus mr-2"></i> Add / Subtract Days
+                    <span class="icon-[fa6-solid--plus-minus] mr-2"></span> Add / Subtract Days
                 </button>
             </div>
             <div class="text-xs font-semibold text-slate-500 bg-slate-50 border border-slate-200/60 px-3 py-1.5 rounded-lg flex items-center gap-2">
@@ -438,13 +438,13 @@
                 <div id="mode-between-panel" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                         <label for="start-date" class="block text-sm font-semibold text-slate-700 mb-2">
-                            <i class="fa-regular fa-calendar-check text-indigo-600 mr-1.5"></i> Start Date
+                            <span class="icon-[fa6-regular--calendar-check] text-indigo-600 mr-1.5"></span> Start Date
                         </label>
                         <input type="date" id="start-date" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-slate-800 font-medium shadow-sm transition">
                     </div>
                     <div>
                         <label for="end-date" class="block text-sm font-semibold text-slate-700 mb-2">
-                            <i class="fa-regular fa-calendar-xmark text-indigo-600 mr-1.5"></i> End Date
+                            <span class="icon-[fa6-regular--calendar-xmark] text-indigo-600 mr-1.5"></span> End Date
                         </label>
                         <input type="date" id="end-date" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-slate-800 font-medium shadow-sm transition">
                     </div>
@@ -472,7 +472,7 @@
                 <!-- OPTIONS SECTION -->
                 <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200/80 space-y-5">
                     <h3 class="text-sm font-bold uppercase tracking-wider text-slate-500 flex items-center gap-2">
-                        <i class="fa-solid fa-sliders text-indigo-600"></i> Calculation Options
+                        <span class="icon-[fa6-solid--sliders] text-indigo-600"></span> Calculation Options
                     </h3>
 
                     <!-- Weekend Pattern -->
@@ -549,7 +549,7 @@
                 <!-- ACTION BUTTONS -->
                 <div class="flex items-center gap-3">
                     <button type="button" onclick="calculateWorkDays()" class="flex-1 py-3.5 px-6 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-base rounded-xl shadow-lg shadow-indigo-200 transition-all transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-calculator"></i> Calculate Work Days
+                        <span class="icon-[fa6-solid--calculator]"></span> Calculate Work Days
                     </button>
                     <button type="button" onclick="resetCalculator()" class="py-3.5 px-5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-sm rounded-xl transition">
                         Reset
@@ -583,27 +583,27 @@
                     <!-- Result Breakdown Table -->
                     <div class="space-y-2.5 text-sm">
                         <div class="flex justify-between items-center py-2 border-b border-slate-800">
-                            <span class="text-slate-300 flex items-center gap-2"><i class="fa-regular fa-calendar text-slate-400 w-4"></i> Calendar Days</span>
+                            <span class="text-slate-300 flex items-center gap-2"><span class="icon-[fa6-regular--calendar] text-slate-400 w-4"></span> Calendar Days</span>
                             <span id="res-calendar-days" class="font-bold text-slate-100">30</span>
                         </div>
                         <div class="flex justify-between items-center py-2 border-b border-slate-800">
-                            <span class="text-slate-300 flex items-center gap-2"><i class="fa-regular fa-calendar-minus text-amber-400 w-4"></i> Saturdays</span>
+                            <span class="text-slate-300 flex items-center gap-2"><span class="icon-[fa6-regular--calendar-minus] text-amber-400 w-4"></span> Saturdays</span>
                             <span id="res-saturdays" class="font-bold text-amber-300">4</span>
                         </div>
                         <div class="flex justify-between items-center py-2 border-b border-slate-800">
-                            <span class="text-slate-300 flex items-center gap-2"><i class="fa-regular fa-calendar-minus text-amber-400 w-4"></i> Sundays</span>
+                            <span class="text-slate-300 flex items-center gap-2"><span class="icon-[fa6-regular--calendar-minus] text-amber-400 w-4"></span> Sundays</span>
                             <span id="res-sundays" class="font-bold text-amber-300">4</span>
                         </div>
                         <div class="flex justify-between items-center py-2 border-b border-slate-800">
-                            <span class="text-slate-300 flex items-center gap-2"><i class="fa-solid fa-umbrella-beach text-rose-400 w-4"></i> Holidays Excluded</span>
+                            <span class="text-slate-300 flex items-center gap-2"><span class="icon-[fa6-solid--umbrella-beach] text-rose-400 w-4"></span> Holidays Excluded</span>
                             <span id="res-holidays" class="font-bold text-rose-300">1</span>
                         </div>
                         <div class="flex justify-between items-center py-2 border-b border-slate-800">
-                            <span class="text-slate-300 flex items-center gap-2"><i class="fa-solid fa-business-time text-emerald-400 w-4"></i> Working Weeks</span>
+                            <span class="text-slate-300 flex items-center gap-2"><span class="icon-[fa6-solid--business-time] text-emerald-400 w-4"></span> Working Weeks</span>
                             <span id="res-weeks" class="font-bold text-emerald-300">4.2</span>
                         </div>
                         <div class="flex justify-between items-center py-2">
-                            <span class="text-slate-300 flex items-center gap-2"><i class="fa-regular fa-clock text-indigo-400 w-4"></i> Total Working Hours</span>
+                            <span class="text-slate-300 flex items-center gap-2"><span class="icon-[fa6-regular--clock] text-indigo-400 w-4"></span> Total Working Hours</span>
                             <span id="res-hours" class="font-bold text-indigo-300">168 hrs</span>
                         </div>
                     </div>
@@ -612,10 +612,10 @@
                 <!-- Export & Copy Actions -->
                 <div class="relative z-10 pt-6 mt-6 border-t border-slate-800 flex gap-3">
                     <button type="button" onclick="copyResults()" class="flex-1 py-2.5 bg-slate-800 hover:bg-slate-700 text-xs font-semibold rounded-xl text-slate-200 transition flex items-center justify-center gap-1.5 border border-slate-700">
-                        <i class="fa-regular fa-copy"></i> Copy Summary
+                        <span class="icon-[fa6-regular--copy]"></span> Copy Summary
                     </button>
                     <button type="button" onclick="printResults()" class="flex-1 py-2.5 bg-indigo-600/30 hover:bg-indigo-600/40 text-xs font-semibold rounded-xl text-indigo-300 transition flex items-center justify-center gap-1.5 border border-indigo-500/30">
-                        <i class="fa-solid fa-print"></i> Print / Save PDF
+                        <span class="icon-[fa6-solid--print]"></span> Print / Save PDF
                     </button>
                 </div>
 
@@ -685,7 +685,7 @@
             Working Days = Total Calendar Days − Weekend Days − Public Holidays (falling on weekdays)
         </div>
         <div class="bg-slate-800/60 p-4 rounded-xl border border-slate-700 text-xs sm:text-sm text-slate-300 space-y-2">
-            <p class="font-bold text-white"><i class="fa-solid fa-file-excel text-emerald-400 mr-2"></i> Excel Equivalents:</p>
+            <p class="font-bold text-white"><span class="icon-[fa6-solid--file-excel] text-emerald-400 mr-2"></span> Excel Equivalents:</p>
             <p>• Standard 5-day week: <code class="bg-slate-900 px-2 py-0.5 rounded text-amber-300">=NETWORKDAYS(start_date, end_date, [holidays])</code></p>
             <p>• Custom weekends: <code class="bg-slate-900 px-2 py-0.5 rounded text-amber-300">=NETWORKDAYS.INTL(start_date, end_date, weekend, [holidays])</code></p>
         </div>
@@ -727,7 +727,7 @@
             <!-- Monthly Breakdown Table -->
             <div>
                 <h3 class="font-bold text-slate-800 mb-3 text-sm flex items-center gap-2">
-                    <i class="fa-solid fa-table-cells text-indigo-600"></i> 2026 Monthly Working Days Breakdown
+                    <span class="icon-[fa6-solid--table-cells] text-indigo-600"></span> 2026 Monthly Working Days Breakdown
                 </h3>
                 <div class="overflow-x-auto border border-slate-200 rounded-xl">
                     <table class="w-full text-left text-xs sm:text-sm">
@@ -761,7 +761,7 @@
             <div class="space-y-6">
                 <div>
                     <h3 class="font-bold text-slate-800 mb-3 text-sm flex items-center gap-2">
-                        <i class="fa-solid fa-globe text-indigo-600"></i> Annual Working Days by Country
+                        <span class="icon-[fa6-solid--globe] text-indigo-600"></span> Annual Working Days by Country
                     </h3>
                     <div class="border border-slate-200 rounded-xl overflow-hidden">
                         <table class="w-full text-left text-xs sm:text-sm">
@@ -784,7 +784,7 @@
 
                 <div>
                     <h3 class="font-bold text-slate-800 mb-3 text-sm flex items-center gap-2">
-                        <i class="fa-solid fa-chart-pie text-indigo-600"></i> 2026 Quarterly Summary
+                        <span class="icon-[fa6-solid--chart-pie] text-indigo-600"></span> 2026 Quarterly Summary
                     </h3>
                     <div class="border border-slate-200 rounded-xl overflow-hidden">
                         <table class="w-full text-left text-xs sm:text-sm">
@@ -848,27 +848,27 @@
         
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50">
-                <h3 class="font-bold text-slate-800 text-base mb-1"><i class="fa-solid fa-users text-indigo-600 mr-2"></i> HR &amp; Payroll Teams</h3>
+                <h3 class="font-bold text-slate-800 text-base mb-1"><span class="icon-[fa6-solid--users] text-indigo-600 mr-2"></span> HR &amp; Payroll Teams</h3>
                 <p class="text-xs text-slate-600">Calculate pro-rated salaries, paid time off (PTO), notice periods, and leave balances accurately.</p>
             </div>
             <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50">
-                <h3 class="font-bold text-slate-800 text-base mb-1"><i class="fa-solid fa-diagram-project text-indigo-600 mr-2"></i> Project Managers</h3>
+                <h3 class="font-bold text-slate-800 text-base mb-1"><span class="icon-[fa6-solid--diagram-project] text-indigo-600 mr-2"></span> Project Managers</h3>
                 <p class="text-xs text-slate-600">Set realistic milestone deadlines, estimate sprint capacities, and track delivery schedules.</p>
             </div>
             <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50">
-                <h3 class="font-bold text-slate-800 text-base mb-1"><i class="fa-solid fa-laptop-code text-indigo-600 mr-2"></i> Freelancers &amp; Agency</h3>
+                <h3 class="font-bold text-slate-800 text-base mb-1"><span class="icon-[fa6-solid--laptop-code] text-indigo-600 mr-2"></span> Freelancers &amp; Agency</h3>
                 <p class="text-xs text-slate-600">Estimate turnaround times, contract agreements, and client invoice payment terms (e.g. Net-30 business days).</p>
             </div>
             <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50">
-                <h3 class="font-bold text-slate-800 text-base mb-1"><i class="fa-solid fa-truck-fast text-indigo-600 mr-2"></i> Logistics &amp; Shipping</h3>
+                <h3 class="font-bold text-slate-800 text-base mb-1"><span class="icon-[fa6-solid--truck-fast] text-indigo-600 mr-2"></span> Logistics &amp; Shipping</h3>
                 <p class="text-xs text-slate-600">Determine true transit times and business day delivery dates across borders.</p>
             </div>
             <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50">
-                <h3 class="font-bold text-slate-800 text-base mb-1"><i class="fa-solid fa-scale-balanced text-indigo-600 mr-2"></i> Legal &amp; Compliance</h3>
+                <h3 class="font-bold text-slate-800 text-base mb-1"><span class="icon-[fa6-solid--scale-balanced] text-indigo-600 mr-2"></span> Legal &amp; Compliance</h3>
                 <p class="text-xs text-slate-600">Calculate statutory notice windows, court filing deadlines, and contractual response periods.</p>
             </div>
             <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50">
-                <h3 class="font-bold text-slate-800 text-base mb-1"><i class="fa-solid fa-graduation-cap text-indigo-600 mr-2"></i> Students &amp; Faculty</h3>
+                <h3 class="font-bold text-slate-800 text-base mb-1"><span class="icon-[fa6-solid--graduation-cap] text-indigo-600 mr-2"></span> Students &amp; Faculty</h3>
                 <p class="text-xs text-slate-600">Plan academic terms, assignment submission schedules, and semester research durations.</p>
             </div>
         </div>
@@ -885,7 +885,7 @@
             <div class="border border-slate-200 rounded-xl overflow-hidden">
                 <button type="button" onclick="toggleAccordion('faq-1')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 flex justify-between items-center bg-slate-50/50 hover:bg-slate-50 transition">
                     <h3 class="text-base">Q1. What is a Work Days Calculator?</h3>
-                    <i id="icon-faq-1" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                    <span id="icon-faq-1" class="icon-[fa6-solid--chevron-down] text-slate-400 text-sm transition-transform duration-200"></span>
                 </button>
                 <div id="faq-1" class="accordion-content px-4 sm:px-5">
                     <p class="py-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
@@ -898,7 +898,7 @@
             <div class="border border-slate-200 rounded-xl overflow-hidden">
                 <button type="button" onclick="toggleAccordion('faq-2')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 flex justify-between items-center bg-slate-50/50 hover:bg-slate-50 transition">
                     <h3 class="text-base">Q2. How do I calculate working days between two dates?</h3>
-                    <i id="icon-faq-2" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                    <span id="icon-faq-2" class="icon-[fa6-solid--chevron-down] text-slate-400 text-sm transition-transform duration-200"></span>
                 </button>
                 <div id="faq-2" class="accordion-content px-4 sm:px-5">
                     <p class="py-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
@@ -911,7 +911,7 @@
             <div class="border border-slate-200 rounded-xl overflow-hidden">
                 <button type="button" onclick="toggleAccordion('faq-3')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 flex justify-between items-center bg-slate-50/50 hover:bg-slate-50 transition">
                     <h3 class="text-base">Q3. Does the Work Days Calculator exclude weekends?</h3>
-                    <i id="icon-faq-3" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                    <span id="icon-faq-3" class="icon-[fa6-solid--chevron-down] text-slate-400 text-sm transition-transform duration-200"></span>
                 </button>
                 <div id="faq-3" class="accordion-content px-4 sm:px-5">
                     <p class="py-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
@@ -924,7 +924,7 @@
             <div class="border border-slate-200 rounded-xl overflow-hidden">
                 <button type="button" onclick="toggleAccordion('faq-4')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 flex justify-between items-center bg-slate-50/50 hover:bg-slate-50 transition">
                     <h3 class="text-base">Q4. Can I exclude public holidays?</h3>
-                    <i id="icon-faq-4" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                    <span id="icon-faq-4" class="icon-[fa6-solid--chevron-down] text-slate-400 text-sm transition-transform duration-200"></span>
                 </button>
                 <div id="faq-4" class="accordion-content px-4 sm:px-5">
                     <p class="py-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
@@ -937,7 +937,7 @@
             <div class="border border-slate-200 rounded-xl overflow-hidden">
                 <button type="button" onclick="toggleAccordion('faq-5')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 flex justify-between items-center bg-slate-50/50 hover:bg-slate-50 transition">
                     <h3 class="text-base">Q5. What is the difference between calendar days and working days?</h3>
-                    <i id="icon-faq-5" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                    <span id="icon-faq-5" class="icon-[fa6-solid--chevron-down] text-slate-400 text-sm transition-transform duration-200"></span>
                 </button>
                 <div id="faq-5" class="accordion-content px-4 sm:px-5">
                     <p class="py-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
@@ -950,7 +950,7 @@
             <div class="border border-slate-200 rounded-xl overflow-hidden">
                 <button type="button" onclick="toggleAccordion('faq-6')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 flex justify-between items-center bg-slate-50/50 hover:bg-slate-50 transition">
                     <h3 class="text-base">Q6. Are Saturdays working days?</h3>
-                    <i id="icon-faq-6" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                    <span id="icon-faq-6" class="icon-[fa6-solid--chevron-down] text-slate-400 text-sm transition-transform duration-200"></span>
                 </button>
                 <div id="faq-6" class="accordion-content px-4 sm:px-5">
                     <p class="py-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
@@ -963,7 +963,7 @@
             <div class="border border-slate-200 rounded-xl overflow-hidden">
                 <button type="button" onclick="toggleAccordion('faq-7')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 flex justify-between items-center bg-slate-50/50 hover:bg-slate-50 transition">
                     <h3 class="text-base">Q7. Are Sundays working days?</h3>
-                    <i id="icon-faq-7" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                    <span id="icon-faq-7" class="icon-[fa6-solid--chevron-down] text-slate-400 text-sm transition-transform duration-200"></span>
                 </button>
                 <div id="faq-7" class="accordion-content px-4 sm:px-5">
                     <p class="py-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
@@ -976,7 +976,7 @@
             <div class="border border-slate-200 rounded-xl overflow-hidden">
                 <button type="button" onclick="toggleAccordion('faq-8')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 flex justify-between items-center bg-slate-50/50 hover:bg-slate-50 transition">
                     <h3 class="text-base">Q8. Can I calculate business days between dates?</h3>
-                    <i id="icon-faq-8" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                    <span id="icon-faq-8" class="icon-[fa6-solid--chevron-down] text-slate-400 text-sm transition-transform duration-200"></span>
                 </button>
                 <div id="faq-8" class="accordion-content px-4 sm:px-5">
                     <p class="py-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
@@ -989,7 +989,7 @@
             <div class="border border-slate-200 rounded-xl overflow-hidden">
                 <button type="button" onclick="toggleAccordion('faq-9')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 flex justify-between items-center bg-slate-50/50 hover:bg-slate-50 transition">
                     <h3 class="text-base">Q9. Does the calculator include the start date?</h3>
-                    <i id="icon-faq-9" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                    <span id="icon-faq-9" class="icon-[fa6-solid--chevron-down] text-slate-400 text-sm transition-transform duration-200"></span>
                 </button>
                 <div id="faq-9" class="accordion-content px-4 sm:px-5">
                     <p class="py-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
@@ -1002,7 +1002,7 @@
             <div class="border border-slate-200 rounded-xl overflow-hidden">
                 <button type="button" onclick="toggleAccordion('faq-10')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 flex justify-between items-center bg-slate-50/50 hover:bg-slate-50 transition">
                     <h3 class="text-base">Q10. Does the calculator include the end date?</h3>
-                    <i id="icon-faq-10" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                    <span id="icon-faq-10" class="icon-[fa6-solid--chevron-down] text-slate-400 text-sm transition-transform duration-200"></span>
                 </button>
                 <div id="faq-10" class="accordion-content px-4 sm:px-5">
                     <p class="py-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
@@ -1015,7 +1015,7 @@
             <div class="border border-slate-200 rounded-xl overflow-hidden">
                 <button type="button" onclick="toggleAccordion('faq-11')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 flex justify-between items-center bg-slate-50/50 hover:bg-slate-50 transition">
                     <h3 class="text-base">Q11. Can I calculate working days for future dates?</h3>
-                    <i id="icon-faq-11" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                    <span id="icon-faq-11" class="icon-[fa6-solid--chevron-down] text-slate-400 text-sm transition-transform duration-200"></span>
                 </button>
                 <div id="faq-11" class="accordion-content px-4 sm:px-5">
                     <p class="py-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
@@ -1028,7 +1028,7 @@
             <div class="border border-slate-200 rounded-xl overflow-hidden">
                 <button type="button" onclick="toggleAccordion('faq-12')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 flex justify-between items-center bg-slate-50/50 hover:bg-slate-50 transition">
                     <h3 class="text-base">Q12. Is this Work Days Calculator free?</h3>
-                    <i id="icon-faq-12" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                    <span id="icon-faq-12" class="icon-[fa6-solid--chevron-down] text-slate-400 text-sm transition-transform duration-200"></span>
                 </button>
                 <div id="faq-12" class="accordion-content px-4 sm:px-5">
                     <p class="py-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
@@ -1045,19 +1045,19 @@
         <h2 class="text-xl sm:text-2xl font-bold mb-4">Related Calculators &amp; Tools</h2>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
             <a href="#" class="p-4 bg-white/10 hover:bg-white/20 rounded-xl text-center backdrop-blur-sm transition">
-                <i class="fa-solid fa-piggy-bank text-amber-400 text-xl mb-2"></i>
+                <span class="icon-[fa6-solid--piggy-bank] text-amber-400 text-xl mb-2"></span>
                 <div class="text-sm font-semibold">SIP Calculator</div>
             </a>
             <a href="#" class="p-4 bg-white/10 hover:bg-white/20 rounded-xl text-center backdrop-blur-sm transition">
-                <i class="fa-solid fa-percent text-sky-400 text-xl mb-2"></i>
+                <span class="icon-[fa6-solid--percent] text-sky-400 text-xl mb-2"></span>
                 <div class="text-sm font-semibold">Percentage Calculator</div>
             </a>
             <a href="#" class="p-4 bg-white/10 hover:bg-white/20 rounded-xl text-center backdrop-blur-sm transition">
-                <i class="fa-solid fa-calendar-day text-emerald-400 text-xl mb-2"></i>
+                <span class="icon-[fa6-solid--calendar-day] text-emerald-400 text-xl mb-2"></span>
                 <div class="text-sm font-semibold">Date Calculator</div>
             </a>
             <a href="#" class="p-4 bg-white/10 hover:bg-white/20 rounded-xl text-center backdrop-blur-sm transition">
-                <i class="fa-solid fa-clock text-rose-400 text-xl mb-2"></i>
+                <span class="icon-[fa6-solid--clock] text-rose-400 text-xl mb-2"></span>
                 <div class="text-sm font-semibold">Time Calculator</div>
             </a>
         </div>
@@ -1074,7 +1074,7 @@
         <div class="space-y-4">
           <div class="flex items-center gap-2 text-white font-bold text-lg">
             <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
-              <i class="fa-solid fa-calculator"></i>
+              <span class="icon-[fa6-solid--calculator]"></span>
             </div>
             <span>Calculator<span class="text-indigo-400">-Pro</span></span>
           </div>

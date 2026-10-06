@@ -18,7 +18,7 @@
 
     <!-- Fonts & Icons -->
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
 
     <!-- Tailwind CSS CDN & Custom Config -->
    
@@ -178,7 +178,7 @@
       <!-- Brand Logo & Name -->
       <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
         <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
-          <i class="fa-solid fa-calculator text-lg"></i>
+          <span class="icon-[fa6-solid--calculator]"></span>
         </div>
         <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
           Calculator<span class="text-indigo-600">-Pro</span>
@@ -377,7 +377,7 @@
                 <!-- Hero Header Content -->
                 <div class="text-center max-w-3xl mx-auto mb-10">
                     <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700 mb-4 border border-indigo-200/60 shadow-xs">
-                        <i class="fa-solid fa-sparkles text-xs"></i> Accurate & Fast Date Utility
+                        <span class="icon-[lucide--sparkles]"></span> Accurate & Fast Date Utility
                     </span>
                     <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
                         Free Online <span class="text-indigo-600 underline decoration-indigo-200 decoration-wavy decoration-2">Date Calculator</span>
@@ -386,21 +386,6 @@
                         Calculate the exact difference between two dates or find a new date by adding or subtracting days, weeks, months, or years. Use our free online Date Calculator to perform date calculations quickly and easily.
                     </p>
                     
-                    <!-- Quick Benefit Badges -->
-                    <div class="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs sm:text-sm font-medium text-slate-600">
-                        <span class="flex items-center gap-1.5 text-slate-700">
-                            <i class="fa-solid fa-circle-check text-emerald-500"></i> Free to use
-                        </span>
-                        <span class="flex items-center gap-1.5 text-slate-700">
-                            <i class="fa-solid fa-circle-check text-emerald-500"></i> No registration required
-                        </span>
-                        <span class="flex items-center gap-1.5 text-slate-700">
-                            <i class="fa-solid fa-circle-check text-emerald-500"></i> Fast & accurate
-                        </span>
-                        <span class="flex items-center gap-1.5 text-slate-700">
-                            <i class="fa-solid fa-circle-check text-emerald-500"></i> Works on mobile & desktop
-                        </span>
-                    </div>
                 </div>
 
                 <!-- Calculator Main Card -->
@@ -409,15 +394,15 @@
                     <!-- Mode Navigation Tabs -->
                     <div class="bg-slate-100/80 p-2 border-b border-slate-200/80 grid grid-cols-1 sm:grid-cols-3 gap-2">
                         <button type="button" id="tab-diff" onclick="switchTab('diff')" class="tab-btn active flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-semibold transition-all shadow-sm bg-white text-indigo-600 border border-slate-200">
-                            <i class="fa-regular fa-calendar-days text-indigo-500"></i>
+                            <span class="icon-[fa6-regular--calendar-days] text-indigo-500"></span>
                             Date Difference
                         </button>
                         <button type="button" id="tab-addsub" onclick="switchTab('addsub')" class="tab-btn flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-semibold transition-all text-slate-600 hover:text-slate-900 hover:bg-white/60">
-                            <i class="fa-solid fa-plus-minus text-indigo-500"></i>
+                            <span class="icon-[fa6-solid--plus-minus] text-indigo-500"></span>
                             Add / Subtract Days
                         </button>
                         <button type="button" id="tab-business" onclick="switchTab('business')" class="tab-btn flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-semibold transition-all text-slate-600 hover:text-slate-900 hover:bg-white/60">
-                            <i class="fa-solid fa-briefcase text-indigo-500"></i>
+                            <span class="icon-[fa6-solid--briefcase] text-indigo-500"></span>
                             Business Days
                         </button>
                     </div>
@@ -464,11 +449,11 @@
                                     <div class="grid grid-cols-2 gap-3">
                                         <label class="flex items-center justify-center gap-2 p-2.5 border rounded-xl cursor-pointer transition-all bg-indigo-50/80 border-indigo-300 text-indigo-700 font-medium text-sm" id="op-add-label">
                                             <input type="radio" name="addsub-op" value="add" checked class="hidden" onchange="updateOpStyle()">
-                                            <i class="fa-solid fa-plus text-xs"></i> Add (+)
+                                            <span class="icon-[fa6-solid--plus] text-xs"></span> Add (+)
                                         </label>
                                         <label class="flex items-center justify-center gap-2 p-2.5 border rounded-xl cursor-pointer transition-all border-slate-200 text-slate-600 font-medium text-sm hover:bg-slate-50" id="op-sub-label">
                                             <input type="radio" name="addsub-op" value="subtract" class="hidden" onchange="updateOpStyle()">
-                                            <i class="fa-solid fa-minus text-xs"></i> Subtract (-)
+                                            <span class="icon-[fa6-solid--minus] text-xs"></span> Subtract (-)
                                         </label>
                                     </div>
                                 </div>
@@ -506,7 +491,7 @@
                                     <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">Excluded Weekend Days</label>
                                     <div class="flex items-center gap-4">
                                         <label class="flex items-center gap-1.5 text-sm font-medium text-slate-700 cursor-pointer">
-                                            <input type="checkbox" id="biz-ex-sat" checked class="w-4 h-4 text-indigo-600 bg-white border-slate-300 rounded focus:ring-indigo-500">
+                                            <span class="icon-[fa6-solid--square]"></span>
                                             Saturday
                                         </label>
                                         <label class="flex items-center gap-1.5 text-sm font-medium text-slate-700 cursor-pointer">
@@ -538,7 +523,7 @@
 
                             <!-- Calculate Button -->
                             <button type="button" onclick="calculateAll()" class="w-full py-3.5 px-6 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-base shadow-lg shadow-indigo-200 hover:shadow-indigo-300 active:scale-[0.99] transition-all flex items-center justify-center gap-2">
-                                <i class="fa-solid fa-calculator"></i> Calculate Date Duration
+                                <span class="icon-[fa6-solid--calculator]"></span> Calculate Date Duration
                             </button>
 
                         </div>
@@ -556,7 +541,7 @@
                                         <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Calculation Summary</span>
                                     </div>
                                     <button type="button" onclick="copyResults()" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white rounded-lg text-xs font-medium transition-colors border border-slate-700">
-                                        <i class="fa-regular fa-copy"></i>
+                                        <span class="icon-[fa6-regular--copy]"></span>
                                         <span id="copy-btn-text">Copy Results</span>
                                     </button>
                                 </div>
@@ -626,6 +611,21 @@
                 </div>
             </div>
         </section>
+        <!-- Quick Benefit Badges -->
+                    <div class="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs sm:text-sm font-medium text-slate-600">
+                        <span class="flex items-center gap-1.5 text-slate-700">
+                            <span class="icon-[fa6-solid--circle-check] text-emerald-500"></span> Free to use
+                        </span>
+                        <span class="flex items-center gap-1.5 text-slate-700">
+                            <span class="icon-[fa6-solid--circle-check] text-emerald-500"></span> No registration required
+                        </span>
+                        <span class="flex items-center gap-1.5 text-slate-700">
+                            <span class="icon-[fa6-solid--circle-check] text-emerald-500"></span> Fast & accurate
+                        </span>
+                        <span class="flex items-center gap-1.5 text-slate-700">
+                            <span class="icon-[fa6-solid--circle-check] text-emerald-500"></span> Works on mobile & desktop
+                        </span>
+                    </div>
 
         <!-- Comprehensive SEO Content Container -->
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
@@ -633,7 +633,7 @@
             <!-- C. What Is a Date Calculator? -->
             <section class="prose prose-slate max-w-none">
                 <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 border-b border-slate-200 pb-3 flex items-center gap-3">
-                    <i class="fa-solid fa-circle-info text-indigo-600"></i> What Is a Date Calculator?
+                    <span class="icon-[fa6-solid--circle-info] text-indigo-600"></span> What Is a Date Calculator?
                 </h2>
                 <p class="text-slate-600 leading-relaxed mt-4">
                     A <strong>Date Calculator</strong> is an online precision tool that helps you calculate the exact difference between two dates or determine a future or past date by adding or subtracting a specific amount of time. Depending on the calculation, you can seamlessly work with days, weeks, months, and years.
@@ -646,7 +646,7 @@
             <!-- D. How to Use This Date Calculator -->
             <section>
                 <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 border-b border-slate-200 pb-3 flex items-center gap-3">
-                    <i class="fa-solid fa-list-check text-indigo-600"></i> How to Use This Date Calculator
+                    <span class="icon-[fa6-solid--list-check] text-indigo-600"></span> How to Use This Date Calculator
                 </h2>
                 <div class="grid grid-cols-1 md:grid-cols-5 gap-4 mt-6">
                     <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm relative">
@@ -680,42 +680,42 @@
             <!-- E. What Can You Calculate With This Date Calculator? -->
             <section>
                 <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 border-b border-slate-200 pb-3 flex items-center gap-3">
-                    <i class="fa-solid fa-shapes text-indigo-600"></i> What Can You Calculate With This Date Calculator?
+                    <span class="icon-[fa6-solid--shapes] text-indigo-600"></span> What Can You Calculate With This Date Calculator?
                 </h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
                     <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm">
                         <h3 class="font-bold text-slate-800 text-base mb-2 flex items-center gap-2">
-                            <i class="fa-solid fa-calendar-day text-indigo-500"></i> Days Between Dates
+                            <span class="icon-[fa6-solid--calendar-day] text-indigo-500"></span> Days Between Dates
                         </h3>
                         <p class="text-sm text-slate-600">Calculate the exact number of calendar days between a starting date and an ending date instantly.</p>
                     </div>
                     <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm">
                         <h3 class="font-bold text-slate-800 text-base mb-2 flex items-center gap-2">
-                            <i class="fa-solid fa-calendar-week text-indigo-500"></i> Weeks Between Dates
+                            <span class="icon-[fa6-solid--calendar-week] text-indigo-500"></span> Weeks Between Dates
                         </h3>
                         <p class="text-sm text-slate-600">Convert the difference into full calendar weeks and remaining days (e.g., 45 days = 6 weeks and 3 days).</p>
                     </div>
                     <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm">
                         <h3 class="font-bold text-slate-800 text-base mb-2 flex items-center gap-2">
-                            <i class="fa-solid fa-calendar-plus text-indigo-500"></i> Add Days to Date
+                            <span class="icon-[fa6-solid--calendar-plus] text-indigo-500"></span> Add Days to Date
                         </h3>
                         <p class="text-sm text-slate-600">Find a future target date by adding days (e.g., January 1 + 30 days = January 31).</p>
                     </div>
                     <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm">
                         <h3 class="font-bold text-slate-800 text-base mb-2 flex items-center gap-2">
-                            <i class="fa-solid fa-calendar-minus text-indigo-500"></i> Subtract Days from Date
+                            <span class="icon-[fa6-solid--calendar-minus] text-indigo-500"></span> Subtract Days from Date
                         </h3>
                         <p class="text-sm text-slate-600">Find a historical past date by subtracting days or weeks from any baseline point.</p>
                     </div>
                     <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm">
                         <h3 class="font-bold text-slate-800 text-base mb-2 flex items-center gap-2">
-                            <i class="fa-solid fa-arrows-left-right-to-line text-indigo-500"></i> Add or Subtract Months
+                            <span class="icon-[fa6-solid--arrows-left-right-to-line] text-indigo-500"></span> Add or Subtract Months
                         </h3>
                         <p class="text-sm text-slate-600">Calculate dates several months in the future or past while respecting end-of-month bounds.</p>
                     </div>
                     <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm">
                         <h3 class="font-bold text-slate-800 text-base mb-2 flex items-center gap-2">
-                            <i class="fa-solid fa-clock-rotate-left text-indigo-500"></i> Add or Subtract Years
+                            <span class="icon-[fa6-solid--clock-rotate-left] text-indigo-500"></span> Add or Subtract Years
                         </h3>
                         <p class="text-sm text-slate-600">Project dates decades ahead or behind with full leap year adjustment support.</p>
                     </div>
@@ -802,28 +802,28 @@
                 </h2>
                 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                     <div class="p-3.5 bg-white rounded-xl border border-slate-200 text-xs font-semibold text-slate-700 flex items-center gap-2">
-                        <i class="fa-solid fa-list-check text-indigo-500"></i> Project deadlines
+                        <span class="icon-[fa6-solid--list-check] text-indigo-500"></span> Project deadlines
                     </div>
                     <div class="p-3.5 bg-white rounded-xl border border-slate-200 text-xs font-semibold text-slate-700 flex items-center gap-2">
-                        <i class="fa-solid fa-cake-candles text-indigo-500"></i> Age calculation
+                        <span class="icon-[fa6-solid--cake-candles] text-indigo-500"></span> Age calculation
                     </div>
                     <div class="p-3.5 bg-white rounded-xl border border-slate-200 text-xs font-semibold text-slate-700 flex items-center gap-2">
-                        <i class="fa-solid fa-file-contract text-indigo-500"></i> Rental contracts
+                        <span class="icon-[fa6-solid--file-contract] text-indigo-500"></span> Rental contracts
                     </div>
                     <div class="p-3.5 bg-white rounded-xl border border-slate-200 text-xs font-semibold text-slate-700 flex items-center gap-2">
-                        <i class="fa-solid fa-champagne-glasses text-indigo-500"></i> Event planning
+                        <span class="icon-[fa6-solid--champagne-glasses] text-indigo-500"></span> Event planning
                     </div>
                     <div class="p-3.5 bg-white rounded-xl border border-slate-200 text-xs font-semibold text-slate-700 flex items-center gap-2">
-                        <i class="fa-solid fa-baby text-indigo-500"></i> Pregnancy due dates
+                        <span class="icon-[fa6-solid--baby] text-indigo-500"></span> Pregnancy due dates
                     </div>
                     <div class="p-3.5 bg-white rounded-xl border border-slate-200 text-xs font-semibold text-slate-700 flex items-center gap-2">
-                        <i class="fa-solid fa-briefcase text-indigo-500"></i> Workdays calculation
+                        <span class="icon-[fa6-solid--briefcase] text-indigo-500"></span> Workdays calculation
                     </div>
                     <div class="p-3.5 bg-white rounded-xl border border-slate-200 text-xs font-semibold text-slate-700 flex items-center gap-2">
-                        <i class="fa-solid fa-plane-departure text-indigo-500"></i> Travel planning
+                        <span class="icon-[fa6-solid--plane-departure] text-indigo-500"></span> Travel planning
                     </div>
                     <div class="p-3.5 bg-white rounded-xl border border-slate-200 text-xs font-semibold text-slate-700 flex items-center gap-2">
-                        <i class="fa-solid fa-clock text-indigo-500"></i> Passport / Visa limits
+                        <span class="icon-[fa6-solid--clock] text-indigo-500"></span> Passport / Visa limits
                     </div>
                 </div>
             </section>
@@ -856,17 +856,17 @@
                 </h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                     <div class="p-5 bg-white rounded-xl border border-slate-200">
-                        <i class="fa-solid fa-bolt text-amber-500 text-xl mb-2"></i>
+                        <span class="icon-[fa6-solid--bolt] text-amber-500 text-xl mb-2"></span>
                         <h3 class="font-bold text-slate-800 text-sm">Instant Calculation</h3>
                         <p class="text-xs text-slate-500 mt-1">Live updates in real-time as you change dates.</p>
                     </div>
                     <div class="p-5 bg-white rounded-xl border border-slate-200">
-                        <i class="fa-solid fa-calendar-check text-emerald-500 text-xl mb-2"></i>
+                        <span class="icon-[fa6-solid--calendar-check] text-emerald-500 text-xl mb-2"></span>
                         <h3 class="font-bold text-slate-800 text-sm">Calendar Accurate</h3>
                         <p class="text-xs text-slate-500 mt-1">Full leap year and month-end validation.</p>
                     </div>
                     <div class="p-5 bg-white rounded-xl border border-slate-200">
-                        <i class="fa-solid fa-briefcase text-sky-500 text-xl mb-2"></i>
+                        <span class="icon-[fa6-solid--briefcase] text-sky-500 text-xl mb-2"></span>
                         <h3 class="font-bold text-slate-800 text-sm">Business Days Support</h3>
                         <p class="text-xs text-slate-500 mt-1">Deduct weekends and custom public holidays.</p>
                     </div>
@@ -886,7 +886,7 @@
                     <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-2xs">
                         <button type="button" class="faq-btn w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
                             <span>How to calculate days between two dates?</span>
-                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
                         </button>
                         <div class="accordion-content px-5">
                             <p class="py-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
@@ -899,7 +899,7 @@
                     <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-2xs">
                         <button type="button" class="faq-btn w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
                             <span>Does the calculator include the end date?</span>
-                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
                         </button>
                         <div class="accordion-content px-5">
                             <p class="py-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
@@ -912,7 +912,7 @@
                     <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-2xs">
                         <button type="button" class="faq-btn w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
                             <span>How are business days calculated?</span>
-                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
                         </button>
                         <div class="accordion-content px-5">
                             <p class="py-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
@@ -925,7 +925,7 @@
                     <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-2xs">
                         <button type="button" class="faq-btn w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
                             <span>Does it account for leap years?</span>
-                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
                         </button>
                         <div class="accordion-content px-5">
                             <p class="py-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
@@ -938,7 +938,7 @@
                     <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-2xs">
                         <button type="button" class="faq-btn w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
                             <span>How many days have I been alive?</span>
-                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
                         </button>
                         <div class="accordion-content px-5">
                             <p class="py-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
@@ -951,7 +951,7 @@
                     <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-2xs">
                         <button type="button" class="faq-btn w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
                             <span>Difference between total days and years/months/days breakdown?</span>
-                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
                         </button>
                         <div class="accordion-content px-5">
                             <p class="py-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
@@ -964,7 +964,7 @@
                     <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-2xs">
                         <button type="button" class="faq-btn w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
                             <span>Can I calculate future dates?</span>
-                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
                         </button>
                         <div class="accordion-content px-5">
                             <p class="py-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
@@ -977,7 +977,7 @@
                     <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-2xs">
                         <button type="button" class="faq-btn w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
                             <span>How to add or subtract days from a date?</span>
-                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
                         </button>
                         <div class="accordion-content px-5">
                             <p class="py-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
@@ -990,7 +990,7 @@
                     <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-2xs">
                         <button type="button" class="faq-btn w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
                             <span>Can I calculate months between two dates?</span>
-                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
                         </button>
                         <div class="accordion-content px-5">
                             <p class="py-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
@@ -1003,7 +1003,7 @@
                     <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-2xs">
                         <button type="button" class="faq-btn w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
                             <span>Does the calculator count weekends?</span>
-                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
                         </button>
                         <div class="accordion-content px-5">
                             <p class="py-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
@@ -1016,7 +1016,7 @@
                     <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-2xs">
                         <button type="button" class="faq-btn w-full px-5 py-4 text-left font-semibold text-slate-800 text-sm sm:text-base flex justify-between items-center hover:bg-slate-50 transition-colors">
                             <span>Is this date calculator free?</span>
-                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
                         </button>
                         <div class="accordion-content px-5">
                             <p class="py-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
@@ -1037,21 +1037,21 @@
                             <h3 class="font-bold text-slate-800 text-sm group-hover:text-indigo-600">Age Calculator</h3>
                             <p class="text-xs text-slate-500">Calculate exact age in years, months & days.</p>
                         </div>
-                        <i class="fa-solid fa-arrow-right text-slate-300 group-hover:text-indigo-600 group-hover:translate-x-1 transition-all text-xs"></i>
+                        <span class="icon-[fa6-solid--arrow-right] text-slate-300 group-hover:text-indigo-600 group-hover:translate-x-1 transition-all text-xs"></span>
                     </a>
                     <a href="#" class="p-4 bg-white rounded-xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all group flex items-center justify-between">
                         <div>
                             <h3 class="font-bold text-slate-800 text-sm group-hover:text-indigo-600">Time Zone Converter</h3>
                             <p class="text-xs text-slate-500">Convert time across world timezones.</p>
                         </div>
-                        <i class="fa-solid fa-arrow-right text-slate-300 group-hover:text-indigo-600 group-hover:translate-x-1 transition-all text-xs"></i>
+                        <span class="icon-[fa6-solid--arrow-right] text-slate-300 group-hover:text-indigo-600 group-hover:translate-x-1 transition-all text-xs"></span>
                     </a>
                     <a href="#" class="p-4 bg-white rounded-xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all group flex items-center justify-between">
                         <div>
                             <h3 class="font-bold text-slate-800 text-sm group-hover:text-indigo-600">Age Difference Calculator</h3>
                             <p class="text-xs text-slate-500">Compare age gap between two people.</p>
                         </div>
-                        <i class="fa-solid fa-arrow-right text-slate-300 group-hover:text-indigo-600 group-hover:translate-x-1 transition-all text-xs"></i>
+                        <span class="icon-[fa6-solid--arrow-right] text-slate-300 group-hover:text-indigo-600 group-hover:translate-x-1 transition-all text-xs"></span>
                     </a>
                 </div>
             </section>
@@ -1068,7 +1068,7 @@
         <div class="space-y-4">
           <div class="flex items-center gap-2 text-white font-bold text-lg">
             <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
-              <i class="fa-solid fa-calculator"></i>
+              <span class="icon-[fa6-solid--calculator]"></span>
             </div>
             <span>Calculator<span class="text-indigo-400">-Pro</span></span>
           </div>

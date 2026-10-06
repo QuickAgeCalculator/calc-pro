@@ -27,7 +27,7 @@
     
 
     <!-- FontAwesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
 
     <!-- Tailwind CSS CDN -->
     
@@ -155,7 +155,7 @@
       <!-- Brand Logo & Name -->
       <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
         <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
-          <i class="fa-solid fa-calculator text-lg"></i>
+          <span class="icon-[fa6-solid--calculator] text-lg"></span>
         </div>
         <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
           Calculator<span class="text-indigo-600">-Pro</span>
@@ -352,7 +352,7 @@
     <!-- Hero Section -->
     <section class="text-center max-w-4xl mx-auto space-y-4">
         <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-xs sm:text-sm font-semibold tracking-wide uppercase">
-            <i class="fa-solid fa-sparkles text-indigo-500"></i> Updated for 2026 Academic Guidelines
+            <span class="icon-[lucide--sparkles] text-indigo-500"></span> Updated for 2026 Academic Guidelines
         </div>
         <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
             CGPA to Percentage Converter &amp; Percentage to CGPA Calculator
@@ -367,10 +367,10 @@
         <!-- Interactive Tabs -->
         <div class="bg-slate-200/80 p-1.5 rounded-2xl flex gap-2 mb-6 max-w-md mx-auto shadow-inner">
             <button id="tab-cgpa-to-pct" onclick="switchCalcTab('cgpa-to-pct')" class="flex-1 py-3 px-4 rounded-xl text-sm font-semibold transition-all duration-200 bg-white text-indigo-600 shadow-sm flex items-center justify-center gap-2">
-                <i class="fa-solid fa-arrow-right-arrow-left"></i> CGPA to Percentage
+                <span class="icon-[fa6-solid--arrow-right-arrow-left]"></span> CGPA to Percentage
             </button>
             <button id="tab-pct-to-cgpa" onclick="switchCalcTab('pct-to-cgpa')" class="flex-1 py-3 px-4 rounded-xl text-sm font-semibold transition-all duration-200 text-slate-600 hover:text-slate-900 flex items-center justify-center gap-2">
-                <i class="fa-solid fa-rotate"></i> Percentage to CGPA
+                <span class="icon-[fa6-solid--rotate]"></span> Percentage to CGPA
             </button>
         </div>
 
@@ -382,7 +382,7 @@
                     <p class="text-xs sm:text-sm text-slate-500">Calculate percentage equivalent from your CGPA score</p>
                 </div>
                 <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">
-                    <i class="fa-solid fa-circle-check mr-1.5 text-emerald-600"></i> Instant Output
+                    <span class="icon-[fa6-solid--circle-check] mr-1.5 text-emerald-600"></span> Instant Output
                 </span>
             </div>
 
@@ -432,10 +432,10 @@
 
                     <div class="flex gap-3 pt-2">
                         <button type="button" onclick="calculateCgpaToPct()" class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-4 rounded-xl shadow-md shadow-indigo-200 transition-all duration-200 flex items-center justify-center gap-2 active:scale-95">
-                            <i class="fa-solid fa-calculator"></i> Convert Now
+                            <span class="icon-[fa6-solid--calculator]"></span> Convert Now
                         </button>
                         <button type="button" onclick="resetCgpaTool()" class="bg-slate-100 hover:bg-slate-200 text-slate-600 font-medium py-3 px-4 rounded-xl transition-colors active:scale-95">
-                            <i class="fa-solid fa-arrows-rotate"></i> Reset
+                            <span class="icon-[fa6-solid--arrows-rotate]"></span> Reset
                         </button>
                     </div>
                 </div>
@@ -448,7 +448,7 @@
                         <div class="flex items-center justify-between mb-4">
                             <span class="text-xs uppercase font-bold tracking-wider text-indigo-300">Equivalent Percentage</span>
                             <button type="button" onclick="copyResult('cgpa-result-val', 'pct')" class="text-xs bg-white/10 hover:bg-white/20 text-white px-3 py-1.5 rounded-lg border border-white/10 transition-colors flex items-center gap-1.5">
-                                <i class="fa-regular fa-copy"></i> <span id="copy-text-pct">Copy</span>
+                                <span class="icon-[fa6-regular--copy]"></span> <span id="copy-text-pct">Copy</span>
                             </button>
                         </div>
                         <div class="text-4xl sm:text-5xl font-black text-white tracking-tight mb-2">
@@ -481,7 +481,7 @@
                     <p class="text-xs sm:text-sm text-slate-500">Convert aggregate percentage marks back into CGPA</p>
                 </div>
                 <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800">
-                    <i class="fa-solid fa-rotate mr-1.5 text-indigo-600"></i> Reverse Calculator
+                    <span class="icon-[fa6-solid--rotate] mr-1.5 text-indigo-600"></span> Reverse Calculator
                 </span>
             </div>
 
@@ -514,10 +514,10 @@
 
                     <div class="flex gap-3 pt-2">
                         <button type="button" onclick="calculatePctToCgpa()" class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-4 rounded-xl shadow-md shadow-indigo-200 transition-all duration-200 flex items-center justify-center gap-2 active:scale-95">
-                            <i class="fa-solid fa-calculator"></i> Convert to CGPA
+                            <span class="icon-[fa6-solid--calculator]"></span> Convert to CGPA
                         </button>
                         <button type="button" onclick="resetPctTool()" class="bg-slate-100 hover:bg-slate-200 text-slate-600 font-medium py-3 px-4 rounded-xl transition-colors active:scale-95">
-                            <i class="fa-solid fa-arrows-rotate"></i> Reset
+                            <span class="icon-[fa6-solid--arrows-rotate]"></span> Reset
                         </button>
                     </div>
                 </div>
@@ -530,7 +530,7 @@
                         <div class="flex items-center justify-between mb-4">
                             <span class="text-xs uppercase font-bold tracking-wider text-indigo-300">Equivalent CGPA Score</span>
                             <button type="button" onclick="copyResult('pct-result-val', 'cgpa')" class="text-xs bg-white/10 hover:bg-white/20 text-white px-3 py-1.5 rounded-lg border border-white/10 transition-colors flex items-center gap-1.5">
-                                <i class="fa-regular fa-copy"></i> <span id="copy-text-cgpa">Copy</span>
+                                <span class="icon-[fa6-regular--copy]"></span> <span id="copy-text-cgpa">Copy</span>
                             </button>
                         </div>
                         <div class="text-4xl sm:text-5xl font-black text-white tracking-tight mb-2">
@@ -780,7 +780,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
                 <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-lg shadow-md shadow-indigo-200">
-                    <i class="fa-solid fa-bolt"></i>
+                    <span class="icon-[fa6-solid--bolt]"></span>
                 </div>
                 <h3 class="font-bold text-lg text-slate-800">Instant &amp; Accurate</h3>
                 <p class="text-sm text-slate-600 leading-relaxed">
@@ -790,7 +790,7 @@
 
             <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
                 <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-lg shadow-md shadow-indigo-200">
-                    <i class="fa-solid fa-sliders"></i>
+                    <span class="icon-[fa6-solid--sliders]"></span>
                 </div>
                 <h3 class="font-bold text-lg text-slate-800">Multiple Grading Scales</h3>
                 <p class="text-sm text-slate-600 leading-relaxed">
@@ -800,7 +800,7 @@
 
             <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
                 <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-lg shadow-md shadow-indigo-200">
-                    <i class="fa-solid fa-lock-open"></i>
+                    <span class="icon-[fa6-solid--lock-open]"></span>
                 </div>
                 <h3 class="font-bold text-lg text-slate-800">100% Free &amp; Private</h3>
                 <p class="text-sm text-slate-600 leading-relaxed">
@@ -810,7 +810,7 @@
 
             <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
                 <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-lg shadow-md shadow-indigo-200">
-                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <span class="icon-[fa6-solid--mobile-screen-button]"></span>
                 </div>
                 <h3 class="font-bold text-lg text-slate-800">Mobile First &amp; Responsive</h3>
                 <p class="text-sm text-slate-600 leading-relaxed">
@@ -820,7 +820,7 @@
 
             <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
                 <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-lg shadow-md shadow-indigo-200">
-                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span class="icon-[fa6-solid--graduation-cap]"></span>
                 </div>
                 <h3 class="font-bold text-lg text-slate-800">Updated University Guidelines</h3>
                 <p class="text-sm text-slate-600 leading-relaxed">
@@ -830,7 +830,7 @@
 
             <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
                 <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-lg shadow-md shadow-indigo-200">
-                    <i class="fa-regular fa-copy"></i>
+                    <span class="icon-[fa6-regular--copy]"></span>
                 </div>
                 <h3 class="font-bold text-lg text-slate-800">One-Tap Copy &amp; Export</h3>
                 <p class="text-sm text-slate-600 leading-relaxed">
@@ -899,7 +899,7 @@
             <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors">
                 <button type="button" onclick="toggleAccordion('faq-1')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center gap-4 focus:outline-none">
                     <span>What is the formula to convert CGPA into percentage?</span>
-                    <i id="icon-faq-1" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                    <span id="icon-faq-1" class="icon-[fa6-solid--chevron-down] text-slate-400 text-sm transition-transform duration-200"></span>
                 </button>
                 <div id="faq-1" class="accordion-content px-4 sm:px-5 pb-5 text-sm text-slate-600 leading-relaxed">
                     <p>For CBSE and most 10-point Indian university grading systems, the standard formula to convert CGPA into percentage is: <strong>Percentage (%) = CGPA × 9.5</strong>. For example, if your CGPA is 8.0, your percentage is 8.0 × 9.5 = 76.0%.</p>
@@ -910,7 +910,7 @@
             <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors">
                 <button type="button" onclick="toggleAccordion('faq-2')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center gap-4 focus:outline-none">
                     <span>How to convert 8.5 CGPA to percentage?</span>
-                    <i id="icon-faq-2" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                    <span id="icon-faq-2" class="icon-[fa6-solid--chevron-down] text-slate-400 text-sm transition-transform duration-200"></span>
                 </button>
                 <div id="faq-2" class="accordion-content px-4 sm:px-5 pb-5 text-sm text-slate-600 leading-relaxed">
                     <p>To convert 8.5 CGPA to percentage using the official CBSE 10-point formula, multiply 8.5 by 9.5: <strong>8.5 × 9.5 = 80.75%</strong>.</p>
@@ -921,7 +921,7 @@
             <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors">
                 <button type="button" onclick="toggleAccordion('faq-3')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center gap-4 focus:outline-none">
                     <span>Is CGPA to percentage conversion the same for all universities?</span>
-                    <i id="icon-faq-3" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                    <span id="icon-faq-3" class="icon-[fa6-solid--chevron-down] text-slate-400 text-sm transition-transform duration-200"></span>
                 </button>
                 <div id="faq-3" class="accordion-content px-4 sm:px-5 pb-5 text-sm text-slate-600 leading-relaxed">
                     <p>No. While CBSE, AICTE, and Delhi University follow the 9.5 multiplier, some autonomous colleges and universities use specific formulas. For instance, VTU uses <code>(CGPA - 0.75) × 10</code>, while Mumbai University uses <code>(CGPA × 7.1) + 11</code>. Always check your university mark sheet guidelines.</p>
@@ -932,7 +932,7 @@
             <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors">
                 <button type="button" onclick="toggleAccordion('faq-4')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center gap-4 focus:outline-none">
                     <span>How to convert percentage to CGPA in 10 point scale?</span>
-                    <i id="icon-faq-4" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                    <span id="icon-faq-4" class="icon-[fa6-solid--chevron-down] text-slate-400 text-sm transition-transform duration-200"></span>
                 </button>
                 <div id="faq-4" class="accordion-content px-4 sm:px-5 pb-5 text-sm text-slate-600 leading-relaxed">
                     <p>To convert Percentage to CGPA under the standard 10-point scale, divide your overall percentage score by 9.5. Formula: <strong>CGPA = Percentage / 9.5</strong>. For example, 76% divided by 9.5 equals 8.0 CGPA.</p>
@@ -943,7 +943,7 @@
             <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors">
                 <button type="button" onclick="toggleAccordion('faq-5')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center gap-4 focus:outline-none">
                     <span>What is 7.5 CGPA in percentage?</span>
-                    <i id="icon-faq-5" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                    <span id="icon-faq-5" class="icon-[fa6-solid--chevron-down] text-slate-400 text-sm transition-transform duration-200"></span>
                 </button>
                 <div id="faq-5" class="accordion-content px-4 sm:px-5 pb-5 text-sm text-slate-600 leading-relaxed">
                     <p>Under the CBSE/AICTE standard formula, a score of 7.5 CGPA converts to <strong>71.25%</strong> (7.5 × 9.5 = 71.25%).</p>
@@ -954,7 +954,7 @@
             <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors">
                 <button type="button" onclick="toggleAccordion('faq-6')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center gap-4 focus:outline-none">
                     <span>Can I use this calculator for engineering and medical colleges?</span>
-                    <i id="icon-faq-6" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                    <span id="icon-faq-6" class="icon-[fa6-solid--chevron-down] text-slate-400 text-sm transition-transform duration-200"></span>
                 </button>
                 <div id="faq-6" class="accordion-content px-4 sm:px-5 pb-5 text-sm text-slate-600 leading-relaxed">
                     <p>Yes, our tool supports both AICTE standard formulas and custom multipliers, making it suitable for B.Tech, BE, MBBS, MBA, and undergraduate/postgraduate degree programs across India and internationally.</p>
@@ -965,7 +965,7 @@
             <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors">
                 <button type="button" onclick="toggleAccordion('faq-7')" class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center gap-4 focus:outline-none">
                     <span>What is the difference between GPA and CGPA?</span>
-                    <i id="icon-faq-7" class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-200"></i>
+                    <span id="icon-faq-7" class="icon-[fa6-solid--chevron-down] text-slate-400 text-sm transition-transform duration-200"></span>
                 </button>
                 <div id="faq-7" class="accordion-content px-4 sm:px-5 pb-5 text-sm text-slate-600 leading-relaxed">
                     <p>GPA (Grade Point Average) represents academic performance for a single semester or term, whereas CGPA (Cumulative Grade Point Average) represents the cumulative overall performance across all completed semesters of an academic program.</p>
@@ -985,28 +985,28 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <a href="#" class="p-5 rounded-2xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all group bg-slate-50/50">
                 <div class="text-indigo-600 font-bold mb-1 group-hover:translate-x-1 transition-transform inline-block">
-                    SGPA to Percentage Converter <i class="fa-solid fa-arrow-right text-xs ml-1"></i>
+                    SGPA to Percentage Converter <span class="icon-[fa6-solid--arrow-right] text-xs ml-1"></span>
                 </div>
                 <p class="text-xs text-slate-500">Convert single semester GPA to percentage easily.</p>
             </a>
 
             <a href="#" class="p-5 rounded-2xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all group bg-slate-50/50">
                 <div class="text-indigo-600 font-bold mb-1 group-hover:translate-x-1 transition-transform inline-block">
-                    CGPA Calculator <i class="fa-solid fa-arrow-right text-xs ml-1"></i>
+                    CGPA Calculator <span class="icon-[fa6-solid--arrow-right] text-xs ml-1"></span>
                 </div>
                 <p class="text-xs text-slate-500">Calculate cumulative GPA across multiple semester subjects.</p>
             </a>
 
             <a href="#" class="p-5 rounded-2xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all group bg-slate-50/50">
                 <div class="text-indigo-600 font-bold mb-1 group-hover:translate-x-1 transition-transform inline-block">
-                    Percentage to GPA Converter <i class="fa-solid fa-arrow-right text-xs ml-1"></i>
+                    Percentage to GPA Converter <span class="icon-[fa6-solid--arrow-right] text-xs ml-1"></span>
                 </div>
                 <p class="text-xs text-slate-500">Convert aggregate percentage into 4.0 US GPA scale.</p>
             </a>
 
             <a href="#" class="p-5 rounded-2xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all group bg-slate-50/50">
                 <div class="text-indigo-600 font-bold mb-1 group-hover:translate-x-1 transition-transform inline-block">
-                    Marks to Percentage Calculator <i class="fa-solid fa-arrow-right text-xs ml-1"></i>
+                    Marks to Percentage Calculator <span class="icon-[fa6-solid--arrow-right] text-xs ml-1"></span>
                 </div>
                 <p class="text-xs text-slate-500">Calculate overall percentage from total marks scored.</p>
             </a>
@@ -1024,7 +1024,7 @@
         <div class="space-y-4">
           <div class="flex items-center gap-2 text-white font-bold text-lg">
             <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
-              <i class="fa-solid fa-calculator"></i>
+              <span class="icon-[fa6-solid--calculator]"></span>
             </div>
             <span>Calculator<span class="text-indigo-400">-Pro</span></span>
           </div>
