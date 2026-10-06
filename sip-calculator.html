@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIP Calculator India – Calculate Mutual Fund SIP Returns | Calculator Pro</title>
+    <meta name="description" content="Free Online SIP Calculator by Calculator Pro. Instantly calculate mutual fund SIP maturity value, returns & wealth gain. Supports step-up SIP, inflation adjustment & goal planning. 100% free & accurate.">
+    <meta name="keywords" content="SIP Calculator, SIP calculator with inflation, SIP maturity calculator, how to calculate SIP returns, SIP Calculator India, SIP Returns Calculator, Mutual Fund SIP Calculator, Step-up SIP Calculator, Monthly SIP Calculator">
+    <meta name="author" content="Calculator Pro">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calculatorpro.com/sip-calculator">
+    <meta property="og:title" content="SIP Calculator India – Calculate Mutual Fund SIP Returns | Calculator Pro">
+    <meta property="og:description" content="Calculate mutual fund SIP maturity value, returns & wealth gain instantly. Supports step-up SIP & inflation adjustments.">
+    <meta property="og:image" content="https://placehold.co/1200x630/2563eb/ffffff?text=SIP+Calculator+Pro">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="SIP Calculator India | Calculator Pro">
+    <meta property="twitter:description" content="Plan your wealth creation with our free, high-precision SIP calculator with inflation and step-up features.">
+    <meta property="twitter:image" content="https://placehold.co/1200x630/2563eb/ffffff?text=SIP+Calculator+Pro">
+
+    <!-- Fonts & FontAwesome Icons -->
+    
+    
+
+    <!-- Tailwind CSS CDN -->
+    
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- JSON-LD Structured Data for WebApplication, FAQPage & HowTo -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "SIP Calculator Pro",
+          "url": "https://calculatorpro.com/sip-calculator",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "All",
+          "description": "Calculate Mutual Fund SIP returns, future value, wealth gain, step-up SIP and inflation adjusted purchasing power instantly."
+        },
+        {
+          "@type": "HowTo",
+          "name": "How to Calculate Mutual Fund SIP Returns",
+          "description": "Follow these simple steps to calculate your SIP returns and plan your financial goals.",
+          "step": [
+            {
+              "@type": "HowToStep",
+              "text": "Enter your monthly investment amount in Rupees."
+            },
+            {
+              "@type": "HowToStep",
+              "text": "Input the expected annual return rate (CAGR %)."
+            },
+            {
+              "@type": "HowToStep",
+              "text": "Select your investment duration in years and months."
+            },
+            {
+              "@type": "HowToStep",
+              "text": "Optionally enable advanced options like Step-Up percentage and Inflation Adjustment."
+            },
+            {
+              "@type": "HowToStep",
+              "text": "View instant wealth growth breakdown and year-by-year schedule table."
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is SIP and how does it work?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "SIP (Systematic Investment Plan) is an investment method offered by mutual funds where an investor can deposit a fixed amount periodically into a chosen scheme."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How is SIP maturity amount calculated?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "SIP maturity amount is calculated using compound interest formula applied monthly: M = P × ({[1 + i]^n - 1} / i) × (1 + i)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is Step-up SIP?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A Step-up SIP (or Top-up SIP) allows you to automatically increase your monthly SIP contribution by a fixed percentage or amount every year."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- A. Site Branding & Navigation -->
+   <header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      
+      <!-- Brand Logo & Name -->
+      <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
+        <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
+          <span class="icon-[fa6-solid--calculator] text-lg"></span>
+        </div>
+        <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
+          Calculator<span class="text-indigo-600">-Pro</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-1" aria-label="Main Navigation">
+        
+        <!-- Category 1: Age -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Age
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="age-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="birthday-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Birthday Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="age-difference-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Diffrence Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Time -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Time & Date
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="time-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Time Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="date-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Date Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="work-days-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Work Days Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="time-zone-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">TimeZone Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Converter -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Converter
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="unit-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Unit Converter</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="cgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">CGPA to Percentage</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to Percentage</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sgpa-to-cgpa-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to CGPA</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="marks-to-percentage-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Marks to Percentage</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4: Financial -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Financial
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="sip-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SIP Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="emi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">EMI Loan Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="Compound-Interest-Calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Compound Interest Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 5: Health -->
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Health
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute right-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="bmi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">BMI Calculator</a>
+            </div>
+			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+              <a href="waist-to-hip-ratio-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">WHR Calculator</a>
+            </div>
+          </div>
+        </div>
+		  
+		 
+
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex md:hidden">
+        <button id="calc-mobile-menu-btn" type="button" class="p-2.5 rounded-xl text-slate-600 hover:text-indigo-600 hover:bg-slate-100/80 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors duration-200" aria-controls="calc-mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+          <svg id="calc-menu-icon" class="w-6 h-6 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="calc-close-icon" class="w-6 h-6 hidden transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile Full-Width Menu Container -->
+  <div id="calc-mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white shadow-xl transition-all duration-200 ease-in-out">
+    <div class="px-4 pt-3 pb-6 space-y-4">
+      
+      <!-- Mobile Category: Age -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Age</div>
+        <a href="age-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Calculator</a>
+		  <a href="birthday-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Birthday Calculator</a>
+		  <a href="age-difference-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Diffrence Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Time -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Time & Date</div>
+        <a href="time-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Time Calculator</a>
+		  <a href="date-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Date Calculator</a>
+		  <a href="work-days-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Work Days Calculator</a>
+		  <a href="time-zone-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">TimeZone Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Converter -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Converter</div>
+        <a href="javascript:void(0)" onclick="openCalculator('length')" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Unit Converter</a>
+		  <a href="cgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">CGPA to Percentage</a>
+		  <a href="sgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to Percentage</a>
+		  <a href="sgpa-to-cgpa-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to CGPA</a>
+		  <a href="marks-to-percentage-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Marks to Percentage</a>
+      </div>
+
+      <!-- Mobile Category: Financial -->
+      <div class="border-b border-slate-100 pb-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Financial</div>
+        <a href="sip-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SIP Calculator</a>
+		  <a href="emi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">EMI Loan Calculator</a>
+		  <a href="Compound-Interest-Calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Compound Interest Calculator</a>
+      </div>
+
+      <!-- Mobile Category: Health -->
+      <div>
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Health</div>
+        <a href="bmi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">BMI Calculator</a>
+		  <a href="waist-to-hip-ratio-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">WHR Calculator</a>
+      </div>
+		
+		
+
+    </div>
+  </div>
+</header>
+
+    <!-- B. Above the fold / Hero Section -->
+    <section class="relative bg-linear-to-b from-indigo-50/60 via-slate-50 to-slate-50 pt-10 pb-12 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold uppercase tracking-wider mb-4 shadow-sm">
+          <span class="icon-[fa6-solid--chart-line]"></span> Mutual Fund Wealth Growth Tool
+        </span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
+          Free Online <span class="text-transparent bg-clip-text bg-linear-to-r from-indigo-600 to-blue-600">SIP Calculator</span>
+        </h1>
+        <p class="max-w-2xl mx-auto text-base sm:text-lg text-slate-600 leading-relaxed mb-8">
+          Use our free online SIP calculator to estimate the future value of your Systematic Investment Plan in mutual funds. Enter monthly investment, expected return and tenure to see total invested amount, estimated returns and maturity value instantly.
+        </p>
+
+        <!-- Trust Badges -->
+        <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs sm:text-sm font-medium text-slate-600">
+          <div class="flex items-center gap-2 px-3 py-1.5 bg-white rounded-full shadow-sm border border-slate-200/80">
+            <span class="icon-[fa6-solid--circle-check] text-emerald-500"></span>
+            <span>100% Free</span>
+          </div>
+          <div class="flex items-center gap-2 px-3 py-1.5 bg-white rounded-full shadow-sm border border-slate-200/80">
+            <span class="icon-[fa6-solid--bolt] text-amber-500"></span>
+            <span>Instant Results</span>
+          </div>
+          <div class="flex items-center gap-2 px-3 py-1.5 bg-white rounded-full shadow-sm border border-slate-200/80">
+            <span class="icon-[fa6-solid--user-shield] text-indigo-500"></span>
+            <span>No Signup Required</span>
+          </div>
+          <div class="flex items-center gap-2 px-3 py-1.5 bg-white rounded-full shadow-sm border border-slate-200/80">
+            <span class="icon-[fa6-solid--mobile-screen-button] text-blue-500"></span>
+            <span>Mobile Friendly</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- C. Calculator Section -->
+    <section id="calculator-section" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-4 pb-16">
+      <div class="bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12">
+          
+          <!-- Controls Panel (Column 1 - 7 cols) -->
+          <div class="lg:col-span-7 p-6 sm:p-8 lg:p-10 border-b lg:border-b-0 lg:border-r border-slate-100">
+            <div class="flex items-center justify-between mb-6">
+              <h2 class="text-xl font-bold text-slate-800 flex items-center gap-2">
+                <span class="icon-[fa6-solid--sliders] text-indigo-600"></span> Investment Details
+              </h2>
+              <button id="reset-btn" type="button" class="text-xs font-semibold text-slate-500 hover:text-indigo-600 transition-colors flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200/70 px-3 py-1.5 rounded-lg">
+                <span class="icon-[fa6-solid--rotate-left]"></span> Reset Values
+              </button>
+            </div>
+
+            <!-- Inputs List -->
+            <div class="space-y-6">
+              
+              <!-- 1. Monthly Investment -->
+              <div class="space-y-2">
+                <div class="flex items-center justify-between">
+                  <label for="monthly-input" class="text-sm font-semibold text-slate-700">Monthly Investment (₹)</label>
+                  <div class="relative rounded-xl shadow-sm">
+                    <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400 font-semibold">₹</span>
+                    <input type="number" id="monthly-input" value="10000" min="500" max="1000000" step="500" class="w-36 pl-7 pr-3 py-1.5 text-right font-bold text-slate-800 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:bg-white focus:outline-none transition-all">
+                  </div>
+                </div>
+                <input type="range" id="monthly-slider" min="500" max="100000" step="500" value="10000" aria-label="Monthly Investment Slider">
+                <div class="flex justify-between text-xs text-slate-400 font-medium">
+                  <span>₹500</span>
+                  <span>₹50,000</span>
+                  <span>₹10,00,000</span>
+                </div>
+              </div>
+
+              <!-- 2. Expected Annual Return Rate (%) -->
+              <div class="space-y-2">
+                <div class="flex items-center justify-between">
+                  <label for="return-input" class="text-sm font-semibold text-slate-700">Expected Annual Return (%)</label>
+                  <div class="relative rounded-xl shadow-sm">
+                    <input type="number" id="return-input" value="12" min="1" max="30" step="0.5" class="w-28 pr-7 pl-3 py-1.5 text-right font-bold text-slate-800 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:bg-white focus:outline-none transition-all">
+                    <span class="absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 font-semibold">%</span>
+                  </div>
+                </div>
+                <input type="range" id="return-slider" min="1" max="30" step="0.5" value="12" aria-label="Expected Annual Return Slider">
+                <div class="flex justify-between text-xs text-slate-400 font-medium">
+                  <span>1%</span>
+                  <span>15%</span>
+                  <span>30%</span>
+                </div>
+              </div>
+
+              <!-- 3. Tenure (Years + Months) -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="space-y-2">
+                  <div class="flex items-center justify-between">
+                    <label for="years-input" class="text-sm font-semibold text-slate-700">Tenure (Years)</label>
+                    <input type="number" id="years-input" value="10" min="1" max="40" step="1" class="w-20 px-3 py-1.5 text-right font-bold text-slate-800 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:outline-none transition-all">
+                  </div>
+                  <input type="range" id="years-slider" min="1" max="40" step="1" value="10" aria-label="Tenure Years Slider">
+                </div>
+
+                <div class="space-y-2">
+                  <div class="flex items-center justify-between">
+                    <label for="months-input" class="text-sm font-semibold text-slate-700">Extra Months</label>
+                    <input type="number" id="months-input" value="0" min="0" max="11" step="1" class="w-20 px-3 py-1.5 text-right font-bold text-slate-800 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:outline-none transition-all">
+                  </div>
+                  <input type="range" id="months-slider" min="0" max="11" step="1" value="0" aria-label="Tenure Months Slider">
+                </div>
+              </div>
+
+              <!-- Advanced Options Accordion Toggle -->
+              <div class="pt-2 border-t border-slate-100">
+                <button type="button" id="advanced-toggle" class="flex items-center justify-between w-full text-left font-semibold text-sm text-indigo-600 hover:text-indigo-700 transition-colors py-2 focus:outline-none">
+                  <span class="flex items-center gap-2">
+                    <span class="icon-[fa6-solid--sliders] text-xs"></span> Advanced Options (Step-up, Inflation & Lumpsum)
+                  </span>
+                  <span id="advanced-chevron" class="icon-[fa6-solid--chevron-down] text-xs transition-transform duration-200"></span>
+                </button>
+
+                <div id="advanced-panel" class="hidden pt-4 space-y-5">
+                  <!-- Step-Up % -->
+                  <div class="space-y-2 bg-indigo-50/40 p-4 rounded-2xl border border-indigo-100/60">
+                    <div class="flex items-center justify-between">
+                      <div>
+                        <label for="stepup-input" class="text-sm font-semibold text-slate-800">Yearly Step-Up (%)</label>
+                        <p class="text-xs text-slate-500">Annual increase in SIP amount</p>
+                      </div>
+                      <div class="relative rounded-xl">
+                        <input type="number" id="stepup-input" value="0" min="0" max="30" step="1" class="w-20 pr-7 pl-3 py-1 text-right font-bold text-slate-800 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                        <span class="absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 font-semibold">%</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Expected Inflation Rate -->
+                  <div class="space-y-2 bg-amber-50/40 p-4 rounded-2xl border border-amber-100/60">
+                    <div class="flex items-center justify-between">
+                      <div>
+                        <label for="inflation-input" class="text-sm font-semibold text-slate-800">Expected Inflation Rate (%)</label>
+                        <p class="text-xs text-slate-500">Calculate real purchasing power</p>
+                      </div>
+                      <div class="relative rounded-xl">
+                        <input type="number" id="inflation-input" value="0" min="0" max="15" step="0.5" class="w-20 pr-7 pl-3 py-1 text-right font-bold text-slate-800 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-amber-500 focus:outline-none">
+                        <span class="absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 font-semibold">%</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Initial Lumpsum Investment -->
+                  <div class="space-y-2 bg-emerald-50/40 p-4 rounded-2xl border border-emerald-100/60">
+                    <div class="flex items-center justify-between">
+                      <div>
+                        <label for="lumpsum-input" class="text-sm font-semibold text-slate-800">Initial Lumpsum Amount (₹)</label>
+                        <p class="text-xs text-slate-500">Starting capital added at day 1</p>
+                      </div>
+                      <div class="relative rounded-xl">
+                        <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400 font-semibold">₹</span>
+                        <input type="number" id="lumpsum-input" value="0" min="0" max="10000000" step="5000" class="w-32 pl-7 pr-3 py-1 text-right font-bold text-slate-800 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Action Button -->
+              <div class="pt-2">
+                <button id="calculate-btn" type="button" class="w-full py-3.5 px-6 bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white font-bold rounded-2xl shadow-lg shadow-indigo-200 transition-all transform active:scale-[0.99] flex items-center justify-center gap-2">
+                  <span class="icon-[fa6-solid--calculator]"></span> Calculate Wealth Growth
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Live Results & Visual Breakdown (Column 2 - 5 cols) -->
+          <div class="lg:col-span-5 bg-slate-50/70 p-6 sm:p-8 lg:p-10 flex flex-col justify-between">
+            <div>
+              <h3 class="text-lg font-bold text-slate-800 mb-6 flex items-center gap-2">
+                <span class="icon-[fa6-solid--chart-pie] text-indigo-600"></span> Investment Summary
+              </h3>
+
+              <!-- Summary Cards Grid -->
+              <div class="space-y-4 mb-6">
+                <!-- Total Maturity Value Card -->
+                <div class="bg-linear-to-br from-indigo-600 to-blue-700 text-white p-5 rounded-2xl shadow-md">
+                  <div class="text-xs uppercase tracking-wider text-indigo-200 font-medium mb-1">Total Maturity Value</div>
+                  <div id="res-maturity" class="text-2xl sm:text-3xl font-black tracking-tight">₹23,23,391</div>
+                  <div id="res-inflation-note" class="hidden text-xs text-indigo-100 mt-2 pt-2 border-t border-indigo-400/40">
+                    Purchasing power adjusted for inflation: <span id="res-inflation-val" class="font-bold">₹12,97,000</span>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                  <!-- Invested Amount -->
+                  <div class="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-sm">
+                    <div class="flex items-center gap-2 text-xs font-semibold text-slate-500 mb-1">
+                      <span class="w-2.5 h-2.5 rounded-full bg-slate-400 inline-block"></span> Total Invested
+                    </div>
+                    <div id="res-invested" class="text-base sm:text-lg font-extrabold text-slate-800">₹12,00,000</div>
+                  </div>
+
+                  <!-- Estimated Returns -->
+                  <div class="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-sm">
+                    <div class="flex items-center gap-2 text-xs font-semibold text-emerald-600 mb-1">
+                      <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block"></span> Wealth Gain
+                    </div>
+                    <div id="res-returns" class="text-base sm:text-lg font-extrabold text-emerald-600">₹11,23,391</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Visual Donut Chart Breakdown -->
+              <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col items-center">
+                <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">Portfolio Breakdown</div>
+                
+                <div class="relative w-44 h-44 flex items-center justify-center">
+                  <!-- SVG Circular Donut Chart -->
+                  <svg class="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
+                    <path class="text-slate-200" stroke-width="4.5" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <!-- Invested Portion -->
+                    <path id="donut-invested" class="text-slate-700 transition-all duration-500 ease-out" stroke-dasharray="51, 100" stroke-width="4.5" stroke-linecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <!-- Gain Portion -->
+                    <path id="donut-returns" class="text-emerald-500 transition-all duration-500 ease-out" stroke-dasharray="49, 100" stroke-dashoffset="-51" stroke-width="4.5" stroke-linecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  </svg>
+                  <div class="absolute text-center">
+                    <span id="donut-gain-pct" class="text-xl font-black text-slate-800">48%</span>
+                    <span class="block text-[10px] uppercase font-bold text-slate-400">Wealth Gain</span>
+                  </div>
+                </div>
+
+                <!-- Legend -->
+                <div class="flex items-center justify-center gap-6 mt-4 text-xs font-medium text-slate-600">
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-3 h-3 rounded-md bg-slate-700 inline-block"></span>
+                    <span>Invested (<span id="legend-invested-pct">52%</span>)</span>
+                  </div>
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-3 h-3 rounded-md bg-emerald-500 inline-block"></span>
+                    <span>Gain (<span id="legend-returns-pct">48%</span>)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Schedule Table Toggle Button -->
+            <div class="mt-6">
+              <button id="toggle-table-btn" type="button" class="w-full py-3 px-4 bg-white hover:bg-slate-100 text-slate-700 font-semibold rounded-xl border border-slate-200 transition-colors flex items-center justify-center gap-2 text-sm shadow-sm">
+                <span class="icon-[fa6-solid--table-list] text-indigo-600"></span> View Year-by-Year Schedule Table
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Year-by-Year Schedule Table Section (Expandable) -->
+        <div id="table-container" class="hidden border-t border-slate-200 bg-white p-6 sm:p-8">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+            <div>
+              <h3 class="text-lg font-bold text-slate-800">Yearly Wealth Accumulation Schedule</h3>
+              <p class="text-xs text-slate-500">Comprehensive breakdown of your principal and compound growth</p>
+            </div>
+            <button id="export-csv-btn" type="button" class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-semibold text-xs rounded-xl border border-emerald-200 transition-colors w-fit">
+              <span class="icon-[fa6-solid--file-csv] text-base"></span> Export Schedule as CSV
+            </button>
+          </div>
+
+          <div class="overflow-x-auto rounded-xl border border-slate-200">
+            <table class="w-full text-left border-collapse text-sm">
+              <thead>
+                <tr class="bg-slate-50 text-slate-700 font-semibold border-b border-slate-200 text-xs uppercase tracking-wider">
+                  <th class="py-3 px-4">Year</th>
+                  <th class="py-3 px-4">Monthly SIP</th>
+                  <th class="py-3 px-4">Invested (Year)</th>
+                  <th class="py-3 px-4">Cumulative Invested</th>
+                  <th class="py-3 px-4">Interest Earned</th>
+                  <th class="py-3 px-4 text-right">End Balance</th>
+                </tr>
+              </thead>
+              <tbody id="schedule-tbody" class="divide-y divide-slate-100 font-medium text-slate-700">
+                <!-- Dynamically Populated by Vanilla JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Content Section Container -->
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 pb-20">
+
+      <!-- D. How to Use the SIP Calculator -->
+      <section class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
+        <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+          <span class="flex items-center justify-center w-8 h-8 rounded-xl bg-indigo-100 text-indigo-600 text-sm font-bold">1</span>
+          How to Use the SIP Calculator
+        </h2>
+        <p class="text-slate-600 mb-6 leading-relaxed">
+          Calculating your prospective mutual fund wealth creation takes less than a minute. Follow these simple steps to customize your projections:
+        </p>
+        <ol class="space-y-4">
+          <li class="flex gap-4 items-start">
+            <span class="shrink-0 w-7 h-7 rounded-full bg-slate-100 text-indigo-600 font-bold text-xs flex items-center justify-center mt-0.5">1</span>
+            <div>
+              <strong class="text-slate-800">Set Monthly Contribution:</strong> Adjust the slider or input box to set your comfortable monthly SIP amount in Rupees (₹).
+            </div>
+          </li>
+          <li class="flex gap-4 items-start">
+            <span class="shrink-0 w-7 h-7 rounded-full bg-slate-100 text-indigo-600 font-bold text-xs flex items-center justify-center mt-0.5">2</span>
+            <div>
+              <strong class="text-slate-800">Specify Expected Return (%):</strong> Select expected annual CAGR. Equity funds historically average 12-15%, while hybrid funds average 10-12%.
+            </div>
+          </li>
+          <li class="flex gap-4 items-start">
+            <span class="flex-shrink-0 w-7 h-7 rounded-full bg-slate-100 text-indigo-600 font-bold text-xs flex items-center justify-center mt-0.5">3</span>
+            <div>
+              <strong class="text-slate-800">Choose Tenure:</strong> Choose your investment period in years and additional months.
+            </div>
+          </li>
+          <li class="flex gap-4 items-start">
+            <span class="flex-shrink-0 w-7 h-7 rounded-full bg-slate-100 text-indigo-600 font-bold text-xs flex items-center justify-center mt-0.5">4</span>
+            <div>
+              <strong class="text-slate-800">Configure Advanced Parameters (Optional):</strong> Click on "Advanced Options" to factor in yearly salary increments (Step-Up SIP %), expected long-term inflation, or initial lumpsum capital.
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- E. What is a SIP Calculator? -->
+      <section class="space-y-6">
+        <h2 class="text-2xl font-bold text-slate-900">What is a SIP Calculator?</h2>
+        <p class="text-slate-600 leading-relaxed">
+          A Systematic Investment Plan (SIP) calculator is a financial tool designed to simulate the potential future value of periodic investments in mutual funds. It removes manual complex compound interest calculations and gives investors a clear roadmap toward achieving financial goals like retirement, education, or buying a home.
+        </p>
+        
+        <h3 class="text-xl font-bold text-slate-800 pt-2">Who Should Use It?</h3>
+        <p class="text-slate-600 leading-relaxed">
+          Whether you are a beginner starting with ₹500/month or an experienced investor planning a disciplined wealth accumulation strategy, a SIP calculator helps align your monthly savings with real-world financial goals.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+          <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+            <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-3">
+              <span class="icon-[fa6-solid--arrows-rotate]"></span>
+            </div>
+            <h4 class="font-bold text-slate-800 mb-2">Regular SIP</h4>
+            <p class="text-xs text-slate-600 leading-relaxed">Fixed monthly investment amount kept constant across the entire tenure.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+            <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3">
+              <span class="icon-[fa6-solid--chart-line]"></span>
+            </div>
+            <h4 class="font-bold text-slate-800 mb-2">Step-Up SIP</h4>
+            <p class="text-xs text-slate-600 leading-relaxed">Increases investment annually in step with annual income/salary growth.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+            <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-3">
+              <span class="icon-[fa6-solid--bullseye]"></span>
+            </div>
+            <h4 class="font-bold text-slate-800 mb-2">Goal-Based SIP</h4>
+            <p class="text-xs text-slate-600 leading-relaxed">Target-driven investing to reach a specific target corpus (e.g., ₹1 Crore).</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- F. SIP Calculator Formula -->
+      <section class="bg-slate-900 text-white p-8 rounded-3xl shadow-xl space-y-6">
+        <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+          <span class="icon-[fa6-solid--square-root-variable] text-indigo-400"></span> SIP Calculator Formula Explained
+        </h2>
+        <p class="text-slate-300 text-sm leading-relaxed">
+          Mutual fund SIP calculations are based on the compound interest formula adapted for annuities, where interest compounds monthly:
+        </p>
+
+        <!-- Formula Box -->
+        <div class="bg-slate-800/90 border border-slate-700/80 p-6 rounded-2xl text-center">
+          <div class="text-lg sm:text-2xl font-mono font-bold text-indigo-300 tracking-wide">
+            M = P × ({[1 + i]^n - 1} / i) × (1 + i)
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-slate-300 border-t border-slate-800 pt-4">
+          <div><strong class="text-indigo-400">M:</strong> Final Maturity Amount</div>
+          <div><strong class="text-indigo-400">P:</strong> Monthly SIP Amount</div>
+          <div><strong class="text-indigo-400">i:</strong> Periodic Monthly Return Rate <br><span class="text-slate-400">(Annual Return ÷ 12 ÷ 100)</span></div>
+          <div><strong class="text-indigo-400">n:</strong> Total Monthly Payments <br><span class="text-slate-400">(Tenure Years × 12)</span></div>
+        </div>
+
+        <!-- Worked Example -->
+        <div class="bg-slate-800/50 p-5 rounded-2xl border border-slate-700/50 space-y-3 text-xs">
+          <h3 class="font-bold text-slate-200 text-sm">Step-by-Step Worked Example:</h3>
+          <p class="text-slate-300">Assuming <strong>P = ₹10,000/month</strong>, Expected Return = <strong>12% per annum</strong>, Tenure = <strong>10 Years (120 months)</strong>:</p>
+          <ul class="list-disc pl-5 space-y-1 text-slate-400 font-mono">
+            <li>i = 12 / 12 / 100 = 0.01</li>
+            <li>n = 10 × 12 = 120</li>
+            <li>M = 10,000 × ({[1 + 0.01]^120 - 1} / 0.01) × (1 + 0.01)</li>
+            <li>M = 10,000 × (2.30038) × 1.01 = <strong>₹23,23,391</strong></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- G. Worked Examples / Popular Scenarios -->
+      <section class="space-y-6">
+        <h2 class="text-2xl font-bold text-slate-900">Popular SIP Scenarios & Projections</h2>
+        <p class="text-slate-600 text-sm">Compare typical investment amounts over common long-term investment horizons (assuming 12% CAGR):</p>
+
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="bg-slate-50 text-slate-700 font-semibold text-xs uppercase tracking-wider border-b border-slate-200">
+                <th class="py-3.5 px-4">Scenario</th>
+                <th class="py-3.5 px-4">Tenure</th>
+                <th class="py-3.5 px-4">Total Invested</th>
+                <th class="py-3.5 px-4">Estimated Returns</th>
+                <th class="py-3.5 px-4 text-right">Maturity Value</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-slate-700 font-medium">
+              <tr>
+                <td class="py-3.5 px-4 font-bold text-indigo-600">₹5,000 / month</td>
+                <td class="py-3.5 px-4">10 Years</td>
+                <td class="py-3.5 px-4">₹6,00,000</td>
+                <td class="py-3.5 px-4 text-emerald-600">₹5,61,695</td>
+                <td class="py-3.5 px-4 text-right font-bold">₹11,61,695</td>
+              </tr>
+              <tr class="bg-slate-50/50">
+                <td class="py-3.5 px-4 font-bold text-indigo-600">₹10,000 / month</td>
+                <td class="py-3.5 px-4">15 Years</td>
+                <td class="py-3.5 px-4">₹18,00,000</td>
+                <td class="py-3.5 px-4 text-emerald-600">₹32,45,760</td>
+                <td class="py-3.5 px-4 text-right font-bold">₹50,45,760</td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-4 font-bold text-indigo-600">₹15,000 / month (+10% Step-up)</td>
+                <td class="py-3.5 px-4">20 Years</td>
+                <td class="py-3.5 px-4">₹1,03,05,000</td>
+                <td class="py-3.5 px-4 text-emerald-600">₹1,85,15,400</td>
+                <td class="py-3.5 px-4 text-right font-bold text-indigo-700">₹2,88,20,400</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- I. Benefits of Using SIP Calculator & J. Benefits of SIP Investing -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-100 shadow-sm space-y-4">
+          <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+            <span class="icon-[fa6-solid--chart-column] text-indigo-600"></span> Benefits of Using Calculator
+          </h2>
+          <ul class="space-y-3 text-xs sm:text-sm text-slate-600">
+            <li class="flex items-start gap-2.5">
+              <span class="icon-[fa6-solid--check] text-emerald-500 mt-1"></span>
+              <span><strong>Visualizes Compounding Power:</strong> Demonstrates how small monthly amounts scale into substantial wealth over time.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="icon-[fa6-solid--check] text-emerald-500 mt-1"></span>
+              <span><strong>Eliminates Manual Errors:</strong> Provides precise calculations factoring monthly compound schedules.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="icon-[fa6-solid--check] text-emerald-500 mt-1"></span>
+              <span><strong>Inflation Realism:</strong> Helps avoid underestimating future living costs through purchasing power adjustments.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="icon-[fa6-solid--check] text-emerald-500 mt-1"></span>
+              <span><strong>Scenario Comparison:</strong> Rapidly benchmark different fund categories and tenure targets.</span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-100 shadow-sm space-y-4">
+          <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+            <span class="icon-[fa6-solid--piggy-bank] text-emerald-600"></span> Benefits of SIP Investing
+          </h2>
+          <ul class="space-y-3 text-xs sm:text-sm text-slate-600">
+            <li class="flex items-start gap-2.5">
+              <span class="icon-[fa6-solid--check] text-indigo-500 mt-1"></span>
+              <span><strong>Rupee Cost Averaging:</strong> Automatically buys more fund units when prices drop and fewer when markets rise.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="icon-[fa6-solid--check] text-indigo-500 mt-1"></span>
+              <span><strong>Disciplined Saving:</strong> Automated bank debits enforce consistent monthly financial discipline.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="icon-[fa6-solid--check] text-indigo-500 mt-1"></span>
+              <span><strong>Low Barrier to Entry:</strong> Start equity market participation with as little as ₹500/month.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="icon-[fa6-solid--check] text-indigo-500 mt-1"></span>
+              <span><strong>Flexibility:</strong> Modify, pause, or increase investments anytime without penalization.</span>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- K. Step-Up SIP & Inflation Adjusted Returns -->
+      <section class="bg-indigo-900 text-white p-8 rounded-3xl shadow-lg space-y-4">
+        <h2 class="text-2xl font-bold text-white">Step-Up SIP & Inflation Adjusted Returns</h2>
+        <p class="text-indigo-100 text-sm leading-relaxed">
+          As your annual salary or business revenues grow, keeping your SIP contribution static means missing out on compounding momentum. A <strong>10% yearly Step-up SIP</strong> can virtually double your ultimate maturity wealth over a 20-year period compared to a flat SIP.
+        </p>
+        <p class="text-indigo-100 text-sm leading-relaxed">
+          Simultaneously, inflation erodes future purchasing power. A corpus of ₹1 Crore after 20 years will not buy the same goods as ₹1 Crore today. Our calculator's built-in inflation adjustment feature gives you the true "real money value" in today's rupee terms.
+        </p>
+      </section>
+
+      <!-- L. SIP vs Lumpsum -->
+      <section class="space-y-6">
+        <h2 class="text-2xl font-bold text-slate-900">SIP vs Lumpsum Investment Comparison</h2>
+        <p class="text-slate-600 text-sm">Choose the investment strategy that best aligns with your liquidity and risk tolerance:</p>
+
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="bg-slate-50 text-slate-700 font-semibold text-xs uppercase tracking-wider border-b border-slate-200">
+                <th class="py-3.5 px-4">Feature</th>
+                <th class="py-3.5 px-4 text-indigo-600">SIP (Systematic Plan)</th>
+                <th class="py-3.5 px-4 text-slate-800">Lumpsum Investment</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-slate-600 text-xs sm:text-sm">
+              <tr>
+                <td class="py-3 px-4 font-bold text-slate-800">Investment Style</td>
+                <td class="py-3 px-4">Periodic (Monthly/Quarterly)</td>
+                <td class="py-3 px-4">One-time single payment</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-bold text-slate-800">Market Timing Risk</td>
+                <td class="py-3 px-4 text-emerald-600 font-semibold">Low (Rupee Cost Averaged)</td>
+                <td class="py-3 px-4 text-amber-600 font-semibold">High (Requires market timing)</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-bold text-slate-800">Ideal For</td>
+                <td class="py-3 px-4">Salaried / Regular earners</td>
+                <td class="py-3 px-4">Windfalls, bonuses, asset sales</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-bold text-slate-800">Min Capital Required</td>
+                <td class="py-3 px-4">As low as ₹500/month</td>
+                <td class="py-3 px-4">Usually ₹5,000+ per fund</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- M. Frequently Asked Questions (FAQ) -->
+      <section class="space-y-6">
+        <div class="text-center max-w-xl mx-auto">
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Frequently Asked Questions</h2>
+          <p class="text-slate-500 text-xs sm:text-sm mt-1">Everything you need to know about mutual fund SIP calculations</p>
+        </div>
+
+        <div class="space-y-3" id="faq-accordion">
+
+          <!-- Q1 -->
+          <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden">
+            <button type="button" class="faq-btn flex items-center justify-between w-full p-5 text-left font-bold text-slate-800 hover:text-indigo-600 transition-colors focus:outline-none">
+              <span>Q1. What is SIP and how does it work?</span>
+              <span class="icon-[fa6-solid--chevron-down] text-xs text-slate-400 transition-transform"></span>
+            </button>
+            <div class="faq-content accordion-content px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+              A Systematic Investment Plan (SIP) allows you to invest a fixed amount regularly (monthly or quarterly) into mutual funds. It inculcates financial discipline and leverages rupee cost averaging to smooth out market volatility over long horizons.
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden">
+            <button type="button" class="faq-btn flex items-center justify-between w-full p-5 text-left font-bold text-slate-800 hover:text-indigo-600 transition-colors focus:outline-none">
+              <span>Q2. How is SIP maturity amount calculated?</span>
+              <span class="icon-[fa6-solid--chevron-down] text-xs text-slate-400 transition-transform"></span>
+            </button>
+            <div class="faq-content accordion-content px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+              SIP maturity is calculated using the compound interest annuity formula: M = P × ({[1 + i]^n - 1} / i) × (1 + i), where P is monthly deposit, i is periodic monthly yield, and n is total monthly installments.
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden">
+            <button type="button" class="faq-btn flex items-center justify-between w-full p-5 text-left font-bold text-slate-800 hover:text-indigo-600 transition-colors focus:outline-none">
+              <span>Q3. What is a good expected return rate for SIP calculator?</span>
+              <span class="icon-[fa6-solid--chevron-down] text-xs text-slate-400 transition-transform"></span>
+            </button>
+            <div class="faq-content accordion-content px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+              For Indian equity mutual funds over a 10+ year timeframe, 12% to 15% annual CAGR is realistic based on historical index trends. For hybrid funds, 10-12% and debt funds 6-8% are recommended benchmark estimates.
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden">
+            <button type="button" class="faq-btn flex items-center justify-between w-full p-5 text-left font-bold text-slate-800 hover:text-indigo-600 transition-colors focus:outline-none">
+              <span>Q4. Can I use this calculator for equity, hybrid, and debt funds?</span>
+              <span class="icon-[fa6-solid--chevron-down] text-xs text-slate-400 transition-transform"></span>
+            </button>
+            <div class="faq-content accordion-content px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Yes, this calculator works across all mutual fund categories. Simply adjust the "Expected Annual Return (%)" parameter according to the historical average yield of your chosen fund category.
+            </div>
+          </div>
+
+          <!-- Q5 -->
+          <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden">
+            <button type="button" class="faq-btn flex items-center justify-between w-full p-5 text-left font-bold text-slate-800 hover:text-indigo-600 transition-colors focus:outline-none">
+              <span>Q5. What is Step-up SIP?</span>
+              <span class="icon-[fa6-solid--chevron-down] text-xs text-slate-400 transition-transform"></span>
+            </button>
+            <div class="faq-content accordion-content px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+              A Step-up (or Top-Up) SIP automatically increases your monthly installment amount by a fixed percentage (e.g., 10%) every year in line with expected annual salary raises.
+            </div>
+          </div>
+
+          <!-- Q6 -->
+          <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden">
+            <button type="button" class="faq-btn flex items-center justify-between w-full p-5 text-left font-bold text-slate-800 hover:text-indigo-600 transition-colors focus:outline-none">
+              <span>Q6. Does the calculator consider inflation and tax?</span>
+              <span class="icon-[fa6-solid--chevron-down] text-xs text-slate-400 transition-transform"></span>
+            </button>
+            <div class="faq-content accordion-content px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Our calculator offers an optional Inflation Rate control to calculate real purchasing power value. Capital gain taxes (LTCG/STCG) depend on individual tax slabs and exit timings and are shown as pre-tax figures.
+            </div>
+          </div>
+
+          <!-- Q7 -->
+          <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden">
+            <button type="button" class="faq-btn flex items-center justify-between w-full p-5 text-left font-bold text-slate-800 hover:text-indigo-600 transition-colors focus:outline-none">
+              <span>Q7. How much SIP do I need for ₹1 Crore?</span>
+              <span class="icon-[fa6-solid--chevron-down] text-xs text-slate-400 transition-transform"></span>
+            </button>
+            <div class="faq-content accordion-content px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Assuming an annual return of 12%, you can accumulate ₹1 Crore by investing approx ₹10,000/month for 20 years, or ₹20,000/month for 15 years, or ₹40,000/month for 10 years.
+            </div>
+          </div>
+
+          <!-- Q8 -->
+          <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden">
+            <button type="button" class="faq-btn flex items-center justify-between w-full p-5 text-left font-bold text-slate-800 hover:text-indigo-600 transition-colors focus:outline-none">
+              <span>Q8. Is SIP better than FD or RD?</span>
+              <span class="icon-[fa6-solid--chevron-down] text-xs text-slate-400 transition-transform"></span>
+            </button>
+            <div class="faq-content accordion-content px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Historically, equity mutual fund SIPs yield higher inflation-beating long-term growth (12-15%) compared to Fixed Deposits or Recurring Deposits (6-7%). However, FDs offer guaranteed capital safety, whereas mutual funds carry market risk.
+            </div>
+          </div>
+
+          <!-- Q9 -->
+          <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden">
+            <button type="button" class="faq-btn flex items-center justify-between w-full p-5 text-left font-bold text-slate-800 hover:text-indigo-600 transition-colors focus:outline-none">
+              <span>Q9. Minimum amount to start SIP?</span>
+              <span class="icon-[fa6-solid--chevron-down] text-xs text-slate-400 transition-transform"></span>
+            </button>
+            <div class="faq-content accordion-content px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Most Asset Management Companies (AMCs) in India allow investors to start a mutual fund SIP with as little as ₹100 or ₹500 per month.
+            </div>
+          </div>
+
+          <!-- Q10 -->
+          <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden">
+            <button type="button" class="faq-btn flex items-center justify-between w-full p-5 text-left font-bold text-slate-800 hover:text-indigo-600 transition-colors focus:outline-none">
+              <span>Q10. Are SIP returns guaranteed?</span>
+              <span class="icon-[fa6-solid--chevron-down] text-xs text-slate-400 transition-transform"></span>
+            </button>
+            <div class="faq-content accordion-content px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+              No, mutual fund investments are subject to market risks. Returns fluctuate based on underlying asset valuations and macroeconomic factors. Past performance does not guarantee future results.
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- M2. Related Calculators -->
+      <section id="related-calculators" class="space-y-6">
+        <h2 class="text-2xl font-bold text-slate-900">Other Useful Calculators</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <!-- SIP Card -->
+          <a href="#" class="block p-6 bg-white rounded-2xl border border-indigo-200 shadow-md hover:shadow-lg transition-all border-l-4 border-l-indigo-600 group">
+            <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+              <span class="icon-[fa6-solid--calculator]"></span>
+            </div>
+            <h3 class="font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">SIP Calculator</h3>
+            <p class="text-xs text-slate-500 mt-1">Estimate mutual fund wealth accumulation.</p>
+          </a>
+
+          <!-- BMI Card -->
+          <a href="#" class="block p-6 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all group">
+            <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+              <span class="icon-[fa6-solid--heart-pulse]"></span>
+            </div>
+            <h3 class="font-bold text-slate-800 group-hover:text-emerald-600 transition-colors">BMI Calculator</h3>
+            <p class="text-xs text-slate-500 mt-1">Check body mass index & fitness targets.</p>
+          </a>
+
+          <!-- Age Card -->
+          <a href="#" class="block p-6 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all group">
+            <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+              <span class="icon-[fa6-solid--cake-candles]"></span>
+            </div>
+            <h3 class="font-bold text-slate-800 group-hover:text-blue-600 transition-colors">Age Calculator</h3>
+            <p class="text-xs text-slate-500 mt-1">Calculate precise age in years, months, days.</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- N. Disclaimer & Soft CTA -->
+      <section class="bg-slate-100/80 p-6 sm:p-8 rounded-3xl border border-slate-200/80 text-center space-y-4">
+        <p class="text-xs text-slate-500 leading-relaxed max-w-2xl mx-auto">
+          <strong>Disclaimer:</strong> This calculator provides mathematical projections for educational purposes only. Actual mutual fund returns vary based on market performance and fund selection. Past performance is not indicative of future returns. Please consult a SEBI-registered financial advisor before investing.
+        </p>
+        <div>
+          <a href="#calculator-section" class="inline-flex items-center gap-2 px-6 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs sm:text-sm rounded-xl shadow-md transition-all">
+            <span class="icon-[fa6-solid--rocket]"></span> Explore More Calculators on Calculator Pro
+          </a>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- O. Clean Multi-Column Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-sm border-t border-slate-800 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <!-- Col 1: About -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2 text-white font-bold text-lg">
+            <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
+              <span class="icon-[fa6-solid--calculator]"></span>
+            </div>
+            <span>Calculator<span class="text-indigo-400">-Pro</span></span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Calculator Pro provides free, fast, and clinically accurate online tools for health, financial, mathematical, and everyday conversion needs.
+          </p>
+          <div class="text-xs text-slate-500">
+            &copy; <span id="current-year">2026</span> Calculator Pro. All rights reserved.
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Quick Links</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Unit Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Length Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Weight Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Temperature Converter</a></li>
+            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Volume & Area Converter</a></li>
+          </ul>
+        </div>
+        <!-- Column 3: Tools & Resources -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Calculators</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="age-calculator.html" class="hover:text-white transition-colors">Age Calculator</a></li>
+            <li><a href="time-calculator.html" class="hover:text-white transition-colors">Time Calculator</a></li>
+            <li><a href="sip-calculator.html" class="hover:text-white transition-colors">SIP Financial Calculator</a></li>
+            <li><a href="bmi-calculator.html" class="hover:text-white transition-colors">BMI Health Calculator</a></li>
+            <li><a href="percentage-calculator.html" class="hover:text-white transition-colors">Percentage Calculator</a></li>
+          </ul>
+        </div>
+
+         <!-- Column 4: Legal & Contact -->
+        <div>
+          <h3 class="text-white font-semibold mb-3 text-sm">Legal & Info</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Editorial Guidelines</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+    <!-- Core Vanilla JavaScript Engine -->
+    <script>
+<!-- Inline JavaScript for Toggle -->
+  
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('calc-mobile-menu-btn');
+      const menu = document.getElementById('calc-mobile-menu');
+      const menuIcon = document.getElementById('calc-menu-icon');
+      const closeIcon = document.getElementById('calc-close-icon');
+
+      if (btn && menu) {
+        btn.addEventListener('click', () => {
+          const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', !isExpanded);
+          menu.classList.toggle('hidden');
+          menuIcon.classList.toggle('hidden');
+          closeIcon.classList.toggle('hidden');
+        });
+      }
+    });
+
+      document.addEventListener('DOMContentLoaded', () => {
+        // DOM Input Elements
+        const monthlyInput = document.getElementById('monthly-input');
+        const monthlySlider = document.getElementById('monthly-slider');
+        const returnInput = document.getElementById('return-input');
+        const returnSlider = document.getElementById('return-slider');
+        const yearsInput = document.getElementById('years-input');
+        const yearsSlider = document.getElementById('years-slider');
+        const monthsInput = document.getElementById('months-input');
+        const monthsSlider = document.getElementById('months-slider');
+
+        // Advanced Inputs
+        const stepupInput = document.getElementById('stepup-input');
+        const inflationInput = document.getElementById('inflation-input');
+        const lumpsumInput = document.getElementById('lumpsum-input');
+        const advancedToggle = document.getElementById('advanced-toggle');
+        const advancedPanel = document.getElementById('advanced-panel');
+        const advancedChevron = document.getElementById('advanced-chevron');
+
+        // Action Buttons
+        const calculateBtn = document.getElementById('calculate-btn');
+        const resetBtn = document.getElementById('reset-btn');
+        const toggleTableBtn = document.getElementById('toggle-table-btn');
+        const tableContainer = document.getElementById('table-container');
+        const exportCsvBtn = document.getElementById('export-csv-btn');
+
+        // Result DOM Elements
+        const resMaturity = document.getElementById('res-maturity');
+        const resInvested = document.getElementById('res-invested');
+        const resReturns = document.getElementById('res-returns');
+        const resInflationNote = document.getElementById('res-inflation-note');
+        const resInflationVal = document.getElementById('res-inflation-val');
+
+        // Donut Chart DOM Elements
+        const donutInvested = document.getElementById('donut-invested');
+        const donutReturns = document.getElementById('donut-returns');
+        const donutGainPct = document.getElementById('donut-gain-pct');
+        const legendInvestedPct = document.getElementById('legend-invested-pct');
+        const legendReturnsPct = document.getElementById('legend-returns-pct');
+        const scheduleTbody = document.getElementById('schedule-tbody');
+
+        // Sync slider & input helpers
+        function bindSync(inputEl, sliderEl) {
+          inputEl.addEventListener('input', () => {
+            sliderEl.value = inputEl.value;
+            calculateSIP();
+          });
+          sliderEl.addEventListener('input', () => {
+            inputEl.value = sliderEl.value;
+            calculateSIP();
+          });
+        }
+
+        bindSync(monthlyInput, monthlySlider);
+        bindSync(returnInput, returnSlider);
+        bindSync(yearsInput, yearsSlider);
+        bindSync(monthsInput, monthsSlider);
+
+        stepupInput.addEventListener('input', calculateSIP);
+        inflationInput.addEventListener('input', calculateSIP);
+        lumpsumInput.addEventListener('input', calculateSIP);
+
+        // Toggle Advanced Panel
+        advancedToggle.addEventListener('click', () => {
+          advancedPanel.classList.toggle('hidden');
+          advancedChevron.classList.toggle('rotate-180');
+        });
+
+        // Toggle Amortization Table
+        toggleTableBtn.addEventListener('click', () => {
+          tableContainer.classList.toggle('hidden');
+          if (!tableContainer.classList.contains('hidden')) {
+            tableContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+
+        // Number Formatter (Indian Currency standard)
+        function formatINR(val) {
+          return '₹' + Math.round(val).toLocaleString('en-IN');
+        }
+
+        // Calculation Engine logic
+        function calculateSIP() {
+          const P = parseFloat(monthlyInput.value) || 0;
+          const annualReturn = parseFloat(returnInput.value) || 0;
+          const years = parseInt(yearsInput.value) || 0;
+          const months = parseInt(monthsInput.value) || 0;
+          const totalMonths = (years * 12) + months;
+
+          const stepUpPct = parseFloat(stepupInput.value) || 0;
+          const inflationRate = parseFloat(inflationInput.value) || 0;
+          const initialLumpsum = parseFloat(lumpsumInput.value) || 0;
+
+          if (totalMonths <= 0) return;
+
+          const monthlyRate = annualReturn / 12 / 100;
+          
+          let currentMonthlySIP = P;
+          let totalInvested = initialLumpsum;
+          let totalCorpus = initialLumpsum;
+
+          let yearlySchedule = [];
+          let yearInvestedAccum = initialLumpsum;
+
+          for (let m = 1; m <= totalMonths; m++) {
+            // Check annual stepup at beginning of month 13, 25, 37...
+            if (m > 1 && (m - 1) % 12 === 0 && stepUpPct > 0) {
+              currentMonthlySIP += currentMonthlySIP * (stepUpPct / 100);
+            }
+
+            totalInvested += currentMonthlySIP;
+            totalCorpus = (totalCorpus + currentMonthlySIP) * (1 + monthlyRate);
+
+            // Record yearly snapshot
+            if (m % 12 === 0 || m === totalMonths) {
+              const currentYearNum = Math.ceil(m / 12);
+              const yearInvestedThisYear = (m % 12 === 0) ? (currentMonthlySIP * 12) : (currentMonthlySIP * (m % 12));
+              
+              yearlySchedule.push({
+                year: currentYearNum,
+                monthlySip: Math.round(currentMonthlySIP),
+                investedThisYear: Math.round(yearInvestedThisYear),
+                totalInvested: Math.round(totalInvested),
+                endBalance: Math.round(totalCorpus),
+                interestEarned: Math.round(totalCorpus - totalInvested)
+              });
+            }
+          }
+
+          const wealthGain = totalCorpus - totalInvested;
+
+          // Render Main Summaries
+          resMaturity.textContent = formatINR(totalCorpus);
+          resInvested.textContent = formatINR(totalInvested);
+          resReturns.textContent = formatINR(wealthGain);
+
+          // Inflation adjustment
+          if (inflationRate > 0) {
+            const numYears = totalMonths / 12;
+            const inflationAdjustedCorpus = totalCorpus / Math.pow(1 + (inflationRate / 100), numYears);
+            resInflationVal.textContent = formatINR(inflationAdjustedCorpus);
+            resInflationNote.classList.remove('hidden');
+          } else {
+            resInflationNote.classList.add('hidden');
+          }
+
+          // Donut Chart updates
+          const investedPct = Math.round((totalInvested / totalCorpus) * 100);
+          const returnsPct = 100 - investedPct;
+
+          donutInvested.setAttribute('stroke-dasharray', `${investedPct}, 100`);
+          donutReturns.setAttribute('stroke-dasharray', `${returnsPct}, 100`);
+          donutReturns.setAttribute('stroke-dashoffset', `-${investedPct}`);
+
+          donutGainPct.textContent = `${returnsPct}%`;
+          legendInvestedPct.textContent = `${investedPct}%`;
+          legendReturnsPct.textContent = `${returnsPct}%`;
+
+          // Populate Table
+          renderScheduleTable(yearlySchedule);
+        }
+
+        // Render Amortization Schedule Rows
+        function renderScheduleTable(schedule) {
+          scheduleTbody.innerHTML = '';
+          schedule.forEach((item) => {
+            const tr = document.createElement('tr');
+            tr.className = 'hover:bg-slate-50/80 transition-colors';
+            tr.innerHTML = `
+              <td class="py-3 px-4 font-bold text-slate-800">Year ${item.year}</td>
+              <td class="py-3 px-4">${formatINR(item.monthlySip)}</td>
+              <td class="py-3 px-4">${formatINR(item.investedThisYear)}</td>
+              <td class="py-3 px-4 font-semibold">${formatINR(item.totalInvested)}</td>
+              <td class="py-3 px-4 text-emerald-600 font-semibold">${formatINR(item.interestEarned)}</td>
+              <td class="py-3 px-4 text-right font-bold text-slate-900">${formatINR(item.endBalance)}</td>
+            `;
+            scheduleTbody.appendChild(tr);
+          });
+        }
+
+        // Export CSV Handler
+        exportCsvBtn.addEventListener('click', () => {
+          let csvContent = "data:text/csv;charset=utf-8,Year,Monthly SIP,Cumulative Invested,Total Maturity Balance\n";
+          const rows = scheduleTbody.querySelectorAll('tr');
+          rows.forEach((row) => {
+            const cols = row.querySelectorAll('td');
+            const rowData = Array.from(cols).map(col => `"${col.innerText.replace(/₹|,/g, '').trim()}"`).join(',');
+            csvContent += rowData + "\n";
+          });
+
+          const encodedUri = encodeURI(csvContent);
+          const link = document.createElement('a');
+          link.setAttribute('href', encodedUri);
+          link.setAttribute('download', 'SIP_Calculator_Pro_Schedule.csv');
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        });
+
+        // Reset Handler
+        resetBtn.addEventListener('click', () => {
+          monthlyInput.value = 10000;
+          monthlySlider.value = 10000;
+          returnInput.value = 12;
+          returnSlider.value = 12;
+          yearsInput.value = 10;
+          yearsSlider.value = 10;
+          monthsInput.value = 0;
+          monthsSlider.value = 0;
+          stepupInput.value = 0;
+          inflationInput.value = 0;
+          lumpsumInput.value = 0;
+          calculateSIP();
+        });
+
+        calculateBtn.addEventListener('click', calculateSIP);
+
+        // Accordion FAQ script
+        const faqBtns = document.querySelectorAll('.faq-btn');
+        faqBtns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector('.fa-chevron-down');
+            const isOpen = content.classList.contains('open');
+
+            // Close all
+            document.querySelectorAll('.faq-content').forEach(c => c.classList.remove('open'));
+            document.querySelectorAll('.faq-btn .fa-chevron-down').forEach(i => i.classList.remove('rotate-180'));
+
+            if (!isOpen) {
+              content.classList.add('open');
+              icon.classList.add('rotate-180');
+            }
+          });
+        });
+
+        // Initial Run
+        calculateSIP();
+      });
+    </script>
+</body>
+</html>
