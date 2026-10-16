@@ -202,7 +202,7 @@
               <a href="sgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to Percentage</a>
             </div>
 			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="sgpa-to-cgpa-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to CGPA</a>
+              <a href="sgpa-to-cgpa-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to CGPA</a>
             </div>
 			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
               <a href="marks-to-percentage-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Marks to Percentage</a>
@@ -292,10 +292,10 @@
       <!-- Mobile Category: Converter -->
       <div class="border-b border-slate-100 pb-3">
         <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Converter</div>
-        <a href="javascript:void(0)" onclick="openCalculator('length')" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Unit Converter</a>
+        <a href="unit-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Unit Converter</a>
 		  <a href="cgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">CGPA to Percentage</a>
 		  <a href="sgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to Percentage</a>
-		  <a href="sgpa-to-cgpa-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to CGPA</a>
+		  <a href="sgpa-to-cgpa-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to CGPA</a>
 		  <a href="marks-to-percentage-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Marks to Percentage</a>
       </div>
 
@@ -510,7 +510,7 @@
                             </a>
                         </li>
                         <li class="tool-item">
-                            <a href="age-difference-calculator.html" onclick="openCalculator('age')" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
+                            <a href="age-difference-calculator.html" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
                                 <span class="font-medium text-sm">Age Difference Calculator</span>
                                 <span class="icon-[fa6-solid--angle-right] text-xs text-slate-300"></span>
                             </a>
@@ -566,6 +566,12 @@
                         <li class="tool-item">
                             <a href="emi-calculator.html" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
                                 <span class="font-medium text-sm">Loan EMI Calculator</span>
+                                <span class="icon-[fa6-solid--angle-right] text-xs text-slate-300"></span>
+                            </a>
+                        </li>
+                        <li class="tool-item">
+                            <a href="gst-calculator.html" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
+                                <span class="font-medium text-sm">GST Calculator</span>
                                 <span class="icon-[fa6-solid--angle-right] text-xs text-slate-300"></span>
                             </a>
                         </li>
@@ -632,51 +638,46 @@
                     </ul>
                 </div>
 
-                <!-- Category 5: Unit Converters -->
+                <!-- Category 5: Converters -->
                 <div class="category-card bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
                     <div class="flex items-center gap-3 mb-4 pb-3 border-b border-slate-100">
                         <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center font-bold">
                             <span class="icon-[fa6-solid--ruler-combined]"></span>
                         </div>
-                        <h3 class="text-lg font-bold text-slate-900">Unit Converters</h3>
+                        <h3 class="text-lg font-bold text-slate-900">Converters</h3>
                     </div>
                     <ul class="space-y-2.5">
                         <li class="tool-item">
                             <a href="unit-converter.html" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
-                                <span class="font-medium text-sm">Length Converter</span>
+                                <span class="font-medium text-sm">Unit Converter</span>
                                 <span class="text-xs bg-amber-50 text-amber-600 px-2 py-0.5 rounded font-semibold">Interactive</span>
                             </a>
                         </li>
                         <li class="tool-item">
-                            <a href="unit-converter.html" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
-                                <span class="font-medium text-sm">Weight Converter</span>
+                            <a href="cgpa-to-percentage-converter.html" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
+                                <span class="font-medium text-sm">CGPA to Percentage Converter</span>
                                 <span class="icon-[fa6-solid--angle-right] text-xs text-slate-300"></span>
                             </a>
                         </li>
                         <li class="tool-item">
-                            <a href="unit-converter.html" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
-                                <span class="font-medium text-sm">Temperature Converter</span>
+                            <a href="sgpa-to-percentage-converter.html" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
+                                <span class="font-medium text-sm">SGPA to Percentage Converter</span>
                                 <span class="icon-[fa6-solid--angle-right] text-xs text-slate-300"></span>
                             </a>
                         </li>
                         <li class="tool-item">
-                            <a href="unit-converter.html" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
-                                <span class="font-medium text-sm">Area Converter</span>
+                            <a href="sgpa-to-cgpa-calculator.html" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
+                                <span class="font-medium text-sm">SGPA to CGPA Calculator</span>
                                 <span class="icon-[fa6-solid--angle-right] text-xs text-slate-300"></span>
                             </a>
                         </li>
                         <li class="tool-item">
-                            <a href="unit-converter.html" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
-                                <span class="font-medium text-sm">Volume Converter</span>
+                            <a href="marks-to-percentage-calculator.html" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
+                                <span class="font-medium text-sm">Marks to Percentage Calculator</span>
                                 <span class="icon-[fa6-solid--angle-right] text-xs text-slate-300"></span>
                             </a>
                         </li>
-                        <li class="tool-item">
-                            <a href="unit-converter.html" class="flex items-center justify-between text-slate-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50/50 transition-colors">
-                                <span class="font-medium text-sm">Speed Converter</span>
-                                <span class="icon-[fa6-solid--angle-right] text-xs text-slate-300"></span>
-                            </a>
-                        </li>
+                        
                     </ul>
                 </div>
 
@@ -1134,10 +1135,10 @@
           <h3 class="text-white font-semibold mb-3 text-sm">Quick Links</h3>
           <ul class="space-y-2 text-xs">
             <li><a href="unit-converter.html" class="hover:text-white transition-colors">Unit Converter</a></li>
-            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Length Converter</a></li>
-            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Weight Converter</a></li>
-            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Temperature Converter</a></li>
-            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Volume & Area Converter</a></li>
+            <li><a href="gst-calculator.html" class="hover:text-white transition-colors">GST Calculator</a></li>
+            <li><a href="cgpa-to-percentage-converter.html" class="hover:text-white transition-colors">CGPA to Percentage</a></li>
+            <li><a href="sgpa-to-cgpa-calculator.html" class="hover:text-white transition-colors">SGPA to CGPA</a></li>
+            <li><a href="work-days-calculator.html" class="hover:text-white transition-colors">Work Days Calculator</a></li>
           </ul>
         </div>
         <!-- Column 3: Tools & Resources -->
@@ -1156,10 +1157,11 @@
         <div>
           <h3 class="text-white font-semibold mb-3 text-sm">Legal & Info</h3>
           <ul class="space-y-2 text-xs">
-            <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Editorial Guidelines</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+            <li><a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html" class="hover:text-white transition-colors">Terms of Service</a></li>
+            <li><a href="editorial-guidelines.html" class="hover:text-white transition-colors">Editorial Guidelines</a></li>
+            <li><a href="contact-us.html" class="hover:text-white transition-colors">Contact Us</a></li>
+            <li><a href="disclaimer.html" class="hover:text-white transition-colors">Disclaimer</a></li>
           </ul>
         </div>
 

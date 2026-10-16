@@ -3,24 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discount Calculator - Free Percentage Discount & Sale Price Tool</title>
-    <meta name="description" content="Free online Discount Calculator to find sale price, discount amount & original price. Calculate percentage discounts instantly for shopping, sales & offers. Easy formulas & examples.">
-    <meta name="keywords" content="discount calculator, percentage discount calculator, sale price calculator, discount percentage calculator, how to calculate discount, sale price tool">
-    <link rel="canonical" href="https://calculatorpro.com/discount-calculator">
-
-    <!-- Open Graph / Facebook -->
+    <title>Free Discount Calculator - Sale Price & Percent Off Calculator Online</title>
+    <meta name="description" content="Use our free discount calculator online. Easily compute sale prices, percentage discounts, percent off, stacked double discounts, and savings with tax.">
+    <meta name="keywords" content="discount calculator, sale price calculator, percent off calculator, discount percentage calculator, percentage discount calculator, sale price calculator online, discount calculator online">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Discount Calculator Pro - Sale Price & Percent Off Calculator">
+    <meta property="og:description" content="Calculate sale prices, percentage off, double discounts, and tax instantly with Calculator Pro's free online discount calculator.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://calculatorpro.com/discount-calculator">
-    <meta property="og:title" content="Discount Calculator - Free Percentage Discount & Sale Price Tool">
-    <meta property="og:description" content="Free online Discount Calculator to find sale price, discount amount & original price. Calculate percentage discounts instantly with breakdown charts.">
-    <meta property="og:image" content="https://placehold.co/1200x630/2563eb/ffffff?text=Discount+Calculator+Pro">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://calculatorpro.com/discount-calculator">
-    <meta property="twitter:title" content="Discount Calculator - Free Percentage Discount & Sale Price Tool">
-    <meta property="twitter:description" content="Free online Discount Calculator to find sale price, discount amount & original price. Calculate percentage discounts instantly.">
-    <meta property="twitter:image" content="https://placehold.co/1200x630/2563eb/ffffff?text=Discount+Calculator+Pro">
+    <meta property="og:url" content="https://calculator-pro.example.com/discount-calculator">
 
     <!-- FontAwesome CDN -->
     
@@ -53,47 +44,71 @@
           "@id": "https://calculatorpro.com/discount-calculator/#faq",
           "mainEntity": [
             {
-              "@type": "Question",
-              "name": "How do I calculate a percentage discount?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "To calculate a percentage discount, multiply the original price by the discount percentage and divide by 100 to get the discount amount. Then subtract this discount amount from the original price to find the final sale price."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How to find the original price after discount?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "To find the original price before discount, divide the sale price by (1 minus the discount percentage expressed as a decimal). For example, if a sale price is $80 with 20% off, divide $80 by 0.80 to get $100."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What is the difference between discount amount and sale price?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "The discount amount is the total money saved during a sale, while the sale price is the actual final price paid after deducting the discount from the original price."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How to calculate successive discounts?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Successive discounts apply sequentially rather than additively. First, apply the first discount percentage to the original price. Next, calculate the second discount percentage on the resulting reduced price, yielding the final price."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Can I use this calculator for GST inclusive prices?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes, our discount calculator includes an optional tax and GST field. It accurately calculates the discounted subtotal first and then adds the specified sales tax or GST percentage to reveal your exact final total."
-              }
-            }
-          ]
+          "@type": "Question",
+          "name": "How do I calculate discount percentage on an item?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To calculate the discount percentage, subtract the sale price from the original price, divide that difference by the original price, and then multiply the result by 100."
+          }
         },
+        {
+          "@type": "Question",
+          "name": "How does a 20% off calculator work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A 20% off calculator multiplies the original price by 0.80 (or 1 - 0.20) to find the final discounted sale price, and subtracts that from the original price to show your total savings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I calculate stacked or double discounts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Stacked or double discounts apply the first discount percentage to the original price, and then apply the second percentage discount to the resulting reduced intermediate price."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I find the original price from a discounted price?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Using a reverse discount calculator, you divide the final sale price by (1 - discount percentage as a decimal) to find the original pre-sale retail price."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does a discount calculator with tax work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A discount calculator with tax first subtracts the markdown percentage from the original amount to determine the sale price, and then adds the specified sales tax percentage to the discounted total."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the formula for sale price after discount?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The sale price formula is: Sale Price = Original Price × (1 - (Discount % / 100))."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this discount calculator online free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Calculator Pro's online discount tool is 100% free, fast, and requires no downloads or registration."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I calculate a 50% off discount?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A 50% off calculation cuts the original item price exactly in half. You simply divide the original price by 2."
+          }
+        }
+      ]
+    },
         {
           "@type": "HowTo",
           "@id": "https://calculatorpro.com/discount-calculator/#howto",
@@ -299,11 +314,11 @@
       <!-- Mobile Category: Converter -->
       <div class="border-b border-slate-100 pb-3">
         <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Converter</div>
-        <a href="javascript:void(0)" onclick="openCalculator('length')" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Unit Converter</a>
-		  <a href="cgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">CGPA to Percentage</a>
-		  <a href="sgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to Percentage</a>
-		  <a href="sgpa-to-cgpa-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to CGPA</a>
-		  <a href="marks-to-percentage-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Marks to Percentage</a>
+        <a href="unit-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Unit Converter</a>
+		    <a href="cgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">CGPA to Percentage</a>
+		    <a href="sgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to Percentage</a>
+		    <a href="sgpa-to-cgpa-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to CGPA</a>
+		    <a href="marks-to-percentage-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Marks to Percentage</a>
       </div>
 
       <!-- Mobile Category: Financial -->
@@ -339,28 +354,12 @@
             <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-100/80 text-indigo-700 text-xs font-semibold tracking-wide uppercase mb-4 shadow-sm">
               <span class="icon-[fa6-solid--bolt] text-indigo-600"></span> Smart Sale Price Tool
             </div>
-            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
-              Discount Calculator – Free Percentage Discount & Sale Price Tool
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+                Ultimate <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-indigo-600">Discount Calculator</span> & Sale Price Calculator Online
             </h1>
-            <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
-              Discount Calculator is a free online tool that helps you quickly calculate the discounted price, discount amount, or original price. Whether you’re shopping online, checking sale offers, or planning discounts for your business, this tool gives instant and accurate results. Simply enter the original price and discount percentage to find the final sale price in seconds.
+            <p class="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-8">
+                Welcome to Calculator Pro, the ultimate online discount calculator. Instantly compute your final <span class="font-semibold text-slate-800">sale price</span>, total <span class="font-semibold text-slate-800">amount saved</span>, percentage off, stacked double discounts, and sales tax with absolute precision.
             </p>
-
-            <!-- Trust Badges -->
-            <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-6 mt-6 text-xs sm:text-sm font-semibold text-slate-500">
-              <span class="inline-flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-full shadow-sm border border-slate-200/80">
-                <span class="icon-[fa6-solid--circle-check] text-emerald-500"></span> Free Tool
-              </span>
-              <span class="inline-flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-full shadow-sm border border-slate-200/80">
-                <span class="icon-[fa6-solid--bolt] text-amber-500"></span> Instant Results
-              </span>
-              <span class="inline-flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-full shadow-sm border border-slate-200/80">
-                <span class="icon-[fa6-solid--bullseye] text-indigo-500"></span> 100% Accurate
-              </span>
-              <span class="inline-flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-full shadow-sm border border-slate-200/80">
-                <span class="icon-[fa6-solid--mobile-screen-button] text-blue-500"></span> Mobile Friendly
-              </span>
-            </div>
           </div>
 
           <!-- Interactive Calculator Card Container -->
@@ -392,13 +391,13 @@
             <div class="bg-slate-100/80 p-2 border-b border-slate-200 overflow-x-auto">
               <div class="flex gap-2 min-w-max">
                 <button type="button" data-mode="mode-sale" class="calc-tab-btn flex-1 min-w-[140px] px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 bg-white text-indigo-600 shadow-sm border border-slate-200/60">
-                  <span class="icon-[fa6-solid--percent] mr-1.5"></span> Find Sale Price
+                  <span class="icon-[fa6-solid--percent] mr-1.5"></span> Standard Discount
                 </button>
                 <button type="button" data-mode="mode-orig" class="calc-tab-btn flex-1 min-w-[140px] px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold text-slate-600 hover:text-slate-900 transition-all duration-200 hover:bg-white/60">
-                  <span class="icon-[fa6-solid--backward-step] mr-1.5"></span> Find Original Price
+                  <span class="icon-[fa6-solid--backward-step] mr-1.5"></span> Reverse/Original
                 </button>
                 <button type="button" data-mode="mode-rate" class="calc-tab-btn flex-1 min-w-[140px] px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold text-slate-600 hover:text-slate-900 transition-all duration-200 hover:bg-white/60">
-                  <span class="icon-[fa6-solid--calculator] mr-1.5"></span> Find Discount %
+                  <span class="icon-[fa6-solid--calculator] mr-1.5"></span> Discount % Finder
                 </button>
                 <button type="button" data-mode="mode-stacked" class="calc-tab-btn flex-1 min-w-[140px] px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold text-slate-600 hover:text-slate-900 transition-all duration-200 hover:bg-white/60">
                   <span class="icon-[fa6-solid--layer-group] mr-1.5"></span> Double Discount
@@ -578,33 +577,38 @@
               </span>
               How to Use the Discount Calculator
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              
-              <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100 shadow-sm relative hover:shadow-md transition-shadow">
-                <div class="w-8 h-8 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center mb-3 text-sm">1</div>
-                <h3 class="font-bold text-slate-800 mb-1">Enter Original Price</h3>
-                <p class="text-xs text-slate-600 leading-relaxed">Type the full retail list price of the product or service into the primary field.</p>
+            <p class="leading-relaxed text-slate-600">
+                    Navigating seasonal retail sales, promotional coupons, and shopping event discounts can be confusing when trying to work out your final cost. Calculator Pro’s <span class="font-semibold text-slate-800">sale price calculator online</span> eliminates guesswork by generating immediate, precise calculations for various discount situations.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-3">
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/60">
+                        <h3 class="font-bold text-slate-900 text-base mb-1.5 flex items-center gap-2">
+                            <span class="w-6 h-6 rounded-full bg-indigo-600 text-white text-xs flex items-center justify-center font-bold">1</span>
+                            Standard Discount
+                        </h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Input the initial list price alongside the percentage discount. Optionally add stacked discounts, custom fixed coupons, or sales tax rates.</p>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/60">
+                        <h3 class="font-bold text-slate-900 text-base mb-1.5 flex items-center gap-2">
+                            <span class="w-6 h-6 rounded-full bg-indigo-600 text-white text-xs flex items-center justify-center font-bold">2</span>
+                            Reverse Discount
+                        </h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Enter the final purchase price and the discount percentage applied to reveal the <span class="font-semibold text-slate-800">original price from sale price calculator</span> workflow.</p>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/60">
+                        <h3 class="font-bold text-slate-900 text-base mb-1.5 flex items-center gap-2">
+                            <span class="w-6 h-6 rounded-full bg-indigo-600 text-white text-xs flex items-center justify-center font-bold">3</span>
+                            Discount % Finder
+                        </h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Enter both original list price and sale price to immediately <span class="font-semibold text-slate-800">calculate discount percentage</span> offered on the item.</p>
+                    </div>
               </div>
-
-              <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100 shadow-sm relative hover:shadow-md transition-shadow">
-                <div class="w-8 h-8 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center mb-3 text-sm">2</div>
-                <h3 class="font-bold text-slate-800 mb-1">Enter Discount %</h3>
-                <p class="text-xs text-slate-600 leading-relaxed">Input the offered percentage discount rate or tap one of our quick percentage presets.</p>
-              </div>
-
-              <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100 shadow-sm relative hover:shadow-md transition-shadow">
-                <div class="w-8 h-8 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center mb-3 text-sm">3</div>
-                <h3 class="font-bold text-slate-800 mb-1">Add Tax or Extras</h3>
-                <p class="text-xs text-slate-600 leading-relaxed">Optionally add secondary stacked discounts or local sales tax/GST percentages.</p>
-              </div>
-
-              <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100 shadow-sm relative hover:shadow-md transition-shadow">
-                <div class="w-8 h-8 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center mb-3 text-sm">4</div>
-                <h3 class="font-bold text-slate-800 mb-1">View Results</h3>
-                <p class="text-xs text-slate-600 leading-relaxed">Instantly inspect the final reduced sale price, total money saved, and visual pie chart.</p>
-              </div>
-
-            </div>
+              <div class="bg-brand-50/60 rounded-2xl p-6 border border-brand-100 text-slate-700 text-sm leading-relaxed space-y-3">
+            <h3 class="text-base font-semibold text-brand-900">Why Use Calculator Pro's Savings Calculator?</h3>
+            <p>
+                Whether you are shopping during holiday clearance sales, calculating retail margins, or verifying promotional coupons, our online <span class="font-semibold">savings calculator</span> and <span class="font-semibold">amount saved</span> tracker eliminates manual arithmetic errors. It computes the exact <span class="font-semibold">final price after discount</span> instantly across all currencies.
+            </p>
+        </div>
           </div>
 
           <!-- H2: Discount Calculation Formulas & Scale Factor -->
@@ -638,7 +642,7 @@
                 <div class="bg-slate-900 text-indigo-300 p-3 rounded-xl font-mono text-xs mb-3 font-semibold text-center">
                   Sale Price = Original Price × (1 – Discount % / 100)
                 </div>
-                <p class="text-xs text-slate-500">Directly computes what you pay after subtracting the percentage reduction.</p>
+                <p class="text-xs text-slate-500">To <span class="font-semibold text-slate-800">calculate sale price after discount</span>, multiply the original price by 1 minus the discount rate in decimal form</p>
               </div>
 
               <div class="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm hover:border-indigo-300 transition-colors">
@@ -647,7 +651,7 @@
                 <div class="bg-slate-900 text-indigo-300 p-3 rounded-xl font-mono text-xs mb-3 font-semibold text-center">
                   Discount Amount = Original Price × (Discount % / 100)
                 </div>
-                <p class="text-xs text-slate-500">Calculates the total monetary savings or cash amount deducted from list price.</p>
+                <p class="text-xs text-slate-500">To find the exact <span class="font-semibold text-slate-800">amount saved</span> on a purchase.</p>
               </div>
 
               <div class="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm hover:border-indigo-300 transition-colors">
@@ -656,7 +660,7 @@
                 <div class="bg-slate-900 text-indigo-300 p-3 rounded-xl font-mono text-xs mb-3 font-semibold text-center">
                   Original Price = Sale Price ÷ (1 – Discount % / 100)
                 </div>
-                <p class="text-xs text-slate-500">Reverse-engineers the tag price prior to markdown using the final price.</p>
+                <p class="text-xs text-slate-500">To <span class="font-semibold text-slate-800">find original price from discounted price</span> (reverse discount calculation).</p>
               </div>
 
             </div>
@@ -857,11 +861,19 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm text-slate-700">
               <div class="flex items-start gap-3">
                 <span class="icon-[fa6-solid--check] text-emerald-500 mt-1"></span>
-                <span><strong>Instant & Accurate Results:</strong> Eliminates manual math errors and gives precise breakdown numbers instantly.</span>
+                <span><strong>Instant Live Calculation:</strong> Results update dynamically as you type, eliminating extra button clicks.</span>
               </div>
               <div class="flex items-start gap-3">
                 <span class="icon-[fa6-solid--check] text-emerald-500 mt-1"></span>
-                <span><strong>Helps Compare Deals:</strong> Quickly compare flat cash discounts versus percentage promotional codes when shopping.</span>
+                <span><strong>Stacked Double Discount Support:</strong> Accurately computes store-wide sales combined with extra promotional coupons.</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="icon-[fa6-solid--check] text-emerald-500 mt-1"></span>
+                <span><strong>Sales Tax & VAT Integration:</strong> Enter regional sales tax percentages to see your exact final checkout price.</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="icon-[fa6-solid--check] text-emerald-500 mt-1"></span>
+                <span><strong>Multi-Currency Support:</strong> Switch between $, €, £, ₹, and other currencies with one click.</span>
               </div>
               <div class="flex items-start gap-3">
                 <span class="icon-[fa6-solid--check] text-emerald-500 mt-1"></span>
@@ -888,55 +900,104 @@
               <!-- FAQ Item 1 -->
               <div class="border border-slate-200 rounded-2xl overflow-hidden bg-white shadow-sm transition-all">
                 <button type="button" class="faq-toggle flex justify-between items-center w-full p-5 text-left font-bold text-slate-800 hover:text-indigo-600 transition-colors focus:outline-none">
-                  <span>How do I calculate a percentage discount?</span>
+                  <h3>How do I calculate discount percentage on an item?</h3>
                   <span class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
                 </button>
-                <div class="accordion-content px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
-                  To calculate a percentage discount, multiply the original tag price by the discount percentage rate and divide by 100 to get the exact discount amount saved. Afterwards, subtract this discount amount from the original price to reveal your final sale price. Alternatively, multiply the list price directly by (1 minus the discount percentage expressed as a decimal).
+                <div class="accordion-content px-5  text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                  <p>
+                    To calculate the discount percentage, subtract the sale price from the original price, divide that difference by the original price, and then multiply the result by 100
+                  </p>
                 </div>
               </div>
 
               <!-- FAQ Item 2 -->
               <div class="border border-slate-200 rounded-2xl overflow-hidden bg-white shadow-sm transition-all">
                 <button type="button" class="faq-toggle flex justify-between items-center w-full p-5 text-left font-bold text-slate-800 hover:text-indigo-600 transition-colors focus:outline-none">
-                  <span>How to find the original price after discount?</span>
+                  <h3>How does a 20% off calculator work?</h3>
                   <span class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
                 </button>
-                <div class="accordion-content px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
-                  To reverse calculate the original price prior to a discount, divide the final sale price by (1 minus the discount rate in decimal form). For instance, if an item costs $80 on sale with a 20% discount offer, divide $80 by 0.80 (which is 1 - 0.20), yielding the original list price of $100.
+                <div class="accordion-content px-5  text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                  <p>
+                    A 20% off calculator multiplies the original price by 0.80 (or 1 - 0.20) to find the final discounted sale price, and subtracts that from the original price to show your total savings.
+                  </p>
                 </div>
               </div>
 
               <!-- FAQ Item 3 -->
               <div class="border border-slate-200 rounded-2xl overflow-hidden bg-white shadow-sm transition-all">
                 <button type="button" class="faq-toggle flex justify-between items-center w-full p-5 text-left font-bold text-slate-800 hover:text-indigo-600 transition-colors focus:outline-none">
-                  <span>What is the difference between discount amount and sale price?</span>
+                  <h3>Can I calculate stacked or double discounts?</h3>
                   <span class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
                 </button>
-                <div class="accordion-content px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
-                  The discount amount represents the total dollar or rupee savings deducted from the list price. Conversely, the sale price (or net price) is the final amount paid at checkout after deducting the discount amount. For a $100 product with $20 off, $20 is the discount amount and $80 is the sale price.
+                <div class="accordion-content px-5  text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                  <p>
+                    Yes! Stacked or double discounts apply the first discount percentage to the original price, and then apply the second percentage discount to the resulting reduced intermediate price.
+                  </p>
                 </div>
               </div>
 
               <!-- FAQ Item 4 -->
               <div class="border border-slate-200 rounded-2xl overflow-hidden bg-white shadow-sm transition-all">
                 <button type="button" class="faq-toggle flex justify-between items-center w-full p-5 text-left font-bold text-slate-800 hover:text-indigo-600 transition-colors focus:outline-none">
-                  <span>How to calculate successive discounts?</span>
+                  <h3>How do I find the original price from a discounted price?</h3>
                   <span class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
                 </button>
-                <div class="accordion-content px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
-                  Successive or stacked discounts apply sequentially rather than adding rates together. First, apply the initial discount percentage to the full original price. Next, calculate the second discount percentage on the newly reduced subtotal. For example, a 20% plus 10% stacked discount equals an effective total discount of 28%, not 30%.
+                <div class="accordion-content px-5  text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                  <p>
+                    Using a reverse discount calculator, you divide the final sale price by (1 - discount percentage as a decimal) to find the original pre-sale retail price.
+                  </p>
                 </div>
               </div>
 
               <!-- FAQ Item 5 -->
               <div class="border border-slate-200 rounded-2xl overflow-hidden bg-white shadow-sm transition-all">
                 <button type="button" class="faq-toggle flex justify-between items-center w-full p-5 text-left font-bold text-slate-800 hover:text-indigo-600 transition-colors focus:outline-none">
-                  <span>Can I use this calculator for GST inclusive prices?</span>
+                  <h3>How does a discount calculator with tax work?</h3>
                   <span class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
                 </button>
-                <div class="accordion-content px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
-                  Yes, our online discount calculator includes an optional Sales Tax and GST input field. Simply enter your tax percentage rate alongside the original price and discount. The calculator automatically calculates the discounted price subtotal first and then adds tax to provide your exact total payment figure.
+                <div class="accordion-content px-5  text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                  <p>
+                    A discount calculator with tax first subtracts the markdown percentage from the original amount to determine the sale price, and then adds the specified sales tax percentage to the discounted total.
+                  </p>
+                </div>
+              </div>
+
+              <!-- FAQ Item 6 -->
+              <div class="border border-slate-200 rounded-2xl overflow-hidden bg-white shadow-sm transition-all">
+                <button type="button" class="faq-toggle flex justify-between items-center w-full p-5 text-left font-bold text-slate-800 hover:text-indigo-600 transition-colors focus:outline-none">
+                  <h3>What is the formula for sale price after discount?</h3>
+                  <span class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
+                </button>
+                <div class="accordion-content px-5  text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                  <p> 
+                    The sale price formula is: Sale Price = Original Price × (1 - (Discount % / 100)).
+                  </p>
+                </div>
+              </div>
+
+              <!-- FAQ Item 7 -->
+              <div class="border border-slate-200 rounded-2xl overflow-hidden bg-white shadow-sm transition-all">
+                <button type="button" class="faq-toggle flex justify-between items-center w-full p-5 text-left font-bold text-slate-800 hover:text-indigo-600 transition-colors focus:outline-none">
+                  <h3>Is this discount calculator online free to use?</h3>
+                  <span class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
+                </button>
+                <div class="accordion-content px-5  text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                  <p>
+                    Yes, Calculator Pro's online discount tool is 100% free, fast, and requires no downloads or registration.
+                  </p>
+                </div>
+              </div>
+
+              <!-- FAQ Item 8 -->
+              <div class="border border-slate-200 rounded-2xl overflow-hidden bg-white shadow-sm transition-all">
+                <button type="button" class="faq-toggle flex justify-between items-center w-full p-5 text-left font-bold text-slate-800 hover:text-indigo-600 transition-colors focus:outline-none">
+                  <h3>How do I calculate a 50% off discount?</h3>
+                  <span class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
+                </button>
+                <div class="accordion-content px-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                  <p>
+                    A 50% off calculation cuts the original item price exactly in half. You simply divide the original price by 2.
+                  </p>
                 </div>
               </div>
 
@@ -975,62 +1036,68 @@
 
     <!-- Multi-column Footer -->
 <footer class="bg-slate-900 text-slate-400 text-sm border-t border-slate-800 mt-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-        
-        <!-- Col 1: About -->
-        <div class="space-y-4">
-          <div class="flex items-center gap-2 text-white font-bold text-lg">
-            <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
-              <span class="icon-[fa6-solid--calculator]"></span>
-            </div>
-            <span>Calculator<span class="text-indigo-400">-Pro</span></span>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+
+      <!-- Col 1: About -->
+      <div class="space-y-4">
+        <div class="flex items-center gap-2 text-white font-bold text-lg">
+          <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
+            <span class="icon-[fa6-solid--calculator]"></span>
           </div>
-          <p class="text-xs text-slate-400 leading-relaxed">
-            Calculator Pro provides free, fast, and clinically accurate online tools for health, financial, mathematical, and everyday conversion needs.
-          </p>
-          <div class="text-xs text-slate-500">
-            &copy; <span id="current-year">2026</span> Calculator Pro. All rights reserved.
-          </div>
+          <span>Calculator<span class="text-indigo-400">-Pro</span></span>
         </div>
-
-        <!-- Column 2: Quick Links -->
-        <div>
-          <h3 class="text-white font-semibold mb-3 text-sm">Quick Links</h3>
-          <ul class="space-y-2 text-xs">
-            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Unit Converter</a></li>
-            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Length Converter</a></li>
-            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Weight Converter</a></li>
-            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Temperature Converter</a></li>
-            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Volume & Area Converter</a></li>
-          </ul>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Calculator Pro provides free, fast, and clinically accurate online tools for health, financial, mathematical,
+          and everyday conversion needs.
+        </p>
+        <div class="text-xs text-slate-500">
+          &copy; <span id="current-year">2026</span> Calculator Pro. All rights reserved.
         </div>
-        <!-- Column 3: Tools & Resources -->
-        <div>
-          <h3 class="text-white font-semibold mb-3 text-sm">Calculators</h3>
-          <ul class="space-y-2 text-xs">
-            <li><a href="age-calculator.html" class="hover:text-white transition-colors">Age Calculator</a></li>
-            <li><a href="time-calculator.html" class="hover:text-white transition-colors">Time Calculator</a></li>
-            <li><a href="sip-calculator.html" class="hover:text-white transition-colors">SIP Financial Calculator</a></li>
-            <li><a href="bmi-calculator.html" class="hover:text-white transition-colors">BMI Health Calculator</a></li>
-            <li><a href="percentage-calculator.html" class="hover:text-white transition-colors">Percentage Calculator</a></li>
-          </ul>
-        </div>
-
-         <!-- Column 4: Legal & Contact -->
-        <div>
-          <h3 class="text-white font-semibold mb-3 text-sm">Legal & Info</h3>
-          <ul class="space-y-2 text-xs">
-            <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Editorial Guidelines</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
-          </ul>
-        </div>
-
       </div>
+
+      <!-- Column 2: Quick Links -->
+      <div>
+        <h3 class="text-white font-semibold mb-3 text-sm">Quick Links</h3>
+        <ul class="space-y-2 text-xs">
+          <li><a href="unit-converter.html" class="hover:text-white transition-colors">Unit Converter</a></li>
+          <li><a href="gst-calculator.html" class="hover:text-white transition-colors">GST Calculator</a></li>
+          <li><a href="cgpa-to-percentage-converter.html" class="hover:text-white transition-colors">CGPA to
+              Percentage</a></li>
+          <li><a href="sgpa-to-cgpa-calculator.html" class="hover:text-white transition-colors">SGPA to CGPA</a></li>
+          <li><a href="work-days-calculator.html" class="hover:text-white transition-colors">Work Days Calculator</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Column 3: Tools & Resources -->
+      <div>
+        <h3 class="text-white font-semibold mb-3 text-sm">Calculators</h3>
+        <ul class="space-y-2 text-xs">
+          <li><a href="age-calculator.html" class="hover:text-white transition-colors">Age Calculator</a></li>
+          <li><a href="time-calculator.html" class="hover:text-white transition-colors">Time Calculator</a></li>
+          <li><a href="sip-calculator.html" class="hover:text-white transition-colors">SIP Financial Calculator</a></li>
+          <li><a href="bmi-calculator.html" class="hover:text-white transition-colors">BMI Health Calculator</a></li>
+          <li><a href="percentage-calculator.html" class="hover:text-white transition-colors">Percentage Calculator</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Legal & Contact -->
+      <div>
+        <h3 class="text-white font-semibold mb-3 text-sm">Legal & Info</h3>
+        <ul class="space-y-2 text-xs">
+          <li><a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+          <li><a href="terms-of-service.html" class="hover:text-white transition-colors">Terms of Service</a></li>
+          <li><a href="editorial-guidelines.html" class="hover:text-white transition-colors">Editorial Guidelines</a>
+          </li>
+          <li><a href="contact-us.html" class="hover:text-white transition-colors">Contact Us</a></li>
+          <li><a href="disclaimer.html" class="hover:text-white transition-colors">Disclaimer</a></li>
+        </ul>
+      </div>
+
     </div>
-  </footer>
+  </div>
+</footer>
     <!-- Vanilla JavaScript Application Logic -->
     <script>
       document.addEventListener('DOMContentLoaded', () => {

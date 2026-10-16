@@ -37,103 +37,115 @@
 
     <!-- Structured Data JSON-LD Schemas -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
         {
-          "@type": "SoftwareApplication",
-          "name": "GST Calculator 2026",
-          "operatingSystem": "All",
-          "applicationCategory": "FinanceApplication",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "INR"
-          },
-          "description": "Calculate GST amounts, CGST, SGST, IGST for inclusive and exclusive transactions according to GST 2.0 slabs."
-        },
-        {
-          "@type": "HowTo",
-          "name": "How to Use the GST Calculator 2026",
-          "step": [
+          "@context": "https://schema.org",
+          "@graph": [
             {
-              "@type": "HowToStep",
-              "text": "Enter the base or total amount in Indian Rupees (₹)."
+              "@type": "WebSite",
+              "@id": "https://calculatorpro.com/#website",
+              "url": "https://calculatorpro.com/",
+              "name": "Calculator Pro",
+              "description": "Free Online Professional Calculators for Finance, GST, Tax, and Health",
+              "inLanguage": "en-IN"
             },
             {
-              "@type": "HowToStep",
-              "text": "Select the appropriate GST 2.0 rate (0%, 5%, 18%, 40% or custom rate)."
-            },
-            {
-              "@type": "HowToStep",
-              "text": "Choose calculation type: Exclusive (Add GST) or Inclusive (Remove GST)."
-            },
-            {
-              "@type": "HowToStep",
-              "text": "Select Supply Type: Intra-state (CGST + SGST) or Inter-state (IGST)."
-            },
-            {
-              "@type": "HowToStep",
-              "text": "Click 'Calculate GST' to view detailed tax breakdown."
-            }
-          ]
-        },
-        {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What are the current GST slabs in 2026?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Under GST 2.0 reforms, the standard rates are simplified to 0% (essential items), 5% (daily necessities), 18% (standard rate for goods & services), and 40% (luxury & sin goods)."
+              "@type": "WebApplication",
+              "name": "GST Calculator India",
+              "url": "https://calculatorpro.com/gst-calculator",
+              "applicationCategory": "BusinessApplication",
+              "operatingSystem": "All",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "INR"
               }
             },
-            {
-              "@type": "Question",
-              "name": "How to calculate GST on inclusive price?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Formula: Original Amount = Total Inclusive Price × 100 / (100 + GST Rate). GST Amount = Total Inclusive Price - Original Amount."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What is the difference between CGST, SGST and IGST?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "CGST and SGST apply to Intra-state sales (within the same state) split equally. IGST applies to Inter-state sales (between different states) as a single tax."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Has the 12% and 28% GST slab been removed?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes, under the GST 2.0 structural simplification, 12% and 28% rates were merged into 18% and 40% categories respectively to streamline compliance."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What is GST rate on gold and jewellery in 2026?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Gold and precious jewellery continue under a special low tax regime at 3% GST rate."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Can I use this GST Calculator 2026 for inter-state supplies?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes, selecting Inter-state will automatically compute the unified Integrated GST (IGST) amount."
-              }
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "How does the SBI Home Loan EMI Calculator work?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The SBI Home Loan EMI Calculator uses the reducing balance method formula to calculate your precise monthly Equated Monthly Installment based on principal, interest rate, and tenure."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How can I calculate EMI for a 20 lakh, 30 lakh, or 50 lakh home loan?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Simply enter your required loan amount (e.g., ₹20,00,000, ₹30,00,000, or ₹50,00,000) into our Loan EMI Calculator, adjust the interest rate and tenure sliders, and view your monthly payment breakdown instantly."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How much interest can I save with a home loan prepayment?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Making periodic prepayments reduces your outstanding principal balance directly. This lowers the interest accumulated over subsequent months, saving lakhs in overall interest and reducing your loan tenure."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What is the difference between EMI vs prepayment calculator?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": " A standard EMI calculator calculates your regular fixed monthly payment. A prepayment calculator factors in one-time or recurring extra payments to show how much earlier you can close your loan or lower subsequent EMIs."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How does an HDFC Personal Loan EMI Calculator differ from a Home Loan calculator?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "While the core mathematical formula remains identical (reducing balance), personal loans generally feature shorter tenures (1 to 5 years), higher interest rates, and processing fees compared to long-term mortgage or housing loans."
+                  }
+                },
+    			{
+                  "@type": "Question",
+                  "name": "Can I calculate car loan EMI for 7 years?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes! You can set the loan tenure slider anywhere from 1 year up to 7 years (84 months) to compute accurate car loan or vehicle loan monthly repayments. "
+                  }
+                },
+    			{
+                  "@type": "Question",
+                  "name": "What is a step-up EMI calculator?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A step-up EMI calculator allows borrowers to start with lower EMIs that increase progressively each year, aligning with expected annual salary increments and career growth."
+                  }
+                },
+    			{
+                  "@type": "Question",
+                  "name": "How does CIBIL score impact my loan EMI?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A higher CIBIL score (750+) qualifies you for lower interest rates offered by top banks like SBI, HDFC, and ICICI, which significantly reduces your monthly EMI and total interest payable."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Are there tax benefits included in housing loan calculators?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, under sections 24(b) and 80C of the Income Tax Act, borrowers can claim deductions on home loan interest (up to ₹2 lakh) and principal repayment (up to ₹1.5 lakh) per financial year."
+                  }
+                },
+    			{
+                  "@type": "Question",
+                  "name": "How does a loan balance transfer work?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A balance transfer allows you to move your existing outstanding loan from one financial institution to another offering a lower interest rate, thereby reducing your monthly EMI burden.
+                }
+              
             }
           ]
         }
-      ]
-    }
-    </script>
+        </script>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white min-h-screen flex flex-col">
 
@@ -308,8 +320,8 @@
 
       <!-- Mobile Category: Converter -->
       <div class="border-b border-slate-100 pb-3">
-        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Converter</div>
-        <a href="javascript:void(0)" onclick="openCalculator('length')" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Unit Converter</a>
+          <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Converter</div>
+          <a href="unit-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Unit Converter</a>
 		  <a href="cgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">CGPA to Percentage</a>
 		  <a href="sgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to Percentage</a>
 		  <a href="sgpa-to-cgpa-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to CGPA</a>
@@ -343,13 +355,13 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto space-y-4">
                     <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-100 text-brand-700 text-xs font-semibold tracking-wide uppercase shadow-sm">
-                        <span class="icon-[lucide--sparkles] text-brand-500"></span> GST 2.0 Compliant
+                        <span class="icon-[lucide--sparkles] text-brand-500"></span> Updated for GST 2.0 Slabs (2026 Regulations)
                     </div>
                     <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
-                        GST Calculator 2026 – Free GST Calculator
+                       GST Calculator <span class="text-indigo-600 block sm:inline">Online Tax Calculator India</span>
                     </h1>
                     <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
-                        GST Calculator 2026 is a free online tool based on the latest GST 2.0 rates. Instantly calculate GST amount, CGST, SGST, IGST, inclusive and exclusive prices using the current slabs — <strong>0%, 5%, 18% and 40%</strong>. Simple, accurate and updated for 2026.
+                       Welcome to the most advanced <strong>GST Calculator</strong> for India. Use our <strong>Online GST Calculator</strong> and <strong>Free GST Calculator</strong> to effortlessly compute tax breakdowns. Whether you need a reliable <strong>GST tax calculator</strong>, a precise <strong>CGST SGST IGST calculator</strong>, an intuitive <strong>GST inclusive exclusive calculator</strong>, a robust <strong>Reverse GST calculator</strong>, or a fast <strong>GST amount calculator</strong> for invoices and business accounting, Calculator Pro delivers instant and accurate results.
                     </p>
                 </div>
 
@@ -519,26 +531,26 @@
                     <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-100 text-brand-600 text-sm">1</span>
                     How to Use the GST Calculator
                 </h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
-                        <div class="text-brand-600 font-bold text-sm mb-1">Step 1</div>
-                        <h3 class="font-semibold text-slate-800 text-sm mb-1">Enter Amount</h3>
-                        <p class="text-xs text-slate-600">Input your total or base product price in Indian Rupees (₹).</p>
+                <p class="text-slate-600 leading-relaxed mb-6">
+                    Using our <strong class="text-slate-800">free GST calculator</strong> is designed to be effortless for business owners, accountants, tax consultants, and MSMEs. Whether you are generating a tax invoice or figuring out the net base cost of a product, follow these simple steps to perform an instant accurate calculation:
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="p-5 rounded-xl bg-slate-50 border border-slate-100">
+                        <div class="w-8 h-8 rounded-lg bg-indigo-600 text-white flex items-center justify-center font-bold mb-3">1</div>
+                        <h3 class="font-bold text-slate-800 mb-1">Enter Your Amount</h3>
+                        <p class="text-xs sm:text-sm text-slate-600">Input your total transaction amount or initial taxable base value into the main input box.</p>
                     </div>
-                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
-                        <div class="text-brand-600 font-bold text-sm mb-1">Step 2</div>
-                        <h3 class="font-semibold text-slate-800 text-sm mb-1">Select GST Rate</h3>
-                        <p class="text-xs text-slate-600">Choose between GST 2.0 slabs (0%, 5%, 18%, 40% or custom).</p>
+
+                    <div class="p-5 rounded-xl bg-slate-50 border border-slate-100">
+                        <div class="w-8 h-8 rounded-lg bg-indigo-600 text-white flex items-center justify-center font-bold mb-3">2</div>
+                        <h3 class="font-bold text-slate-800 mb-1">Choose GST Mode</h3>
+                        <p class="text-xs sm:text-sm text-slate-600">Toggle between <strong class="text-slate-700">GST Exclusive</strong> (Add tax to base cost) or <strong class="text-slate-700">GST Inclusive</strong> (Remove tax from total price).</p>
                     </div>
-                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
-                        <div class="text-brand-600 font-bold text-sm mb-1">Step 3</div>
-                        <h3 class="font-semibold text-slate-800 text-sm mb-1">Supply Type</h3>
-                        <p class="text-xs text-slate-600">Select Intra-state (CGST+SGST) or Inter-state (IGST).</p>
-                    </div>
-                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
-                        <div class="text-brand-600 font-bold text-sm mb-1">Step 4</div>
-                        <h3 class="font-semibold text-slate-800 text-sm mb-1">Instant Results</h3>
-                        <p class="text-xs text-slate-600">View real-time itemized breakdown and total amount.</p>
+
+                    <div class="p-5 rounded-xl bg-slate-50 border border-slate-100">
+                        <div class="w-8 h-8 rounded-lg bg-indigo-600 text-white flex items-center justify-center font-bold mb-3">3</div>
+                        <h3 class="font-bold text-slate-800 mb-1">Select Slab & Location</h3>
+                        <p class="text-xs sm:text-sm text-slate-600">Select standard rate slabs (5%, 12%, 18%, 28%, 40%) and specify Intra-state or Inter-state supply for CGST/SGST split.</p>
                     </div>
                 </div>
             </section>
@@ -588,52 +600,42 @@
                 <h2 class="text-2xl font-bold text-slate-900 mb-6">GST Calculation Formulas</h2>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <!-- Exclusive Formula -->
-                    <div class="p-5 bg-slate-50 rounded-xl border border-slate-200 space-y-3">
-                        <h3 class="text-base font-bold text-brand-700 flex items-center gap-2">
-                            <span class="icon-[fa6-solid--circle-plus]"></span> Exclusive GST (Add GST)
-                        </h3>
-                        <div class="p-3 bg-white rounded-lg font-mono text-xs text-slate-800 border border-slate-200">
-                            GST Amount = (Original Amount × GST Rate) / 100
+                    <div class="p-5 rounded-xl bg-slate-50 border border-slate-200">
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Exclusive GST (Add GST)</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 mb-3">Used when tax percentage needs to be added on top of base amount:</p>
+                        <div class="bg-white p-3 rounded-lg border border-slate-200 font-mono text-xs sm:text-sm text-indigo-700 font-semibold mb-2">
+                            GST Amount = (Base Amount × GST Rate) / 100
                         </div>
-                        <div class="p-3 bg-white rounded-lg font-mono text-xs text-slate-800 border border-slate-200">
-                            Final Amount = Original Amount + GST Amount
+                        <div class="bg-white p-3 rounded-lg border border-slate-200 font-mono text-xs sm:text-sm text-slate-800 font-semibold">
+                            Total Invoice Price = Base Amount + GST Amount
                         </div>
                     </div>
 
-                    <!-- Inclusive Formula -->
-                    <div class="p-5 bg-slate-50 rounded-xl border border-slate-200 space-y-3">
-                        <h3 class="text-base font-bold text-brand-700 flex items-center gap-2">
-                            <span class="icon-[fa6-solid--circle-minus]"></span> Inclusive GST (Remove GST)
-                        </h3>
-                        <div class="p-3 bg-white rounded-lg font-mono text-xs text-slate-800 border border-slate-200">
-                            Original Amount = Final Amount × 100 / (100 + GST Rate)
+                    <div class="p-5 rounded-xl bg-slate-50 border border-slate-200">
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Inclusive GST (Remove GST)</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 mb-3">Used to calculate net base price when tax is already inside total retail price:</p>
+                        <div class="bg-white p-3 rounded-lg border border-slate-200 font-mono text-xs sm:text-sm text-indigo-700 font-semibold mb-2">
+                            Base Amount = Total Price × [100 / (100 + GST Rate)]
                         </div>
-                        <div class="p-3 bg-white rounded-lg font-mono text-xs text-slate-800 border border-slate-200">
-                            GST Amount = Final Amount – Original Amount
+                        <div class="bg-white p-3 rounded-lg border border-slate-200 font-mono text-xs sm:text-sm text-slate-800 font-semibold">
+                            GST Tax Amount = Total Price - Base Amount
                         </div>
                     </div>
 
-                    <!-- CGST + SGST -->
-                    <div class="p-5 bg-slate-50 rounded-xl border border-slate-200 space-y-3">
-                        <h3 class="text-base font-bold text-slate-800 flex items-center gap-2">
-                            <span class="icon-[fa6-solid--code-branch]"></span> CGST + SGST (Intra-state)
-                        </h3>
-                        <div class="p-3 bg-white rounded-lg font-mono text-xs text-slate-800 border border-slate-200">
-                            CGST = GST Amount / 2
-                        </div>
-                        <div class="p-3 bg-white rounded-lg font-mono text-xs text-slate-800 border border-slate-200">
-                            SGST = GST Amount / 2
+                    <div class="p-5 rounded-xl bg-slate-50 border border-slate-200">
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">CGST + SGST (Intra-state Supply)</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 mb-2">When buyer and seller are located in the same state:</p>
+                        <div class="bg-white p-3 rounded-lg border border-slate-200 font-mono text-xs sm:text-sm text-slate-800 font-semibold">
+                            CGST Amount = Total GST Amount / 2<br>
+                            SGST Amount = Total GST Amount / 2
                         </div>
                     </div>
 
-                    <!-- IGST -->
-                    <div class="p-5 bg-slate-50 rounded-xl border border-slate-200 space-y-3">
-                        <h3 class="text-base font-bold text-slate-800 flex items-center gap-2">
-                            <span class="icon-[fa6-solid--arrow-right-arrow-left]"></span> IGST (Inter-state)
-                        </h3>
-                        <div class="p-3 bg-white rounded-lg font-mono text-xs text-slate-800 border border-slate-200">
-                            IGST = Full GST Amount
+                    <div class="p-5 rounded-xl bg-slate-50 border border-slate-200">
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">IGST (Inter-state Supply)</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 mb-2">When supply occurs across two different state boundaries:</p>
+                        <div class="bg-white p-3 rounded-lg border border-slate-200 font-mono text-xs sm:text-sm text-slate-800 font-semibold">
+                            IGST Amount = Entire 100% Total GST Amount
                         </div>
                     </div>
                 </div>
@@ -642,58 +644,104 @@
             <!-- Section E: Worked Examples -->
             <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100">
                 <h2 class="text-2xl font-bold text-slate-900 mb-6">Worked Examples (2026 Rates)</h2>
+                <p class="text-base text-slate-600">
+                   Explore these practical scenarios demonstrating how to calculate taxes for different invoices using our <strong>GST calculator for invoice</strong> and business needs:
+                </p>
+
                 
                 <div class="space-y-4">
                     <div class="p-4 bg-brand-50/60 rounded-xl border border-brand-100">
-                        <h3 class="text-base font-bold text-brand-900">Example 1 – 18% GST (Exclusive)</h3>
-                        <p class="text-sm text-slate-700 mt-1">Product Price = ₹10,000 | GST @ 18% = ₹1,800 | <strong>Total = ₹11,800</strong> (CGST ₹900 + SGST ₹900)</p>
+                        <h3 class="text-base font-bold text-brand-900">Example 1 – 18% GST (Exclusive Calculation)</h3>
+                        <p class="text-sm text-slate-700 mt-1">A software consulting agency bills ₹20,000 net base fees for web development services within Maharashtra (Intra-State)</p>
+                        <ul class="mt-3 text-xs sm:text-sm text-slate-700 space-y-1 list-disc list-inside font-medium">
+                            <li>Base Taxable Amount: ₹20,000</li>
+                            <li>Total GST (18%): ₹3,600</li>
+                            <li>CGST (9% Central): ₹1,800 | SGST (9% State): ₹1,800</li>
+                            <li>Final Payable Invoice Value: <strong>₹23,600</strong></li>
+                        </ul>
                     </div>
 
                     <div class="p-4 bg-emerald-50/60 rounded-xl border border-emerald-100">
-                        <h3 class="text-base font-bold text-emerald-900">Example 2 – 5% GST (Inclusive)</h3>
-                        <p class="text-sm text-slate-700 mt-1">MRP = ₹1,050 | Original Price = ₹1,000 | <strong>GST Amount = ₹50</strong></p>
+                        <h3 class="text-base font-bold text-emerald-900">Example 2 – 5% GST (Inclusive Reverse Calculation)</h3>
+                        <p class="text-sm text-slate-700 mt-1">A customer buys packaged organic spices at a retail total price tag of ₹1,050 (GST Inclusive price).</p>
+                        <ul class="mt-3 text-xs sm:text-sm text-slate-700 space-y-1 list-disc list-inside font-medium">
+                            <li>Total Retail Tag Price: ₹1,050</li>
+                            <li>Base Net Price: ₹1,050 × (100 / 105) = ₹1,000</li>
+                            <li>GST Amount (5% Tax Included): ₹50</li>
+                        </ul>
                     </div>
 
                     <div class="p-4 bg-rose-50/60 rounded-xl border border-rose-100">
-                        <h3 class="text-base font-bold text-rose-900">Example 3 – 40% Luxury Goods</h3>
-                        <p class="text-sm text-slate-700 mt-1">Luxury Item = ₹5,00,000 | GST @ 40% = ₹2,00,000 | <strong>Total = ₹7,00,000</strong></p>
+                        <h3 class="text-base font-bold text-rose-900">Example 3 – 40% Luxury Goods Supply</h3>
+                        <p class="text-sm text-slate-700 mt-1">Inter-state sale of luxury high-end automotive goods valued at ₹1,00,000 base cost with maximum tax slab rates.</p>
+                        <ul class="mt-3 text-xs sm:text-sm text-slate-700 space-y-1 list-disc list-inside font-medium">
+                            <li>Base Cost: ₹1,00,000</li>
+                            <li>Integrated GST (IGST 40%): ₹40,000</li>
+                            <li>Total Final Value: <strong>₹1,40,000</strong></li>
+                        </ul>
                     </div>
                 </div>
             </section>
 
+            <!-- Section: How to remove GST from price & exclusive vs inclusive -->
+             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <section class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-8 space-y-4">
+                <h2 class="text-xl font-bold text-slate-900 tracking-tight">
+                    How to Remove GST from Price
+                </h2>
+                <p class="text-sm text-slate-600">
+                    When dealing with MRP or gross invoices where tax is already embedded, a <strong>reverse GST calculator</strong> is essential. By reversing the tax percentage using our tool's "Remove GST" mode, you extract the exact Input Tax Credit (ITC) or base manufacturing cost without manual division errors.
+                </p>
+            </section>
+
+            <section class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-8 space-y-4">
+                <h2 class="text-xl font-bold text-slate-900 tracking-tight">
+                    GST Exclusive vs Inclusive
+                </h2>
+                <p class="text-sm text-slate-600">
+                    <strong>Exclusive GST</strong> means tax is calculated on top of the listed price at checkout (common in B2B transactions). <strong>Inclusive GST</strong> means the tax is already bundled into the final price paid by the consumer (common in retail MRP).
+                </p>
+            </section>
+        </div>
+
+        <!-- Section: CGST SGST calculator & Types of Calculations -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <section class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-8 space-y-4">
+                <h2 class="text-xl font-bold text-slate-900 tracking-tight">
+                    CGST SGST Calculator Breakdown
+                </h2>
+                <p class="text-sm text-slate-600">
+                    For intra-state trades within the same state, tax is split equally between the Central Government (CGST) and State Government (SGST). For inter-state transactions, the total tax is collected as Integrated GST (IGST).
+                </p>
+            </section>
+
+            <section class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-8 space-y-4">
+                <h2 class="text-xl font-bold text-slate-900 tracking-tight">
+                    Types of GST Calculations
+                </h2>
+                <p class="text-sm text-slate-600">
+                    Our platform covers forward additions, reverse calculations, compounding breakdowns, and state-wise split reporting to support small businesses, enterprises, and tax practitioners alike.
+                </p>
+            </section>
+        </div>
+
             <!-- Section F: Types of GST Calculations -->
             <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100">
                 <h2 class="text-2xl font-bold text-slate-900 mb-4">Types of GST Calculations</h2>
-                <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-700">
-                    <li class="flex items-start gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
-                        <span class="icon-[fa6-solid--circle-check] text-brand-600 mt-0.5"></span>
-                        <div>
-                            <strong class="block text-slate-900">Exclusive GST Calculator</strong>
-                            Calculates tax added on top of net cost price.
-                        </div>
-                    </li>
-                    <li class="flex items-start gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
-                        <span class="icon-[fa6-solid--circle-check] text-brand-600 mt-0.5"></span>
-                        <div>
-                            <strong class="block text-slate-900">Inclusive GST Calculator</strong>
-                            Extracts built-in tax amount from final MRP price.
-                        </div>
-                    </li>
-                    <li class="flex items-start gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
-                        <span class="icon-[fa6-solid--circle-check] text-brand-600 mt-0.5"></span>
-                        <div>
-                            <strong class="block text-slate-900">CGST, SGST & IGST Split</strong>
-                            Determines federal vs state tax allocation automatically.
-                        </div>
-                    </li>
-                    <li class="flex items-start gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
-                        <span class="icon-[fa6-solid--circle-check] text-brand-600 mt-0.5"></span>
-                        <div>
-                            <strong class="block text-slate-900">Reverse GST Calculator</strong>
-                            Helps accounting staff back-calculate net valuation for billing.
-                        </div>
-                    </li>
-                </ul>
+                <ul class="space-y-3 text-sm text-slate-600">
+                        <li class="flex items-start gap-2">
+                            <span class="icon-[fa6-solid--check] text-indigo-600 mt-1"></span>
+                            <span><strong class="text-slate-800">Forward Tax Calculation:</strong> Adding tax percentage over base prices during billing generation.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="icon-[fa6-solid--check] text-indigo-600 mt-1"></span>
+                            <span><strong class="text-slate-800">Reverse GST Calculation:</strong> Extracting net base tax values from MRP consumer prices.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="icon-[fa6-solid--check] text-indigo-600 mt-1"></span>
+                            <span><strong class="text-slate-800">Input Tax Credit (ITC) Balance:</strong> Estimating tax liability differences for monthly filing.</span>
+                        </li>
+                    </ul>
             </section>
 
             <!-- Section G: Benefits -->
@@ -719,163 +767,150 @@
                 </div>
             </section>
 
-            <!-- Section H: Free HSN Code Finder -->
-            <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100 space-y-6">
-                <div>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-2">Free HSN Code Finder</h2>
-                    <p class="text-slate-600 text-sm">Search chapter codes and corresponding tax rates according to current GST 2.0 classifications.</p>
-                </div>
-
-                <!-- HSN Search Box -->
-                <div class="relative">
-                    <label for="hsn-search" class="sr-only">Search HSN Code by Product Name</label>
-                    <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-                        <span class="icon-[fa6-solid--magnifying-glass]"></span>
-                    </div>
-                    <input type="text" id="hsn-search" placeholder="Type product name (e.g. mobile phone, cement, soap...)"
-                        class="block w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
-                </div>
-
-                <h3 class="text-lg font-semibold text-slate-800">Popular HSN Codes & GST Rates (Quick Table)</h3>
-                
-                <div class="overflow-x-auto rounded-xl border border-slate-200">
-                    <table class="w-full text-left text-sm text-slate-700" id="hsn-table">
-                        <thead class="bg-slate-100 text-slate-800 text-xs uppercase font-bold border-b border-slate-200">
-                            <tr>
-                                <th class="px-4 py-3.5">Product</th>
-                                <th class="px-4 py-3.5">HSN Code</th>
-                                <th class="px-4 py-3.5">GST Rate</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-200" id="hsn-table-body">
-                            <tr class="hsn-row hover:bg-slate-50">
-                                <td class="px-4 py-3 font-medium text-slate-900">Mobile Phones</td>
-                                <td class="px-4 py-3 font-mono text-xs text-slate-600">8517</td>
-                                <td class="px-4 py-3 font-semibold text-brand-600">18%</td>
-                            </tr>
-                            <tr class="hsn-row hover:bg-slate-50">
-                                <td class="px-4 py-3 font-medium text-slate-900">Cement</td>
-                                <td class="px-4 py-3 font-mono text-xs text-slate-600">2523</td>
-                                <td class="px-4 py-3 font-semibold text-brand-600">18%</td>
-                            </tr>
-                            <tr class="hsn-row hover:bg-slate-50">
-                                <td class="px-4 py-3 font-medium text-slate-900">Soap & Detergent</td>
-                                <td class="px-4 py-3 font-mono text-xs text-slate-600">3401</td>
-                                <td class="px-4 py-3 font-semibold text-emerald-600">5%</td>
-                            </tr>
-                            <tr class="hsn-row hover:bg-slate-50">
-                                <td class="px-4 py-3 font-medium text-slate-900">Gold Jewellery</td>
-                                <td class="px-4 py-3 font-mono text-xs text-slate-600">7113</td>
-                                <td class="px-4 py-3 font-semibold text-amber-600">3%</td>
-                            </tr>
-                            <tr class="hsn-row hover:bg-slate-50">
-                                <td class="px-4 py-3 font-medium text-slate-900">Aerated Drinks</td>
-                                <td class="px-4 py-3 font-mono text-xs text-slate-600">2202</td>
-                                <td class="px-4 py-3 font-semibold text-rose-600">40%</td>
-                            </tr>
-                            <tr class="hsn-row hover:bg-slate-50">
-                                <td class="px-4 py-3 font-medium text-slate-900">Apparel (≤ ₹2500)</td>
-                                <td class="px-4 py-3 font-mono text-xs text-slate-600">61/62</td>
-                                <td class="px-4 py-3 font-semibold text-emerald-600">5%</td>
-                            </tr>
-                            <tr class="hsn-row hover:bg-slate-50">
-                                <td class="px-4 py-3 font-medium text-slate-900">Apparel (> ₹2500)</td>
-                                <td class="px-4 py-3 font-mono text-xs text-slate-600">61/62</td>
-                                <td class="px-4 py-3 font-semibold text-brand-600">18%</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-
-            <!-- Section I: Frequently Asked Questions (FAQ) -->
+           
+           <!-- Section I: Frequently Asked Questions (FAQ) -->
             <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100">
                 <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
                     <span class="icon-[fa6-solid--circle-question] text-brand-600"></span> Frequently Asked Questions (FAQ)
                 </h2>
 
-                <div class="space-y-3" id="faq-accordion">
-                    
-                    <!-- FAQ 1 -->
-                    <div class="border border-slate-200 rounded-xl overflow-hidden">
-                        <button type="button" class="faq-btn w-full px-5 py-4 text-left font-semibold text-slate-800 hover:text-brand-600 flex justify-between items-center gap-4 bg-slate-50/50">
-                            <span>What are the current GST slabs in 2026?</span>
-                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
-                        </button>
-                        <div class="accordion-content px-5">
-                            <p class="py-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100">
-                                In 2026, under GST 2.0 regulations, India utilizes a four-tier rate structure: 0% for essential non-processed food items; 5% for daily necessities and basic apparel; 18% standard rate for most commercial goods, electronics, and services; and 40% for luxury items and sin goods like aerated beverages and tobacco products.
-                            </p>
-                        </div>
+                <div class="space-y-4" id="faq-accordion">
+                
+                <!-- FAQ 1 -->
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
+                        <h3>How does the SBI Home Loan EMI Calculator work?</h3>
+                        <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
+                    </button>
+                    <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
+                        <p>
+                           The SBI Home Loan EMI Calculator uses the reducing balance method formula to calculate your precise monthly Equated Monthly Installment based on principal, interest rate, and tenure.
+                        </p>
                     </div>
-
-                    <!-- FAQ 2 -->
-                    <div class="border border-slate-200 rounded-xl overflow-hidden">
-                        <button type="button" class="faq-btn w-full px-5 py-4 text-left font-semibold text-slate-800 hover:text-brand-600 flex justify-between items-center gap-4 bg-slate-50/50">
-                            <span>How to calculate GST on inclusive price?</span>
-                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
-                        </button>
-                        <div class="accordion-content px-5">
-                            <p class="py-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100">
-                                To calculate GST on an inclusive price, use the formula: Base Amount = (Total Inclusive Price × 100) / (100 + GST Rate). Then subtract the Base Amount from the Total Inclusive Price to obtain the exact GST component included in the retail maximum retail price (MRP).
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- FAQ 3 -->
-                    <div class="border border-slate-200 rounded-xl overflow-hidden">
-                        <button type="button" class="faq-btn w-full px-5 py-4 text-left font-semibold text-slate-800 hover:text-brand-600 flex justify-between items-center gap-4 bg-slate-50/50">
-                            <span>What is the difference between CGST, SGST and IGST?</span>
-                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
-                        </button>
-                        <div class="accordion-content px-5">
-                            <p class="py-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100">
-                                CGST (Central GST) and SGST (State GST) apply to intra-state transactions occurring within the same state boundaries and are split evenly (50:50). IGST (Integrated GST) applies to inter-state sales across state borders and is collected as a unified central tax before being apportioned.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- FAQ 4 -->
-                    <div class="border border-slate-200 rounded-xl overflow-hidden">
-                        <button type="button" class="faq-btn w-full px-5 py-4 text-left font-semibold text-slate-800 hover:text-brand-600 flex justify-between items-center gap-4 bg-slate-50/50">
-                            <span>Has the 12% and 28% GST slab been removed?</span>
-                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
-                        </button>
-                        <div class="accordion-content px-5">
-                            <p class="py-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100">
-                                Yes, under the GST 2.0 rationalization reforms, the former 12% and 28% slabs were merged into the 18% and 40% categories respectively. This structural overhaul eliminated bracket creep, simplified corporate accounting, and reduced administrative compliance overhead across all business sectors.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- FAQ 5 -->
-                    <div class="border border-slate-200 rounded-xl overflow-hidden">
-                        <button type="button" class="faq-btn w-full px-5 py-4 text-left font-semibold text-slate-800 hover:text-brand-600 flex justify-between items-center gap-4 bg-slate-50/50">
-                            <span>What is GST rate on gold and jewellery in 2026?</span>
-                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
-                        </button>
-                        <div class="accordion-content px-5">
-                            <p class="py-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100">
-                                Gold bullion and precious metal jewellery remain governed under a special lower GST slab of 3%. Making charges incurred during jewellery manufacturing are subject to a separate standard service tax component of 5% as per current statutory guidelines.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- FAQ 6 -->
-                    <div class="border border-slate-200 rounded-xl overflow-hidden">
-                        <button type="button" class="faq-btn w-full px-5 py-4 text-left font-semibold text-slate-800 hover:text-brand-600 flex justify-between items-center gap-4 bg-slate-50/50">
-                            <span>Can I use this calculator for inter-state supplies?</span>
-                            <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
-                        </button>
-                        <div class="accordion-content px-5">
-                            <p class="py-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100">
-                                Absolutely. By selecting the 'Inter-state (IGST)' radio button on our calculator form, the tool automatically calculates the unified Integrated Goods and Services Tax value needed for e-way bills and cross-border commercial invoices.
-                            </p>
-                        </div>
-                    </div>
-
                 </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
+                        <h3>How can I calculate EMI for a 20 lakh, 30 lakh, or 50 lakh home loan?</h3>
+                        <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
+                    </button>
+                    <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
+                        <p>
+                            Simply enter your required loan amount (e.g., ₹20,00,000, ₹30,00,000, or ₹50,00,000) into our Loan EMI Calculator, adjust the interest rate and tenure sliders, and view your monthly payment breakdown instantly.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
+                        <h3>How much interest can I save with a home loan prepayment?</h3>
+                        <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
+                    </button>
+                    <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
+                        <p>
+                            Making periodic prepayments reduces your outstanding principal balance directly. This lowers the interest accumulated over subsequent months, saving lakhs in overall interest and reducing your loan tenure.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
+                        <h3>What is the difference between EMI vs prepayment calculator?</h3>
+                        <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
+                    </button>
+                    <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
+                        <p>
+                           A standard EMI calculator calculates your regular fixed monthly payment. A prepayment calculator factors in one-time or recurring extra payments to show how much earlier you can close your loan or lower subsequent EMIs.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
+                        <h3>How does an HDFC Personal Loan EMI Calculator differ from a Home Loan calculator?</h3>
+                        <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
+                    </button>
+                    <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
+                        <p>
+                            While the core mathematical formula remains identical (reducing balance), personal loans generally feature shorter tenures (1 to 5 years), higher interest rates, and processing fees compared to long-term mortgage or housing loans.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
+                        <h3>Can I calculate car loan EMI for 7 years?</h3>
+                        <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
+                    </button>
+                    <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
+                        <p>
+                            Yes! You can set the loan tenure slider anywhere from 1 year up to 7 years (84 months) to compute accurate car loan or vehicle loan monthly repayments.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 7 -->
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
+                        <h3>What is a step-up EMI calculator?</h3>
+                        <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
+                    </button>
+                    <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
+                        <p>
+                            A step-up EMI calculator allows borrowers to start with lower EMIs that increase progressively each year, aligning with expected annual salary increments and career growth.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 8 -->
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
+                        <h3>How does CIBIL score impact my loan EMI?</h3>
+                        <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
+                    </button>
+                    <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
+                        <p>
+                            A higher CIBIL score (750+) qualifies you for lower interest rates offered by top banks like SBI, HDFC, and ICICI, which significantly reduces your monthly EMI and total interest payable.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 9 -->
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
+                        <h3>Are there tax benefits included in housing loan calculators?</h3>
+                        <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
+                    </button>
+                    <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
+                        <p>
+                            Yes, under sections 24(b) and 80C of the Income Tax Act, borrowers can claim deductions on home loan interest (up to ₹2 lakh) and principal repayment (up to ₹1.5 lakh) per financial year.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 10 -->
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
+                        <h3>How does a loan balance transfer work?</h3>
+                        <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
+                    </button>
+                    <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
+                        <p>
+                            A balance transfer allows you to move your existing outstanding loan from one financial institution to another offering a lower interest rate, thereby reducing your monthly EMI burden.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
             </section>
+
+
+
 
             <!-- Related Calculators Section -->
             <section class="bg-gradient-to-r from-brand-900 to-slate-900 rounded-2xl p-6 sm:p-8 text-white shadow-lg">
@@ -909,61 +944,72 @@
     <!-- Multi-column Footer -->
 <footer class="bg-slate-900 text-slate-400 text-sm border-t border-slate-800 mt-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-        
-        <!-- Col 1: About -->
-        <div class="space-y-4">
-          <div class="flex items-center gap-2 text-white font-bold text-lg">
-            <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
-              <span class="icon-[fa6-solid--calculator]"></span>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+
+            <!-- Col 1: About -->
+            <div class="space-y-4">
+                <div class="flex items-center gap-2 text-white font-bold text-lg">
+                    <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
+                        <span class="icon-[fa6-solid--calculator]"></span>
+                    </div>
+                    <span>Calculator<span class="text-indigo-400">-Pro</span></span>
+                </div>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                    Calculator Pro provides free, fast, and clinically accurate online tools for health, financial,
+                    mathematical, and everyday conversion needs.
+                </p>
+                <div class="text-xs text-slate-500">
+                    &copy; <span id="current-year">2026</span> Calculator Pro. All rights reserved.
+                </div>
             </div>
-            <span>Calculator<span class="text-indigo-400">-Pro</span></span>
-          </div>
-          <p class="text-xs text-slate-400 leading-relaxed">
-            Calculator Pro provides free, fast, and clinically accurate online tools for health, financial, mathematical, and everyday conversion needs.
-          </p>
-          <div class="text-xs text-slate-500">
-            &copy; <span id="current-year">2026</span> Calculator Pro. All rights reserved.
-          </div>
-        </div>
 
-        <!-- Column 2: Quick Links -->
-        <div>
-          <h3 class="text-white font-semibold mb-3 text-sm">Quick Links</h3>
-          <ul class="space-y-2 text-xs">
-            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Unit Converter</a></li>
-            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Length Converter</a></li>
-            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Weight Converter</a></li>
-            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Temperature Converter</a></li>
-            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Volume & Area Converter</a></li>
-          </ul>
-        </div>
-        <!-- Column 3: Tools & Resources -->
-        <div>
-          <h3 class="text-white font-semibold mb-3 text-sm">Calculators</h3>
-          <ul class="space-y-2 text-xs">
-            <li><a href="age-calculator.html" class="hover:text-white transition-colors">Age Calculator</a></li>
-            <li><a href="time-calculator.html" class="hover:text-white transition-colors">Time Calculator</a></li>
-            <li><a href="sip-calculator.html" class="hover:text-white transition-colors">SIP Financial Calculator</a></li>
-            <li><a href="bmi-calculator.html" class="hover:text-white transition-colors">BMI Health Calculator</a></li>
-            <li><a href="percentage-calculator.html" class="hover:text-white transition-colors">Percentage Calculator</a></li>
-          </ul>
-        </div>
+            <!-- Column 2: Quick Links -->
+            <div>
+                <h3 class="text-white font-semibold mb-3 text-sm">Quick Links</h3>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="unit-converter.html" class="hover:text-white transition-colors">Unit Converter</a></li>
+                    <li><a href="gst-calculator.html" class="hover:text-white transition-colors">GST Calculator</a></li>
+                    <li><a href="cgpa-to-percentage-converter.html" class="hover:text-white transition-colors">CGPA to
+                            Percentage</a></li>
+                    <li><a href="sgpa-to-cgpa-calculator.html" class="hover:text-white transition-colors">SGPA to
+                            CGPA</a></li>
+                    <li><a href="work-days-calculator.html" class="hover:text-white transition-colors">Work Days
+                            Calculator</a></li>
+                </ul>
+            </div>
+            <!-- Column 3: Tools & Resources -->
+            <div>
+                <h3 class="text-white font-semibold mb-3 text-sm">Calculators</h3>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="age-calculator.html" class="hover:text-white transition-colors">Age Calculator</a></li>
+                    <li><a href="time-calculator.html" class="hover:text-white transition-colors">Time Calculator</a>
+                    </li>
+                    <li><a href="sip-calculator.html" class="hover:text-white transition-colors">SIP Financial
+                            Calculator</a></li>
+                    <li><a href="bmi-calculator.html" class="hover:text-white transition-colors">BMI Health
+                            Calculator</a></li>
+                    <li><a href="percentage-calculator.html" class="hover:text-white transition-colors">Percentage
+                            Calculator</a></li>
+                </ul>
+            </div>
 
-         <!-- Column 4: Legal & Contact -->
-        <div>
-          <h3 class="text-white font-semibold mb-3 text-sm">Legal & Info</h3>
-          <ul class="space-y-2 text-xs">
-            <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Editorial Guidelines</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
-          </ul>
-        </div>
+            <!-- Column 4: Legal & Contact -->
+            <div>
+                <h3 class="text-white font-semibold mb-3 text-sm">Legal & Info</h3>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html" class="hover:text-white transition-colors">Terms of Service</a>
+                    </li>
+                    <li><a href="editorial-guidelines.html" class="hover:text-white transition-colors">Editorial
+                            Guidelines</a></li>
+                    <li><a href="contact-us.html" class="hover:text-white transition-colors">Contact Us</a></li>
+                    <li><a href="disclaimer.html" class="hover:text-white transition-colors">Disclaimer</a></li>
+                </ul>
+            </div>
 
-      </div>
+        </div>
     </div>
-  </footer>
+</footer>
     <!-- Vanilla JavaScript Logic -->
     <script>
 		<!-- Inline JavaScript for Toggle -->
