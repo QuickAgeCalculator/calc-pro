@@ -25,7 +25,7 @@
     <!-- Custom Custom Styles & Animations -->
     
 
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles.min.css">
 
     <!-- Structured Data (JSON-LD Schemas) -->
     <script type="application/ld+json">
@@ -172,7 +172,7 @@
       <!-- Brand Logo & Name -->
       <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
         <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
-          <span class="icon-[fa6-solid--calculator]"></span>
+          <span class="icon-calculator"></span>
         </div>
         <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
           Calculator<span class="text-indigo-600">-Pro</span>
@@ -371,7 +371,7 @@
             <!-- Hero Heading Block -->
             <div class="text-center max-w-3xl mx-auto mb-8">
                 <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700 mb-4 shadow-sm border border-indigo-200">
-                    <span class="icon-[fa6-solid--wand-magic-sparkles]"></span> Step-by-Step Solutions
+                    <span class="icon-bolt"></span> Step-by-Step Solutions
                 </span>
                 <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
                     Free Fraction Calculator
@@ -383,16 +383,16 @@
                 <!-- Quick Feature Badges -->
                 <div class="mt-6 flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-xs sm:text-sm font-medium text-slate-700">
                     <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white shadow-sm border border-slate-200">
-                        <span class="icon-[fa6-solid--check] text-emerald-500"></span> Step-by-step solutions
+                        <span class="icon icon-check text-emerald-500"></span> Step-by-step solutions
                     </span>
                     <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white shadow-sm border border-slate-200">
-                        <span class="icon-[fa6-solid--check] text-emerald-500"></span> Mixed Numbers
+                        <span class="icon icon-check text-emerald-500"></span> Mixed Numbers
                     </span>
                     <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white shadow-sm border border-slate-200">
-                        <span class="icon-[fa6-solid--check] text-emerald-500"></span> Instant Results
+                        <span class="icon icon-check text-emerald-500"></span> Instant Results
                     </span>
                     <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white shadow-sm border border-slate-200">
-                        <span class="icon-[fa6-solid--check] text-emerald-500"></span> 100% Free
+                        <span class="icon icon-check text-emerald-500"></span> 100% Free
                     </span>
                 </div>
             </div>
@@ -430,17 +430,17 @@
                         <!-- Action Buttons -->
                         <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
                             <button type="submit" class="w-full sm:w-auto px-8 py-3.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-base rounded-xl shadow-lg shadow-indigo-200 hover:shadow-indigo-300 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 flex items-center justify-center gap-2">
-                                <span class="icon-[fa6-solid--calculator]"></span> Calculate
+                                <span class="icon-calculator"></span> Calculate
                             </button>
                             <button type="button" onclick="resetCalculator()" class="w-full sm:w-auto px-6 py-3.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-base rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-slate-400 flex items-center justify-center gap-2">
-                                <span class="icon-[fa6-solid--rotate-left]"></span> Clear
+                                <span class="icon icon-rotate-left"></span> Clear
                             </button>
                         </div>
                     </form>
 
                     <!-- ERROR ALERT -->
                     <div id="error-box" class="hidden mt-6 p-4 bg-rose-50 border border-rose-200 rounded-xl text-rose-700 text-sm flex items-start gap-3" role="alert">
-                        <span class="icon-[fa6-solid--circle-exclamation] text-rose-500 text-lg mt-0.5"></span>
+                        <span class="icon icon-circle-exclamation] text-rose-500 text-lg mt-0.5"></span>
                         <span id="error-message">Please enter valid numeric values.</span>
                     </div>
 
@@ -450,7 +450,7 @@
                             <div class="flex items-center justify-between flex-wrap gap-2 mb-4">
                                 <h3 class="text-xs font-bold uppercase tracking-wider text-indigo-700">Calculated Result</h3>
                                 <button type="button" onclick="copyResultToClipboard()" class="text-xs font-medium text-indigo-600 hover:text-indigo-800 bg-white px-3 py-1.5 rounded-lg border border-indigo-200 shadow-sm flex items-center gap-1.5 transition-colors">
-                                    <span class="icon-[fa6-regular--copy]"></span> <span id="copy-text">Copy Result</span>
+                                    <span class="icon-regular--copy"></span> <span id="copy-text">Copy Result</span>
                                 </button>
                             </div>
 
@@ -484,7 +484,12 @@
                             <!-- Step-by-Step Mathematical Explanation -->
                             <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm text-left">
                                 <h4 class="text-sm font-bold text-slate-800 mb-3 flex items-center gap-2">
-                                    <span class="icon-[fa6-solid--list-check] text-indigo-600"></span> Step-by-Step Solution:
+                                    <span class="inline-flex items-center gap-1.5">
+                                        <svg class="size-4.5 fill-current text-indigo-600 shrink-0" viewBox="0 0 640 512">
+                                            <path
+                                                d="M152.1 38.2c9.9 8.9 10.7 24 1.8 33.9l-72 80c-4.4 4.9-10.6 7.8-17.2 7.9s-12.9-2.4-17.6-7L7 113c-9.3-9.4-9.3-24.6 0-34s24.6-9.4 33.9 0L63 101.1l55.1-61.2c8.9-9.9 24-10.7 33.9-1.8zm0 160c9.9 8.9 10.7 24 1.8 33.9l-72 80c-4.4 4.9-10.6 7.8-17.2 7.9s-12.9-2.4-17.6-7L7 273c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L63 261.2l55.1-61.2c8.9-9.9 24-10.7 33.9-1.8zM224 96c0-17.7 14.3-32 32-32h224c17.7 0 32 14.3 32 32s-14.3 32-32 32H256c-17.7 0-32-14.3-32-32m0 160c0-17.7 14.3-32 32-32h224c17.7 0 32 14.3 32 32s-14.3 32-32 32H256c-17.7 0-32-14.3-32-32m-64 160c0-17.7 14.3-32 32-32h288c17.7 0 32 14.3 32 32s-14.3 32-32 32H192c-17.7 0-32-14.3-32-32M48 368a48 48 0 1 1 0 96a48 48 0 1 1 0-96" />
+                                        </svg>
+                                    </span> Step-by-Step Solution:
                                 </h4>
                                 <div id="solution-steps-list" class="space-y-3 text-sm text-slate-700 leading-relaxed font-sans">
                                     <!-- Dynamic calculation steps insertion -->
@@ -542,7 +547,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm flex items-start gap-4">
                     <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center flex-shrink-0 text-lg">
-                        <span class="icon-[fa6-solid--plus-minus]"></span>
+                        <span class="icon icon-plus-minus"></span>
                     </div>
                     <div>
                         <h3 class="font-bold text-slate-800 text-base mb-1">Basic Arithmetic</h3>
@@ -552,7 +557,10 @@
 
                 <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm flex items-start gap-4">
                     <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center flex-shrink-0 text-lg">
-                        <span class="icon-[fa6-solid--compress]"></span>
+                        <svg class="inline-block w-3.5 h-4 fill-current text-indigo-600 -translate-y-px" viewBox="0 0 448 512">
+                            <path
+                                d="M160 64c0-17.7-14.3-32-32-32S96 46.3 96 64v64H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32zM32 320c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32v-96c0-17.7-14.3-32-32-32zM352 64c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32h-64zm-32 256c-17.7 0-32 14.3-32 32v96c0 17.7 14.3 32 32 32s32-14.3 32-32v-64h64c17.7 0 32-14.3 32-32s-14.3-32-32-32z" />
+                        </svg>
                     </div>
                     <div>
                         <h3 class="font-bold text-slate-800 text-base mb-1">Fraction Simplifier</h3>
@@ -562,7 +570,12 @@
 
                 <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm flex items-start gap-4">
                     <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center flex-shrink-0 text-lg">
-                        <span class="icon-[fa6-solid--shuffle]"></span>
+                        <span class="inline-flex items-center gap-1.5">
+                            <svg class="size-4.5 fill-current shrink-0" viewBox="0 0 448 512" aria-hidden="true">
+                                <path
+                                    d="M403.8 34.4c12-5 25.7-2.2 34.9 6.9l64 64c6 6 9.4 14.1 9.4 22.6s-3.4 16.6-9.4 22.6l-64 64c-9.2 9.2-22.9 11.9-34.9 6.9S384 204.8 384 191.8v-32h-32c-10.1 0-19.6 4.7-25.6 12.8L284 229.3L244 176l31.2-41.6C293.3 110.2 321.8 96 352 96h32V64c0-12.9 7.8-24.6 19.8-29.6M164 282.7l40 53.3l-31.2 41.6C154.7 401.8 126.2 416 96 416H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h64c10.1 0 19.6-4.7 25.6-12.8zm274.6 188c-9.2 9.2-22.9 11.9-34.9 6.9S383.9 461 383.9 448v-32h-32c-30.2 0-58.7-14.2-76.8-38.4L121.6 172.8c-6-8.1-15.5-12.8-25.6-12.8H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h64c30.2 0 58.7 14.2 76.8 38.4l153.6 204.8c6 8.1 15.5 12.8 25.6 12.8h32v-32c0-12.9 7.8-24.6 19.8-29.6s25.7-2.2 34.9 6.9l64 64c6 6 9.4 14.1 9.4 22.6s-3.4 16.6-9.4 22.6l-64 64z" />
+                            </svg>
+                        </span>
                     </div>
                     <div>
                         <h3 class="font-bold text-slate-800 text-base mb-1">Improper ↔ Mixed</h3>
@@ -572,7 +585,7 @@
 
                 <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm flex items-start gap-4">
                     <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center flex-shrink-0 text-lg">
-                        <span class="icon-[fa6-solid--percent]"></span>
+                        <span class="icon icon-percent"></span>
                     </div>
                     <div>
                         <h3 class="font-bold text-slate-800 text-base mb-1">Decimal & Percentage</h3>
@@ -582,7 +595,7 @@
 
                 <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm flex items-start gap-4">
                     <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center flex-shrink-0 text-lg">
-                        <span class="icon-[fa6-solid--minus]"></span>
+                        <span class="icon icon-minus"></span>
                     </div>
                     <div>
                         <h3 class="font-bold text-slate-800 text-base mb-1">Negative Numbers</h3>
@@ -592,7 +605,12 @@
 
                 <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm flex items-start gap-4">
                     <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center flex-shrink-0 text-lg">
-                        <span class="icon-[fa6-solid--diagram-project]"></span>
+                        <span class="inline-flex items-center gap-1.5">
+                            <svg class="size-4.5 fill-current shrink-0" viewBox="0 0 448 512" aria-hidden="true">
+                                <path
+                                    d="M0 80c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v16h192V80c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48h-96c-26.5 0-48-21.5-48-48v-16H192v16c0 1.7-.1 3.4-.3 5L272 288h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48h-96c-26.5 0-48-21.5-48-48v-96c0-1.7.1-3.4.3-5L144 224H48c-26.5 0-48-21.5-48-48z" />
+                            </svg>
+                        </span>
                     </div>
                     <div>
                         <h3 class="font-bold text-slate-800 text-base mb-1">Detailed LCD Working</h3>
@@ -686,7 +704,7 @@
             <!-- Addition Formula -->
             <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80">
                 <h3 class="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
-                    <span class="icon-[fa6-solid--plus] text-indigo-600"></span> How to Add Fractions
+                    <span class="icon icon-plus text-indigo-600"></span> How to Add Fractions
                 </h3>
                 <p class="text-slate-600 text-sm mb-4">
                     To add fractions with identical denominators, simply add the numerators. If the denominators are different, find the Least Common Denominator (LCD) first:
@@ -700,7 +718,7 @@
             <!-- Subtraction Formula -->
             <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80">
                 <h3 class="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
-                    <span class="icon-[fa6-solid--minus] text-indigo-600"></span> How to Subtract Fractions
+                    <span class="icon icon-minus text-indigo-600"></span> How to Subtract Fractions
                 </h3>
                 <p class="text-slate-600 text-sm mb-4">
                     Convert both fractions to common denominators, then subtract the second numerator from the first:
@@ -714,7 +732,7 @@
             <!-- Multiplication Formula -->
             <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80">
                 <h3 class="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
-                    <span class="icon-[fa6-solid--xmark] text-indigo-600"></span> How to Multiply Fractions
+                    <span class="icon icon-xmark text-indigo-600"></span> How to Multiply Fractions
                 </h3>
                 <p class="text-slate-600 text-sm mb-4">
                     Multiply top numbers together and bottom numbers together directly:
@@ -728,7 +746,12 @@
             <!-- Division Formula -->
             <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80">
                 <h3 class="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
-                    <span class="icon-[fa6-solid--divide] text-indigo-600"></span> How to Divide Fractions (Reciprocal Method)
+                    <span class="inline-flex items-center gap-1.5">
+                        <svg class="size-4.5 fill-current text-indigo-600 shrink-0" viewBox="0 0 512 512" aria-hidden="true">
+                            <path
+                                d="M272 96a48 48 0 1 0-96 0a48 48 0 1 0 96 0m0 320a48 48 0 1 0-96 0a48 48 0 1 0 96 0m128-128c17.7 0 32-14.3 32-32s-14.3-32-32-32H48c-17.7 0-32 14.3-32 32s14.3 32 32 32z" />
+                        </svg>
+                    </span> How to Divide Fractions (Reciprocal Method)
                 </h3>
                 <p class="text-slate-600 text-sm mb-4">
                     Multiply the first fraction by the reciprocal (flipped version) of the second fraction:
@@ -742,7 +765,10 @@
             <!-- Simplifying Formula -->
             <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80">
                 <h3 class="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
-                    <span class="icon-[fa6-solid--compress] text-indigo-600"></span> How to Simplify Fractions
+                    <svg class="inline-block w-3.5 h-4 fill-current text-indigo-600 -translate-y-px" viewBox="0 0 448 512">
+                        <path
+                            d="M160 64c0-17.7-14.3-32-32-32S96 46.3 96 64v64H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32zM32 320c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32v-96c0-17.7-14.3-32-32-32zM352 64c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32h-64zm-32 256c-17.7 0-32 14.3-32 32v96c0 17.7 14.3 32 32 32s32-14.3 32-32v-64h64c17.7 0 32-14.3 32-32s-14.3-32-32-32z" />
+                    </svg> How to Simplify Fractions
                 </h3>
                 <p class="text-slate-600 text-sm mb-4">
                     Divide both numerator and denominator by their Greatest Common Divisor (GCD):
@@ -812,17 +838,22 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                 <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100">
-                    <span class="icon-[fa6-solid--bolt] text-indigo-600 text-2xl mb-3"></span>
+                    <span class="icon icon-bolt text-indigo-600 text-2xl mb-3"></span>
                     <h3 class="font-bold text-slate-800 text-base mb-1">Instant Accurate Results</h3>
                     <p class="text-xs text-slate-600">Calculates precise fraction arithmetic in less than a fraction of a second.</p>
                 </div>
                 <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100">
-                    <span class="icon-[fa6-solid--graduation-cap] text-indigo-600 text-2xl mb-3"></span>
+                    <span class="inline-flex items-center gap-1.5">
+                        <svg class="size-4 fill-current text-indigo-600 text-2xl mb-3 shrink-0" viewBox="0 0 640 512">
+                            <path
+                                d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9V320c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6c-3.2 4.3-4.1 9.9-2.3 15s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7.3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7c-3.2-14.2-7.5-28.7-13.5-42v-24.6c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5.8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1l280.6-101c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1c-7.6-2.7-15.6-4.1-23.7-4.1M128 408c0 35.3 86 72 192 72s192-36.7 192-72l-15.3-145.4L354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6l-142.2-51.4z" />
+                        </svg>
+                    </span>
                     <h3 class="font-bold text-slate-800 text-base mb-1">Learn While Calculating</h3>
                     <p class="text-xs text-slate-600">Clear step-by-step mathematical explanations help you understand homework.</p>
                 </div>
                 <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100">
-                    <span class="icon-[fa6-solid--mobile-screen-button] text-indigo-600 text-2xl mb-3"></span>
+                    <span class="icon icon-mobile-screen-button text-indigo-600 text-2xl mb-3"></span>
                     <h3 class="font-bold text-slate-800 text-base mb-1">Mobile-Friendly & Offline</h3>
                     <p class="text-xs text-slate-600">Works smoothly on smartphone, tablet, desktop without slow server lag.</p>
                 </div>
@@ -843,7 +874,7 @@
                 <div class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm">
                     <button type="button" onclick="toggleAccordion('faq-1')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none focus:bg-slate-50">
                         <span>Q1. Is this Fraction Calculator free to use?</span>
-                        <span id="faq-1-icon" class="icon-[fa6-solid--chevron-down] text-indigo-600 transition-transform duration-200"></span>
+                        <span id="faq-1-icon" class="icon icon-chevron-down text-indigo-600 transition-transform duration-200"></span>
                     </button>
                     <div id="faq-1" class="accordion-content px-6 text-sm text-slate-600">
                         Yes, our fraction calculator is 100% completely free to use without limits, popups, or required registration.
@@ -854,7 +885,7 @@
                 <div class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm">
                     <button type="button" onclick="toggleAccordion('faq-2')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none focus:bg-slate-50">
                         <span>Q2. Does it show step-by-step solutions?</span>
-                        <span id="faq-2-icon" class="icon-[fa6-solid--chevron-down] text-indigo-600 transition-transform duration-200"></span>
+                        <span id="faq-2-icon" class="icon icon-chevron-down text-indigo-600 transition-transform duration-200"></span>
                     </button>
                     <div id="faq-2" class="accordion-content px-6 text-sm text-slate-600">
                         Yes! Every calculation provides a detailed step-by-step mathematical working box that explains how the LCD, cross-multiplication, and reduction were derived.
@@ -865,7 +896,7 @@
                 <div class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm">
                     <button type="button" onclick="toggleAccordion('faq-3')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none focus:bg-slate-50">
                         <span>Q3. Can I calculate mixed numbers?</span>
-                        <span id="faq-3-icon" class="icon-[fa6-solid--chevron-down] text-indigo-600 transition-transform duration-200"></span>
+                        <span id="faq-3-icon" class="icon icon-chevron-down text-indigo-600 transition-transform duration-200"></span>
                     </button>
                     <div id="faq-3" class="accordion-content px-6 text-sm text-slate-600">
                         Absolutely. Switch to "Mixed Number" tab to add, subtract, multiply, or divide whole integers combined with fractions.
@@ -876,7 +907,7 @@
                 <div class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm">
                     <button type="button" onclick="toggleAccordion('faq-4')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none focus:bg-slate-50">
                         <span>Q4. How do I simplify a fraction using this calculator?</span>
-                        <span id="faq-4-icon" class="icon-[fa6-solid--chevron-down] text-indigo-600 transition-transform duration-200"></span>
+                        <span id="faq-4-icon" class="icon icon-chevron-down text-indigo-600 transition-transform duration-200"></span>
                     </button>
                     <div id="faq-4" class="accordion-content px-6 text-sm text-slate-600">
                         Select the "Simplify Fractions" tab, enter your numerator and denominator, and click Calculate to reduce the fraction using its Greatest Common Divisor (GCD).
@@ -887,7 +918,7 @@
                 <div class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm">
                     <button type="button" onclick="toggleAccordion('faq-5')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none focus:bg-slate-50">
                         <span>Q5. Does it work on mobile?</span>
-                        <span id="faq-5-icon" class="icon-[fa6-solid--chevron-down] text-indigo-600 transition-transform duration-200"></span>
+                        <span id="faq-5-icon" class="icon icon-chevron-down text-indigo-600 transition-transform duration-200"></span>
                     </button>
                     <div id="faq-5" class="accordion-content px-6 text-sm text-slate-600">
                         Yes, Calculator Pro is engineered with a mobile-first fluid design that works perfectly on iOS, Android, tablets, and desktop computers.
@@ -898,7 +929,7 @@
                 <div class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm">
                     <button type="button" onclick="toggleAccordion('faq-6')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none focus:bg-slate-50">
                         <span>Q6. Are my calculations saved?</span>
-                        <span id="faq-6-icon" class="icon-[fa6-solid--chevron-down] text-indigo-600 transition-transform duration-200"></span>
+                        <span id="faq-6-icon" class="icon icon-chevron-down text-indigo-600 transition-transform duration-200"></span>
                     </button>
                     <div id="faq-6" class="accordion-content px-6 text-sm text-slate-600">
                         Calculations are held safely in your active session browser memory so you can easily review recent step solutions.
@@ -909,7 +940,7 @@
                 <div class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm">
                     <button type="button" onclick="toggleAccordion('faq-7')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none focus:bg-slate-50">
                         <span>Q7. Can I convert fraction to decimal?</span>
-                        <span id="faq-7-icon" class="icon-[fa6-solid--chevron-down] text-indigo-600 transition-transform duration-200"></span>
+                        <span id="faq-7-icon" class="icon icon-chevron-down text-indigo-600 transition-transform duration-200"></span>
                     </button>
                     <div id="faq-7" class="accordion-content px-6 text-sm text-slate-600">
                         Yes, click the "Fraction to Decimal" tab or check the auto-generated decimal value in any fraction result screen.
@@ -920,7 +951,7 @@
                 <div class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm">
                     <button type="button" onclick="toggleAccordion('faq-8')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none focus:bg-slate-50">
                         <span>Q8. What is the difference between proper and improper fraction?</span>
-                        <span id="faq-8-icon" class="icon-[fa6-solid--chevron-down] text-indigo-600 transition-transform duration-200"></span>
+                        <span id="faq-8-icon" class="icon icon-chevron-down text-indigo-600 transition-transform duration-200"></span>
                     </button>
                     <div id="faq-8" class="accordion-content px-6 text-sm text-slate-600">
                         A proper fraction has a numerator smaller than its denominator (e.g. 3/4). An improper fraction has a numerator greater than or equal to its denominator (e.g. 7/4).
@@ -931,7 +962,7 @@
                 <div class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm">
                     <button type="button" onclick="toggleAccordion('faq-9')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none focus:bg-slate-50">
                         <span>Q9. How to add fractions with different denominators?</span>
-                        <span id="faq-9-icon" class="icon-[fa6-solid--chevron-down] text-indigo-600 transition-transform duration-200"></span>
+                        <span id="faq-9-icon" class="icon icon-chevron-down text-indigo-600 transition-transform duration-200"></span>
                     </button>
                     <div id="faq-9" class="accordion-content px-6 text-sm text-slate-600">
                         Find the Least Common Denominator (LCD), convert each fraction into an equivalent fraction with that LCD, add the numerators together, and simplify.
@@ -942,7 +973,7 @@
                 <div class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm">
                     <button type="button" onclick="toggleAccordion('faq-10')" class="w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none focus:bg-slate-50">
                         <span>Q10. Is this fraction calculator accurate?</span>
-                        <span id="faq-10-icon" class="icon-[fa6-solid--chevron-down] text-indigo-600 transition-transform duration-200"></span>
+                        <span id="faq-10-icon" class="icon icon-chevron-down text-indigo-600 transition-transform duration-200"></span>
                     </button>
                     <div id="faq-10" class="accordion-content px-6 text-sm text-slate-600 ">
                         Yes, Calculator Pro utilizes client-side math routines to ensure 100% mathematical precision for fractions and decimal outputs.
@@ -955,14 +986,37 @@
     <!-- SECTION N: RELATED TOOLS -->
     <section class="py-16 bg-white border-b border-slate-100 px-4 sm:px-6 lg:px-8">
         <div class="max-w-5xl mx-auto text-center">
-            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight mb-8">Related Tools / Internal Links</h2>
-            <div class="flex flex-wrap justify-center gap-3 text-sm">
-                <a href="#" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-indigo-50 hover:text-indigo-600 text-slate-700 font-medium transition-colors border border-slate-200/60">Ratio Calculator</a>
-                <a href="#" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-indigo-50 hover:text-indigo-600 text-slate-700 font-medium transition-colors border border-slate-200/60">Percentage Calculator</a>
-                <a href="#" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-indigo-50 hover:text-indigo-600 text-slate-700 font-medium transition-colors border border-slate-200/60">Scientific Calculator</a>
-                <a href="#" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-indigo-50 hover:text-indigo-600 text-slate-700 font-medium transition-colors border border-slate-200/60">GST Calculator</a>
-                <a href="#" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-indigo-50 hover:text-indigo-600 text-slate-700 font-medium transition-colors border border-slate-200/60">Simple Interest Calculator</a>
-                <a href="#" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-indigo-50 hover:text-indigo-600 text-slate-700 font-medium transition-colors border border-slate-200/60">Compound Interest Calculator</a>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight mb-8">
+              Related Tools / Internal Links
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <a href="percentage-calculator.html"
+                    class="p-5 rounded-2xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all group">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-sm font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Percentage Calculator</span>
+                        <span
+                            class="icon icon-arrow-right text-xs text-slate-400 group-hover:text-indigo-600 transition-colors"></span>
+                    </div>
+                    <p class="text-xs text-slate-500">Easily calculate percentages, increases, decreases, and values.</p>
+                </a>
+                <a href="average-calculator.html"
+                    class="p-5 rounded-2xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all group">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-sm font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Average Calculator</span>
+                        <span
+                            class="icon icon-arrow-right text-xs text-slate-400 group-hover:text-indigo-600 transition-colors"></span>
+                    </div>
+                    <p class="text-xs text-slate-500">Easily calculate mean, median, mode, and averages.</p>
+                </a>
+                <a href="ratio-calculator.html"
+                    class="p-5 rounded-2xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all group">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-sm font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Ratio Calculator</span>
+                        <span
+                            class="icon icon-arrow-right text-xs text-slate-400 group-hover:text-indigo-600 transition-colors"></span>
+                    </div>
+                    <p class="text-xs text-slate-500">Easily calculate, simplify, and compare mathematical ratios.</p>
+                </a>
             </div>
         </div>
     </section>
@@ -977,7 +1031,7 @@
             <div class="space-y-4">
                 <div class="flex items-center gap-2 text-white font-bold text-lg">
                     <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
-                        <span class="icon-[fa6-solid--calculator]"></span>
+                        <span class="icon-calculator"></span>
                     </div>
                     <span>Calculator<span class="text-indigo-400">-Pro</span></span>
                 </div>

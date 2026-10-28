@@ -28,7 +28,7 @@
     <!-- Custom CSS Styles -->
     
 
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles.min.css">
 
     <!-- Structured Data (Schema.org FAQ Page) -->
     <script type="application/ld+json">
@@ -101,7 +101,7 @@
                     class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
                     <div
                         class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
-                        <span class="icon-[fa6-solid--calculator] text-lg"></span>
+                        <span class="icon-calculatortext-lg"></span>
                     </div>
                     <span
                         class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
@@ -401,7 +401,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="text-center max-w-3xl mx-auto mb-10">
                     <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700 border border-indigo-200/60 mb-4 shadow-sm">
-                        <span class="icon-[fa6-solid--wand-magic-sparkles] text-indigo-500"></span> Free Online SGPA to Percentage Tool
+                        <span class="icon-bolt text-indigo-500"></span> Free Online SGPA to Percentage Tool
                     </span>
                     <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
                         SGPA to Percentage Converter
@@ -417,11 +417,11 @@
                     <!-- Mode Switcher Tabs -->
                     <div class="flex border-b border-slate-100 bg-slate-50/80 p-1.5 gap-1.5">
                         <button id="tab-mode-1" type="button" onclick="switchCalcMode('sgpa-to-pct')" class="flex-1 py-3 px-4 rounded-xl font-semibold text-sm transition-all duration-200 flex items-center justify-center gap-2 bg-white text-indigo-600 shadow-sm border border-slate-200/60">
-                            <span class="icon-[fa6-solid--calculator] text-indigo-500"></span>
+                            <span class="icon-calculator text-indigo-500"></span>
                             <span>SGPA ↔ Percentage</span>
                         </button>
                         <button id="tab-mode-2" type="button" onclick="switchCalcMode('pct-to-cgpa')" class="flex-1 py-3 px-4 rounded-xl font-semibold text-sm transition-all duration-200 flex items-center justify-center gap-2 text-slate-600 hover:text-indigo-600 hover:bg-white/50">
-                            <span class="icon-[fa6-solid--percent] text-slate-400"></span>
+                            <span class="icon icon-percent text-slate-400"></span>
                             <span>Percentage ↔ CGPA</span>
                         </button>
                     </div>
@@ -445,7 +445,7 @@
                                         <option value="mumbai_univ">Mumbai University Scale: (SGPA × 7.1) + 11</option>
                                     </select>
                                     <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
-                                        <span class="icon-[fa6-solid--chevron-down] text-sm"></span>
+                                        <span class="icon icon-chevron-down text-sm"></span>
                                     </div>
                                 </div>
                             </div>
@@ -458,12 +458,16 @@
                                 </div>
                                 <div class="relative rounded-xl shadow-sm">
                                     <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400">
-                                        <span class="icon-[fa6-solid--graduation-cap]"></span>
+                                        <span class="inline-flex items-center gap-1.5">
+  <svg class="size-5 fill-current shrink-0" viewBox="0 0 640 512">
+    <path d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9V320c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6c-3.2 4.3-4.1 9.9-2.3 15s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7.3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7c-3.2-14.2-7.5-28.7-13.5-42v-24.6c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5.8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1l280.6-101c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1c-7.6-2.7-15.6-4.1-23.7-4.1M128 408c0 35.3 86 72 192 72s192-36.7 192-72l-15.3-145.4L354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6l-142.2-51.4z"/>
+  </svg>
+</span>
                                     </div>
                                     <input type="number" id="sgpa-input" step="0.01" min="0" max="10" placeholder="e.g. 8.50" oninput="calculateSGPA()" class="w-full pl-11 pr-24 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-lg font-bold text-slate-800 placeholder-slate-400 focus:ring-2 focus:ring-indigo-500 focus:bg-white focus:outline-none transition-all">
                                     <div class="absolute inset-y-0 right-2 flex items-center gap-1">
                                         <button type="button" onclick="resetSGPA()" class="p-2 text-slate-400 hover:text-rose-500 transition-colors" title="Clear input">
-                                            <span class="icon-[fa6-solid--xmark]"></span>
+                                            <span class="icon icon-xmark"></span>
                                         </button>
                                         <span class="bg-slate-200/60 text-slate-600 text-xs font-semibold px-2.5 py-1 rounded-lg">SGPA</span>
                                     </div>
@@ -503,7 +507,7 @@
                                             Grade: --
                                         </span>
                                         <button type="button" onclick="copyResult('sgpa-result-val', '%')" class="w-full py-2 px-3 bg-white text-indigo-700 hover:bg-indigo-50 rounded-xl font-bold text-xs transition-colors shadow-md flex items-center justify-center gap-1.5">
-                                            <span class="icon-[fa6-regular--copy]"></span>
+                                            <span class="icon-regular--copy"></span>
                                             <span id="copy-btn-text">Copy Percentage</span>
                                         </button>
                                     </div>
@@ -525,7 +529,7 @@
                                         <option value="div_10">10 Point Direct Scale: Percentage / 10</option>
                                     </select>
                                     <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
-                                        <span class="icon-[fa6-solid--chevron-down] text-sm"></span>
+                                        <span class="icon icon-chevron-down text-sm"></span>
                                     </div>
                                 </div>
                             </div>
@@ -537,12 +541,12 @@
                                 </div>
                                 <div class="relative rounded-xl shadow-sm">
                                     <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400">
-                                        <span class="icon-[fa6-solid--percent]"></span>
+                                        <span class="icon icon-percent"></span>
                                     </div>
                                     <input type="number" id="pct-input" step="0.1" min="0" max="100" placeholder="e.g. 78.5" oninput="calculateCGPA()" class="w-full pl-11 pr-24 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-lg font-bold text-slate-800 placeholder-slate-400 focus:ring-2 focus:ring-indigo-500 focus:bg-white focus:outline-none transition-all">
                                     <div class="absolute inset-y-0 right-2 flex items-center gap-1">
                                         <button type="button" onclick="resetCGPA()" class="p-2 text-slate-400 hover:text-rose-500 transition-colors" title="Clear input">
-                                            <span class="icon-[fa6-solid--xmark]"></span>
+                                            <span class="icon icon-xmark"></span>
                                         </button>
                                         <span class="bg-slate-200/60 text-slate-600 text-xs font-semibold px-2.5 py-1 rounded-lg">Marks %</span>
                                     </div>
@@ -566,7 +570,7 @@
                                     </div>
                                     <div class="flex flex-col gap-2 min-w-[140px]">
                                         <button type="button" onclick="copyResult('cgpa-result-val', ' CGPA')" class="w-full py-2.5 px-3 bg-indigo-600 text-white hover:bg-indigo-500 rounded-xl font-bold text-xs transition-colors shadow-md flex items-center justify-center gap-1.5">
-                                            <span class="icon-[fa6-regular--copy]"></span>
+                                            <span class="icon-regular--copy"></span>
                                             <span id="copy-btn-text-2">Copy CGPA</span>
                                         </button>
                                     </div>
@@ -587,9 +591,7 @@
                 <!-- Section 1: How to Convert -->
                 <div class="prose max-w-none">
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight flex items-center gap-3">
-                        <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 text-base">
-                            <span class="icon-[fa6-solid--calculator]"></span>
-                        </span>
+                       
                         How to Convert SGPA to Percentage?
                     </h2>
                     <p class="text-slate-600 leading-relaxed mt-4">
@@ -604,7 +606,7 @@
                 <div>
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-6 flex items-center gap-3">
                         <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 text-base">
-                            <span class="icon-[fa6-solid--square-root-variable]"></span>
+                            <span class="icon icon-square-root-variable"></span>
                         </span>
                         SGPA to Percentage Conversion Formula
                     </h2>
@@ -614,7 +616,12 @@
                         <!-- Formula 1 -->
                         <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 transition-all hover:shadow-md">
                             <h3 class="text-lg font-bold text-slate-800 mb-2 flex items-center gap-2">
-                                <span class="icon-[fa6-solid--certificate] text-indigo-600"></span>
+                                <span class="inline-flex items-center gap-1.5">
+                                    <svg class="size-4.5 fill-current text-indigo-600 shrink-0" viewBox="0 0 512 512" aria-hidden="true">
+                                        <path
+                                            d="M211 7.3C205 1 196-1.4 187.6.8s-14.9 8.9-17.1 17.3l-15.8 62.5l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62l-62.5 15.9c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45l-46.2 45c-6.3 6-8.7 15-6.5 23.4s8.9 14.9 17.3 17.1l62.5 15.8l-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5l15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2l45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5l62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62l62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.4-6.4-23.4l-46.2-45l46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8l17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5l-15.9-62.5c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3l-45 46.2z" />
+                                    </svg>
+                                </span>
                                 Most Common UGC Formula
                             </h3>
                             <div class="bg-white p-3 rounded-xl border border-slate-200 font-mono text-indigo-600 font-bold text-sm mb-3">
@@ -628,7 +635,7 @@
                         <!-- Formula 2 -->
                         <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 transition-all hover:shadow-md">
                             <h3 class="text-lg font-bold text-slate-800 mb-2 flex items-center gap-2">
-                                <span class="icon-[fa6-solid--bolt] text-indigo-600"></span>
+                                <span class="icon icon-bolt text-indigo-600"></span>
                                 Direct Multiplier Formula
                             </h3>
                             <div class="bg-white p-3 rounded-xl border border-slate-200 font-mono text-indigo-600 font-bold text-sm mb-3">
@@ -642,7 +649,12 @@
                         <!-- Formula 3 -->
                         <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 transition-all hover:shadow-md">
                             <h3 class="text-lg font-bold text-slate-800 mb-2 flex items-center gap-2">
-                                <span class="icon-[fa6-solid--building-columns] text-indigo-600"></span>
+                                <span class="inline-flex items-center gap-1.5">
+                                    <svg class="size-5 fill-current text-indigo-600 shrink-0" viewBox="0 0 640 512">
+                                        <path
+                                            d="m243.4 2.6l-224 96c-14 6-21.8 21-18.7 35.8S16.8 160 32 160v8c0 13.3 10.7 24 24 24h400c13.3 0 24-10.7 24-24v-8c15.2 0 28.3-10.7 31.3-25.6s-4.8-29.9-18.7-35.8l-224-96c-8-3.4-17.2-3.4-25.2 0M128 224H64v196.3c-.6.3-1.2.7-1.8 1.1l-48 32c-11.7 7.8-17 22.4-12.9 35.9S17.9 512 32 512h448c14.1 0 26.5-9.2 30.6-22.7s-1.1-28.1-12.9-35.9l-48-32c-.6-.4-1.2-.7-1.8-1.1L448 224h-64v192h-40V224h-64v192h-48V224h-64v192h-40zM256 64a32 32 0 1 1 0 64a32 32 0 1 1 0-64" />
+                                    </svg>
+                                </span>
                                 AKTU / SPPU / JNTUH Style
                             </h3>
                             <div class="bg-white p-3 rounded-xl border border-slate-200 font-mono text-indigo-600 font-bold text-sm mb-3">
@@ -656,7 +668,12 @@
                         <!-- Formula 4 -->
                         <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 transition-all hover:shadow-md">
                             <h3 class="text-lg font-bold text-slate-800 mb-2 flex items-center gap-2">
-                                <span class="icon-[fa6-solid--graduation-cap] text-indigo-600"></span>
+                                <span class="inline-flex items-center gap-1.5">
+                                    <svg class="size-5 fill-current text-indigo-600 shrink-0" viewBox="0 0 640 512">
+                                        <path
+                                            d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9V320c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6c-3.2 4.3-4.1 9.9-2.3 15s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7.3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7c-3.2-14.2-7.5-28.7-13.5-42v-24.6c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5.8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1l280.6-101c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1c-7.6-2.7-15.6-4.1-23.7-4.1M128 408c0 35.3 86 72 192 72s192-36.7 192-72l-15.3-145.4L354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6l-142.2-51.4z" />
+                                    </svg>
+                                </span>
                                 Mumbai University Formula
                             </h3>
                             <div class="bg-white p-3 rounded-xl border border-slate-200 font-mono text-indigo-600 font-bold text-sm mb-3">
@@ -673,9 +690,7 @@
                 <!-- Section 3: University Rules -->
                 <div>
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-6 flex items-center gap-3">
-                        <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 text-base">
-                            <span class="icon-[fa6-solid--building-columns]"></span>
-                        </span>
+                        
                         University-Wise SGPA Conversion Rules
                     </h2>
                     <div class="overflow-x-auto border border-slate-200 rounded-2xl shadow-sm">
@@ -721,9 +736,7 @@
                 <!-- Section 4: Difference Between SGPA & CGPA -->
                 <div>
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-6 flex items-center gap-3">
-                        <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 text-base">
-                            <span class="icon-[fa6-solid--scale-balanced]"></span>
-                        </span>
+                        
                         Difference Between SGPA and CGPA
                     </h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -749,9 +762,7 @@
                 <!-- Section 5: Conversion Examples -->
                 <div>
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-6 flex items-center gap-3">
-                        <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 text-base">
-                            <span class="icon-[fa6-solid--list-check]"></span>
-                        </span>
+                        
                         SGPA to Percentage Conversion Examples
                     </h2>
                     <div class="space-y-4">
@@ -775,9 +786,7 @@
                 <!-- Section 6: Conversion Table -->
                 <div>
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-6 flex items-center gap-3">
-                        <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 text-base">
-                            <span class="icon-[fa6-solid--table]"></span>
-                        </span>
+                        
                         SGPA to Percentage Conversion Table (10.0 Scale)
                     </h2>
                     <div class="overflow-x-auto border border-slate-200 rounded-2xl shadow-sm">
@@ -842,12 +851,12 @@
                 <!-- Section 7: Features / Benefits -->
                 <div>
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-8 text-center">
-                        Why Use Our CGPA to Percentage Converter?
+                        Why Use Our SGPA to Percentage Converter?
                     </h2>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                         <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200/80">
                             <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center text-xl mb-4">
-                                <span class="icon-[fa6-solid--bolt]"></span>
+                                <span class="icon icon-bolt"></span>
                             </div>
                             <h3 class="font-bold text-slate-800 text-base mb-2">Instant Calculations</h3>
                             <p class="text-xs text-slate-600 leading-relaxed">
@@ -856,7 +865,7 @@
                         </div>
                         <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200/80">
                             <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center text-xl mb-4">
-                                <span class="icon-[fa6-solid--shield-halved]"></span>
+                                <span class="icon icon-shield-halved"></span>
                             </div>
                             <h3 class="font-bold text-slate-800 text-base mb-2">Multi-University Support</h3>
                             <p class="text-xs text-slate-600 leading-relaxed">
@@ -865,7 +874,7 @@
                         </div>
                         <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200/80">
                             <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center text-xl mb-4">
-                                <span class="icon-[fa6-solid--mobile-screen]"></span>
+                                <span class="icon icon-mobile-screen"></span>
                             </div>
                             <h3 class="font-bold text-slate-800 text-base mb-2">100% Mobile Responsive</h3>
                             <p class="text-xs text-slate-600 leading-relaxed">
@@ -878,9 +887,7 @@
                 <!-- Section 8: FAQ Section -->
                 <div>
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-6 flex items-center gap-3">
-                        <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 text-base">
-                            <span class="icon-[fa6-solid--circle-question]"></span>
-                        </span>
+                        
                         Frequently Asked Questions (FAQs)
                     </h2>
 
@@ -890,7 +897,7 @@
                         <div class="border border-slate-200 rounded-xl overflow-hidden bg-white">
                             <button type="button" onclick="toggleAccordion('faq-1')" class="w-full p-4 text-left font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center transition-colors">
                                 <h3>How to Convert SGPA to Percentage accurately online?</h3>
-                                <span id="icon-faq-1" class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
+                                <span id="icon-faq-1" class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
                             </button>
                             <div id="faq-1" class="accordion-content px-4 text-sm text-slate-600">
                                 <P>
@@ -903,7 +910,7 @@
                         <div class="border border-slate-200 rounded-xl overflow-hidden bg-white">
                             <button type="button" onclick="toggleAccordion('faq-2')" class="w-full p-4 text-left font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center transition-colors">
                                 <h3>What is the official UGC formula for SGPA to Percentage calculation?</h3>
-                                <span id="icon-faq-2" class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
+                                <span id="icon-faq-2" class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
                             </button>
                             <div id="faq-2" class="accordion-content px-4 text-sm text-slate-600">
                                 <P>
@@ -916,7 +923,7 @@
                         <div class="border border-slate-200 rounded-xl overflow-hidden bg-white">
                             <button type="button" onclick="toggleAccordion('faq-3')" class="w-full p-4 text-left font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center transition-colors">
                                 <h3>How much is 8.5 SGPA in Percentage?</h3>
-                                <span id="icon-faq-3" class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
+                                <span id="icon-faq-3" class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
                             </button>
                             <div id="faq-3" class="accordion-content px-4 text-sm text-slate-600">
                                 <P>
@@ -929,7 +936,7 @@
                         <div class="border border-slate-200 rounded-xl overflow-hidden bg-white">
                             <button type="button" onclick="toggleAccordion('faq-4')" class="w-full p-4 text-left font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center transition-colors">
                                 <h3>How to convert 8.0 SGPA to Percentage for job applications?</h3>
-                                <span id="icon-faq-4" class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
+                                <span id="icon-faq-4" class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
                             </button>
                             <div id="faq-4" class="accordion-content px-4 text-sm text-slate-600">
                                 <P>
@@ -942,7 +949,7 @@
                         <div class="border border-slate-200 rounded-xl overflow-hidden bg-white">
                             <button type="button" onclick="toggleAccordion('faq-5')" class="w-full p-4 text-left font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center transition-colors">
                                 <h3>Can I use this SGPA Percentage Calculator for Higher Studies Abroad?</h3>
-                                <span id="icon-faq-5" class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
+                                <span id="icon-faq-5" class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
                             </button>
                             <div id="faq-5" class="accordion-content px-4 text-sm text-slate-600">
                                 <P>
@@ -955,7 +962,7 @@
                         <div class="border border-slate-200 rounded-xl overflow-hidden bg-white">
                             <button type="button" onclick="toggleAccordion('faq-6')" class="w-full p-4 text-left font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center transition-colors">
                                 <h3>What is the difference between SGPA and Percentage?</h3>
-                                <span id="icon-faq-6" class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
+                                <span id="icon-faq-6" class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
                             </button>
                             <div id="faq-6" class="accordion-content px-4 text-sm text-slate-600">
                                 <P>
@@ -969,11 +976,38 @@
 
                 <!-- Section 9: Related Calculators -->
                 <div class="pt-8 border-t border-slate-100">
-                    <h2 class="text-xl font-bold text-slate-900 mb-4">Related Calculators & Tools</h2>
-                    <div class="flex flex-wrap gap-3">
-                        <a href="#calculator-tool" onclick="switchCalcMode('sgpa-to-pct')" class="px-4 py-2 bg-slate-100 hover:bg-indigo-50 hover:text-indigo-600 rounded-xl text-sm font-semibold text-slate-700 transition-colors">SGPA to Percentage</a>
-                        <a href="#calculator-tool" onclick="switchCalcMode('pct-to-cgpa')" class="px-4 py-2 bg-slate-100 hover:bg-indigo-50 hover:text-indigo-600 rounded-xl text-sm font-semibold text-slate-700 transition-colors">SGPA to CGPA Converter</a>
-                        <a href="#calculator-tool" onclick="switchCalcMode('pct-to-cgpa')" class="px-4 py-2 bg-slate-100 hover:bg-indigo-50 hover:text-indigo-600 rounded-xl text-sm font-semibold text-slate-700 transition-colors">Marks to Percentage Converter</a>
+                    <h2 class="text-xl font-bold text-slate-900 mb-4">Related Academic & Conversion Calculators</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <a href="sgpa-to-percentage-converter.html"
+                            class="p-5 rounded-2xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all group">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">SGPA to
+                                    Percentage</span>
+                                <span
+                                    class="icon icon-arrow-right text-xs text-slate-400 group-hover:text-indigo-600 transition-colors"></span>
+                            </div>
+                            <p class="text-xs text-slate-500">Calculate single semester grade percentage easily.</p>
+                        </a>
+                        <a href="sgpa-to-cgpa-calculator.html"
+                            class="p-5 rounded-2xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all group">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">SGPA to CGPA
+                                    Converter</span>
+                                <span
+                                    class="icon icon-arrow-right text-xs text-slate-400 group-hover:text-indigo-600 transition-colors"></span>
+                            </div>
+                            <p class="text-xs text-slate-500">Convert semester grades into cumulative final CGPA.</p>
+                        </a>
+                        <a href="marks-to-percentage-calculator.html"
+                            class="p-5 rounded-2xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all group">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Marks to
+                                    Percentage Converter</span>
+                                <span
+                                    class="icon icon-arrow-right text-xs text-slate-400 group-hover:text-indigo-600 transition-colors"></span>
+                            </div>
+                            <p class="text-xs text-slate-500">Convert total marks obtained to exact percentage score.</p>
+                        </a>
                     </div>
                 </div>
 
@@ -990,7 +1024,7 @@
                 <div class="space-y-4">
                     <div class="flex items-center gap-2 text-white font-bold text-lg">
                         <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
-                            <span class="icon-[fa6-solid--calculator] text-lg"></span>
+                            <span class="icon-calculator text-lg"></span>
                         </div>
                         <span>Calculator<span class="text-indigo-400">-Pro</span></span>
                     </div>

@@ -33,7 +33,7 @@
     <!-- Tailwind Custom Configuration -->
     
 
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles.min.css">
 
     <!-- Structured Data JSON-LD Schemas -->
     <script type="application/ld+json">
@@ -157,7 +157,7 @@
       <!-- Brand Logo & Name -->
       <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
         <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
-          <span class="icon-[fa6-solid--calculator] text-lg"></span>
+          <span class="icon-calculator text-lg"></span>
         </div>
         <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
           Calculator<span class="text-indigo-600">-Pro</span>
@@ -355,7 +355,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto space-y-4">
                     <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-100 text-brand-700 text-xs font-semibold tracking-wide uppercase shadow-sm">
-                        <span class="icon-[lucide--sparkles] text-brand-500"></span> Updated for GST 2.0 Slabs (2026 Regulations)
+                        <span class="icon icon-bolt text-brand-500"></span> Updated for GST 2.0 Slabs (2026 Regulations)
                     </div>
                     <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
                        GST Calculator <span class="text-indigo-600 block sm:inline">Online Tax Calculator India</span>
@@ -369,9 +369,14 @@
                 <div class="mt-10 max-w-5xl mx-auto bg-white rounded-2xl shadow-xl shadow-slate-200/60 border border-slate-100 overflow-hidden">
                     <div class="bg-slate-900 text-white px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-2">
                         <h2 class="text-xl font-bold flex items-center gap-2">
-                            <span class="icon-[fa6-solid--calculator] text-brand-400"></span> GST Calculator <span class="text-xs font-normal bg-brand-600/60 text-brand-100 px-2.5 py-0.5 rounded-full">(Updated as per GST 2.0 – 2026)</span>
+                            <span class="icon-calculator text-brand-400"></span> GST Calculator <span class="text-xs font-normal bg-brand-600/60 text-brand-100 px-2.5 py-0.5 rounded-full">(Updated as per GST 2.0 – 2026)</span>
                         </h2>
-                        <span class="text-xs text-slate-400"><span class="icon-[fa6-solid--clock-rotate-left] mr-1"></span> Live Calculation</span>
+                        <span class="text-xs text-slate-400"><span class="inline-flex items-center gap-1.5">
+                            <svg class="size-3 fill-current mr-1 shrink-0" viewBox="0 0 640 512">
+                                <path
+                                    d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24h110.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75m181 53c-13.3 0-24 10.7-24 24v104c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z" />
+                            </svg>
+                        </span> Live Calculation</span>
                     </div>
 
                     <div class="p-6 sm:p-8 lg:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -451,10 +456,10 @@
                             <!-- Action Buttons -->
                             <div class="flex items-center gap-4 pt-2">
                                 <button type="button" id="btn-calculate" class="flex-1 py-3.5 px-6 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl shadow-lg shadow-brand-500/30 transition-all duration-200 transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-brand-500 flex items-center justify-center gap-2">
-                                    <span class="icon-[fa6-solid--calculator]"></span> Calculate GST
+                                    <span class="icon-calculator"></span> Calculate GST
                                 </button>
                                 <button type="button" id="btn-reset" class="py-3.5 px-5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-slate-400 flex items-center gap-2">
-                                    <span class="icon-[fa6-solid--rotate-left]"></span> Reset
+                                    <span class="icon icon-rotate-left"></span> Reset
                                 </button>
                             </div>
 
@@ -465,7 +470,12 @@
                             <div>
                                 <div class="flex items-center justify-between pb-4 border-b border-slate-700/60 mb-6">
                                     <h3 class="text-lg font-bold text-white flex items-center gap-2">
-                                        <span class="icon-[fa6-solid--receipt] text-brand-400"></span> GST Calculation Result
+                                        <span class="inline-flex items-center gap-1.5">
+                                            <svg class="size-5 fill-current text-brand-400 shrink-0" viewBox="0 0 640 512">
+                                                <path
+                                                    d="M14 2.2c8.5-3.9 18.5-2.5 25.6 3.6L80 40.4l40.4-34.6c9-7.7 22.3-7.7 31.2 0L192 40.4l40.4-34.6c9-7.7 22.3-7.7 31.2 0L304 40.4l40.4-34.6c7.1-6.1 17.1-7.5 25.6-3.6s14 12.4 14 21.8v464c0 9.4-5.5 17.9-14 21.8s-18.5 2.5-25.6-3.6L304 471.6l-40.4 34.6c-9 7.7-22.3 7.7-31.2 0L192 471.6l-40.4 34.6c-9 7.7-22.3 7.7-31.2 0L80 471.6l-40.4 34.6c-7.1 6.1-17.1 7.5-25.6 3.6S0 497.4 0 488V24C0 14.6 5.5 6.1 14 2.2M96 144c-8.8 0-16 7.2-16 16s7.2 16 16 16h192c8.8 0 16-7.2 16-16s-7.2-16-16-16zM80 352c0 8.8 7.2 16 16 16h192c8.8 0 16-7.2 16-16s-7.2-16-16-16H96c-8.8 0-16 7.2-16 16m16-112c-8.8 0-16 7.2-16 16s7.2 16 16 16h192c8.8 0 16-7.2 16-16s-7.2-16-16-16z" />
+                                            </svg>
+                                        </span> GST Calculation Result
                                     </h3>
                                     <span class="text-xs px-2.5 py-1 bg-brand-500/20 text-brand-300 rounded-full border border-brand-500/30 font-mono">Live</span>
                                 </div>
@@ -517,7 +527,12 @@
                 </div>
 
                 <p class="text-center text-xs text-slate-500 mt-4">
-                    <span class="icon-[fa6-regular--calendar-check] mr-1"></span> Last Updated: <strong>October 2026</strong>
+                    <span class="inline-flex items-center gap-1.5">
+                        <svg class="size-3.5 fill-current mr-1 shrink-0" viewBox="0 0 640 512">
+                            <path
+                                d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24v40H64C28.7 64 0 92.7 0 128v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64h-40V24c0-13.3-10.7-24-24-24s-24 10.7-24 24v40H152zM48 192h352v256c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16z" />
+                        </svg>
+                    </span> Last Updated: <strong>October 2026</strong>
                 </p>
             </div>
         </section>
@@ -730,15 +745,15 @@
                 <h2 class="text-2xl font-bold text-slate-900 mb-4">Types of GST Calculations</h2>
                 <ul class="space-y-3 text-sm text-slate-600">
                         <li class="flex items-start gap-2">
-                            <span class="icon-[fa6-solid--check] text-indigo-600 mt-1"></span>
+                            <span class="icon icon-check text-indigo-600 mt-1"></span>
                             <span><strong class="text-slate-800">Forward Tax Calculation:</strong> Adding tax percentage over base prices during billing generation.</span>
                         </li>
                         <li class="flex items-start gap-2">
-                            <span class="icon-[fa6-solid--check] text-indigo-600 mt-1"></span>
+                            <span class="icon icon-check text-indigo-600 mt-1"></span>
                             <span><strong class="text-slate-800">Reverse GST Calculation:</strong> Extracting net base tax values from MRP consumer prices.</span>
                         </li>
                         <li class="flex items-start gap-2">
-                            <span class="icon-[fa6-solid--check] text-indigo-600 mt-1"></span>
+                            <span class="icon icon-check text-indigo-600 mt-1"></span>
                             <span><strong class="text-slate-800">Input Tax Credit (ITC) Balance:</strong> Estimating tax liability differences for monthly filing.</span>
                         </li>
                     </ul>
@@ -749,19 +764,24 @@
                 <h2 class="text-2xl font-bold text-slate-900 mb-4">Benefits of Using This GST Calculator</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div class="flex items-center gap-3 p-4 bg-slate-50 rounded-xl">
-                        <span class="icon-[fa6-solid--bolt] text-amber-500 text-xl"></span>
+                        <span class="icon icon-bolt text-amber-500 text-xl"></span>
                         <span class="text-sm font-medium text-slate-800">Updated with GST 2.0 rates (2026)</span>
                     </div>
                     <div class="flex items-center gap-3 p-4 bg-slate-50 rounded-xl">
-                        <span class="icon-[fa6-solid--bullseye] text-brand-500 text-xl"></span>
+                        <span class="icon-bullseye text-brand-500 text-xl"></span>
                         <span class="text-sm font-medium text-slate-800">Instant & 100% accurate mathematical results</span>
                     </div>
                     <div class="flex items-center gap-3 p-4 bg-slate-50 rounded-xl">
-                        <span class="icon-[fa6-solid--sliders] text-emerald-500 text-xl"></span>
+                        <span class="icon icon-sliders text-emerald-500 text-xl"></span>
                         <span class="text-sm font-medium text-slate-800">Supports both inclusive & exclusive modes</span>
                     </div>
                     <div class="flex items-center gap-3 p-4 bg-slate-50 rounded-xl">
-                        <span class="icon-[fa6-solid--file-invoice-dollar] text-indigo-500 text-xl"></span>
+                        <span class="inline-flex items-center gap-1.5">
+                            <svg class="size-5 fill-current text-indigo-500 text-xl shrink-0" viewBox="0 0 384 512">
+                                <path
+                                    d="M64 0C28.7 0 0 28.7 0 64v384c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0zm192 0v128h128zM64 80c0-8.8 7.2-16 16-16h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H80c-8.8 0-16-7.2-16-16m0 64c0-8.8 7.2-16 16-16h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H80c-8.8 0-16-7.2-16-16m128 72c8.8 0 16 7.2 16 16v17.3c8.5 1.2 16.7 3.1 24.1 5.1c8.5 2.3 13.6 11 11.3 19.6s-11 13.6-19.6 11.3c-11.1-3-22-5.2-32.1-5.3c-8.4-.1-17.4 1.8-23.6 5.5c-5.7 3.4-8.1 7.3-8.1 12.8c0 3.7 1.3 6.5 7.3 10.1c6.9 4.1 16.6 7.1 29.2 10.9l.5.1c11.3 3.4 25.3 7.6 36.3 14.6c12.1 7.6 22.4 19.7 22.7 38.2c.3 19.3-9.6 33.3-22.9 41.6c-7.7 4.8-16.4 7.6-25.1 9.1V440c0 8.8-7.2 16-16 16s-16-7.2-16-16v-17.8c-11.2-2.1-21.7-5.7-30.9-8.9c-2.1-.7-4.2-1.4-6.2-2.1c-8.4-2.8-12.9-11.9-10.1-20.2s11.9-12.9 20.2-10.1c2.5.8 4.8 1.6 7.1 2.4c13.6 4.6 24.6 8.4 36.3 8.7c9.1.3 17.9-1.7 23.7-5.3c5.1-3.2 7.9-7.3 7.8-14c-.1-4.6-1.8-7.8-7.7-11.6c-6.8-4.3-16.5-7.4-29-11.2l-1.6-.5c-11-3.3-24.3-7.3-34.8-13.7c-12-7.2-22.6-18.9-22.7-37.3c-.1-19.4 10.8-32.8 23.8-40.5c7.5-4.4 15.8-7.2 24.1-8.7v-17.3c0-8.8 7.2-16 16-16z" />
+                            </svg>
+                        </span>
                         <span class="text-sm font-medium text-slate-800">Useful for invoices, billing & tax planning</span>
                     </div>
                 </div>
@@ -771,7 +791,7 @@
            <!-- Section I: Frequently Asked Questions (FAQ) -->
             <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100">
                 <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
-                    <span class="icon-[fa6-solid--circle-question] text-brand-600"></span> Frequently Asked Questions (FAQ)
+                     Frequently Asked Questions (FAQ)
                 </h2>
 
                 <div class="space-y-4" id="faq-accordion">
@@ -780,7 +800,7 @@
                 <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
                     <button class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
                         <h3>How does the SBI Home Loan EMI Calculator work?</h3>
-                        <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
+                        <span class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
                     </button>
                     <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
                         <p>
@@ -793,7 +813,7 @@
                 <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
                     <button class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
                         <h3>How can I calculate EMI for a 20 lakh, 30 lakh, or 50 lakh home loan?</h3>
-                        <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
+                        <span class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
                     </button>
                     <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
                         <p>
@@ -806,7 +826,7 @@
                 <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
                     <button class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
                         <h3>How much interest can I save with a home loan prepayment?</h3>
-                        <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
+                        <span class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
                     </button>
                     <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
                         <p>
@@ -819,7 +839,7 @@
                 <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
                     <button class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
                         <h3>What is the difference between EMI vs prepayment calculator?</h3>
-                        <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
+                        <span class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
                     </button>
                     <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
                         <p>
@@ -832,7 +852,7 @@
                 <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
                     <button class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
                         <h3>How does an HDFC Personal Loan EMI Calculator differ from a Home Loan calculator?</h3>
-                        <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
+                        <span class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
                     </button>
                     <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
                         <p>
@@ -845,7 +865,7 @@
                 <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
                     <button class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
                         <h3>Can I calculate car loan EMI for 7 years?</h3>
-                        <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
+                        <span class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
                     </button>
                     <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
                         <p>
@@ -858,7 +878,7 @@
                 <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
                     <button class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
                         <h3>What is a step-up EMI calculator?</h3>
-                        <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
+                        <span class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
                     </button>
                     <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
                         <p>
@@ -871,7 +891,7 @@
                 <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
                     <button class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
                         <h3>How does CIBIL score impact my loan EMI?</h3>
-                        <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
+                        <span class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
                     </button>
                     <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
                         <p>
@@ -884,7 +904,7 @@
                 <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
                     <button class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
                         <h3>Are there tax benefits included in housing loan calculators?</h3>
-                        <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
+                        <span class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
                     </button>
                     <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
                         <p>
@@ -897,7 +917,7 @@
                 <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
                     <button class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
                         <h3>How does a loan balance transfer work?</h3>
-                        <span class="icon-[fa6-solid--chevron-down] text-slate-400 text-xs transition-transform duration-200"></span>
+                        <span class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
                     </button>
                     <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
                         <p>
@@ -915,25 +935,52 @@
             <!-- Related Calculators Section -->
             <section class="bg-gradient-to-r from-brand-900 to-slate-900 rounded-2xl p-6 sm:p-8 text-white shadow-lg">
                 <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
-                    <span class="icon-[fa6-solid--cubes] text-brand-400"></span> Related Financial Calculators
+                    <span class="icon icon-cubes text-brand-400"></span> Related Financial Calculators
                 </h2>
-                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
-                    <a href="#" class="p-4 bg-white/10 hover:bg-white/20 rounded-xl transition-all duration-200 backdrop-blur-sm border border-white/10">
-                        <span class="icon-[fa6-solid--percent] text-2xl text-brand-300 mb-2"></span>
-                        <span class="block text-xs font-semibold">Percentage Calculator</span>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                    <!-- Related Calc 1 -->
+                    <a href="#"
+                        class="bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 rounded-xl p-5 block transition-all group">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="font-bold text-lg text-white group-hover:text-emerald-300 transition-colors">SGPA to CGPA
+                                Converter</h3>
+                            <span
+                                class="icon icon-arrow-right text-slate-300 group-hover:text-emerald-300 group-hover:translate-x-1 transition-transform"></span>
+                        </div>
+                
+                        <p class="text-xs text-slate-400 mt-2">Calculate cumulative GPA across all university academic terms smoothly.
+                        </p>
                     </a>
-                    <a href="#" class="p-4 bg-white/10 hover:bg-white/20 rounded-xl transition-all duration-200 backdrop-blur-sm border border-white/10">
-                        <span class="icon-[fa6-solid--chart-line] text-2xl text-brand-300 mb-2"></span>
-                        <span class="block text-xs font-semibold">Profit Margin Calculator</span>
+                
+                    <!-- Related Calc 2 -->
+                    <a href="#"
+                        class="bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 rounded-xl p-5 block transition-all group">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="font-bold text-lg text-white group-hover:text-emerald-300 transition-colors">SGPA to CGPA
+                                Converter</h3>
+                            <span
+                                class="icon icon-arrow-right text-slate-300 group-hover:text-emerald-300 group-hover:translate-x-1 transition-transform"></span>
+                        </div>
+                
+                        <p class="text-xs text-slate-400 mt-2">Calculate cumulative GPA across all university academic terms smoothly.
+                        </p>
                     </a>
-                    <a href="#" class="p-4 bg-white/10 hover:bg-white/20 rounded-xl transition-all duration-200 backdrop-blur-sm border border-white/10">
-                        <span class="icon-[fa6-solid--coins] text-2xl text-brand-300 mb-2"></span>
-                        <span class="block text-xs font-semibold">Sales Tax Calculator</span>
+                
+                    <!-- Related Calc 3 -->
+                    <a href="#"
+                        class="bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 rounded-xl p-5 block transition-all group">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="font-bold text-lg text-white group-hover:text-emerald-300 transition-colors">SGPA to CGPA
+                                Converter</h3>
+                            <span
+                                class="icon icon-arrow-right text-slate-300 group-hover:text-emerald-300 group-hover:translate-x-1 transition-transform"></span>
+                        </div>
+                
+                        <p class="text-xs text-slate-400 mt-2">Calculate cumulative GPA across all university academic terms smoothly.
+                        </p>
                     </a>
-                    <a href="#" class="p-4 bg-white/10 hover:bg-white/20 rounded-xl transition-all duration-200 backdrop-blur-sm border border-white/10">
-                        <span class="icon-[fa6-solid--piggy-bank] text-2xl text-brand-300 mb-2"></span>
-                        <span class="block text-xs font-semibold">SIP Calculator</span>
-                    </a>
+                
                 </div>
             </section>
 
@@ -950,7 +997,7 @@
             <div class="space-y-4">
                 <div class="flex items-center gap-2 text-white font-bold text-lg">
                     <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
-                        <span class="icon-[fa6-solid--calculator]"></span>
+                        <span class="icon-calculator"></span>
                     </div>
                     <span>Calculator<span class="text-indigo-400">-Pro</span></span>
                 </div>

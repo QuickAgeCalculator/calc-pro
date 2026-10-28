@@ -28,7 +28,7 @@
 
     <!-- Tailwind CSS CDN -->
     
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles.min.css">
 
     <script type="application/ld+json">
     {
@@ -133,7 +133,7 @@
       <!-- Brand Logo & Name -->
       <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
         <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
-          <span class="icon-[fa6-solid--calculator] text-lg"></span>
+          <span class="icon-calculator text-lg"></span>
         </div>
         <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
           Calculator<span class="text-indigo-600">-Pro</span>
@@ -331,7 +331,12 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="text-center max-w-3xl mx-auto">
                     <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-brand-100 text-brand-700 mb-4 border border-brand-200/60 shadow-sm">
-                        <span class="icon-[fa6-solid--ruler-combined] text-brand-600"></span> Precision Scale Conversion Tool
+                        <span class="inline-flex items-center gap-1.5">
+                            <svg class="size-3 fill-current text-brand-600 shrink-0" viewBox="0 0 640 512">
+                                <path
+                                    d="M.2 468.9C2.7 493.1 23.1 512 48 512h416c26.5 0 48-21.5 48-48v-96c0-26.5-21.5-48-48-48h-48v80c0 8.8-7.2 16-16 16s-16-7.2-16-16v-80h-64v80c0 8.8-7.2 16-16 16s-16-7.2-16-16v-80h-64v80c0 8.8-7.2 16-16 16s-16-7.2-16-16v-80h-80c-8.8 0-16-7.2-16-16s7.2-16 16-16h80v-64h-80c-8.8 0-16-7.2-16-16s7.2-16 16-16h80v-64h-80c-8.8 0-16-7.2-16-16s7.2-16 16-16h80V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48v416c0 1.7.1 3.3.2 4.9" />
+                            </svg>
+                        </span> Precision Scale Conversion Tool
                     </span>
                     <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
                         Scale Calculator – Free Scale Conversion & Scale Factor Tool
@@ -343,16 +348,16 @@
                     <!-- Trust Badges -->
                     <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs sm:text-sm font-medium text-slate-600">
                         <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-slate-200/80 shadow-sm">
-                            <span class="icon-[fa6-solid--circle-check] text-emerald-500"></span> 100% Free
+                            <span class="icon icon-circle-check text-emerald-500"></span> 100% Free
                         </div>
                         <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-slate-200/80 shadow-sm">
-                            <span class="icon-[fa6-solid--bolt] text-amber-500"></span> Instant Results
+                            <span class="icon icon-bolt text-amber-500"></span> Instant Results
                         </div>
                         <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-slate-200/80 shadow-sm">
-                            <span class="icon-[fa6-solid--bullseye] text-brand-500"></span> Highly Accurate
+                            <span class="icon-bullseye text-brand-500"></span> Highly Accurate
                         </div>
                         <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-slate-200/80 shadow-sm">
-                            <span class="icon-[fa6-solid--mobile-screen] text-indigo-500"></span> Mobile Friendly
+                            <span class="icon icon-mobile-screen text-indigo-500"></span> Mobile Friendly
                         </div>
                     </div>
                 </div>
@@ -366,7 +371,7 @@
                     <div class="flex items-center justify-between pb-6 mb-6 border-b border-slate-100 flex-wrap gap-4">
                         <div>
                             <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-2.5">
-                                <span class="icon-[fa6-solid--sliders] text-brand-600"></span> Scale Calculator
+                                <span class="icon icon-sliders text-brand-600"></span> Scale Calculator
                             </h2>
                             <p class="text-sm text-slate-500 mt-1">Select calculation mode and enter dimensions below</p>
                         </div>
@@ -380,7 +385,7 @@
 
                     <!-- Mode Descriptions -->
                     <div id="mode-desc-container" class="mb-6 p-3.5 bg-brand-50/60 rounded-xl border border-brand-100/80 text-xs sm:text-sm text-brand-900 flex items-center gap-3">
-                        <span class="icon-[fa6-solid--circle-info] text-brand-600 text-base flex-shrink-0"></span>
+                        <span class="icon icon-circle-info text-brand-600 text-base flex-shrink-0"></span>
                         <span id="mode-description-text">Calculate scaled drawing length from real-world measurement and scale ratio.</span>
                     </div>
 
@@ -446,10 +451,10 @@
                     <!-- Action Buttons -->
                     <div class="flex items-center gap-3 mb-8">
                         <button type="button" onclick="calculateScale()" class="flex-1 bg-brand-600 hover:bg-brand-700 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg shadow-brand-500/25 transition-all duration-200 flex items-center justify-center gap-2 text-base active:scale-[0.99]">
-                            <span class="icon-[fa6-solid--calculator]"></span> Calculate
+                            <span class="icon-calculator"></span> Calculate
                         </button>
                         <button type="button" onclick="resetCalculator()" class="bg-slate-100 hover:bg-slate-200 text-slate-600 font-semibold py-3.5 px-5 rounded-xl transition-all duration-200 flex items-center justify-center gap-2 text-base">
-                            <span class="icon-[fa6-solid--rotate-left]"></span> Reset
+                            <span class="icon icon-rotate-left"></span> Reset
                         </button>
                     </div>
 
@@ -461,7 +466,7 @@
                                 <span class="text-xs uppercase tracking-wider font-bold text-slate-300">Conversion Output</span>
                             </div>
                             <button type="button" onclick="copyResultToClipboard()" class="text-xs font-semibold text-brand-300 hover:text-white bg-slate-800/80 hover:bg-slate-700 px-3 py-1.5 rounded-lg border border-slate-700 transition-all flex items-center gap-1.5">
-                                <span class="icon-[fa6-solid--copy]" id="copy-btn-icon"></span> <span id="copy-btn-text">Copy Result</span>
+                                <span class="icon icon-copy" id="copy-btn-icon"></span> <span id="copy-btn-text">Copy Result</span>
                             </button>
                         </div>
 
@@ -540,9 +545,7 @@
             <!-- Section B: How to Use the Scale Calculator -->
             <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm">
                 <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-100 text-brand-600 text-base">
-                        <span class="icon-[fa6-solid--list-check]"></span>
-                    </span>
+                    
                     How to Use the Scale Calculator
                 </h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -568,9 +571,7 @@
             <!-- Section C: What is Unit Conversion? -->
             <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm">
                 <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
-                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-100 text-brand-600 text-base">
-                        <span class="icon-[fa6-solid--arrows-rotate]"></span>
-                    </span>
+                    
                     What is Unit Conversion?
                 </h2>
                 <p class="text-slate-600 leading-relaxed text-base">
@@ -582,7 +583,12 @@
             <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm">
                 <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
                     <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-100 text-brand-600 text-base">
-                        <span class="icon-[fa6-solid--magnifying-glass-plus]"></span>
+                        <span class="inline-flex items-center gap-1.5">
+                            <svg class="size-5 fill-current shrink-0" viewBox="0 0 512 512" aria-hidden="true">
+                                <path
+                                    d="M416 208c0 45.9-14.9 88.3-40 122.7l126.6 126.7c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0s208 93.1 208 208m-232 88c0 13.3 10.7 24 24 24s24-10.7 24-24v-64h64c13.3 0 24-10.7 24-24s-10.7-24-24-24h-64v-64c0-13.3-10.7-24-24-24s-24 10.7-24 24v64h-64c-13.3 0-24 10.7-24 24s10.7 24 24 24h64z" />
+                            </svg>
+                        </span>
                     </span>
                     What is a Scale Factor?
                 </h2>
@@ -600,7 +606,7 @@
             <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm">
                 <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
                     <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-100 text-brand-600 text-base">
-                        <span class="icon-[fa6-solid--square-root-variable]"></span>
+                        <span class="icon icon-square-root-variable"></span>
                     </span>
                     Scale Conversion Formulas
                 </h2>
@@ -626,9 +632,7 @@
             <!-- Section F: Common Scale Ratios Table -->
             <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden">
                 <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
-                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-100 text-brand-600 text-base">
-                        <span class="icon-[fa6-solid--table]"></span>
-                    </span>
+                    
                     Common Scale Ratios
                 </h2>
                 <p class="text-sm text-slate-600 mb-6">Standard scale conversion factors used across professional fields:</p>
@@ -671,7 +675,12 @@
             <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm space-y-6">
                 <h2 class="text-2xl font-bold text-slate-900 mb-2 flex items-center gap-3">
                     <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-100 text-brand-600 text-base">
-                        <span class="icon-[fa6-solid--pen-ruler]"></span>
+                        <span class="inline-flex items-center gap-1.5">
+                            <svg class="size-3.5 fill-current shrink-0" viewBox="0 0 512 512" aria-hidden="true">
+                                <path
+                                    d="m469.3 19.3l23.4 23.4c25 25 25 65.5 0 90.5l-56.4 56.4l-114-113.9l56.4-56.4c25-25 65.5-25 90.5 0zM44.9 353.2L299.7 98.3l114 114l-254.9 254.8c-6.7 6.7-15.1 11.6-24.2 14.2L30.6 511c-8.4 2.4-17.4.1-23.6-6.1s-8.5-15.2-6.1-23.6l29.7-104c2.6-9.2 7.5-17.5 14.2-24.2zm204.5-249.8l-146 146L16 161.9C-2.7 143.2-2.7 112.8 16 94l78.1-78c18.7-18.7 49.1-18.7 67.9 0l19.8 19.8c-.3.3-.7.6-1 .9l-64 64c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l64-64c.3-.3.6-.7.9-1zm159.2 159.2l45.1 45.1c-.3.3-.7.6-1 .9l-64 64c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l64-64c.3-.3.6-.7.9-1l19.8 19.9c18.7 18.7 18.7 49.1 0 67.9l-78.1 78c-18.7 18.7-49.1 18.7-67.9 0l-87.4-87.4z" />
+                            </svg>
+                        </span>
                     </span>
                     Worked Examples
                 </h2>
@@ -716,38 +725,75 @@
             <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm">
                 <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
                     <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-100 text-brand-600 text-base">
-                        <span class="icon-[fa6-solid--compass-drafting]"></span>
+                        <span class="inline-flex items-center gap-1.5">
+                            <svg class="size-4.5 fill-current shrink-0" viewBox="0 0 512 512" aria-hidden="true">
+                                <path
+                                    d="M352 96c0 14.3-3.1 27.9-8.8 40.2l52.8 91.2c-23.7 25.3-54.2 44.1-88.5 53.6L256 192l-68 117.5c21.5 6.8 44.3 10.5 68.1 10.5c70.7 0 133.8-32.7 174.9-84c11.1-13.8 31.2-16 45-5s16 31.2 5 45c-52.9 65.8-134 108-225 108c-35.4 0-69.4-6.4-100.7-18.1l-56.6 97.8c-4.7 8.1-11.7 14.7-20.1 18.9l-55.4 27.7c-5 2.5-10.9 2.2-15.6-.7S0 501.5 0 496v-55.4c0-8.4 2.2-16.7 6.5-24.1l60-103.7c-12.8-11.2-24.7-23.5-35.3-36.8c-11.1-13.8-8.8-33.9 5-45s33.9-8.8 45 5c5.7 7.1 11.8 13.8 18.2 20.1l69.4-119.9C163.2 124 160 110.4 160 96c0-53 43-96 96-96s96 43 96 96m21 297.9c32.6-12.8 62.5-30.8 88.9-52.9l43.7 75.5c4.2 7.3 6.5 15.6 6.5 24.1V496c0 5.5-2.9 10.7-7.6 13.6s-10.6 3.2-15.6.7l-55.4-27.7c-8.4-4.2-15.4-10.8-20.1-18.9zM256 128a32 32 0 1 0 0-64a32 32 0 1 0 0 64" />
+                            </svg>
+                        </span>
                     </span>
                     Applications of Scale Calculator
                 </h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                     <div class="p-4 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-md transition-all">
-                        <div class="text-brand-600 text-lg mb-2"><span class="icon-[fa6-solid--building]"></span></div>
+                        <div class="text-brand-600 text-lg mb-2">
+                            <span class="inline-flex items-center gap-1.5">
+                                <svg class="size-4.5 fill-current text-indigo-600 shrink-0" viewBox="0 0 512 512" aria-hidden="true">
+                                    <path
+                                        d="M48 0C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h96v-80c0-26.5 21.5-48 48-48s48 21.5 48 48v80h96c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zm16 240c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16zm112-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16v-32c0-8.8 7.2-16 16-16m80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16zM80 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-32c0-8.8 7.2-16 16-16m80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16zm112-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16v-32c0-8.8 7.2-16 16-16" />
+                                </svg>
+                            </span>
+                        </div>
                         <h3 class="font-bold text-slate-900 text-sm mb-1">Architecture & Interior Design</h3>
                         <p class="text-xs text-slate-600">Drafting room floor plans, furniture placement diagrams, and building elevations accurately.</p>
                     </div>
                     <div class="p-4 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-md transition-all">
-                        <div class="text-brand-600 text-lg mb-2"><span class="icon-[fa6-solid--bridge]"></span></div>
+                        <div class="text-brand-600 text-lg mb-2">
+                            <span class="inline-flex items-center gap-1.5">
+                                <svg class="size-4.5 fill-current text-indigo-600 shrink-0" viewBox="0 0 512 512" aria-hidden="true">
+                                    <path
+                                        d="M32 32C14.3 32 0 46.3 0 64s14.3 32 32 32h40v64H0v128c53 0 96 43 96 96v64c0 17.7 14.3 32 32 32h32c17.7 0 32-14.3 32-32v-64c0-53 43-96 96-96s96 43 96 96v64c0 17.7 14.3 32 32 32h32c17.7 0 32-14.3 32-32v-64c0-53 43-96 96-96V160h-72V96h40c17.7 0 32-14.3 32-32s-14.3-32-32-32zm424 64v64h-80V96zm-128 0v64h-80V96zm-128 0v64h-80V96z" />
+                                </svg>
+                            </span>
+                        </div>
                         <h3 class="font-bold text-slate-900 text-sm mb-1">Civil Engineering & Site Plans</h3>
                         <p class="text-xs text-slate-600">Translating real site surveys into manageable technical drawings and construction blueprints.</p>
                     </div>
                     <div class="p-4 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-md transition-all">
-                        <div class="text-brand-600 text-lg mb-2"><span class="icon-[fa6-solid--cubes]"></span></div>
+                        <div class="text-brand-600 text-lg mb-2"><span class="icon icon-cubes"></span></div>
                         <h3 class="font-bold text-slate-900 text-sm mb-1">Model Making & 3D Printing</h3>
                         <p class="text-xs text-slate-600">Rescaling 3D CAD assets and physical model kits for miniature display and prototyping.</p>
                     </div>
                     <div class="p-4 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-md transition-all">
-                        <div class="text-brand-600 text-lg mb-2"><span class="icon-[fa6-solid--map]"></span></div>
+                        <div class="text-brand-600 text-lg mb-2">
+                            <span class="inline-flex items-center gap-1.5">
+                                <svg class="size-4.5 fill-current text-indigo-600 shrink-0" viewBox="0 0 512 512" aria-hidden="true">
+                                    <path
+                                        d="m384 476.1l-192-54.9V35.9l192 54.9zm32-1.2V88.4l127.1-50.9c15.8-6.3 32.9 5.3 32.9 22.3v334.8c0 9.8-6 18.6-15.1 22.3L416 474.8zM15.1 95.1L160 37.2v386.5L32.9 474.5C17.1 480.8 0 469.2 0 452.2V117.4c0-9.8 6-18.6 15.1-22.3" />
+                                </svg>
+                            </span>
+                        </div>
                         <h3 class="font-bold text-slate-900 text-sm mb-1">Cartography & Maps</h3>
                         <p class="text-xs text-slate-600">Estimating real geographical distances between points on physical or digital maps.</p>
                     </div>
                     <div class="p-4 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-md transition-all">
-                        <div class="text-brand-600 text-lg mb-2"><span class="icon-[fa6-solid--gear]"></span></div>
+                        <div class="text-brand-600 text-lg mb-2">
+                            <span class="inline-flex items-center gap-1.5">
+                                <svg class="size-4.5 fill-current text-indigo-600 shrink-0" viewBox="0 0 512 512" aria-hidden="true">
+                                    <path
+                                        d="M495.9 166.6c3.2 8.7.5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4l-55.6 17.8c-8.8 2.8-18.6.3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4c-1.1-8.4-1.7-16.9-1.7-25.5s.6-17.1 1.7-25.4l-43.3-39.4c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160a80 80 0 1 0 0 160" />
+                                </svg>
+                            </span>
+                        </div>
                         <h3 class="font-bold text-slate-900 text-sm mb-1">Mechanical Drawings</h3>
                         <p class="text-xs text-slate-600">Scaling precision machine parts and complex mechanical assembly diagrams.</p>
                     </div>
                     <div class="p-4 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-md transition-all">
-                        <div class="text-brand-600 text-lg mb-2"><span class="icon-[fa6-solid--graduation-cap]"></span></div>
+                        <div class="text-brand-600 text-lg mb-2"><span class="inline-flex items-center gap-1.5">
+  <svg class="size-5 fill-current shrink-0" viewBox="0 0 640 512">
+    <path d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9V320c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6c-3.2 4.3-4.1 9.9-2.3 15s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7.3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7c-3.2-14.2-7.5-28.7-13.5-42v-24.6c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5.8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1l280.6-101c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1c-7.6-2.7-15.6-4.1-23.7-4.1M128 408c0 35.3 86 72 192 72s192-36.7 192-72l-15.3-145.4L354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6l-142.2-51.4z"/>
+  </svg>
+</span></div>
                         <h3 class="font-bold text-slate-900 text-sm mb-1">Education & Geometry</h3>
                         <p class="text-xs text-slate-600">Teaching proportional reasoning, geometry ratios, and spatial transformation concepts.</p>
                     </div>
@@ -758,7 +804,12 @@
             <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm">
                 <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
                     <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-100 text-brand-600 text-base">
-                        <span class="icon-[fa6-solid--image]"></span>
+                        <span class="inline-flex items-center gap-1.5">
+                            <svg class="size-4 fill-current shrink-0" viewBox="0 0 512 512">
+                                <path
+                                    d="M0 96c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v320c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64zm323.8 106.5c-4.5-6.6-11.9-10.5-19.8-10.5s-15.4 3.9-19.8 10.5l-87 127.6l-26.5-33.1c-4.6-5.7-11.5-9-18.7-9s-14.2 3.3-18.7 9l-64 80c-5.8 7.2-6.9 17.1-2.9 25.4S78.8 416 88 416h336c8.9 0 17.1-4.9 21.2-12.8s3.6-17.4-1.4-24.7zM112 192a48 48 0 1 0 0-96a48 48 0 1 0 0 96" />
+                            </svg>
+                        </span>
                     </span>
                     Visual Blueprint & Scale Ratio Reference
                 </h2>
@@ -802,9 +853,7 @@
             <!-- Section I: Frequently Asked Questions (FAQ) -->
             <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm">
                 <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-100 text-brand-600 text-base">
-                        <span class="icon-[fa6-solid--circle-question]"></span>
-                    </span>
+                    
                     Frequently Asked Questions (FAQ)
                 </h2>
 
@@ -814,7 +863,7 @@
                     <div class="border border-slate-200 rounded-xl overflow-hidden">
                         <button type="button" onclick="toggleAccordion('faq-1')" class="w-full flex items-center justify-between p-4 text-left font-semibold text-slate-800 hover:bg-slate-50 transition-colors">
                             <span>How do I calculate scale factor?</span>
-                            <span id="faq-1-icon" class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
+                            <span id="faq-1-icon" class="icon icon-chevron-down text-slate-400 transition-transform duration-200"></span>
                         </button>
                         <div id="faq-1" class="accordion-content px-4 text-sm text-slate-600 leading-relaxed">
                             To calculate the scale factor, divide the real size length by the scaled size length in the same unit. For instance, if a real wall of 1000 cm is represented by 10 cm on paper, 1000 divided by 10 gives a scale ratio denominator of 100, which means a 1:100 scale factor.
@@ -825,7 +874,7 @@
                     <div class="border border-slate-200 rounded-xl overflow-hidden">
                         <button type="button" onclick="toggleAccordion('faq-2')" class="w-full flex items-center justify-between p-4 text-left font-semibold text-slate-800 hover:bg-slate-50 transition-colors">
                             <span>What is the difference between scale and scale factor?</span>
-                            <span id="faq-2-icon" class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
+                            <span id="faq-2-icon" class="icon icon-chevron-down text-slate-400 transition-transform duration-200"></span>
                         </button>
                         <div id="faq-2" class="accordion-content px-4 text-sm text-slate-600 leading-relaxed">
                             Scale is a proportional ratio comparing drawing or model dimensions to real-world measurements, such as 1:50 or 1/4 inch = 1 foot. Scale factor is the numerical multiplier or conversion factor used to scale dimensions up or down proportionately.
@@ -836,7 +885,7 @@
                     <div class="border border-slate-200 rounded-xl overflow-hidden">
                         <button type="button" onclick="toggleAccordion('faq-3')" class="w-full flex items-center justify-between p-4 text-left font-semibold text-slate-800 hover:bg-slate-50 transition-colors">
                             <span>Can I use this for area and volume scaling?</span>
-                            <span id="faq-3-icon" class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
+                            <span id="faq-3-icon" class="icon icon-chevron-down text-slate-400 transition-transform duration-200"></span>
                         </button>
                         <div id="faq-3" class="accordion-content px-4 text-sm text-slate-600 leading-relaxed">
                             This scale calculator focuses on linear length dimensions. For area calculations, square the scale factor (N²). For volume calculations, cube the scale factor (N³). For example, a 1:10 linear scale equals a 1:100 area scale and a 1:1000 volume scale.
@@ -847,7 +896,7 @@
                     <div class="border border-slate-200 rounded-xl overflow-hidden">
                         <button type="button" onclick="toggleAccordion('faq-4')" class="w-full flex items-center justify-between p-4 text-left font-semibold text-slate-800 hover:bg-slate-50 transition-colors">
                             <span>Which scale is used for floor plans?</span>
-                            <span id="faq-4-icon" class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
+                            <span id="faq-4-icon" class="icon icon-chevron-down text-slate-400 transition-transform duration-200"></span>
                         </button>
                         <div id="faq-4" class="accordion-content px-4 text-sm text-slate-600 leading-relaxed">
                             Architectural floor plans commonly use metric scales of 1:50 or 1:100 for residential layouts, and 1:200 for larger commercial site plans. Imperial blueprints frequently use 1/4 inch = 1 foot (1:48) or 1/8 inch = 1 foot (1:96).
@@ -858,7 +907,7 @@
                     <div class="border border-slate-200 rounded-xl overflow-hidden">
                         <button type="button" onclick="toggleAccordion('faq-5')" class="w-full flex items-center justify-between p-4 text-left font-semibold text-slate-800 hover:bg-slate-50 transition-colors">
                             <span>How to convert between different scales?</span>
-                            <span id="faq-5-icon" class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
+                            <span id="faq-5-icon" class="icon icon-chevron-down text-slate-400 transition-transform duration-200"></span>
                         </button>
                         <div id="faq-5" class="accordion-content px-4 text-sm text-slate-600 leading-relaxed">
                             To convert a drawing from one scale to another, first determine the true real-world dimension by multiplying the original drawing size by its scale denominator. Then divide that real-world measurement by the new scale denominator to obtain the updated scale drawing length.
@@ -871,24 +920,35 @@
             <!-- Section J: Related Calculators Grid -->
             <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm">
                 <h2 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2.5">
-                    <span class="icon-[fa6-solid--table-cells-large] text-brand-600"></span> Related Calculators
+                    <span class="icon icon-cubes text-brand-600"></span> Related Calculators
                 </h2>
-                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                    <a href="#" class="p-4 rounded-xl bg-slate-50 hover:bg-brand-50 border border-slate-200/80 hover:border-brand-200 text-center transition-all group">
-                        <span class="icon-[fa6-solid--percent] text-xl text-brand-600 mb-2 group-hover:scale-110 transition-transform"></span>
-                        <div class="text-sm font-semibold text-slate-800 group-hover:text-brand-700">Ratio Calculator</div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <a href="unit-converter.html"
+                        class="p-5 rounded-2xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all group">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-sm font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Unit Converter</span>
+                            <span
+                                class="icon icon-arrow-right text-xs text-slate-400 group-hover:text-indigo-600 transition-colors"></span>
+                        </div>
+                        <p class="text-xs text-slate-500">Instantly convert length, weight, temperature, and more</p>
                     </a>
-                    <a href="#" class="p-4 rounded-xl bg-slate-50 hover:bg-brand-50 border border-slate-200/80 hover:border-brand-200 text-center transition-all group">
-                        <span class="icon-[fa6-solid--ruler-horizontal] text-xl text-brand-600 mb-2 group-hover:scale-110 transition-transform"></span>
-                        <div class="text-sm font-semibold text-slate-800 group-hover:text-brand-700">Unit Converter</div>
+                    <a href="bmi-calculator.html"
+                        class="p-5 rounded-2xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all group">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-sm font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">BMI Calculator</span>
+                            <span
+                                class="icon icon-arrow-right text-xs text-slate-400 group-hover:text-indigo-600 transition-colors"></span>
+                        </div>
+                        <p class="text-xs text-slate-500">Check your Body Mass Index and healthy weight category.</p>
                     </a>
-                    <a href="#" class="p-4 rounded-xl bg-slate-50 hover:bg-brand-50 border border-slate-200/80 hover:border-brand-200 text-center transition-all group">
-                        <span class="icon-[fa6-solid--calculator] text-xl text-brand-600 mb-2 group-hover:scale-110 transition-transform"></span>
-                        <div class="text-sm font-semibold text-slate-800 group-hover:text-brand-700">Percentage Calculator</div>
-                    </a>
-                    <a href="#" class="p-4 rounded-xl bg-slate-50 hover:bg-brand-50 border border-slate-200/80 hover:border-brand-200 text-center transition-all group">
-                        <span class="icon-[fa6-solid--vector-square] text-xl text-brand-600 mb-2 group-hover:scale-110 transition-transform"></span>
-                        <div class="text-sm font-semibold text-slate-800 group-hover:text-brand-700">Area Calculator</div>
+                    <a href="emi-calculator.html"
+                        class="p-5 rounded-2xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all group">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-sm font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Loan EMI Calculator</span>
+                            <span
+                                class="icon icon-arrow-right text-xs text-slate-400 group-hover:text-indigo-600 transition-colors"></span>
+                        </div>
+                        <p class="text-xs text-slate-500">Easily calculate monthly repayments and total loan interest.</p>
                     </a>
                 </div>
             </section>
@@ -900,7 +960,7 @@
                     Bookmark this free scale converter for quick and accurate conversion anytime. Explore more free online tools on Calculator Pro.
                 </p>
                 <button type="button" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" class="bg-white text-brand-700 hover:bg-brand-50 font-bold px-6 py-3 rounded-xl shadow-md transition-all inline-flex items-center gap-2 text-sm">
-                    <span class="icon-[fa6-solid--arrow-up]"></span> Back to Top & Calculate
+                    <span class="icon icon-arrow-up"></span> Back to Top & Calculate
                 </button>
             </section>
 
@@ -916,7 +976,7 @@
             <div class="space-y-4">
                 <div class="flex items-center gap-2 text-white font-bold text-lg">
                     <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
-                        <span class="icon-[fa6-solid--calculator]"></span>
+                        <span class="icon-calculator"></span>
                     </div>
                     <span>Calculator<span class="text-indigo-400">-Pro</span></span>
                 </div>

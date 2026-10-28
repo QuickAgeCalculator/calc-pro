@@ -32,7 +32,7 @@
     <!-- Tailwind CSS CDN -->
     
 
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles.min.css">
 
     <script type="application/ld+json">
     {
@@ -163,7 +163,7 @@
       <!-- Brand Logo & Name -->
       <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
         <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
-          <span class="icon-[fa6-solid--calculator] text-lg"></span>
+          <span class="icon-calculator text-lg"></span>
         </div>
         <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
           Calculator<span class="text-indigo-600">-Pro</span>
@@ -360,7 +360,7 @@
     <section class="bg-gradient-to-b from-indigo-50/70 via-white to-slate-50 pt-10 pb-12 border-b border-slate-100">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-100/80 text-indigo-700 text-xs font-semibold uppercase tracking-wide mb-4">
-                <span class="icon-[fa6-solid--bolt] text-indigo-500"></span> All-in-One Mathematical Ratio Tool
+                <span class="icon icon-bolt text-indigo-500"></span> All-in-One Mathematical Ratio Tool
             </div>
             <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
                 Free Online <span class="text-indigo-600">Ratio Calculator</span> – Simplify, Solve & Scale Any Ratio
@@ -376,13 +376,43 @@
         
         <!-- Mode Navigation Quick Links / Jump Bar -->
         <div class="bg-white rounded-2xl p-3 shadow-sm border border-slate-200/80 overflow-x-auto flex gap-2 text-xs font-medium scrollbar-none">
-            <a href="#mode-1" class="px-3.5 py-2 rounded-xl bg-slate-100 text-slate-700 hover:bg-indigo-600 hover:text-white transition-colors flex items-center gap-1.5 whitespace-nowrap"><span class="icon-[fa6-solid--compress]"></span> 1. Simplify Ratio</a>
-            <a href="#mode-2" class="px-3.5 py-2 rounded-xl bg-slate-100 text-slate-700 hover:bg-indigo-600 hover:text-white transition-colors flex items-center gap-1.5 whitespace-nowrap"><span class="icon-[fa6-solid--equals]"></span> 2. Solve Proportion</a>
-            <a href="#mode-3" class="px-3.5 py-2 rounded-xl bg-slate-100 text-slate-700 hover:bg-indigo-600 hover:text-white transition-colors flex items-center gap-1.5 whitespace-nowrap"><span class="icon-[fa6-solid--table-cells]"></span> 3. Equivalent Ratios</a>
-            <a href="#mode-4" class="px-3.5 py-2 rounded-xl bg-slate-100 text-slate-700 hover:bg-indigo-600 hover:text-white transition-colors flex items-center gap-1.5 whitespace-nowrap"><span class="icon-[fa6-solid--code-compare]"></span> 4. Compare Ratios</a>
-            <a href="#mode-5" class="px-3.5 py-2 rounded-xl bg-slate-100 text-slate-700 hover:bg-indigo-600 hover:text-white transition-colors flex items-center gap-1.5 whitespace-nowrap"><span class="icon-[fa6-solid--percent]"></span> 5. Ratio to %</a>
-            <a href="#mode-6" class="px-3.5 py-2 rounded-xl bg-slate-100 text-slate-700 hover:bg-indigo-600 hover:text-white transition-colors flex items-center gap-1.5 whitespace-nowrap"><span class="icon-[lucide--chart-pie]"></span> 6. Split Amount</a>
-            <a href="#mode-7" class="px-3.5 py-2 rounded-xl bg-slate-100 text-slate-700 hover:bg-indigo-600 hover:text-white transition-colors flex items-center gap-1.5 whitespace-nowrap"><span class="icon-[fa6-solid--up-right-and-down-left-from-center]"></span> 7. Scale Ratio</a>
+            <a href="#mode-1" class="px-3.5 py-2 rounded-xl bg-slate-100 text-slate-700 hover:bg-indigo-600 hover:text-white transition-colors flex items-center gap-1.5 whitespace-nowrap"><span class="inline-flex items-center gap-1.5">
+                <svg class="size-3 fill-current shrink-0" viewBox="0 0 448 512" aria-hidden="true">
+                    <path
+                        d="M160 64c0-17.7-14.3-32-32-32S96 46.3 96 64v64H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32zM32 320c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32v-96c0-17.7-14.3-32-32-32zM352 64c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32h-64zm-32 256c-17.7 0-32 14.3-32 32v96c0 17.7 14.3 32 32 32s32-14.3 32-32v-64h64c17.7 0 32-14.3 32-32s-14.3-32-32-32z" />
+                </svg>
+            </span> Simplify Ratio</a>
+            <a href="#mode-2" class="px-3.5 py-2 rounded-xl bg-slate-100 text-slate-700 hover:bg-indigo-600 hover:text-white transition-colors flex items-center gap-1.5 whitespace-nowrap"><span class="inline-flex items-center gap-1.5">
+                <svg class="size-3 fill-current shrink-0" viewBox="0 0 448 512" aria-hidden="true">
+                    <path
+                        d="M48 128c-17.7 0-32 14.3-32 32s14.3 32 32 32h352c17.7 0 32-14.3 32-32s-14.3-32-32-32zm0 192c-17.7 0-32 14.3-32 32s14.3 32 32 32h352c17.7 0 32-14.3 32-32s-14.3-32-32-32z" />
+                </svg>
+            </span> Solve Proportion</a>
+            <a href="#mode-3" class="px-3.5 py-2 rounded-xl bg-slate-100 text-slate-700 hover:bg-indigo-600 hover:text-white transition-colors flex items-center gap-1.5 whitespace-nowrap"><span class="inline-flex items-center gap-1.5">
+                <svg class="size-3 fill-current shrink-0" viewBox="0 0 448 512" aria-hidden="true">
+                    <path
+                        d="M64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zm88 64v64H64V96zm56 0h88v64h-88zm240 0v64h-88V96zM64 224h88v64H64zm232 0v64h-88v-64zm64 0h88v64h-88zM152 352v64H64v-64zm56 0h88v64h-88zm240 0v64h-88v-64z" />
+                </svg>
+            </span> Equivalent Ratios</a>
+            <a href="#mode-4" class="px-3.5 py-2 rounded-xl bg-slate-100 text-slate-700 hover:bg-indigo-600 hover:text-white transition-colors flex items-center gap-1.5 whitespace-nowrap"><span class="inline-flex items-center gap-1.5">
+                <svg class="size-3 fill-current shrink-0" viewBox="0 0 448 512" aria-hidden="true">
+                    <path
+                        d="M320 488c0 9.5-5.6 18.1-14.2 21.9s-18.8 2.3-25.8-4.1l-80-72c-5.1-4.6-7.9-11-7.9-17.8s2.9-13.3 7.9-17.8l80-72c7-6.3 17.2-7.9 25.8-4.1S320 334.5 320 344v40h16c35.3 0 64-28.7 64-64V153.3c-28.3-12.3-48-40.5-48-73.3c0-44.2 35.8-80 80-80s80 35.8 80 80c0 32.8-19.7 61-48 73.3V320c0 70.7-57.3 128-128 128h-16zM456 80a24 24 0 1 0-48 0a24 24 0 1 0 48 0M192 24c0-9.5 5.6-18.1 14.2-21.9S225-.2 232 6.2l80 72c5.1 4.6 7.9 11 7.9 17.8s-2.9 13.3-7.9 17.8l-80 72c-7 6.3-17.2 7.9-25.8 4.1S192 177.5 192 168v-40h-16c-35.3 0-64 28.7-64 64v166.7c28.3 12.3 48 40.5 48 73.3c0 44.2-35.8 80-80 80S0 476.2 0 432c0-32.8 19.7-61 48-73.3V192c0-70.7 57.3-128 128-128h16zM56 432a24 24 0 1 0 48 0a24 24 0 1 0-48 0" />
+                </svg>
+            </span> Compare Ratios</a>
+            <a href="#mode-5" class="px-3.5 py-2 rounded-xl bg-slate-100 text-slate-700 hover:bg-indigo-600 hover:text-white transition-colors flex items-center gap-1.5 whitespace-nowrap"><span class="icon icon-percent"></span> 5. Ratio to %</a>
+            <a href="#mode-6" class="px-3.5 py-2 rounded-xl bg-slate-100 text-slate-700 hover:bg-indigo-600 hover:text-white transition-colors flex items-center gap-1.5 whitespace-nowrap"><span class="inline-flex items-center gap-1.5">
+                <svg class="size-3 fill-current shrink-0" viewBox="0 0 576 512">
+                    <path
+                        d="M304 240V16.6c0-9 7-16.6 16-16.6c123.7 0 224 100.3 224 224c0 9-7.6 16-16.6 16zM32 272c0-121.3 90.1-221.7 207-237.7c9.2-1.3 17 6.1 17 15.4V288l156.5 156.5c6.7 6.7 6.2 17.7-1.5 23.1c-39.2 28-87.2 44.4-139 44.4c-132.5 0-240-107.4-240-240m526.4 16c9.3 0 16.6 7.8 15.4 17c-7.7 55.9-34.6 105.6-73.9 142.3c-6 5.6-15.4 5.2-21.2-.7L320 288z" />
+                </svg>
+            </span> 6. Split Amount</a>
+            <a href="#mode-7" class="px-3.5 py-2 rounded-xl bg-slate-100 text-slate-700 hover:bg-indigo-600 hover:text-white transition-colors flex items-center gap-1.5 whitespace-nowrap"><span class="inline-flex items-center gap-1.5">
+                <svg class="size-3 fill-current shrink-0" viewBox="0 0 448 512" aria-hidden="true">
+                    <path
+                        d="M344 0h144c13.3 0 24 10.7 24 24v144c0 9.7-5.8 18.5-14.8 22.2s-19.3 1.7-26.2-5.2l-39-39l-87 87c-9.4 9.4-24.6 9.4-33.9 0l-32-32c-9.4-9.4-9.4-24.6 0-33.9l87-87L327 41c-6.9-6.9-8.9-17.2-5.2-26.2S334.3 0 344 0M168 512H24c-13.3 0-24-10.7-24-24V344c0-9.7 5.8-18.5 14.8-22.2s19.3-1.7 26.2 5.2l39 39l87-87c9.4-9.4 24.6-9.4 33.9 0l32 32c9.4 9.4 9.4 24.6 0 33.9l-87 87l39 39c6.9 6.9 8.9 17.2 5.2 26.2s-12.5 14.8-22.2 14.8z" />
+                </svg>
+            </span> Scale Ratio</a>
         </div>
 
         <!-- Mode 1: Simplify Ratio -->
@@ -413,7 +443,7 @@
 
             <div class="flex items-center gap-3 mb-6">
                 <button onclick="calculateSimplify()" class="flex-1 sm:flex-none px-6 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl shadow-md shadow-indigo-200 transition-all flex items-center justify-center gap-2">
-                    <span class="icon-[fa6-solid--calculator]"></span> Calculate
+                    <span class="icon-calculator"></span> Calculate
                 </button>
                 <button onclick="resetSimplify()" class="px-4 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-600 font-medium rounded-xl transition-all">
                     Reset
@@ -423,7 +453,7 @@
             <!-- Output Box -->
             <div id="m1-output" class="hidden bg-indigo-50/60 border border-indigo-100 rounded-xl p-5 relative">
                 <button onclick="copyOutput('m1-text')" class="absolute top-4 right-4 text-xs font-semibold text-indigo-600 hover:text-indigo-800 bg-white px-2.5 py-1 rounded-lg border border-indigo-200 shadow-sm flex items-center gap-1">
-                    <span class="icon-[fa6-regular--copy]"></span> Copy Result
+                    <span class="icon-regular--copy"></span> Copy Result
                 </button>
                 <h3 class="text-xs font-bold tracking-wider uppercase text-indigo-600 mb-1">Result & Step-by-Step Math</h3>
                 <div id="m1-text" class="text-slate-800 text-sm sm:text-base space-y-2"></div>
@@ -472,7 +502,7 @@
 
             <div class="flex items-center gap-3 mb-6">
                 <button onclick="calculateProportion()" class="flex-1 sm:flex-none px-6 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl shadow-md shadow-indigo-200 transition-all flex items-center justify-center gap-2">
-                    <span class="icon-[fa6-solid--calculator]"></span> Solve Proportion
+                    <span class="icon-calculator"></span> Solve Proportion
                 </button>
                 <button onclick="resetProportion()" class="px-4 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-600 font-medium rounded-xl transition-all">
                     Reset
@@ -481,7 +511,7 @@
 
             <div id="m2-output" class="hidden bg-indigo-50/60 border border-indigo-100 rounded-xl p-5 relative">
                 <button onclick="copyOutput('m2-text')" class="absolute top-4 right-4 text-xs font-semibold text-indigo-600 hover:text-indigo-800 bg-white px-2.5 py-1 rounded-lg border border-indigo-200 shadow-sm flex items-center gap-1">
-                    <span class="icon-[fa6-regular--copy]"></span> Copy Result
+                    <span class="icon-regular--copy"></span> Copy Result
                 </button>
                 <h3 class="text-xs font-bold tracking-wider uppercase text-indigo-600 mb-1">Proportion Solution</h3>
                 <div id="m2-text" class="text-slate-800 text-sm sm:text-base space-y-2"></div>
@@ -511,7 +541,7 @@
 
             <div class="flex items-center gap-3 mb-6">
                 <button onclick="calculateEquivalent()" class="flex-1 sm:flex-none px-6 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl shadow-md shadow-indigo-200 transition-all flex items-center justify-center gap-2">
-                    <span class="icon-[fa6-solid--table]"></span> Generate Table
+                    <span class="icon icon-table"></span> Generate Table
                 </button>
                 <button onclick="resetEquivalent()" class="px-4 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-600 font-medium rounded-xl transition-all">
                     Reset
@@ -520,7 +550,7 @@
 
             <div id="m3-output" class="hidden bg-indigo-50/60 border border-indigo-100 rounded-xl p-5 relative">
                 <button onclick="copyOutput('m3-text')" class="absolute top-4 right-4 text-xs font-semibold text-indigo-600 hover:text-indigo-800 bg-white px-2.5 py-1 rounded-lg border border-indigo-200 shadow-sm flex items-center gap-1">
-                    <span class="icon-[fa6-regular--copy]"></span> Copy Table
+                    <span class="icon-regular--copy"></span> Copy Table
                 </button>
                 <h3 class="text-xs font-bold tracking-wider uppercase text-indigo-600 mb-3">Equivalent Ratios Table</h3>
                 <div id="m3-text" class="overflow-x-auto"></div>
@@ -558,7 +588,12 @@
 
             <div class="flex items-center gap-3 mb-6">
                 <button onclick="calculateCompare()" class="flex-1 sm:flex-none px-6 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl shadow-md shadow-indigo-200 transition-all flex items-center justify-center gap-2">
-                    <span class="icon-[fa6-solid--code-compare]"></span> Compare Ratios
+                    <span class="inline-flex items-center gap-1.5">
+                        <svg class="size-5 fill-current shrink-0" viewBox="0 0 640 512">
+                            <path
+                                d="M320 488c0 9.5-5.6 18.1-14.2 21.9s-18.8 2.3-25.8-4.1l-80-72c-5.1-4.6-7.9-11-7.9-17.8s2.9-13.3 7.9-17.8l80-72c7-6.3 17.2-7.9 25.8-4.1S320 334.5 320 344v40h16c35.3 0 64-28.7 64-64V153.3c-28.3-12.3-48-40.5-48-73.3c0-44.2 35.8-80 80-80s80 35.8 80 80c0 32.8-19.7 61-48 73.3V320c0 70.7-57.3 128-128 128h-16zM456 80a24 24 0 1 0-48 0a24 24 0 1 0 48 0M192 24c0-9.5 5.6-18.1 14.2-21.9S225-.2 232 6.2l80 72c5.1 4.6 7.9 11 7.9 17.8s-2.9 13.3-7.9 17.8l-80 72c-7 6.3-17.2 7.9-25.8 4.1S192 177.5 192 168v-40h-16c-35.3 0-64 28.7-64 64v166.7c28.3 12.3 48 40.5 48 73.3c0 44.2-35.8 80-80 80S0 476.2 0 432c0-32.8 19.7-61 48-73.3V192c0-70.7 57.3-128 128-128h16zM56 432a24 24 0 1 0 48 0a24 24 0 1 0-48 0" />
+                        </svg>
+                    </span> Compare Ratios
                 </button>
                 <button onclick="resetCompare()" class="px-4 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-600 font-medium rounded-xl transition-all">
                     Reset
@@ -567,7 +602,7 @@
 
             <div id="m4-output" class="hidden bg-indigo-50/60 border border-indigo-100 rounded-xl p-5 relative">
                 <button onclick="copyOutput('m4-text')" class="absolute top-4 right-4 text-xs font-semibold text-indigo-600 hover:text-indigo-800 bg-white px-2.5 py-1 rounded-lg border border-indigo-200 shadow-sm flex items-center gap-1">
-                    <span class="icon-[fa6-regular--copy]"></span> Copy Result
+                    <span class="icon-regular--copy"></span> Copy Result
                 </button>
                 <h3 class="text-xs font-bold tracking-wider uppercase text-indigo-600 mb-1">Comparison Result</h3>
                 <div id="m4-text" class="text-slate-800 text-sm sm:text-base space-y-2"></div>
@@ -597,7 +632,7 @@
 
             <div class="flex items-center gap-3 mb-6">
                 <button onclick="calculatePercentage()" class="flex-1 sm:flex-none px-6 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl shadow-md shadow-indigo-200 transition-all flex items-center justify-center gap-2">
-                    <span class="icon-[fa6-solid--percent]"></span> Convert Ratio
+                    <span class="icon icon-percent"></span> Convert Ratio
                 </button>
                 <button onclick="resetPercentage()" class="px-4 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-600 font-medium rounded-xl transition-all">
                     Reset
@@ -606,7 +641,7 @@
 
             <div id="m5-output" class="hidden bg-indigo-50/60 border border-indigo-100 rounded-xl p-5 relative">
                 <button onclick="copyOutput('m5-text')" class="absolute top-4 right-4 text-xs font-semibold text-indigo-600 hover:text-indigo-800 bg-white px-2.5 py-1 rounded-lg border border-indigo-200 shadow-sm flex items-center gap-1">
-                    <span class="icon-[fa6-regular--copy]"></span> Copy Result
+                    <span class="icon-regular--copy"></span> Copy Result
                 </button>
                 <h3 class="text-xs font-bold tracking-wider uppercase text-indigo-600 mb-1">Conversion Breakdown</h3>
                 <div id="m5-text" class="text-slate-800 text-sm sm:text-base space-y-2"></div>
@@ -636,7 +671,12 @@
 
             <div class="flex items-center gap-3 mb-6">
                 <button onclick="calculateSplit()" class="flex-1 sm:flex-none px-6 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl shadow-md shadow-indigo-200 transition-all flex items-center justify-center gap-2">
-                    <span class="icon-[fa6-solid--chart-pie]"></span> Split Amount
+                    <span class="inline-flex items-center gap-1.5">
+                        <svg class="size-5 fill-current shrink-0" viewBox="0 0 640 512">
+                            <path
+                                d="M304 240V16.6c0-9 7-16.6 16-16.6c123.7 0 224 100.3 224 224c0 9-7.6 16-16.6 16zM32 272c0-121.3 90.1-221.7 207-237.7c9.2-1.3 17 6.1 17 15.4V288l156.5 156.5c6.7 6.7 6.2 17.7-1.5 23.1c-39.2 28-87.2 44.4-139 44.4c-132.5 0-240-107.4-240-240m526.4 16c9.3 0 16.6 7.8 15.4 17c-7.7 55.9-34.6 105.6-73.9 142.3c-6 5.6-15.4 5.2-21.2-.7L320 288z" />
+                        </svg>
+                    </span> Split Amount
                 </button>
                 <button onclick="resetSplit()" class="px-4 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-600 font-medium rounded-xl transition-all">
                     Reset
@@ -645,7 +685,7 @@
 
             <div id="m6-output" class="hidden bg-indigo-50/60 border border-indigo-100 rounded-xl p-5 relative">
                 <button onclick="copyOutput('m6-text')" class="absolute top-4 right-4 text-xs font-semibold text-indigo-600 hover:text-indigo-800 bg-white px-2.5 py-1 rounded-lg border border-indigo-200 shadow-sm flex items-center gap-1">
-                    <span class="icon-[fa6-regular--copy]"></span> Copy Breakdown
+                    <span class="icon-regular--copy"></span> Copy Breakdown
                 </button>
                 <h3 class="text-xs font-bold tracking-wider uppercase text-indigo-600 mb-1">Itemized Amount Split</h3>
                 <div id="m6-text" class="text-slate-800 text-sm sm:text-base space-y-2"></div>
@@ -679,7 +719,12 @@
 
             <div class="flex items-center gap-3 mb-6">
                 <button onclick="calculateScale()" class="flex-1 sm:flex-none px-6 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl shadow-md shadow-indigo-200 transition-all flex items-center justify-center gap-2">
-                    <span class="icon-[fa6-solid--up-right-and-down-left-from-center]"></span> Scale Ratio
+                    <span class="inline-flex items-center gap-1.5">
+                        <svg class="size-4 fill-current shrink-0" viewBox="0 0 512 512" aria-hidden="true">
+                            <path
+                                d="M344 0h144c13.3 0 24 10.7 24 24v144c0 9.7-5.8 18.5-14.8 22.2s-19.3 1.7-26.2-5.2l-39-39l-87 87c-9.4 9.4-24.6 9.4-33.9 0l-32-32c-9.4-9.4-9.4-24.6 0-33.9l87-87L327 41c-6.9-6.9-8.9-17.2-5.2-26.2S334.3 0 344 0M168 512H24c-13.3 0-24-10.7-24-24V344c0-9.7 5.8-18.5 14.8-22.2s19.3-1.7 26.2 5.2l39 39l87-87c9.4-9.4 24.6-9.4 33.9 0l32 32c9.4 9.4 9.4 24.6 0 33.9l-87 87l39 39c6.9 6.9 8.9 17.2 5.2 26.2s-12.5 14.8-22.2 14.8z" />
+                        </svg>
+                    </span> Scale Ratio
                 </button>
                 <button onclick="resetScale()" class="px-4 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-600 font-medium rounded-xl transition-all">
                     Reset
@@ -688,7 +733,7 @@
 
             <div id="m7-output" class="hidden bg-indigo-50/60 border border-indigo-100 rounded-xl p-5 relative">
                 <button onclick="copyOutput('m7-text')" class="absolute top-4 right-4 text-xs font-semibold text-indigo-600 hover:text-indigo-800 bg-white px-2.5 py-1 rounded-lg border border-indigo-200 shadow-sm flex items-center gap-1">
-                    <span class="icon-[fa6-regular--copy]"></span> Copy Result
+                    <span class="icon-regular--copy"></span> Copy Result
                 </button>
                 <h3 class="text-xs font-bold tracking-wider uppercase text-indigo-600 mb-1">Scaled Ratio Result</h3>
                 <div id="m7-text" class="text-slate-800 text-sm sm:text-base space-y-2"></div>
@@ -700,7 +745,7 @@
     <!-- Content Section B: Quick How to Use -->
     <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 border-t border-slate-200">
         <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-            <span class="icon-[fa6-solid--circle-info]"></span> How to Use the Ratio Calculator
+             How to Use the Ratio Calculator
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
             <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
@@ -750,27 +795,27 @@
         <h2 class="text-2xl font-bold text-slate-900 mb-6">Features of This Calculator</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
-                <span class="icon-[fa6-solid--circle-check] text-indigo-600 text-lg mt-0.5"></span>
+                <span class="icon icon-circle-check text-indigo-600 text-lg mt-0.5"></span>
                 <p class="text-sm text-slate-700"><strong>Simplify any ratio</strong> to lowest terms using Greatest Common Divisor (GCD) math.</p>
             </div>
             <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
-                <span class="icon-[fa6-solid--circle-check] text-indigo-600 text-lg mt-0.5"></span>
+                <span class="icon icon-circle-check text-indigo-600 text-lg mt-0.5"></span>
                 <p class="text-sm text-slate-700"><strong>Solve missing values</strong> in proportions effortlessly (A:B = C:D).</p>
             </div>
             <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
-                <span class="icon-[fa6-solid--circle-check] text-indigo-600 text-lg mt-0.5"></span>
+                <span class="icon icon-circle-check text-indigo-600 text-lg mt-0.5"></span>
                 <p class="text-sm text-slate-700"><strong>Scale ratio up/down</strong> for baking recipes and architectural blue-printing.</p>
             </div>
             <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
-                <span class="icon-[fa6-solid--circle-check] text-indigo-600 text-lg mt-0.5"></span>
+                <span class="icon icon-circle-check text-indigo-600 text-lg mt-0.5"></span>
                 <p class="text-sm text-slate-700"><strong>Generate equivalent ratios table</strong> instantly from factors 1 through 10.</p>
             </div>
             <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
-                <span class="icon-[fa6-solid--circle-check] text-indigo-600 text-lg mt-0.5"></span>
+                <span class="icon icon-circle-check text-indigo-600 text-lg mt-0.5"></span>
                 <p class="text-sm text-slate-700"><strong>Convert ratios</strong> to fractions, exact decimals & percentages.</p>
             </div>
             <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
-                <span class="icon-[fa6-solid--circle-check] text-indigo-600 text-lg mt-0.5"></span>
+                <span class="icon icon-circle-check text-indigo-600 text-lg mt-0.5"></span>
                 <p class="text-sm text-slate-700"><strong>Works with decimals</strong> and multi-part whole numbers seamlessly.</p>
             </div>
         </div>
@@ -943,7 +988,7 @@
     <!-- Content Section I: Frequently Asked Questions (FAQ) -->
     <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
-            <span class="icon-[fa6-solid--circle-question] text-indigo-600"></span> Frequently Asked Questions (FAQ)
+             Frequently Asked Questions (FAQ)
         </h2>
 
         <div class="space-y-3" id="faq-accordion">
@@ -951,7 +996,7 @@
             <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
                 <button onclick="toggleAccordion('faq1')" class="w-full text-left p-5 flex items-center justify-between gap-4 focus:outline-none">
                     <h3 class="text-base font-bold text-slate-800">Q1. What is a ratio calculator?</h3>
-                    <span id="icon-faq1" class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
+                    <span id="icon-faq1" class="icon icon-chevron-down text-slate-400 transition-transform duration-200"></span>
                 </button>
                 <div id="faq1" class="accordion-content px-5 text-sm text-slate-600 leading-relaxed">
                     A ratio calculator is a versatile online tool that simplifies numerical ratios to their lowest terms, solves proportion equations with missing values, scales ratios, converts ratios to percentage fractions, and divides amounts proportionally.
@@ -962,7 +1007,7 @@
             <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
                 <button onclick="toggleAccordion('faq2')" class="w-full text-left p-5 flex items-center justify-between gap-4 focus:outline-none">
                     <h3 class="text-base font-bold text-slate-800">Q2. How do you simplify a ratio?</h3>
-                    <span id="icon-faq2" class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
+                    <span id="icon-faq2" class="icon icon-chevron-down text-slate-400 transition-transform duration-200"></span>
                 </button>
                 <div id="faq2" class="accordion-content px-5 text-sm text-slate-600 leading-relaxed">
                     To simplify a ratio, determine the Greatest Common Divisor (GCD) of all numbers in the ratio and divide each term by that common GCD factor.
@@ -973,7 +1018,7 @@
             <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
                 <button onclick="toggleAccordion('faq3')" class="w-full text-left p-5 flex items-center justify-between gap-4 focus:outline-none">
                     <h3 class="text-base font-bold text-slate-800">Q3. How to solve a proportion?</h3>
-                    <span id="icon-faq3" class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
+                    <span id="icon-faq3" class="icon icon-chevron-down text-slate-400 transition-transform duration-200"></span>
                 </button>
                 <div id="faq3" class="accordion-content px-5 text-sm text-slate-600 leading-relaxed">
                     Use cross-multiplication: set A/B equal to C/D. Multiply the diagonal known terms together and divide by the remaining known term to isolate the unknown variable x.
@@ -984,7 +1029,7 @@
             <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
                 <button onclick="toggleAccordion('faq4')" class="w-full text-left p-5 flex items-center justify-between gap-4 focus:outline-none">
                     <h3 class="text-base font-bold text-slate-800">Q4. Can I use decimals in ratio calculator?</h3>
-                    <span id="icon-faq4" class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
+                    <span id="icon-faq4" class="icon icon-chevron-down text-slate-400 transition-transform duration-200"></span>
                 </button>
                 <div id="faq4" class="accordion-content px-5 text-sm text-slate-600 leading-relaxed">
                     Yes! Our ratio calculator handles decimals by scaling both values by powers of 10 to clear decimal points before simplifying to integer lowest terms.
@@ -995,7 +1040,7 @@
             <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
                 <button onclick="toggleAccordion('faq5')" class="w-full text-left p-5 flex items-center justify-between gap-4 focus:outline-none">
                     <h3 class="text-base font-bold text-slate-800">Q5. What is the difference between ratio and fraction?</h3>
-                    <span id="icon-faq5" class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
+                    <span id="icon-faq5" class="icon icon-chevron-down text-slate-400 transition-transform duration-200"></span>
                 </button>
                 <div id="faq5" class="accordion-content px-5 text-sm text-slate-600 leading-relaxed">
                     A ratio compares two separate quantities to each other (part-to-part), whereas a fraction represents a numerical share relative to the whole combined sum (part-to-whole).
@@ -1006,7 +1051,7 @@
             <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
                 <button onclick="toggleAccordion('faq6')" class="w-full text-left p-5 flex items-center justify-between gap-4 focus:outline-none">
                     <h3 class="text-base font-bold text-slate-800">Q6. How to scale a ratio?</h3>
-                    <span id="icon-faq6" class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
+                    <span id="icon-faq6" class="icon icon-chevron-down text-slate-400 transition-transform duration-200"></span>
                 </button>
                 <div id="faq6" class="accordion-content px-5 text-sm text-slate-600 leading-relaxed">
                     Multiply or divide every term in the ratio by the identical scaling factor multiplier (k) to maintain exact equivalence.
@@ -1017,7 +1062,7 @@
             <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
                 <button onclick="toggleAccordion('faq7')" class="w-full text-left p-5 flex items-center justify-between gap-4 focus:outline-none">
                     <h3 class="text-base font-bold text-slate-800">Q7. Is this ratio calculator free?</h3>
-                    <span id="icon-faq7" class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
+                    <span id="icon-faq7" class="icon icon-chevron-down text-slate-400 transition-transform duration-200"></span>
                 </button>
                 <div id="faq7" class="accordion-content px-5 text-sm text-slate-600 leading-relaxed">
                     Yes, Calculator Pro's online Ratio Calculator is 100% free forever without registrations, subscriptions, or limits.
@@ -1028,7 +1073,7 @@
             <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
                 <button onclick="toggleAccordion('faq8')" class="w-full text-left p-5 flex items-center justify-between gap-4 focus:outline-none">
                     <h3 class="text-base font-bold text-slate-800">Q8. How accurate is the online ratio calculator?</h3>
-                    <span id="icon-faq8" class="icon-[fa6-solid--chevron-down] text-slate-400 transition-transform duration-200"></span>
+                    <span id="icon-faq8" class="icon icon-chevron-down text-slate-400 transition-transform duration-200"></span>
                 </button>
                 <div id="faq8" class="accordion-content px-5 text-sm text-slate-600 leading-relaxed">
                     It provides mathematically exact calculations powered by robust JavaScript GCD and floating-point algorithms accurate up to 6 decimal positions.
@@ -1039,14 +1084,37 @@
 
     <!-- Content Section N: Related Tools -->
     <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 mb-12">
-        <h2 class="text-xl font-bold text-slate-900 mb-4">Related Tools / Internal Links</h2>
-        <div class="flex flex-wrap gap-3">
-            <a href="#" class="px-4 py-2 bg-white rounded-xl border border-slate-200 text-sm font-semibold text-slate-700 hover:text-indigo-600 hover:border-indigo-300 transition-all shadow-sm">Ratio Calculator</a>
-            <a href="#" class="px-4 py-2 bg-white rounded-xl border border-slate-200 text-sm font-semibold text-slate-700 hover:text-indigo-600 hover:border-indigo-300 transition-all shadow-sm">Percentage Calculator</a>
-            <a href="#" class="px-4 py-2 bg-white rounded-xl border border-slate-200 text-sm font-semibold text-slate-700 hover:text-indigo-600 hover:border-indigo-300 transition-all shadow-sm">Scientific Calculator</a>
-            <a href="#" class="px-4 py-2 bg-white rounded-xl border border-slate-200 text-sm font-semibold text-slate-700 hover:text-indigo-600 hover:border-indigo-300 transition-all shadow-sm">GST Calculator</a>
-            <a href="#" class="px-4 py-2 bg-white rounded-xl border border-slate-200 text-sm font-semibold text-slate-700 hover:text-indigo-600 hover:border-indigo-300 transition-all shadow-sm">Simple Interest Calculator</a>
-            <a href="#" class="px-4 py-2 bg-white rounded-xl border border-slate-200 text-sm font-semibold text-slate-700 hover:text-indigo-600 hover:border-indigo-300 transition-all shadow-sm">Compound Interest Calculator</a>
+        <h2 class="text-2xl font-extrabold text-slate-900 mb-6 flex items-center gap-3">
+            <span class="icon-cubes text-indigo-600"></span> Related Tools
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <a href="percentage-calculator.html"
+                class="p-5 rounded-2xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all group">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-sm font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Percentage Calculator</span>
+                    <span
+                        class="icon icon-arrow-right text-xs text-slate-400 group-hover:text-indigo-600 transition-colors"></span>
+                </div>
+                <p class="text-xs text-slate-500">Easily calculate percentages, increases, decreases, and values.</p>
+            </a>
+            <a href="average-calculator.html"
+                class="p-5 rounded-2xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all group">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-sm font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Average Calculator</span>
+                    <span
+                        class="icon icon-arrow-right text-xs text-slate-400 group-hover:text-indigo-600 transition-colors"></span>
+                </div>
+                <p class="text-xs text-slate-500">Easily calculate mean, median, mode, and averages.</p>
+            </a>
+            <a href="fraction-calculator.html"
+                class="p-5 rounded-2xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all group">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-sm font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Fraction Calculator</span>
+                    <span
+                        class="icon icon-arrow-right text-xs text-slate-400 group-hover:text-indigo-600 transition-colors"></span>
+                </div>
+                <p class="text-xs text-slate-500">Easily add, subtract, multiply, and divide fractions.</p>
+            </a>
         </div>
     </section>
 </main>
@@ -1060,7 +1128,7 @@
             <div class="space-y-4">
                 <div class="flex items-center gap-2 text-white font-bold text-lg">
                     <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
-                        <span class="icon-[fa6-solid--calculator]"></span>
+                        <span class="icon-calculator"></span>
                     </div>
                     <span>Calculator<span class="text-indigo-400">-Pro</span></span>
                 </div>
