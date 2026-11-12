@@ -16,26 +16,41 @@
     <meta property="og:url" content="https://calculatorpro.com/sgpa-to-cgpa-calculator">
     <meta property="og:title" content="SGPA to CGPA Calculator - Fast & Accurate Online CGPA Converter">
     <meta property="og:description" content="Convert semester SGPA to CGPA online easily. Accurate simple and credit-weighted grade point average calculation for all major universities.">
-    <meta property="og:image" content="https://placehold.co/1200x630/2563eb/ffffff?text=SGPA+to+CGPA+Calculator+Pro">
+    <meta property="og:image" content="https://placehold.co/1200x630/4f46e5/ffffff?text=SGPA+to+CGPA+Calculator+Pro">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="SGPA to CGPA Calculator | Calculator Pro">
     <meta name="twitter:description" content="Convert semester SGPA to CGPA online with credit weighting or simple average. Free tool for engineering & university students.">
-    <meta name="twitter:image" content="https://placehold.co/1200x630/2563eb/ffffff?text=SGPA+to+CGPA+Calculator+Pro">
+    <meta name="twitter:image" content="https://placehold.co/1200x630/4f46e5/ffffff?text=SGPA+to+CGPA+Calculator+Pro">
 
-    <!-- FontAwesome CDN -->
-    
-
-    <!-- Google Fonts -->
-    
+    <!-- Critical CSS for Instant Render (FCP < 1.5s, LCP < 1.5s) -->
+    <style>
+        :root {
+            --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        body {
+            font-family: var(--font-sans);
+            background-color: #f8fafc;
+            color: #1e293b;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+        /* Accordion transition styling */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.25s ease-out, opacity 0.2s ease-out;
+            opacity: 0;
+        }
+        .accordion-content.open {
+            max-height: 400px;
+            opacity: 1;
+        }
+    </style>
 
     <!-- Tailwind CSS CDN -->
-    
-
-    <!-- Custom CSS -->
-    
-
     <link rel="stylesheet" href="./css/styles.min.css">
 
     <!-- JSON-LD FAQ Schema -->
@@ -57,7 +72,7 @@
           "name": "Can I calculate CGPA from SGPA for 8 semesters engineering?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, our tool includes a "8 Semesters" preset button tailored specifically for B.Tech / B.E engineering students to compute cumulative CGPA across all 8 semesters instantly."
+            "text": "Yes, our tool includes an 8 Semesters preset button tailored specifically for B.Tech / B.E engineering students to compute cumulative CGPA across all 8 semesters instantly."
           }
         },
         {
@@ -76,7 +91,7 @@
             "text": "Under CBSE and UGC standard guidelines, Percentage (%) = CGPA × 9.5. For example, a CGPA of 8.0 equals 8.0 × 9.5 = 76%. You can also switch scale options directly in our calculator widget."
           }
         },
-		{
+        {
           "@type": "Question",
           "name": "What is a good CGPA score for higher studies or jobs?",
           "acceptedAnswer": {
@@ -109,7 +124,10 @@
             class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
             <div
               class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
-              <span class="icon-calculator text-lg"></span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+              </svg>
             </div>
             <span
               class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
@@ -119,188 +137,149 @@
     
           <!-- Desktop Navigation -->
           <nav class="hidden md:flex items-center gap-1" aria-label="Main Navigation">
-    
-            <!-- Category 1: Age -->
             <div class="relative group">
               <button type="button"
-                class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors">
                 Age
-                <svg
-                  class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200"
+                <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform"
                   fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
               <div
                 class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
                 <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
                   <a href="age-calculator.html"
-                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age
+                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Age
                     Calculator</a>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
                   <a href="birthday-calculator.html"
-                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Birthday
+                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Birthday
                     Calculator</a>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
                   <a href="age-difference-calculator.html"
-                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age
-                    Diffrence Calculator</a>
+                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Age
+                    Difference Calculator</a>
                 </div>
               </div>
             </div>
     
-            <!-- Category 2: Time -->
             <div class="relative group">
               <button type="button"
-                class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors">
                 Time & Date
-                <svg
-                  class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200"
+                <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform"
                   fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
               <div
                 class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
                 <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
                   <a href="time-calculator.html"
-                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Time
+                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Time
                     Calculator</a>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
                   <a href="date-calculator.html"
-                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Date
+                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Date
                     Calculator</a>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
                   <a href="work-days-calculator.html"
-                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Work
+                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Work
                     Days Calculator</a>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
                   <a href="time-zone-converter.html"
-                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">TimeZone
+                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">TimeZone
                     Calculator</a>
                 </div>
               </div>
             </div>
     
-            <!-- Category 3: Converter -->
             <div class="relative group">
               <button type="button"
-                class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors">
                 Converter
-                <svg
-                  class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200"
+                <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform"
                   fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
               <div
                 class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
                 <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
                   <a href="unit-converter.html"
-                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Unit
+                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Unit
                     Converter</a>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
                   <a href="cgpa-to-percentage-converter.html"
-                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">CGPA
+                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">CGPA
                     to Percentage</a>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
                   <a href="sgpa-to-percentage-converter.html"
-                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA
+                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">SGPA
                     to Percentage</a>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
                   <a href="sgpa-to-cgpa-converter.html"
-                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA
+                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">SGPA
                     to CGPA</a>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
                   <a href="marks-to-percentage-calculator.html"
-                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Marks
+                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Marks
                     to Percentage</a>
                 </div>
               </div>
             </div>
     
-            <!-- Category 4: Financial -->
             <div class="relative group">
               <button type="button"
-                class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors">
                 Financial
-                <svg
-                  class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200"
+                <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform"
                   fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
               <div
                 class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
                 <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
                   <a href="sip-calculator.html"
-                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SIP
+                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">SIP
                     Calculator</a>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
                   <a href="emi-calculator.html"
-                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">EMI
+                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">EMI
                     Loan Calculator</a>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
                   <a href="Compound-Interest-Calculator.html"
-                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Compound
+                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Compound
                     Interest Calculator</a>
                 </div>
               </div>
             </div>
     
-            <!-- Category 5: Health -->
             <div class="relative group">
               <button type="button"
-                class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors">
                 Health
-                <svg
-                  class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200"
+                <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform"
                   fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
               <div
                 class="absolute right-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
                 <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
                   <a href="bmi-calculator.html"
-                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">BMI
+                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">BMI
                     Calculator</a>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
                   <a href="waist-to-hip-ratio-calculator.html"
-                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">WHR
+                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">WHR
                     Calculator</a>
                 </div>
               </div>
             </div>
-    
-    
-    
           </nav>
+    
     
           <!-- Mobile Hamburger Button -->
           <div class="flex md:hidden">
             <button id="calc-mobile-menu-btn" type="button"
-              class="p-2.5 rounded-xl text-slate-600 hover:text-indigo-600 hover:bg-slate-100/80 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors duration-200"
+              class="p-2.5 rounded-xl text-slate-600 hover:text-indigo-600 hover:bg-slate-100/80 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors"
               aria-controls="calc-mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
-              <svg id="calc-menu-icon" class="w-6 h-6 transition-transform duration-200" fill="none" stroke="currentColor"
-                viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              <svg id="calc-menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
               </svg>
-              <svg id="calc-close-icon" class="w-6 h-6 hidden transition-transform duration-200" fill="none"
-                stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              <svg id="calc-close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
           </div>
@@ -308,107 +287,90 @@
         </div>
       </div>
     
-      <!-- Mobile Full-Width Menu Container -->
-      <div id="calc-mobile-menu"
-        class="hidden md:hidden border-t border-slate-100 bg-white shadow-xl transition-all duration-200 ease-in-out">
+      <div id="calc-mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white shadow-xl">
         <div class="px-4 pt-3 pb-6 space-y-4">
-    
-          <!-- Mobile Category: Age -->
           <div class="border-b border-slate-100 pb-3">
             <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Age</div>
             <a href="age-calculator.html"
-              class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age
+              class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Age
               Calculator</a>
             <a href="birthday-calculator.html"
-              class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Birthday
+              class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Birthday
               Calculator</a>
             <a href="age-difference-calculator.html"
-              class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age
-              Diffrence Calculator</a>
+              class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Age
+              Difference Calculator</a>
           </div>
-    
-          <!-- Mobile Category: Time -->
           <div class="border-b border-slate-100 pb-3">
             <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Time & Date</div>
             <a href="time-calculator.html"
-              class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Time
+              class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Time
               Calculator</a>
             <a href="date-calculator.html"
-              class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Date
+              class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Date
               Calculator</a>
             <a href="work-days-calculator.html"
-              class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Work
+              class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Work
               Days Calculator</a>
             <a href="time-zone-converter.html"
-              class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">TimeZone
+              class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">TimeZone
               Calculator</a>
           </div>
-    
-          <!-- Mobile Category: Converter -->
           <div class="border-b border-slate-100 pb-3">
             <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Converter</div>
             <a href="unit-converter.html"
-              class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Unit
+              class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Unit
               Converter</a>
             <a href="cgpa-to-percentage-converter.html"
-              class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">CGPA
+              class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">CGPA
               to Percentage</a>
             <a href="sgpa-to-percentage-converter.html"
-              class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA
+              class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">SGPA
               to Percentage</a>
             <a href="sgpa-to-cgpa-converter.html"
-              class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA
+              class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">SGPA
               to CGPA</a>
             <a href="marks-to-percentage-calculator.html"
-              class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Marks
+              class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Marks
               to Percentage</a>
           </div>
-    
-          <!-- Mobile Category: Financial -->
           <div class="border-b border-slate-100 pb-3">
             <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Financial</div>
             <a href="sip-calculator.html"
-              class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SIP
+              class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">SIP
               Calculator</a>
             <a href="emi-calculator.html"
-              class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">EMI
+              class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">EMI
               Loan Calculator</a>
             <a href="Compound-Interest-Calculator.html"
-              class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Compound
+              class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Compound
               Interest Calculator</a>
           </div>
-    
-          <!-- Mobile Category: Health -->
           <div>
             <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Health</div>
             <a href="bmi-calculator.html"
-              class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">BMI
+              class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">BMI
               Calculator</a>
             <a href="waist-to-hip-ratio-calculator.html"
-              class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">WHR
+              class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">WHR
               Calculator</a>
           </div>
-    
-    
-    
         </div>
       </div>
     </header>
-    
+
 
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-b from-indigo-50/60 via-slate-50 to-slate-50 pt-10 pb-8 sm:pt-14 sm:pb-12 border-b border-slate-200/60">
+    <section class="bg-slate-100/70 pt-8 pb-12 sm:pt-12 sm:pb-16 px-4 sm:px-6 lg:px-8 border-b border-slate-200/60">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto">
-          <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-indigo-100/80 text-indigo-700 mb-4 border border-indigo-200/50 shadow-sm">
-            <span class="inline-flex items-center gap-1.5">
-  <svg class="size-5 fill-current shrink-0" viewBox="0 0 640 512">
-    <path d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9V320c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6c-3.2 4.3-4.1 9.9-2.3 15s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7.3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7c-3.2-14.2-7.5-28.7-13.5-42v-24.6c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5.8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1l280.6-101c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1c-7.6-2.7-15.6-4.1-23.7-4.1M128 408c0 35.3 86 72 192 72s192-36.7 192-72l-15.3-145.4L354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6l-142.2-51.4z"/>
-  </svg>
-</span> 2026 Academic Formula Updated
+          <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-brand-100 text-brand-700 border border-brand-300/60 mb-4 shadow-xs">
+            <svg class="w-4 h-4 fill-current text-brand-600 shrink-0" viewBox="0 0 640 512">
+              <path d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9V320c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6c-3.2 4.3-4.1 9.9-2.3 15s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7.3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7c-3.2-14.2-7.5-28.7-13.5-42v-24.6c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5.8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1l280.6-101c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1c-7.6-2.7-15.6-4.1-23.7-4.1M128 408c0 35.3 86 72 192 72s192-36.7 192-72l-15.3-145.4L354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6l-142.2-51.4z"/>
+            </svg> 2026 Academic Formula Updated
           </span>
           <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
-            SGPA to CGPA Calculator- <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-indigo-600">Calculate CGPA from SGPA</span>
+            SGPA to CGPA Calculator – <span class="text-brand-600">Calculate CGPA from SGPA</span>
           </h1>
           <p class="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
             Welcome to the ultimate <strong class="text-slate-900 font-semibold">SGPA to CGPA Calculator</strong> on Calculator Pro. Effortlessly convert your semester grade point average (SGPA) to cumulative grade point average (CGPA) with zero hassle. Whether you need a credit-weighted SGPA to CGPA calculator or a simple average converter for 4, 6, or 8 semesters under UGC CBCS 10-point scale system, our fast, accurate, and free online SGPA to CGPA tool delivers instant results.
@@ -418,14 +380,15 @@
     </section>
 
     <!-- MAIN CALCULATOR APP SECTION -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-4 py-6">
-      <div class="bg-white rounded-2xl shadow-xl shadow-slate-200/70 border border-slate-200/80 overflow-hidden transition-all">
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 py-6">
+      <div class="bg-white rounded-3xl shadow-xl border border-slate-200/80 overflow-hidden transition-all">
         
         <!-- Calculator Header & Mode Toggle -->
         <div class="bg-slate-900 text-white p-5 sm:p-7 flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>
             <h2 class="text-xl sm:text-2xl font-bold flex items-center gap-2 text-white">
-              <span class="icon icon-sliders text-indigo-400"></span> Interactive CGPA Calculator from SGPA
+              <svg class="w-5 h-5 fill-current text-brand-300" viewBox="0 0 512 512"><path d="M0 416c0 17.7 14.3 32 32 32l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 384c-17.7 0-32 14.3-32 32zM96 96c-17.7 0-32 14.3-32 32l0 192c0 17.7 14.3 32 32 32s32-14.3 32-32l0-192c0-17.7-14.3-32-32-32zm128 64c-17.7 0-32 14.3-32 32l0 128c0 17.7 14.3 32 32 32s32-14.3 32-32l0-128c0-17.7-14.3-32-32-32zm128-96c-17.7 0-32 14.3-32 32l0 224c0 17.7 14.3 32 32 32s32-14.3 32-32l0-224c0-17.7-14.3-32-32-32z"/></svg>
+              Interactive CGPA Calculator from SGPA
             </h2>
             <p class="text-xs sm:text-sm text-slate-300 mt-1">
               Select your university grading scheme below to calculate CGPA from multiple SGPAs.
@@ -434,16 +397,13 @@
 
           <!-- Calculation Mode Tabs -->
           <div class="inline-flex p-1 bg-slate-800 rounded-xl border border-slate-700/80 self-start md:self-auto">
-            <button id="mode-simple-btn" onclick="switchMode('simple')" class="px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-200 bg-indigo-600 text-white shadow-sm flex items-center gap-2">
-              <span class="icon-calculator"></span> Simple Average
+            <button id="mode-simple-btn" onclick="switchMode('simple')" class="px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-200 bg-brand-600 text-white shadow-sm flex items-center gap-2">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 448 512"><path d="M400 32H48C21.5 32 0 53.5 0 80v320c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM128 120h80v48h-80v-48zm0 96h80v48h-80v-48zm0 96h80v48h-80v-48zm192 96h-80v-48h80v48zm0-96h-80v-48h80v48zm0-96h-80v-48h80v48zm0-96h-80v-48h80v48z"/></svg>
+              Simple Average
             </button>
             <button id="mode-weighted-btn" onclick="switchMode('weighted')" class="px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-200 text-slate-300 hover:text-white flex items-center gap-2">
-              <span class="inline-flex items-center gap-1.5">
-                <svg class="size-4 fill-current shrink-0" viewBox="0 0 640 512">
-                  <path
-                    d="M384 32h128c17.7 0 32 14.3 32 32s-14.3 32-32 32H398.4c-5.2 25.8-22.9 47.1-46.4 57.3V448h160c17.7 0 32 14.3 32 32s-14.3 32-32 32H128c-17.7 0-32-14.3-32-32s14.3-32 32-32h160V153.3c-23.5-10.3-41.2-31.6-46.4-57.3H128c-17.7 0-32-14.3-32-32s14.3-32 32-32h128c14.6-19.4 37.8-32 64-32s49.4 12.6 64 32m55.6 288h144.9L512 195.8zm72.4 96c-62.9 0-115.2-34-126-78.9c-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8L631.3 305c5.7 9.8 9.3 21.1 6.7 32.1C627.2 382 574.9 416 512 416M126.8 195.8L54.4 320h144.9zM.9 337.1c-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8L246.2 305c5.7 9.8 9.3 21.1 6.7 32.1C242 382 189.7 416 126.8 416S11.7 382 .9 337.1" />
-                </svg>
-              </span> Credit-Weighted
+              <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 640 512"><path d="M384 32h128c17.7 0 32 14.3 32 32s-14.3 32-32 32H398.4c-5.2 25.8-22.9 47.1-46.4 57.3V448h160c17.7 0 32 14.3 32 32s-14.3 32-32 32H128c-17.7 0-32-14.3-32-32s14.3-32 32-32h160V153.3c-23.5-10.3-41.2-31.6-46.4-57.3H128c-17.7 0-32-14.3-32-32s14.3-32 32-32h128c14.6-19.4 37.8-32 64-32s49.4 12.6 64 32m55.6 288h144.9L512 195.8zm72.4 96c-62.9 0-115.2-34-126-78.9c-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8L631.3 305c5.7 9.8 9.3 21.1 6.7 32.1C627.2 382 574.9 416 512 416M126.8 195.8L54.4 320h144.9zM.9 337.1c-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8L246.2 305c5.7 9.8 9.3 21.1 6.7 32.1C242 382 189.7 416 126.8 416S11.7 382 .9 337.1"/></svg>
+              Credit-Weighted
             </button>
           </div>
         </div>
@@ -455,18 +415,19 @@
           <div class="lg:col-span-7 space-y-6">
             
             <!-- Fast Preset Semester Buttons -->
-            <div class="bg-indigo-50/50 p-4 rounded-xl border border-indigo-100 flex flex-wrap items-center justify-between gap-3">
+            <div class="bg-brand-100/50 p-4 rounded-xl border border-brand-100 flex flex-wrap items-center justify-between gap-3">
               <span class="text-xs sm:text-sm font-semibold text-slate-700 flex items-center gap-1.5">
-                <span class="icon icon-bolt text-indigo-600"></span> Fast Preset Semesters:
+                <svg class="w-3.5 h-3.5 fill-current text-brand-600" viewBox="0 0 512 512"><path d="M0 256a256 256 0 1 1 512 0a256 256 0 1 1-512 0m188.3-108.9c-7.6 4.2-12.3 12.3-12.3 20.9v176c0 8.7 4.7 16.7 12.3 20.9s16.8 4.1 24.3-.5l144-88c7.1-4.4 11.5-12.1 11.5-20.5s-4.4-16.1-11.5-20.5l-144-88c-7.4-4.5-16.7-4.7-24.3-.5z"/></svg>
+                Fast Preset Semesters:
               </span>
               <div class="flex flex-wrap gap-2">
-                <button onclick="setPresets(4)" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-white text-indigo-700 border border-indigo-200 hover:bg-indigo-600 hover:text-white transition-all shadow-sm">
+                <button onclick="setPresets(4)" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-white text-brand-700 border border-brand-200 hover:bg-brand-600 hover:text-white transition-all shadow-xs">
                   4 Semesters
                 </button>
-                <button onclick="setPresets(6)" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-white text-indigo-700 border border-indigo-200 hover:bg-indigo-600 hover:text-white transition-all shadow-sm">
+                <button onclick="setPresets(6)" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-white text-brand-700 border border-brand-200 hover:bg-brand-600 hover:text-white transition-all shadow-xs">
                   6 Semesters
                 </button>
-                <button onclick="setPresets(8)" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-white text-indigo-700 border border-indigo-200 hover:bg-indigo-600 hover:text-white transition-all shadow-sm">
+                <button onclick="setPresets(8)" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-white text-brand-700 border border-brand-200 hover:bg-brand-600 hover:text-white transition-all shadow-xs">
                   8 Semesters
                 </button>
               </div>
@@ -475,9 +436,10 @@
             <!-- Conversion Formula Selector for Percentage -->
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-slate-50 p-3.5 rounded-xl border border-slate-200">
               <label for="percentage-formula-select" class="text-xs sm:text-sm font-medium text-slate-700 flex items-center gap-2">
-                <span class="icon icon-percent text-slate-500"></span> CGPA to Percentage Formula Scale:
+                <svg class="w-4 h-4 fill-current text-slate-500" viewBox="0 0 448 512"><path d="M358.4 0C323.7 0 295.6 28.1 295.6 62.8c0 34.7 28.1 62.8 62.8 62.8 34.7 0 62.8-28.1 62.8-62.8C421.2 28.1 393.1 0 358.4 0zM89.6 386.4c-34.7 0-62.8 28.1-62.8 62.8 0 34.7 28.1 62.8 62.8 62.8 34.7 0 62.8-28.1 62.8-62.8 0-34.7-28.1-62.8-62.8-62.8zM438.6 74.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-384 384c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l384-384z"/></svg>
+                CGPA to Percentage Formula Scale:
               </label>
-              <select id="percentage-formula-select" onchange="calculateCGPA()" class="bg-white border border-slate-300 text-slate-800 text-xs sm:text-sm rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 p-2 font-medium">
+              <select id="percentage-formula-select" onchange="calculateCGPA()" class="bg-white border border-slate-300 text-slate-800 text-xs sm:text-sm rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 p-2 font-medium">
                 <option value="9.5">CBSE / UGC standard (CGPA × 9.5)</option>
                 <option value="10">Direct 10-Scale (CGPA × 10)</option>
                 <option value="minus075">KTU / VTU Style ((CGPA - 0.75) × 10)</option>
@@ -485,7 +447,7 @@
             </div>
 
             <!-- Semester Dynamic Table/Rows Container -->
-            <div class="border border-slate-200 rounded-xl overflow-hidden bg-white shadow-sm">
+            <div class="border border-slate-200 rounded-xl overflow-hidden bg-white shadow-xs">
               <div class="bg-slate-100/80 px-4 py-3 border-b border-slate-200 grid grid-cols-12 gap-2 text-xs font-bold text-slate-600 uppercase tracking-wider">
                 <div class="col-span-1 text-center">#</div>
                 <div class="col-span-5 sm:col-span-5">Semester Name</div>
@@ -502,12 +464,13 @@
 
             <!-- Action Buttons: Add, Reset -->
             <div class="flex items-center justify-between gap-3 pt-2">
-              <button onclick="addSemesterRow()" class="px-4 py-2.5 bg-indigo-50 text-indigo-700 hover:bg-indigo-100 rounded-xl text-xs sm:text-sm font-semibold transition-colors flex items-center gap-2 border border-indigo-200">
-                <span class="icon icon-plus text-xs"></span> Add Semester
+              <button onclick="addSemesterRow()" class="px-4 py-2.5 bg-brand-100/60 text-brand-700 hover:bg-brand-100 rounded-xl text-xs sm:text-sm font-semibold transition-colors flex items-center gap-2 border border-brand-200">
+                + Add Semester
               </button>
               
               <button onclick="resetCalculator()" class="px-4 py-2.5 text-slate-500 hover:text-rose-600 hover:bg-rose-50 rounded-xl text-xs sm:text-sm font-semibold transition-colors flex items-center gap-2">
-                <span class="icon icon-rotate-left"></span> Reset Form
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 512 512"><path d="M483.2 192C457.6 86.4 361.6 8 248 8 112.1 8 2 118.1 2 254c0 135.9 110.1 246 246 246 101.9 0 190.1-62.1 228.6-150.3 3.3-7.5-1.1-16.2-8.7-19.4l-31.5-13.6c-7.6-3.3-16.2 1.1-19.4 8.7C384.8 400.9 313.1 448 248 448c-107.2 0-194-86.8-194-194S140.8 60 248 60c88 0 162.7 58.7 186.7 132H384c-13.3 0-24 10.7-24 24s10.7 24 24 24h112c13.3 0 24-10.7 24-24V104c0-13.3-10.7-24-24-24s-24 10.7-24 24v88z"/></svg>
+                Reset Form
               </button>
             </div>
 
@@ -515,15 +478,12 @@
 
           <!-- Right Column: Results & Analytics Summary Card (5 Cols) -->
           <div class="lg:col-span-5 flex flex-col justify-between">
-            <div class="bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-950 rounded-2xl p-6 text-white shadow-xl relative overflow-hidden flex flex-col h-full justify-between">
+            <div class="bg-slate-900 rounded-2xl p-6 text-white shadow-xl relative overflow-hidden flex flex-col h-full justify-between">
               
-              <!-- Background Subtle Grid Decor -->
-              <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-indigo-600/20 rounded-full blur-3xl pointer-events-none"></div>
-
               <div>
                 <!-- Result Card Header -->
                 <div class="flex items-center justify-between pb-4 border-b border-slate-700/80">
-                  <span class="text-xs uppercase tracking-wider font-semibold text-indigo-300">
+                  <span class="text-xs uppercase tracking-wider font-semibold text-brand-300">
                     Live Calculation Result
                   </span>
                   <span id="badge-grade" class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
@@ -536,36 +496,36 @@
                   <span class="text-xs sm:text-sm font-medium text-slate-300 block mb-1">
                     Calculated Overall CGPA
                   </span>
-                  <div class="text-5xl sm:text-6xl font-black text-white tracking-tight flex items-baseline justify-center gap-1">
+                  <div class="text-5xl sm:text-6xl font-black text-white tracking-tight flex items-baseline justify-center gap-1 font-mono">
                     <span id="cgpa-output">0.00</span>
-                    <span class="text-lg text-indigo-400 font-semibold">/ 10.0</span>
+                    <span class="text-lg text-brand-300 font-semibold font-sans">/ 10.0</span>
                   </div>
                 </div>
 
                 <!-- Metrics Grid -->
                 <div class="grid grid-cols-2 gap-3 my-4">
-                  <div class="bg-slate-800/80 backdrop-blur border border-slate-700/60 p-3.5 rounded-xl">
+                  <div class="bg-slate-800/80 border border-slate-700/60 p-3.5 rounded-xl">
                     <span class="text-xs text-slate-400 block font-medium mb-1">Estimated Percentage</span>
-                    <span id="percentage-output" class="text-xl font-bold text-amber-400">0.00%</span>
+                    <span id="percentage-output" class="text-xl font-bold font-mono text-amber-400">0.00%</span>
                   </div>
 
-                  <div class="bg-slate-800/80 backdrop-blur border border-slate-700/60 p-3.5 rounded-xl">
+                  <div class="bg-slate-800/80 border border-slate-700/60 p-3.5 rounded-xl">
                     <span class="text-xs text-slate-400 block font-medium mb-1">Total Semesters</span>
-                    <span id="total-semesters-output" class="text-xl font-bold text-slate-200">0</span>
+                    <span id="total-semesters-output" class="text-xl font-bold font-mono text-slate-200">0</span>
                   </div>
 
-                  <div id="credit-metric-box" class="col-span-2 bg-slate-800/80 backdrop-blur border border-slate-700/60 p-3.5 rounded-xl hidden">
+                  <div id="credit-metric-box" class="col-span-2 bg-slate-800/80 border border-slate-700/60 p-3.5 rounded-xl hidden">
                     <div class="flex justify-between items-center">
                       <span class="text-xs text-slate-400 font-medium">Total Credit Points Earned</span>
-                      <span id="total-credits-output" class="text-base font-bold text-indigo-300">0</span>
+                      <span id="total-credits-output" class="text-base font-bold font-mono text-brand-300">0</span>
                     </div>
                   </div>
                 </div>
 
                 <!-- Performance Classification -->
-                <div class="mt-4 p-3.5 bg-indigo-900/40 rounded-xl border border-indigo-700/50 text-xs text-indigo-200 leading-relaxed">
+                <div class="mt-4 p-3.5 bg-slate-800/60 rounded-xl border border-slate-700/50 text-xs text-slate-200 leading-relaxed">
                   <div class="font-semibold text-white mb-1 flex items-center gap-1.5">
-                    <span class="icon icon-circle-info text-indigo-400"></span> Performance Summary:
+                    <svg class="w-3.5 h-3.5 fill-current text-brand-300 shrink-0" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V240H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v120h24c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-144a32 32 0 1 1 0-64 32 32 0 1 1 0 64z"/></svg> Performance Summary:
                   </div>
                   <span id="performance-text">
                     Enter valid SGPA numbers (between 0.0 and 10.0) across semesters to see accurate CGPA calculations.
@@ -575,11 +535,12 @@
 
               <!-- Summary Action Buttons -->
               <div class="mt-6 pt-4 border-t border-slate-700/80 flex gap-3">
-                <button onclick="copyResults()" class="flex-1 py-2.5 px-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl text-xs font-semibold transition-all flex items-center justify-center gap-2 shadow-md">
-                  <span class="icon icon-copy"></span> <span id="copy-btn-text">Copy Summary</span>
+                <button onclick="copyResults()" class="flex-1 py-2.5 px-3 bg-brand-600 hover:bg-brand-700 text-white rounded-xl text-xs font-semibold transition-all flex items-center justify-center gap-2 shadow-md">
+                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 448 512"><path d="M384 336H192c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16h192c8.8 0 16 7.2 16 16v256c0 8.8-7.2 16-16 16zM192 0C156.7 0 128 28.7 128 64v256c0 35.3 28.7 64 64 64h192c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H192zM64 128c-35.3 0-64 28.7-64 64v256c0 35.3 28.7 64 64 64h192c35.3 0 64-28.7 64-64v-32h-48v32c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192c0-8.8 7.2-16 16-16h32v-48H64z"/></svg>
+                  <span id="copy-btn-text">Copy Summary</span>
                 </button>
-                <button onclick="window.print()" class="py-2.5 px-4 bg-slate-700 hover:bg-slate-600 text-slate-200 rounded-xl text-xs font-semibold transition-all flex items-center justify-center gap-2">
-                  <span class="icon icon-print"></span> Print
+                <button onclick="window.print()" class="py-2.5 px-4 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-xl text-xs font-semibold transition-all flex items-center justify-center gap-2">
+                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 512 512"><path d="M128 0C92.7 0 64 28.7 64 64v96h384V64c0-35.3-28.7-64-64-64H128zM384 224H128c-35.3 0-64 28.7-64 64v96h64v64c0 35.3 28.7 64 64 64h128c35.3 0 64-28.7 64-64v-64h64v-96c0-35.3-28.7-64-64-64zm-32 224H160v-96h192v96z"/></svg> Print
                 </button>
               </div>
 
@@ -591,35 +552,44 @@
       </div>
     </main>
 
-    <!-- RICH CONTENT SECTION (STRICT SEO HEADING HIERARCHY) -->
+    <!-- RICH CONTENT SECTION -->
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
-      
+    
       <!-- 1. H2: How to Convert SGPA to CGPA? -->
       <section class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200/80 space-y-4">
         <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 flex items-center gap-3">
-          <span class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center text-sm font-extrabold">1</span>
+          <span
+            class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center text-sm font-extrabold">1</span>
           How to Convert SGPA to CGPA?
         </h2>
         <p class="text-slate-600 leading-relaxed">
-          Converting your <strong class="text-slate-800 font-semibold">Semester Grade Point Average (SGPA)</strong> to a <strong class="text-slate-800 font-semibold">Cumulative Grade Point Average (CGPA)</strong> is an essential step for university students tracking their academic performance. SGPA reflects a student's scholastic output in a single semester, while CGPA measures cumulative academic performance over all completed semesters.
+          Converting your <strong class="text-slate-800 font-semibold">Semester Grade Point Average (SGPA)</strong> to a
+          <strong class="text-slate-800 font-semibold">Cumulative Grade Point Average (CGPA)</strong> is an essential step
+          for university students tracking their academic performance. SGPA reflects a student's scholastic output in a
+          single semester, while CGPA measures cumulative academic performance over all completed semesters.
         </p>
         <p class="text-slate-600 leading-relaxed">
-          To convert SGPA to CGPA, you can either compute the simple arithmetic mean of all semester SGPAs or calculate the credit-weighted average if course credit hours vary across terms. Our online <strong class="text-slate-800 font-semibold">SGPA to CGPA Converter</strong> automates both methods seamlessly for diploma, undergraduate, and postgraduate programs.
+          To convert SGPA to CGPA, you can either compute the simple arithmetic mean of all semester SGPAs or calculate the
+          credit-weighted average if course credit hours vary across terms. Our online <strong
+            class="text-slate-800 font-semibold">SGPA to CGPA Converter</strong> automates both methods seamlessly for
+          diploma, undergraduate, and postgraduate programs.
         </p>
       </section>
-
+    
       <!-- 2. H2: SGPA to CGPA Conversion Formula -->
       <section class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200/80 space-y-6">
         <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 flex items-center gap-3">
-          <span class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center text-sm font-extrabold">2</span>
+          <span
+            class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center text-sm font-extrabold">2</span>
           SGPA to CGPA Conversion Formula
         </h2>
         <p class="text-slate-600 leading-relaxed">
-          Universities across the world follow two main formulas for CGPA calculation from semester SGPAs under the UGC Choice Based Credit System (CBCS).
+          Universities across the world follow two main formulas for CGPA calculation from semester SGPAs under the UGC
+          Choice Based Credit System (CBCS).
         </p>
-
+    
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
-          
+    
           <!-- H3: Simple Average Formula -->
           <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 space-y-3">
             <h3 class="text-lg font-bold text-indigo-700 flex items-center gap-2">
@@ -628,14 +598,16 @@
             <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
               Used when every semester carries equal weightage or credit distribution:
             </p>
-            <div class="bg-white p-3.5 rounded-lg border border-slate-300 font-mono text-xs sm:text-sm text-center font-bold text-slate-800 shadow-inner">
+            <div
+              class="bg-white p-3.5 rounded-lg border border-slate-300 font-mono text-xs sm:text-sm text-center font-bold text-slate-800 shadow-inner">
               CGPA = (Sum of all Semester SGPAs) ÷ (Total Number of Semesters)
             </div>
             <p class="text-xs text-slate-500">
-              Formula expression: <code class="bg-slate-200 px-1.5 py-0.5 rounded text-slate-800">CGPA = (SGPA₁ + SGPA₂ + ... + SGPAₙ) / N</code>
+              Formula expression: <code
+                class="bg-slate-200 px-1.5 py-0.5 rounded text-slate-800">CGPA = (SGPA₁ + SGPA₂ + ... + SGPAₙ) / N</code>
             </p>
           </div>
-
+    
           <!-- H3: Credit-Weighted Formula -->
           <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 space-y-3">
             <h3 class="text-lg font-bold text-indigo-700 flex items-center gap-2">
@@ -649,27 +621,30 @@
             <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
               Recommended for engineering and credit-based degree courses:
             </p>
-            <div class="bg-white p-3.5 rounded-lg border border-slate-300 font-mono text-xs sm:text-sm text-center font-bold text-slate-800 shadow-inner">
+            <div
+              class="bg-white p-3.5 rounded-lg border border-slate-300 font-mono text-xs sm:text-sm text-center font-bold text-slate-800 shadow-inner">
               CGPA = Σ(SGPA × Semester Credits) ÷ Total Credits
             </div>
             <p class="text-xs text-slate-500">
               Formula expression: <code class="bg-slate-200 px-1.5 py-0.5 rounded text-slate-800">Σ(Sᵢ × Cᵢ) / ΣCᵢ</code>
             </p>
           </div>
-
+    
         </div>
       </section>
-
+    
       <!-- 3. H2: Step-by-Step Calculation Example -->
       <section class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200/80 space-y-4">
         <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 flex items-center gap-3">
-          <span class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center text-sm font-extrabold">3</span>
+          <span
+            class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center text-sm font-extrabold">3</span>
           Step-by-Step Calculation Example
         </h2>
         <p class="text-slate-600 leading-relaxed">
-          Let us look at an example of calculating CGPA from 4 semesters using both simple average and credit-weighted methods:
+          Let us look at an example of calculating CGPA from 4 semesters using both simple average and credit-weighted
+          methods:
         </p>
-
+    
         <!-- Example Table -->
         <div class="overflow-x-auto my-4 border border-slate-200 rounded-xl">
           <table class="w-full text-left text-xs sm:text-sm text-slate-700">
@@ -715,23 +690,27 @@
             </tbody>
           </table>
         </div>
-
+    
         <div class="space-y-2 text-xs sm:text-sm text-slate-600 bg-slate-50 p-4 rounded-xl border border-slate-200">
-          <p><strong>1. Simple Average Calculation:</strong> CGPA = 33.50 ÷ 4 = <strong class="text-indigo-600 font-bold">8.375 (or 8.38)</strong></p>
-          <p><strong>2. Credit-Weighted Calculation:</strong> CGPA = 718.2 ÷ 86 = <strong class="text-indigo-600 font-bold">8.351 (or 8.35)</strong></p>
+          <p><strong>1. Simple Average Calculation:</strong> CGPA = 33.50 ÷ 4 = <strong
+              class="text-indigo-600 font-bold">8.375 (or 8.38)</strong></p>
+          <p><strong>2. Credit-Weighted Calculation:</strong> CGPA = 718.2 ÷ 86 = <strong
+              class="text-indigo-600 font-bold">8.351 (or 8.35)</strong></p>
         </div>
       </section>
-
+    
       <!-- 4. H2: Difference Between SGPA and CGPA -->
       <section class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200/80 space-y-4">
         <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 flex items-center gap-3">
-          <span class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center text-sm font-extrabold">4</span>
+          <span
+            class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center text-sm font-extrabold">4</span>
           Difference Between SGPA and CGPA
         </h2>
         <p class="text-slate-600 leading-relaxed">
-          Understanding the distinction between SGPA and CGPA is vital when submitting mark sheets for job placements or higher academic studies:
+          Understanding the distinction between SGPA and CGPA is vital when submitting mark sheets for job placements or
+          higher academic studies:
         </p>
-
+    
         <div class="overflow-x-auto border border-slate-200 rounded-xl my-4">
           <table class="w-full text-left text-xs sm:text-sm text-slate-700">
             <thead class="bg-slate-100 font-bold text-slate-800 border-b border-slate-200">
@@ -766,88 +745,103 @@
           </table>
         </div>
       </section>
-
+    
       <!-- 5. H2: How to Calculate CGPA from SGPA – Detailed Guide -->
       <section class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200/80 space-y-4">
         <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 flex items-center gap-3">
-          <span class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center text-sm font-extrabold">5</span>
+          <span
+            class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center text-sm font-extrabold">5</span>
           How to Calculate CGPA from SGPA – Detailed Guide
         </h2>
         <p class="text-slate-600 leading-relaxed">
-          Follow these three easy steps to compute your overall grade point average using our free online SGPA to CGPA calculator:
+          Follow these three easy steps to compute your overall grade point average using our free online SGPA to CGPA
+          calculator:
         </p>
         <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-        <h3 class="text-xl font-bold text-slate-900">Method 1: Using Credits (Official University Method)</h3>
-        <p class="text-sm text-slate-600 leading-relaxed">
-          The credit-weighted system gives higher weight to semesters with higher total credit hours (such as semesters containing heavy lab work or major projects).
-        </p>
-        <ol class="list-decimal pl-5 text-sm text-slate-700 space-y-2">
-          <li>List down each semester's SGPA and assigned total credit hours.</li>
-          <li>Multiply each semester's SGPA by its credit value.</li>
-          <li>Add up all the resulting numbers to obtain total weighted quality points.</li>
-          <li>Divide this total sum by the grand total of credits across all listed semesters.</li>
-        </ol>
-      </div>
-
-      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-        <h3 class="text-xl font-bold text-slate-900">Method 2: Simple Average</h3>
-        <p class="text-sm text-slate-600 leading-relaxed">
-          If every semester in your program carries identical credit points (for instance, exactly 20 credits every semester), you can simply average the SGPAs:
-        </p>
-        <p class="font-mono text-xs bg-slate-100 p-3 rounded-xl text-slate-800">
-          CGPA = (SGPA₁ + SGPA₂ + SGPA₃ + SGPA₄) ÷ 4
-        </p>
-      </div>
-
-      <div class="bg-brand-50 border border-brand-200 p-5 rounded-2xl space-y-2">
-        <h3 class="text-lg font-bold text-brand-900">Which Method Should You Use?</h3>
-        <p class="text-xs sm:text-sm text-brand-800 leading-relaxed">
-          Always default to <strong>Method 1 (Credit-Weighted)</strong> because almost all technical and non-technical universities (including VTU, Anna University, AKTU, SPPU, Mumbai University) mandate credit-weighted CGPA evaluation.
-        </p>
-      </div>
+          <h3 class="text-xl font-bold text-slate-900">Method 1: Using Credits (Official University Method)</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            The credit-weighted system gives higher weight to semesters with higher total credit hours (such as semesters
+            containing heavy lab work or major projects).
+          </p>
+          <ol class="list-decimal pl-5 text-sm text-slate-700 space-y-2">
+            <li>List down each semester's SGPA and assigned total credit hours.</li>
+            <li>Multiply each semester's SGPA by its credit value.</li>
+            <li>Add up all the resulting numbers to obtain total weighted quality points.</li>
+            <li>Divide this total sum by the grand total of credits across all listed semesters.</li>
+          </ol>
+        </div>
+    
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+          <h3 class="text-xl font-bold text-slate-900">Method 2: Simple Average</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            If every semester in your program carries identical credit points (for instance, exactly 20 credits every
+            semester), you can simply average the SGPAs:
+          </p>
+          <p class="font-mono text-xs bg-slate-100 p-3 rounded-xl text-slate-800">
+            CGPA = (SGPA₁ + SGPA₂ + SGPA₃ + SGPA₄) ÷ 4
+          </p>
+        </div>
+    
+        <div class="bg-brand-50 border border-brand-200 p-5 rounded-2xl space-y-2">
+          <h3 class="text-lg font-bold text-brand-900">Which Method Should You Use?</h3>
+          <p class="text-xs sm:text-sm text-brand-800 leading-relaxed">
+            Always default to <strong>Method 1 (Credit-Weighted)</strong> because almost all technical and non-technical
+            universities (including VTU, Anna University, AKTU, SPPU, Mumbai University) mandate credit-weighted CGPA
+            evaluation.
+          </p>
+        </div>
       </section>
-
+    
       <!-- 6. H2: University-wise Notes on SGPA to CGPA -->
       <section class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200/80 space-y-4">
         <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 flex items-center gap-3">
-          <span class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center text-sm font-extrabold">6</span>
+          <span
+            class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center text-sm font-extrabold">6</span>
           University-wise Notes on SGPA to CGPA
         </h2>
         <p class="text-slate-600 leading-relaxed">
-          Different technical and non-technical universities follow minor variations in converting SGPA to CGPA or Percentage:
+          Different technical and non-technical universities follow minor variations in converting SGPA to CGPA or
+          Percentage:
         </p>
         <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
           <li class="p-4 bg-slate-50 rounded-xl border border-slate-200 text-xs sm:text-sm">
-            <strong class="text-slate-900 block mb-1">Anna University & VTU:</strong> Uses credit-weighted SGPA calculation for B.E / B.Tech degrees. Percentage is calculated as (CGPA - 0.75) × 10.
+            <strong class="text-slate-900 block mb-1">Anna University & VTU:</strong> Uses credit-weighted SGPA calculation
+            for B.E / B.Tech degrees. Percentage is calculated as (CGPA - 0.75) × 10.
           </li>
           <li class="p-4 bg-slate-50 rounded-xl border border-slate-200 text-xs sm:text-sm">
-            <strong class="text-slate-900 block mb-1">AKTU / UPTU & DU:</strong> Follows standard UGC 10-point credit scale where overall CGPA = Σ(SGPA × Credits) / Total Credits.
+            <strong class="text-slate-900 block mb-1">AKTU / UPTU & DU:</strong> Follows standard UGC 10-point credit scale
+            where overall CGPA = Σ(SGPA × Credits) / Total Credits.
           </li>
           <li class="p-4 bg-slate-50 rounded-xl border border-slate-200 text-xs sm:text-sm">
-            <strong class="text-slate-900 block mb-1">Mumbai University & SPPU:</strong> Calculates CGPA by taking credit-weighted average of all semesters from 1 to 8.
+            <strong class="text-slate-900 block mb-1">Mumbai University & SPPU:</strong> Calculates CGPA by taking
+            credit-weighted average of all semesters from 1 to 8.
           </li>
           <li class="p-4 bg-slate-50 rounded-xl border border-slate-200 text-xs sm:text-sm">
-            <strong class="text-slate-900 block mb-1">CBSE & Central Universities:</strong> Follows standard 10-point grading formula where Percentage = CGPA × 9.5.
+            <strong class="text-slate-900 block mb-1">CBSE & Central Universities:</strong> Follows standard 10-point
+            grading formula where Percentage = CGPA × 9.5.
           </li>
         </ul>
       </section>
-
+    
       <!-- 7. H2: Why Use Our SGPA to CGPA Calculator? -->
       <section class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200/80 space-y-4">
         <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 flex items-center gap-3">
-          <span class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center text-sm font-extrabold">7</span>
+          <span
+            class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center text-sm font-extrabold">7</span>
           Why Use Our SGPA to CGPA Calculator?
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
           <div class="p-4 bg-indigo-50/50 rounded-xl border border-indigo-100 text-center space-y-2">
             <span class="icon icon-bolt text-indigo-600 text-2xl"></span>
             <h3 class="font-bold text-slate-800 text-sm">Instant Real-Time Results</h3>
-            <p class="text-xs text-slate-600">Calculates overall CGPA dynamically as soon as you enter your SGPA numbers.</p>
+            <p class="text-xs text-slate-600">Calculates overall CGPA dynamically as soon as you enter your SGPA numbers.
+            </p>
           </div>
           <div class="p-4 bg-indigo-50/50 rounded-xl border border-indigo-100 text-center space-y-2">
             <span class="icon icon-lock text-indigo-600 text-2xl"></span>
             <h3 class="font-bold text-slate-800 text-sm">100% Free & No Sign-up</h3>
-            <p class="text-xs text-slate-600">No registration or personal data required. Unlimited free SGPA conversions.</p>
+            <p class="text-xs text-slate-600">No registration or personal data required. Unlimited free SGPA conversions.
+            </p>
           </div>
           <div class="p-4 bg-indigo-50/50 rounded-xl border border-indigo-100 text-center space-y-2">
             <span class="icon icon-mobile-screen text-indigo-600 text-2xl"></span>
@@ -856,101 +850,124 @@
           </div>
         </div>
       </section>
-
+    
       <!-- 8. H2: Frequently Asked Questions (FAQ) -->
       <section class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200/80 space-y-6">
         <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 flex items-center gap-3">
-          <span class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center text-sm font-extrabold">8</span>
+          <span
+            class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center text-sm font-extrabold">8</span>
           Frequently Asked Questions (FAQ)
         </h2>
-
+    
         <div class="space-y-3" id="faq-accordion-container">
-          
+    
           <!-- FAQ 1 -->
           <div class="border border-slate-200 rounded-xl overflow-hidden">
-            <button onclick="toggleAccordion(1)" class="w-full text-left p-4 bg-slate-50 hover:bg-slate-100 font-semibold text-slate-800 flex justify-between items-center text-sm sm:text-base">
+            <button onclick="toggleAccordion(1)"
+              class="w-full text-left p-4 bg-slate-50 hover:bg-slate-100 font-semibold text-slate-800 flex justify-between items-center text-sm sm:text-base">
               <h3>How to convert SGPA to CGPA accurately?</h3>
-              <span id="faq-icon-1" class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
+              <span id="faq-icon-1"
+                class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
             </button>
             <div id="faq-content-1" class="accordion-content px-4 bg-white">
               <p class="py-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
-                To accurately convert SGPA to CGPA, sum your SGPA for all semesters and divide by the total number of semesters if credit weights are equal. For credit-weighted programs, multiply each SGPA by its semester credits, sum the products, and divide by total credits.
+                To accurately convert SGPA to CGPA, sum your SGPA for all semesters and divide by the total number of
+                semesters if credit weights are equal. For credit-weighted programs, multiply each SGPA by its semester
+                credits, sum the products, and divide by total credits.
               </p>
             </div>
           </div>
-
+    
           <!-- FAQ 2 -->
           <div class="border border-slate-200 rounded-xl overflow-hidden">
-            <button onclick="toggleAccordion(2)" class="w-full text-left p-4 bg-slate-50 hover:bg-slate-100 font-semibold text-slate-800 flex justify-between items-center text-sm sm:text-base">
+            <button onclick="toggleAccordion(2)"
+              class="w-full text-left p-4 bg-slate-50 hover:bg-slate-100 font-semibold text-slate-800 flex justify-between items-center text-sm sm:text-base">
               <h3>Can I calculate CGPA from SGPA for 8 semesters engineering?</h3>
-              <span id="faq-icon-2" class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
+              <span id="faq-icon-2"
+                class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
             </button>
             <div id="faq-content-2" class="accordion-content px-4 bg-white">
               <p class="py-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
-                Yes, our tool includes a "8 Semesters" preset button tailored specifically for B.Tech / B.E engineering students to compute cumulative CGPA across all 8 semesters instantly.
+                Yes, our tool includes a "8 Semesters" preset button tailored specifically for B.Tech / B.E engineering
+                students to compute cumulative CGPA across all 8 semesters instantly.
               </p>
             </div>
           </div>
-
+    
           <!-- FAQ 3 -->
           <div class="border border-slate-200 rounded-xl overflow-hidden">
-            <button onclick="toggleAccordion(3)" class="w-full text-left p-4 bg-slate-50 hover:bg-slate-100 font-semibold text-slate-800 flex justify-between items-center text-sm sm:text-base">
+            <button onclick="toggleAccordion(3)"
+              class="w-full text-left p-4 bg-slate-50 hover:bg-slate-100 font-semibold text-slate-800 flex justify-between items-center text-sm sm:text-base">
               <h3>Is SGPA to CGPA simple average always correct?</h3>
-              <span id="faq-icon-3" class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
+              <span id="faq-icon-3"
+                class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
             </button>
             <div id="faq-content-3" class="accordion-content px-4 bg-white">
               <p class="py-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
-                Simple average is accurate when every semester carries equal total credit hours. If semesters have varying credits (e.g., 20 credits in Sem 1 vs 24 credits in Sem 3), the credit-weighted SGPA to CGPA formula should be used.
+                Simple average is accurate when every semester carries equal total credit hours. If semesters have varying
+                credits (e.g., 20 credits in Sem 1 vs 24 credits in Sem 3), the credit-weighted SGPA to CGPA formula should
+                be used.
               </p>
             </div>
           </div>
-
+    
           <!-- FAQ 4 -->
           <div class="border border-slate-200 rounded-xl overflow-hidden">
-            <button onclick="toggleAccordion(4)" class="w-full text-left p-4 bg-slate-50 hover:bg-slate-100 font-semibold text-slate-800 flex justify-between items-center text-sm sm:text-base">
+            <button onclick="toggleAccordion(4)"
+              class="w-full text-left p-4 bg-slate-50 hover:bg-slate-100 font-semibold text-slate-800 flex justify-between items-center text-sm sm:text-base">
               <h3>How do I convert calculated CGPA to percentage?</h3>
-              <span id="faq-icon-4" class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
+              <span id="faq-icon-4"
+                class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
             </button>
             <div id="faq-content-4" class="accordion-content px-4 bg-white">
               <p class="py-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
-                Under CBSE and UGC standard guidelines, Percentage (%) = CGPA × 9.5. For example, a CGPA of 8.0 equals 8.0 × 9.5 = 76%. You can also switch scale options directly in our calculator widget.
+                Under CBSE and UGC standard guidelines, Percentage (%) = CGPA × 9.5. For example, a CGPA of 8.0 equals 8.0 ×
+                9.5 = 76%. You can also switch scale options directly in our calculator widget.
               </p>
             </div>
           </div>
-
+    
           <!-- FAQ 5 -->
           <div class="border border-slate-200 rounded-xl overflow-hidden">
-            <button onclick="toggleAccordion(5)" class="w-full text-left p-4 bg-slate-50 hover:bg-slate-100 font-semibold text-slate-800 flex justify-between items-center text-sm sm:text-base">
+            <button onclick="toggleAccordion(5)"
+              class="w-full text-left p-4 bg-slate-50 hover:bg-slate-100 font-semibold text-slate-800 flex justify-between items-center text-sm sm:text-base">
               <h3>What is a good CGPA score for higher studies or jobs?</h3>
-              <span id="faq-icon-5" class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
+              <span id="faq-icon-5"
+                class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
             </button>
             <div id="faq-content-5" class="accordion-content px-4 bg-white">
               <p class="py-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
-                Generally, a CGPA of 7.5 or higher (approx 70%+) is considered very good for university campus placements, IT job interviews, and master's degree admissions abroad.
+                Generally, a CGPA of 7.5 or higher (approx 70%+) is considered very good for university campus placements,
+                IT job interviews, and master's degree admissions abroad.
               </p>
             </div>
           </div>
-
+    
           <!-- FAQ 6 -->
           <div class="border border-slate-200 rounded-xl overflow-hidden">
-            <button onclick="toggleAccordion(6)" class="w-full text-left p-4 bg-slate-50 hover:bg-slate-100 font-semibold text-slate-800 flex justify-between items-center text-sm sm:text-base">
+            <button onclick="toggleAccordion(6)"
+              class="w-full text-left p-4 bg-slate-50 hover:bg-slate-100 font-semibold text-slate-800 flex justify-between items-center text-sm sm:text-base">
               <h3>Does this SGPA to CGPA calculator work for 10-point scale?</h3>
-              <span id="faq-icon-6" class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
+              <span id="faq-icon-6"
+                class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
             </button>
             <div id="faq-content-6" class="accordion-content px-4 bg-white">
               <p class="py-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
-                Yes, Calculator Pro is fully formatted for 10-point GPA and CGPA grading scales widely adopted in India and international universities.
+                Yes, Calculator Pro is fully formatted for 10-point GPA and CGPA grading scales widely adopted in India and
+                international universities.
               </p>
             </div>
           </div>
-
+    
         </div>
       </section>
-
+    
       <!-- 9. H2: Related Calculators -->
-      <section id="related-calculators" class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200/80 space-y-4">
+      <section id="related-calculators"
+        class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200/80 space-y-4">
         <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 flex items-center gap-3">
-          <span class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center text-sm font-extrabold">9</span>
+          <span
+            class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center text-sm font-extrabold">9</span>
           Related Academic & Conversion Calculators
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -977,7 +994,8 @@
           <a href="marks-to-percentage-calculator.html"
             class="p-5 rounded-2xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all group">
             <div class="flex items-center justify-between mb-2">
-              <span class="text-sm font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Marks to Percentage
+              <span class="text-sm font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Marks to
+                Percentage
                 Converter</span>
               <span
                 class="icon icon-arrow-right text-xs text-slate-400 group-hover:text-indigo-600 transition-colors"></span>
@@ -986,9 +1004,9 @@
           </a>
         </div>
       </section>
-
+    
     </div>
-
+    
     <!-- Multi-Column Footer -->
     <footer class="bg-slate-900 text-slate-400 text-sm border-t border-slate-800 mt-16">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -1056,29 +1074,29 @@
 
     <!-- VANILLA JAVASCRIPT CALCULATOR ENGINE -->
     <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const btn = document.getElementById('calc-mobile-menu-btn');
+        const menu = document.getElementById('calc-mobile-menu');
+        const menuIcon = document.getElementById('calc-menu-icon');
+        const closeIcon = document.getElementById('calc-close-icon');
 
-  <!-- Inline JavaScript for Toggle -->
-
-  document.addEventListener('DOMContentLoaded', () => {
-    const btn = document.getElementById('calc-mobile-menu-btn');
-    const menu = document.getElementById('calc-mobile-menu');
-    const menuIcon = document.getElementById('calc-menu-icon');
-    const closeIcon = document.getElementById('calc-close-icon');
-
-    if (btn && menu) {
-      btn.addEventListener('click', () => {
-        const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', !isExpanded);
-        menu.classList.toggle('hidden');
-        menuIcon.classList.toggle('hidden');
-        closeIcon.classList.toggle('hidden');
+        if (btn && menu) {
+          btn.addEventListener('click', () => {
+            const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+            btn.setAttribute('aria-expanded', !isExpanded);
+            menu.classList.toggle('hidden');
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+          });
+        }
       });
-    }
-  });
 
       // Application State
       let calcMode = 'simple'; // 'simple' or 'weighted'
       let semesterCount = 0;
+
+      // Trash Icon SVG Helper
+      const trashSvg = `<svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 448 512"><path d="M135.2 17.7C140.6 6.8 151.7 0 163.8 0H284.2c12.1 0 23.2 6.8 28.6 17.7L320 32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 96 0 81.7 0 64S14.3 32 32 32h96l7.2-14.3zM32 128H416V448c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V128zm96 64c-8.8 0-16 7.2-16 16V400c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16V400c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16V400c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16z"/></svg>`;
 
       // DOM Load Initialization
       document.addEventListener('DOMContentLoaded', () => {
@@ -1095,18 +1113,17 @@
         const creditMetricBox = document.getElementById('credit-metric-box');
 
         if (mode === 'simple') {
-          simpleBtn.className = "px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-200 bg-indigo-600 text-white shadow-sm flex items-center gap-2";
+          simpleBtn.className = "px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-200 bg-brand-600 text-white shadow-xs flex items-center gap-2";
           weightedBtn.className = "px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-200 text-slate-300 hover:text-white flex items-center gap-2";
           creditHeader.classList.add('hidden');
           creditMetricBox.classList.add('hidden');
         } else {
-          weightedBtn.className = "px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-200 bg-indigo-600 text-white shadow-sm flex items-center gap-2";
+          weightedBtn.className = "px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-200 bg-brand-600 text-white shadow-xs flex items-center gap-2";
           simpleBtn.className = "px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-200 text-slate-300 hover:text-white flex items-center gap-2";
           creditHeader.classList.remove('hidden');
           creditMetricBox.classList.remove('hidden');
         }
 
-        // Re-render rows to hide/show credit inputs
         renderSemesterRowsVisibility();
         calculateCGPA();
       }
@@ -1118,7 +1135,7 @@
         semesterCount = 0;
 
         for (let i = 1; i <= count; i++) {
-          addSemesterRow(`Semester ${i}`, 8.0 + (i % 3) * 0.3, 20);
+          addSemesterRow(`Semester ${i}`, (8.0 + (i % 3) * 0.3).toFixed(2), 20);
         }
         calculateCGPA();
       }
@@ -1140,17 +1157,17 @@
             ${container.children.length + 1}
           </div>
           <div class="col-span-5 sm:col-span-5">
-            <input type="text" value="${name}" class="w-full bg-slate-50 sm:bg-white border border-slate-200 rounded-lg px-2.5 py-1.5 text-xs font-semibold text-slate-700 focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+            <input type="text" value="${name}" class="w-full bg-slate-50 sm:bg-white border border-slate-200 rounded-lg px-2.5 py-1.5 text-xs font-semibold text-slate-700 focus:ring-2 focus:ring-brand-500 focus:outline-none">
           </div>
           <div class="col-span-5 sm:col-span-4">
-            <input type="number" step="0.01" min="0" max="10" placeholder="e.g. 8.5" value="${defaultSgpa}" oninput="calculateCGPA()" class="sgpa-input w-full border border-slate-300 rounded-lg px-2.5 py-1.5 text-xs font-bold text-slate-800 focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+            <input type="number" step="0.01" min="0" max="10" placeholder="e.g. 8.5" value="${defaultSgpa}" oninput="calculateCGPA()" class="sgpa-input w-full border border-slate-300 rounded-lg px-2.5 py-1.5 text-xs font-bold font-mono text-slate-800 focus:ring-2 focus:ring-brand-500 focus:outline-none">
           </div>
           <div class="col-span-2 credit-input-col hidden sm:block">
-            <input type="number" step="1" min="1" max="50" placeholder="Credits" value="${defaultCredit}" oninput="calculateCGPA()" class="credit-input w-full border border-slate-300 rounded-lg px-2 py-1.5 text-xs font-semibold text-slate-700 focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+            <input type="number" step="1" min="1" max="50" placeholder="Credits" value="${defaultCredit}" oninput="calculateCGPA()" class="credit-input w-full border border-slate-300 rounded-lg px-2 py-1.5 text-xs font-semibold font-mono text-slate-700 focus:ring-2 focus:ring-brand-500 focus:outline-none">
           </div>
           <div class="col-span-1 text-center">
             <button onclick="removeSemesterRow('${rowId}')" class="text-slate-400 hover:text-rose-500 transition-colors p-1" title="Remove Row">
-              <span class="icon-trash-can text-xs"></span>
+              ${trashSvg}
             </button>
           </div>
         `;
@@ -1228,7 +1245,6 @@
             finalCGPA = totalSgpaSum / validSemestersCount;
           }
         } else {
-          // Weighted
           if (totalCreditsSum > 0) {
             finalCGPA = weightedProductSum / totalCreditsSum;
           } else if (validSemestersCount > 0) {
@@ -1268,7 +1284,7 @@
           perfText.textContent = "Outstanding academic record! Outstanding cumulative grade performance across semesters.";
         } else if (finalCGPA >= 7.0) {
           badge.textContent = "First Class";
-          badge.className = "px-3 py-1 rounded-full text-xs font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30";
+          badge.className = "px-3 py-1 rounded-full text-xs font-bold bg-brand-500/20 text-brand-300 border border-brand-500/30";
           perfText.textContent = "Very Good overall academic standing. Eligible for major university placements.";
         } else if (finalCGPA >= 6.0) {
           badge.textContent = "Second Class";
@@ -1294,19 +1310,21 @@
 
         const summaryText = `Academic CGPA Summary (Calculated via Calculator Pro):\nOverall CGPA: ${cgpa}/10.0\nEstimated Percentage: ${percentage}\nTotal Semesters: ${totalSem}\nDivision Grade: ${grade}`;
 
-        // Fallback robust copy
         const tempInput = document.createElement('textarea');
         tempInput.value = summaryText;
         document.body.appendChild(tempInput);
         tempInput.select();
-        document.execCommand('copy');
+        try {
+          document.execCommand('copy');
+          const copyTextBtn = document.getElementById('copy-btn-text');
+          copyTextBtn.textContent = "Copied!";
+          setTimeout(() => {
+            copyTextBtn.textContent = "Copy Summary";
+          }, 2000);
+        } catch (err) {
+          console.error('Copy failed', err);
+        }
         document.body.removeChild(tempInput);
-
-        const copyTextBtn = document.getElementById('copy-btn-text');
-        copyTextBtn.textContent = "Copied!";
-        setTimeout(() => {
-          copyTextBtn.textContent = "Copy Summary";
-        }, 2000);
       }
 
       // FAQ Accordion Toggle
@@ -1314,16 +1332,15 @@
         const content = document.getElementById(`faq-content-${index}`);
         const icon = document.getElementById(`faq-icon-${index}`);
 
-        if (content.classList.contains('open')) {
-          content.classList.remove('open');
-          icon.style.transform = 'rotate(0deg)';
-        } else {
-          // Close all others
-          document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
-          document.querySelectorAll('[id^="faq-icon-"]').forEach(i => i.style.transform = 'rotate(0deg)');
+        const isOpen = content.classList.contains('open');
 
+        // Close all others
+        document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
+        document.querySelectorAll('[id^="faq-icon-"]').forEach(i => i.classList.remove('rotate-180'));
+
+        if (!isOpen) {
           content.classList.add('open');
-          icon.style.transform = 'rotate(180deg)';
+          if (icon) icon.classList.add('rotate-180');
         }
       }
     </script>

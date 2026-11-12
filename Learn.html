@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIP Calculator - Free Online Mutual Fund SIP Return Calculator Pro</title>
+    <meta name="description" content="Use our Free Online SIP Calculator (SIP Return Calculator) to estimate your Systematic Investment Plan returns, step-up SIP with inflation, and mutual fund corpus growth accurately.">
+    <meta name="keywords" content="SIP Calculator, SIP Return Calculator, Mutual Fund SIP Calculator, Online SIP Calculator, Free SIP Calculator, SIP Investment Calculator, Systematic Investment Plan Calculator, Monthly SIP Calculator, SIP Future Value Calculator">
+    <link rel="canonical" href="https://calculatorpro.io/sip-calculator">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="SIP Calculator - Calculator Pro">
+    <meta property="og:description" content="Calculate your mutual fund systematic investment plan returns, inflation-adjusted corpus, and step-up growth with our advanced online SIP Calculator.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calculatorpro.io/sip-calculator">
+
+    <!-- Critical CSS for Instant Render (FCP < 1.5s, LCP < 1.5s) -->
+    <style>
+        *,::before,::after{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}
+        html{line-height:1.5;-webkit-text-size-adjust:100%;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+        body{margin:0;background-color:#f8fafc;color:#1e293b;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+        h1,h2,h3{margin:0;font-weight:700}
+        a{color:inherit;text-decoration:none}
+        button,input{font:inherit}
+        .max-w-7xl{max-width:80rem}
+        .mx-auto{margin-left:auto;margin-right:auto}
+        .px-4{padding-left:1rem;padding-right:1rem}
+        .sticky{position:sticky}
+        .top-0{top:0}
+        .z-50{z-index:50}
+        .w-full{width:100%}
+        .bg-white{background-color:#fff}
+        .border-b{border-bottom-width:1px}
+        .border-slate-100{border-color:#f1f5f9}
+        .shadow-sm{box-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05)}
+        .flex{display:flex}
+        .items-center{align-items:center}
+        .justify-between{justify-content:space-between}
+        .h-16{height:4rem}
+        .gap-3{gap:0.75rem}
+        .rounded-xl{border-radius:0.75rem}
+        .bg-indigo-600{background-color:#4f46e5}
+        .text-white{color:#fff}
+        .text-xl{font-size:1.25rem;line-height:1.75rem}
+        .font-bold{font-weight:700}
+        .text-slate-800{color:#1e293b}
+        .text-indigo-600{color:#4f46e5}
+        .hidden{display:none}
+        @media (min-width:768px){.md\:flex{display:flex}.md\:hidden{display:none}}
+        .text-4xl{font-size:2.25rem;line-height:2.5rem}
+        .font-extrabold{font-weight:800}
+        .text-slate-900{color:#0f172a}
+        .tracking-tight{letter-spacing:-0.025em}
+        .text-lg{font-size:1.125rem;line-height:1.75rem}
+        .text-slate-600{color:#475569}
+        .rounded-3xl{border-radius:1.5rem}
+        .shadow-xl{box-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1),0 8px 10px -6px rgb(0 0 0 / 0.1)}
+        .border{border-width:1px}
+        .border-slate-200{border-color:#e2e8f0}
+        .p-5{padding:1.25rem}
+        .bg-slate-50{background-color:#f8fafc}
+        .rounded-2xl{border-radius:1rem}
+        .text-sm{font-size:0.875rem;line-height:1.25rem}
+        .font-semibold{font-weight:600}
+        .text-slate-700{color:#334155}
+        .custom-range{-webkit-appearance:none;appearance:none;height:0.5rem;background:#e2e8f0;border-radius:9999px;outline:none}
+        .custom-range::-webkit-slider-thumb{-webkit-appearance:none;width:1.25rem;height:1.25rem;border-radius:9999px;background:#4f46e5;cursor:pointer}
+        .custom-range::-moz-range-thumb{width:1.25rem;height:1.25rem;border-radius:9999px;background:#4f46e5;cursor:pointer;border:none}
+        .bg-slate-900{background-color:#0f172a}
+        .text-indigo-400{color:#818cf8}
+        .text-3xl{font-size:1.875rem;line-height:2.25rem}
+        .text-emerald-400{color:#34d399}
+        .overflow-hidden{overflow:hidden}
+        .fixed{position:fixed}
+        .inset-0{inset:0}
+        .z-50{z-index:50}
+        .bg-slate-900\/60{background-color:rgb(15 23 42 / 0.6)}
+        .backdrop-blur-sm{-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+        .max-h-\[85vh\]{max-height:85vh}
+        .overflow-y-auto{overflow-y:auto}
+        .divide-y > :not([hidden]) ~ :not([hidden]){border-top-width:1px}
+        .divide-slate-100 > :not([hidden]) ~ :not([hidden]){border-color:#f1f5f9}
+        .accordion-content{max-height:0;overflow:hidden;transition:max-height 0.3s ease}
+        .accordion-content.open{max-height:300px;padding-top:0.75rem;padding-bottom:1.25rem}
+        .rotate-90{transform:rotate(90deg)}
+        .rotate-180{transform:rotate(180deg)}
+        .transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4,0,0.2,1);transition-duration:200ms}
+        .transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4,0,0.2,1);transition-duration:200ms}
+        .transition-colors{transition-property:color,background-color,border-color;transition-timing-function:cubic-bezier(0.4,0,0.2,1);transition-duration:150ms}
+    </style>
+
+    <!-- Tailwind CSS CDN + Exact Config -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            100: '#e0effe',
+                            300: '#7cd0f9',
+                            400: '#36bbf4',
+                            500: '#2563eb',
+                            600: '#1d4ed8',
+                            700: '#1e40af',
+                            800: '#1e3a8a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- JSON-LD FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a step up SIP calculator and how does it work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A step up SIP calculator helps you calculate your mutual fund returns when you increase your monthly systematic investment plan contribution by a fixed percentage or amount every year, aligning with salary hikes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the SIP calculator with inflation adjust real returns?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An inflation adjusted SIP calculator discounts your future maturity corpus by a specified inflation rate to show the actual purchasing power of your money in today's terms."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much SIP is needed to accumulate 1 crore in 15 years?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To accumulate ₹1 crore in 15 years at an expected annual return of 12%, you need to invest approximately ₹23,000 per month through a disciplined Systematic Investment Plan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use this online SIP calculator for retirement planning?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, our retirement SIP calculator allows you to project your long-term corpus over 20, 25, or 30 years with compounding benefits to secure your post-retirement life."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between SIP and lumpsum investment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A SIP involves investing fixed periodic amounts (monthly/quarterly) in mutual funds, enabling rupee cost averaging, whereas lumpsum requires investing a large single capital amount at once."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Site Branding & Navigation -->
+    <header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors">
+                        Calculator<span class="text-indigo-600">-Pro</span>
+                    </span>
+                </a>
+
+                <nav class="hidden md:flex items-center gap-1" aria-label="Main Navigation">
+                    <div class="relative group">
+                        <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors">
+                            Age
+                            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+                            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+                                <a href="age-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Age Calculator</a>
+                                <a href="birthday-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Birthday Calculator</a>
+                                <a href="age-difference-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Age Difference Calculator</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative group">
+                        <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors">
+                            Time & Date
+                            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+                            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+                                <a href="time-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Time Calculator</a>
+                                <a href="date-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Date Calculator</a>
+                                <a href="work-days-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Work Days Calculator</a>
+                                <a href="time-zone-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">TimeZone Calculator</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative group">
+                        <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors">
+                            Converter
+                            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+                            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+                                <a href="unit-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Unit Converter</a>
+                                <a href="cgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">CGPA to Percentage</a>
+                                <a href="sgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">SGPA to Percentage</a>
+                                <a href="sgpa-to-cgpa-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">SGPA to CGPA</a>
+                                <a href="marks-to-percentage-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Marks to Percentage</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative group">
+                        <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors">
+                            Financial
+                            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+                            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+                                <a href="sip-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">SIP Calculator</a>
+                                <a href="emi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">EMI Loan Calculator</a>
+                                <a href="Compound-Interest-Calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Compound Interest Calculator</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative group">
+                        <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors">
+                            Health
+                            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="absolute right-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+                            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+                                <a href="bmi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">BMI Calculator</a>
+                                <a href="waist-to-hip-ratio-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">WHR Calculator</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="flex md:hidden">
+                    <button id="calc-mobile-menu-btn" type="button" class="p-2.5 rounded-xl text-slate-600 hover:text-indigo-600 hover:bg-slate-100/80 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors" aria-controls="calc-mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+                        <svg id="calc-menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                        <svg id="calc-close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="calc-mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white shadow-xl">
+            <div class="px-4 pt-3 pb-6 space-y-4">
+                <div class="border-b border-slate-100 pb-3">
+                    <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Age</div>
+                    <a href="age-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Age Calculator</a>
+                    <a href="birthday-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Birthday Calculator</a>
+                    <a href="age-difference-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Age Difference Calculator</a>
+                </div>
+                <div class="border-b border-slate-100 pb-3">
+                    <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Time & Date</div>
+                    <a href="time-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Time Calculator</a>
+                    <a href="date-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Date Calculator</a>
+                    <a href="work-days-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Work Days Calculator</a>
+                    <a href="time-zone-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">TimeZone Calculator</a>
+                </div>
+                <div class="border-b border-slate-100 pb-3">
+                    <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Converter</div>
+                    <a href="unit-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Unit Converter</a>
+                    <a href="cgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">CGPA to Percentage</a>
+                    <a href="sgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">SGPA to Percentage</a>
+                    <a href="sgpa-to-cgpa-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">SGPA to CGPA</a>
+                    <a href="marks-to-percentage-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Marks to Percentage</a>
+                </div>
+                <div class="border-b border-slate-100 pb-3">
+                    <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Financial</div>
+                    <a href="sip-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">SIP Calculator</a>
+                    <a href="emi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">EMI Loan Calculator</a>
+                    <a href="Compound-Interest-Calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Compound Interest Calculator</a>
+                </div>
+                <div>
+                    <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Health</div>
+                    <a href="bmi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">BMI Calculator</a>
+                    <a href="waist-to-hip-ratio-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">WHR Calculator</a>
+                </div>
+            </div>
+        </div>
+    </header>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+    <!-- Hero Section -->
+    <section class="text-center max-w-4xl mx-auto mb-10 md:mb-14">
+        <span
+            class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-indigo-50 text-indigo-700 border border-indigo-100 mb-4 shadow-sm">
+            <svg class="w-3.5 h-3.5 text-indigo-500" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                    d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" />
+            </svg>
+            Free & Instant Online Tool
+        </span>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            Percentage Increase &amp; Decrease Calculator <span class="text-brand-600">+ Discount Calculator</span>
+        </h1>
+        <p class="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
+            Use this free <strong>Percentage Increase &amp; Decrease Calculator</strong> to find how much a value has gone
+            up or down. Easily evaluate percentage changes, price markups, and calculate shopping savings with our
+            integrated <strong>Discount Calculator</strong>. Instant accurate results with step-by-step formulas and
+            real-life examples.
+        </p>
+    </section>
+</main>
+    
+
+    
+    
+
+    <footer class="bg-slate-900 text-slate-400 text-sm border-t border-slate-800 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2 text-white font-bold text-lg">
+                        <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                        </div>
+                        <span>Calculator<span class="text-indigo-400">-Pro</span></span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Calculator Pro provides free, fast, and clinically accurate online tools for health, financial, mathematical, and everyday conversion needs.
+                    </p>
+                    <div class="text-xs text-slate-500">
+                        &copy; <span id="current-year">2026</span> Calculator Pro. All rights reserved.
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-3 text-sm">Quick Links</h3>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="unit-converter.html" class="hover:text-white transition-colors">Unit Converter</a></li>
+                        <li><a href="gst-calculator.html" class="hover:text-white transition-colors">GST Calculator</a></li>
+                        <li><a href="cgpa-to-percentage-converter.html" class="hover:text-white transition-colors">CGPA to Percentage</a></li>
+                        <li><a href="sgpa-to-cgpa-calculator.html" class="hover:text-white transition-colors">SGPA to CGPA</a></li>
+                        <li><a href="work-days-calculator.html" class="hover:text-white transition-colors">Work Days Calculator</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-3 text-sm">Calculators</h3>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="age-calculator.html" class="hover:text-white transition-colors">Age Calculator</a></li>
+                        <li><a href="time-calculator.html" class="hover:text-white transition-colors">Time Calculator</a></li>
+                        <li><a href="sip-calculator.html" class="hover:text-white transition-colors">SIP Financial Calculator</a></li>
+                        <li><a href="bmi-calculator.html" class="hover:text-white transition-colors">BMI Health Calculator</a></li>
+                        <li><a href="percentage-calculator.html" class="hover:text-white transition-colors">Percentage Calculator</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-3 text-sm">Legal & Info</h3>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html" class="hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="editorial-guidelines.html" class="hover:text-white transition-colors">Editorial Guidelines</a></li>
+                        <li><a href="contact-us.html" class="hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="disclaimer.html" class="hover:text-white transition-colors">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('calc-mobile-menu-btn');
+            const menu = document.getElementById('calc-mobile-menu');
+            const menuIcon = document.getElementById('calc-menu-icon');
+            const closeIcon = document.getElementById('calc-close-icon');
+            if (btn && menu) {
+                btn.addEventListener('click', () => {
+                    const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+                    btn.setAttribute('aria-expanded', !isExpanded);
+                    menu.classList.toggle('hidden');
+                    menuIcon.classList.toggle('hidden');
+                    closeIcon.classList.toggle('hidden');
+                });
+            }
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        });
+
+        let currentMode = 'regular';
+        let yearlyScheduleData = [];
+
+        function formatINR(val) {
+            return '₹' + Math.round(val).toLocaleString('en-IN');
+        }
+
+        function toggleAdvancedOptions() {
+            const container = document.getElementById('advanced-options-container');
+            const chevron = document.getElementById('advanced-chevron');
+            if (container.classList.contains('hidden')) {
+                container.classList.remove('hidden');
+                chevron.classList.add('rotate-90');
+            } else {
+                container.classList.add('hidden');
+                chevron.classList.remove('rotate-90');
+            }
+        }
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('svg');
+                const isOpen = content.classList.contains('open');
+                document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
+                document.querySelectorAll('.faq-btn svg').forEach(i => i.classList.remove('rotate-180'));
+                if (!isOpen) {
+                    content.classList.add('open');
+                    if (icon) icon.classList.add('rotate-180');
+                }
+            });
+        });
+
+        function switchCalcMode(mode) {
+            currentMode = mode;
+            const regBtn = document.getElementById('mode-regular-btn');
+            const goalBtn = document.getElementById('mode-goal-btn');
+            const labelMonthly = document.getElementById('label-monthly-inv');
+            const goalHint = document.getElementById('res-goal-hint');
+
+            if (mode === 'goal') {
+                regBtn.className = 'px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg text-slate-600 hover:text-slate-900 transition-all';
+                goalBtn.className = 'px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg bg-indigo-600 text-white shadow-sm transition-all';
+                labelMonthly.innerHTML = '<svg class="w-4 h-4 text-indigo-600 inline-block mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Targeted Wealth Corpus';
+                goalHint.classList.remove('hidden');
+                const invInput = document.getElementById('monthly-inv-input');
+                const invRange = document.getElementById('monthly-inv-range');
+                invInput.value = 10000000;
+                invInput.min = 100000;
+                invInput.max = 100000000;
+                invRange.min = 100000;
+                invRange.max = 50000000;
+                invRange.value = 10000000;
+            } else {
+                goalBtn.className = 'px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg text-slate-600 hover:text-slate-900 transition-all';
+                regBtn.className = 'px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg bg-indigo-600 text-white shadow-sm transition-all';
+                labelMonthly.innerHTML = '<svg class="w-4 h-4 text-indigo-600 inline-block mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg> Monthly Investment Amount';
+                goalHint.classList.add('hidden');
+                const invInput = document.getElementById('monthly-inv-input');
+                const invRange = document.getElementById('monthly-inv-range');
+                invInput.value = 10000;
+                invInput.min = 500;
+                invInput.max = 1000000;
+                invRange.min = 500;
+                invRange.max = 100000;
+                invRange.value = 10000;
+            }
+            calculateSIP();
+        }
+
+        function setPresetTenure(years) {
+            document.getElementById('tenure-input').value = years;
+            document.getElementById('tenure-range').value = years;
+            calculateSIP();
+        }
+
+        function calculateSIP() {
+            const rawMainVal = parseFloat(document.getElementById('monthly-inv-input').value) || 0;
+            const rateYearly = parseFloat(document.getElementById('return-rate-input').value) || 0;
+            const years = parseInt(document.getElementById('tenure-input').value) || 1;
+            const stepUpPct = parseFloat(document.getElementById('stepup-input').value) || 0;
+            const inflationPct = parseFloat(document.getElementById('inflation-input').value) || 0;
+
+            let monthlyInv = rawMainVal;
+            let targetCorpus = 10000000;
+
+            if (currentMode === 'goal') {
+                targetCorpus = rawMainVal;
+                const i = (rateYearly / 100) / 12;
+                const n = years * 12;
+                const factor = (((Math.pow(1 + i, n) - 1) / i) * (1 + i));
+                monthlyInv = Math.round(targetCorpus / factor);
+            }
+
+            const i = (rateYearly / 100) / 12;
+            let currentMonthly = monthlyInv;
+            let totalInvested = 0;
+            let totalFutureValue = 0;
+            yearlyScheduleData = [];
+
+            for (let yr = 1; yr <= years; yr++) {
+                let yearlyDeposited = 0;
+                for (let m = 1; m <= 12; m++) {
+                    totalInvested += currentMonthly;
+                    yearlyDeposited += currentMonthly;
+                    totalFutureValue = (totalFutureValue + currentMonthly) * (1 + i);
+                }
+                yearlyScheduleData.push({
+                    year: yr,
+                    yearlyDeposit: yearlyDeposited,
+                    totalInvested: totalInvested,
+                    futureValue: totalFutureValue
+                });
+                if (stepUpPct > 0) {
+                    currentMonthly += currentMonthly * (stepUpPct / 100);
+                }
+            }
+
+            const wealthGain = Math.max(0, totalFutureValue - totalInvested);
+            let inflationAdjustedValue = totalFutureValue;
+            if (inflationPct > 0) {
+                inflationAdjustedValue = totalFutureValue / Math.pow(1 + (inflationPct / 100), years);
+                document.getElementById('inflation-result-row').classList.remove('hidden');
+            } else {
+                document.getElementById('inflation-result-row').classList.add('hidden');
+            }
+
+            if (currentMode === 'goal') {
+                document.getElementById('res-maturity-val').innerText = formatINR(monthlyInv) + " / mo";
+            } else {
+                document.getElementById('res-maturity-val').innerText = formatINR(totalFutureValue);
+            }
+
+            document.getElementById('res-total-invested').innerText = formatINR(totalInvested);
+            document.getElementById('res-wealth-gain').innerText = '+' + formatINR(wealthGain);
+            document.getElementById('res-inflation-val').innerText = formatINR(inflationAdjustedValue);
+
+            const totalForBar = totalInvested + wealthGain;
+            const investedPct = Math.round((totalInvested / totalForBar) * 100) || 50;
+            const returnsPct = 100 - investedPct;
+
+            document.getElementById('res-invested-pct').innerText = investedPct + '%';
+            document.getElementById('res-returns-pct').innerText = returnsPct + '%';
+            document.getElementById('bar-invested').style.width = investedPct + '%';
+            document.getElementById('bar-returns').style.width = returnsPct + '%';
+
+            renderScheduleTable();
+        }
+
+        function renderScheduleTable() {
+            const tbody = document.getElementById('schedule-tbody');
+            if (!tbody) return;
+            tbody.innerHTML = '';
+            yearlyScheduleData.forEach(row => {
+                const tr = document.createElement('tr');
+                tr.className = "hover:bg-slate-50 transition-colors";
+                tr.innerHTML = `
+                    <td class="py-3 px-3 font-semibold text-indigo-600">Year ${row.year}</td>
+                    <td class="py-3 px-3">${formatINR(row.yearlyDeposit)}</td>
+                    <td class="py-3 px-3">${formatINR(row.totalInvested)}</td>
+                    <td class="py-3 px-3 font-bold text-slate-800">${formatINR(row.futureValue)}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function toggleScheduleModal() {
+            document.getElementById('schedule-modal').classList.toggle('hidden');
+        }
+
+        function exportScheduleCSV() {
+            let csvContent = "data:text/csv;charset=utf-8,Year,Yearly Deposit,Total Invested,Total Future Value\n";
+            yearlyScheduleData.forEach(r => {
+                csvContent += `${r.year},${Math.round(r.yearlyDeposit)},${Math.round(r.totalInvested)},${Math.round(r.futureValue)}\n`;
+            });
+            const encodedUri = encodeURI(csvContent);
+            const link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", "SIP_Growth_Schedule_CalculatorPro.csv");
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        function copySummary() {
+            const matVal = document.getElementById('res-maturity-val').innerText;
+            const invested = document.getElementById('res-total-invested').innerText;
+            const gain = document.getElementById('res-wealth-gain').innerText;
+            const textToCopy = `SIP Investment Summary (Calculator Pro):\nTotal Invested: ${invested}\nWealth Gain: ${gain}\nMaturity Value: ${matVal}`;
+            const textArea = document.createElement("textarea");
+            textArea.value = textToCopy;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            const btnText = document.getElementById('copy-btn-text');
+            btnText.innerText = "Copied!";
+            setTimeout(() => { btnText.innerText = "Copy Results"; }, 2000);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const pairs = [
+                ['monthly-inv-input', 'monthly-inv-range'],
+                ['return-rate-input', 'return-rate-range'],
+                ['tenure-input', 'tenure-range'],
+                ['stepup-input', 'stepup-range'],
+                ['inflation-input', 'inflation-range']
+            ];
+            pairs.forEach(([numId, rangeId]) => {
+                const numEl = document.getElementById(numId);
+                const rangeEl = document.getElementById(rangeId);
+                if (numEl && rangeEl) {
+                    numEl.addEventListener('input', (e) => {
+                        rangeEl.value = e.target.value;
+                        calculateSIP();
+                    });
+                    rangeEl.addEventListener('input', (e) => {
+                        numEl.value = e.target.value;
+                        calculateSIP();
+                    });
+                }
+            });
+            calculateSIP();
+        });
+    </script>
+</body>
+</html>

@@ -23,13 +23,18 @@
   <meta name="twitter:title" content="Exact Age Difference Calculator Online Free - Calculate Age Gap">
   <meta name="twitter:description" content="Calculate exact age gap between two people or dates in years, months, days, total days, and weeks. Free, instant, and accurate date of birth comparison.">
 
-  <!-- Tailwind CSS Script -->
-  
-  <!-- Critical Inline CSS for Smooth Accordion & System Font Fallbacks -->
+  <!-- Critical CSS for Instant Render (FCP < 1.5s, LCP < 1.5s) -->
   <style>
+    /* System font fallback priority for high performance zero layout shift */
     body {
-      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #f8fafc;
+      color: #1e293b;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
     }
+    /* Minimal essential accordion and animation rules */
     .accordion-content {
       max-height: 0;
       overflow: hidden;
@@ -38,8 +43,15 @@
     .accordion-content.open {
       max-height: 500px;
     }
+    /* Smooth toast animation */
+    #toast-msg {
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
   </style>
-<link rel="stylesheet" href="./css/styles.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <link rel="stylesheet" href="./css/styles.min.css">
+
   <!-- Structured Data JSON-LD (FAQ & WebApplication) -->
   <script type="application/ld+json">
   {
@@ -69,7 +81,7 @@
             "name": "How do I calculate age difference online free?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Simply select the date of birth for Person 1 and Person 2 in our Free Age Difference Calculator tool above. Click Calculate to instantly view the age gap in years, months, days, total weeks, and total days."
+              "text": "Simply select the date of birth for Person 1 and Person 2 in our Free Age Difference Calculator tool above. Click 'Calculate' to instantly view the age gap in years, months, days, total weeks, and total days."
             }
           },
           {
@@ -85,7 +97,7 @@
             "name": "Does this Exact Age Difference Calculator handle leap years correctly?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes! Our chronological calculation engine takes into account leap years (February 29) as well as the varying lengths of individual calendar months to ensure mathematical precision."
+              "text": "Yes! Our chronological calculation engine takes into account leap years (February 29) as well as the varying lengths of individual calendar months (28, 29, 30, or 31 days) to ensure mathematical precision."
             }
           },
           {
@@ -101,7 +113,7 @@
             "name": "Can I calculate age difference in hours and minutes?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes, our calculator calculates the age difference down to exact total hours and total minutes."
+              "text": "Yes, by entering the optional time of birth fields for both individuals, our calculator calculates the age difference down to exact total hours and total minutes."
             }
           },
           {
@@ -125,7 +137,7 @@
             "name": "What is the average age gap between couples?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Globally, the average age gap in heterosexual marriages is approximately 2 to 3 years, with the male partner typically being older."
+              "text": "Globally, the average age gap in heterosexual marriages is approximately 2 to 3 years, with the male partner typically being older. However, age differences varies widely across cultures and personal choices."
             }
           }
         ]
@@ -137,131 +149,175 @@
 
 <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white">
 
-  <!-- Toast Notification -->
-  <div id="toast-msg" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 pointer-events-none transition-all duration-300 bg-slate-900 text-white px-4 py-3 rounded-xl shadow-xl flex items-center gap-2 border border-slate-700 text-sm">
-    <svg class="w-5 h-5 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-    </svg>
-    <span id="toast-text">Notification message</span>
-  </div>
+  
 
   <!-- Site Branding & Navigation Sticky Header -->
-  <header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-all duration-200">
+  <header
+    class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
   
         <!-- Brand Logo & Name -->
-        <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-brand-500 rounded-lg p-1">
-          <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-brand-500 text-white shadow-md shadow-brand-100 group-hover:bg-brand-600 transition-colors duration-200">
-            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-              <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 14H7v-2h10v2zm0-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+        <a href="index.html"
+          class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
+          <div
+            class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
             </svg>
           </div>
-          <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-brand-600 transition-colors duration-200">
-            Calculator<span class="text-brand-500">-Pro</span>
+          <span
+            class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
+            Calculator<span class="text-indigo-600">-Pro</span>
           </span>
         </a>
   
         <!-- Desktop Navigation -->
         <nav class="hidden md:flex items-center gap-1" aria-label="Main Navigation">
-  
-          <!-- Category 1: Age -->
           <div class="relative group">
-            <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-brand-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-brand-500">
+            <button type="button"
+              class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors">
               Age
-              <svg class="w-4 h-4 text-slate-400 group-hover:text-brand-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform"
+                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
-            <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
-              <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5 space-y-1">
-                <a href="age-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-100/50 rounded-lg transition-colors">Age Calculator</a>
-                <a href="birthday-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-100/50 rounded-lg transition-colors">Birthday Calculator</a>
-                <a href="age-difference-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-100/50 rounded-lg transition-colors">Age Difference Calculator</a>
+            <div
+              class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+              <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+                <a href="age-calculator.html"
+                  class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Age
+                  Calculator</a>
+                <a href="birthday-calculator.html"
+                  class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Birthday
+                  Calculator</a>
+                <a href="age-difference-calculator.html"
+                  class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Age
+                  Difference Calculator</a>
               </div>
             </div>
           </div>
   
-          <!-- Category 2: Time -->
           <div class="relative group">
-            <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-brand-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-brand-500">
+            <button type="button"
+              class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors">
               Time & Date
-              <svg class="w-4 h-4 text-slate-400 group-hover:text-brand-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform"
+                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
-            <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
-              <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5 space-y-1">
-                <a href="time-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-100/50 rounded-lg transition-colors">Time Calculator</a>
-                <a href="date-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-100/50 rounded-lg transition-colors">Date Calculator</a>
-                <a href="work-days-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-100/50 rounded-lg transition-colors">Work Days Calculator</a>
-                <a href="time-zone-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-100/50 rounded-lg transition-colors">TimeZone Calculator</a>
+            <div
+              class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+              <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+                <a href="time-calculator.html"
+                  class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Time
+                  Calculator</a>
+                <a href="date-calculator.html"
+                  class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Date
+                  Calculator</a>
+                <a href="work-days-calculator.html"
+                  class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Work
+                  Days Calculator</a>
+                <a href="time-zone-converter.html"
+                  class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">TimeZone
+                  Calculator</a>
               </div>
             </div>
           </div>
   
-          <!-- Category 3: Converter -->
           <div class="relative group">
-            <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-brand-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-brand-500">
+            <button type="button"
+              class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors">
               Converter
-              <svg class="w-4 h-4 text-slate-400 group-hover:text-brand-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform"
+                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
-            <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
-              <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5 space-y-1">
-                <a href="unit-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-100/50 rounded-lg transition-colors">Unit Converter</a>
-                <a href="cgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-100/50 rounded-lg transition-colors">CGPA to Percentage</a>
-                <a href="sgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-100/50 rounded-lg transition-colors">SGPA to Percentage</a>
-                <a href="sgpa-to-cgpa-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-100/50 rounded-lg transition-colors">SGPA to CGPA</a>
-                <a href="marks-to-percentage-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-100/50 rounded-lg transition-colors">Marks to Percentage</a>
+            <div
+              class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+              <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+                <a href="unit-converter.html"
+                  class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Unit
+                  Converter</a>
+                <a href="cgpa-to-percentage-converter.html"
+                  class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">CGPA
+                  to Percentage</a>
+                <a href="sgpa-to-percentage-converter.html"
+                  class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">SGPA
+                  to Percentage</a>
+                <a href="sgpa-to-cgpa-converter.html"
+                  class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">SGPA
+                  to CGPA</a>
+                <a href="marks-to-percentage-calculator.html"
+                  class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Marks
+                  to Percentage</a>
               </div>
             </div>
           </div>
   
-          <!-- Category 4: Financial -->
           <div class="relative group">
-            <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-brand-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-brand-500">
+            <button type="button"
+              class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors">
               Financial
-              <svg class="w-4 h-4 text-slate-400 group-hover:text-brand-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform"
+                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
-            <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
-              <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5 space-y-1">
-                <a href="sip-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-100/50 rounded-lg transition-colors">SIP Calculator</a>
-                <a href="emi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-100/50 rounded-lg transition-colors">EMI Loan Calculator</a>
-                <a href="Compound-Interest-Calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-100/50 rounded-lg transition-colors">Compound Interest</a>
+            <div
+              class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+              <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+                <a href="sip-calculator.html"
+                  class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">SIP
+                  Calculator</a>
+                <a href="emi-calculator.html"
+                  class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">EMI
+                  Loan Calculator</a>
+                <a href="Compound-Interest-Calculator.html"
+                  class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Compound
+                  Interest Calculator</a>
               </div>
             </div>
           </div>
   
-          <!-- Category 5: Health -->
           <div class="relative group">
-            <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-brand-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-brand-500">
+            <button type="button"
+              class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors">
               Health
-              <svg class="w-4 h-4 text-slate-400 group-hover:text-brand-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform"
+                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
-            <div class="absolute right-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
-              <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5 space-y-1">
-                <a href="bmi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-100/50 rounded-lg transition-colors">BMI Calculator</a>
-                <a href="waist-to-hip-ratio-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-100/50 rounded-lg transition-colors">WHR Calculator</a>
+            <div
+              class="absolute right-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+              <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+                <a href="bmi-calculator.html"
+                  class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">BMI
+                  Calculator</a>
+                <a href="waist-to-hip-ratio-calculator.html"
+                  class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">WHR
+                  Calculator</a>
               </div>
             </div>
           </div>
-  
         </nav>
+  
   
         <!-- Mobile Hamburger Button -->
         <div class="flex md:hidden">
-          <button id="calc-mobile-menu-btn" type="button" class="p-2.5 rounded-xl text-slate-600 hover:text-brand-600 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-colors duration-200" aria-controls="calc-mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+          <button id="calc-mobile-menu-btn" type="button"
+            class="p-2.5 rounded-xl text-slate-600 hover:text-indigo-600 hover:bg-slate-100/80 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors"
+            aria-controls="calc-mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
             <svg id="calc-menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
             <svg id="calc-close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
@@ -269,84 +325,103 @@
       </div>
     </div>
   
-    <!-- Mobile Full-Width Menu Container -->
-    <div id="calc-mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white shadow-xl transition-all duration-200">
+    <div id="calc-mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white shadow-xl">
       <div class="px-4 pt-3 pb-6 space-y-4">
         <div class="border-b border-slate-100 pb-3">
           <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Age</div>
-          <a href="age-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-brand-600 rounded-lg">Age Calculator</a>
-          <a href="birthday-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-brand-600 rounded-lg">Birthday Calculator</a>
-          <a href="age-difference-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-brand-600 rounded-lg">Age Difference Calculator</a>
+          <a href="age-calculator.html"
+            class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Age
+            Calculator</a>
+          <a href="birthday-calculator.html"
+            class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Birthday
+            Calculator</a>
+          <a href="age-difference-calculator.html"
+            class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Age
+            Difference Calculator</a>
         </div>
         <div class="border-b border-slate-100 pb-3">
           <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Time & Date</div>
-          <a href="time-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-brand-600 rounded-lg">Time Calculator</a>
-          <a href="date-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-brand-600 rounded-lg">Date Calculator</a>
-          <a href="work-days-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-brand-600 rounded-lg">Work Days Calculator</a>
-          <a href="time-zone-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-brand-600 rounded-lg">TimeZone Calculator</a>
+          <a href="time-calculator.html"
+            class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Time
+            Calculator</a>
+          <a href="date-calculator.html"
+            class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Date
+            Calculator</a>
+          <a href="work-days-calculator.html"
+            class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Work
+            Days Calculator</a>
+          <a href="time-zone-converter.html"
+            class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">TimeZone
+            Calculator</a>
         </div>
         <div class="border-b border-slate-100 pb-3">
           <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Converter</div>
-          <a href="unit-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-brand-600 rounded-lg">Unit Converter</a>
-          <a href="cgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-brand-600 rounded-lg">CGPA to Percentage</a>
-          <a href="sgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-brand-600 rounded-lg">SGPA to Percentage</a>
-          <a href="sgpa-to-cgpa-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-brand-600 rounded-lg">SGPA to CGPA</a>
-          <a href="marks-to-percentage-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-brand-600 rounded-lg">Marks to Percentage</a>
+          <a href="unit-converter.html"
+            class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Unit
+            Converter</a>
+          <a href="cgpa-to-percentage-converter.html"
+            class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">CGPA
+            to Percentage</a>
+          <a href="sgpa-to-percentage-converter.html"
+            class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">SGPA
+            to Percentage</a>
+          <a href="sgpa-to-cgpa-converter.html"
+            class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">SGPA
+            to CGPA</a>
+          <a href="marks-to-percentage-calculator.html"
+            class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Marks
+            to Percentage</a>
         </div>
         <div class="border-b border-slate-100 pb-3">
           <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Financial</div>
-          <a href="sip-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-brand-600 rounded-lg">SIP Calculator</a>
-          <a href="emi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-brand-600 rounded-lg">EMI Loan Calculator</a>
-          <a href="Compound-Interest-Calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-brand-600 rounded-lg">Compound Interest</a>
+          <a href="sip-calculator.html"
+            class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">SIP
+            Calculator</a>
+          <a href="emi-calculator.html"
+            class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">EMI
+            Loan Calculator</a>
+          <a href="Compound-Interest-Calculator.html"
+            class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Compound
+            Interest Calculator</a>
         </div>
         <div>
           <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Health</div>
-          <a href="bmi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-brand-600 rounded-lg">BMI Calculator</a>
-          <a href="waist-to-hip-ratio-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-brand-600 rounded-lg">WHR Calculator</a>
+          <a href="bmi-calculator.html"
+            class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">BMI
+            Calculator</a>
+          <a href="waist-to-hip-ratio-calculator.html"
+            class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">WHR
+            Calculator</a>
         </div>
       </div>
     </div>
   </header>
 
+
   <!-- Main Content Container -->
   <main>
-    <!-- Hero Section -->
-    <section class="relative pt-10 pb-14 bg-slate-100/70 border-b border-slate-200/60 overflow-hidden">
+    <!-- Hero Section (Target LCP Element - Zero delay layout) -->
+    <section class="relative pt-10 pb-14 bg-brand-100/30 overflow-hidden">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         
         <!-- Tag Badge -->
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-100 text-brand-600 text-xs font-semibold tracking-wide uppercase mb-6 shadow-sm">
-          <svg class="w-4 h-4 text-brand-500 fill-current" viewBox="0 0 20 20">
-            <path d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.381z"/>
-          </svg>
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-100 text-brand-700 text-xs font-semibold tracking-wide uppercase mb-5 shadow-sm">
+          <svg class="w-4 h-4 text-brand-500 fill-current" viewBox="0 0 24 24"><path d="M11 15h2v2h-2zm0-8h2v6h-2zm1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
           Free Age Gap Calculator Online
         </div>
 
-        <!-- Main H1 Title -->
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight max-w-4xl mx-auto mb-6">
+        <!-- Single H1 Title -->
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight max-w-4xl mx-auto mb-5">
           Age Difference Calculator
         </h1>
 
-        <!-- Keywords Rich Intro Paragraph -->
+        <!-- First 100 Words Intro targeting keywords -->
         <p class="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
           Our <strong>Age Difference Calculator</strong> is a free online age gap tool designed to <strong>calculate age difference</strong> between two people or dates in exact <strong>years, months, and days</strong>. Whether you want to know the <strong>age difference between two dates</strong> for couples, siblings, or historical milestones, this <strong>exact age difference calculator</strong> instantly determines <strong>who is older</strong>, calculates total days, weeks, and hours, and checks the popular <strong>half your age plus seven calculator</strong> dating rule.
         </p>
 
-        <!-- Feature Badges -->
-        <div class="mt-8 flex flex-wrap justify-center gap-4 text-xs sm:text-sm font-medium text-slate-600">
-          <span class="flex items-center gap-1.5">
-            <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-            100% Precise Leap Year Math
-          </span>
-          <span class="flex items-center gap-1.5">
-            <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-            Privacy-First Browser Engine
-          </span>
-          <span class="flex items-center gap-1.5">
-            <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-            Dating Age Rule Check
-          </span>
-        </div>
+       
+        
 
       </div>
     </section>
@@ -355,18 +430,16 @@
     <section id="calculator" class="py-6 -mt-8 mb-12 relative z-20">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="bg-white rounded-3xl shadow-xl border border-slate-200/80 p-6 sm:p-8 lg:p-10 transition-all duration-300 hover:shadow-2xl">
+        <div class="bg-white rounded-3xl shadow-xl border border-slate-200/80 p-6 sm:p-8 lg:p-10">
           <form id="age-diff-form" class="space-y-6" onsubmit="event.preventDefault();">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                 
                 <!-- Person 1 Inputs -->
-                <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200/80 relative group hover:border-brand-300 transition-colors">
+                <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200/80 relative group hover:border-brand-400 transition-colors">
                     <div class="flex items-center justify-between mb-3">
                         <label for="p1-name" class="block text-sm font-semibold text-slate-700 flex items-center gap-2">
-                            <span class="inline-flex items-center justify-center w-6 h-6 rounded-md bg-brand-100 text-brand-600">
-                              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                                <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
-                              </svg>
+                            <span class="inline-flex items-center justify-center p-1 bg-brand-100 rounded-lg text-brand-600">
+                              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
                             </span> First Person
                         </label>
                         <span class="text-xs text-slate-400 font-medium">Person A</span>
@@ -383,13 +456,11 @@
                 </div>
 
                 <!-- Person 2 Inputs -->
-                <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200/80 relative group hover:border-brand-300 transition-colors">
+                <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200/80 relative group hover:border-purple-300 transition-colors">
                     <div class="flex items-center justify-between mb-3">
                         <label for="p2-name" class="block text-sm font-semibold text-slate-700 flex items-center gap-2">
-                            <span class="inline-flex items-center justify-center w-6 h-6 rounded-md bg-purple-100 text-purple-600">
-                              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                                <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
-                              </svg>
+                            <span class="inline-flex items-center justify-center p-1 bg-purple-100 rounded-lg text-purple-600">
+                              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
                             </span> Second Person
                         </label>
                         <span class="text-xs text-slate-400 font-medium">Person B</span>
@@ -407,13 +478,11 @@
 
             </div>
 
-            <!-- Reference Date Option -->
-            <div class="bg-brand-100/40 p-4 rounded-2xl border border-brand-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <!-- Optional Reference Date -->
+            <div class="bg-brand-100/50 p-4 rounded-2xl border border-brand-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div class="flex items-center gap-3">
-                    <div class="w-9 h-9 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center shrink-0">
-                      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                      </svg>
+                    <div class="w-9 h-9 rounded-xl bg-brand-500 text-white flex items-center justify-center shrink-0">
+                      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>
                     </div>
                     <div>
                         <label for="ref-date" class="text-sm font-semibold text-slate-800 block">Comparison / Reference Date</label>
@@ -429,37 +498,33 @@
                 <div class="flex items-center gap-2 w-full sm:w-auto">
                     <button type="button" id="swap-btn" title="Swap Dates" 
                             class="flex-1 sm:flex-none px-4 py-2.5 border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-sm font-medium rounded-xl transition-all flex items-center justify-center gap-2">
-                        <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"/>
-                        </svg> Swap
+                        <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"></path></svg>
+                        Swap
                     </button>
                     <button type="button" id="reset-btn" title="Reset Form" 
                             class="flex-1 sm:flex-none px-4 py-2.5 border border-slate-200 bg-white hover:bg-slate-50 text-slate-600 text-sm font-medium rounded-xl transition-all flex items-center justify-center gap-2">
-                        <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
-                        </svg> Reset
+                        <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                        Reset
                     </button>
                 </div>
                 <button type="button" id="calculate-btn" 
                         class="w-full sm:w-auto px-8 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-xl shadow-lg shadow-brand-100 transition-all transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2">
-                    <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2H6zm1 2h6v2H7V4zm6 6H7V8h6v2zm-6 4h2v2H7v-2zm4 0h2v2h-2v-2z" clip-rule="evenodd"/>
-                    </svg> Calculate Difference
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-6 14h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2zm4 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2zM7 7h2v2H7V7zm0 4h2v2H7v-2zm0 4h2v2H7v-2z"/></svg>
+                    Calculate Difference
                 </button>
             </div>
           </form>
 
-          <!-- Interactive Results Container -->
+          <!-- Interactive Dynamic Results Output Container -->
           <div id="results-container" class="mt-10 pt-8 border-t border-slate-200 space-y-6 hidden">
               
-              <!-- Main Gap Banner -->
-              <div class="bg-brand-600 text-white rounded-2xl p-6 sm:p-8 shadow-lg relative overflow-hidden">
-                  <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <!-- Main Banner Output -->
+              <div class="bg-brand-600 text-white rounded-2xl p-6 sm:p-8 shadow-md relative overflow-hidden">
+                  <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 relative z-10">
                       <div>
                           <div class="flex items-center gap-2 text-brand-100 text-xs font-semibold uppercase tracking-wider mb-2">
-                              <svg class="w-4 h-4 text-brand-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                              </svg> Exact Age Gap Result
+                              <svg class="w-4 h-4 fill-current text-brand-300" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                              Exact Age Gap Result
                           </div>
                           <div id="primary-gap-output" class="text-2xl sm:text-4xl font-extrabold tracking-tight">
                               0 Years, 0 Months, 0 Days
@@ -469,10 +534,9 @@
                           </p>
                       </div>
                       <button type="button" id="share-btn" 
-                              class="shrink-0 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/20 rounded-xl text-sm font-medium transition-all">
-                          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
-                          </svg> Copy Summary
+                              class="shrink-0 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-xl text-sm font-medium transition-all">
+                          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+                          Copy Summary
                       </button>
                   </div>
               </div>
@@ -483,13 +547,12 @@
                   <div class="bg-slate-50 rounded-2xl p-5 border border-slate-200">
                       <div class="flex items-center justify-between mb-2">
                           <span id="res-p1-title" class="font-bold text-slate-800 text-base">Person 1</span>
-                          <span class="text-xs px-2.5 py-1 bg-brand-100 text-brand-600 font-semibold rounded-full">Current Age</span>
+                          <span class="text-xs px-2.5 py-1 bg-brand-100 text-brand-700 font-semibold rounded-full">Current Age</span>
                       </div>
                       <div id="res-p1-age" class="text-xl font-extrabold text-slate-900 mb-2">--</div>
                       <div id="res-p1-bday" class="text-xs text-slate-500 flex items-center gap-1.5 border-t border-slate-200/80 pt-2">
-                          <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M3 21h18a2 2 0 002-2V9a2 2 0 00-2-2H3a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                          </svg> Next birthday in --
+                          <svg class="w-4 h-4 text-brand-500 shrink-0 fill-current" viewBox="0 0 24 24"><path d="M12 6c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6 3h-3V7c0-1.1-.9-2-2-2h-2c-1.1 0-2 .9-2 2v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V11c0-1.1-.9-2-2-2zm0 12H6V11h12v10z"/></svg>
+                          Next birthday in --
                       </div>
                   </div>
 
@@ -501,9 +564,8 @@
                       </div>
                       <div id="res-p2-age" class="text-xl font-extrabold text-slate-900 mb-2">--</div>
                       <div id="res-p2-bday" class="text-xs text-slate-500 flex items-center gap-1.5 border-t border-slate-200/80 pt-2">
-                          <svg class="w-4 h-4 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M3 21h18a2 2 0 002-2V9a2 2 0 00-2-2H3a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                          </svg> Next birthday in --
+                          <svg class="w-4 h-4 text-purple-500 shrink-0 fill-current" viewBox="0 0 24 24"><path d="M12 6c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6 3h-3V7c0-1.1-.9-2-2-2h-2c-1.1 0-2 .9-2 2v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V11c0-1.1-.9-2-2-2zm0 12H6V11h12v10z"/></svg>
+                          Next birthday in --
                       </div>
                   </div>
               </div>
@@ -511,9 +573,8 @@
               <!-- Detailed Breakdown Stats -->
               <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200">
                   <h3 class="text-sm font-bold text-slate-700 uppercase tracking-wider mb-4 flex items-center gap-2">
-                      <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-                      </svg> Total Time Units Between Dates
+                      <svg class="w-4 h-4 text-brand-600 shrink-0 fill-current" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                      Total Time Units Between Dates
                   </h3>
                   <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 text-center">
                       <div class="bg-white p-3.5 rounded-xl border border-slate-200/80">
@@ -540,12 +601,10 @@
               </div>
 
               <!-- Half Your Age Plus 7 Rule Module -->
-              <div class="bg-emerald-50/70 rounded-2xl p-6 border border-emerald-200/80">
+              <div class="bg-emerald-50/60 rounded-2xl p-6 border border-emerald-200/80">
                   <div class="flex items-start gap-3 mb-3">
                       <div class="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
-                          <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                          </svg>
+                          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
                       </div>
                       <div>
                           <h3 class="text-base font-bold text-slate-900">Half Your Age Plus 7 Social Guideline Check</h3>
@@ -553,7 +612,7 @@
                       </div>
                   </div>
                   <div id="half-rule-status" class="bg-white p-4 rounded-xl border border-emerald-200/60 text-sm text-slate-700 space-y-2">
-                      <!-- Dynamically filled JS -->
+                      <!-- Populated dynamically by JS -->
                   </div>
               </div>
 
@@ -564,781 +623,885 @@
     </section>
 
     <!-- Content Section: How to Use -->
-    <section class="py-12 bg-white border-t border-slate-200/60">
+    <section class="py-12 bg-white">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+    
         <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-6">
           How to Use This Age Difference Calculator
         </h2>
-
+    
         <p class="text-slate-600 leading-relaxed mb-6">
-          Calculating the exact date of birth difference between two people or events is seamless with our online age gap tool. Follow these three quick steps:
+          Calculating the exact date of birth difference between two people or events is seamless with our online age gap
+          tool. Follow these three quick steps:
         </p>
-
+    
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          
-          <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200/70">
-            <div class="w-9 h-9 rounded-xl bg-brand-500 text-white font-bold flex items-center justify-center mb-3">1</div>
+    
+          <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100">
+            <div class="w-9 h-9 rounded-xl bg-indigo-600 text-white font-bold flex items-center justify-center mb-3">1</div>
             <h3 class="font-bold text-slate-800 text-base mb-2">Enter Date 1 (Person 1)</h3>
-            <p class="text-xs text-slate-600 leading-normal">Input the first date of birth or earlier calendar date along with an optional name and time of birth.</p>
+            <p class="text-xs text-slate-600 leading-normal">Input the first date of birth or earlier calendar date along
+              with an optional name and time of birth.</p>
           </div>
-
-          <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200/70">
-            <div class="w-9 h-9 rounded-xl bg-brand-500 text-white font-bold flex items-center justify-center mb-3">2</div>
+    
+          <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100">
+            <div class="w-9 h-9 rounded-xl bg-indigo-600 text-white font-bold flex items-center justify-center mb-3">2</div>
             <h3 class="font-bold text-slate-800 text-base mb-2">Enter Date 2 (Person 2)</h3>
-            <p class="text-xs text-slate-600 leading-normal">Input the second date of birth. Our exact age gap algorithm accepts dates in any order.</p>
+            <p class="text-xs text-slate-600 leading-normal">Input the second date of birth. Our exact age gap algorithm
+              accepts dates in any order.</p>
           </div>
-
-          <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200/70">
-            <div class="w-9 h-9 rounded-xl bg-brand-500 text-white font-bold flex items-center justify-center mb-3">3</div>
+    
+          <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100">
+            <div class="w-9 h-9 rounded-xl bg-indigo-600 text-white font-bold flex items-center justify-center mb-3">3</div>
             <h3 class="font-bold text-slate-800 text-base mb-2">View Instant Results</h3>
-            <p class="text-xs text-slate-600 leading-normal">Click Calculate to view exact years, months, days, total weeks, hours, and half-your-age-plus-seven dating checks.</p>
+            <p class="text-xs text-slate-600 leading-normal">Click Calculate to view exact years, months, days, total weeks,
+              hours, and half-your-age-plus-seven dating checks.</p>
           </div>
-
+    
         </div>
-
+    
       </div>
     </section>
-
+    
     <!-- Content Section: How Age Difference is Calculated -->
-    <section class="py-12 bg-slate-50 border-y border-slate-200/80">
+    <section class="py-12 bg-slate-50 border-y border-slate-100">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+    
         <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-6">
           How Age Difference is Calculated
         </h2>
-
+    
         <div class="space-y-6 text-slate-600 leading-relaxed">
-          
+    
           <div>
             <h3 class="text-xl font-bold text-slate-800 mb-3">Age Gap Formula</h3>
             <p class="mb-3">
-              Calculating the chronological age gap between two dates involves subtracting the earlier date of birth (DOB<sub>1</sub>) from the later date of birth (DOB<sub>2</sub>). The primary formula can be represented as:
+              Calculating the chronological age gap between two dates involves subtracting the earlier date of birth
+              ($DOB_1$) from the later date of birth ($DOB_2$). The primary formula can be represented as:
             </p>
-            <div class="p-4 bg-white rounded-xl border border-slate-200 font-mono text-sm text-brand-600 font-semibold mb-3 overflow-x-auto">
+            <div
+              class="p-4 bg-white rounded-xl border border-slate-200 font-mono text-sm text-indigo-900 font-semibold mb-3 overflow-x-auto">
               Age Gap = Date of Birth 2 - Date of Birth 1
             </div>
             <p class="text-sm">
-              Because months vary between 28, 29, 30, and 31 days, and leap years add an extra day every 4 years, a standard 365-day division can produce errors. Our tool calculates full years first, then remaining full months, and finally remaining days.
+              Because months vary between 28, 29, 30, and 31 days, and leap years add an extra day every 4 years, a standard
+              365-day division can produce errors. Our tool calculates full years first, then remaining full months, and
+              finally remaining days.
             </p>
           </div>
-
+    
           <div>
             <h3 class="text-xl font-bold text-slate-800 mb-3">Step-by-Step Worked Math Example</h3>
             <p class="mb-3">
-              Let us calculate the exact age difference between <strong>Person A (born March 15, 1990)</strong> and <strong>Person B (born November 28, 1995)</strong>:
+              Let us calculate the exact age difference between <strong>Person A (born March 15, 1990)</strong> and
+              <strong>Person B (born November 28, 1995)</strong>:
             </p>
-            
+    
             <ul class="list-disc pl-5 space-y-2 text-sm">
-              <li><strong>Step 1 (Year Calculation):</strong> From March 15, 1990 to March 15, 1995 is exactly <strong>5 full years</strong>.</li>
-              <li><strong>Step 2 (Month Calculation):</strong> From March 15, 1995 to October 15, 1995 is exactly <strong>7 full months</strong>.</li>
-              <li><strong>Step 3 (Day Calculation):</strong> From October 15, 1995 to November 28, 1995 is 16 days in October (31 - 15) plus 28 days in November = <strong>13 days</strong> remaining after adjusting full months.</li>
+              <li><strong>Step 1 (Year Calculation):</strong> From March 15, 1990 to March 15, 1995 is exactly <strong>5
+                  full years</strong>.</li>
+              <li><strong>Step 2 (Month Calculation):</strong> From March 15, 1995 to October 15, 1995 is exactly <strong>7
+                  full months</strong>.</li>
+              <li><strong>Step 3 (Day Calculation):</strong> From October 15, 1995 to November 28, 1995 is 16 days in
+                October (31 - 15) plus 28 days in November = <strong>13 days</strong> remaining after adjusting full months.
+              </li>
               <li><strong>Final Age Difference:</strong> 5 Years, 8 Months, and 13 Days (or 2,084 Total Days).</li>
             </ul>
           </div>
-
+    
         </div>
-
+    
       </div>
     </section>
-
+    
     <!-- Content Section: Half Your Age Plus 7 Rule Explained -->
     <section class="py-12 bg-white">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+    
         <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-6">
           Half Your Age Plus 7 Rule Explained
         </h2>
-
+    
         <p class="text-slate-600 leading-relaxed mb-6">
-          The <strong>half-your-age-plus-seven rule</strong> is a widely recognized social guideline used to gauge whether an age gap in a romantic relationship is considered socially acceptable.
+          The <strong>half-your-age-plus-seven rule</strong> is a widely recognized social guideline used to gauge whether
+          an age gap in a romantic relationship is considered socially acceptable.
         </p>
-
+    
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          
+    
           <div class="p-5 bg-amber-50/60 rounded-2xl border border-amber-200">
             <h3 class="text-lg font-bold text-amber-900 mb-2">Minimum Partner Age Formula</h3>
             <p class="text-xs text-amber-800 mb-3">To find the youngest person you can socially date:</p>
             <div class="p-3 bg-white rounded-lg font-mono text-sm text-slate-800 font-bold border border-amber-200">
               Min Age = (Your Age / 2) + 7
             </div>
-            <p class="text-xs text-slate-600 mt-2">Example: If you are 30 years old: (30 / 2) + 7 = 22 years old.</p>
+            <p class="text-xs text-slate-600 mt-2">Example: If you are 30 years old: $(30 / 2) + 7 = 22$ years old.</p>
           </div>
-
-          <div class="p-5 bg-brand-100/50 rounded-2xl border border-brand-300/60">
-            <h3 class="text-lg font-bold text-brand-600 mb-2">Maximum Partner Age Formula</h3>
-            <p class="text-xs text-brand-600 mb-3">To find the oldest person you can socially date:</p>
-            <div class="p-3 bg-white rounded-lg font-mono text-sm text-slate-800 font-bold border border-brand-300/60">
+    
+          <div class="p-5 bg-indigo-50/60 rounded-2xl border border-indigo-200">
+            <h3 class="text-lg font-bold text-indigo-900 mb-2">Maximum Partner Age Formula</h3>
+            <p class="text-xs text-indigo-800 mb-3">To find the oldest person you can socially date:</p>
+            <div class="p-3 bg-white rounded-lg font-mono text-sm text-slate-800 font-bold border border-indigo-200">
               Max Age = (Your Age - 7) * 2
             </div>
-            <p class="text-xs text-slate-600 mt-2">Example: If you are 30 years old: (30 - 7) × 2 = 46 years old.</p>
+            <p class="text-xs text-slate-600 mt-2">Example: If you are 30 years old: $(30 - 7) \times 2 = 46$ years old.</p>
           </div>
-
+    
         </div>
-
         <div class="overflow-x-auto bg-white rounded-2xl border border-slate-200 shadow-sm">
           <table class="w-full text-left text-sm text-slate-700">
             <thead class="bg-slate-50 text-slate-900 font-semibold border-b border-slate-200">
-                <tr>
-                    <th class="py-3.5 px-4">Your Current Age</th>
-                    <th class="py-3.5 px-4">Minimum Acceptable Age</th>
-                    <th class="py-3.5 px-4">Maximum Acceptable Age</th>
-                    <th class="py-3.5 px-4">Acceptable Age Range</th>
-                </tr>
+              <tr>
+                <th class="py-3.5 px-4">Your Current Age</th>
+                <th class="py-3.5 px-4">Minimum Acceptable Age</th>
+                <th class="py-3.5 px-4">Maximum Acceptable Age</th>
+                <th class="py-3.5 px-4">Acceptable Age Range</th>
+              </tr>
             </thead>
             <tbody class="divide-y divide-slate-100">
-                <tr><td class="py-3 px-4 font-bold">18</td><td class="py-3 px-4">16</td><td class="py-3 px-4">22</td><td class="py-3 px-4">16 – 22 years</td></tr>
-                <tr class="bg-slate-50/50"><td class="py-3 px-4 font-bold">20</td><td class="py-3 px-4">17</td><td class="py-3 px-4">26</td><td class="py-3 px-4">17 – 26 years</td></tr>
-                <tr><td class="py-3 px-4 font-bold">25</td><td class="py-3 px-4">19.5</td><td class="py-3 px-4">36</td><td class="py-3 px-4">19.5 – 36 years</td></tr>
-                <tr class="bg-slate-50/50"><td class="py-3 px-4 font-bold">30</td><td class="py-3 px-4">22</td><td class="py-3 px-4">46</td><td class="py-3 px-4">22 – 46 years</td></tr>
-                <tr><td class="py-3 px-4 font-bold">40</td><td class="py-3 px-4">27</td><td class="py-3 px-4">66</td><td class="py-3 px-4">27 – 66 years</td></tr>
-                <tr class="bg-slate-50/50"><td class="py-3 px-4 font-bold">50</td><td class="py-3 px-4">32</td><td class="py-3 px-4">86</td><td class="py-3 px-4">32 – 86 years</td></tr>
+              <tr>
+                <td class="py-3 px-4 font-bold">18</td>
+                <td class="py-3 px-4">16</td>
+                <td class="py-3 px-4">22</td>
+                <td class="py-3 px-4">16 – 22 years</td>
+              </tr>
+              <tr class="bg-slate-50/50">
+                <td class="py-3 px-4 font-bold">20</td>
+                <td class="py-3 px-4">17</td>
+                <td class="py-3 px-4">26</td>
+                <td class="py-3 px-4">17 – 26 years</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-bold">25</td>
+                <td class="py-3 px-4">19.5</td>
+                <td class="py-3 px-4">36</td>
+                <td class="py-3 px-4">19.5 – 36 years</td>
+              </tr>
+              <tr class="bg-slate-50/50">
+                <td class="py-3 px-4 font-bold">30</td>
+                <td class="py-3 px-4">22</td>
+                <td class="py-3 px-4">46</td>
+                <td class="py-3 px-4">22 – 46 years</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-bold">40</td>
+                <td class="py-3 px-4">27</td>
+                <td class="py-3 px-4">66</td>
+                <td class="py-3 px-4">27 – 66 years</td>
+              </tr>
+              <tr class="bg-slate-50/50">
+                <td class="py-3 px-4 font-bold">50</td>
+                <td class="py-3 px-4">32</td>
+                <td class="py-3 px-4">86</td>
+                <td class="py-3 px-4">32 – 86 years</td>
+              </tr>
             </tbody>
           </table>
         </div>
-
+    
       </div>
     </section>
-
+    
     <!-- Content Section: Common Uses -->
-    <section class="py-12 bg-slate-50 border-y border-slate-200/80">
+    <section class="py-12 bg-slate-50 border-y border-slate-100">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+    
         <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-6">
           Common Uses of an Age Difference Calculator
         </h2>
-
+    
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          
-          <div class="p-5 bg-white rounded-2xl border border-slate-200/80 shadow-sm">
-            <div class="text-brand-600 text-lg font-bold mb-2 flex items-center gap-2">
-              <svg class="w-5 h-5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-              Couple Age Difference
+    
+          <div class="p-5 bg-white rounded-2xl border border-slate-200">
+            <div class="text-indigo-600 text-xl font-bold mb-2"><span class="icon icon-heart"></span> Couple Age Difference
             </div>
-            <p class="text-xs sm:text-sm text-slate-600">Determine the exact age gap between romantic partners, spouses, or dating couples for relationship milestone tracking.</p>
+            <p class="text-xs sm:text-sm text-slate-600">Determine the exact age gap between romantic partners, spouses, or
+              dating couples for relationship milestone tracking.</p>
           </div>
-
-          <div class="p-5 bg-white rounded-2xl border border-slate-200/80 shadow-sm">
-            <div class="text-brand-600 text-lg font-bold mb-2 flex items-center gap-2">
-              <svg class="w-5 h-5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+    
+          <div class="p-5 bg-white rounded-2xl border border-slate-200">
+            <div class="text-indigo-600 text-xl font-bold mb-2">
+              <span class="inline-flex items-center gap-1.5">
+                <svg class="size-5 fill-current shrink-0" viewBox="0 0 448 512" aria-hidden="true">
+                  <path
+                    d="m335.5 4l288 160c15.4 8.6 21 28.1 12.4 43.5s-28.1 21-43.5 12.4L320 68.6L47.5 220c-15.4 8.6-34.9 3-43.5-12.4s-3-34.9 12.4-43.5L304.5 4c9.7-5.4 21.4-5.4 31.1 0zM320 160a40 40 0 1 1 0 80a40 40 0 1 1 0-80m-176 96a40 40 0 1 1 0 80a40 40 0 1 1 0-80m312 40a40 40 0 1 1 80 0a40 40 0 1 1-80 0M226.9 491.4L200 441.5V480c0 17.7-14.3 32-32 32h-48c-17.7 0-32-14.3-32-32v-38.5l-26.9 49.9c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l37.9-70.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c16.3 0 31.9 4.5 45.4 12.6l33.6-62.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c32.4 0 62.1 17.8 77.5 46.3l33.6 62.3c13.5-8.1 29.1-12.6 45.4-12.6h19.5c32.4 0 62.1 17.8 77.5 46.3l37.9 70.3c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8L552 441.5V480c0 17.7-14.3 32-32 32h-48c-17.7 0-32-14.3-32-32v-38.5l-26.9 49.9c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l36.3-67.5c-1.7-1.7-3.2-3.6-4.3-5.8L376 345.5V400c0 17.7-14.3 32-32 32h-48c-17.7 0-32-14.3-32-32v-54.5l-26.9 49.9c-1.2 2.2-2.6 4.1-4.3 5.8l36.3 67.5c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8z" />
+                </svg>
+              </span>
               Sibling Age Gap
             </div>
-            <p class="text-xs sm:text-sm text-slate-600">Find the precise calendar age difference between brothers and sisters to compare childhood milestones.</p>
+            <p class="text-xs sm:text-sm text-slate-600">Find the precise calendar age difference between brothers and
+              sisters to compare childhood milestones.</p>
           </div>
-
-          <div class="p-5 bg-white rounded-2xl border border-slate-200/80 shadow-sm">
-            <div class="text-brand-600 text-lg font-bold mb-2 flex items-center gap-2">
-              <svg class="w-5 h-5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+    
+          <div class="p-5 bg-white rounded-2xl border border-slate-200">
+            <div class="text-indigo-600 text-xl font-bold mb-2">
+              <span class="inline-flex items-center gap-1.5">
+                <svg class="size-5 fill-current shrink-0" viewBox="0 0 448 512" aria-hidden="true">
+                  <path
+                    d="M224 0a80 80 0 1 1 0 160a80 80 0 1 1 0-160m212.8 382.8L373.5 462c-16.6 20.7-46.8 24.1-67.5 7.5c-17.6-14.1-22.7-38.1-13.5-57.7l-.8-.1c-38.9-5.6-74.3-25.1-99.7-54.8v-36.8c0-17.7-14.3-32-32-32s-32 14.3-32 32v48c0 .8 0 1.6.1 2.4l101.4 50.7c23.7 11.9 33.3 40.7 21.5 64.4s-40.7 33.3-64.4 21.5L27.2 427.3c-1.1-.5-2.2-1.1-3.3-1.7c-4.9-2.8-9.2-6.4-12.6-10.6c-4.6-5.4-7.8-11.7-9.6-18.4c-3.3-12-1.9-25.2 4.8-36.6c.6-1.1 1.3-2.2 2-3.2l67.1-100.7C102.3 216 147.3 192 195.4 192h75.2c46.5 0 90.1 22.5 117.2 60.3l50.7 70.9c2.2 3 4 6.1 5.5 9.4c2.9 6.7 4.3 13.8 4 20.8c-.3 10.6-4.2 21-11.2 29.4M320 332a44 44 0 1 0-88 0a44 44 0 1 0 88 0" />
+                </svg>
+              </span>
               Parent-Child Age Difference
             </div>
-            <p class="text-xs sm:text-sm text-slate-600">Calculate how old a parent was when their child was born down to the exact days and total hours.</p>
+            <p class="text-xs sm:text-sm text-slate-600">Calculate how old a parent was when their child was born down to
+              the exact days and total hours.</p>
           </div>
-
-          <div class="p-5 bg-white rounded-2xl border border-slate-200/80 shadow-sm">
-            <div class="text-brand-600 text-lg font-bold mb-2 flex items-center gap-2">
-              <svg class="w-5 h-5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+    
+          <div class="p-5 bg-white rounded-2xl border border-slate-200">
+            <div class="text-indigo-600 text-xl font-bold mb-2">
+              <span class="inline-flex items-center gap-1.5">
+                <svg class="size-5 fill-current shrink-0" viewBox="0 0 640 512">
+                  <path
+                    d="m243.4 2.6l-224 96c-14 6-21.8 21-18.7 35.8S16.8 160 32 160v8c0 13.3 10.7 24 24 24h400c13.3 0 24-10.7 24-24v-8c15.2 0 28.3-10.7 31.3-25.6s-4.8-29.9-18.7-35.8l-224-96c-8-3.4-17.2-3.4-25.2 0M128 224H64v196.3c-.6.3-1.2.7-1.8 1.1l-48 32c-11.7 7.8-17 22.4-12.9 35.9S17.9 512 32 512h448c14.1 0 26.5-9.2 30.6-22.7s-1.1-28.1-12.9-35.9l-48-32c-.6-.4-1.2-.7-1.8-1.1L448 224h-64v192h-40V224h-64v192h-48V224h-64v192h-40zM256 64a32 32 0 1 1 0 64a32 32 0 1 1 0-64" />
+                </svg>
+              </span>
               Historical & Event Dates
             </div>
-            <p class="text-xs sm:text-sm text-slate-600">Calculate the time elapsed between historical figures' birth dates or two monumental historical events.</p>
+            <p class="text-xs sm:text-sm text-slate-600">Calculate the time elapsed between historical figures' birth dates
+              or two monumental historical events.</p>
           </div>
-
+    
         </div>
-
+    
       </div>
     </section>
-
+    
     <!-- Content Section: Real World Age Gap Examples -->
     <section class="py-12 bg-white">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+    
         <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-6">
           Real-World Age Gap Examples
         </h2>
-
+    
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
-                <span class="text-xs font-semibold text-brand-600 uppercase">Example 1: Small Gap</span>
-                <h3 class="font-bold text-slate-800 text-base mt-1">25 Years vs 30 Years</h3>
-                <p class="text-slate-600 text-sm mt-2">
-                    A person born June 10, 1998 and another born June 10, 1993 have a <strong>5-year exact difference</strong>. Under the half-plus-7 rule, a 30-year-old can date someone as young as 22, making this relationship easily compliant.
-                </p>
-            </div>
-            <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
-                <span class="text-xs font-semibold text-brand-600 uppercase">Example 2: Public Figures</span>
-                <h3 class="font-bold text-slate-800 text-base mt-1">Jay-Z and Beyoncé</h3>
-                <p class="text-slate-600 text-sm mt-2">
-                    Jay-Z (born Dec 4, 1969) and Beyoncé (born Sept 4, 1981) have an age difference of approximately <strong>11 years and 9 months</strong>.
-                </p>
-            </div>
-            <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
-                <span class="text-xs font-semibold text-brand-600 uppercase">Example 3: Celebrity Couple</span>
-                <h3 class="font-bold text-slate-800 text-base mt-1">Ryan Reynolds and Blake Lively</h3>
-                <p class="text-slate-600 text-sm mt-2">
-                    Ryan Reynolds (born Oct 23, 1976) and Blake Lively (born Aug 25, 1987) have a difference of <strong>10 years and 10 months</strong>.
-                </p>
-            </div>
-            <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
-                <span class="text-xs font-semibold text-brand-600 uppercase">Example 4: Large Age Gap</span>
-                <h3 class="font-bold text-slate-800 text-base mt-1">20 Years vs 45 Years</h3>
-                <p class="text-slate-600 text-sm mt-2">
-                    A 25-year age gap. For a 45-year-old, the minimum half-plus-7 age is 29.5 years. A 20-year-old falls outside the standard social rule.
-                </p>
-            </div>
+          <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
+            <span class="text-xs font-semibold text-indigo-600 uppercase">Example 1: Small Gap</span>
+            <h3 class="font-bold text-slate-800 text-base mt-1">25 Years vs 30 Years</h3>
+            <p class="text-slate-600 text-sm mt-2">
+              A person born June 10, 1998 and another born June 10, 1993 have a <strong>5-year exact difference</strong>.
+              Under the half-plus-7 rule, a 30-year-old can date someone as young as 22, making this relationship easily
+              compliant.
+            </p>
+          </div>
+          <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
+            <span class="text-xs font-semibold text-indigo-600 uppercase">Example 2: Public Figures</span>
+            <h3 class="font-bold text-slate-800 text-base mt-1">Jay-Z and Beyoncé</h3>
+            <p class="text-slate-600 text-sm mt-2">
+              Jay-Z (born Dec 4, 1969) and Beyoncé (born Sept 4, 1981) have an age difference of approximately <strong>11
+                years and 9 months</strong>.
+            </p>
+          </div>
+          <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
+            <span class="text-xs font-semibold text-indigo-600 uppercase">Example 3: Celebrity Couple</span>
+            <h3 class="font-bold text-slate-800 text-base mt-1">Ryan Reynolds and Blake Lively</h3>
+            <p class="text-slate-600 text-sm mt-2">
+              Ryan Reynolds (born Oct 23, 1976) and Blake Lively (born Aug 25, 1987) have a difference of <strong>10 years
+                and 10 months</strong>.
+            </p>
+          </div>
+          <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
+            <span class="text-xs font-semibold text-indigo-600 uppercase">Example 4: Large Age Gap</span>
+            <h3 class="font-bold text-slate-800 text-base mt-1">20 Years vs 45 Years</h3>
+            <p class="text-slate-600 text-sm mt-2">
+              A 25-year age gap. For a 45-year-old, the minimum half-plus-7 age is 29.5 years. A 20-year-old falls outside
+              the standard social rule.
+            </p>
+          </div>
         </div>
-
+    
       </div>
     </section>
-
+    
     <!-- Content Section: Why Use Our Age Difference Calculator -->
-    <section class="py-12 bg-slate-50 border-y border-slate-200/80">
+    <section class="py-12 bg-slate-50 border-y border-slate-100">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+    
         <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-6">
           Why Use Our Age Difference Calculator?
         </h2>
-
+    
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          
-          <div class="p-5 bg-white rounded-2xl border border-slate-200 shadow-sm">
+    
+          <div class="p-5 bg-white rounded-2xl border border-slate-200">
             <h3 class="font-bold text-slate-800 text-base mb-2 flex items-center gap-2">
-              <svg class="w-5 h-5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Precise Leap Year Algorithm
+              <span class="icon-bullseye text-indigo-600"></span> Precise Leap Year Algorithm
             </h3>
-            <p class="text-xs sm:text-sm text-slate-600">Our engine accounts for leap years and exact calendar month length variations (28, 29, 30, or 31 days) for 100% accuracy.</p>
+            <p class="text-xs sm:text-sm text-slate-600">Our engine accounts for leap years and exact calendar month length
+              variations (28, 29, 30, or 31 days) for 100% accuracy.</p>
           </div>
-
-          <div class="p-5 bg-white rounded-2xl border border-slate-200 shadow-sm">
+    
+          <div class="p-5 bg-white rounded-2xl border border-slate-200">
             <h3 class="font-bold text-slate-800 text-base mb-2 flex items-center gap-2">
-              <svg class="w-5 h-5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg> Privacy-First Processing
+              <span class="inline-flex items-center gap-1.5">
+                <svg class="size-5 fill-current text-indigo-600 shrink-0" viewBox="0 0 640 512">
+                  <path
+                    d="M224 256a128 128 0 1 0 0-256a128 128 0 1 0 0 256m-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512h388.6c1.8 0 3.5-.2 5.3-.5c-76.3-55.1-99.8-141-103.1-200.2c-16.1-4.8-33.1-7.3-50.7-7.3h-91.4zm308.8-78.3l-120 48C358 277.4 352 286.2 352 296c0 63.3 25.9 168.8 134.8 214.2c5.9 2.5 12.6 2.5 18.5 0C614.1 464.8 640 359.3 640 296c0-9.8-6-18.6-15.1-22.3l-120-48c-5.7-2.3-12.1-2.3-17.8 0M591.4 312c-3.9 50.7-27.2 116.7-95.4 149.7V273.9z" />
+                </svg>
+              </span> Privacy-First Processing
             </h3>
-            <p class="text-xs sm:text-sm text-slate-600">All date calculations are computed entirely inside your web browser. No personal dates or names are sent to any server.</p>
+            <p class="text-xs sm:text-sm text-slate-600">All date calculations are computed entirely inside your web
+              browser. No personal dates or names are sent to any server.</p>
           </div>
-
-          <div class="p-5 bg-white rounded-2xl border border-slate-200 shadow-sm">
+    
+          <div class="p-5 bg-white rounded-2xl border border-slate-200">
             <h3 class="font-bold text-slate-800 text-base mb-2 flex items-center gap-2">
-              <svg class="w-5 h-5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg> Instant Real-Time Results
+              <span class="inline-flex items-center gap-1.5">
+                <svg class="size-4 fill-current text-indigo-600 shrink-0" viewBox="0 0 512 512">
+                  <path
+                    d="M0 256a256 256 0 1 1 512 0a256 256 0 1 1-512 0M288 96a32 32 0 1 0-64 0a32 32 0 1 0 64 0m-32 320c35.3 0 64-28.7 64-64c0-17.4-6.9-33.1-18.1-44.6L366 161.7c5.3-12.1-.2-26.3-12.3-31.6s-26.3.2-31.6 12.3L257.9 288H256c-35.3 0-64 28.7-64 64s28.7 64 64 64m-80-272a32 32 0 1 0-64 0a32 32 0 1 0 64 0M96 288a32 32 0 1 0 0-64a32 32 0 1 0 0 64m352-32a32 32 0 1 0-64 0a32 32 0 1 0 64 0" />
+                </svg>
+              </span> Instant Real-Time Results
             </h3>
-            <p class="text-xs sm:text-sm text-slate-600">Get immediate results for total days, total weeks, total hours, next birthdays, and dating rules instantly.</p>
+            <p class="text-xs sm:text-sm text-slate-600">Get immediate results for total days, total weeks, total hours,
+              next birthdays, and dating rules instantly.</p>
           </div>
-
-          <div class="p-5 bg-white rounded-2xl border border-slate-200 shadow-sm">
+    
+          <div class="p-5 bg-white rounded-2xl border border-slate-200">
             <h3 class="font-bold text-slate-800 text-base mb-2 flex items-center gap-2">
-              <svg class="w-5 h-5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg> Mobile Responsive & Free
+              <span class="icon icon-mobile-screen-button text-indigo-600"></span> Mobile Responsive & Free
             </h3>
-            <p class="text-xs sm:text-sm text-slate-600">Designed with a modern fintech aesthetic, fully responsive across smartphones, tablets, and desktops.</p>
+            <p class="text-xs sm:text-sm text-slate-600">Designed with a modern fintech aesthetic, fully responsive across
+              smartphones, tablets, and desktops.</p>
           </div>
-
+    
         </div>
-
+    
       </div>
     </section>
-
+    
     <!-- FAQ Section -->
     <section class="py-12 bg-white">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+    
         <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-8 text-center">
           Frequently Asked Questions (FAQs)
         </h2>
-
+    
         <div class="space-y-4" id="faq-accordion">
-          
+    
           <!-- FAQ Item 1 -->
           <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors">
-            <button type="button" class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 hover:text-brand-600 flex justify-between items-center gap-4 focus:outline-none">
+            <button type="button"
+              class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center gap-4 focus:outline-none">
               <h3>How do I calculate age difference online free?</h3>
-              <svg class="faq-arrow w-5 h-5 text-slate-400 transition-transform duration-200 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              <span class="icon icon-chevron-down text-slate-400 transition-transform duration-200"></span>
             </button>
             <div class="accordion-content px-6 text-sm text-slate-600">
               <div class="pb-4">
                 <p>
-                  Simply select the date of birth for Person 1 and Person 2 in our Free Age Difference Calculator tool above. Click "Calculate" to instantly view the age gap in years, months, days, total weeks, and total days.
+                  Simply select the date of birth for Person 1 and Person 2 in our Free Age Difference Calculator tool
+                  above. Click "Calculate" to instantly view the age gap in years, months, days, total weeks, and total
+                  days.
                 </p>
               </div>
             </div>
           </div>
-
+    
           <!-- FAQ Item 2 -->
           <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors">
-            <button type="button" class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 hover:text-brand-600 flex justify-between items-center gap-4 focus:outline-none">
+            <button type="button"
+              class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center gap-4 focus:outline-none">
               <h3>What is the half-your-age-plus-seven calculator rule?</h3>
-              <svg class="faq-arrow w-5 h-5 text-slate-400 transition-transform duration-200 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              <span class="icon icon-chevron-down text-slate-400 transition-transform duration-200"></span>
             </button>
             <div class="accordion-content px-6 text-sm text-slate-600">
               <div class="pb-4">
                 <p>
-                  The half-your-age-plus-seven rule is a popular formula that specifies the minimum age a person can date without it being considered socially inappropriate. Formula: Minimum Age = (Your Age / 2) + 7.
+                  The half-your-age-plus-seven rule is a popular formula that specifies the minimum age a person can date
+                  without it being considered socially inappropriate. Formula: Minimum Age = (Your Age / 2) + 7.
                 </p>
               </div>
             </div>
           </div>
-
+    
           <!-- FAQ Item 3 -->
           <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors">
-            <button type="button" class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 hover:text-brand-600 flex justify-between items-center gap-4 focus:outline-none">
+            <button type="button"
+              class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center gap-4 focus:outline-none">
               <h3>Does this Exact Age Difference Calculator handle leap years correctly?</h3>
-              <svg class="faq-arrow w-5 h-5 text-slate-400 transition-transform duration-200 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              <span class="icon icon-chevron-down text-slate-400 transition-transform duration-200"></span>
             </button>
             <div class="accordion-content px-6 text-sm text-slate-600">
               <div class="pb-4">
                 <p>
-                  Yes! Our chronological calculation engine takes into account leap years (February 29) as well as the varying lengths of individual calendar months (28, 29, 30, or 31 days) to ensure mathematical precision.
+                  Yes! Our chronological calculation engine takes into account leap years (February 29) as well as the
+                  varying lengths of individual calendar months (28, 29, 30, or 31 days) to ensure mathematical precision.
                 </p>
               </div>
             </div>
           </div>
-
+    
           <!-- FAQ Item 4 -->
           <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors">
-            <button type="button" class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 hover:text-brand-600 flex justify-between items-center gap-4 focus:outline-none">
+            <button type="button"
+              class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center gap-4 focus:outline-none">
               <h3>Who is older if Person A was born in 1992 and Person B in 1996?</h3>
-              <svg class="faq-arrow w-5 h-5 text-slate-400 transition-transform duration-200 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              <span class="icon icon-chevron-down text-slate-400 transition-transform duration-200"></span>
             </button>
             <div class="accordion-content px-6 text-sm text-slate-600">
               <div class="pb-4">
                 <p>
-                  Person A born in 1992 is older because they were born earlier in time. The exact age gap depends on the specific month and day of birth for both individuals.
+                  Person A born in 1992 is older because they were born earlier in time. The exact age gap depends on the
+                  specific month and day of birth for both individuals.
                 </p>
               </div>
             </div>
           </div>
-
+    
           <!-- FAQ Item 5 -->
           <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors">
-            <button type="button" class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 hover:text-brand-600 flex justify-between items-center gap-4 focus:outline-none">
+            <button type="button"
+              class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center gap-4 focus:outline-none">
               <h3>Can I calculate age difference in hours and minutes?</h3>
-              <svg class="faq-arrow w-5 h-5 text-slate-400 transition-transform duration-200 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              <span class="icon icon-chevron-down text-slate-400 transition-transform duration-200"></span>
             </button>
             <div class="accordion-content px-6 text-sm text-slate-600">
               <div class="pb-4">
                 <p>
-                  Yes, by entering the optional time of birth fields for both individuals, our calculator calculates the age difference down to exact total hours and total minutes.
+                  Yes, by entering the optional time of birth fields for both individuals, our calculator calculates the age
+                  difference down to exact total hours and total minutes.
                 </p>
               </div>
             </div>
           </div>
-
+    
           <!-- FAQ Item 6 -->
           <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors">
-            <button type="button" class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 hover:text-brand-600 flex justify-between items-center gap-4 focus:outline-none">
+            <button type="button"
+              class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center gap-4 focus:outline-none">
               <h3>Can I calculate sibling age gaps or parent-child age differences?</h3>
-              <svg class="faq-arrow w-5 h-5 text-slate-400 transition-transform duration-200 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              <span class="icon icon-chevron-down text-slate-400 transition-transform duration-200"></span>
             </button>
             <div class="accordion-content px-6 text-sm text-slate-600">
               <div class="pb-4">
                 <p>
-                  Absolutely. Our free online age gap tool works for couples, siblings, parent-child comparisons, or any two dates on the Gregorian calendar.
+                  Absolutely. Our free online age gap tool works for couples, siblings, parent-child comparisons, or any two
+                  dates on the Gregorian calendar.
                 </p>
               </div>
             </div>
           </div>
-
+    
           <!-- FAQ Item 7 -->
           <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors">
-            <button type="button" class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 hover:text-brand-600 flex justify-between items-center gap-4 focus:outline-none">
+            <button type="button"
+              class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center gap-4 focus:outline-none">
               <h3>Is my date of birth information private and secure?</h3>
-              <svg class="faq-arrow w-5 h-5 text-slate-400 transition-transform duration-200 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              <span class="icon icon-chevron-down text-slate-400 transition-transform duration-200"></span>
             </button>
             <div class="accordion-content px-6 text-sm text-slate-600">
               <div class="pb-4">
                 <p>
-                  Yes, 100% private. All calculations happen locally inside your web browser. No data is ever transmitted, saved, or shared with external servers.
+                  Yes, 100% private. All calculations happen locally inside your web browser. No data is ever transmitted,
+                  saved, or shared with external servers.
                 </p>
               </div>
             </div>
           </div>
-
+    
           <!-- FAQ Item 8 -->
           <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors">
-            <button type="button" class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 hover:text-brand-600 flex justify-between items-center gap-4 focus:outline-none">
+            <button type="button"
+              class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 hover:text-indigo-600 flex justify-between items-center gap-4 focus:outline-none">
               <h3>What is the average age gap between couples?</h3>
-              <svg class="faq-arrow w-5 h-5 text-slate-400 transition-transform duration-200 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              <span class="icon icon-chevron-down text-slate-400 transition-transform duration-200"></span>
             </button>
             <div class="accordion-content px-6 text-sm text-slate-600">
               <div class="pb-4">
                 <p>
-                  Globally, the average age gap in heterosexual marriages is approximately 2 to 3 years, with the male partner typically being older. However, age differences varies widely across cultures and personal choices.
+                  Globally, the average age gap in heterosexual marriages is approximately 2 to 3 years, with the male
+                  partner typically being older. However, age differences varies widely across cultures and personal
+                  choices.
                 </p>
               </div>
             </div>
           </div>
-
+    
         </div>
-
+    
       </div>
     </section>
-
+    
     <!-- Related Calculators Section -->
-    <section class="max-w-4xl mx-auto mb-16 px-4">
-      <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200/80">
+    <section class="max-w-4xl mx-auto mb-16">
+      <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100">
         <h2 class="text-2xl font-extrabold text-slate-900 mb-6 flex items-center gap-3">
-          <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
-          Related Tools
+          <span class="icon-cubes text-indigo-600"></span>Related Tools
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <a href="age-calculator.html" class="p-4 rounded-xl border border-slate-200 hover:border-brand-500 hover:shadow-md transition-all group">
+          <a href="age-calculator.html"
+            class="p-4 rounded-xl border border-slate-200/80 hover:border-indigo-500 hover:shadow-md transition-all group">
             <div class="flex items-center justify-between mb-2">
-              <span class="font-bold text-slate-800 group-hover:text-brand-600">Age Calculator</span>
-              <svg class="w-4 h-4 text-slate-300 group-hover:text-brand-600 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              <span class="font-bold text-slate-800 group-hover:text-indigo-600">Age Calculator</span>
+              <span
+                class="icon icon-arrow-right text-slate-300 group-hover:text-indigo-600 group-hover:translate-x-1 transition-transform"></span>
             </div>
             <p class="text-xs text-slate-500">Calculate exact current age.</p>
           </a>
     
-          <a href="birthday-calculator.html" class="p-4 rounded-xl border border-slate-200 hover:border-brand-500 hover:shadow-md transition-all group">
+          <a href="birthday-calculator.html"
+            class="p-4 rounded-xl border border-slate-200/80 hover:border-indigo-500 hover:shadow-md transition-all group">
             <div class="flex items-center justify-between mb-2">
-              <span class="font-bold text-slate-800 group-hover:text-brand-600">Birthday Calculator</span>
-              <svg class="w-4 h-4 text-slate-300 group-hover:text-brand-600 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              <span class="font-bold text-slate-800 group-hover:text-indigo-600">Birthday Calculator</span>
+              <span
+                class="icon icon-arrow-right text-slate-300 group-hover:text-indigo-600 group-hover:translate-x-1 transition-transform"></span>
             </div>
             <p class="text-xs text-slate-500">Calculate exact days between two dates.</p>
           </a>
     
-          <a href="date-calculator.html" class="p-4 rounded-xl border border-slate-200 hover:border-brand-500 hover:shadow-md transition-all group">
+          <a href="date-calculator.html"
+            class="p-4 rounded-xl border border-slate-200/80 hover:border-indigo-500 hover:shadow-md transition-all group">
             <div class="flex items-center justify-between mb-2">
-              <span class="font-bold text-slate-800 group-hover:text-brand-600">Date Calculator</span>
-              <svg class="w-4 h-4 text-slate-300 group-hover:text-brand-600 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              <span class="font-bold text-slate-800 group-hover:text-indigo-600">Date Calculator</span>
+              <span
+                class="icon icon-arrow-right text-slate-300 group-hover:text-indigo-600 group-hover:translate-x-1 transition-transform"></span>
             </div>
-            <p class="text-xs text-slate-500">Add or subtract days.</p>
+            <p class="text-xs text-slate-500">Add or subtract days</p>
           </a>
         </div>
       </div>
     </section>
-
-  </main>
-
-  <!-- Multi-Column Footer -->
-  <footer class="bg-slate-900 text-slate-400 text-sm border-t border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-        
-        <!-- Col 1: About -->
-        <div class="space-y-4">
-          <div class="flex items-center gap-2 text-white font-bold text-lg">
-            <div class="w-8 h-8 rounded-lg bg-brand-500 flex items-center justify-center text-white text-sm">
-              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 14H7v-2h10v2zm0-4H7v-2h10v2zm0-4H7V7h10v2z"/>
-              </svg>
+    
+    </main>
+    
+    <!-- Multi-Column Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-sm border-t border-slate-800 mt-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+    
+          <!-- Col 1: About -->
+          <div class="space-y-4">
+            <div class="flex items-center gap-2 text-white font-bold text-lg">
+              <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
+                <span class="icon-calculator text-lg"></span>
+              </div>
+              <span>Calculator<span class="text-indigo-400">-Pro</span></span>
             </div>
-            <span>Calculator<span class="text-brand-300">-Pro</span></span>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Calculator Pro provides free, fast, and clinically accurate online tools for health, financial, mathematical,
+              and everyday conversion needs.
+            </p>
+            <div class="text-xs text-slate-500">
+              &copy; <span id="current-year">2026</span> Calculator Pro. All rights reserved.
+            </div>
           </div>
-          <p class="text-xs text-slate-400 leading-relaxed">
-            Calculator Pro provides free, fast, and clinically accurate online tools for health, financial, mathematical, and everyday conversion needs.
-          </p>
-          <div class="text-xs text-slate-500">
-            &copy; <span id="current-year">2026</span> Calculator Pro. All rights reserved.
+    
+          <!-- Column 2: Quick Links -->
+          <div>
+            <h3 class="text-white font-semibold mb-3 text-sm">Quick Links</h3>
+            <ul class="space-y-2 text-xs">
+              <li><a href="unit-converter.html" class="hover:text-white transition-colors">Unit Converter</a></li>
+              <li><a href="gst-calculator.html" class="hover:text-white transition-colors">GST Calculator</a></li>
+              <li><a href="cgpa-to-percentage-converter.html" class="hover:text-white transition-colors">CGPA to
+                  Percentage</a></li>
+              <li><a href="sgpa-to-cgpa-calculator.html" class="hover:text-white transition-colors">SGPA to CGPA</a></li>
+              <li><a href="work-days-calculator.html" class="hover:text-white transition-colors">Work Days Calculator</a>
+              </li>
+            </ul>
           </div>
+          <!-- Column 3: Tools & Resources -->
+          <div>
+            <h3 class="text-white font-semibold mb-3 text-sm">Calculators</h3>
+            <ul class="space-y-2 text-xs">
+              <li><a href="age-calculator.html" class="hover:text-white transition-colors">Age Calculator</a></li>
+              <li><a href="time-calculator.html" class="hover:text-white transition-colors">Time Calculator</a></li>
+              <li><a href="sip-calculator.html" class="hover:text-white transition-colors">SIP Financial Calculator</a></li>
+              <li><a href="bmi-calculator.html" class="hover:text-white transition-colors">BMI Health Calculator</a></li>
+              <li><a href="percentage-calculator.html" class="hover:text-white transition-colors">Percentage Calculator</a>
+              </li>
+            </ul>
+          </div>
+    
+          <!-- Column 4: Legal & Contact -->
+          <div>
+            <h3 class="text-white font-semibold mb-3 text-sm">Legal & Info</h3>
+            <ul class="space-y-2 text-xs">
+              <li><a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+              <li><a href="terms-of-service.html" class="hover:text-white transition-colors">Terms of Service</a></li>
+              <li><a href="editorial-guidelines.html" class="hover:text-white transition-colors">Editorial Guidelines</a>
+              </li>
+              <li><a href="contact-us.html" class="hover:text-white transition-colors">Contact Us</a></li>
+              <li><a href="disclaimer.html" class="hover:text-white transition-colors">Disclaimer</a></li>
+            </ul>
+          </div>
+    
         </div>
-
-        <!-- Column 2: Quick Links -->
-        <div>
-          <h3 class="text-white font-semibold mb-3 text-sm">Quick Links</h3>
-          <ul class="space-y-2 text-xs">
-            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Unit Converter</a></li>
-            <li><a href="gst-calculator.html" class="hover:text-white transition-colors">GST Calculator</a></li>
-            <li><a href="cgpa-to-percentage-converter.html" class="hover:text-white transition-colors">CGPA to Percentage</a></li>
-            <li><a href="sgpa-to-cgpa-calculator.html" class="hover:text-white transition-colors">SGPA to CGPA</a></li>
-            <li><a href="work-days-calculator.html" class="hover:text-white transition-colors">Work Days Calculator</a></li>
-          </ul>
-        </div>
-        
-        <!-- Column 3: Tools & Resources -->
-        <div>
-          <h3 class="text-white font-semibold mb-3 text-sm">Calculators</h3>
-          <ul class="space-y-2 text-xs">
-            <li><a href="age-calculator.html" class="hover:text-white transition-colors">Age Calculator</a></li>
-            <li><a href="time-calculator.html" class="hover:text-white transition-colors">Time Calculator</a></li>
-            <li><a href="sip-calculator.html" class="hover:text-white transition-colors">SIP Financial Calculator</a></li>
-            <li><a href="bmi-calculator.html" class="hover:text-white transition-colors">BMI Health Calculator</a></li>
-            <li><a href="percentage-calculator.html" class="hover:text-white transition-colors">Percentage Calculator</a></li>
-          </ul>
-        </div>
-
-        <!-- Column 4: Legal & Contact -->
-        <div>
-          <h3 class="text-white font-semibold mb-3 text-sm">Legal & Info</h3>
-          <ul class="space-y-2 text-xs">
-            <li><a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
-            <li><a href="terms-of-service.html" class="hover:text-white transition-colors">Terms of Service</a></li>
-            <li><a href="editorial-guidelines.html" class="hover:text-white transition-colors">Editorial Guidelines</a></li>
-            <li><a href="contact-us.html" class="hover:text-white transition-colors">Contact Us</a></li>
-            <li><a href="disclaimer.html" class="hover:text-white transition-colors">Disclaimer</a></li>
-          </ul>
-        </div>
-
       </div>
-    </div>
-  </footer>
+    </footer>
 
-  <!-- Pure JavaScript Logic -->
+  <!-- Vanilla JavaScript Logic -->
   <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Set default date picker values
-            const todayStr = new Date().toISOString().split('T')[0];
-            const p1DobInput = document.getElementById('p1-dob');
-            const p2DobInput = document.getElementById('p2-dob');
-            const refDateInput = document.getElementById('ref-date');
+    document.addEventListener('DOMContentLoaded', () => {
+      // Set default date picker values
+      const todayStr = new Date().toISOString().split('T')[0];
+      const p1DobInput = document.getElementById('p1-dob');
+      const p2DobInput = document.getElementById('p2-dob');
+      const refDateInput = document.getElementById('ref-date');
 
-            // Default dates: 1995-05-15 and 2000-08-20, reference date today
-            p1DobInput.value = '1995-05-15';
-            p2DobInput.value = '2000-08-20';
-            refDateInput.value = todayStr;
+      // Default dates: 1995-05-15 and 2000-08-20, reference date today
+      p1DobInput.value = '1995-05-15';
+      p2DobInput.value = '2000-08-20';
+      refDateInput.value = todayStr;
 
-            // DOM Elements
-            const p1NameInput = document.getElementById('p1-name');
-            const p2NameInput = document.getElementById('p2-name');
-            const calculateBtn = document.getElementById('calculate-btn');
-            const swapBtn = document.getElementById('swap-btn');
-            const resetBtn = document.getElementById('reset-btn');
-            const shareBtn = document.getElementById('share-btn');
-            const resultsContainer = document.getElementById('results-container');
+      // DOM Elements
+      const p1NameInput = document.getElementById('p1-name');
+      const p2NameInput = document.getElementById('p2-name');
+      const calculateBtn = document.getElementById('calculate-btn');
+      const swapBtn = document.getElementById('swap-btn');
+      const resetBtn = document.getElementById('reset-btn');
+      const shareBtn = document.getElementById('share-btn');
+      const resultsContainer = document.getElementById('results-container');
 
-            // Header Mobile Menu Logic
-            const menuBtn = document.getElementById('calc-mobile-menu-btn');
-            const mobileMenu = document.getElementById('calc-mobile-menu');
-            const menuIcon = document.getElementById('calc-menu-icon');
-            const closeIcon = document.getElementById('calc-close-icon');
+      // Header Mobile Menu Logic
+      const menuBtn = document.getElementById('calc-mobile-menu-btn');
+      const mobileMenu = document.getElementById('calc-mobile-menu');
+      const menuIcon = document.getElementById('calc-menu-icon');
+      const closeIcon = document.getElementById('calc-close-icon');
 
-            if (menuBtn && mobileMenu) {
-                menuBtn.addEventListener('click', () => {
-                    const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
-                    menuBtn.setAttribute('aria-expanded', !isExpanded);
-                    mobileMenu.classList.toggle('hidden');
-                    menuIcon.classList.toggle('hidden');
-                    closeIcon.classList.toggle('hidden');
-                });
-            }
-
-            // FAQ Accordion Toggle Listener
-            document.querySelectorAll('.faq-btn').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const content = btn.nextElementSibling;
-                    const arrow = btn.querySelector('.faq-arrow');
-                    
-                    const isOpen = content.classList.contains('open');
-                    
-                    // Close all open accordions
-                    document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
-                    document.querySelectorAll('.faq-arrow').forEach(a => a.style.transform = 'rotate(0deg)');
-
-                    if (!isOpen) {
-                        content.classList.add('open');
-                        if (arrow) arrow.style.transform = 'rotate(180deg)';
-                    }
-                });
-            });
-
-            // Action Buttons
-            swapBtn.addEventListener('click', () => {
-                const tempDob = p1DobInput.value;
-                p1DobInput.value = p2DobInput.value;
-                p2DobInput.value = tempDob;
-
-                const tempName = p1NameInput.value;
-                p1NameInput.value = p2NameInput.value;
-                p2NameInput.value = tempName;
-
-                if (!resultsContainer.classList.contains('hidden')) {
-                    calculateDifference();
-                }
-            });
-
-            resetBtn.addEventListener('click', () => {
-                p1NameInput.value = 'Person 1';
-                p2NameInput.value = 'Person 2';
-                p1DobInput.value = '1995-05-15';
-                p2DobInput.value = '2000-08-20';
-                refDateInput.value = todayStr;
-                resultsContainer.classList.add('hidden');
-            });
-
-            calculateBtn.addEventListener('click', calculateDifference);
-
-            // Core Date Difference Logic
-            function calculateDifference() {
-                const d1 = new Date(p1DobInput.value);
-                const d2 = new Date(p2DobInput.value);
-                const ref = new Date(refDateInput.value || todayStr);
-
-                if (isNaN(d1.getTime()) || isNaN(d2.getTime()) || isNaN(ref.getTime())) {
-                    showToast('Please select valid dates.');
-                    return;
-                }
-
-                const name1 = p1NameInput.value.trim() || 'Person 1';
-                const name2 = p2NameInput.value.trim() || 'Person 2';
-
-                // Sort dates: older (earlier date) vs younger (later date)
-                let olderDate = d1 < d2 ? d1 : d2;
-                let youngerDate = d1 < d2 ? d2 : d1;
-                let olderName = d1 < d2 ? name1 : name2;
-                let youngerName = d1 < d2 ? name2 : name1;
-
-                const isSameDate = d1.getTime() === d2.getTime();
-
-                // Exact Y-M-D gap between two birth dates
-                const gap = getExactYMD(olderDate, youngerDate);
-
-                // Individual ages at reference date
-                const age1 = getExactYMD(d1, ref);
-                const age2 = getExactYMD(d2, ref);
-
-                // Total breakdowns between birth dates
-                const diffMs = Math.abs(d2.getTime() - d1.getTime());
-                const totalDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
-                const totalWeeks = Math.floor(totalDays / 7);
-                const totalMonths = (gap.years * 12) + gap.months;
-                const totalHours = totalDays * 24;
-                const totalMinutes = totalHours * 60;
-
-                // Update UI Primary Banner
-                const primaryOutput = document.getElementById('primary-gap-output');
-                const whoIsOlderText = document.getElementById('who-is-older-text');
-
-                primaryOutput.textContent = `${gap.years} Years, ${gap.months} Months, ${gap.days} Days`;
-                
-                if (isSameDate) {
-                    whoIsOlderText.textContent = `${name1} and ${name2} were born on the exact same date!`;
-                } else {
-                    whoIsOlderText.textContent = `${olderName} is ${gap.years} years, ${gap.months} months, and ${gap.days} days older than ${youngerName}.`;
-                }
-
-                // Update Individual Current Age Cards
-                document.getElementById('res-p1-title').textContent = name1;
-                document.getElementById('res-p1-age').textContent = `${age1.years}y ${age1.months}m ${age1.days}d`;
-                document.getElementById('res-p1-bday').innerHTML = `
-                    <svg class="w-4 h-4 text-brand-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M3 21h18a2 2 0 002-2V9a2 2 0 00-2-2H3a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                    </svg> Next birthday in ${getNextBirthdayCountdown(d1, ref)}`;
-
-                document.getElementById('res-p2-title').textContent = name2;
-                document.getElementById('res-p2-age').textContent = `${age2.years}y ${age2.months}m ${age2.days}d`;
-                document.getElementById('res-p2-bday').innerHTML = `
-                    <svg class="w-4 h-4 text-purple-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M3 21h18a2 2 0 002-2V9a2 2 0 00-2-2H3a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                    </svg> Next birthday in ${getNextBirthdayCountdown(d2, ref)}`;
-
-                // Update Breakdown Stats
-                document.getElementById('breakdown-days').textContent = totalDays.toLocaleString();
-                document.getElementById('breakdown-weeks').textContent = totalWeeks.toLocaleString();
-                document.getElementById('breakdown-months').textContent = totalMonths.toLocaleString();
-                document.getElementById('breakdown-hours').textContent = totalHours.toLocaleString();
-                document.getElementById('breakdown-minutes').textContent = totalMinutes.toLocaleString();
-
-                // Half + 7 Rule Calculations
-                const halfRuleBox = document.getElementById('half-rule-status');
-                const p1AgeNum = age1.years + (age1.months / 12);
-                const p2AgeNum = age2.years + (age2.months / 12);
-
-                const minForP1 = Math.round((p1AgeNum / 2) + 7);
-                const maxForP1 = Math.round((p1AgeNum - 7) * 2);
-
-                const minForP2 = Math.round((p2AgeNum / 2) + 7);
-                const maxForP2 = Math.round((p2AgeNum - 7) * 2);
-
-                let passRule = true;
-                if (p1AgeNum > p2AgeNum) {
-                    passRule = (p2AgeNum >= minForP1);
-                } else {
-                    passRule = (p1AgeNum >= minForP2);
-                }
-
-                halfRuleBox.innerHTML = `
-                    <div class="flex items-center gap-2 font-bold ${passRule ? 'text-emerald-700' : 'text-amber-700'} mb-1">
-                        <svg class="w-5 h-5 ${passRule ? 'text-emerald-500' : 'text-amber-500'}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="${passRule ? 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' : 'M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z'}"/>
-                        </svg>
-                        <span>${passRule ? 'Within Social Customary Range' : 'Outside Standard Social Guideline Range'}</span>
-                    </div>
-                    <p class="text-xs text-slate-600 leading-relaxed">
-                        • <strong>${name1}</strong> (Age ${Math.floor(p1AgeNum)}): Acceptable partner range is <strong>${minForP1} to ${maxForP1} years old</strong>.<br>
-                        • <strong>${name2}</strong> (Age ${Math.floor(p2AgeNum)}): Acceptable partner range is <strong>${minForP2} to ${maxForP2} years old</strong>.
-                    </p>
-                `;
-
-                // Unhide Results Container
-                resultsContainer.classList.remove('hidden');
-            }
-
-            // Helper: Calculate Exact Years, Months, and Days
-            function getExactYMD(startDate, endDate) {
-                let start = new Date(startDate);
-                let end = new Date(endDate);
-
-                if (start > end) {
-                    let temp = start;
-                    start = end;
-                    end = temp;
-                }
-
-                let years = end.getFullYear() - start.getFullYear();
-                let months = end.getMonth() - start.getMonth();
-                let days = end.getDate() - start.getDate();
-
-                if (days < 0) {
-                    months--;
-                    let prevMonth = new Date(end.getFullYear(), end.getMonth(), 0);
-                    days += prevMonth.getDate();
-                }
-
-                if (months < 0) {
-                    years--;
-                    months += 12;
-                }
-
-                return { years, months, days };
-            }
-
-            // Helper: Days until next birthday
-            function getNextBirthdayCountdown(dob, ref) {
-                const birth = new Date(dob);
-                const current = new Date(ref);
-
-                let nextBday = new Date(current.getFullYear(), birth.getMonth(), birth.getDate());
-
-                if (nextBday < current) {
-                    nextBday.setFullYear(current.getFullYear() + 1);
-                }
-
-                const diffMs = nextBday.getTime() - current.getTime();
-                const diffDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
-
-                if (diffDays === 0) return 'Today! 🎉';
-                return `${diffDays} days`;
-            }
-
-            // Share / Copy Summary Functionality
-            shareBtn.addEventListener('click', () => {
-                const name1 = p1NameInput.value.trim() || 'Person 1';
-                const name2 = p2NameInput.value.trim() || 'Person 2';
-                const gapText = document.getElementById('primary-gap-output').textContent;
-                const whoText = document.getElementById('who-is-older-text').textContent;
-
-                const summaryText = `Age Difference Calculation Summary (via Calculator Pro):\n• ${name1} vs ${name2}\n• Exact Gap: ${gapText}\n• Summary: ${whoText}\n• Calculated at: ${window.location.href}`;
-
-                // Safe fallback for clipboard copying
-                const textArea = document.createElement('textarea');
-                textArea.value = summaryText;
-                document.body.appendChild(textArea);
-                textArea.select();
-                try {
-                    document.execCommand('copy');
-                    showToast('Summary copied to clipboard!');
-                } catch (err) {
-                    showToast('Unable to copy text.');
-                }
-                document.body.removeChild(textArea);
-            });
-
-            // Toast Notification Helper
-            function showToast(text) {
-                const toast = document.getElementById('toast-msg');
-                const toastText = document.getElementById('toast-text');
-                toastText.textContent = text;
-                toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
-                
-                setTimeout(() => {
-                    toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
-                }, 3000);
-            }
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+          const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+          menuBtn.setAttribute('aria-expanded', !isExpanded);
+          mobileMenu.classList.toggle('hidden');
+          menuIcon.classList.toggle('hidden');
+          closeIcon.classList.toggle('hidden');
         });
-    </script>
+      }
+
+      // FAQ Accordion Toggle Listener
+      document.querySelectorAll('.faq-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const content = btn.nextElementSibling;
+          const arrow = btn.querySelector('.faq-arrow');
+          
+          const isOpen = content.classList.contains('open');
+          
+          // Close all open accordions
+          document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
+          document.querySelectorAll('.faq-arrow').forEach(a => a.style.transform = 'rotate(0deg)');
+
+          if (!isOpen) {
+            content.classList.add('open');
+            if (arrow) arrow.style.transform = 'rotate(180deg)';
+          }
+        });
+      });
+
+      // Swap Action
+      swapBtn.addEventListener('click', () => {
+        const tempDob = p1DobInput.value;
+        p1DobInput.value = p2DobInput.value;
+        p2DobInput.value = tempDob;
+
+        const tempName = p1NameInput.value;
+        p1NameInput.value = p2NameInput.value;
+        p2NameInput.value = tempName;
+
+        if (!resultsContainer.classList.contains('hidden')) {
+          calculateDifference();
+        }
+      });
+
+      // Reset Action
+      resetBtn.addEventListener('click', () => {
+        p1NameInput.value = 'Person 1';
+        p2NameInput.value = 'Person 2';
+        p1DobInput.value = '1995-05-15';
+        p2DobInput.value = '2000-08-20';
+        refDateInput.value = todayStr;
+        resultsContainer.classList.add('hidden');
+      });
+
+      // Calculate Action
+      calculateBtn.addEventListener('click', calculateDifference);
+
+      // Core Date Difference Logic
+      function calculateDifference() {
+        const d1 = new Date(p1DobInput.value);
+        const d2 = new Date(p2DobInput.value);
+        const ref = new Date(refDateInput.value || todayStr);
+
+        if (isNaN(d1.getTime()) || isNaN(d2.getTime()) || isNaN(ref.getTime())) {
+          showToast('Please select valid dates.');
+          return;
+        }
+
+        const name1 = p1NameInput.value.trim() || 'Person 1';
+        const name2 = p2NameInput.value.trim() || 'Person 2';
+
+        // Sort dates: older (earlier date) vs younger (later date)
+        let olderDate = d1 < d2 ? d1 : d2;
+        let youngerDate = d1 < d2 ? d2 : d1;
+        let olderName = d1 < d2 ? name1 : name2;
+        let youngerName = d1 < d2 ? name2 : name1;
+
+        const isSameDate = d1.getTime() === d2.getTime();
+
+        // Exact Y-M-D gap between two birth dates
+        const gap = getExactYMD(olderDate, youngerDate);
+
+        // Individual ages at reference date
+        const age1 = getExactYMD(d1, ref);
+        const age2 = getExactYMD(d2, ref);
+
+        // Total breakdowns between birth dates
+        const diffMs = Math.abs(d2.getTime() - d1.getTime());
+        const totalDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+        const totalWeeks = Math.floor(totalDays / 7);
+        const totalMonths = (gap.years * 12) + gap.months;
+        const totalHours = totalDays * 24;
+        const totalMinutes = totalHours * 60;
+
+        // Update UI Primary Banner
+        const primaryOutput = document.getElementById('primary-gap-output');
+        const whoIsOlderText = document.getElementById('who-is-older-text');
+
+        primaryOutput.textContent = `${gap.years} Years, ${gap.months} Months, ${gap.days} Days`;
+        
+        if (isSameDate) {
+          whoIsOlderText.textContent = `${name1} and ${name2} were born on the exact same date!`;
+        } else {
+          whoIsOlderText.textContent = `${olderName} is ${gap.years} years, ${gap.months} months, and ${gap.days} days older than ${youngerName}.`;
+        }
+
+        // Update Individual Current Age Cards
+        document.getElementById('res-p1-title').textContent = name1;
+        document.getElementById('res-p1-age').textContent = `${age1.years}y ${age1.months}m ${age1.days}d`;
+        document.getElementById('res-p1-bday').innerHTML = `
+          <svg class="w-4 h-4 text-brand-500 shrink-0 fill-current" viewBox="0 0 24 24"><path d="M12 6c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6 3h-3V7c0-1.1-.9-2-2-2h-2c-1.1 0-2 .9-2 2v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V11c0-1.1-.9-2-2-2zm0 12H6V11h12v10z"/></svg>
+          Next birthday in ${getNextBirthdayCountdown(d1, ref)}`;
+
+        document.getElementById('res-p2-title').textContent = name2;
+        document.getElementById('res-p2-age').textContent = `${age2.years}y ${age2.months}m ${age2.days}d`;
+        document.getElementById('res-p2-bday').innerHTML = `
+          <svg class="w-4 h-4 text-purple-500 shrink-0 fill-current" viewBox="0 0 24 24"><path d="M12 6c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6 3h-3V7c0-1.1-.9-2-2-2h-2c-1.1 0-2 .9-2 2v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V11c0-1.1-.9-2-2-2zm0 12H6V11h12v10z"/></svg>
+          Next birthday in ${getNextBirthdayCountdown(d2, ref)}`;
+
+        // Update Breakdown Stats
+        document.getElementById('breakdown-days').textContent = totalDays.toLocaleString();
+        document.getElementById('breakdown-weeks').textContent = totalWeeks.toLocaleString();
+        document.getElementById('breakdown-months').textContent = totalMonths.toLocaleString();
+        document.getElementById('breakdown-hours').textContent = totalHours.toLocaleString();
+        document.getElementById('breakdown-minutes').textContent = totalMinutes.toLocaleString();
+
+        // Half + 7 Rule Calculations
+        const halfRuleBox = document.getElementById('half-rule-status');
+        const p1AgeNum = age1.years + (age1.months / 12);
+        const p2AgeNum = age2.years + (age2.months / 12);
+
+        const minForP1 = Math.round((p1AgeNum / 2) + 7);
+        const maxForP1 = Math.round((p1AgeNum - 7) * 2);
+
+        const minForP2 = Math.round((p2AgeNum / 2) + 7);
+        const maxForP2 = Math.round((p2AgeNum - 7) * 2);
+
+        let passRule = true;
+        if (p1AgeNum > p2AgeNum) {
+          passRule = (p2AgeNum >= minForP1);
+        } else {
+          passRule = (p1AgeNum >= minForP2);
+        }
+
+        halfRuleBox.innerHTML = `
+          <div class="flex items-center gap-2 font-bold ${passRule ? 'text-emerald-700' : 'text-amber-700'} mb-1">
+            <svg class="w-5 h-5 ${passRule ? 'text-emerald-500' : 'text-amber-500'} shrink-0 fill-current" viewBox="0 0 24 24">
+              ${passRule ? '<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>' : '<path d="M12 2L1 21h22L12 2zm1 14h-2v-2h2v2zm0-4h-2v-4h2v4z"/>'}
+            </svg>
+            <span>${passRule ? 'Within Social Customary Range' : 'Outside Standard Social Guideline Range'}</span>
+          </div>
+          <p class="text-xs text-slate-600">
+            • <strong>${name1}</strong> (Age ${Math.floor(p1AgeNum)}): Acceptable partner range is <strong>${minForP1} to ${maxForP1} years old</strong>.<br>
+            • <strong>${name2}</strong> (Age ${Math.floor(p2AgeNum)}): Acceptable partner range is <strong>${minForP2} to ${maxForP2} years old</strong>.
+          </p>
+        `;
+
+        // Unhide Results Container
+        resultsContainer.classList.remove('hidden');
+      }
+
+      // Helper: Calculate Exact Years, Months, and Days
+      function getExactYMD(startDate, endDate) {
+        let start = new Date(startDate);
+        let end = new Date(endDate);
+
+        if (start > end) {
+          let temp = start;
+          start = end;
+          end = temp;
+        }
+
+        let years = end.getFullYear() - start.getFullYear();
+        let months = end.getMonth() - start.getMonth();
+        let days = end.getDate() - start.getDate();
+
+        if (days < 0) {
+          months--;
+          let prevMonth = new Date(end.getFullYear(), end.getMonth(), 0);
+          days += prevMonth.getDate();
+        }
+
+        if (months < 0) {
+          years--;
+          months += 12;
+        }
+
+        return { years, months, days };
+      }
+
+      // Helper: Days until next birthday
+      function getNextBirthdayCountdown(dob, ref) {
+        const birth = new Date(dob);
+        const current = new Date(ref);
+
+        let nextBday = new Date(current.getFullYear(), birth.getMonth(), birth.getDate());
+
+        if (nextBday < current) {
+          nextBday.setFullYear(current.getFullYear() + 1);
+        }
+
+        const diffMs = nextBday.getTime() - current.getTime();
+        const diffDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+
+        if (diffDays === 0) return 'Today! 🎂';
+        return `${diffDays} days`;
+      }
+
+      // Share / Copy Summary Functionality
+      shareBtn.addEventListener('click', () => {
+        const name1 = p1NameInput.value.trim() || 'Person 1';
+        const name2 = p2NameInput.value.trim() || 'Person 2';
+        const gapText = document.getElementById('primary-gap-output').textContent;
+        const whoText = document.getElementById('who-is-older-text').textContent;
+
+        const summaryText = `Age Difference Calculation Summary (via Calculator Pro):\n• ${name1} vs ${name2}\n• Exact Gap: ${gapText}\n• Summary: ${whoText}\n• Calculated at: ${window.location.href}`;
+
+        // Clipboard copy with fallback
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(summaryText).then(() => showToast('Summary copied to clipboard!'));
+        } else {
+          const textArea = document.createElement('textarea');
+          textArea.value = summaryText;
+          document.body.appendChild(textArea);
+          textArea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textArea);
+          showToast('Summary copied to clipboard!');
+        }
+      });
+
+      // Toast Notification Helper
+      function showToast(text) {
+        const toast = document.getElementById('toast-msg');
+        const toastText = document.getElementById('toast-text');
+        toastText.textContent = text;
+        toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+        
+        setTimeout(() => {
+          toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+        }, 3000);
+      }
+    });
+  </script>
 </body>
 </html>

@@ -120,204 +120,254 @@
     </div>
 
     <!-- Header Component -->
-    <header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-200">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-16">
-      
-      <!-- Brand Logo & Name -->
-      <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
-        <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
-          <span class="icon-calculator text-lg"></span>
+    <header
+        class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+    
+                <!-- Brand Logo & Name -->
+                <a href="index.html"
+                    class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
+                    <div
+                        class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <span
+                        class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
+                        Calculator<span class="text-indigo-600">-Pro</span>
+                    </span>
+                </a>
+    
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center gap-1" aria-label="Main Navigation">
+                    <div class="relative group">
+                        <button type="button"
+                            class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors">
+                            Age
+                            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div
+                            class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+                            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+                                <a href="age-calculator.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Age
+                                    Calculator</a>
+                                <a href="birthday-calculator.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Birthday
+                                    Calculator</a>
+                                <a href="age-difference-calculator.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Age
+                                    Difference Calculator</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="relative group">
+                        <button type="button"
+                            class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors">
+                            Time & Date
+                            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div
+                            class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+                            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+                                <a href="time-calculator.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Time
+                                    Calculator</a>
+                                <a href="date-calculator.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Date
+                                    Calculator</a>
+                                <a href="work-days-calculator.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Work
+                                    Days Calculator</a>
+                                <a href="time-zone-converter.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">TimeZone
+                                    Calculator</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="relative group">
+                        <button type="button"
+                            class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors">
+                            Converter
+                            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div
+                            class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+                            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+                                <a href="unit-converter.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Unit
+                                    Converter</a>
+                                <a href="cgpa-to-percentage-converter.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">CGPA
+                                    to Percentage</a>
+                                <a href="sgpa-to-percentage-converter.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">SGPA
+                                    to Percentage</a>
+                                <a href="sgpa-to-cgpa-converter.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">SGPA
+                                    to CGPA</a>
+                                <a href="marks-to-percentage-calculator.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Marks
+                                    to Percentage</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="relative group">
+                        <button type="button"
+                            class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors">
+                            Financial
+                            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div
+                            class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+                            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+                                <a href="sip-calculator.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">SIP
+                                    Calculator</a>
+                                <a href="emi-calculator.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">EMI
+                                    Loan Calculator</a>
+                                <a href="Compound-Interest-Calculator.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Compound
+                                    Interest Calculator</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="relative group">
+                        <button type="button"
+                            class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors">
+                            Health
+                            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div
+                            class="absolute right-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+                            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+                                <a href="bmi-calculator.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">BMI
+                                    Calculator</a>
+                                <a href="waist-to-hip-ratio-calculator.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">WHR
+                                    Calculator</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+    
+    
+                <!-- Mobile Hamburger Button -->
+                <div class="flex md:hidden">
+                    <button id="calc-mobile-menu-btn" type="button"
+                        class="p-2.5 rounded-xl text-slate-600 hover:text-indigo-600 hover:bg-slate-100/80 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors"
+                        aria-controls="calc-mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+                        <svg id="calc-menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="calc-close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+    
+            </div>
         </div>
-        <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
-          Calculator<span class="text-indigo-600">-Pro</span>
-        </span>
-      </a>
-
-      <!-- Desktop Navigation -->
-      <nav class="hidden md:flex items-center gap-1" aria-label="Main Navigation">
-        
-        <!-- Category 1: Age -->
-        <div class="relative group">
-          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-            Age
-            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
-            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="age-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Calculator</a>
+    
+        <div id="calc-mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white shadow-xl">
+            <div class="px-4 pt-3 pb-6 space-y-4">
+                <div class="border-b border-slate-100 pb-3">
+                    <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Age</div>
+                    <a href="age-calculator.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Age
+                        Calculator</a>
+                    <a href="birthday-calculator.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Birthday
+                        Calculator</a>
+                    <a href="age-difference-calculator.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Age
+                        Difference Calculator</a>
+                </div>
+                <div class="border-b border-slate-100 pb-3">
+                    <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Time & Date</div>
+                    <a href="time-calculator.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Time
+                        Calculator</a>
+                    <a href="date-calculator.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Date
+                        Calculator</a>
+                    <a href="work-days-calculator.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Work
+                        Days Calculator</a>
+                    <a href="time-zone-converter.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">TimeZone
+                        Calculator</a>
+                </div>
+                <div class="border-b border-slate-100 pb-3">
+                    <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Converter</div>
+                    <a href="unit-converter.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Unit
+                        Converter</a>
+                    <a href="cgpa-to-percentage-converter.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">CGPA
+                        to Percentage</a>
+                    <a href="sgpa-to-percentage-converter.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">SGPA
+                        to Percentage</a>
+                    <a href="sgpa-to-cgpa-converter.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">SGPA
+                        to CGPA</a>
+                    <a href="marks-to-percentage-calculator.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Marks
+                        to Percentage</a>
+                </div>
+                <div class="border-b border-slate-100 pb-3">
+                    <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Financial</div>
+                    <a href="sip-calculator.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">SIP
+                        Calculator</a>
+                    <a href="emi-calculator.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">EMI
+                        Loan Calculator</a>
+                    <a href="Compound-Interest-Calculator.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Compound
+                        Interest Calculator</a>
+                </div>
+                <div>
+                    <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Health</div>
+                    <a href="bmi-calculator.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">BMI
+                        Calculator</a>
+                    <a href="waist-to-hip-ratio-calculator.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">WHR
+                        Calculator</a>
+                </div>
             </div>
-			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="birthday-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Birthday Calculator</a>
-            </div>
-			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="age-difference-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Diffrence Calculator</a>
-            </div>
-          </div>
         </div>
+    </header>
 
-        <!-- Category 2: Time -->
-        <div class="relative group">
-          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-            Time & Date
-            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
-            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="time-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Time Calculator</a>
-            </div>
-			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="date-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Date Calculator</a>
-            </div>
-			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="work-days-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Work Days Calculator</a>
-            </div>
-			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="time-zone-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">TimeZone Calculator</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Category 3: Converter -->
-        <div class="relative group">
-          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-            Converter
-            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
-            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="unit-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Unit Converter</a>
-            </div>
-			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="cgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">CGPA to Percentage</a>
-            </div>
-			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="sgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to Percentage</a>
-            </div>
-			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="sgpa-to-cgpa-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to CGPA</a>
-            </div>
-			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="marks-to-percentage-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Marks to Percentage</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Category 4: Financial -->
-        <div class="relative group">
-          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-            Financial
-            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
-            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="sip-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SIP Calculator</a>
-            </div>
-			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="emi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">EMI Loan Calculator</a>
-            </div>
-			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="Compound-Interest-Calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Compound Interest Calculator</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Category 5: Health -->
-        <div class="relative group">
-          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-            Health
-            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="absolute right-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
-            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="bmi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">BMI Calculator</a>
-            </div>
-			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="waist-to-hip-ratio-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">WHR Calculator</a>
-            </div>
-          </div>
-        </div>
-		  
-		 
-
-      </nav>
-
-      <!-- Mobile Hamburger Button -->
-      <div class="flex md:hidden">
-        <button id="calc-mobile-menu-btn" type="button" class="p-2.5 rounded-xl text-slate-600 hover:text-indigo-600 hover:bg-slate-100/80 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors duration-200" aria-controls="calc-mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
-          <svg id="calc-menu-icon" class="w-6 h-6 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-          <svg id="calc-close-icon" class="w-6 h-6 hidden transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Mobile Full-Width Menu Container -->
-  <div id="calc-mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white shadow-xl transition-all duration-200 ease-in-out">
-    <div class="px-4 pt-3 pb-6 space-y-4">
-      
-      <!-- Mobile Category: Age -->
-      <div class="border-b border-slate-100 pb-3">
-        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Age</div>
-        <a href="age-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Calculator</a>
-		  <a href="birthday-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Birthday Calculator</a>
-		  <a href="age-difference-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Diffrence Calculator</a>
-      </div>
-
-      <!-- Mobile Category: Time -->
-      <div class="border-b border-slate-100 pb-3">
-        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Time & Date</div>
-        <a href="time-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Time Calculator</a>
-		  <a href="date-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Date Calculator</a>
-		  <a href="work-days-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Work Days Calculator</a>
-		  <a href="time-zone-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">TimeZone Calculator</a>
-      </div>
-
-      <!-- Mobile Category: Converter -->
-      <div class="border-b border-slate-100 pb-3">
-        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Converter</div>
-        <a href="unit-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Unit Converter</a>
-		  <a href="cgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">CGPA to Percentage</a>
-		  <a href="sgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to Percentage</a>
-		  <a href="sgpa-to-cgpa-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to CGPA</a>
-		  <a href="marks-to-percentage-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Marks to Percentage</a>
-      </div>
-
-      <!-- Mobile Category: Financial -->
-      <div class="border-b border-slate-100 pb-3">
-        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Financial</div>
-        <a href="sip-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SIP Calculator</a>
-		  <a href="emi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">EMI Loan Calculator</a>
-		  <a href="Compound-Interest-Calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Compound Interest Calculator</a>
-      </div>
-
-      <!-- Mobile Category: Health -->
-      <div>
-        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Health</div>
-        <a href="bmi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">BMI Calculator</a>
-		  <a href="waist-to-hip-ratio-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">WHR Calculator</a>
-      </div>
-		
-		
-
-    </div>
-  </div>
-</header>
 
     <main class="flex-grow">
         <!-- Hero & Interactive Calculator Section -->

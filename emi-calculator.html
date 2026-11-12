@@ -12,16 +12,95 @@
     <meta property="og:title" content="Loan EMI Calculator - Calculator Pro">
     <meta property="og:description" content="Calculate your home, personal, and car loan monthly EMIs instantly with prepayment options and detailed amortization schedules.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://calculator-pro.example.com/loan-emi-calculator">
 
-    <!-- Google Fonts Inter -->
-    
-
-    <!-- FontAwesome CDN -->
-    
-
-    <!-- Tailwind CSS CDN -->
+    <!-- Tailwind CSS Engine CDN -->
    
+
+    <!-- Critical CSS for Instant Render & Zero Layout Shift (FCP < 1.5s, LCP < 1.5s) -->
+    <style>
+        /* System Font Stack & Display Swap for Instant Text Render */
+        body {
+            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Custom Slider Thumb Styling for Smooth Touch Interaction */
+        input[type=range].custom-range {
+            -webkit-appearance: none;
+            width: 100%;
+            background: transparent;
+        }
+        input[type=range].custom-range:focus {
+            outline: none;
+        }
+        input[type=range].custom-range::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 8px;
+            cursor: pointer;
+            background: #e2e8f0;
+            border-radius: 9999px;
+        }
+        input[type=range].custom-range::-webkit-slider-thumb {
+            height: 22px;
+            width: 22px;
+            border-radius: 50%;
+            background: #1d4ed8;
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-top: -7px;
+            box-shadow: 0 4px 6px -1px rgba(29, 78, 216, 0.4), 0 2px 4px -1px rgba(29, 78, 216, 0.2);
+            transition: transform 0.15s ease, background-color 0.15s ease;
+        }
+        input[type=range].custom-range::-webkit-slider-thumb:hover {
+            transform: scale(1.15);
+            background: #1e40af;
+        }
+        input[type=range].custom-range::-moz-range-track {
+            width: 100%;
+            height: 8px;
+            cursor: pointer;
+            background: #e2e8f0;
+            border-radius: 9999px;
+        }
+        input[type=range].custom-range::-moz-range-thumb {
+            height: 22px;
+            width: 22px;
+            border-radius: 50%;
+            background: #1d4ed8;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 4px 6px -1px rgba(29, 78, 216, 0.4);
+        }
+
+        /* Accordion Smooth Transitions */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+        }
+        .accordion-content.open {
+            max-height: 1000px;
+            transition: max-height 0.3s ease-in-out;
+        }
+
+        /* Print Specific Styles */
+        @media print {
+            .no-print, header, footer, nav, button:not(.print-keep) {
+                display: none !important;
+            }
+            main {
+                padding: 0 !important;
+                margin: 0 !important;
+                width: 100% !important;
+            }
+            .shadow-xl, .shadow-sm {
+                box-shadow: none !important;
+            }
+        }
+    </style>
+
     <link rel="stylesheet" href="./css/styles.min.css">
 
     <!-- Structured Data (JSON-LD) FAQ Schema -->
@@ -101,265 +180,295 @@
 <body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-brand-500 selection:text-white">
 
     <!-- Site Branding & Navigation Header -->
-    <header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-200">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-16">
-      
-      <!-- Brand Logo & Name -->
-      <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
-        <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
-          <span class="icon-calculator text-lg"></span>
+    <header
+        class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+    
+                <!-- Brand Logo & Name -->
+                <a href="index.html"
+                    class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
+                    <div
+                        class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <span
+                        class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
+                        Calculator<span class="text-indigo-600">-Pro</span>
+                    </span>
+                </a>
+    
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center gap-1" aria-label="Main Navigation">
+                    <div class="relative group">
+                        <button type="button"
+                            class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors">
+                            Age
+                            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div
+                            class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+                            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+                                <a href="age-calculator.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Age
+                                    Calculator</a>
+                                <a href="birthday-calculator.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Birthday
+                                    Calculator</a>
+                                <a href="age-difference-calculator.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Age
+                                    Difference Calculator</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="relative group">
+                        <button type="button"
+                            class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors">
+                            Time & Date
+                            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div
+                            class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+                            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+                                <a href="time-calculator.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Time
+                                    Calculator</a>
+                                <a href="date-calculator.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Date
+                                    Calculator</a>
+                                <a href="work-days-calculator.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Work
+                                    Days Calculator</a>
+                                <a href="time-zone-converter.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">TimeZone
+                                    Calculator</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="relative group">
+                        <button type="button"
+                            class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors">
+                            Converter
+                            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div
+                            class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+                            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+                                <a href="unit-converter.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Unit
+                                    Converter</a>
+                                <a href="cgpa-to-percentage-converter.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">CGPA
+                                    to Percentage</a>
+                                <a href="sgpa-to-percentage-converter.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">SGPA
+                                    to Percentage</a>
+                                <a href="sgpa-to-cgpa-converter.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">SGPA
+                                    to CGPA</a>
+                                <a href="marks-to-percentage-calculator.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Marks
+                                    to Percentage</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="relative group">
+                        <button type="button"
+                            class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors">
+                            Financial
+                            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div
+                            class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+                            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+                                <a href="sip-calculator.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">SIP
+                                    Calculator</a>
+                                <a href="emi-calculator.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">EMI
+                                    Loan Calculator</a>
+                                <a href="Compound-Interest-Calculator.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Compound
+                                    Interest Calculator</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="relative group">
+                        <button type="button"
+                            class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors">
+                            Health
+                            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div
+                            class="absolute right-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+                            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+                                <a href="bmi-calculator.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">BMI
+                                    Calculator</a>
+                                <a href="waist-to-hip-ratio-calculator.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">WHR
+                                    Calculator</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+    
+    
+                <!-- Mobile Hamburger Button -->
+                <div class="flex md:hidden">
+                    <button id="calc-mobile-menu-btn" type="button"
+                        class="p-2.5 rounded-xl text-slate-600 hover:text-indigo-600 hover:bg-slate-100/80 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors"
+                        aria-controls="calc-mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+                        <svg id="calc-menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="calc-close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+    
+            </div>
         </div>
-        <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
-          Calculator<span class="text-indigo-600">-Pro</span>
-        </span>
-      </a>
-
-      <!-- Desktop Navigation -->
-      <nav class="hidden md:flex items-center gap-1" aria-label="Main Navigation">
-        
-        <!-- Category 1: Age -->
-        <div class="relative group">
-          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-            Age
-            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
-            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="age-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Calculator</a>
+    
+        <div id="calc-mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white shadow-xl">
+            <div class="px-4 pt-3 pb-6 space-y-4">
+                <div class="border-b border-slate-100 pb-3">
+                    <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Age</div>
+                    <a href="age-calculator.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Age
+                        Calculator</a>
+                    <a href="birthday-calculator.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Birthday
+                        Calculator</a>
+                    <a href="age-difference-calculator.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Age
+                        Difference Calculator</a>
+                </div>
+                <div class="border-b border-slate-100 pb-3">
+                    <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Time & Date</div>
+                    <a href="time-calculator.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Time
+                        Calculator</a>
+                    <a href="date-calculator.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Date
+                        Calculator</a>
+                    <a href="work-days-calculator.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Work
+                        Days Calculator</a>
+                    <a href="time-zone-converter.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">TimeZone
+                        Calculator</a>
+                </div>
+                <div class="border-b border-slate-100 pb-3">
+                    <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Converter</div>
+                    <a href="unit-converter.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Unit
+                        Converter</a>
+                    <a href="cgpa-to-percentage-converter.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">CGPA
+                        to Percentage</a>
+                    <a href="sgpa-to-percentage-converter.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">SGPA
+                        to Percentage</a>
+                    <a href="sgpa-to-cgpa-converter.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">SGPA
+                        to CGPA</a>
+                    <a href="marks-to-percentage-calculator.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Marks
+                        to Percentage</a>
+                </div>
+                <div class="border-b border-slate-100 pb-3">
+                    <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Financial</div>
+                    <a href="sip-calculator.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">SIP
+                        Calculator</a>
+                    <a href="emi-calculator.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">EMI
+                        Loan Calculator</a>
+                    <a href="Compound-Interest-Calculator.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Compound
+                        Interest Calculator</a>
+                </div>
+                <div>
+                    <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Health</div>
+                    <a href="bmi-calculator.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">BMI
+                        Calculator</a>
+                    <a href="waist-to-hip-ratio-calculator.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">WHR
+                        Calculator</a>
+                </div>
             </div>
-			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="birthday-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Birthday Calculator</a>
-            </div>
-			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="age-difference-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Diffrence Calculator</a>
-            </div>
-          </div>
         </div>
-
-        <!-- Category 2: Time -->
-        <div class="relative group">
-          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-            Time & Date
-            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
-            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="time-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Time Calculator</a>
-            </div>
-			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="date-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Date Calculator</a>
-            </div>
-			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="work-days-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Work Days Calculator</a>
-            </div>
-			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="time-zone-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">TimeZone Calculator</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Category 3: Converter -->
-        <div class="relative group">
-          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-            Converter
-            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
-            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="unit-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Unit Converter</a>
-            </div>
-			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="cgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">CGPA to Percentage</a>
-            </div>
-			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="sgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to Percentage</a>
-            </div>
-			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="sgpa-to-cgpa-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to CGPA</a>
-            </div>
-			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="marks-to-percentage-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Marks to Percentage</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Category 4: Financial -->
-        <div class="relative group">
-          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-            Financial
-            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
-            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="sip-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SIP Calculator</a>
-            </div>
-			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="emi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">EMI Loan Calculator</a>
-            </div>
-			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="Compound-Interest-Calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Compound Interest Calculator</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Category 5: Health -->
-        <div class="relative group">
-          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-            Health
-            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="absolute right-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
-            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="bmi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">BMI Calculator</a>
-            </div>
-			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="waist-to-hip-ratio-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">WHR Calculator</a>
-            </div>
-          </div>
-        </div>
-		  
-		 
-
-      </nav>
-
-      <!-- Mobile Hamburger Button -->
-      <div class="flex md:hidden">
-        <button id="calc-mobile-menu-btn" type="button" class="p-2.5 rounded-xl text-slate-600 hover:text-indigo-600 hover:bg-slate-100/80 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors duration-200" aria-controls="calc-mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
-          <svg id="calc-menu-icon" class="w-6 h-6 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-          <svg id="calc-close-icon" class="w-6 h-6 hidden transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Mobile Full-Width Menu Container -->
-  <div id="calc-mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white shadow-xl transition-all duration-200 ease-in-out">
-    <div class="px-4 pt-3 pb-6 space-y-4">
-      
-      <!-- Mobile Category: Age -->
-      <div class="border-b border-slate-100 pb-3">
-        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Age</div>
-        <a href="age-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Calculator</a>
-		  <a href="birthday-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Birthday Calculator</a>
-		  <a href="age-difference-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Diffrence Calculator</a>
-      </div>
-
-      <!-- Mobile Category: Time -->
-      <div class="border-b border-slate-100 pb-3">
-        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Time & Date</div>
-        <a href="time-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Time Calculator</a>
-		  <a href="date-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Date Calculator</a>
-		  <a href="work-days-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Work Days Calculator</a>
-		  <a href="time-zone-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">TimeZone Calculator</a>
-      </div>
-
-      <!-- Mobile Category: Converter -->
-      <div class="border-b border-slate-100 pb-3">
-          <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Converter</div>
-          <a href="unit-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Unit Converter</a>
-		  <a href="cgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">CGPA to Percentage</a>
-		  <a href="sgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to Percentage</a>
-		  <a href="sgpa-to-cgpa-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to CGPA</a>
-		  <a href="marks-to-percentage-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Marks to Percentage</a>
-      </div>
-
-      <!-- Mobile Category: Financial -->
-      <div class="border-b border-slate-100 pb-3">
-         <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Financial</div>
-          <a href="sip-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SIP Calculator</a>
-		  <a href="emi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">EMI Loan Calculator</a>
-		  <a href="Compound-Interest-Calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Compound Interest Calculator</a>
-      </div>
-
-      <!-- Mobile Category: Health -->
-      <div>
-        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Health</div>
-        <a href="bmi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">BMI Calculator</a>
-		  <a href="waist-to-hip-ratio-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">WHR Calculator</a>
-      </div>
-		
-		
-
-    </div>
-  </div>
-</header>
+    </header>
 
     <!-- Hero Section -->
-    <section class="relative bg-linear-to-b from-brand-50/70 via-white to-slate-50 pt-10 pb-12 border-b border-slate-100">
+    <section class="relative bg-slate-50 pt-10 pb-12 border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-brand-100 text-brand-700 mb-4 border border-brand-200">
-                <span class="icon icon-bolt text-indigo-600"></span> Instant Reducing Balance Calculation
+                <svg class="w-3.5 h-3.5 fill-current text-brand-600" viewBox="0 0 20 20"><path d="M11.3 1.05A1 1 0 0010 1a1 1 0 00-.7.3L3.8 8.6a1 1 0 00.7 1.7h4V18a1 1 0 001.7.7l5.5-7.3a1 1 0 00-.7-1.7h-4V1.05z"/></svg> 
+                Instant Reducing Balance Calculation
             </span>
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight mb-6 leading-tight">
-                Advanced <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-indigo-600">Loan EMI Calculator</span>
+                Advanced <span class="text-brand-600">Loan EMI Calculator</span>
             </h1>
             <p class="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
                 Plan your finances effortlessly with our precise monthly <span class="font-semibold text-slate-700">Loan EMI Calculator</span>. Compute repayments for home loans, personal loans, car loans, and mortgages with advanced prepayment and amortization breakdown instantly.
             </p>
 
             <!-- Quick Loan Type Pill Shortcuts -->
-            <div class="mt-6 flex flex-wrap justify-center gap-2 max-w-4xl mx-auto">
-                <button onclick="presetLoanType('home')" class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-white text-slate-700 shadow-sm border border-slate-200 hover:border-brand-500 hover:text-brand-600 hover:bg-brand-50 transition-all flex items-center gap-1.5">
-                    <span class="inline-flex items-center gap-1.5">
-                        <svg class="size-3 fill-current text-brand-600 shrink-0" viewBox="0 0 512 512" aria-hidden="true">
-                            <path
-                                d="M543.8 287.6c17 0 32-14 32-32.1c1-9-3-17-11-24L512 185V64c0-17.7-14.3-32-32-32h-32c-17.7 0-32 14.3-32 32v36.7L309.5 7c-6-5-14-7-21-7s-15 1-22 8L10 231.5c-7 7-10 15-10 24c0 18 14 32.1 32 32.1h32v69.7c-.1.9-.1 1.8-.1 2.8v112c0 22.1 17.9 40 40 40h16c1.2 0 2.4-.1 3.6-.2c1.5.1 3 .2 4.5.2h55.9c22.1 0 40-17.9 40-40v-88c0-17.7 14.3-32 32-32h64c17.7 0 32 14.3 32 32v88c0 22.1 17.9 40 40 40h56.5c1.4 0 2.8 0 4.2-.1c1.1.1 2.2.1 3.3.1h16c22.1 0 40-17.9 40-40v-16.2c.3-2.6.5-5.3.5-8.1l-.7-160.2h32z" />
-                        </svg>
-                    </span> Home Loan
+            <div class="mt-8 flex flex-wrap justify-center gap-2.5 max-w-4xl mx-auto">
+                <button onclick="presetLoanType('home')" class="px-4 py-2 rounded-full text-xs font-semibold bg-white text-slate-700 shadow-sm border border-slate-200 hover:border-brand-500 hover:text-brand-600 hover:bg-brand-50 transition-all flex items-center gap-2">
+                    <svg class="w-4 h-4 fill-current text-brand-600" viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/></svg>
+                    Home Loan
                 </button>
-                <button onclick="presetLoanType('car')" class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-white text-slate-700 shadow-sm border border-slate-200 hover:border-brand-500 hover:text-brand-600 hover:bg-brand-50 transition-all flex items-center gap-1.5">
-                    <span class="inline-flex items-center gap-1.5">
-                        <svg class="size-3 fill-current text-amber-500 shrink-0" viewBox="0 0 512 512" aria-hidden="true">
-                            <path
-                                d="M135.2 117.4L109.1 192h293.8l-26.1-74.6c-4.5-12.8-16.6-21.4-30.2-21.4H165.4c-13.6 0-25.7 8.6-30.2 21.4m-95.6 79.4L74.8 96.3C88.3 57.8 124.6 32 165.4 32h181.2c40.8 0 77.1 25.8 90.6 64.3l35.2 100.5c23.2 9.6 39.6 32.5 39.6 59.2v192c0 17.7-14.3 32-32 32h-32c-17.7 0-32-14.3-32-32v-48H96v48c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V256c0-26.7 16.4-49.6 39.6-59.2M128 288a32 32 0 1 0-64 0a32 32 0 1 0 64 0m288 32a32 32 0 1 0 0-64a32 32 0 1 0 0 64" />
-                        </svg>
-                    </span> Car Loan
+                <button onclick="presetLoanType('car')" class="px-4 py-2 rounded-full text-xs font-semibold bg-white text-slate-700 shadow-sm border border-slate-200 hover:border-brand-500 hover:text-brand-600 hover:bg-brand-50 transition-all flex items-center gap-2">
+                    <svg class="w-4 h-4 fill-current text-amber-500" viewBox="0 0 20 20"><path d="M8 16a2 2 0 11-4 0 2 2 0 014 0zm10 0a2 2 0 11-4 0 2 2 0 014 0zM2 5a1 1 0 00-1 1v7a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0h4.1a2.5 2.5 0 014.9 0H18a1 1 0 001-1V9a1 1 0 00-.293-.707l-3-3A1 1 0 0015 5H2z"/></svg>
+                    Car Loan
                 </button>
-                <button onclick="presetLoanType('personal')" class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-white text-slate-700 shadow-sm border border-slate-200 hover:border-brand-500 hover:text-brand-600 hover:bg-brand-50 transition-all flex items-center gap-1.5">
-                    <span class="inline-flex items-center gap-1.5">
-                        <svg class="size-3 fill-current text-emerald-500 shrink-0" viewBox="0 0 640 512">
-                            <path
-                                d="M144 0a80 80 0 1 1 0 160a80 80 0 1 1 0-160m368 0a80 80 0 1 1 0 160a80 80 0 1 1 0-160M0 298.7C0 239.8 47.8 192 106.7 192h42.7c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96H21.3C9.6 320 0 310.4 0 298.7M405.3 320h-.7c26.6-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-1.9-22.3c13.6-6.3 28.7-9.7 44.6-9.7h42.7c58.9 0 106.7 47.8 106.7 106.7c0 11.8-9.6 21.3-21.3 21.3H405.4zM224 224a96 96 0 1 1 192 0a96 96 0 1 1-192 0m-96 261.3c0-73.6 59.7-133.3 133.3-133.3h117.3c73.7 0 133.4 59.7 133.4 133.3c0 14.7-11.9 26.7-26.7 26.7H154.6c-14.7 0-26.7-11.9-26.7-26.7z" />
-                        </svg>
-                    </span> Personal Loan
+                <button onclick="presetLoanType('personal')" class="px-4 py-2 rounded-full text-xs font-semibold bg-white text-slate-700 shadow-sm border border-slate-200 hover:border-brand-500 hover:text-brand-600 hover:bg-brand-50 transition-all flex items-center gap-2">
+                    <svg class="w-4 h-4 fill-current text-emerald-500" viewBox="0 0 20 20"><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/></svg>
+                    Personal Loan
                 </button>
-                <button onclick="presetLoanType('education')" class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-white text-slate-700 shadow-sm border border-slate-200 hover:border-brand-500 hover:text-brand-600 hover:bg-brand-50 transition-all flex items-center gap-1.5">
-                    <span class="inline-flex items-center gap-1.5">
-                        <svg class="size-4 fill-current text-indigo-500 shrink-0" viewBox="0 0 640 512">
-                            <path
-                                d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9V320c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6c-3.2 4.3-4.1 9.9-2.3 15s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7.3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7c-3.2-14.2-7.5-28.7-13.5-42v-24.6c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5.8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1l280.6-101c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1c-7.6-2.7-15.6-4.1-23.7-4.1M128 408c0 35.3 86 72 192 72s192-36.7 192-72l-15.3-145.4L354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6l-142.2-51.4z" />
-                        </svg>
-                    </span> Education Loan
+                <button onclick="presetLoanType('education')" class="px-4 py-2 rounded-full text-xs font-semibold bg-white text-slate-700 shadow-sm border border-slate-200 hover:border-brand-500 hover:text-brand-600 hover:bg-brand-50 transition-all flex items-center gap-2">
+                    <svg class="w-4 h-4 fill-current text-brand-500" viewBox="0 0 20 20"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-2.75-1.024A1 1 0 011 12.22v-1.853a1 1 0 011.31-.97zM15 10.12l1.69-.723A1 1 0 0118 10.367v1.853a1 1 0 01-1.25.97 8.97 8.97 0 00-2.75 1.024V10.12z"/></svg>
+                    Education Loan
                 </button>
-                <button onclick="presetLoanType('business')" class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-white text-slate-700 shadow-sm border border-slate-200 hover:border-brand-500 hover:text-brand-600 hover:bg-brand-50 transition-all flex items-center gap-1.5">
-                    <span class="inline-flex items-center gap-1.5">
-                        <svg class="size-3 fill-current text-purple-500 shrink-0" viewBox="0 0 512 512">
-                            <path
-                                d="M184 48h144c4.4 0 8 3.6 8 8v40H176V56c0-4.4 3.6-8 8-8m-56 8v40H64c-35.3 0-64 28.7-64 64v96h512v-96c0-35.3-28.7-64-64-64h-64V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56m384 232H320v32c0 17.7-14.3 32-32 32h-64c-17.7 0-32-14.3-32-32v-32H0v128c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64z" />
-                        </svg>
-                    </span> Business Loan
+                <button onclick="presetLoanType('business')" class="px-4 py-2 rounded-full text-xs font-semibold bg-white text-slate-700 shadow-sm border border-slate-200 hover:border-brand-500 hover:text-brand-600 hover:bg-brand-50 transition-all flex items-center gap-2">
+                    <svg class="w-4 h-4 fill-current text-purple-500" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 00-1-1H6zm2 2h4v1H8V4zm8 12H4V8h12v8z" clip-rule="evenodd"/></svg>
+                    Business Loan
                 </button>
             </div>
         </div>
     </section>
 
-    <!-- Calculator Main Section (No Pie Chart) -->
+    <!-- Calculator Main Section -->
     <main id="calc-app" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full grow">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             
@@ -367,7 +476,8 @@
             <div class="lg:col-span-7 bg-white rounded-2xl p-6 sm:p-8 shadow-xl shadow-slate-200/50 border border-slate-100 space-y-6">
                 <div class="flex items-center justify-between pb-4 border-b border-slate-100">
                     <h2 class="text-xl font-bold text-slate-800 flex items-center gap-2">
-                        <span class="icon icon-sliders text-brand-600"></span> Loan Parameters
+                        <svg class="w-5 h-5 text-brand-600 fill-current" viewBox="0 0 20 20"><path d="M5 4a1 1 0 00-2 0v14a1 1 0 002 0V4zm6 0a1 1 0 00-2 0v14a1 1 0 002 0V4zm6 0a1 1 0 00-2 0v14a1 1 0 002 0V4z"/></svg>
+                        Loan Parameters
                     </h2>
                     <span id="loan-type-badge" class="text-xs font-semibold px-2.5 py-1 rounded-md bg-brand-50 text-brand-700 border border-brand-200">
                         General Loan
@@ -463,10 +573,12 @@
                 <!-- Action Buttons -->
                 <div class="flex flex-col sm:flex-row gap-3 pt-4 border-t border-slate-100">
                     <button onclick="calculateEMI()" class="flex-1 py-3 px-6 rounded-xl bg-brand-600 hover:bg-brand-700 active:bg-brand-800 text-white font-semibold shadow-lg shadow-brand-500/25 transition-all flex items-center justify-center gap-2">
-                        <span class="icon-calculator"></span> Calculate EMI
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2H6zm1 2h6v2H7V4zm6 6H7V8h6v2zm-6 2h2v2H7v-2zm4 0h2v2h-2v-2zm-4 4h2v2H7v-2zm4 0h2v2h-2v-2z" clip-rule="evenodd"/></svg>
+                        Calculate EMI
                     </button>
                     <button onclick="resetCalculator()" class="py-3 px-5 rounded-xl bg-slate-100 hover:bg-slate-200 active:bg-slate-300 text-slate-700 font-medium transition-all flex items-center justify-center gap-2">
-                        <span class="icon icon-rotate-left text-slate-500"></span> Reset
+                        <svg class="w-4 h-4 fill-current text-slate-500" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"/></svg>
+                        Reset
                     </button>
                 </div>
             </div>
@@ -476,20 +588,16 @@
                 
                 <div>
                     <h2 class="text-xl font-bold text-slate-800 pb-4 border-b border-slate-100 flex items-center gap-2">
-                        <span class="inline-flex items-center gap-1.5">
-                            <svg class="size-5 fill-current text-slate-400 shrink-0" viewBox="0 0 448 512" aria-hidden="true">
-                                <path
-                                    d="M160 80c0-26.5 21.5-48 48-48h32c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48h-32c-26.5 0-48-21.5-48-48zM0 272c0-26.5 21.5-48 48-48h32c26.5 0 48 21.5 48 48v160c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48zM368 96h32c26.5 0 48 21.5 48 48v288c0 26.5-21.5 48-48 48h-32c-26.5 0-48-21.5-48-48V144c0-26.5 21.5-48 48-48" />
-                            </svg>
-                        </span> Loan Summary
+                        <svg class="w-5 h-5 fill-current text-slate-400" viewBox="0 0 20 20"><path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zm6-4a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zm6-3a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"/></svg>
+                        Loan Summary
                     </h2>
 
                     <!-- Main Highlight Card: Monthly EMI -->
-                    <div class="mt-6 p-6 rounded-2xl bg-linear-to-br from-brand-600 to-indigo-700 text-white shadow-xl shadow-brand-600/20 text-center relative overflow-hidden group">
+                    <div class="mt-6 p-6 rounded-2xl bg-brand-600 text-white shadow-xl shadow-brand-600/20 text-center relative overflow-hidden group">
                         <div class="absolute -right-6 -bottom-6 w-24 h-24 bg-white/10 rounded-full blur-xl group-hover:scale-150 transition-transform duration-500"></div>
-                        <span class="text-xs uppercase tracking-wider font-semibold text-brand-200">Monthly EMI Payable</span>
+                        <span class="text-xs uppercase tracking-wider font-semibold text-brand-100">Monthly EMI Payable</span>
                         <div id="result-emi" class="text-3xl sm:text-4xl font-black mt-2 tracking-tight">₹8,678</div>
-                        <span id="result-tenure-months" class="inline-block mt-2 text-xs bg-white/15 px-3 py-1 rounded-full text-brand-100">For 240 Monthly Installments</span>
+                        <span id="result-tenure-months" class="inline-block mt-2 text-xs bg-white/20 px-3 py-1 rounded-full text-brand-100 font-medium">For 240 Monthly Installments</span>
                     </div>
 
                     <!-- Breakdown Numbers Grid -->
@@ -512,19 +620,14 @@
 
                         <div class="p-4 rounded-xl bg-brand-50/60 border border-brand-100 flex items-center justify-between">
                             <div class="flex items-center gap-2.5">
-                                <span class="inline-flex items-center gap-1.5">
-                                    <svg class="size-5 fill-current text-brand-600 text-sm shrink-0" viewBox="0 0 640 512">
-                                        <path
-                                            d="M512 80c0 18-14.3 34.6-38.4 48c-29.1 16.1-72.5 27.5-122.3 30.9c-3.7-1.8-7.4-3.5-11.3-5c-39.4-16.5-91.8-25.9-148-25.9c-8.3 0-16.4.2-24.5.6l-1.1-.6C142.3 114.6 128 98 128 80c0-44.2 86-80 192-80s192 35.8 192 80m-351.3 81.1c10.2-.7 20.7-1.1 31.3-1.1c62.2 0 117.4 12.3 152.5 31.4c24.8 13.5 39.5 30.3 39.5 48.6q0 6-2.1 11.7c-4.6 13.2-17 25.3-35 35.5c-.1.1-.3.1-.4.2c-.3.2-.6.3-.9.5c-35 19.4-90.8 32-153.6 32c-59.6 0-112.9-11.3-148.2-29.1c-1.9-.9-3.7-1.9-5.5-2.9C14.3 274.6 0 258 0 240c0-34.8 53.4-64.5 128-75.4c10.5-1.5 21.4-2.7 32.7-3.5M416 240c0-21.9-10.6-39.9-24.1-53.4c28.3-4.4 54.2-11.4 76.2-20.5c16.3-6.8 31.5-15.2 43.9-25.5V176c0 19.3-16.5 37.1-43.8 50.9c-14.6 7.4-32.4 13.7-52.4 18.5c.1-1.8.2-3.5.2-5.3zm-32 96c0 18-14.3 34.6-38.4 48c-1.8 1-3.6 1.9-5.5 2.9C304.9 404.7 251.6 416 192 416c-62.8 0-118.6-12.6-153.6-32C14.3 370.6 0 354 0 336v-35.4c12.5 10.3 27.6 18.7 43.9 25.5C83.4 342.6 135.8 352 192 352s108.6-9.4 148.1-25.9c7.8-3.2 15.3-6.9 22.4-10.9c6.1-3.4 11.8-7.2 17.2-11.2c1.5-1.1 2.9-2.3 4.3-3.4zm32 0v-57.9c19-4.2 36.5-9.5 52.1-16c16.3-6.8 31.5-15.2 43.9-25.5V272c0 10.5-5 21-14.9 30.9c-16.3 16.3-45 29.7-81.3 38.4c.1-1.7.2-3.5.2-5.3M192 448c56.2 0 108.6-9.4 148.1-25.9c16.3-6.8 31.5-15.2 43.9-25.5V432c0 44.2-86 80-192 80S0 476.2 0 432v-35.4c12.5 10.3 27.6 18.7 43.9 25.5C83.4 438.6 135.8 448 192 448" />
-                                    </svg>
-                                </span>
+                                <svg class="w-4 h-4 text-brand-600 fill-current" viewBox="0 0 20 20"><path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"/><path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h3a1 1 0 100-2H9z" clip-rule="evenodd"/></svg>
                                 <span class="text-xs font-bold text-slate-700">Total Repayment Amount</span>
                             </div>
                             <span id="result-total" class="text-base font-extrabold text-brand-700">₹20,82,760</span>
                         </div>
                     </div>
 
-                    <!-- Visual Progress / Ratio Bar (Replacing Pie Chart) -->
+                    <!-- Visual Progress / Ratio Bar -->
                     <div class="mt-6 space-y-2">
                         <div class="flex justify-between text-xs font-semibold text-slate-600">
                             <span>Principal (<span id="ratio-principal-pct">48%</span>)</span>
@@ -541,17 +644,14 @@
                 </div>
 
                 <!-- Print / Export Quick Buttons -->
-                <div class="pt-4 border-t border-slate-100 flex gap-2">
+                <div class="pt-4 border-t border-slate-100 flex gap-2 no-print">
                     <button onclick="window.print()" class="flex-1 py-2 px-3 rounded-lg border border-slate-200 text-xs font-semibold text-slate-600 hover:bg-slate-50 transition-colors flex items-center justify-center gap-1.5">
-                        <span class="icon icon-print"></span> Print Details
+                        <svg class="w-3.5 h-3.5 fill-current text-slate-500" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 4v3H4a2 2 0 00-2 2v3a2 2 0 002 2h1v2a2 2 0 002 2h6a2 2 0 002-2v-2h1a2 2 0 002-2V9a2 2 0 00-2-2h-1V4a2 2 0 00-2-2H7a2 2 0 00-2 2zm8 0H7v3h6V4zm0 8H7v4h6v-4z" clip-rule="evenodd"/></svg>
+                        Print Details
                     </button>
                     <button onclick="exportScheduleCSV()" class="flex-1 py-2 px-3 rounded-lg border border-slate-200 text-xs font-semibold text-slate-600 hover:bg-slate-50 transition-colors flex items-center justify-center gap-1.5">
-                        <span class="inline-flex items-center gap-1.5">
-                            <svg class="size-3 fill-current shrink-0" viewBox="0 0 512 512" aria-hidden="true">
-                                <path
-                                    d="M0 64C0 28.7 28.7 0 64 0h160v128c0 17.7 14.3 32 32 32h128v144H176c-35.3 0-64 28.7-64 64v144H64c-35.3 0-64-28.7-64-64zm384 64H256V0zM200 352h16c22.1 0 40 17.9 40 40v8c0 8.8-7.2 16-16 16s-16-7.2-16-16v-8c0-4.4-3.6-8-8-8h-16c-4.4 0-8 3.6-8 8v80c0 4.4 3.6 8 8 8h16c4.4 0 8-3.6 8-8v-8c0-8.8 7.2-16 16-16s16 7.2 16 16v8c0 22.1-17.9 40-40 40h-16c-22.1 0-40-17.9-40-40v-80c0-22.1 17.9-40 40-40m133.1 0H368c8.8 0 16 7.2 16 16s-7.2 16-16 16h-34.9c-7.2 0-13.1 5.9-13.1 13.1c0 5.2 3 9.9 7.8 12l37.4 16.6c16.3 7.2 26.8 23.4 26.8 41.2c0 24.9-20.2 45.1-45.1 45.1H304c-8.8 0-16-7.2-16-16s7.2-16 16-16h42.9c7.2 0 13.1-5.9 13.1-13.1c0-5.2-3-9.9-7.8-12l-37.4-16.6c-16.3-7.2-26.8-23.4-26.8-41.2c0-24.9 20.2-45.1 45.1-45.1m98.9 0c8.8 0 16 7.2 16 16v31.6c0 23 5.5 45.6 16 66c10.5-20.3 16-42.9 16-66V368c0-8.8 7.2-16 16-16s16 7.2 16 16v31.6c0 34.7-10.3 68.7-29.6 97.6l-5.1 7.7c-3 4.5-8 7.1-13.3 7.1s-10.3-2.7-13.3-7.1l-5.1-7.7c-19.3-28.9-29.6-62.9-29.6-97.6V368c0-8.8 7.2-16 16-16" />
-                            </svg>
-                        </span> Download CSV
+                        <svg class="w-3.5 h-3.5 fill-current text-slate-500" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                        Download CSV
                     </button>
                 </div>
 
@@ -563,23 +663,24 @@
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-100">
                 <div>
                     <h3 class="text-xl font-bold text-slate-800 flex items-center gap-2">
-                        <span class="icon icon-table text-brand-600"></span> Loan Amortization Schedule
+                        <svg class="w-5 h-5 text-brand-600 fill-current" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 4a1 1 0 00-1 1v10a1 1 0 001 1h10a1 1 0 001-1V5a1 1 0 00-1-1H5zm0 2h10v2H5V6zm0 4h10v2H5v-2zm0 4h10v2H5v-2z" clip-rule="evenodd"/></svg>
+                        Loan Amortization Schedule
                     </h3>
                     <p class="text-xs text-slate-500 mt-1">Complete month-by-month repayment breakdown with principal & interest split.</p>
                 </div>
                 <div class="flex items-center gap-2">
                     <button id="view-toggle-btn" onclick="toggleScheduleView()" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors">
-                        Show Yearly Summary
+                        Show Monthly Breakdown
                     </button>
                 </div>
             </div>
 
             <!-- Table Container -->
-            <div class="overflow-x-auto mt-6 max-h-105 overflow-y-auto border border-slate-100 rounded-xl">
+            <div class="overflow-x-auto mt-6 max-h-96 overflow-y-auto border border-slate-100 rounded-xl">
                 <table class="w-full text-left text-xs sm:text-sm">
                     <thead class="bg-slate-50 text-slate-600 font-semibold sticky top-0 border-b border-slate-200 z-10">
                         <tr>
-                            <th class="py-3 px-4" id="col-header-period">Month / Year</th>
+                            <th class="py-3 px-4" id="col-header-period">Year</th>
                             <th class="py-3 px-4">EMI Paid</th>
                             <th class="py-3 px-4 text-emerald-600">Principal Paid</th>
                             <th class="py-3 px-4 text-amber-600">Interest Paid</th>
@@ -587,7 +688,7 @@
                         </tr>
                     </thead>
                     <tbody id="amortization-body" class="divide-y divide-slate-100 text-slate-700 font-medium">
-                        <!-- Dynamically filled by JS -->
+                        <!-- Dynamically filled by JavaScript -->
                     </tbody>
                 </table>
             </div>
@@ -597,71 +698,68 @@
     <!-- Content Section Container -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
         
-        <!-- Section D: How to Use Calculator-Pro's EMI Tool -->
+        <!-- Section: How to Use -->
         <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100">
             <h2 class="text-2xl font-extrabold text-slate-900 mb-6 flex items-center gap-2">
                 <span class="w-8 h-8 rounded-lg bg-brand-100 text-brand-600 flex items-center justify-center text-sm font-bold">1</span>
                 How to Use Calculator-Pro's EMI Tool
             </h2>
-            <p class="leading-relaxed">
+            <p class="leading-relaxed text-slate-600 mb-6">
                 Using our online financial assistant is straightforward and designed for instant clarity. Whether you are planning a housing mortgage or a personal loan, our responsive interface computes precise figures instantly.
             </p>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 pt-2">
-                    <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-2">
-                        <div class="w-8 h-8 rounded-lg bg-indigo-600 text-white font-bold flex items-center justify-center text-sm">1</div>
-                        <h3 class="font-bold text-slate-800">Enter Loan Amount</h3>
-                        <p class="text-xs text-slate-600">Use the input box or drag the slider to select your required principal amount (e.g., ₹20 lakh, ₹30 lakh, ₹50 lakh, or 1 crore).</p>
-                    </div>
-                    <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-2">
-                        <div class="w-8 h-8 rounded-lg bg-indigo-600 text-white font-bold flex items-center justify-center text-sm">2</div>
-                        <h3 class="font-bold text-slate-800">Set Interest Rate</h3>
-                        <p class="text-xs text-slate-600">Input the annual interest rate offered by your financial institution or bank (e.g., SBI, HDFC, ICICI).</p>
-                    </div>
-                    <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-2">
-                        <div class="w-8 h-8 rounded-lg bg-indigo-600 text-white font-bold flex items-center justify-center text-sm">3</div>
-                        <h3 class="font-bold text-slate-800">Choose Tenure</h3>
-                        <p class="text-xs text-slate-600">Slide to set the repayment period in years or months.</p>
-                    </div>
-                    <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-2">
-                        <div class="w-8 h-8 rounded-lg bg-indigo-600 text-white font-bold flex items-center justify-center text-sm">3</div>
-                        <h3 class="font-bold text-slate-800">Review Results</h3>
-                        <p class="text-xs text-slate-600"> Examine your monthly EMI, total interest payable, and comprehensive breakdown instantly.</p>
-                    </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-2">
+                    <div class="w-8 h-8 rounded-lg bg-brand-600 text-white font-bold flex items-center justify-center text-sm">1</div>
+                    <h3 class="font-bold text-slate-800">Enter Loan Amount</h3>
+                    <p class="text-xs text-slate-600">Use the input box or drag the slider to select your required principal amount (e.g., ₹20 lakh, ₹30 lakh, ₹50 lakh, or 1 crore).</p>
                 </div>
+                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-2">
+                    <div class="w-8 h-8 rounded-lg bg-brand-600 text-white font-bold flex items-center justify-center text-sm">2</div>
+                    <h3 class="font-bold text-slate-800">Set Interest Rate</h3>
+                    <p class="text-xs text-slate-600">Input the annual interest rate offered by your financial institution or bank (e.g., SBI, HDFC, ICICI).</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-2">
+                    <div class="w-8 h-8 rounded-lg bg-brand-600 text-white font-bold flex items-center justify-center text-sm">3</div>
+                    <h3 class="font-bold text-slate-800">Choose Tenure</h3>
+                    <p class="text-xs text-slate-600">Slide to set the repayment period in years or months.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-2">
+                    <div class="w-8 h-8 rounded-lg bg-brand-600 text-white font-bold flex items-center justify-center text-sm">4</div>
+                    <h3 class="font-bold text-slate-800">Review Results</h3>
+                    <p class="text-xs text-slate-600">Examine your monthly EMI, total interest payable, and comprehensive breakdown instantly.</p>
+                </div>
+            </div>
         </section>
 
-        <!-- Section E: What is EMI -->
+        <!-- Section: What is EMI -->
         <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100">
             <h2 class="text-2xl font-extrabold text-slate-900 mb-4">What is EMI (Equated Monthly Installment)?</h2>
-            <p class="text-slate-600 leading-relaxed">
+            <p class="text-slate-600 leading-relaxed mb-6">
                 An <strong>Equated Monthly Installment (EMI)</strong> is the fixed financial amount paid by a borrower to a lender every month on a specified date. EMIs are applied to both interest and principal until the loan is paid off in full over the specified loan tenure.
             </p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="p-5 rounded-xl bg-brand-50/50 border border-brand-100">
                     <h3 class="text-base font-bold text-brand-800 mb-2 flex items-center gap-2">
-                        <span class="inline-flex items-center gap-1.5">
-                            <svg class="size-5 fill-current text-brand-600 shrink-0" viewBox="0 0 640 512">
-                                <path
-                                    d="M400 96v.7c-5.3-.4-10.6-.7-16-.7H256c-16.5 0-32.5 2.1-47.8 6c-.1-2-.2-4-.2-6c0-53 43-96 96-96s96 43 96 96m-16 32c3.5 0 7 .1 10.4.3c4.2.3 8.4.7 12.6 1.3c17.6-20.5 43.8-33.6 73-33.6h11.5c10.4 0 18 9.8 15.5 19.9l-13.8 55.2c15.8 14.8 28.7 32.8 37.5 52.9H544c17.7 0 32 14.3 32 32v96c0 17.7-14.3 32-32 32h-32c-9.1 12.1-19.9 22.9-32 32v64c0 17.7-14.3 32-32 32h-32c-17.7 0-32-14.3-32-32v-32H256v32c0 17.7-14.3 32-32 32h-32c-17.7 0-32-14.3-32-32v-64c-34.9-26.2-58.7-66.3-63.2-112H68c-37.6 0-68-30.4-68-68s30.4-68 68-68h4c13.3 0 24 10.7 24 24s-10.7 24-24 24h-4c-11 0-20 9-20 20s9 20 20 20h31.2c12.1-59.8 57.7-107.5 116.3-122.8c12.9-3.4 26.5-5.2 40.5-5.2zm64 136a24 24 0 1 0-48 0a24 24 0 1 0 48 0" />
-                            </svg>
-                        </span> Principal Component
+                        <svg class="w-5 h-5 text-brand-600 fill-current" viewBox="0 0 20 20"><path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"/><path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h3a1 1 0 100-2H9z" clip-rule="evenodd"/></svg>
+                        Principal Component
                     </h3>
                     <p class="text-sm text-slate-600 leading-relaxed">
                         The <strong>Principal amount</strong> represents the actual capital borrowed from the bank. In the initial years of a loan, a smaller portion of your monthly EMI goes toward reducing the principal balance. As tenure progresses, the principal share increases significantly.
-                    </p>>
+                    </p>
                 </div>
                 <div class="p-5 rounded-xl bg-amber-50/50 border border-amber-100">
                     <h3 class="text-base font-bold text-amber-800 mb-2 flex items-center gap-2">
-                        <span class="icon icon-percent text-amber-600"></span> Interest Component
+                        <svg class="w-5 h-5 text-amber-600 fill-current" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.456a1 1 0 01-1.933 0l-1.18-4.456L6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.456A1 1 0 0112 2z" clip-rule="evenodd"/></svg>
+                        Interest Component
                     </h3>
-                   <p class="text-sm text-slate-600 leading-relaxed">
+                    <p class="text-sm text-slate-600 leading-relaxed">
                         The <strong>Interest rate</strong> component is the fee charged by the lender for borrowing funds. Calculated using the <strong>Reducing balance method</strong>, interest is highest during initial payments because the outstanding principal balance is highest.
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- Section F: Compound Interest Formula Section -->
+        <!-- Section: Formula Section -->
         <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100">
             <h2 class="text-2xl font-extrabold text-slate-900 mb-4">Loan EMI Calculation Formula</h2>
             <p class="text-slate-600 text-sm leading-relaxed mb-6">
@@ -674,7 +772,7 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs mb-6">
                 <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
                     <strong class="text-brand-600 font-bold text-sm block">E</strong> Monthly EMI Amount
                 </div>
@@ -690,29 +788,29 @@
             </div>
 
             <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2 text-sm text-slate-600">
-                    <h3 class="font-bold text-slate-800 text-base">Example Calculation:</h3>
-                    <p>If you take a <strong>20 lakh home loan EMI calculator</strong> scenario with a Principal (P) of ₹20,000,00, an Interest rate of 8.5% p.a. (R = 8.5/12/100 = 0.007083), and a tenure of 20 years (N = 240 months):</p>
-                    <p class="font-semibold text-indigo-700">Monthly EMI = ₹17,356 | Total Payable = ₹41,65,540 | Total Interest = ₹21,65,540</p>
-                </div>
+                <h3 class="font-bold text-slate-800 text-base">Example Calculation:</h3>
+                <p>If you take a <strong>20 lakh home loan EMI calculator</strong> scenario with a Principal (P) of ₹20,00,000, an Interest rate of 8.5% p.a. (r = 8.5/12/100 = 0.007083), and a tenure of 20 years (n = 240 months):</p>
+                <p class="font-semibold text-brand-700">Monthly EMI = ₹17,356 | Total Payable = ₹41,65,540 | Total Interest = ₹21,65,540</p>
+            </div>
         </section>
 
-        <!-- Section G: Benefits of Using Calculator Pro’s Free EMI Tool -->
+        <!-- Section: Benefits -->
         <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100">
             <h2 class="text-2xl font-extrabold text-slate-900 mb-6">Benefits of Using Calculator Pro’s Free EMI Tool</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-slate-50 transition-colors">
-                    <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
-                        <span class="icon icon-bolt text-lg"></span>
+                    <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 font-bold">
+                        ⚡
                     </div>
                     <div>
-                         <h3 class="font-bold text-slate-800 text-base">100% Accuracy & Instant Results</h3>
+                        <h3 class="font-bold text-slate-800 text-base">100% Accuracy & Instant Results</h3>
                         <p class="text-xs text-slate-600 mt-1">Eliminates complex manual math errors and delivers instant financial breakdowns.</p>
                     </div>
                 </div>
 
                 <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-slate-50 transition-colors">
-                    <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center shrink-0">
-                        <span class="icon icon-sliders text-indigo-600 text-lg mt-0.5"></span>
+                    <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center shrink-0 font-bold">
+                        🎛️
                     </div>
                     <div>
                         <h3 class="font-bold text-slate-800 text-base">Interactive Prepayment Savings</h3>
@@ -721,13 +819,8 @@
                 </div>
 
                 <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-slate-50 transition-colors">
-                    <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center shrink-0">
-                        <span class="inline-flex items-center gap-1.5">
-                            <svg class="size-5 fill-current text-indigo-600 text-lg mt-0.5 shrink-0" viewBox="0 0 640 512">
-                                <path
-                                    d="m243.4 2.6l-224 96c-14 6-21.8 21-18.7 35.8S16.8 160 32 160v8c0 13.3 10.7 24 24 24h400c13.3 0 24-10.7 24-24v-8c15.2 0 28.3-10.7 31.3-25.6s-4.8-29.9-18.7-35.8l-224-96c-8-3.4-17.2-3.4-25.2 0M128 224H64v196.3c-.6.3-1.2.7-1.8 1.1l-48 32c-11.7 7.8-17 22.4-12.9 35.9S17.9 512 32 512h448c14.1 0 26.5-9.2 30.6-22.7s-1.1-28.1-12.9-35.9l-48-32c-.6-.4-1.2-.7-1.8-1.1L448 224h-64v192h-40V224h-64v192h-48V224h-64v192h-40zM256 64a32 32 0 1 1 0 64a32 32 0 1 1 0-64" />
-                            </svg>
-                        </span>
+                    <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center shrink-0 font-bold">
+                        🏦
                     </div>
                     <div>
                         <h3 class="font-bold text-slate-800 text-base">Bank-Specific Shortcuts</h3>
@@ -736,8 +829,8 @@
                 </div>
 
                 <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-slate-50 transition-colors">
-                    <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center shrink-0">
-                        <span class="icon icon-shield-halved text-lg"></span>
+                    <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center shrink-0 font-bold">
+                        📊
                     </div>
                     <div>
                         <h3 class="font-bold text-slate-800 text-base">Full Amortization Breakdown</h3>
@@ -747,124 +840,60 @@
             </div>
         </section>
 
-        <!-- Section H: Calculate EMI for Different Loans -->
-       <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100">
+        <!-- Section: Calculate EMI for Different Loans -->
+        <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100">
             <h2 class="text-2xl font-extrabold text-slate-900 mb-6">Calculate EMI for Different Loans</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="p-5 rounded-xl border border-slate-200 hover:border-brand-500 transition-all cursor-pointer" onclick="presetLoanType('home')">
-                    <span class="inline-flex items-center gap-1.5">
-                        <svg class="size-5 fill-current text-brand-600 mb-3 shrink-0" viewBox="0 0 512 512" aria-hidden="true">
-                            <path
-                                d="M543.8 287.6c17 0 32-14 32-32.1c1-9-3-17-11-24L512 185V64c0-17.7-14.3-32-32-32h-32c-17.7 0-32 14.3-32 32v36.7L309.5 7c-6-5-14-7-21-7s-15 1-22 8L10 231.5c-7 7-10 15-10 24c0 18 14 32.1 32 32.1h32v69.7c-.1.9-.1 1.8-.1 2.8v112c0 22.1 17.9 40 40 40h16c1.2 0 2.4-.1 3.6-.2c1.5.1 3 .2 4.5.2h55.9c22.1 0 40-17.9 40-40v-88c0-17.7 14.3-32 32-32h64c17.7 0 32 14.3 32 32v88c0 22.1 17.9 40 40 40h56.5c1.4 0 2.8 0 4.2-.1c1.1.1 2.2.1 3.3.1h16c22.1 0 40-17.9 40-40v-16.2c.3-2.6.5-5.3.5-8.1l-.7-160.2h32z" />
-                        </svg>
-                    </span>
+                <div class="p-5 rounded-xl border border-slate-200 hover:border-brand-500 transition-all cursor-pointer group" onclick="presetLoanType('home')">
+                    <svg class="w-6 h-6 text-brand-600 fill-current mb-3" viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/></svg>
                     <h3 class="text-base font-bold text-slate-800 mb-1">Home Loan EMI Calculator</h3>
-                    <p class="text-xs text-slate-500 mb-3">Evaluate high-value, long-tenure loans such as a <strong>30 lakh home loan EMI</strong>, <strong>50 lakh home loan EMI calculator</strong>, or <strong>1 crore home loan EMI calculator</strong> with precise reducing interest calculations.</p>
-                    <span class="text-xs font-semibold text-brand-600 hover:underline">Apply Preset →</span>
+                    <p class="text-xs text-slate-500 mb-3">Evaluate high-value, long-tenure loans such as a <strong>30 lakh home loan EMI</strong> or <strong>50 lakh home loan EMI calculator</strong> with precise reducing interest calculations.</p>
+                    <span class="text-xs font-semibold text-brand-600 group-hover:underline">Apply Preset →</span>
                 </div>
 
-                <div class="p-5 rounded-xl border border-slate-200 hover:border-amber-500 transition-all cursor-pointer" onclick="presetLoanType('car')">
-                    <span class="inline-flex items-center gap-1.5">
-                        <svg class="size-5 fill-current text-amber-500 mb-3 shrink-0" viewBox="0 0 512 512" aria-hidden="true">
-                            <path
-                                d="M135.2 117.4L109.1 192h293.8l-26.1-74.6c-4.5-12.8-16.6-21.4-30.2-21.4H165.4c-13.6 0-25.7 8.6-30.2 21.4m-95.6 79.4L74.8 96.3C88.3 57.8 124.6 32 165.4 32h181.2c40.8 0 77.1 25.8 90.6 64.3l35.2 100.5c23.2 9.6 39.6 32.5 39.6 59.2v192c0 17.7-14.3 32-32 32h-32c-17.7 0-32-14.3-32-32v-48H96v48c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V256c0-26.7 16.4-49.6 39.6-59.2M128 288a32 32 0 1 0-64 0a32 32 0 1 0 64 0m288 32a32 32 0 1 0 0-64a32 32 0 1 0 0 64" />
-                        </svg>
-                    </span>
+                <div class="p-5 rounded-xl border border-slate-200 hover:border-amber-500 transition-all cursor-pointer group" onclick="presetLoanType('car')">
+                    <svg class="w-6 h-6 text-amber-500 fill-current mb-3" viewBox="0 0 20 20"><path d="M8 16a2 2 0 11-4 0 2 2 0 014 0zm10 0a2 2 0 11-4 0 2 2 0 014 0zM2 5a1 1 0 00-1 1v7a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0h4.1a2.5 2.5 0 014.9 0H18a1 1 0 001-1V9a1 1 0 00-.293-.707l-3-3A1 1 0 0015 5H2z"/></svg>
                     <h3 class="text-base font-bold text-slate-800 mb-1">Car Loan EMI Calculator</h3>
                     <p class="text-xs text-slate-500 mb-3">Plan your vehicle purchase with the <strong>Car loan EMI calculator India</strong> feature. Compare options across 3 to 7-year tenures to balance down payments and monthly obligations.</p>
-                    <span class="text-xs font-semibold text-amber-600 hover:underline">Apply Preset →</span>
+                    <span class="text-xs font-semibold text-amber-600 group-hover:underline">Apply Preset →</span>
                 </div>
 
-                <div class="p-5 rounded-xl border border-slate-200 hover:border-emerald-500 transition-all cursor-pointer" onclick="presetLoanType('personal')">
-                    <span class="inline-flex items-center gap-1.5">
-                        <svg class="size-5 fill-current text-emerald-500 text-2xl mb-3 shrink-0" viewBox="0 0 640 512">
-                            <path
-                                d="M144 0a80 80 0 1 1 0 160a80 80 0 1 1 0-160m368 0a80 80 0 1 1 0 160a80 80 0 1 1 0-160M0 298.7C0 239.8 47.8 192 106.7 192h42.7c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96H21.3C9.6 320 0 310.4 0 298.7M405.3 320h-.7c26.6-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-1.9-22.3c13.6-6.3 28.7-9.7 44.6-9.7h42.7c58.9 0 106.7 47.8 106.7 106.7c0 11.8-9.6 21.3-21.3 21.3H405.4zM224 224a96 96 0 1 1 192 0a96 96 0 1 1-192 0m-96 261.3c0-73.6 59.7-133.3 133.3-133.3h117.3c73.7 0 133.4 59.7 133.4 133.3c0 14.7-11.9 26.7-26.7 26.7H154.6c-14.7 0-26.7-11.9-26.7-26.7z" />
-                        </svg>
-                    </span>
+                <div class="p-5 rounded-xl border border-slate-200 hover:border-emerald-500 transition-all cursor-pointer group" onclick="presetLoanType('personal')">
+                    <svg class="w-6 h-6 text-emerald-500 fill-current mb-3" viewBox="0 0 20 20"><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/></svg>
                     <h3 class="text-base font-bold text-slate-800 mb-1">Personal Loan Calculator</h3>
-                    <p class="text-xs text-slate-500 mb-3">Personal loans are unsecured debts with higher interest rates (usually 10 font.5% to 18%). Use our <strong>10 lakh personal loan EMI calculator</strong> mode to check monthly outflows before borrowing for medical expenses, weddings, or travel.</p>
-                    <span class="text-xs font-semibold text-emerald-600 hover:underline">Apply Preset →</span>
-                </div>
-
-                <div class="p-5 rounded-xl border border-slate-200 hover:border-indigo-500 transition-all cursor-pointer" onclick="presetLoanType('education')">
-                    <span class="inline-flex items-center gap-1.5">
-                        <svg class="size-5 fill-current text-indigo-600 mb-3 shrink-0" viewBox="0 0 512 512">
-                            <path
-                                d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9V320c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6c-3.2 4.3-4.1 9.9-2.3 15s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7.3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7c-3.2-14.2-7.5-28.7-13.5-42v-24.6c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5.8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1l280.6-101c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1c-7.6-2.7-15.6-4.1-23.7-4.1M128 408c0 35.3 86 72 192 72s192-36.7 192-72l-15.3-145.4L354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6l-142.2-51.4z" />
-                        </svg>
-                    </span>
-                    <h3 class="text-base font-bold text-slate-800 mb-1">Education Loan Calculator</h3>
-                    <p class="text-xs text-slate-500 mb-3">Flexible repayment with moratorium periods and tenure up to 15 years.</p>
-                    <span class="text-xs font-semibold text-indigo-600 hover:underline">Apply Preset →</span>
-                </div>
-
-                <div class="p-5 rounded-xl border border-slate-200 hover:border-purple-500 transition-all cursor-pointer" onclick="presetLoanType('business')">
-                    <span class="inline-flex items-center gap-1.5">
-                        <svg class="size-5 fill-current text-purple-500 mb-3 shrink-0" viewBox="0 0 512 512">
-                            <path
-                                d="M184 48h144c4.4 0 8 3.6 8 8v40H176V56c0-4.4 3.6-8 8-8m-56 8v40H64c-35.3 0-64 28.7-64 64v96h512v-96c0-35.3-28.7-64-64-64h-64V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56m384 232H320v32c0 17.7-14.3 32-32 32h-64c-17.7 0-32-14.3-32-32v-32H0v128c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64z" />
-                        </svg>
-                    </span>
-                    <h3 class="text-base font-bold text-slate-800 mb-1">Business Loan Calculator</h3>
-                    <p class="text-xs text-slate-500 mb-3">Commercial working capital loans or expansion financing with customized terms.</p>
-                    <span class="text-xs font-semibold text-purple-600 hover:underline">Apply Preset →</span>
+                    <p class="text-xs text-slate-500 mb-3">Personal loans feature higher interest rates (10.5% to 18%). Use our <strong>10 lakh personal loan EMI calculator</strong> mode to check monthly outflows before borrowing.</p>
+                    <span class="text-xs font-semibold text-emerald-600 group-hover:underline">Apply Preset →</span>
                 </div>
             </div>
         </section>
 
-        <!-- Section I: Factors That Affect Your Loan EMI -->
-        <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100">
-            <h2 class="text-2xl font-extrabold text-slate-900 mb-6">Factors That Affect Your Loan EMI</h2>
-            <p class="text-sm text-slate-600 mb-4">Your monthly repayment amount is governed by three primary variables: the principal loan amount, the effective interest rate, and the loan tenure. Additionally, maintaining a strong CIBIL score (750+) ensures you secure lower interest rates from leading banks like SBI, HDFC, and ICICI Bank.</p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
-                    <h3 class="text-base font-bold text-slate-800 mb-2">1. Principal Loan Amount</h3>
-                    <p class="text-xs text-slate-600 leading-relaxed">The total capital borrowed. A higher loan principal directly increases monthly EMI payments and total interest payable.</p>
-                </div>
-                <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
-                    <h3 class="text-base font-bold text-slate-800 mb-2">2. Interest Rate & Type</h3>
-                    <p class="text-xs text-slate-600 leading-relaxed">Whether fixed or floating interest rate, even a 0.25% reduction in interest rates can save lakhs on long-term home loans.</p>
-                </div>
-                <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
-                    <h3 class="text-base font-bold text-slate-800 mb-2">3. Loan Tenure</h3>
-                    <p class="text-xs text-slate-600 leading-relaxed">Longer tenures lower your monthly outflow but increase overall accumulated interest costs significantly.</p>
-                </div>
-                <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
-                    <h3 class="text-base font-bold text-slate-800 mb-2">4. CIBIL Score Impact on EMI</h3>
-                    <p class="text-xs text-slate-600 leading-relaxed">A CIBIL score above 750 qualifies you for prime interest rate discounts from leading banks like SBI, HDFC, and ICICI.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section J: Smart Tips to Reduce Your EMI -->
-         <section class="bg-linear-to-r from-brand-900 via-slate-900 to-indigo-950 text-white rounded-2xl p-6 sm:p-8 shadow-xl">
+        <!-- Section: Tips Banner -->
+        <section class="bg-slate-900 text-white rounded-2xl p-6 sm:p-8 shadow-xl">
             <h2 class="text-2xl font-extrabold mb-6 flex items-center gap-2">
-                 Smart Tips to Reduce Your EMI
+                Smart Tips to Reduce Your EMI
             </h2>
-            
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white/10 p-5 rounded-xl backdrop-blur-sm border border-white/10">
-                    <h3 class="text-base font-bold text-brand-200 mb-2">Make Regular Part Payments</h3>
+                <div class="bg-white/10 p-5 rounded-xl border border-white/10">
+                    <h3 class="text-base font-bold text-brand-300 mb-2">Make Regular Part Payments</h3>
                     <p class="text-xs text-slate-300 leading-relaxed">Even one additional EMI per year or small monthly prepayments significantly slashes outstanding principal.</p>
                 </div>
-                <div class="bg-white/10 p-5 rounded-xl backdrop-blur-sm border border-white/10">
-                    <h3 class="text-base font-bold text-brand-200 mb-2">Opt for a Balance Transfer EMI Calculator Review</h3>
-                    <p class="text-xs text-slate-300 leading-relaxed">Make periodic part-payments toward your outstanding principal to drastically cut down total interest.</p>
+                <div class="bg-white/10 p-5 rounded-xl border border-white/10">
+                    <h3 class="text-base font-bold text-brand-300 mb-2">Balance Transfer Review</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">Consider shifting high-interest loans to lenders offering lower rates to save overall interest.</p>
                 </div>
-                <div class="bg-white/10 p-5 rounded-xl backdrop-blur-sm border border-white/10">
-                    <h3 class="text-base font-bold text-brand-200 mb-2">Choose Shorter Tenures Wisely</h3>
+                <div class="bg-white/10 p-5 rounded-xl border border-white/10">
+                    <h3 class="text-base font-bold text-brand-300 mb-2">Choose Shorter Tenures</h3>
                     <p class="text-xs text-slate-300 leading-relaxed">While longer tenures lower monthly EMI, they increase total interest outgo significantly.</p>
                 </div>
-                <div class="bg-white/10 p-5 rounded-xl backdrop-blur-sm border border-white/10">
-                    <h3 class="text-base font-bold text-brand-200 mb-2">Maintain High CIBIL Score</h3>
-                    <p class="text-xs text-slate-300 leading-relaxed">Negotiate lower interest margins with your bank by maintaining disciplined credit habits.</p>
+                <div class="bg-white/10 p-5 rounded-xl border border-white/10">
+                    <h3 class="text-base font-bold text-brand-300 mb-2">High CIBIL Score</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">Negotiate lower interest margins with your bank by maintaining disciplined credit habits (750+ score).</p>
                 </div>
             </div>
         </section>
 
-        <!-- Section K: Frequently Asked Questions -->
-         <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100">
+        <!-- Section: FAQ Accordion -->
+        <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100">
             <h2 class="text-2xl font-extrabold text-slate-900 mb-6">Frequently Asked Questions (FAQ)</h2>
             
             <div class="space-y-4" id="faq-accordion">
@@ -872,14 +901,12 @@
                 <!-- Q1 -->
                 <div class="border border-slate-200 rounded-xl overflow-hidden">
                     <button class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 bg-slate-50 hover:bg-slate-100 transition-colors flex justify-between items-center text-sm sm:text-base" onclick="toggleAccordion(this)">
-                        <h3>How does the SBI Home Loan EMI Calculator work?</h3>
-                        <span class="icon icon-chevron-down text-slate-400 transition-transform duration-200"></span>
+                        <span>How does the SBI Home Loan EMI Calculator work?</span>
+                        <svg class="w-5 h-5 text-slate-400 transition-transform duration-200 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div class="accordion-content px-4 sm:px-5 bg-white text-xs sm:text-sm text-slate-600 leading-relaxed">
                         <div class="py-4 border-t border-slate-100">
-                            <p>
-                              The SBI Home Loan EMI Calculator uses the reducing balance method formula to calculate your precise monthly Equated Monthly Installment based on principal, interest rate, and tenure.
-                           <p>
+                            The SBI Home Loan EMI Calculator uses the reducing balance method formula to calculate your precise monthly Equated Monthly Installment based on principal, interest rate, and tenure.
                         </div>
                     </div>
                 </div>
@@ -887,14 +914,12 @@
                 <!-- Q2 -->
                 <div class="border border-slate-200 rounded-xl overflow-hidden">
                     <button class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 bg-slate-50 hover:bg-slate-100 transition-colors flex justify-between items-center text-sm sm:text-base" onclick="toggleAccordion(this)">
-                        <h3>How can I calculate EMI for a 20 lakh, 30 lakh, or 50 lakh home loan?</h3>
-                        <span class="icon icon-chevron-down text-slate-400 transition-transform duration-200"></span>
+                        <span>How can I calculate EMI for a 20 lakh, 30 lakh, or 50 lakh home loan?</span>
+                        <svg class="w-5 h-5 text-slate-400 transition-transform duration-200 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div class="accordion-content px-4 sm:px-5 bg-white text-xs sm:text-sm text-slate-600 leading-relaxed">
                         <div class="py-4 border-t border-slate-100">
-                           <p>
-                              Simply enter your required loan amount (e.g., ₹20,00,000, ₹30,00,000, or ₹50,00,000) into our Loan EMI Calculator, adjust the interest rate and tenure sliders, and view your monthly payment breakdown instantly. 
-                           <p>
+                            Simply enter your required loan amount (e.g., ₹20,00,000, ₹30,00,000, or ₹50,00,000) into our Loan EMI Calculator, adjust the interest rate and tenure sliders, and view your monthly payment breakdown instantly.
                         </div>
                     </div>
                 </div>
@@ -902,14 +927,12 @@
                 <!-- Q3 -->
                 <div class="border border-slate-200 rounded-xl overflow-hidden">
                     <button class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 bg-slate-50 hover:bg-slate-100 transition-colors flex justify-between items-center text-sm sm:text-base" onclick="toggleAccordion(this)">
-                        <h3>How much interest can I save with a home loan prepayment?</h3>
-                        <span class="icon icon-chevron-down text-slate-400 transition-transform duration-200"></span>
+                        <span>How much interest can I save with a home loan prepayment?</span>
+                        <svg class="w-5 h-5 text-slate-400 transition-transform duration-200 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div class="accordion-content px-4 sm:px-5 bg-white text-xs sm:text-sm text-slate-600 leading-relaxed">
                         <div class="py-4 border-t border-slate-100">
-                            <p>
-                              Making periodic prepayments reduces your outstanding principal balance directly. This lowers the interest accumulated over subsequent months, saving lakhs in overall interest and reducing your loan tenure.
-                           <p>
+                            Making periodic prepayments reduces your outstanding principal balance directly. This lowers the interest accumulated over subsequent months, saving lakhs in overall interest and reducing your loan tenure.
                         </div>
                     </div>
                 </div>
@@ -917,162 +940,36 @@
                 <!-- Q4 -->
                 <div class="border border-slate-200 rounded-xl overflow-hidden">
                     <button class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 bg-slate-50 hover:bg-slate-100 transition-colors flex justify-between items-center text-sm sm:text-base" onclick="toggleAccordion(this)">
-                        <h3>What is the difference between EMI vs prepayment calculator?</h3>
-                        <span class="icon icon-chevron-down text-slate-400 transition-transform duration-200"></span>
+                        <span>What is the difference between EMI vs prepayment calculator?</span>
+                        <svg class="w-5 h-5 text-slate-400 transition-transform duration-200 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div class="accordion-content px-4 sm:px-5 bg-white text-xs sm:text-sm text-slate-600 leading-relaxed">
                         <div class="py-4 border-t border-slate-100">
-                            <p>
-                              A standard EMI calculator calculates your regular fixed monthly payment. A prepayment calculator factors in one-time or recurring extra payments to show how much earlier you can close your loan or lower subsequent EMIs.
-                           <p>
+                            A standard EMI calculator calculates your regular fixed monthly payment. A prepayment calculator factors in one-time or recurring extra payments to show how much earlier you can close your loan or lower subsequent EMIs.
                         </div>
                     </div>
                 </div>
 
-                <!-- Q5 -->
-                <div class="border border-slate-200 rounded-xl overflow-hidden">
-                    <button class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 bg-slate-50 hover:bg-slate-100 transition-colors flex justify-between items-center text-sm sm:text-base" onclick="toggleAccordion(this)">
-                        <h3>How does an HDFC Personal Loan EMI Calculator differ from a Home Loan calculator?</h3>
-                        <span class="icon icon-chevron-down text-slate-400 transition-transform duration-200"></span>
-                    </button>
-                    <div class="accordion-content px-4 sm:px-5 bg-white text-xs sm:text-sm text-slate-600 leading-relaxed">
-                        <div class="py-4 border-t border-slate-100">
-                            <p>
-                              While the core mathematical formula remains identical (reducing balance), personal loans generally feature shorter tenures (1 to 5 years), higher interest rates, and processing fees compared to long-term mortgage or housing loans.
-                           <p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Q6 -->
-                <div class="border border-slate-200 rounded-xl overflow-hidden">
-                    <button class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 bg-slate-50 hover:bg-slate-100 transition-colors flex justify-between items-center text-sm sm:text-base" onclick="toggleAccordion(this)">
-                        <h3>Can I calculate car loan EMI for 7 years?</h3>
-                        <span class="icon icon-chevron-down text-slate-400 transition-transform duration-200"></span>
-                    </button>
-                    <div class="accordion-content px-4 sm:px-5 bg-white text-xs sm:text-sm text-slate-600 leading-relaxed">
-                        <div class="py-4 border-t border-slate-100">
-                            <p>
-                              Yes! You can set the loan tenure slider anywhere from 1 year up to 7 years (84 months) to compute accurate car loan or vehicle loan monthly repayments.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Q7 -->
-                <div class="border border-slate-200 rounded-xl overflow-hidden">
-                    <button class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 bg-slate-50 hover:bg-slate-100 transition-colors flex justify-between items-center text-sm sm:text-base" onclick="toggleAccordion(this)">
-                        <h3>What is a step-up EMI calculator?</h3>
-                        <span class="icon icon-chevron-down text-slate-400 transition-transform duration-200"></span>
-                    </button>
-                    <div class="accordion-content px-4 sm:px-5 bg-white text-xs sm:text-sm text-slate-600 leading-relaxed">
-                        <div class="py-4 border-t border-slate-100">
-                            <p>
-                                A step-up EMI calculator allows borrowers to start with lower EMIs that increase progressively each year, aligning with expected annual salary increments and career growth.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Q8 -->
-                <div class="border border-slate-200 rounded-xl overflow-hidden">
-                    <button class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 bg-slate-50 hover:bg-slate-100 transition-colors flex justify-between items-center text-sm sm:text-base" onclick="toggleAccordion(this)">
-                        <h3>How does CIBIL score impact my loan EMI?</h3>
-                        <span class="icon icon-chevron-down text-slate-400 transition-transform duration-200"></span>
-                    </button>
-                    <div class="accordion-content px-4 sm:px-5 bg-white text-xs sm:text-sm text-slate-600 leading-relaxed">
-                        <div class="py-4 border-t border-slate-100">
-                            <p>
-                                A higher CIBIL score (750+) qualifies you for lower interest rates offered by top banks like SBI, HDFC, and ICICI, which significantly reduces your monthly EMI and total interest payable.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Q9 -->
-                <div class="border border-slate-200 rounded-xl overflow-hidden">
-                    <button class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 bg-slate-50 hover:bg-slate-100 transition-colors flex justify-between items-center text-sm sm:text-base" onclick="toggleAccordion(this)">
-                        <h3>Are there tax benefits included in housing loan calculators?</h3>
-                        <span class="icon icon-chevron-down text-slate-400 transition-transform duration-200"></span>
-                    </button>
-                    <div class="accordion-content px-4 sm:px-5 bg-white text-xs sm:text-sm text-slate-600 leading-relaxed">
-                        <div class="py-4 border-t border-slate-100">
-                            <p>
-                               Yes, under sections 24(b) and 80C of the Income Tax Act, borrowers can claim deductions on home loan interest (up to ₹2 lakh) and principal repayment (up to ₹1.5 lakh) per financial year.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Q10 -->
-                <div class="border border-slate-200 rounded-xl overflow-hidden">
-                    <button class="w-full text-left p-4 sm:p-5 font-bold text-slate-800 bg-slate-50 hover:bg-slate-100 transition-colors flex justify-between items-center text-sm sm:text-base" onclick="toggleAccordion(this)">
-                        <h3>How does a loan balance transfer work?</h3>
-                        <span class="icon icon-chevron-down text-slate-400 transition-transform duration-200"></span>
-                    </button>
-                    <div class="accordion-content px-4 sm:px-5 bg-white text-xs sm:text-sm text-slate-600 leading-relaxed">
-                        <div class="py-4 border-t border-slate-100">
-                            <p>
-                                A balance transfer allows you to move your existing outstanding loan from one financial institution to another offering a lower interest rate, thereby reducing your monthly EMI burden.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-        <!-- Section M: Related Calculators -->
-        <section id="related-calculators" class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100">
-            <h2 class="text-2xl font-extrabold text-slate-900 mb-6">Other Useful Calculators</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <a href="Compound-Interest-Calculator.html"
-                    class="p-5 rounded-2xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all group">
-                    <div class="flex items-center justify-between mb-2">
-                        <span class="text-sm font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Compound Interest Calculator</span>
-                        <span
-                            class="icon icon-arrow-right text-xs text-slate-400 group-hover:text-indigo-600 transition-colors"></span>
-                    </div>
-                    <p class="text-xs text-slate-500">Investment exponential growth.</p>
-                </a>
-                <a href="sip-calculator.html"
-                    class="p-5 rounded-2xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all group">
-                    <div class="flex items-center justify-between mb-2">
-                        <span class="text-sm font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">SIP Calculator</span>
-                        <span
-                            class="icon icon-arrow-right text-xs text-slate-400 group-hover:text-indigo-600 transition-colors"></span>
-                    </div>
-                    <p class="text-xs text-slate-500">Calculate future returns on your Systematic Investment Plans.</p>
-                </a>
-                <a href="percentage-increase-decrease-calculator.html"
-                    class="p-5 rounded-2xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all group">
-                    <div class="flex items-center justify-between mb-2">
-                        <span class="text-sm font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Percentage Increase/Decrease</span>
-                        <span
-                            class="icon icon-arrow-right text-xs text-slate-400 group-hover:text-indigo-600 transition-colors"></span>
-                    </div>
-                    <p class="text-xs text-slate-500">Quickly calculate percentage growth, drops, and changes.</p>
-                </a>
             </div>
         </section>
 
     </div>
 
-    <!-- Section N: Clean Multi-Column Footer -->
-    <footer class="bg-slate-900 text-slate-400 text-sm border-t border-slate-800 mt-16">
+    <!-- Multi-Column Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-sm border-t border-slate-800 mt-16 no-print">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
     
                 <!-- Col 1: About -->
                 <div class="space-y-4">
                     <div class="flex items-center gap-2 text-white font-bold text-lg">
-                        <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
-                            <span class="icon-calculator"></span>
+                        <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white text-sm">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 14H7v-2h10v2zm0-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
                         </div>
-                        <span>Calculator<span class="text-indigo-400">-Pro</span></span>
+                        <span>Calculator<span class="text-brand-400">-Pro</span></span>
                     </div>
                     <p class="text-xs text-slate-400 leading-relaxed">
-                        Calculator Pro provides free, fast, and clinically accurate online tools for health, financial,
-                        mathematical, and everyday conversion needs.
+                        Calculator Pro provides free, fast, and clinically accurate online tools for health, financial, mathematical, and everyday conversion needs.
                     </p>
                     <div class="text-xs text-slate-500">
                         &copy; <span id="current-year">2026</span> Calculator Pro. All rights reserved.
@@ -1083,76 +980,47 @@
                 <div>
                     <h3 class="text-white font-semibold mb-3 text-sm">Quick Links</h3>
                     <ul class="space-y-2 text-xs">
-                        <li><a href="unit-converter.html" class="hover:text-white transition-colors">Unit Converter</a></li>
-                        <li><a href="gst-calculator.html" class="hover:text-white transition-colors">GST Calculator</a></li>
-                        <li><a href="cgpa-to-percentage-converter.html" class="hover:text-white transition-colors">CGPA to
-                                Percentage</a></li>
-                        <li><a href="sgpa-to-cgpa-calculator.html" class="hover:text-white transition-colors">SGPA to
-                                CGPA</a></li>
-                        <li><a href="work-days-calculator.html" class="hover:text-white transition-colors">Work Days
-                                Calculator</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Unit Converter</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">GST Calculator</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">CGPA to Percentage</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Work Days Calculator</a></li>
                     </ul>
                 </div>
+
                 <!-- Column 3: Tools & Resources -->
                 <div>
                     <h3 class="text-white font-semibold mb-3 text-sm">Calculators</h3>
                     <ul class="space-y-2 text-xs">
-                        <li><a href="age-calculator.html" class="hover:text-white transition-colors">Age Calculator</a></li>
-                        <li><a href="time-calculator.html" class="hover:text-white transition-colors">Time Calculator</a>
-                        </li>
-                        <li><a href="sip-calculator.html" class="hover:text-white transition-colors">SIP Financial
-                                Calculator</a></li>
-                        <li><a href="bmi-calculator.html" class="hover:text-white transition-colors">BMI Health
-                                Calculator</a></li>
-                        <li><a href="percentage-calculator.html" class="hover:text-white transition-colors">Percentage
-                                Calculator</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Age Calculator</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">SIP Financial Calculator</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">BMI Health Calculator</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Percentage Calculator</a></li>
                     </ul>
                 </div>
     
-                <!-- Column 4: Legal & Contact -->
+                <!-- Column 4: Legal -->
                 <div>
                     <h3 class="text-white font-semibold mb-3 text-sm">Legal & Info</h3>
                     <ul class="space-y-2 text-xs">
-                        <li><a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
-                        <li><a href="terms-of-service.html" class="hover:text-white transition-colors">Terms of Service</a>
-                        </li>
-                        <li><a href="editorial-guidelines.html" class="hover:text-white transition-colors">Editorial
-                                Guidelines</a></li>
-                        <li><a href="contact-us.html" class="hover:text-white transition-colors">Contact Us</a></li>
-                        <li><a href="disclaimer.html" class="hover:text-white transition-colors">Disclaimer</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Disclaimer</a></li>
                     </ul>
                 </div>
     
             </div>
         </div>
     </footer>
-    <!-- Vanilla JavaScript Core Logic -->
+
+    <!-- JavaScript Core Logic -->
     <script>
-<!-- Inline JavaScript for Toggle -->
-  
-    document.addEventListener('DOMContentLoaded', () => {
-      const btn = document.getElementById('calc-mobile-menu-btn');
-      const menu = document.getElementById('calc-mobile-menu');
-      const menuIcon = document.getElementById('calc-menu-icon');
-      const closeIcon = document.getElementById('calc-close-icon');
-
-      if (btn && menu) {
-        btn.addEventListener('click', () => {
-          const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-          btn.setAttribute('aria-expanded', !isExpanded);
-          menu.classList.toggle('hidden');
-          menuIcon.classList.toggle('hidden');
-          closeIcon.classList.toggle('hidden');
-        });
-      }
-    });
-
         // State variables
         let tenureMode = 'years'; // 'years' or 'months'
         let scheduleView = 'yearly'; // 'yearly' or 'monthly'
         let globalAmortizationData = [];
 
-        // DOM Element references
+        // DOM Elements
         const amountInput = document.getElementById('amount-input');
         const amountSlider = document.getElementById('amount-slider');
         const rateInput = document.getElementById('rate-input');
@@ -1164,7 +1032,7 @@
         const tenureMoBtn = document.getElementById('tenure-mo-btn');
         const tenureTicks = document.getElementById('tenure-ticks');
 
-        // Results elements
+        // Output DOM Elements
         const resultEMI = document.getElementById('result-emi');
         const resultTenureMonths = document.getElementById('result-tenure-months');
         const resultPrincipal = document.getElementById('result-principal');
@@ -1178,18 +1046,18 @@
         const amortizationBody = document.getElementById('amortization-body');
         const viewToggleBtn = document.getElementById('view-toggle-btn');
 
-        // Format number to Indian Currency System
+        // Helper: Format Rupee Currency
         function formatRupee(val) {
             const num = Math.round(val);
             return '₹' + num.toLocaleString('en-IN');
         }
 
-        // Parse formatted input back to integer
+        // Helper: Parse Rupee Input
         function parseRupee(str) {
-            return parseFloat(str.replace(/[^0-9.]/g, '')) || 0;
+            return parseFloat(String(str).replace(/[^0-9.]/g, '')) || 0;
         }
 
-        // Sync Amount Slider and Input
+        // Sync Amount Controls
         amountSlider.addEventListener('input', (e) => {
             const val = parseFloat(e.target.value);
             amountInput.value = val.toLocaleString('en-IN');
@@ -1205,7 +1073,7 @@
             calculateEMI();
         });
 
-        // Sync Rate Slider and Input
+        // Sync Rate Controls
         rateSlider.addEventListener('input', (e) => {
             rateInput.value = e.target.value;
             calculateEMI();
@@ -1220,7 +1088,7 @@
             calculateEMI();
         });
 
-        // Sync Tenure Slider and Input
+        // Sync Tenure Controls
         tenureSlider.addEventListener('input', (e) => {
             tenureInput.value = e.target.value;
             calculateEMI();
@@ -1236,14 +1104,13 @@
             calculateEMI();
         });
 
-        // Set Loan Amount Preset
+        // Quick Loan Presets
         function setLoanAmount(val) {
             amountInput.value = val.toLocaleString('en-IN');
             amountSlider.value = val;
             calculateEMI();
         }
 
-        // Set Tenure Preset
         function setTenureValue(val) {
             if (tenureMode === 'months') {
                 val = val * 12;
@@ -1253,7 +1120,7 @@
             calculateEMI();
         }
 
-        // Toggle Tenure Mode (Years / Months)
+        // Switch Tenure Modes (Years / Months)
         function setTenureMode(mode) {
             if (tenureMode === mode) return;
 
@@ -1288,7 +1155,7 @@
             calculateEMI();
         }
 
-        // Apply Loan Type Preset
+        // Apply Preset Loan Profiles
         function presetLoanType(type) {
             const badge = document.getElementById('loan-type-badge');
             if (type === 'home') {
@@ -1330,7 +1197,7 @@
             window.scrollTo({ top: document.getElementById('calc-app').offsetTop - 80, behavior: 'smooth' });
         }
 
-        // Core EMI Calculation logic
+        // Core Mathematical EMI Calculation
         function calculateEMI() {
             const P = parseRupee(amountInput.value);
             const annualRate = parseFloat(rateInput.value) || 0;
@@ -1350,15 +1217,15 @@
             const totalRepayment = emi * N;
             const totalInterest = totalRepayment - P;
 
-            // Render Summary Results
+            // Update UI Summary
             resultEMI.textContent = formatRupee(emi);
             resultTenureMonths.textContent = `For ${N} Monthly Installments`;
             resultPrincipal.textContent = formatRupee(P);
             resultInterest.textContent = formatRupee(totalInterest);
             resultTotal.textContent = formatRupee(totalRepayment);
 
-            // Calculate percentage ratios
-            const principalPct = Math.round((P / totalRepayment) * 100) || 0;
+            // Compute Ratios
+            const principalPct = Math.min(100, Math.max(0, Math.round((P / totalRepayment) * 100))) || 0;
             const interestPct = 100 - principalPct;
 
             barPrincipal.style.width = `${principalPct}%`;
@@ -1366,14 +1233,14 @@
             ratioPrincipalPct.textContent = `${principalPct}%`;
             ratioInterestPct.textContent = `${interestPct}%`;
 
-            const mult = (totalInterest / P).toFixed(2);
+            const mult = (P > 0) ? (totalInterest / P).toFixed(2) : "0.00";
             interestMultiplier.textContent = `${mult}x`;
 
-            // Build Amortization Data
+            // Rebuild Amortization Schedule
             generateAmortizationSchedule(P, r, emi, N);
         }
 
-        // Generate Amortization Table Data
+        // Generate Amortization List
         function generateAmortizationSchedule(P, r, emi, totalMonths) {
             let balance = P;
             globalAmortizationData = [];
@@ -1396,7 +1263,7 @@
             renderAmortizationTable();
         }
 
-        // Toggle Amortization Schedule View (Yearly / Monthly)
+        // Toggle Schedule View (Yearly / Monthly)
         function toggleScheduleView() {
             if (scheduleView === 'yearly') {
                 scheduleView = 'monthly';
@@ -1408,7 +1275,7 @@
             renderAmortizationTable();
         }
 
-        // Render Table HTML based on view
+        // Render Table Data
         function renderAmortizationTable() {
             amortizationBody.innerHTML = '';
             const colHeaderPeriod = document.getElementById('col-header-period');
@@ -1421,15 +1288,14 @@
                     tr.innerHTML = `
                         <td class="py-2.5 px-4 font-semibold text-slate-800">Month ${row.month}</td>
                         <td class="py-2.5 px-4">${formatRupee(row.emi)}</td>
-                        <td class="py-2.5 px-4 text-emerald-600">${formatRupee(row.principal)}</td>
-                        <td class="py-2.5 px-4 text-amber-600">${formatRupee(row.interest)}</td>
+                        <td class="py-2.5 px-4 text-emerald-600 font-medium">${formatRupee(row.principal)}</td>
+                        <td class="py-2.5 px-4 text-amber-600 font-medium">${formatRupee(row.interest)}</td>
                         <td class="py-2.5 px-4">${formatRupee(row.balance)}</td>
                     `;
                     amortizationBody.appendChild(tr);
                 });
             } else {
                 colHeaderPeriod.textContent = 'Year';
-                // Group by year
                 const yearMap = {};
                 globalAmortizationData.forEach(row => {
                     if (!yearMap[row.year]) {
@@ -1438,7 +1304,7 @@
                     yearMap[row.year].emi += row.emi;
                     yearMap[row.year].principal += row.principal;
                     yearMap[row.year].interest += row.interest;
-                    yearMap[row.year].balance = row.balance; // year end balance
+                    yearMap[row.year].balance = row.balance;
                 });
 
                 Object.keys(yearMap).forEach(year => {
@@ -1448,8 +1314,8 @@
                     tr.innerHTML = `
                         <td class="py-2.5 px-4 font-bold text-slate-800">Year ${year}</td>
                         <td class="py-2.5 px-4">${formatRupee(data.emi)}</td>
-                        <td class="py-2.5 px-4 text-emerald-600">${formatRupee(data.principal)}</td>
-                        <td class="py-2.5 px-4 text-amber-600">${formatRupee(data.interest)}</td>
+                        <td class="py-2.5 px-4 text-emerald-600 font-semibold">${formatRupee(data.principal)}</td>
+                        <td class="py-2.5 px-4 text-amber-600 font-semibold">${formatRupee(data.interest)}</td>
                         <td class="py-2.5 px-4">${formatRupee(data.balance)}</td>
                     `;
                     amortizationBody.appendChild(tr);
@@ -1457,16 +1323,14 @@
             }
         }
 
-        // Accordion Toggle function
+        // FAQ Accordion Handler
         function toggleAccordion(btn) {
             const content = btn.nextElementSibling;
-            const icon = btn.querySelector('i');
-            
+            const icon = btn.querySelector('svg');
             const isOpen = content.classList.contains('open');
 
-            // Close all
             document.querySelectorAll('.accordion-content').forEach(el => el.classList.remove('open'));
-            document.querySelectorAll('#faq-accordion i').forEach(i => i.classList.remove('rotate-180'));
+            document.querySelectorAll('#faq-accordion svg').forEach(svg => svg.classList.remove('rotate-180'));
 
             if (!isOpen) {
                 content.classList.add('open');
@@ -1474,7 +1338,7 @@
             }
         }
 
-        // Export Amortization Schedule to CSV
+        // CSV Export Feature
         function exportScheduleCSV() {
             let csvContent = "data:text/csv;charset=utf-8,Month,EMI,Principal,Interest,Remaining Balance\n";
             globalAmortizationData.forEach(r => {
@@ -1490,7 +1354,7 @@
             document.body.removeChild(link);
         }
 
-        // Reset Calculator
+        // Reset Inputs
         function resetCalculator() {
             amountInput.value = "10,00,000";
             amountSlider.value = 1000000;
@@ -1503,8 +1367,24 @@
             calculateEMI();
         }
 
-        // Initialize on DOM load
+        // Mobile Menu Toggle
         document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('calc-mobile-menu-btn');
+            const menu = document.getElementById('calc-mobile-menu');
+            const menuIcon = document.getElementById('calc-menu-icon');
+            const closeIcon = document.getElementById('calc-close-icon');
+
+            if (btn && menu) {
+                btn.addEventListener('click', () => {
+                    const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+                    btn.setAttribute('aria-expanded', !isExpanded);
+                    menu.classList.toggle('hidden');
+                    menuIcon.classList.toggle('hidden');
+                    closeIcon.classList.toggle('hidden');
+                });
+            }
+
+            // Initial Calculation on Load
             calculateEMI();
         });
     </script>

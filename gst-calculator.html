@@ -5,357 +5,405 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GST Calculator 2026 – Free GST Calculator</title>
     <meta name="description" content="Free GST Calculator based on latest GST 2.0 slabs (2026). Calculate CGST, SGST, IGST, inclusive & exclusive GST instantly. Updated rates: 0%, 5%, 18% & 40%.">
-    <meta name="keywords" content="GST Calculator, GST Calculator 2026, GST calculator online, latest GST slabs 2026, CGST SGST calculator, inclusive GST calculator, GST 2.0 rates">
-    <meta name="author" content="Calculator Pro">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://calculatorpro.com/gst-calculator">
-
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="GST Calculator 2026 – Free GST Calculator">
-    <meta property="og:description" content="Calculate CGST, SGST, IGST, inclusive & exclusive GST instantly using latest GST 2.0 rates (0%, 5%, 18%, 40%).">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://calculatorpro.com/gst-calculator">
-    <meta property="og:image" content="https://placehold.co/1200x630/2563eb/ffffff?text=GST+Calculator+2026">
-
-    <!-- Twitter Card Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="GST Calculator 2026 – Free GST Calculator">
-    <meta name="twitter:description" content="Calculate GST 2.0 amounts, CGST, SGST, IGST instantly with Calculator Pro.">
-    <meta name="twitter:image" content="https://placehold.co/1200x630/2563eb/ffffff?text=GST+Calculator+2026">
-
-    <!-- Google Fonts & Tailwind CSS -->
     
-    
-
-    <!-- FontAwesome CDN -->
-    
-
-    <!-- Tailwind Custom Configuration -->
-    
-
-    <link rel="stylesheet" href="./css/styles.min.css">
-
-    <!-- Structured Data JSON-LD Schemas -->
-    <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@graph": [
-            {
-              "@type": "WebSite",
-              "@id": "https://calculatorpro.com/#website",
-              "url": "https://calculatorpro.com/",
-              "name": "Calculator Pro",
-              "description": "Free Online Professional Calculators for Finance, GST, Tax, and Health",
-              "inLanguage": "en-IN"
-            },
-            {
-              "@type": "WebApplication",
-              "name": "GST Calculator India",
-              "url": "https://calculatorpro.com/gst-calculator",
-              "applicationCategory": "BusinessApplication",
-              "operatingSystem": "All",
-              "offers": {
-                "@type": "Offer",
-                "price": "0",
-                "priceCurrency": "INR"
-              }
-            },
-              "@type": "FAQPage",
-              "mainEntity": [
-                {
-                  "@type": "Question",
-                  "name": "How does the SBI Home Loan EMI Calculator work?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "The SBI Home Loan EMI Calculator uses the reducing balance method formula to calculate your precise monthly Equated Monthly Installment based on principal, interest rate, and tenure."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "How can I calculate EMI for a 20 lakh, 30 lakh, or 50 lakh home loan?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Simply enter your required loan amount (e.g., ₹20,00,000, ₹30,00,000, or ₹50,00,000) into our Loan EMI Calculator, adjust the interest rate and tenure sliders, and view your monthly payment breakdown instantly."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "How much interest can I save with a home loan prepayment?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Making periodic prepayments reduces your outstanding principal balance directly. This lowers the interest accumulated over subsequent months, saving lakhs in overall interest and reducing your loan tenure."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "What is the difference between EMI vs prepayment calculator?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": " A standard EMI calculator calculates your regular fixed monthly payment. A prepayment calculator factors in one-time or recurring extra payments to show how much earlier you can close your loan or lower subsequent EMIs."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "How does an HDFC Personal Loan EMI Calculator differ from a Home Loan calculator?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "While the core mathematical formula remains identical (reducing balance), personal loans generally feature shorter tenures (1 to 5 years), higher interest rates, and processing fees compared to long-term mortgage or housing loans."
-                  }
-                },
-    			{
-                  "@type": "Question",
-                  "name": "Can I calculate car loan EMI for 7 years?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes! You can set the loan tenure slider anywhere from 1 year up to 7 years (84 months) to compute accurate car loan or vehicle loan monthly repayments. "
-                  }
-                },
-    			{
-                  "@type": "Question",
-                  "name": "What is a step-up EMI calculator?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "A step-up EMI calculator allows borrowers to start with lower EMIs that increase progressively each year, aligning with expected annual salary increments and career growth."
-                  }
-                },
-    			{
-                  "@type": "Question",
-                  "name": "How does CIBIL score impact my loan EMI?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "A higher CIBIL score (750+) qualifies you for lower interest rates offered by top banks like SBI, HDFC, and ICICI, which significantly reduces your monthly EMI and total interest payable."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Are there tax benefits included in housing loan calculators?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes, under sections 24(b) and 80C of the Income Tax Act, borrowers can claim deductions on home loan interest (up to ₹2 lakh) and principal repayment (up to ₹1.5 lakh) per financial year."
-                  }
-                },
-    			{
-                  "@type": "Question",
-                  "name": "How does a loan balance transfer work?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "A balance transfer allows you to move your existing outstanding loan from one financial institution to another offering a lower interest rate, thereby reducing your monthly EMI burden.
-                }
-              
-            }
-          ]
+    <!-- Critical CSS for Instant Render (FCP < 1.5s, LCP < 1.5s) -->
+    <style>
+        *,
+        ::before,
+        ::after {
+            box-sizing: border-box;
+            border-width: 0;
+            border-style: solid;
+            border-color: #e2e8f0;
         }
-        </script>
+    
+        html {
+            line-height: 1.5;
+            -webkit-text-size-adjust: 100%;
+            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+    
+        body {
+            margin: 0;
+            background-color: #f8fafc;
+            color: #1e293b;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+    
+        /* !important hata diya gaya hai */
+        .hidden {
+            display: none;
+        }
+    
+        /* Critical layout shell styling */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid #f1f5f9;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        }
+    
+        .max-w-7xl {
+            max-width: 80rem;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    
+        .flex {
+            display: flex;
+        }
+    
+        .items-center {
+            align-items: center;
+        }
+    
+        .justify-between {
+            justify-content: space-between;
+        }
+    
+        .h-16 {
+            height: 4rem;
+        }
+    
+        .gap-4 {
+            gap: 1rem;
+        }
+    
+        .gap-6 {
+            gap: 1.5rem;
+        }
+    
+        .space-x-8> :not([hidden])~ :not([hidden]) {
+            margin-left: 2rem;
+        }
+    
+        svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            display: block;
+        }
+    
+        @media (min-width: 640px) {
+            .max-w-7xl {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+        }
+    
+        /* Desktop Navbar dikhane aur Mobile button chhipane ke liye */
+        @media (min-width: 768px) {
+            .md\:flex {
+                display: flex;
+            }
+    
+            .md\:block {
+                display: block;
+            }
+    
+            .md\:hidden {
+                display: none;
+            }
+        }
+    
+        @media (min-width: 1024px) {
+            .max-w-7xl {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+    
+            .lg\:flex {
+                display: flex;
+            }
+    
+            .lg\:hidden {
+                display: none;
+            }
+        }
+    </style>
+
+<link rel="stylesheet" href="./css/styles.min.css">
+    <!-- Tailwind CSS CDN -->
+   
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white min-h-screen flex flex-col">
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white">
 
     <!-- Site Header & Navigation -->
-    <header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-200">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-16">
-      
-      <!-- Brand Logo & Name -->
-      <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
-        <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
-          <span class="icon-calculator text-lg"></span>
+    <header
+        class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+    
+                <!-- Brand Logo & Name -->
+                <a href="index.html"
+                    class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
+                    <div
+                        class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <span
+                        class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
+                        Calculator<span class="text-indigo-600">-Pro</span>
+                    </span>
+                </a>
+    
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center gap-1" aria-label="Main Navigation">
+                    <div class="relative group">
+                        <button type="button"
+                            class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors">
+                            Age
+                            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div
+                            class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+                            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+                                <a href="age-calculator.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Age
+                                    Calculator</a>
+                                <a href="birthday-calculator.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Birthday
+                                    Calculator</a>
+                                <a href="age-difference-calculator.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Age
+                                    Difference Calculator</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="relative group">
+                        <button type="button"
+                            class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors">
+                            Time & Date
+                            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div
+                            class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+                            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+                                <a href="time-calculator.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Time
+                                    Calculator</a>
+                                <a href="date-calculator.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Date
+                                    Calculator</a>
+                                <a href="work-days-calculator.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Work
+                                    Days Calculator</a>
+                                <a href="time-zone-converter.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">TimeZone
+                                    Calculator</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="relative group">
+                        <button type="button"
+                            class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors">
+                            Converter
+                            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div
+                            class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+                            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+                                <a href="unit-converter.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Unit
+                                    Converter</a>
+                                <a href="cgpa-to-percentage-converter.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">CGPA
+                                    to Percentage</a>
+                                <a href="sgpa-to-percentage-converter.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">SGPA
+                                    to Percentage</a>
+                                <a href="sgpa-to-cgpa-converter.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">SGPA
+                                    to CGPA</a>
+                                <a href="marks-to-percentage-calculator.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Marks
+                                    to Percentage</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="relative group">
+                        <button type="button"
+                            class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors">
+                            Financial
+                            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div
+                            class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+                            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+                                <a href="sip-calculator.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">SIP
+                                    Calculator</a>
+                                <a href="emi-calculator.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">EMI
+                                    Loan Calculator</a>
+                                <a href="Compound-Interest-Calculator.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">Compound
+                                    Interest Calculator</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="relative group">
+                        <button type="button"
+                            class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors">
+                            Health
+                            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div
+                            class="absolute right-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
+                            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
+                                <a href="bmi-calculator.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">BMI
+                                    Calculator</a>
+                                <a href="waist-to-hip-ratio-calculator.html"
+                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg">WHR
+                                    Calculator</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+    
+    
+                <!-- Mobile Hamburger Button -->
+                <div class="flex md:hidden">
+                    <button id="calc-mobile-menu-btn" type="button"
+                        class="p-2.5 rounded-xl text-slate-600 hover:text-indigo-600 hover:bg-slate-100/80 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors"
+                        aria-controls="calc-mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+                        <svg id="calc-menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="calc-close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+    
+            </div>
         </div>
-        <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
-          Calculator<span class="text-indigo-600">-Pro</span>
-        </span>
-      </a>
-
-      <!-- Desktop Navigation -->
-      <nav class="hidden md:flex items-center gap-1" aria-label="Main Navigation">
-        
-        <!-- Category 1: Age -->
-        <div class="relative group">
-          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-            Age
-            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
-            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="age-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Calculator</a>
+    
+        <div id="calc-mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white shadow-xl">
+            <div class="px-4 pt-3 pb-6 space-y-4">
+                <div class="border-b border-slate-100 pb-3">
+                    <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Age</div>
+                    <a href="age-calculator.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Age
+                        Calculator</a>
+                    <a href="birthday-calculator.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Birthday
+                        Calculator</a>
+                    <a href="age-difference-calculator.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Age
+                        Difference Calculator</a>
+                </div>
+                <div class="border-b border-slate-100 pb-3">
+                    <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Time & Date</div>
+                    <a href="time-calculator.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Time
+                        Calculator</a>
+                    <a href="date-calculator.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Date
+                        Calculator</a>
+                    <a href="work-days-calculator.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Work
+                        Days Calculator</a>
+                    <a href="time-zone-converter.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">TimeZone
+                        Calculator</a>
+                </div>
+                <div class="border-b border-slate-100 pb-3">
+                    <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Converter</div>
+                    <a href="unit-converter.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Unit
+                        Converter</a>
+                    <a href="cgpa-to-percentage-converter.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">CGPA
+                        to Percentage</a>
+                    <a href="sgpa-to-percentage-converter.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">SGPA
+                        to Percentage</a>
+                    <a href="sgpa-to-cgpa-converter.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">SGPA
+                        to CGPA</a>
+                    <a href="marks-to-percentage-calculator.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Marks
+                        to Percentage</a>
+                </div>
+                <div class="border-b border-slate-100 pb-3">
+                    <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Financial</div>
+                    <a href="sip-calculator.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">SIP
+                        Calculator</a>
+                    <a href="emi-calculator.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">EMI
+                        Loan Calculator</a>
+                    <a href="Compound-Interest-Calculator.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">Compound
+                        Interest Calculator</a>
+                </div>
+                <div>
+                    <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Health</div>
+                    <a href="bmi-calculator.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">BMI
+                        Calculator</a>
+                    <a href="waist-to-hip-ratio-calculator.html"
+                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg">WHR
+                        Calculator</a>
+                </div>
             </div>
-			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="birthday-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Birthday Calculator</a>
-            </div>
-			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="age-difference-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age Diffrence Calculator</a>
-            </div>
-          </div>
         </div>
-
-        <!-- Category 2: Time -->
-        <div class="relative group">
-          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-            Time & Date
-            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
-            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="time-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Time Calculator</a>
-            </div>
-			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="date-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Date Calculator</a>
-            </div>
-			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="work-days-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Work Days Calculator</a>
-            </div>
-			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="time-zone-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">TimeZone Calculator</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Category 3: Converter -->
-        <div class="relative group">
-          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-            Converter
-            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
-            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="unit-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Unit Converter</a>
-            </div>
-			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="cgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">CGPA to Percentage</a>
-            </div>
-			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="sgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to Percentage</a>
-            </div>
-			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="sgpa-to-cgpa-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA to CGPA</a>
-            </div>
-			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="marks-to-percentage-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Marks to Percentage</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Category 4: Financial -->
-        <div class="relative group">
-          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-            Financial
-            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
-            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="sip-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SIP Calculator</a>
-            </div>
-			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="emi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">EMI Loan Calculator</a>
-            </div>
-			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="Compound-Interest-Calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Compound Interest Calculator</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Category 5: Health -->
-        <div class="relative group">
-          <button type="button" class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-            Health
-            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="absolute right-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
-            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="bmi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">BMI Calculator</a>
-            </div>
-			  <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-              <a href="waist-to-hip-ratio-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">WHR Calculator</a>
-            </div>
-          </div>
-        </div>
-		  
-		 
-
-      </nav>
-
-      <!-- Mobile Hamburger Button -->
-      <div class="flex md:hidden">
-        <button id="calc-mobile-menu-btn" type="button" class="p-2.5 rounded-xl text-slate-600 hover:text-indigo-600 hover:bg-slate-100/80 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors duration-200" aria-controls="calc-mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
-          <svg id="calc-menu-icon" class="w-6 h-6 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-          <svg id="calc-close-icon" class="w-6 h-6 hidden transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Mobile Full-Width Menu Container -->
-  <div id="calc-mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white shadow-xl transition-all duration-200 ease-in-out">
-    <div class="px-4 pt-3 pb-6 space-y-4">
-      
-      <!-- Mobile Category: Age -->
-      <div class="border-b border-slate-100 pb-3">
-        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Age</div>
-        <a href="age-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Calculator</a>
-		  <a href="birthday-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Birthday Calculator</a>
-		  <a href="age-difference-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age Diffrence Calculator</a>
-      </div>
-
-      <!-- Mobile Category: Time -->
-      <div class="border-b border-slate-100 pb-3">
-        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Time & Date</div>
-        <a href="time-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Time Calculator</a>
-		  <a href="date-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Date Calculator</a>
-		  <a href="work-days-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Work Days Calculator</a>
-		  <a href="time-zone-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">TimeZone Calculator</a>
-      </div>
-
-      <!-- Mobile Category: Converter -->
-      <div class="border-b border-slate-100 pb-3">
-          <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Converter</div>
-          <a href="unit-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Unit Converter</a>
-		  <a href="cgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">CGPA to Percentage</a>
-		  <a href="sgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to Percentage</a>
-		  <a href="sgpa-to-cgpa-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA to CGPA</a>
-		  <a href="marks-to-percentage-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Marks to Percentage</a>
-      </div>
-
-      <!-- Mobile Category: Financial -->
-      <div class="border-b border-slate-100 pb-3">
-        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Financial</div>
-        <a href="sip-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SIP Calculator</a>
-		  <a href="emi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">EMI Loan Calculator</a>
-		  <a href="Compound-Interest-Calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Compound Interest Calculator</a>
-      </div>
-
-      <!-- Mobile Category: Health -->
-      <div>
-        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Health</div>
-        <a href="bmi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">BMI Calculator</a>
-		  <a href="waist-to-hip-ratio-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">WHR Calculator</a>
-      </div>
-		
-		
-
-    </div>
-  </div>
-</header>
+    </header>
 
     <main class="flex-grow">
         <!-- Hero Section -->
-        <section class="bg-gradient-to-b from-brand-50 via-white to-slate-50 border-b border-slate-100 pt-10 pb-12">
+        <section class="bg-white border-b border-slate-100 pt-10 pb-12">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto space-y-4">
                     <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-100 text-brand-700 text-xs font-semibold tracking-wide uppercase shadow-sm">
-                        <span class="icon icon-bolt text-brand-500"></span> Updated for GST 2.0 Slabs (2026 Regulations)
+                        <svg class="w-3.5 h-3.5 text-brand-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/></svg>
+                        Updated for GST 2.0 Slabs (2026 Regulations)
                     </div>
                     <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
                        GST Calculator <span class="text-indigo-600 block sm:inline">Online Tax Calculator India</span>
@@ -369,14 +417,13 @@
                 <div class="mt-10 max-w-5xl mx-auto bg-white rounded-2xl shadow-xl shadow-slate-200/60 border border-slate-100 overflow-hidden">
                     <div class="bg-slate-900 text-white px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-2">
                         <h2 class="text-xl font-bold flex items-center gap-2">
-                            <span class="icon-calculator text-brand-400"></span> GST Calculator <span class="text-xs font-normal bg-brand-600/60 text-brand-100 px-2.5 py-0.5 rounded-full">(Updated as per GST 2.0 – 2026)</span>
+                            <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                            GST Calculator <span class="text-xs font-normal bg-brand-600/60 text-brand-100 px-2.5 py-0.5 rounded-full">(Updated as per GST 2.0 – 2026)</span>
                         </h2>
-                        <span class="text-xs text-slate-400"><span class="inline-flex items-center gap-1.5">
-                            <svg class="size-3 fill-current mr-1 shrink-0" viewBox="0 0 640 512">
-                                <path
-                                    d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24h110.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75m181 53c-13.3 0-24 10.7-24 24v104c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z" />
-                            </svg>
-                        </span> Live Calculation</span>
+                        <span class="text-xs text-slate-400 flex items-center gap-1.5">
+                            <svg class="w-3.5 h-3.5 fill-current text-brand-400" viewBox="0 0 640 512"><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24h110.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75m181 53c-13.3 0-24 10.7-24 24v104c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg>
+                            Live Calculation
+                        </span>
                     </div>
 
                     <div class="p-6 sm:p-8 lg:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -456,26 +503,22 @@
                             <!-- Action Buttons -->
                             <div class="flex items-center gap-4 pt-2">
                                 <button type="button" id="btn-calculate" class="flex-1 py-3.5 px-6 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl shadow-lg shadow-brand-500/30 transition-all duration-200 transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-brand-500 flex items-center justify-center gap-2">
-                                    <span class="icon-calculator"></span> Calculate GST
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg> Calculate GST
                                 </button>
                                 <button type="button" id="btn-reset" class="py-3.5 px-5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-slate-400 flex items-center gap-2">
-                                    <span class="icon icon-rotate-left"></span> Reset
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg> Reset
                                 </button>
                             </div>
 
                         </div>
 
                         <!-- Output Column -->
-                        <div class="lg:col-span-5 bg-gradient-to-br from-slate-900 via-slate-800 to-brand-900 rounded-2xl p-6 text-white flex flex-col justify-between shadow-inner">
+                        <div class="lg:col-span-5 bg-slate-900 rounded-2xl p-6 text-white flex flex-col justify-between shadow-inner">
                             <div>
                                 <div class="flex items-center justify-between pb-4 border-b border-slate-700/60 mb-6">
                                     <h3 class="text-lg font-bold text-white flex items-center gap-2">
-                                        <span class="inline-flex items-center gap-1.5">
-                                            <svg class="size-5 fill-current text-brand-400 shrink-0" viewBox="0 0 640 512">
-                                                <path
-                                                    d="M14 2.2c8.5-3.9 18.5-2.5 25.6 3.6L80 40.4l40.4-34.6c9-7.7 22.3-7.7 31.2 0L192 40.4l40.4-34.6c9-7.7 22.3-7.7 31.2 0L304 40.4l40.4-34.6c7.1-6.1 17.1-7.5 25.6-3.6s14 12.4 14 21.8v464c0 9.4-5.5 17.9-14 21.8s-18.5 2.5-25.6-3.6L304 471.6l-40.4 34.6c-9 7.7-22.3 7.7-31.2 0L192 471.6l-40.4 34.6c-9 7.7-22.3 7.7-31.2 0L80 471.6l-40.4 34.6c-7.1 6.1-17.1 7.5-25.6 3.6S0 497.4 0 488V24C0 14.6 5.5 6.1 14 2.2M96 144c-8.8 0-16 7.2-16 16s7.2 16 16 16h192c8.8 0 16-7.2 16-16s-7.2-16-16-16zM80 352c0 8.8 7.2 16 16 16h192c8.8 0 16-7.2 16-16s-7.2-16-16-16H96c-8.8 0-16 7.2-16 16m16-112c-8.8 0-16 7.2-16 16s7.2 16 16 16h192c8.8 0 16-7.2 16-16s-7.2-16-16-16z" />
-                                            </svg>
-                                        </span> GST Calculation Result
+                                        <svg class="w-5 h-5 text-brand-400" fill="currentColor" viewBox="0 0 640 512"><path d="M14 2.2c8.5-3.9 18.5-2.5 25.6 3.6L80 40.4l40.4-34.6c9-7.7 22.3-7.7 31.2 0L192 40.4l40.4-34.6c9-7.7 22.3-7.7 31.2 0L304 40.4l40.4-34.6c7.1-6.1 17.1-7.5 25.6-3.6s14 12.4 14 21.8v464c0 9.4-5.5 17.9-14 21.8s-18.5 2.5-25.6-3.6L304 471.6l-40.4 34.6c-9 7.7-22.3 7.7-31.2 0L192 471.6l-40.4 34.6c-9 7.7-22.3 7.7-31.2 0L80 471.6l-40.4 34.6c-7.1 6.1-17.1 7.5-25.6 3.6S0 497.4 0 488V24C0 14.6 5.5 6.1 14 2.2M96 144c-8.8 0-16 7.2-16 16s7.2 16 16 16h192c8.8 0 16-7.2 16-16s-7.2-16-16-16zM80 352c0 8.8 7.2 16 16 16h192c8.8 0 16-7.2 16-16s-7.2-16-16-16H96c-8.8 0-16 7.2-16 16m16-112c-8.8 0-16 7.2-16 16s7.2 16 16 16h192c8.8 0 16-7.2 16-16s-7.2-16-16-16z"/></svg>
+                                        GST Calculation Result
                                     </h3>
                                     <span class="text-xs px-2.5 py-1 bg-brand-500/20 text-brand-300 rounded-full border border-brand-500/30 font-mono">Live</span>
                                 </div>
@@ -526,59 +569,70 @@
                     </div>
                 </div>
 
-                <p class="text-center text-xs text-slate-500 mt-4">
-                    <span class="inline-flex items-center gap-1.5">
-                        <svg class="size-3.5 fill-current mr-1 shrink-0" viewBox="0 0 640 512">
-                            <path
-                                d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24v40H64C28.7 64 0 92.7 0 128v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64h-40V24c0-13.3-10.7-24-24-24s-24 10.7-24 24v40H152zM48 192h352v256c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16z" />
-                        </svg>
-                    </span> Last Updated: <strong>October 2026</strong>
+                <p class="text-center text-xs text-slate-500 mt-4 flex items-center justify-center gap-1.5">
+                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 640 512"><path d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24v40H64C28.7 64 0 92.7 0 128v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64h-40V24c0-13.3-10.7-24-24-24s-24 10.7-24 24v40H152zM48 192h352v256c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16z"/></svg>
+                    Last Updated: <strong>October 2026</strong>
                 </p>
             </div>
         </section>
 
         <!-- Content Container -->
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
-
+        
             <!-- Section B: How to Use -->
             <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100">
                 <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-100 text-brand-600 text-sm">1</span>
+                    <span
+                        class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-100 text-brand-600 text-sm">1</span>
                     How to Use the GST Calculator
                 </h2>
                 <p class="text-slate-600 leading-relaxed mb-6">
-                    Using our <strong class="text-slate-800">free GST calculator</strong> is designed to be effortless for business owners, accountants, tax consultants, and MSMEs. Whether you are generating a tax invoice or figuring out the net base cost of a product, follow these simple steps to perform an instant accurate calculation:
+                    Using our <strong class="text-slate-800">free GST calculator</strong> is designed to be effortless for
+                    business owners, accountants, tax consultants, and MSMEs. Whether you are generating a tax invoice or
+                    figuring out the net base cost of a product, follow these simple steps to perform an instant accurate
+                    calculation:
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div class="p-5 rounded-xl bg-slate-50 border border-slate-100">
-                        <div class="w-8 h-8 rounded-lg bg-indigo-600 text-white flex items-center justify-center font-bold mb-3">1</div>
+                        <div
+                            class="w-8 h-8 rounded-lg bg-indigo-600 text-white flex items-center justify-center font-bold mb-3">
+                            1</div>
                         <h3 class="font-bold text-slate-800 mb-1">Enter Your Amount</h3>
-                        <p class="text-xs sm:text-sm text-slate-600">Input your total transaction amount or initial taxable base value into the main input box.</p>
+                        <p class="text-xs sm:text-sm text-slate-600">Input your total transaction amount or initial taxable base
+                            value into the main input box.</p>
                     </div>
-
+        
                     <div class="p-5 rounded-xl bg-slate-50 border border-slate-100">
-                        <div class="w-8 h-8 rounded-lg bg-indigo-600 text-white flex items-center justify-center font-bold mb-3">2</div>
+                        <div
+                            class="w-8 h-8 rounded-lg bg-indigo-600 text-white flex items-center justify-center font-bold mb-3">
+                            2</div>
                         <h3 class="font-bold text-slate-800 mb-1">Choose GST Mode</h3>
-                        <p class="text-xs sm:text-sm text-slate-600">Toggle between <strong class="text-slate-700">GST Exclusive</strong> (Add tax to base cost) or <strong class="text-slate-700">GST Inclusive</strong> (Remove tax from total price).</p>
+                        <p class="text-xs sm:text-sm text-slate-600">Toggle between <strong class="text-slate-700">GST
+                                Exclusive</strong> (Add tax to base cost) or <strong class="text-slate-700">GST
+                                Inclusive</strong> (Remove tax from total price).</p>
                     </div>
-
+        
                     <div class="p-5 rounded-xl bg-slate-50 border border-slate-100">
-                        <div class="w-8 h-8 rounded-lg bg-indigo-600 text-white flex items-center justify-center font-bold mb-3">3</div>
+                        <div
+                            class="w-8 h-8 rounded-lg bg-indigo-600 text-white flex items-center justify-center font-bold mb-3">
+                            3</div>
                         <h3 class="font-bold text-slate-800 mb-1">Select Slab & Location</h3>
-                        <p class="text-xs sm:text-sm text-slate-600">Select standard rate slabs (5%, 12%, 18%, 28%, 40%) and specify Intra-state or Inter-state supply for CGST/SGST split.</p>
+                        <p class="text-xs sm:text-sm text-slate-600">Select standard rate slabs (5%, 12%, 18%, 28%, 40%) and
+                            specify Intra-state or Inter-state supply for CGST/SGST split.</p>
                     </div>
                 </div>
             </section>
-
+        
             <!-- Section C: Latest GST Slabs 2026 -->
             <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100">
                 <h2 class="text-2xl font-bold text-slate-900 mb-4">
                     Latest GST Slabs in India 2026 (GST 2.0)
                 </h2>
                 <p class="text-slate-600 mb-6 text-sm sm:text-base">
-                    Under the revised GST 2.0 framework, tax slabs have been streamlined into four simple tiers to simplify tax filing and reduce compliance burdens for businesses.
+                    Under the revised GST 2.0 framework, tax slabs have been streamlined into four simple tiers to simplify tax
+                    filing and reduce compliance burdens for businesses.
                 </p>
-
+        
                 <h3 class="text-lg font-semibold text-slate-800 mb-3">Current GST Rate Structure</h3>
                 <div class="overflow-x-auto rounded-xl border border-slate-200">
                     <table class="w-full text-left text-sm text-slate-700">
@@ -591,83 +645,99 @@
                         <tbody class="divide-y divide-slate-200">
                             <tr class="hover:bg-slate-50/80">
                                 <td class="px-4 py-3 font-semibold text-emerald-600">0% (Nil)</td>
-                                <td class="px-4 py-3">Essential food items, life-saving medicines, education, health insurance</td>
+                                <td class="px-4 py-3">Essential food items, life-saving medicines, education, health insurance
+                                </td>
                             </tr>
                             <tr class="hover:bg-slate-50/80">
                                 <td class="px-4 py-3 font-semibold text-brand-600">5%</td>
-                                <td class="px-4 py-3">Daily essentials, packaged food, most medicines, soap, toothpaste, apparel ≤ ₹2500</td>
+                                <td class="px-4 py-3">Daily essentials, packaged food, most medicines, soap, toothpaste, apparel
+                                    ≤ ₹2500</td>
                             </tr>
                             <tr class="hover:bg-slate-50/80">
                                 <td class="px-4 py-3 font-semibold text-indigo-600">18%</td>
-                                <td class="px-4 py-3">Standard rate – most goods & services, electronics, small cars, restaurants, IT services</td>
+                                <td class="px-4 py-3">Standard rate – most goods & services, electronics, small cars,
+                                    restaurants, IT services</td>
                             </tr>
                             <tr class="hover:bg-slate-50/80">
                                 <td class="px-4 py-3 font-semibold text-rose-600">40%</td>
-                                <td class="px-4 py-3">Luxury & sin goods – aerated drinks, tobacco, pan masala, luxury cars, high-cc bikes</td>
+                                <td class="px-4 py-3">Luxury & sin goods – aerated drinks, tobacco, pan masala, luxury cars,
+                                    high-cc bikes</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </section>
-
+        
             <!-- Section D: Formulas -->
             <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100">
                 <h2 class="text-2xl font-bold text-slate-900 mb-6">GST Calculation Formulas</h2>
-
+        
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="p-5 rounded-xl bg-slate-50 border border-slate-200">
                         <h3 class="text-lg font-bold text-slate-800 mb-2">Exclusive GST (Add GST)</h3>
-                        <p class="text-xs sm:text-sm text-slate-600 mb-3">Used when tax percentage needs to be added on top of base amount:</p>
-                        <div class="bg-white p-3 rounded-lg border border-slate-200 font-mono text-xs sm:text-sm text-indigo-700 font-semibold mb-2">
+                        <p class="text-xs sm:text-sm text-slate-600 mb-3">Used when tax percentage needs to be added on top of
+                            base amount:</p>
+                        <div
+                            class="bg-white p-3 rounded-lg border border-slate-200 font-mono text-xs sm:text-sm text-indigo-700 font-semibold mb-2">
                             GST Amount = (Base Amount × GST Rate) / 100
                         </div>
-                        <div class="bg-white p-3 rounded-lg border border-slate-200 font-mono text-xs sm:text-sm text-slate-800 font-semibold">
+                        <div
+                            class="bg-white p-3 rounded-lg border border-slate-200 font-mono text-xs sm:text-sm text-slate-800 font-semibold">
                             Total Invoice Price = Base Amount + GST Amount
                         </div>
                     </div>
-
+        
                     <div class="p-5 rounded-xl bg-slate-50 border border-slate-200">
                         <h3 class="text-lg font-bold text-slate-800 mb-2">Inclusive GST (Remove GST)</h3>
-                        <p class="text-xs sm:text-sm text-slate-600 mb-3">Used to calculate net base price when tax is already inside total retail price:</p>
-                        <div class="bg-white p-3 rounded-lg border border-slate-200 font-mono text-xs sm:text-sm text-indigo-700 font-semibold mb-2">
+                        <p class="text-xs sm:text-sm text-slate-600 mb-3">Used to calculate net base price when tax is already
+                            inside total retail price:</p>
+                        <div
+                            class="bg-white p-3 rounded-lg border border-slate-200 font-mono text-xs sm:text-sm text-indigo-700 font-semibold mb-2">
                             Base Amount = Total Price × [100 / (100 + GST Rate)]
                         </div>
-                        <div class="bg-white p-3 rounded-lg border border-slate-200 font-mono text-xs sm:text-sm text-slate-800 font-semibold">
+                        <div
+                            class="bg-white p-3 rounded-lg border border-slate-200 font-mono text-xs sm:text-sm text-slate-800 font-semibold">
                             GST Tax Amount = Total Price - Base Amount
                         </div>
                     </div>
-
+        
                     <div class="p-5 rounded-xl bg-slate-50 border border-slate-200">
                         <h3 class="text-lg font-bold text-slate-800 mb-2">CGST + SGST (Intra-state Supply)</h3>
-                        <p class="text-xs sm:text-sm text-slate-600 mb-2">When buyer and seller are located in the same state:</p>
-                        <div class="bg-white p-3 rounded-lg border border-slate-200 font-mono text-xs sm:text-sm text-slate-800 font-semibold">
+                        <p class="text-xs sm:text-sm text-slate-600 mb-2">When buyer and seller are located in the same state:
+                        </p>
+                        <div
+                            class="bg-white p-3 rounded-lg border border-slate-200 font-mono text-xs sm:text-sm text-slate-800 font-semibold">
                             CGST Amount = Total GST Amount / 2<br>
                             SGST Amount = Total GST Amount / 2
                         </div>
                     </div>
-
+        
                     <div class="p-5 rounded-xl bg-slate-50 border border-slate-200">
                         <h3 class="text-lg font-bold text-slate-800 mb-2">IGST (Inter-state Supply)</h3>
-                        <p class="text-xs sm:text-sm text-slate-600 mb-2">When supply occurs across two different state boundaries:</p>
-                        <div class="bg-white p-3 rounded-lg border border-slate-200 font-mono text-xs sm:text-sm text-slate-800 font-semibold">
+                        <p class="text-xs sm:text-sm text-slate-600 mb-2">When supply occurs across two different state
+                            boundaries:</p>
+                        <div
+                            class="bg-white p-3 rounded-lg border border-slate-200 font-mono text-xs sm:text-sm text-slate-800 font-semibold">
                             IGST Amount = Entire 100% Total GST Amount
                         </div>
                     </div>
                 </div>
             </section>
-
+        
             <!-- Section E: Worked Examples -->
             <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100">
                 <h2 class="text-2xl font-bold text-slate-900 mb-6">Worked Examples (2026 Rates)</h2>
                 <p class="text-base text-slate-600">
-                   Explore these practical scenarios demonstrating how to calculate taxes for different invoices using our <strong>GST calculator for invoice</strong> and business needs:
+                    Explore these practical scenarios demonstrating how to calculate taxes for different invoices using our
+                    <strong>GST calculator for invoice</strong> and business needs:
                 </p>
-
-                
+        
+        
                 <div class="space-y-4">
                     <div class="p-4 bg-brand-50/60 rounded-xl border border-brand-100">
                         <h3 class="text-base font-bold text-brand-900">Example 1 – 18% GST (Exclusive Calculation)</h3>
-                        <p class="text-sm text-slate-700 mt-1">A software consulting agency bills ₹20,000 net base fees for web development services within Maharashtra (Intra-State)</p>
+                        <p class="text-sm text-slate-700 mt-1">A software consulting agency bills ₹20,000 net base fees for web
+                            development services within Maharashtra (Intra-State)</p>
                         <ul class="mt-3 text-xs sm:text-sm text-slate-700 space-y-1 list-disc list-inside font-medium">
                             <li>Base Taxable Amount: ₹20,000</li>
                             <li>Total GST (18%): ₹3,600</li>
@@ -675,20 +745,22 @@
                             <li>Final Payable Invoice Value: <strong>₹23,600</strong></li>
                         </ul>
                     </div>
-
+        
                     <div class="p-4 bg-emerald-50/60 rounded-xl border border-emerald-100">
                         <h3 class="text-base font-bold text-emerald-900">Example 2 – 5% GST (Inclusive Reverse Calculation)</h3>
-                        <p class="text-sm text-slate-700 mt-1">A customer buys packaged organic spices at a retail total price tag of ₹1,050 (GST Inclusive price).</p>
+                        <p class="text-sm text-slate-700 mt-1">A customer buys packaged organic spices at a retail total price
+                            tag of ₹1,050 (GST Inclusive price).</p>
                         <ul class="mt-3 text-xs sm:text-sm text-slate-700 space-y-1 list-disc list-inside font-medium">
                             <li>Total Retail Tag Price: ₹1,050</li>
                             <li>Base Net Price: ₹1,050 × (100 / 105) = ₹1,000</li>
                             <li>GST Amount (5% Tax Included): ₹50</li>
                         </ul>
                     </div>
-
+        
                     <div class="p-4 bg-rose-50/60 rounded-xl border border-rose-100">
                         <h3 class="text-base font-bold text-rose-900">Example 3 – 40% Luxury Goods Supply</h3>
-                        <p class="text-sm text-slate-700 mt-1">Inter-state sale of luxury high-end automotive goods valued at ₹1,00,000 base cost with maximum tax slab rates.</p>
+                        <p class="text-sm text-slate-700 mt-1">Inter-state sale of luxury high-end automotive goods valued at
+                            ₹1,00,000 base cost with maximum tax slab rates.</p>
                         <ul class="mt-3 text-xs sm:text-sm text-slate-700 space-y-1 list-disc list-inside font-medium">
                             <li>Base Cost: ₹1,00,000</li>
                             <li>Integrated GST (IGST 40%): ₹40,000</li>
@@ -697,68 +769,79 @@
                     </div>
                 </div>
             </section>
-
+        
             <!-- Section: How to remove GST from price & exclusive vs inclusive -->
-             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <section class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-8 space-y-4">
-                <h2 class="text-xl font-bold text-slate-900 tracking-tight">
-                    How to Remove GST from Price
-                </h2>
-                <p class="text-sm text-slate-600">
-                    When dealing with MRP or gross invoices where tax is already embedded, a <strong>reverse GST calculator</strong> is essential. By reversing the tax percentage using our tool's "Remove GST" mode, you extract the exact Input Tax Credit (ITC) or base manufacturing cost without manual division errors.
-                </p>
-            </section>
-
-            <section class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-8 space-y-4">
-                <h2 class="text-xl font-bold text-slate-900 tracking-tight">
-                    GST Exclusive vs Inclusive
-                </h2>
-                <p class="text-sm text-slate-600">
-                    <strong>Exclusive GST</strong> means tax is calculated on top of the listed price at checkout (common in B2B transactions). <strong>Inclusive GST</strong> means the tax is already bundled into the final price paid by the consumer (common in retail MRP).
-                </p>
-            </section>
-        </div>
-
-        <!-- Section: CGST SGST calculator & Types of Calculations -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <section class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-8 space-y-4">
-                <h2 class="text-xl font-bold text-slate-900 tracking-tight">
-                    CGST SGST Calculator Breakdown
-                </h2>
-                <p class="text-sm text-slate-600">
-                    For intra-state trades within the same state, tax is split equally between the Central Government (CGST) and State Government (SGST). For inter-state transactions, the total tax is collected as Integrated GST (IGST).
-                </p>
-            </section>
-
-            <section class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-8 space-y-4">
-                <h2 class="text-xl font-bold text-slate-900 tracking-tight">
-                    Types of GST Calculations
-                </h2>
-                <p class="text-sm text-slate-600">
-                    Our platform covers forward additions, reverse calculations, compounding breakdowns, and state-wise split reporting to support small businesses, enterprises, and tax practitioners alike.
-                </p>
-            </section>
-        </div>
-
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <section class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-8 space-y-4">
+                    <h2 class="text-xl font-bold text-slate-900 tracking-tight">
+                        How to Remove GST from Price
+                    </h2>
+                    <p class="text-sm text-slate-600">
+                        When dealing with MRP or gross invoices where tax is already embedded, a <strong>reverse GST
+                            calculator</strong> is essential. By reversing the tax percentage using our tool's "Remove GST"
+                        mode, you extract the exact Input Tax Credit (ITC) or base manufacturing cost without manual division
+                        errors.
+                    </p>
+                </section>
+        
+                <section class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-8 space-y-4">
+                    <h2 class="text-xl font-bold text-slate-900 tracking-tight">
+                        GST Exclusive vs Inclusive
+                    </h2>
+                    <p class="text-sm text-slate-600">
+                        <strong>Exclusive GST</strong> means tax is calculated on top of the listed price at checkout (common in
+                        B2B transactions). <strong>Inclusive GST</strong> means the tax is already bundled into the final price
+                        paid by the consumer (common in retail MRP).
+                    </p>
+                </section>
+            </div>
+        
+            <!-- Section: CGST SGST calculator & Types of Calculations -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <section class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-8 space-y-4">
+                    <h2 class="text-xl font-bold text-slate-900 tracking-tight">
+                        CGST SGST Calculator Breakdown
+                    </h2>
+                    <p class="text-sm text-slate-600">
+                        For intra-state trades within the same state, tax is split equally between the Central Government (CGST)
+                        and State Government (SGST). For inter-state transactions, the total tax is collected as Integrated GST
+                        (IGST).
+                    </p>
+                </section>
+        
+                <section class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-8 space-y-4">
+                    <h2 class="text-xl font-bold text-slate-900 tracking-tight">
+                        Types of GST Calculations
+                    </h2>
+                    <p class="text-sm text-slate-600">
+                        Our platform covers forward additions, reverse calculations, compounding breakdowns, and state-wise
+                        split reporting to support small businesses, enterprises, and tax practitioners alike.
+                    </p>
+                </section>
+            </div>
+        
             <!-- Section F: Types of GST Calculations -->
             <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100">
                 <h2 class="text-2xl font-bold text-slate-900 mb-4">Types of GST Calculations</h2>
                 <ul class="space-y-3 text-sm text-slate-600">
-                        <li class="flex items-start gap-2">
-                            <span class="icon icon-check text-indigo-600 mt-1"></span>
-                            <span><strong class="text-slate-800">Forward Tax Calculation:</strong> Adding tax percentage over base prices during billing generation.</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="icon icon-check text-indigo-600 mt-1"></span>
-                            <span><strong class="text-slate-800">Reverse GST Calculation:</strong> Extracting net base tax values from MRP consumer prices.</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="icon icon-check text-indigo-600 mt-1"></span>
-                            <span><strong class="text-slate-800">Input Tax Credit (ITC) Balance:</strong> Estimating tax liability differences for monthly filing.</span>
-                        </li>
-                    </ul>
+                    <li class="flex items-start gap-2">
+                        <span class="icon icon-check text-indigo-600 mt-1"></span>
+                        <span><strong class="text-slate-800">Forward Tax Calculation:</strong> Adding tax percentage over base
+                            prices during billing generation.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="icon icon-check text-indigo-600 mt-1"></span>
+                        <span><strong class="text-slate-800">Reverse GST Calculation:</strong> Extracting net base tax values
+                            from MRP consumer prices.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="icon icon-check text-indigo-600 mt-1"></span>
+                        <span><strong class="text-slate-800">Input Tax Credit (ITC) Balance:</strong> Estimating tax liability
+                            differences for monthly filing.</span>
+                    </li>
+                </ul>
             </section>
-
+        
             <!-- Section G: Benefits -->
             <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100">
                 <h2 class="text-2xl font-bold text-slate-900 mb-4">Benefits of Using This GST Calculator</h2>
@@ -786,159 +869,193 @@
                     </div>
                 </div>
             </section>
-
-           
-           <!-- Section I: Frequently Asked Questions (FAQ) -->
+        
+        
+            <!-- Section I: Frequently Asked Questions (FAQ) -->
             <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100">
                 <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
-                     Frequently Asked Questions (FAQ)
+                    Frequently Asked Questions (FAQ)
                 </h2>
-
+        
                 <div class="space-y-4" id="faq-accordion">
-                
-                <!-- FAQ 1 -->
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
-                    <button class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
-                        <h3>How does the SBI Home Loan EMI Calculator work?</h3>
-                        <span class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
-                    </button>
-                    <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
-                        <p>
-                           The SBI Home Loan EMI Calculator uses the reducing balance method formula to calculate your precise monthly Equated Monthly Installment based on principal, interest rate, and tenure.
-                        </p>
+        
+                    <!-- FAQ 1 -->
+                    <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
+                        <button
+                            class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
+                            <h3>How does the SBI Home Loan EMI Calculator work?</h3>
+                            <span
+                                class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
+                        </button>
+                        <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
+                            <p>
+                                The SBI Home Loan EMI Calculator uses the reducing balance method formula to calculate your
+                                precise monthly Equated Monthly Installment based on principal, interest rate, and tenure.
+                            </p>
+                        </div>
                     </div>
-                </div>
-
-                <!-- FAQ 2 -->
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
-                    <button class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
-                        <h3>How can I calculate EMI for a 20 lakh, 30 lakh, or 50 lakh home loan?</h3>
-                        <span class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
-                    </button>
-                    <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
-                        <p>
-                            Simply enter your required loan amount (e.g., ₹20,00,000, ₹30,00,000, or ₹50,00,000) into our Loan EMI Calculator, adjust the interest rate and tenure sliders, and view your monthly payment breakdown instantly.
-                        </p>
+        
+                    <!-- FAQ 2 -->
+                    <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
+                        <button
+                            class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
+                            <h3>How can I calculate EMI for a 20 lakh, 30 lakh, or 50 lakh home loan?</h3>
+                            <span
+                                class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
+                        </button>
+                        <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
+                            <p>
+                                Simply enter your required loan amount (e.g., ₹20,00,000, ₹30,00,000, or ₹50,00,000) into our
+                                Loan EMI Calculator, adjust the interest rate and tenure sliders, and view your monthly payment
+                                breakdown instantly.
+                            </p>
+                        </div>
                     </div>
-                </div>
-
-                <!-- FAQ 3 -->
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
-                    <button class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
-                        <h3>How much interest can I save with a home loan prepayment?</h3>
-                        <span class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
-                    </button>
-                    <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
-                        <p>
-                            Making periodic prepayments reduces your outstanding principal balance directly. This lowers the interest accumulated over subsequent months, saving lakhs in overall interest and reducing your loan tenure.
-                        </p>
+        
+                    <!-- FAQ 3 -->
+                    <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
+                        <button
+                            class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
+                            <h3>How much interest can I save with a home loan prepayment?</h3>
+                            <span
+                                class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
+                        </button>
+                        <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
+                            <p>
+                                Making periodic prepayments reduces your outstanding principal balance directly. This lowers the
+                                interest accumulated over subsequent months, saving lakhs in overall interest and reducing your
+                                loan tenure.
+                            </p>
+                        </div>
                     </div>
-                </div>
-
-                <!-- FAQ 4 -->
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
-                    <button class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
-                        <h3>What is the difference between EMI vs prepayment calculator?</h3>
-                        <span class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
-                    </button>
-                    <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
-                        <p>
-                           A standard EMI calculator calculates your regular fixed monthly payment. A prepayment calculator factors in one-time or recurring extra payments to show how much earlier you can close your loan or lower subsequent EMIs.
-                        </p>
+        
+                    <!-- FAQ 4 -->
+                    <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
+                        <button
+                            class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
+                            <h3>What is the difference between EMI vs prepayment calculator?</h3>
+                            <span
+                                class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
+                        </button>
+                        <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
+                            <p>
+                                A standard EMI calculator calculates your regular fixed monthly payment. A prepayment calculator
+                                factors in one-time or recurring extra payments to show how much earlier you can close your loan
+                                or lower subsequent EMIs.
+                            </p>
+                        </div>
                     </div>
-                </div>
-
-                <!-- FAQ 5 -->
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
-                    <button class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
-                        <h3>How does an HDFC Personal Loan EMI Calculator differ from a Home Loan calculator?</h3>
-                        <span class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
-                    </button>
-                    <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
-                        <p>
-                            While the core mathematical formula remains identical (reducing balance), personal loans generally feature shorter tenures (1 to 5 years), higher interest rates, and processing fees compared to long-term mortgage or housing loans.
-                        </p>
+        
+                    <!-- FAQ 5 -->
+                    <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
+                        <button
+                            class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
+                            <h3>How does an HDFC Personal Loan EMI Calculator differ from a Home Loan calculator?</h3>
+                            <span
+                                class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
+                        </button>
+                        <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
+                            <p>
+                                While the core mathematical formula remains identical (reducing balance), personal loans
+                                generally feature shorter tenures (1 to 5 years), higher interest rates, and processing fees
+                                compared to long-term mortgage or housing loans.
+                            </p>
+                        </div>
                     </div>
-                </div>
-
-                <!-- FAQ 6 -->
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
-                    <button class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
-                        <h3>Can I calculate car loan EMI for 7 years?</h3>
-                        <span class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
-                    </button>
-                    <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
-                        <p>
-                            Yes! You can set the loan tenure slider anywhere from 1 year up to 7 years (84 months) to compute accurate car loan or vehicle loan monthly repayments.
-                        </p>
+        
+                    <!-- FAQ 6 -->
+                    <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
+                        <button
+                            class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
+                            <h3>Can I calculate car loan EMI for 7 years?</h3>
+                            <span
+                                class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
+                        </button>
+                        <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
+                            <p>
+                                Yes! You can set the loan tenure slider anywhere from 1 year up to 7 years (84 months) to
+                                compute accurate car loan or vehicle loan monthly repayments.
+                            </p>
+                        </div>
                     </div>
-                </div>
-
-                <!-- FAQ 7 -->
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
-                    <button class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
-                        <h3>What is a step-up EMI calculator?</h3>
-                        <span class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
-                    </button>
-                    <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
-                        <p>
-                            A step-up EMI calculator allows borrowers to start with lower EMIs that increase progressively each year, aligning with expected annual salary increments and career growth.
-                        </p>
+        
+                    <!-- FAQ 7 -->
+                    <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
+                        <button
+                            class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
+                            <h3>What is a step-up EMI calculator?</h3>
+                            <span
+                                class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
+                        </button>
+                        <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
+                            <p>
+                                A step-up EMI calculator allows borrowers to start with lower EMIs that increase progressively
+                                each year, aligning with expected annual salary increments and career growth.
+                            </p>
+                        </div>
                     </div>
-                </div>
-
-                <!-- FAQ 8 -->
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
-                    <button class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
-                        <h3>How does CIBIL score impact my loan EMI?</h3>
-                        <span class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
-                    </button>
-                    <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
-                        <p>
-                            A higher CIBIL score (750+) qualifies you for lower interest rates offered by top banks like SBI, HDFC, and ICICI, which significantly reduces your monthly EMI and total interest payable.
-                        </p>
+        
+                    <!-- FAQ 8 -->
+                    <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
+                        <button
+                            class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
+                            <h3>How does CIBIL score impact my loan EMI?</h3>
+                            <span
+                                class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
+                        </button>
+                        <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
+                            <p>
+                                A higher CIBIL score (750+) qualifies you for lower interest rates offered by top banks like
+                                SBI, HDFC, and ICICI, which significantly reduces your monthly EMI and total interest payable.
+                            </p>
+                        </div>
                     </div>
-                </div>
-
-                <!-- FAQ 9 -->
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
-                    <button class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
-                        <h3>Are there tax benefits included in housing loan calculators?</h3>
-                        <span class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
-                    </button>
-                    <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
-                        <p>
-                            Yes, under sections 24(b) and 80C of the Income Tax Act, borrowers can claim deductions on home loan interest (up to ₹2 lakh) and principal repayment (up to ₹1.5 lakh) per financial year.
-                        </p>
+        
+                    <!-- FAQ 9 -->
+                    <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
+                        <button
+                            class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
+                            <h3>Are there tax benefits included in housing loan calculators?</h3>
+                            <span
+                                class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
+                        </button>
+                        <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
+                            <p>
+                                Yes, under sections 24(b) and 80C of the Income Tax Act, borrowers can claim deductions on home
+                                loan interest (up to ₹2 lakh) and principal repayment (up to ₹1.5 lakh) per financial year.
+                            </p>
+                        </div>
                     </div>
-                </div>
-
-                <!-- FAQ 10 -->
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
-                    <button class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
-                        <h3>How does a loan balance transfer work?</h3>
-                        <span class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
-                    </button>
-                    <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
-                        <p>
-                            A balance transfer allows you to move your existing outstanding loan from one financial institution to another offering a lower interest rate, thereby reducing your monthly EMI burden.
-                        </p>
+        
+                    <!-- FAQ 10 -->
+                    <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
+                        <button
+                            class="faq-btn w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center focus:outline-none">
+                            <h3>How does a loan balance transfer work?</h3>
+                            <span
+                                class="icon icon-chevron-down text-slate-400 text-xs transition-transform duration-200"></span>
+                        </button>
+                        <div class="accordion-content px-6  text-sm text-slate-600 leading-relaxed">
+                            <p>
+                                A balance transfer allows you to move your existing outstanding loan from one financial
+                                institution to another offering a lower interest rate, thereby reducing your monthly EMI burden.
+                            </p>
+                        </div>
                     </div>
+        
                 </div>
-
-            </div>
             </section>
-
-
-
-
+        
+        
+        
+        
             <!-- Related Calculators Section -->
             <section class="bg-gradient-to-r from-brand-900 to-slate-900 rounded-2xl p-6 sm:p-8 text-white shadow-lg">
                 <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
                     <span class="icon icon-cubes text-brand-400"></span> Related Financial Calculators
                 </h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                
+        
                     <!-- Related Calc 1 -->
                     <a href="#"
                         class="bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 rounded-xl p-5 block transition-all group">
@@ -948,11 +1065,12 @@
                             <span
                                 class="icon icon-arrow-right text-slate-300 group-hover:text-emerald-300 group-hover:translate-x-1 transition-transform"></span>
                         </div>
-                
-                        <p class="text-xs text-slate-400 mt-2">Calculate cumulative GPA across all university academic terms smoothly.
+        
+                        <p class="text-xs text-slate-400 mt-2">Calculate cumulative GPA across all university academic terms
+                            smoothly.
                         </p>
                     </a>
-                
+        
                     <!-- Related Calc 2 -->
                     <a href="#"
                         class="bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 rounded-xl p-5 block transition-all group">
@@ -962,11 +1080,12 @@
                             <span
                                 class="icon icon-arrow-right text-slate-300 group-hover:text-emerald-300 group-hover:translate-x-1 transition-transform"></span>
                         </div>
-                
-                        <p class="text-xs text-slate-400 mt-2">Calculate cumulative GPA across all university academic terms smoothly.
+        
+                        <p class="text-xs text-slate-400 mt-2">Calculate cumulative GPA across all university academic terms
+                            smoothly.
                         </p>
                     </a>
-                
+        
                     <!-- Related Calc 3 -->
                     <a href="#"
                         class="bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 rounded-xl p-5 block transition-all group">
@@ -976,110 +1095,109 @@
                             <span
                                 class="icon icon-arrow-right text-slate-300 group-hover:text-emerald-300 group-hover:translate-x-1 transition-transform"></span>
                         </div>
-                
-                        <p class="text-xs text-slate-400 mt-2">Calculate cumulative GPA across all university academic terms smoothly.
+        
+                        <p class="text-xs text-slate-400 mt-2">Calculate cumulative GPA across all university academic terms
+                            smoothly.
                         </p>
                     </a>
-                
+        
                 </div>
             </section>
-
+        
         </div>
-    </main>
-
-    
-    <!-- Multi-column Footer -->
-<footer class="bg-slate-900 text-slate-400 text-sm border-t border-slate-800 mt-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-
-            <!-- Col 1: About -->
-            <div class="space-y-4">
-                <div class="flex items-center gap-2 text-white font-bold text-lg">
-                    <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
-                        <span class="icon-calculator"></span>
+        </main>
+        
+        
+        <!-- Multi-column Footer -->
+        <footer class="bg-slate-900 text-slate-400 text-sm border-t border-slate-800 mt-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+                    <!-- Col 1: About -->
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-2 text-white font-bold text-lg">
+                            <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm">
+                                <span class="icon-calculator"></span>
+                            </div>
+                            <span>Calculator<span class="text-indigo-400">-Pro</span></span>
+                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Calculator Pro provides free, fast, and clinically accurate online tools for health, financial,
+                            mathematical, and everyday conversion needs.
+                        </p>
+                        <div class="text-xs text-slate-500">
+                            &copy; <span id="current-year">2026</span> Calculator Pro. All rights reserved.
+                        </div>
                     </div>
-                    <span>Calculator<span class="text-indigo-400">-Pro</span></span>
+        
+                    <!-- Column 2: Quick Links -->
+                    <div>
+                        <h3 class="text-white font-semibold mb-3 text-sm">Quick Links</h3>
+                        <ul class="space-y-2 text-xs">
+                            <li><a href="unit-converter.html" class="hover:text-white transition-colors">Unit Converter</a></li>
+                            <li><a href="gst-calculator.html" class="hover:text-white transition-colors">GST Calculator</a></li>
+                            <li><a href="cgpa-to-percentage-converter.html" class="hover:text-white transition-colors">CGPA to
+                                    Percentage</a></li>
+                            <li><a href="sgpa-to-cgpa-calculator.html" class="hover:text-white transition-colors">SGPA to
+                                    CGPA</a></li>
+                            <li><a href="work-days-calculator.html" class="hover:text-white transition-colors">Work Days
+                                    Calculator</a></li>
+                        </ul>
+                    </div>
+                    <!-- Column 3: Tools & Resources -->
+                    <div>
+                        <h3 class="text-white font-semibold mb-3 text-sm">Calculators</h3>
+                        <ul class="space-y-2 text-xs">
+                            <li><a href="age-calculator.html" class="hover:text-white transition-colors">Age Calculator</a></li>
+                            <li><a href="time-calculator.html" class="hover:text-white transition-colors">Time Calculator</a>
+                            </li>
+                            <li><a href="sip-calculator.html" class="hover:text-white transition-colors">SIP Financial
+                                    Calculator</a></li>
+                            <li><a href="bmi-calculator.html" class="hover:text-white transition-colors">BMI Health
+                                    Calculator</a></li>
+                            <li><a href="percentage-calculator.html" class="hover:text-white transition-colors">Percentage
+                                    Calculator</a></li>
+                        </ul>
+                    </div>
+        
+                    <!-- Column 4: Legal & Contact -->
+                    <div>
+                        <h3 class="text-white font-semibold mb-3 text-sm">Legal & Info</h3>
+                        <ul class="space-y-2 text-xs">
+                            <li><a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                            <li><a href="terms-of-service.html" class="hover:text-white transition-colors">Terms of Service</a>
+                            </li>
+                            <li><a href="editorial-guidelines.html" class="hover:text-white transition-colors">Editorial
+                                    Guidelines</a></li>
+                            <li><a href="contact-us.html" class="hover:text-white transition-colors">Contact Us</a></li>
+                            <li><a href="disclaimer.html" class="hover:text-white transition-colors">Disclaimer</a></li>
+                        </ul>
+                    </div>
+        
                 </div>
-                <p class="text-xs text-slate-400 leading-relaxed">
-                    Calculator Pro provides free, fast, and clinically accurate online tools for health, financial,
-                    mathematical, and everyday conversion needs.
-                </p>
-                <div class="text-xs text-slate-500">
-                    &copy; <span id="current-year">2026</span> Calculator Pro. All rights reserved.
-                </div>
             </div>
+        </footer>
 
-            <!-- Column 2: Quick Links -->
-            <div>
-                <h3 class="text-white font-semibold mb-3 text-sm">Quick Links</h3>
-                <ul class="space-y-2 text-xs">
-                    <li><a href="unit-converter.html" class="hover:text-white transition-colors">Unit Converter</a></li>
-                    <li><a href="gst-calculator.html" class="hover:text-white transition-colors">GST Calculator</a></li>
-                    <li><a href="cgpa-to-percentage-converter.html" class="hover:text-white transition-colors">CGPA to
-                            Percentage</a></li>
-                    <li><a href="sgpa-to-cgpa-calculator.html" class="hover:text-white transition-colors">SGPA to
-                            CGPA</a></li>
-                    <li><a href="work-days-calculator.html" class="hover:text-white transition-colors">Work Days
-                            Calculator</a></li>
-                </ul>
-            </div>
-            <!-- Column 3: Tools & Resources -->
-            <div>
-                <h3 class="text-white font-semibold mb-3 text-sm">Calculators</h3>
-                <ul class="space-y-2 text-xs">
-                    <li><a href="age-calculator.html" class="hover:text-white transition-colors">Age Calculator</a></li>
-                    <li><a href="time-calculator.html" class="hover:text-white transition-colors">Time Calculator</a>
-                    </li>
-                    <li><a href="sip-calculator.html" class="hover:text-white transition-colors">SIP Financial
-                            Calculator</a></li>
-                    <li><a href="bmi-calculator.html" class="hover:text-white transition-colors">BMI Health
-                            Calculator</a></li>
-                    <li><a href="percentage-calculator.html" class="hover:text-white transition-colors">Percentage
-                            Calculator</a></li>
-                </ul>
-            </div>
-
-            <!-- Column 4: Legal & Contact -->
-            <div>
-                <h3 class="text-white font-semibold mb-3 text-sm">Legal & Info</h3>
-                <ul class="space-y-2 text-xs">
-                    <li><a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
-                    <li><a href="terms-of-service.html" class="hover:text-white transition-colors">Terms of Service</a>
-                    </li>
-                    <li><a href="editorial-guidelines.html" class="hover:text-white transition-colors">Editorial
-                            Guidelines</a></li>
-                    <li><a href="contact-us.html" class="hover:text-white transition-colors">Contact Us</a></li>
-                    <li><a href="disclaimer.html" class="hover:text-white transition-colors">Disclaimer</a></li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
-</footer>
     <!-- Vanilla JavaScript Logic -->
     <script>
-		<!-- Inline JavaScript for Toggle -->
-  
-    document.addEventListener('DOMContentLoaded', () => {
-      const btn = document.getElementById('calc-mobile-menu-btn');
-      const menu = document.getElementById('calc-mobile-menu');
-      const menuIcon = document.getElementById('calc-menu-icon');
-      const closeIcon = document.getElementById('calc-close-icon');
-
-      if (btn && menu) {
-        btn.addEventListener('click', () => {
-          const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-          btn.setAttribute('aria-expanded', !isExpanded);
-          menu.classList.toggle('hidden');
-          menuIcon.classList.toggle('hidden');
-          closeIcon.classList.toggle('hidden');
-        });
-      }
-    });
-		
         document.addEventListener('DOMContentLoaded', () => {
-            // Elements
+            // Mobile Menu Toggle
+            const btn = document.getElementById('calc-mobile-menu-btn');
+            const menu = document.getElementById('calc-mobile-menu');
+            const menuIcon = document.getElementById('calc-menu-icon');
+            const closeIcon = document.getElementById('calc-close-icon');
+
+            if (btn && menu) {
+                btn.addEventListener('click', () => {
+                    const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+                    btn.setAttribute('aria-expanded', !isExpanded);
+                    menu.classList.toggle('hidden');
+                    menuIcon.classList.toggle('hidden');
+                    closeIcon.classList.toggle('hidden');
+                });
+            }
+
+            // GST Calculator Elements
             const amountInput = document.getElementById('gst-amount');
             const gstRateSelect = document.getElementById('gst-rate');
             const customRateContainer = document.getElementById('custom-rate-container');
@@ -1189,20 +1307,24 @@
             }
 
             // Calculate Button Click
-            btnCalculate.addEventListener('click', calculateGST);
+            if (btnCalculate) {
+                btnCalculate.addEventListener('click', calculateGST);
+            }
 
             // Reset Button
-            btnReset.addEventListener('click', () => {
-                amountInput.value = '10000';
-                gstRateSelect.value = '18';
-                customRateContainer.classList.add('hidden');
-                customRateInput.value = '12';
-                
-                typeBtns[0].click(); // Reset to Exclusive
-                document.querySelectorAll('input[name="supply-type"]')[0].checked = true;
-                
-                calculateGST();
-            });
+            if (btnReset) {
+                btnReset.addEventListener('click', () => {
+                    amountInput.value = '10000';
+                    gstRateSelect.value = '18';
+                    customRateContainer.classList.add('hidden');
+                    customRateInput.value = '12';
+                    
+                    typeBtns[0].click(); // Reset to Exclusive
+                    document.querySelectorAll('input[name="supply-type"]')[0].checked = true;
+                    
+                    calculateGST();
+                });
+            }
 
             // Initial Calculation run
             calculateGST();
@@ -1212,32 +1334,16 @@
             faqBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
                     const content = btn.nextElementSibling;
-                    const icon = btn.querySelector('i');
-                    const isOpen = content.classList.contains('open');
+                    const icon = btn.querySelector('svg');
+                    const isOpen = !content.classList.contains('hidden');
 
-                    // Close all active accordions
-                    document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
-                    document.querySelectorAll('.faq-btn i').forEach(i => i.classList.remove('rotate-180'));
+                    // Close all accordion contents & reset arrows
+                    document.querySelectorAll('.accordion-content').forEach(c => c.classList.add('hidden'));
+                    document.querySelectorAll('.faq-btn svg').forEach(s => s.classList.remove('rotate-180'));
 
                     if (!isOpen) {
-                        content.classList.add('open');
-                        icon.classList.add('rotate-180');
-                    }
-                });
-            });
-
-            // HSN Live Search
-            const hsnInput = document.getElementById('hsn-search');
-            const hsnRows = document.querySelectorAll('#hsn-table-body .hsn-row');
-
-            hsnInput.addEventListener('input', (e) => {
-                const query = e.target.value.toLowerCase().trim();
-                hsnRows.forEach(row => {
-                    const text = row.innerText.toLowerCase();
-                    if (text.includes(query)) {
-                        row.classList.remove('hidden');
-                    } else {
-                        row.classList.add('hidden');
+                        content.classList.remove('hidden');
+                        if (icon) icon.classList.add('rotate-180');
                     }
                 });
             });

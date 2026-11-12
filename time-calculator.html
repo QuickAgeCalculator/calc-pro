@@ -21,18 +21,16 @@
     <meta name="twitter:title" content="Free Online Time Calculator">
     <meta name="twitter:description" content="Calculate time differences, work hours, overtime, decimal hours, and add or subtract durations online for free.">
 
-    <!-- Fonts & Icons -->
-    
-    
+    <!-- Critical CSS for Instant Render & FCP Optimization -->
+    <style>
+        body { font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #f8fafc; color: #1e293b; margin: 0; }
+        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.25s ease-out; }
+        .accordion-content.open { max-height: 500px; }
+        input[type="time"]::-webkit-calendar-picker-indicator, input[type="datetime-local"]::-webkit-calendar-picker-indicator { cursor: pointer; }
+    </style>
 
     <!-- Tailwind CSS CDN -->
-    
-
-    <!-- Custom Style Sheet -->
-    
-
     <link rel="stylesheet" href="./css/styles.min.css">
-
     <!-- Structured Data: JSON-LD WebPage & FAQSchema -->
     <script type="application/ld+json">
     {
@@ -67,7 +65,7 @@
           "name": "How do I calculate time between two times online free?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Select the "Time Duration" tab on our free online time calculator. Input your start time and end time, select AM/PM or 24-hour mode, and specify any break deduction in minutes. The tool immediately calculates total hours, total minutes, seconds, and decimal hours."
+            "text": "Select the 'Time Duration' tab on our free online time calculator. Input your start time and end time, select AM/PM or 24-hour mode, and specify any break deduction in minutes. The tool immediately calculates total hours, total minutes, seconds, and decimal hours."
           }
         },
         {
@@ -75,7 +73,7 @@
           "name": "How to calculate hours and minutes for payroll?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "To calculate hours for payroll, convert minutes into decimal hours by dividing minutes by 60 (e.g., 45 minutes / 60 = 0.75 hours). Use our "Work Hours & Payroll" tab to enter shift times across multiple days and auto-calculate standard and overtime earnings."
+            "text": "To calculate hours for payroll, convert minutes into decimal hours by dividing minutes by 60 (e.g., 45 minutes / 60 = 0.75 hours). Use our 'Work Hours & Payroll' tab to enter shift times across multiple days and auto-calculate standard and overtime earnings."
           }
         },
         {
@@ -91,10 +89,10 @@
           "name": "Can I add hours and minutes together online for free?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, use the "Add / Subtract Time" tab to add hours and minutes calculator free mode. Simply enter a starting time or duration and specify the hours, minutes, and seconds you want to add or subtract."
+            "text": "Yes, use the 'Add / Subtract Time' tab to add hours and minutes calculator free mode. Simply enter a starting time or duration and specify the hours, minutes, and seconds you want to add or subtract."
           }
         },
-		{
+        {
           "@type": "Question",
           "name": "What is a free decimal hours calculator?",
           "acceptedAnswer": {
@@ -102,7 +100,7 @@
             "text": "A decimal hours calculator converts traditional sexagesimal time (hours, minutes, seconds) into a base-10 numerical format. For example, 7 hours 30 minutes becomes 7.50 decimal hours, which is necessary for payroll and billing calculations."
           }
         },
-		{
+        {
           "@type": "Question",
           "name": "How does lunch break deduction work on time cards?",
           "acceptedAnswer": {
@@ -122,24 +120,22 @@
     }
     </script>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-indigo-500 selection:text-white">
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white">
 
     <!-- Sticky Header -->
-    <header
-        class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-200">
+    <header class="sticky top-0 z-50 w-full bg-white border-b border-slate-200 shadow-sm transition-all duration-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
     
                 <!-- Brand Logo & Name -->
-                <a href="index.html"
-                    class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
-                    <div
-                        class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-200 group-hover:bg-indigo-700 transition-colors duration-200">
-                        <span class="icon-calculator text-lg"></span>
+                <a href="index.html" class="flex items-center gap-2.5 group focus:outline-none focus:ring-2 focus:ring-brand-500 rounded-lg p-1">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-brand-600 text-white shadow-md shadow-brand-100 group-hover:bg-brand-700 transition-colors duration-200">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 448 512" aria-hidden="true">
+                            <path d="M384 32H64C28.65 32 0 60.65 0 96v320c0 35.35 28.65 64 64 64h320c35.35 0 64-28.65 64-64V96c0-35.35-28.65-64-64-64zM128 96h64v32h-64V96zm0 64h64v32h-64v-32zm0 64h64v32h-64v-32zm192 192H128v-32h192v32zm0-64h-64v-32h64v32zm0-64h-64v-32h64v32zm0-64h-64V96h64v64z"/>
+                        </svg>
                     </div>
-                    <span
-                        class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors duration-200">
-                        Calculator<span class="text-indigo-600">-Pro</span>
+                    <span class="text-xl font-bold tracking-tight text-slate-800 group-hover:text-brand-600 transition-colors duration-200">
+                        Calculator<span class="text-brand-600">-Pro</span>
                     </span>
                 </a>
     
@@ -148,187 +144,101 @@
     
                     <!-- Category 1: Age -->
                     <div class="relative group">
-                        <button type="button"
-                            class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <button type="button" class="flex items-center gap-1.5 px-3.5 py-2 text-sm font-medium text-slate-600 hover:text-brand-600 rounded-lg hover:bg-slate-100 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-brand-500">
                             Age
-                            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200"
-                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-                                </path>
+                            <svg class="w-4 h-4 text-slate-400 group-hover:text-brand-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
-                        <div
-                            class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
-                            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-                                <a href="age-calculator.html"
-                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age
-                                    Calculator</a>
-                            </div>
-                            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-                                <a href="birthday-calculator.html"
-                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Birthday
-                                    Calculator</a>
-                            </div>
-                            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-                                <a href="age-difference-calculator.html"
-                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Age
-                                    Diffrence Calculator</a>
+                        <div class="absolute left-0 top-full pt-1.5 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out">
+                            <div class="bg-white rounded-xl shadow-lg border border-slate-200 p-1.5 ring-1 ring-black/5">
+                                <a href="age-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-100/50 rounded-lg transition-colors">Age Calculator</a>
+                                <a href="birthday-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-100/50 rounded-lg transition-colors">Birthday Calculator</a>
+                                <a href="age-difference-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-100/50 rounded-lg transition-colors">Age Difference Calculator</a>
                             </div>
                         </div>
                     </div>
     
-                    <!-- Category 2: Time -->
+                    <!-- Category 2: Time & Date -->
                     <div class="relative group">
-                        <button type="button"
-                            class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <button type="button" class="flex items-center gap-1.5 px-3.5 py-2 text-sm font-medium text-slate-600 hover:text-brand-600 rounded-lg hover:bg-slate-100 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-brand-500">
                             Time & Date
-                            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200"
-                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-                                </path>
+                            <svg class="w-4 h-4 text-slate-400 group-hover:text-brand-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
-                        <div
-                            class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
-                            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-                                <a href="time-calculator.html"
-                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Time
-                                    Calculator</a>
-                            </div>
-                            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-                                <a href="date-calculator.html"
-                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Date
-                                    Calculator</a>
-                            </div>
-                            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-                                <a href="work-days-calculator.html"
-                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Work
-                                    Days Calculator</a>
-                            </div>
-                            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-                                <a href="time-zone-converter.html"
-                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">TimeZone
-                                    Calculator</a>
+                        <div class="absolute left-0 top-full pt-1.5 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out">
+                            <div class="bg-white rounded-xl shadow-lg border border-slate-200 p-1.5 ring-1 ring-black/5">
+                                <a href="time-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-100/50 rounded-lg transition-colors">Time Calculator</a>
+                                <a href="date-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-100/50 rounded-lg transition-colors">Date Calculator</a>
+                                <a href="work-days-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-100/50 rounded-lg transition-colors">Work Days Calculator</a>
+                                <a href="time-zone-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-100/50 rounded-lg transition-colors">TimeZone Calculator</a>
                             </div>
                         </div>
                     </div>
     
                     <!-- Category 3: Converter -->
                     <div class="relative group">
-                        <button type="button"
-                            class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <button type="button" class="flex items-center gap-1.5 px-3.5 py-2 text-sm font-medium text-slate-600 hover:text-brand-600 rounded-lg hover:bg-slate-100 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-brand-500">
                             Converter
-                            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200"
-                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-                                </path>
+                            <svg class="w-4 h-4 text-slate-400 group-hover:text-brand-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
-                        <div
-                            class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
-                            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-                                <a href="unit-converter.html"
-                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Unit
-                                    Converter</a>
-                            </div>
-                            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-                                <a href="cgpa-to-percentage-converter.html"
-                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">CGPA
-                                    to Percentage</a>
-                            </div>
-                            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-                                <a href="sgpa-to-percentage-converter.html"
-                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA
-                                    to Percentage</a>
-                            </div>
-                            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-                                <a href="sgpa-to-cgpa-converter.html"
-                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SGPA
-                                    to CGPA</a>
-                            </div>
-                            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-                                <a href="marks-to-percentage-calculator.html"
-                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Marks
-                                    to Percentage</a>
+                        <div class="absolute left-0 top-full pt-1.5 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out">
+                            <div class="bg-white rounded-xl shadow-lg border border-slate-200 p-1.5 ring-1 ring-black/5">
+                                <a href="unit-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-100/50 rounded-lg transition-colors">Unit Converter</a>
+                                <a href="cgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-100/50 rounded-lg transition-colors">CGPA to Percentage</a>
+                                <a href="sgpa-to-percentage-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-100/50 rounded-lg transition-colors">SGPA to Percentage</a>
+                                <a href="sgpa-to-cgpa-converter.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-100/50 rounded-lg transition-colors">SGPA to CGPA</a>
+                                <a href="marks-to-percentage-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-100/50 rounded-lg transition-colors">Marks to Percentage</a>
                             </div>
                         </div>
                     </div>
     
                     <!-- Category 4: Financial -->
                     <div class="relative group">
-                        <button type="button"
-                            class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <button type="button" class="flex items-center gap-1.5 px-3.5 py-2 text-sm font-medium text-slate-600 hover:text-brand-600 rounded-lg hover:bg-slate-100 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-brand-500">
                             Financial
-                            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200"
-                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-                                </path>
+                            <svg class="w-4 h-4 text-slate-400 group-hover:text-brand-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
-                        <div
-                            class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
-                            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-                                <a href="sip-calculator.html"
-                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">SIP
-                                    Calculator</a>
-                            </div>
-                            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-                                <a href="emi-calculator.html"
-                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">EMI
-                                    Loan Calculator</a>
-                            </div>
-                            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-                                <a href="Compound-Interest-Calculator.html"
-                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">Compound
-                                    Interest Calculator</a>
+                        <div class="absolute left-0 top-full pt-1.5 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out">
+                            <div class="bg-white rounded-xl shadow-lg border border-slate-200 p-1.5 ring-1 ring-black/5">
+                                <a href="sip-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-100/50 rounded-lg transition-colors">SIP Calculator</a>
+                                <a href="emi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-100/50 rounded-lg transition-colors">EMI Loan Calculator</a>
+                                <a href="Compound-Interest-Calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-100/50 rounded-lg transition-colors">Compound Interest Calculator</a>
                             </div>
                         </div>
                     </div>
     
                     <!-- Category 5: Health -->
                     <div class="relative group">
-                        <button type="button"
-                            class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <button type="button" class="flex items-center gap-1.5 px-3.5 py-2 text-sm font-medium text-slate-600 hover:text-brand-600 rounded-lg hover:bg-slate-100 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-brand-500">
                             Health
-                            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform duration-200"
-                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-                                </path>
+                            <svg class="w-4 h-4 text-slate-400 group-hover:text-brand-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
-                        <div
-                            class="absolute right-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-1">
-                            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-                                <a href="bmi-calculator.html"
-                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">BMI
-                                    Calculator</a>
-                            </div>
-                            <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-1.5 ring-1 ring-black/5">
-                                <a href="waist-to-hip-ratio-calculator.html"
-                                    class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors duration-150">WHR
-                                    Calculator</a>
+                        <div class="absolute right-0 top-full pt-1.5 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out">
+                            <div class="bg-white rounded-xl shadow-lg border border-slate-200 p-1.5 ring-1 ring-black/5">
+                                <a href="bmi-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-100/50 rounded-lg transition-colors">BMI Calculator</a>
+                                <a href="waist-to-hip-ratio-calculator.html" class="block px-3.5 py-2 text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-100/50 rounded-lg transition-colors">WHR Calculator</a>
                             </div>
                         </div>
                     </div>
-    
-    
     
                 </nav>
     
                 <!-- Mobile Hamburger Button -->
                 <div class="flex md:hidden">
-                    <button id="calc-mobile-menu-btn" type="button"
-                        class="p-2.5 rounded-xl text-slate-600 hover:text-indigo-600 hover:bg-slate-100/80 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors duration-200"
-                        aria-controls="calc-mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
-                        <svg id="calc-menu-icon" class="w-6 h-6 transition-transform duration-200" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16"></path>
+                    <button id="calc-mobile-menu-btn" type="button" class="p-2 rounded-xl text-slate-600 hover:text-brand-600 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-colors" aria-controls="calc-mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+                        <svg id="calc-menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
-                        <svg id="calc-close-icon" class="w-6 h-6 hidden transition-transform duration-200" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
-                            </path>
+                        <svg id="calc-close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                         </svg>
                     </button>
                 </div>
@@ -337,102 +247,52 @@
         </div>
     
         <!-- Mobile Full-Width Menu Container -->
-        <div id="calc-mobile-menu"
-            class="hidden md:hidden border-t border-slate-100 bg-white shadow-xl transition-all duration-200 ease-in-out">
+        <div id="calc-mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white shadow-lg">
             <div class="px-4 pt-3 pb-6 space-y-4">
-    
-                <!-- Mobile Category: Age -->
                 <div class="border-b border-slate-100 pb-3">
                     <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Age</div>
-                    <a href="age-calculator.html"
-                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age
-                        Calculator</a>
-                    <a href="birthday-calculator.html"
-                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Birthday
-                        Calculator</a>
-                    <a href="age-difference-calculator.html"
-                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Age
-                        Diffrence Calculator</a>
+                    <a href="age-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50 rounded-lg">Age Calculator</a>
+                    <a href="birthday-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50 rounded-lg">Birthday Calculator</a>
+                    <a href="age-difference-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50 rounded-lg">Age Difference Calculator</a>
                 </div>
-    
-                <!-- Mobile Category: Time -->
                 <div class="border-b border-slate-100 pb-3">
                     <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Time & Date</div>
-                    <a href="time-calculator.html"
-                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Time
-                        Calculator</a>
-                    <a href="date-calculator.html"
-                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Date
-                        Calculator</a>
-                    <a href="work-days-calculator.html"
-                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Work
-                        Days Calculator</a>
-                    <a href="time-zone-converter.html"
-                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">TimeZone
-                        Calculator</a>
+                    <a href="time-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50 rounded-lg">Time Calculator</a>
+                    <a href="date-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50 rounded-lg">Date Calculator</a>
+                    <a href="work-days-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50 rounded-lg">Work Days Calculator</a>
+                    <a href="time-zone-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50 rounded-lg">TimeZone Calculator</a>
                 </div>
-    
-                <!-- Mobile Category: Converter -->
                 <div class="border-b border-slate-100 pb-3">
                     <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Converter</div>
-                    <a href="unit-converter.html"
-                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Unit
-                        Converter</a>
-                    <a href="cgpa-to-percentage-converter.html"
-                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">CGPA
-                        to Percentage</a>
-                    <a href="sgpa-to-percentage-converter.html"
-                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA
-                        to Percentage</a>
-                    <a href="sgpa-to-cgpa-converter.html"
-                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SGPA
-                        to CGPA</a>
-                    <a href="marks-to-percentage-calculator.html"
-                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Marks
-                        to Percentage</a>
+                    <a href="unit-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50 rounded-lg">Unit Converter</a>
+                    <a href="cgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50 rounded-lg">CGPA to Percentage</a>
+                    <a href="sgpa-to-percentage-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50 rounded-lg">SGPA to Percentage</a>
+                    <a href="sgpa-to-cgpa-converter.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50 rounded-lg">SGPA to CGPA</a>
+                    <a href="marks-to-percentage-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50 rounded-lg">Marks to Percentage</a>
                 </div>
-    
-                <!-- Mobile Category: Financial -->
                 <div class="border-b border-slate-100 pb-3">
                     <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Financial</div>
-                    <a href="sip-calculator.html"
-                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">SIP
-                        Calculator</a>
-                    <a href="emi-calculator.html"
-                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">EMI
-                        Loan Calculator</a>
-                    <a href="Compound-Interest-Calculator.html"
-                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">Compound
-                        Interest Calculator</a>
+                    <a href="sip-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50 rounded-lg">SIP Calculator</a>
+                    <a href="emi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50 rounded-lg">EMI Loan Calculator</a>
+                    <a href="Compound-Interest-Calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50 rounded-lg">Compound Interest Calculator</a>
                 </div>
-    
-                <!-- Mobile Category: Health -->
                 <div>
                     <div class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-1">Health</div>
-                    <a href="bmi-calculator.html"
-                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">BMI
-                        Calculator</a>
-                    <a href="waist-to-hip-ratio-calculator.html"
-                        class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-lg transition-colors">WHR
-                        Calculator</a>
+                    <a href="bmi-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50 rounded-lg">BMI Calculator</a>
+                    <a href="waist-to-hip-ratio-calculator.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50 rounded-lg">WHR Calculator</a>
                 </div>
-    
-    
-    
             </div>
         </div>
     </header>
 
-    <!-- Hero Header & Introductory Paragraph -->
-    <section class="relative bg-gradient-to-b from-indigo-50/50 via-white to-slate-50 pt-10 pb-12 border-b border-slate-100">
+    <!-- Hero Header & Introductory Paragraph (No Gradient) -->
+    <section class="bg-brand-100/40 pt-10 pb-12 border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-100/80 text-indigo-700 text-xs font-semibold mb-4 shadow-sm">
-                <span class="inline-flex items-center gap-1.5">
-                    <svg class="size-3 fill-current shrink-0" viewBox="0 0 640 512">
-                        <path
-                            d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24h110.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75m181 53c-13.3 0-24 10.7-24 24v104c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z" />
-                    </svg>
-                </span> 100% Free & Accurate Time Utilities
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-100 text-brand-700 text-xs font-semibold mb-4 border border-brand-300">
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 512 512" aria-hidden="true">
+                    <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.1c-3.8-2.7-6.9-7.4-6.9-12.1V136c0-13.3 10.7-24 24-24s24 10.7 24 24v124.6l71.6 51.5c10.9 7.8 13.3 22.9 5.4 33.8-7.8 10.9-22.9 13.3-33.8 5.4z"/>
+                </svg>
+                100% Free & Accurate Time Utilities
             </div>
             <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight max-w-4xl mx-auto">
                 Free Online Time Calculator
@@ -445,31 +305,33 @@
 
     <!-- Main Interactive Calculator Tool Container -->
     <main id="app-calculator" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 mb-16 relative z-10">
-        <div class="bg-white rounded-2xl shadow-xl border border-slate-200/80 overflow-hidden">
+        <div class="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
             
             <!-- Navigation Tabs Header -->
-            <div class="bg-slate-100/80 p-2 sm:p-3 border-b border-slate-200 flex flex-wrap gap-2 justify-center sm:justify-start" role="tablist" aria-label="Time Calculator Modes">
-                <button type="button" role="tab" id="tab-btn-duration" aria-selected="true" aria-controls="tab-duration" onclick="switchTab('duration')" class="tab-button flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 bg-white text-indigo-600 shadow-sm ring-1 ring-slate-200">
-                    <span class="inline-flex items-center gap-1.5">
-                        <svg class="size-3 fill-current shrink-0" viewBox="0 0 512 512" aria-hidden="true">
-                            <path
-                                d="M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32v11c0 42.4 16.9 83.1 46.9 113.1l67.8 67.9l-67.8 67.9C48.9 353.9 32 394.6 32 437v11c-17.7 0-32 14.3-32 32s14.3 32 32 32h320c17.7 0 32-14.3 32-32s-14.3-32-32-32v-11c0-42.4-16.9-83.1-46.9-113.1L237.3 256l67.9-67.9c30-30 46.9-70.7 46.9-113.1V64c17.7 0 32-14.3 32-32s-14.3-32-32-32zm64 75V64h192v11c0 19-5.6 37.4-16 53H112c-10.3-15.6-16-34-16-53m16 309c3.5-5.3 7.6-10.3 12.1-14.9l67.9-67.8l67.9 67.9c4.6 4.6 8.6 9.6 12.1 14.9z" />
-                        </svg>
-                    </span> Time Duration
+            <div class="bg-slate-100 p-2 sm:p-3 border-b border-slate-200 flex flex-wrap gap-2 justify-center sm:justify-start" role="tablist" aria-label="Time Calculator Modes">
+                <button type="button" role="tab" id="tab-btn-duration" aria-selected="true" aria-controls="tab-duration" onclick="switchTab('duration')" class="tab-button flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 bg-white text-brand-600 shadow-sm border border-slate-200">
+                    <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 512 512" aria-hidden="true">
+                        <path d="M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32v11c0 42.4 16.9 83.1 46.9 113.1l67.8 67.9l-67.8 67.9C48.9 353.9 32 394.6 32 437v11c-17.7 0-32 14.3-32 32s14.3 32 32 32h320c17.7 0 32-14.3 32-32s-14.3-32-32-32v-11c0-42.4-16.9-83.1-46.9-113.1L237.3 256l67.9-67.9c30-30 46.9-70.7 46.9-113.1V64c17.7 0 32-14.3 32-32s-14.3-32-32-32zm64 75V64h192v11c0 19-5.6 37.4-16 53H112c-10.3-15.6-16-34-16-53m16 309c3.5-5.3 7.6-10.3 12.1-14.9l67.9-67.8l67.9 67.9c4.6 4.6 8.6 9.6 12.1 14.9z"/>
+                    </svg>
+                    Time Duration
                 </button>
-                <button type="button" role="tab" id="tab-btn-addsub" aria-selected="false" aria-controls="tab-addsub" onclick="switchTab('addsub')" class="tab-button flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm text-slate-600 hover:text-indigo-600 hover:bg-white/60 transition-all duration-200">
-                    <span class="icon icon-plus-minus"></span> Add / Subtract Time
+                <button type="button" role="tab" id="tab-btn-addsub" aria-selected="false" aria-controls="tab-addsub" onclick="switchTab('addsub')" class="tab-button flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm text-slate-600 hover:text-brand-600 hover:bg-white/60 transition-all duration-200">
+                    <svg class="w-4 h-4 stroke-current shrink-0" fill="none" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/>
+                    </svg>
+                    Add / Subtract Time
                 </button>
-                <button type="button" role="tab" id="tab-btn-payroll" aria-selected="false" aria-controls="tab-payroll" onclick="switchTab('payroll')" class="tab-button flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm text-slate-600 hover:text-indigo-600 hover:bg-white/60 transition-all duration-200">
-                    <span class="inline-flex items-center gap-1.5">
-                        <svg class="size-3.5 fill-current shrink-0" viewBox="0 0 512 512" aria-hidden="true">
-                            <path
-                                d="M224 0a128 128 0 1 1 0 256a128 128 0 1 1 0-256m-45.7 304h91.4c20.6 0 40.4 3.5 58.8 9.9C323 331 320 349.1 320 368c0 59.5 29.5 112.1 74.8 144H29.7C13.3 512 0 498.7 0 482.3C0 383.8 79.8 304 178.3 304M352 368a144 144 0 1 1 288 0a144 144 0 1 1-288 0m144-80c-8.8 0-16 7.2-16 16v64c0 8.8 7.2 16 16 16h48c8.8 0 16-7.2 16-16s-7.2-16-16-16h-32v-48c0-8.8-7.2-16-16-16" />
-                        </svg>
-                    </span> Work Hours & Payroll
+                <button type="button" role="tab" id="tab-btn-payroll" aria-selected="false" aria-controls="tab-payroll" onclick="switchTab('payroll')" class="tab-button flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm text-slate-600 hover:text-brand-600 hover:bg-white/60 transition-all duration-200">
+                    <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 512 512" aria-hidden="true">
+                        <path d="M224 0a128 128 0 1 1 0 256a128 128 0 1 1 0-256m-45.7 304h91.4c20.6 0 40.4 3.5 58.8 9.9C323 331 320 349.1 320 368c0 59.5 29.5 112.1 74.8 144H29.7C13.3 512 0 498.7 0 482.3C0 383.8 79.8 304 178.3 304M352 368a144 144 0 1 1 288 0a144 144 0 1 1-288 0"/>
+                    </svg>
+                    Work Hours & Payroll
                 </button>
-                <button type="button" role="tab" id="tab-btn-date" aria-selected="false" aria-controls="tab-date" onclick="switchTab('date')" class="tab-button flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm text-slate-600 hover:text-indigo-600 hover:bg-white/60 transition-all duration-200">
-                    <span class="icon-calendar-days"></span> Date & Duration
+                <button type="button" role="tab" id="tab-btn-date" aria-selected="false" aria-controls="tab-date" onclick="switchTab('date')" class="tab-button flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm text-slate-600 hover:text-brand-600 hover:bg-white/60 transition-all duration-200">
+                    <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 448 512" aria-hidden="true">
+                        <path d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128C0 92.7 28.7 64 64 64H112V32c0-17.7 14.3-32 32-32zM64 192V448H384V192H64z"/>
+                    </svg>
+                    Date & Duration
                 </button>
             </div>
 
@@ -481,24 +343,21 @@
                     <div class="max-w-3xl mx-auto">
                         <div class="mb-6 text-center sm:text-left">
                             <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
-                                <span class="inline-flex items-center gap-1.5">
-                                    <svg class="size-5 fill-current text-indigo-600 shrink-0" viewBox="0 0 448 512" aria-hidden="true">
-                                        <path
-                                            d="M176 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h16v34.4C92.3 113.8 16 200 16 304c0 114.9 93.1 208 208 208s208-93.1 208-208c0-41.8-12.3-80.7-33.5-113.2l24.1-24.1c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L355.7 143c-28.1-23-62.2-38.8-99.7-44.6V64h16c17.7 0 32-14.3 32-32S289.7 0 272 0zm72 192v128c0 13.3-10.7 24-24 24s-24-10.7-24-24V192c0-13.3 10.7-24 24-24s24 10.7 24 24" />
-                                    </svg>
-                                </span>
+                                <svg class="w-5 h-5 fill-current text-brand-600 shrink-0" viewBox="0 0 448 512" aria-hidden="true">
+                                    <path d="M176 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h16v34.4C92.3 113.8 16 200 16 304c0 114.9 93.1 208 208 208s208-93.1 208-208c0-41.8-12.3-80.7-33.5-113.2l24.1-24.1c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L355.7 143c-28.1-23-62.2-38.8-99.7-44.6V64h16c17.7 0 32-14.3 32-32S289.7 0 272 0zm72 192v128c0 13.3-10.7 24-24 24s-24-10.7-24-24V192c0-13.3 10.7-24 24-24s24 10.7 24 24"/>
+                                </svg>
                                 Time Difference Calculator
                             </h2>
                             <p class="text-sm text-slate-500 mt-1">Calculate exact elapsed time between two times with optional lunch or break deductions.</p>
                         </div>
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-slate-50 p-6 rounded-2xl border border-slate-200">
                             <!-- Start Time Input -->
                             <div>
                                 <label for="dur-start-time" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Start Time</label>
                                 <div class="flex gap-2">
-                                    <input type="text" id="dur-start-time" value="09:00" placeholder="09:00" class="w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-xl font-mono text-lg text-slate-800 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition">
-                                    <select id="dur-start-ampm" class="px-3 py-2.5 bg-white border border-slate-300 rounded-xl font-semibold text-slate-700 focus:ring-2 focus:ring-indigo-500 outline-none">
+                                    <input type="text" id="dur-start-time" value="09:00" placeholder="09:00" class="w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-xl font-mono text-lg text-slate-800 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition">
+                                    <select id="dur-start-ampm" class="px-3 py-2.5 bg-white border border-slate-300 rounded-xl font-semibold text-slate-700 focus:ring-2 focus:ring-brand-500 outline-none">
                                         <option value="AM" selected>AM</option>
                                         <option value="PM">PM</option>
                                         <option value="24">24H</option>
@@ -510,8 +369,8 @@
                             <div>
                                 <label for="dur-end-time" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">End Time</label>
                                 <div class="flex gap-2">
-                                    <input type="text" id="dur-end-time" value="05:30" placeholder="05:30" class="w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-xl font-mono text-lg text-slate-800 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition">
-                                    <select id="dur-end-ampm" class="px-3 py-2.5 bg-white border border-slate-300 rounded-xl font-semibold text-slate-700 focus:ring-2 focus:ring-indigo-500 outline-none">
+                                    <input type="text" id="dur-end-time" value="05:30" placeholder="05:30" class="w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-xl font-mono text-lg text-slate-800 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition">
+                                    <select id="dur-end-ampm" class="px-3 py-2.5 bg-white border border-slate-300 rounded-xl font-semibold text-slate-700 focus:ring-2 focus:ring-brand-500 outline-none">
                                         <option value="AM">AM</option>
                                         <option value="PM" selected>PM</option>
                                         <option value="24">24H</option>
@@ -523,7 +382,7 @@
                             <div class="md:col-span-2">
                                 <label for="dur-break-mins" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Break / Meal Time (Minutes)</label>
                                 <div class="relative">
-                                    <input type="number" id="dur-break-mins" value="30" min="0" step="1" class="w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-xl font-mono text-slate-800 focus:ring-2 focus:ring-indigo-500 outline-none">
+                                    <input type="number" id="dur-break-mins" value="30" min="0" step="1" class="w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-xl font-mono text-slate-800 focus:ring-2 focus:ring-brand-500 outline-none">
                                     <div class="absolute inset-y-0 right-0 pr-3.5 flex items-center pointer-events-none text-slate-400 text-sm">mins</div>
                                 </div>
                             </div>
@@ -531,8 +390,8 @@
 
                         <!-- Action Buttons -->
                         <div class="mt-6 flex flex-wrap gap-3">
-                            <button type="button" onclick="calculateDuration()" class="flex-1 min-w-[140px] px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl shadow-lg shadow-indigo-200 transition active:scale-95 flex items-center justify-center gap-2">
-                                <span class="icon-calculator"></span> Calculate Duration
+                            <button type="button" onclick="calculateDuration()" class="flex-1 min-w-[140px] px-6 py-3 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl shadow-md shadow-brand-100 transition active:scale-95 flex items-center justify-center gap-2">
+                                Calculate Duration
                             </button>
                             <button type="button" onclick="resetDuration()" class="px-5 py-3 bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold rounded-xl transition">
                                 Clear
@@ -540,16 +399,16 @@
                         </div>
 
                         <!-- Result Display Box -->
-                        <div id="dur-result-box" class="mt-8 p-6 bg-indigo-50/80 border border-indigo-100 rounded-2xl relative">
+                        <div id="dur-result-box" class="mt-8 p-6 bg-brand-100/60 border border-brand-300 rounded-2xl relative">
                             <div class="flex items-center justify-between mb-4">
-                                <span class="text-xs font-bold uppercase tracking-wider text-indigo-700">Elapsed Time Result</span>
-                                <button type="button" onclick="copyResult('dur-main-text')" class="text-xs font-semibold text-indigo-600 hover:text-indigo-800 flex items-center gap-1 bg-white px-2.5 py-1 rounded-lg border border-indigo-200">
-                                    <span class="icon-regular--copy"></span> Copy
+                                <span class="text-xs font-bold uppercase tracking-wider text-brand-700">Elapsed Time Result</span>
+                                <button type="button" onclick="copyResult('dur-main-text')" class="text-xs font-semibold text-brand-600 hover:text-brand-800 flex items-center gap-1 bg-white px-2.5 py-1 rounded-lg border border-brand-300">
+                                    Copy
                                 </button>
                             </div>
-                            <div id="dur-main-text" class="text-3xl sm:text-4xl font-extrabold text-indigo-950 font-mono tracking-tight">8 hours 0 minutes</div>
+                            <div id="dur-main-text" class="text-3xl sm:text-4xl font-extrabold text-slate-900 font-mono tracking-tight">8 hours 0 minutes</div>
                             
-                            <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-indigo-100 pt-4 text-center">
+                            <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-brand-300 pt-4 text-center">
                                 <div>
                                     <div class="text-xs text-slate-500 font-medium">Total Hours</div>
                                     <div id="dur-res-hours" class="text-lg font-bold text-slate-800 font-mono">8h</div>
@@ -563,8 +422,8 @@
                                     <div id="dur-res-secs" class="text-lg font-bold text-slate-800 font-mono">28,800s</div>
                                 </div>
                                 <div>
-                                    <div class="text-xs text-indigo-600 font-bold">Decimal Hours</div>
-                                    <div id="dur-res-decimal" class="text-lg font-bold text-indigo-700 font-mono">8.00 hrs</div>
+                                    <div class="text-xs text-brand-600 font-bold">Decimal Hours</div>
+                                    <div id="dur-res-decimal" class="text-lg font-bold text-brand-700 font-mono">8.00 hrs</div>
                                 </div>
                             </div>
                         </div>
@@ -576,20 +435,19 @@
                     <div class="max-w-3xl mx-auto">
                         <div class="mb-6 text-center sm:text-left">
                             <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
-                                <span class="icon-calculator text-indigo-600"></span>
                                 Add or Subtract Time Calculator
                             </h2>
                             <p class="text-sm text-slate-500 mt-1">Add hours and minutes calculator free mode to add to or subtract time from time online.</p>
                         </div>
 
-                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 space-y-6">
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-6">
                             <!-- Mode Selector -->
                             <div class="flex rounded-xl bg-slate-200 p-1 max-w-md mx-auto">
-                                <button type="button" id="addsub-mode-add" onclick="setAddSubMode('add')" class="flex-1 py-2 text-xs font-bold uppercase rounded-lg transition bg-white text-indigo-600 shadow-sm">
-                                    <span class="icon icon-plus mr-1"></span> Add Time
+                                <button type="button" id="addsub-mode-add" onclick="setAddSubMode('add')" class="flex-1 py-2 text-xs font-bold uppercase rounded-lg transition bg-white text-brand-600 shadow-sm">
+                                    + Add Time
                                 </button>
                                 <button type="button" id="addsub-mode-sub" onclick="setAddSubMode('sub')" class="flex-1 py-2 text-xs font-bold uppercase rounded-lg transition text-slate-600 hover:text-slate-900">
-                                    <span class="icon icon-minus mr-1"></span> Subtract Time
+                                    - Subtract Time
                                 </button>
                             </div>
 
@@ -598,15 +456,15 @@
                                 <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Base Starting Time / Duration</label>
                                 <div class="grid grid-cols-3 gap-3">
                                     <div>
-                                        <input type="number" id="as-base-h" value="10" min="0" placeholder="Hours" class="w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-xl font-mono text-slate-800 outline-none focus:ring-2 focus:ring-indigo-500">
+                                        <input type="number" id="as-base-h" value="10" min="0" placeholder="Hours" class="w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-xl font-mono text-slate-800 outline-none focus:ring-2 focus:ring-brand-500">
                                         <span class="text-xs text-slate-400 mt-1 block text-center">Hours</span>
                                     </div>
                                     <div>
-                                        <input type="number" id="as-base-m" value="30" min="0" max="59" placeholder="Minutes" class="w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-xl font-mono text-slate-800 outline-none focus:ring-2 focus:ring-indigo-500">
+                                        <input type="number" id="as-base-m" value="30" min="0" max="59" placeholder="Minutes" class="w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-xl font-mono text-slate-800 outline-none focus:ring-2 focus:ring-brand-500">
                                         <span class="text-xs text-slate-400 mt-1 block text-center">Minutes</span>
                                     </div>
                                     <div>
-                                        <input type="number" id="as-base-s" value="0" min="0" max="59" placeholder="Seconds" class="w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-xl font-mono text-slate-800 outline-none focus:ring-2 focus:ring-indigo-500">
+                                        <input type="number" id="as-base-s" value="0" min="0" max="59" placeholder="Seconds" class="w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-xl font-mono text-slate-800 outline-none focus:ring-2 focus:ring-brand-500">
                                         <span class="text-xs text-slate-400 mt-1 block text-center">Seconds</span>
                                     </div>
                                 </div>
@@ -617,15 +475,15 @@
                                 <label id="as-op-label" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Time Amount to Add</label>
                                 <div class="grid grid-cols-3 gap-3">
                                     <div>
-                                        <input type="number" id="as-val-h" value="2" min="0" placeholder="Hours" class="w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-xl font-mono text-slate-800 outline-none focus:ring-2 focus:ring-indigo-500">
+                                        <input type="number" id="as-val-h" value="2" min="0" placeholder="Hours" class="w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-xl font-mono text-slate-800 outline-none focus:ring-2 focus:ring-brand-500">
                                         <span class="text-xs text-slate-400 mt-1 block text-center">Hours</span>
                                     </div>
                                     <div>
-                                        <input type="number" id="as-val-m" value="45" min="0" max="59" placeholder="Minutes" class="w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-xl font-mono text-slate-800 outline-none focus:ring-2 focus:ring-indigo-500">
+                                        <input type="number" id="as-val-m" value="45" min="0" max="59" placeholder="Minutes" class="w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-xl font-mono text-slate-800 outline-none focus:ring-2 focus:ring-brand-500">
                                         <span class="text-xs text-slate-400 mt-1 block text-center">Minutes</span>
                                     </div>
                                     <div>
-                                        <input type="number" id="as-val-s" value="15" min="0" max="59" placeholder="Seconds" class="w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-xl font-mono text-slate-800 outline-none focus:ring-2 focus:ring-indigo-500">
+                                        <input type="number" id="as-val-s" value="15" min="0" max="59" placeholder="Seconds" class="w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-xl font-mono text-slate-800 outline-none focus:ring-2 focus:ring-brand-500">
                                         <span class="text-xs text-slate-400 mt-1 block text-center">Seconds</span>
                                     </div>
                                 </div>
@@ -634,8 +492,8 @@
 
                         <!-- Action Buttons -->
                         <div class="mt-6 flex flex-wrap gap-3">
-                            <button type="button" onclick="calculateAddSub()" class="flex-1 min-w-[140px] px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl shadow-lg shadow-indigo-200 transition active:scale-95 flex items-center justify-center gap-2">
-                                <span class="icon-calculator"></span> Compute Time
+                            <button type="button" onclick="calculateAddSub()" class="flex-1 min-w-[140px] px-6 py-3 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl shadow-md shadow-brand-100 transition active:scale-95 flex items-center justify-center gap-2">
+                                Compute Time
                             </button>
                             <button type="button" onclick="resetAddSub()" class="px-5 py-3 bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold rounded-xl transition">
                                 Reset
@@ -643,14 +501,14 @@
                         </div>
 
                         <!-- Result Display Box -->
-                        <div class="mt-8 p-6 bg-indigo-50/80 border border-indigo-100 rounded-2xl">
+                        <div class="mt-8 p-6 bg-brand-100/60 border border-brand-300 rounded-2xl">
                             <div class="flex items-center justify-between mb-2">
-                                <span class="text-xs font-bold uppercase tracking-wider text-indigo-700">Calculated Result</span>
-                                <button type="button" onclick="copyResult('as-result-text')" class="text-xs font-semibold text-indigo-600 hover:text-indigo-800 flex items-center gap-1 bg-white px-2.5 py-1 rounded-lg border border-indigo-200">
-                                    <span class="icon-regular--copy"></span> Copy
+                                <span class="text-xs font-bold uppercase tracking-wider text-brand-700">Calculated Result</span>
+                                <button type="button" onclick="copyResult('as-result-text')" class="text-xs font-semibold text-brand-600 hover:text-brand-800 flex items-center gap-1 bg-white px-2.5 py-1 rounded-lg border border-brand-300">
+                                    Copy
                                 </button>
                             </div>
-                            <div id="as-result-text" class="text-3xl sm:text-4xl font-extrabold text-indigo-950 font-mono">13 hours 15 minutes 15 seconds</div>
+                            <div id="as-result-text" class="text-3xl sm:text-4xl font-extrabold text-slate-900 font-mono">13 hours 15 minutes 15 seconds</div>
                             <div id="as-result-sub" class="text-sm text-slate-600 mt-2 font-mono">13.25 decimal hours | 47,715 total seconds</div>
                         </div>
                     </div>
@@ -661,12 +519,6 @@
                     <div class="max-w-4xl mx-auto">
                         <div class="mb-6 text-center sm:text-left">
                             <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
-                                <span class="inline-flex items-center gap-1.5">
-                                    <svg class="size-5 fill-current text-indigo-600 shrink-0" viewBox="0 0 512 512">
-                                        <path
-                                            d="M184 48h144c4.4 0 8 3.6 8 8v40H176V56c0-4.4 3.6-8 8-8m-56 8v40H64c-35.3 0-64 28.7-64 64v96h512v-96c0-35.3-28.7-64-64-64h-64V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56m384 232H320v32c0 17.7-14.3 32-32 32h-64c-17.7 0-32-14.3-32-32v-32H0v128c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64z" />
-                                    </svg>
-                                </span>
                                 Work Hours & Payroll Timesheet Calculator
                             </h2>
                             <p class="text-sm text-slate-500 mt-1">Calculate total hours worked online free, regular pay, overtime, and total earnings for payroll.</p>
@@ -676,11 +528,11 @@
                         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 bg-slate-50 p-4 rounded-xl border border-slate-200 mb-6">
                             <div>
                                 <label for="pay-rate" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Hourly Rate ($)</label>
-                                <input type="number" id="pay-rate" value="25.00" min="0" step="0.5" class="w-full px-3 py-2 bg-white border border-slate-300 rounded-lg font-mono text-slate-800 outline-none focus:ring-2 focus:ring-indigo-500">
+                                <input type="number" id="pay-rate" value="25.00" min="0" step="0.5" class="w-full px-3 py-2 bg-white border border-slate-300 rounded-lg font-mono text-slate-800 outline-none focus:ring-2 focus:ring-brand-500">
                             </div>
                             <div>
                                 <label for="ot-rate" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Overtime Multiplier</label>
-                                <select id="ot-rate" class="w-full px-3 py-2 bg-white border border-slate-300 rounded-lg font-semibold text-slate-700 outline-none focus:ring-2 focus:ring-indigo-500">
+                                <select id="ot-rate" class="w-full px-3 py-2 bg-white border border-slate-300 rounded-lg font-semibold text-slate-700 outline-none focus:ring-2 focus:ring-brand-500">
                                     <option value="1.5" selected>1.5x (Time and a half)</option>
                                     <option value="2.0">2.0x (Double time)</option>
                                     <option value="1.0">1.0x (Straight time)</option>
@@ -688,7 +540,7 @@
                             </div>
                             <div>
                                 <label for="ot-rule" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Overtime Rule</label>
-                                <select id="ot-rule" class="w-full px-3 py-2 bg-white border border-slate-300 rounded-lg font-semibold text-slate-700 outline-none focus:ring-2 focus:ring-indigo-500">
+                                <select id="ot-rule" class="w-full px-3 py-2 bg-white border border-slate-300 rounded-lg font-semibold text-slate-700 outline-none focus:ring-2 focus:ring-brand-500">
                                     <option value="daily8">After 8 hours / day</option>
                                     <option value="weekly40">After 40 hours / week</option>
                                 </select>
@@ -708,7 +560,6 @@
                                     </tr>
                                 </thead>
                                 <tbody class="divide-y divide-slate-100 font-mono">
-                                    <!-- Day 1 -->
                                     <tr class="hover:bg-slate-50">
                                         <td class="p-3 font-semibold text-slate-700 font-sans">Monday</td>
                                         <td class="p-3"><input type="time" id="p-start-1" value="09:00" class="pay-input px-2 py-1.5 bg-white border border-slate-300 rounded-lg"></td>
@@ -716,7 +567,6 @@
                                         <td class="p-3"><input type="number" id="p-break-1" value="30" min="0" class="pay-input w-16 px-2 py-1.5 bg-white border border-slate-300 rounded-lg"></td>
                                         <td id="p-row-tot-1" class="p-3 text-right font-bold text-slate-800">7.50 hrs</td>
                                     </tr>
-                                    <!-- Day 2 -->
                                     <tr class="hover:bg-slate-50">
                                         <td class="p-3 font-semibold text-slate-700 font-sans">Tuesday</td>
                                         <td class="p-3"><input type="time" id="p-start-2" value="09:00" class="pay-input px-2 py-1.5 bg-white border border-slate-300 rounded-lg"></td>
@@ -724,7 +574,6 @@
                                         <td class="p-3"><input type="number" id="p-break-2" value="30" min="0" class="pay-input w-16 px-2 py-1.5 bg-white border border-slate-300 rounded-lg"></td>
                                         <td id="p-row-tot-2" class="p-3 text-right font-bold text-slate-800">8.00 hrs</td>
                                     </tr>
-                                    <!-- Day 3 -->
                                     <tr class="hover:bg-slate-50">
                                         <td class="p-3 font-semibold text-slate-700 font-sans">Wednesday</td>
                                         <td class="p-3"><input type="time" id="p-start-3" value="08:30" class="pay-input px-2 py-1.5 bg-white border border-slate-300 rounded-lg"></td>
@@ -732,7 +581,6 @@
                                         <td class="p-3"><input type="number" id="p-break-3" value="30" min="0" class="pay-input w-16 px-2 py-1.5 bg-white border border-slate-300 rounded-lg"></td>
                                         <td id="p-row-tot-3" class="p-3 text-right font-bold text-slate-800">9.00 hrs</td>
                                     </tr>
-                                    <!-- Day 4 -->
                                     <tr class="hover:bg-slate-50">
                                         <td class="p-3 font-semibold text-slate-700 font-sans">Thursday</td>
                                         <td class="p-3"><input type="time" id="p-start-4" value="09:00" class="pay-input px-2 py-1.5 bg-white border border-slate-300 rounded-lg"></td>
@@ -740,7 +588,6 @@
                                         <td class="p-3"><input type="number" id="p-break-4" value="30" min="0" class="pay-input w-16 px-2 py-1.5 bg-white border border-slate-300 rounded-lg"></td>
                                         <td id="p-row-tot-4" class="p-3 text-right font-bold text-slate-800">7.50 hrs</td>
                                     </tr>
-                                    <!-- Day 5 -->
                                     <tr class="hover:bg-slate-50">
                                         <td class="p-3 font-semibold text-slate-700 font-sans">Friday</td>
                                         <td class="p-3"><input type="time" id="p-start-5" value="09:00" class="pay-input px-2 py-1.5 bg-white border border-slate-300 rounded-lg"></td>
@@ -754,8 +601,8 @@
 
                         <!-- Action Buttons -->
                         <div class="mt-6 flex flex-wrap gap-3">
-                            <button type="button" onclick="calculatePayroll()" class="flex-1 min-w-[140px] px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl shadow-lg shadow-indigo-200 transition flex items-center justify-center gap-2">
-                                <span class="icon-calculator"></span> Compute Timesheet & Pay
+                            <button type="button" onclick="calculatePayroll()" class="flex-1 min-w-[140px] px-6 py-3 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl shadow-md shadow-brand-100 transition flex items-center justify-center gap-2">
+                                Compute Timesheet & Pay
                             </button>
                             <button type="button" onclick="resetPayroll()" class="px-5 py-3 bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold rounded-xl transition">
                                 Reset
@@ -763,24 +610,24 @@
                         </div>
 
                         <!-- Timesheet Summary Card -->
-                        <div class="mt-8 p-6 bg-indigo-900 text-white rounded-2xl shadow-xl">
-                            <div class="text-xs uppercase font-bold text-indigo-300 tracking-wider mb-2">Timesheet Summary & Earnings</div>
-                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 py-3 border-b border-indigo-800/80 font-mono">
+                        <div class="mt-8 p-6 bg-brand-800 text-white rounded-2xl shadow-xl">
+                            <div class="text-xs uppercase font-bold text-brand-300 tracking-wider mb-2">Timesheet Summary & Earnings</div>
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 py-3 border-b border-brand-700 font-mono">
                                 <div>
-                                    <div class="text-xs text-indigo-300">Total Hours</div>
+                                    <div class="text-xs text-brand-300">Total Hours</div>
                                     <div id="tot-pay-hours" class="text-2xl font-bold">39.00 h</div>
                                 </div>
                                 <div>
-                                    <div class="text-xs text-indigo-300">Regular Hours</div>
+                                    <div class="text-xs text-brand-300">Regular Hours</div>
                                     <div id="tot-reg-hours" class="text-2xl font-bold">38.00 h</div>
                                 </div>
                                 <div>
-                                    <div class="text-xs text-indigo-300">Overtime Hours</div>
-                                    <div id="tot-ot-hours" class="text-2xl font-bold text-amber-400">1.00 h</div>
+                                    <div class="text-xs text-brand-300">Overtime Hours</div>
+                                    <div id="tot-ot-hours" class="text-2xl font-bold text-amber-300">1.00 h</div>
                                 </div>
                                 <div>
-                                    <div class="text-xs text-indigo-300">Gross Pay</div>
-                                    <div id="tot-gross-pay" class="text-2xl font-extrabold text-emerald-400">$987.50</div>
+                                    <div class="text-xs text-brand-300">Gross Pay</div>
+                                    <div id="tot-gross-pay" class="text-2xl font-extrabold text-emerald-300">$987.50</div>
                                 </div>
                             </div>
                         </div>
@@ -792,27 +639,26 @@
                     <div class="max-w-3xl mx-auto">
                         <div class="mb-6 text-center sm:text-left">
                             <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
-                                <span class="icon icon-calendar-check text-indigo-600"></span>
                                 Date & Age Duration Calculator
                             </h2>
                             <p class="text-sm text-slate-500 mt-1">Calculate duration between dates in years, months, days, hours, and minutes with leap year logic.</p>
                         </div>
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-slate-50 p-6 rounded-2xl border border-slate-200">
                             <div>
                                 <label for="date-start" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Start Date & Time</label>
-                                <input type="datetime-local" id="date-start" class="w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-xl font-mono text-slate-800 outline-none focus:ring-2 focus:ring-indigo-500">
+                                <input type="datetime-local" id="date-start" class="w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-xl font-mono text-slate-800 outline-none focus:ring-2 focus:ring-brand-500">
                             </div>
                             <div>
                                 <label for="date-end" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">End Date & Time</label>
-                                <input type="datetime-local" id="date-end" class="w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-xl font-mono text-slate-800 outline-none focus:ring-2 focus:ring-indigo-500">
+                                <input type="datetime-local" id="date-end" class="w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-xl font-mono text-slate-800 outline-none focus:ring-2 focus:ring-brand-500">
                             </div>
                         </div>
 
                         <!-- Action Buttons -->
                         <div class="mt-6 flex flex-wrap gap-3">
-                            <button type="button" onclick="calculateDateDiff()" class="flex-1 min-w-[140px] px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl shadow-lg shadow-indigo-200 transition flex items-center justify-center gap-2">
-                                <span class="icon-calculator"></span> Calculate Date Difference
+                            <button type="button" onclick="calculateDateDiff()" class="flex-1 min-w-[140px] px-6 py-3 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl shadow-md shadow-brand-100 transition flex items-center justify-center gap-2">
+                                Calculate Date Difference
                             </button>
                             <button type="button" onclick="resetDateDiff()" class="px-5 py-3 bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold rounded-xl transition">
                                 Reset
@@ -820,16 +666,15 @@
                         </div>
 
                         <!-- Result Display Box -->
-                        <div class="mt-8 p-6 bg-indigo-50/80 border border-indigo-100 rounded-2xl">
+                        <div class="mt-8 p-6 bg-brand-100/60 border border-brand-300 rounded-2xl">
                             <div class="flex items-center justify-between mb-2">
-                                <span class="text-xs font-bold uppercase tracking-wider text-indigo-700">Chronological Result</span>
-                                <button type="button" onclick="copyResult('date-res-main')" class="text-xs font-semibold text-indigo-600 hover:text-indigo-800 flex items-center gap-1 bg-white px-2.5 py-1 rounded-lg border border-indigo-200">
-                                    <span class="icon-regular--copy"></span> Copy
+                                <span class="text-xs font-bold uppercase tracking-wider text-brand-700">Chronological Result</span>
+                                <button type="button" onclick="copyResult('date-res-main')" class="text-xs font-semibold text-brand-600 hover:text-brand-800 flex items-center gap-1 bg-white px-2.5 py-1 rounded-lg border border-brand-300">
+                                    Copy
                                 </button>
                             </div>
-                            <div id="date-res-main" class="text-2xl sm:text-3xl font-extrabold text-indigo-950 font-mono">Select dates to calculate</div>
+                            <div id="date-res-main" class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-mono">Select dates to calculate</div>
                             <div id="date-res-sub" class="mt-4 text-xs sm:text-sm text-slate-600 font-mono grid grid-cols-2 sm:grid-cols-3 gap-2">
-                                <!-- Populated dynamically -->
                             </div>
                         </div>
                     </div>
@@ -841,122 +686,150 @@
 
     <!-- Comprehensive SEO Content Section -->
     <article class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-slate-700 space-y-12">
-
+    
         <!-- Section 1: What Is a Time Calculator? -->
         <section>
             <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-4 tracking-tight">
                 What Is a Time Calculator?
             </h2>
             <p class="leading-relaxed mb-4">
-                A <strong class="text-slate-900">free online time calculator</strong> is an essential computational web utility designed to solve temporal math equations effortlessly. Whether you are adding hours and minutes, subtracting elapsed duration between shifts, or figuring out your total payroll hours for the week, a digital <strong>time duration calculator</strong> handles complex base-60 (sexagesimal) arithmetic with 100% precision.
+                A <strong class="text-slate-900">free online time calculator</strong> is an essential computational web
+                utility designed to solve temporal math equations effortlessly. Whether you are adding hours and minutes,
+                subtracting elapsed duration between shifts, or figuring out your total payroll hours for the week, a
+                digital <strong>time duration calculator</strong> handles complex base-60 (sexagesimal) arithmetic with 100%
+                precision.
             </p>
             <p class="leading-relaxed">
-                Standard decimal arithmetic relies on base-10 math (where 10 units make a whole), but time calculations operate on 60 seconds per minute and 60 minutes per hour. Doing this mentally often leads to errors. Our <strong>online time calculator</strong> streamlines this process by automatically handling conversions, overnight midnight rollovers, break deductions, and decimal representations.
+                Standard decimal arithmetic relies on base-10 math (where 10 units make a whole), but time calculations
+                operate on 60 seconds per minute and 60 minutes per hour. Doing this mentally often leads to errors. Our
+                <strong>online time calculator</strong> streamlines this process by automatically handling conversions,
+                overnight midnight rollovers, break deductions, and decimal representations.
             </p>
         </section>
-
+    
         <!-- Section 2: How to Use the Calculator -->
         <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
             <h2 class="text-2xl font-bold text-slate-900 mb-4">
                 How to Use the Calculator
             </h2>
-            <p class="mb-4">Using our <strong>free time calculator</strong> is intuitive and fast. Select the tab that fits your needs:</p>
+            <p class="mb-4">Using our <strong>free time calculator</strong> is intuitive and fast. Select the tab that fits
+                your needs:</p>
             <ol class="list-decimal pl-6 space-y-3 font-medium text-slate-800">
-                <li><strong class="text-indigo-600">Time Difference Mode:</strong> Enter a start time and an end time (with AM/PM or 24-hour options). Enter any meal or break time in minutes. The tool automatically displays total hours, total minutes, total seconds, and decimal hours.</li>
-                <li><strong class="text-indigo-600">Add or Subtract Time Mode:</strong> Input your starting duration, choose whether to add or subtract, and type in the additional hours, minutes, and seconds.</li>
-                <li><strong class="text-indigo-600">Work Hours & Payroll Mode:</strong> Input daily start, end, and break times across your working days. Set your pay rate and overtime rules to compute your timesheet and gross pay instantly.</li>
-                <li><strong class="text-indigo-600">Date & Age Duration Mode:</strong> Pick two calendar dates to measure exact elapsed years, months, days, hours, and minutes.</li>
+                <li><strong class="text-indigo-600">Time Difference Mode:</strong> Enter a start time and an end time (with
+                    AM/PM or 24-hour options). Enter any meal or break time in minutes. The tool automatically displays
+                    total hours, total minutes, total seconds, and decimal hours.</li>
+                <li><strong class="text-indigo-600">Add or Subtract Time Mode:</strong> Input your starting duration, choose
+                    whether to add or subtract, and type in the additional hours, minutes, and seconds.</li>
+                <li><strong class="text-indigo-600">Work Hours & Payroll Mode:</strong> Input daily start, end, and break
+                    times across your working days. Set your pay rate and overtime rules to compute your timesheet and gross
+                    pay instantly.</li>
+                <li><strong class="text-indigo-600">Date & Age Duration Mode:</strong> Pick two calendar dates to measure
+                    exact elapsed years, months, days, hours, and minutes.</li>
             </ol>
         </section>
-
+    
         <!-- Section 3: How Does a Time Calculator Work? -->
         <section>
             <h2 class="text-2xl font-bold text-slate-900 mb-4">
                 How Does a Time Calculator Work?
             </h2>
             <p class="leading-relaxed mb-4">
-                Behind the scenes, the <strong>hours calculator</strong> converts all input values into the lowest common denominator unit—usually total seconds or total minutes. Once converted to uniform integers, standard mathematical addition or subtraction takes place.
+                Behind the scenes, the <strong>hours calculator</strong> converts all input values into the lowest common
+                denominator unit—usually total seconds or total minutes. Once converted to uniform integers, standard
+                mathematical addition or subtraction takes place.
             </p>
             <p class="leading-relaxed">
-                After performing the basic arithmetic, the algorithm converts the total back into hours, minutes, and seconds using modulo arithmetic ($Total\_Seconds \pmod{3600}$). For payroll needs, it divides total minutes by 60 to output standardized <strong>decimal hours</strong>.
+                After performing the basic arithmetic, the algorithm converts the total back into hours, minutes, and
+                seconds using modulo arithmetic ($Total\_Seconds \pmod{3600}$). For payroll needs, it divides total minutes
+                by 60 to output standardized <strong>decimal hours</strong>.
             </p>
         </section>
-
+    
         <!-- Section 4: What This Time Calculator Does -->
         <section>
             <h2 class="text-2xl font-bold text-slate-900 mb-4">
                 What This Time Calculator Does
             </h2>
-            <p class="mb-4">Our multi-functional tool provides comprehensive capabilities for everyday and professional time arithmetic:</p>
+            <p class="mb-4">Our multi-functional tool provides comprehensive capabilities for everyday and professional time
+                arithmetic:</p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div class="p-4 bg-slate-100 rounded-xl">
-                    <h3 class="font-bold text-slate-900 mb-1"><span class="icon icon-circle-check text-indigo-600 mr-1"></span> Elapsed Time & Overnight Shifts</h3>
-                    <p class="text-sm">Computes duration between times, intelligently resolving shifts that cross midnight.</p>
+                    <h3 class="font-bold text-slate-900 mb-1"><span
+                            class="icon icon-circle-check text-indigo-600 mr-1"></span> Elapsed Time & Overnight Shifts</h3>
+                    <p class="text-sm">Computes duration between times, intelligently resolving shifts that cross midnight.
+                    </p>
                 </div>
                 <div class="p-4 bg-slate-100 rounded-xl">
-                    <h3 class="font-bold text-slate-900 mb-1"><span class="icon icon-circle-check text-indigo-600 mr-1"></span> Add / Subtract Time Durations</h3>
+                    <h3 class="font-bold text-slate-900 mb-1"><span
+                            class="icon icon-circle-check text-indigo-600 mr-1"></span> Add / Subtract Time Durations</h3>
                     <p class="text-sm">Effortlessly add or subtract hours, minutes, and seconds from any base time.</p>
                 </div>
                 <div class="p-4 bg-slate-100 rounded-xl">
-                    <h3 class="font-bold text-slate-900 mb-1"><span class="icon icon-circle-check text-indigo-600 mr-1"></span> Work Hours & Payroll Timesheets</h3>
-                    <p class="text-sm">Calculates daily/weekly hours worked, break deductions, overtime multipliers, and gross wages.</p>
+                    <h3 class="font-bold text-slate-900 mb-1"><span
+                            class="icon icon-circle-check text-indigo-600 mr-1"></span> Work Hours & Payroll Timesheets</h3>
+                    <p class="text-sm">Calculates daily/weekly hours worked, break deductions, overtime multipliers, and
+                        gross wages.</p>
                 </div>
                 <div class="p-4 bg-slate-100 rounded-xl">
-                    <h3 class="font-bold text-slate-900 mb-1"><span class="icon icon-circle-check text-indigo-600 mr-1"></span> Decimal Hours Conversion</h3>
-                    <p class="text-sm">Converts standard hours and minutes into clean decimal format for instant payroll entries.</p>
+                    <h3 class="font-bold text-slate-900 mb-1"><span
+                            class="icon icon-circle-check text-indigo-600 mr-1"></span> Decimal Hours Conversion</h3>
+                    <p class="text-sm">Converts standard hours and minutes into clean decimal format for instant payroll
+                        entries.</p>
                 </div>
             </div>
         </section>
-
+    
         <!-- Section 5: Time Calculation Formulas & Examples -->
         <section>
             <h2 class="text-2xl font-bold text-slate-900 mb-4">
                 Time Calculation Formulas & Examples
             </h2>
             <p class="mb-4 leading-relaxed">
-                Understanding the underlying mathematical formulas helps ensure accuracy when doing manual checks or setting up timesheets.
+                Understanding the underlying mathematical formulas helps ensure accuracy when doing manual checks or setting
+                up timesheets.
             </p>
             <div class="bg-slate-900 text-slate-100 p-6 rounded-2xl font-mono text-sm space-y-3 mb-6">
                 <div><strong>Elapsed Minutes Formula:</strong> End Time (Mins) - Start Time (Mins) - Break Time (Mins)</div>
                 <div><strong>Decimal Hours Formula:</strong> Total Hours + (Total Minutes / 60)</div>
-                <div><strong>Overnight Adjustment Formula:</strong> If End Time < Start Time, Add 24 Hours (1,440 Mins)</div>
-            </div>
-
-            <h3 class="text-xl font-bold text-slate-900 mb-3">Quick Reference Examples</h3>
-            <div class="overflow-x-auto border border-slate-200 rounded-xl">
-                <table class="w-full text-left text-sm">
-                    <thead class="bg-slate-100 text-slate-800 font-bold border-b border-slate-200">
-                        <tr>
-                            <th class="p-3">Scenario</th>
-                            <th class="p-3">Start & End</th>
-                            <th class="p-3">Deduction</th>
-                            <th class="p-3">Result</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-slate-100">
-                        <tr>
-                            <td class="p-3 font-semibold">Standard Workday</td>
-                            <td class="p-3">08:30 AM to 05:00 PM</td>
-                            <td class="p-3">30 min break</td>
-                            <td class="p-3 font-mono font-bold text-indigo-600">8.00 Decimal Hrs (8h 00m)</td>
-                        </tr>
-                        <tr>
-                            <td class="p-3 font-semibold">Night Shift (Overnight)</td>
-                            <td class="p-3">10:00 PM to 06:30 AM</td>
-                            <td class="p-3">30 min break</td>
-                            <td class="p-3 font-mono font-bold text-indigo-600">8.00 Decimal Hrs (8h 00m)</td>
-                        </tr>
-                        <tr>
-                            <td class="p-3 font-semibold">Flight Duration</td>
-                            <td class="p-3">01:15 PM to 08:45 PM</td>
-                            <td class="p-3">None</td>
-                            <td class="p-3 font-mono font-bold text-indigo-600">7.50 Decimal Hrs (7h 30m)</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                <div><strong>Overnight Adjustment Formula:</strong> If End Time < Start Time, Add 24 Hours (1,440
+                        Mins)</div>
+                </div>
+    
+                <h3 class="text-xl font-bold text-slate-900 mb-3">Quick Reference Examples</h3>
+                <div class="overflow-x-auto border border-slate-200 rounded-xl">
+                    <table class="w-full text-left text-sm">
+                        <thead class="bg-slate-100 text-slate-800 font-bold border-b border-slate-200">
+                            <tr>
+                                <th class="p-3">Scenario</th>
+                                <th class="p-3">Start & End</th>
+                                <th class="p-3">Deduction</th>
+                                <th class="p-3">Result</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100">
+                            <tr>
+                                <td class="p-3 font-semibold">Standard Workday</td>
+                                <td class="p-3">08:30 AM to 05:00 PM</td>
+                                <td class="p-3">30 min break</td>
+                                <td class="p-3 font-mono font-bold text-indigo-600">8.00 Decimal Hrs (8h 00m)</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-semibold">Night Shift (Overnight)</td>
+                                <td class="p-3">10:00 PM to 06:30 AM</td>
+                                <td class="p-3">30 min break</td>
+                                <td class="p-3 font-mono font-bold text-indigo-600">8.00 Decimal Hrs (8h 00m)</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-semibold">Flight Duration</td>
+                                <td class="p-3">01:15 PM to 08:45 PM</td>
+                                <td class="p-3">None</td>
+                                <td class="p-3 font-mono font-bold text-indigo-600">7.50 Decimal Hrs (7h 30m)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
         </section>
-
+    
         <!-- Section 6: Worked Examples / Practical Use Cases -->
         <section>
             <h2 class="text-2xl font-bold text-slate-900 mb-4">
@@ -964,37 +837,48 @@
             </h2>
             <div class="space-y-4">
                 <div class="p-5 border border-slate-200 rounded-2xl bg-white">
-                    <h3 class="font-bold text-slate-900 text-base mb-2"><span class="icon icon-briefcase text-indigo-600 mr-2"></span> Case 1: Freelancer Billing Client for Hours Worked</h3>
+                    <h3 class="font-bold text-slate-900 text-base mb-2"><span
+                            class="icon icon-briefcase text-indigo-600 mr-2"></span> Case 1: Freelancer Billing Client for
+                        Hours Worked</h3>
                     <p class="text-sm text-slate-600">
-                        A freelance web designer begins working at 9:15 AM and finishes at 3:45 PM with a 45-minute lunch break. Converting times to minutes gives: Start = 555 mins, End = 945 mins. Total elapsed = 390 mins - 45 min break = 345 minutes. Dividing 345 by 60 gives <strong>5.75 decimal hours</strong>. At $50/hr, the gross invoice amount is 5.75 × $50 = $287.50.
+                        A freelance web designer begins working at 9:15 AM and finishes at 3:45 PM with a 45-minute lunch
+                        break. Converting times to minutes gives: Start = 555 mins, End = 945 mins. Total elapsed = 390 mins
+                        - 45 min break = 345 minutes. Dividing 345 by 60 gives <strong>5.75 decimal hours</strong>. At
+                        $50/hr, the gross invoice amount is 5.75 × $50 = $287.50.
                     </p>
                 </div>
                 <div class="p-5 border border-slate-200 rounded-2xl bg-white">
                     <h3 class="font-bold text-slate-900 text-base mb-2">
                         <span class="inline-flex items-center gap-1.5">
-                            <svg class="size-4.5 fill-current text-indigo-600 shrink-0" viewBox="0 0 512 512" aria-hidden="true">
+                            <svg class="size-4.5 fill-current text-indigo-600 shrink-0" viewBox="0 0 512 512"
+                                aria-hidden="true">
                                 <path
                                     d="M223.5 32C100 32 0 132.3 0 256s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z" />
                             </svg>
                         </span>
-                        Case 2: Nurse Working Overnight Shift</h3>
+                        Case 2: Nurse Working Overnight Shift
+                    </h3>
                     <p class="text-sm text-slate-600">
-                        A nurse starts shift at 7:00 PM (19:00) and ends at 7:30 AM (07:30) the next day with 60 minutes break. Adding 24 hours to the end time yields 31:30. Difference is 12 hours 30 mins minus 1 hour break = <strong>11 hours 30 minutes (11.50 decimal hours)</strong>.
+                        A nurse starts shift at 7:00 PM (19:00) and ends at 7:30 AM (07:30) the next day with 60 minutes
+                        break. Adding 24 hours to the end time yields 31:30. Difference is 12 hours 30 mins minus 1 hour
+                        break = <strong>11 hours 30 minutes (11.50 decimal hours)</strong>.
                     </p>
                 </div>
             </div>
         </section>
-
+    
         <!-- Section 7: Who Can Use This Tool? -->
         <section>
             <h2 class="text-2xl font-bold text-slate-900 mb-4">
                 Who Can Use This Tool?
             </h2>
-            <p class="mb-4">Our <strong>free online time calculator add and subtract</strong> suite is tailored for diverse personal and professional needs:</p>
+            <p class="mb-4">Our <strong>free online time calculator add and subtract</strong> suite is tailored for diverse
+                personal and professional needs:</p>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
                 <div class="p-4 bg-indigo-50/50 rounded-xl border border-indigo-100">
                     <span class="inline-flex items-center gap-1.5">
-                        <svg class="size-5 fill-current text-indigo-600 mb-2 shrink-0" viewBox="0 0 512 512" aria-hidden="true">
+                        <svg class="size-5 fill-current text-indigo-600 mb-2 shrink-0" viewBox="0 0 512 512"
+                            aria-hidden="true">
                             <path
                                 d="M96 128a128 128 0 1 0 256 0a128 128 0 1 0-256 0m94.5 200.2l18.6 31l-33.3 123.9l-36-146.9c-2-8.1-9.8-13.4-17.9-11.3C51.9 342.4 0 405.8 0 481.3c0 17 13.8 30.7 30.7 30.7h386.6c17 0 30.7-13.8 30.7-30.7c0-75.5-51.9-138.9-121.9-156.4c-8.1-2-15.9 3.3-17.9 11.3l-36 146.9l-33.3-123.9l18.6-31c6.4-10.7-1.3-24.2-13.7-24.2h-39.5c-12.4 0-20.1 13.6-13.7 24.2z" />
                         </svg>
@@ -1004,13 +888,15 @@
                 </div>
                 <div class="p-4 bg-indigo-50/50 rounded-xl border border-indigo-100">
                     <span class="inline-flex items-center gap-1.5">
-                        <svg class="size-5 fill-current text-indigo-600 mb-2 shrink-0" viewBox="0 0 512 512" aria-hidden="true">
+                        <svg class="size-5 fill-current text-indigo-600 mb-2 shrink-0" viewBox="0 0 512 512"
+                            aria-hidden="true">
                             <path
                                 d="M64 96c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v256h-64V96H128v256H64zM0 403.2C0 392.6 8.6 384 19.2 384h601.6c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2M281 209l-31 31l31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zm112-34l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31l-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z" />
                         </svg>
                     </span>
                     <h3 class="font-bold text-slate-900 text-sm">Freelancers</h3>
-                    <p class="text-xs text-slate-500 mt-1">Convert hours and minutes into billable decimal hours accurately.</p>
+                    <p class="text-xs text-slate-500 mt-1">Convert hours and minutes into billable decimal hours accurately.
+                    </p>
                 </div>
                 <div class="p-4 bg-indigo-50/50 rounded-xl border border-indigo-100">
                     <span class="inline-flex items-center gap-1.5">
@@ -1020,17 +906,19 @@
                         </svg>
                     </span>
                     <h3 class="font-bold text-slate-900 text-sm">Students & Pilots</h3>
-                    <p class="text-xs text-slate-500 mt-1">Log flight training time, track study sessions, and solve physics equations.</p>
+                    <p class="text-xs text-slate-500 mt-1">Log flight training time, track study sessions, and solve physics
+                        equations.</p>
                 </div>
             </div>
         </section>
-
+    
         <!-- Section 8: Common Time Conversions Table -->
         <section id="common-conversions">
             <h2 class="text-2xl font-bold text-slate-900 mb-4">
                 Common Time Conversions Table
             </h2>
-            <p class="mb-4 text-sm">Use this handy reference table for converting minutes to decimal hours for timesheets and payroll entry:</p>
+            <p class="mb-4 text-sm">Use this handy reference table for converting minutes to decimal hours for timesheets
+                and payroll entry:</p>
             <div class="overflow-x-auto border border-slate-200 rounded-2xl">
                 <table class="w-full text-left text-sm">
                     <thead class="bg-slate-100 text-slate-800 font-bold border-b border-slate-200">
@@ -1042,43 +930,68 @@
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-slate-100 font-mono">
-                        <tr><td class="p-2.5">15 mins</td><td class="p-2.5 text-indigo-600 font-bold">0.25 hrs</td><td class="p-2.5">45 mins</td><td class="p-2.5 text-indigo-600 font-bold">0.75 hrs</td></tr>
-                        <tr><td class="p-2.5">30 mins</td><td class="p-2.5 text-indigo-600 font-bold">0.50 hrs</td><td class="p-2.5">60 mins</td><td class="p-2.5 text-indigo-600 font-bold">1.00 hrs</td></tr>
-                        <tr><td class="p-2.5">10 mins</td><td class="p-2.5 text-indigo-600 font-bold">0.17 hrs</td><td class="p-2.5">40 mins</td><td class="p-2.5 text-indigo-600 font-bold">0.67 hrs</td></tr>
-                        <tr><td class="p-2.5">20 mins</td><td class="p-2.5 text-indigo-600 font-bold">0.33 hrs</td><td class="p-2.5">50 mins</td><td class="p-2.5 text-indigo-600 font-bold">0.83 hrs</td></tr>
+                        <tr>
+                            <td class="p-2.5">15 mins</td>
+                            <td class="p-2.5 text-indigo-600 font-bold">0.25 hrs</td>
+                            <td class="p-2.5">45 mins</td>
+                            <td class="p-2.5 text-indigo-600 font-bold">0.75 hrs</td>
+                        </tr>
+                        <tr>
+                            <td class="p-2.5">30 mins</td>
+                            <td class="p-2.5 text-indigo-600 font-bold">0.50 hrs</td>
+                            <td class="p-2.5">60 mins</td>
+                            <td class="p-2.5 text-indigo-600 font-bold">1.00 hrs</td>
+                        </tr>
+                        <tr>
+                            <td class="p-2.5">10 mins</td>
+                            <td class="p-2.5 text-indigo-600 font-bold">0.17 hrs</td>
+                            <td class="p-2.5">40 mins</td>
+                            <td class="p-2.5 text-indigo-600 font-bold">0.67 hrs</td>
+                        </tr>
+                        <tr>
+                            <td class="p-2.5">20 mins</td>
+                            <td class="p-2.5 text-indigo-600 font-bold">0.33 hrs</td>
+                            <td class="p-2.5">50 mins</td>
+                            <td class="p-2.5 text-indigo-600 font-bold">0.83 hrs</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
         </section>
-
+    
         <!-- Section 9: Common Time Calculations -->
         <section class="space-y-6">
             <h2 class="text-2xl font-bold text-slate-900">
                 Common Time Calculations
             </h2>
-            
+    
             <div class="p-5 bg-white border border-slate-200 rounded-2xl">
                 <h3 class="text-lg font-bold text-slate-900 mb-2">Calculate Hours Between Two Times</h3>
                 <p class="text-sm text-slate-600">
-                    To <strong>calculate hours between two times</strong>, convert both times into 24-hour notation, subtract start time from end time, and deduct unpaid breaks. If start time exceeds end time, add 24 hours to the end time to account for crossing midnight.
+                    To <strong>calculate hours between two times</strong>, convert both times into 24-hour notation,
+                    subtract start time from end time, and deduct unpaid breaks. If start time exceeds end time, add 24
+                    hours to the end time to account for crossing midnight.
                 </p>
             </div>
-
+    
             <div class="p-5 bg-white border border-slate-200 rounded-2xl">
                 <h3 class="text-lg font-bold text-slate-900 mb-2">Calculate Minutes Between Two Times</h3>
                 <p class="text-sm text-slate-600">
-                    To <strong>calculate minutes between two times</strong>, multiply the total hours by 60 and add the remaining minutes. For example, 3 hours and 25 minutes equals $(3 \times 60) + 25 = 205$ total minutes.
+                    To <strong>calculate minutes between two times</strong>, multiply the total hours by 60 and add the
+                    remaining minutes. For example, 3 hours and 25 minutes equals $(3 \times 60) + 25 = 205$ total minutes.
                 </p>
             </div>
-
+    
             <div class="p-5 bg-white border border-slate-200 rounded-2xl">
                 <h3 class="text-lg font-bold text-slate-900 mb-2">Calculate Working Hours</h3>
                 <p class="text-sm text-slate-600">
-                    Using our <strong>free work hours calculator online</strong>, track punch times across multiple days. Subtract mandatory lunch breaks automatically to calculate standard hours, weekly totals, and overtime pay thresholds.
+                    Using our <strong>free work hours calculator online</strong>, track punch times across multiple days.
+                    Subtract mandatory lunch breaks automatically to calculate standard hours, weekly totals, and overtime
+                    pay thresholds.
                 </p>
             </div>
         </section>
-
+    
         <!-- Section 10: Features & Benefits -->
         <section>
             <h2 class="text-2xl font-bold text-slate-900 mb-4">
@@ -1086,134 +999,162 @@
             </h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div class="p-4 border border-slate-200 rounded-xl">
-                    <h3 class="font-bold text-slate-900 text-sm mb-1"><span class="icon icon-bolt text-indigo-600 mr-1.5"></span> Instant Real-Time Math</h3>
+                    <h3 class="font-bold text-slate-900 text-sm mb-1"><span
+                            class="icon icon-bolt text-indigo-600 mr-1.5"></span> Instant Real-Time Math</h3>
                     <p class="text-xs text-slate-500">Calculates instantly as you type without reloading the webpage.</p>
                 </div>
                 <div class="p-4 border border-slate-200 rounded-xl">
-                    <h3 class="font-bold text-slate-900 text-sm mb-1"><span class="icon icon-shield-halved text-indigo-600 mr-1.5"></span> 100% Private & Secure</h3>
-                    <p class="text-xs text-slate-500">All computations take place locally in your browser. No data is stored or transmitted.</p>
+                    <h3 class="font-bold text-slate-900 text-sm mb-1"><span
+                            class="icon icon-shield-halved text-indigo-600 mr-1.5"></span> 100% Private & Secure</h3>
+                    <p class="text-xs text-slate-500">All computations take place locally in your browser. No data is stored
+                        or transmitted.</p>
                 </div>
                 <div class="p-4 border border-slate-200 rounded-xl">
-                    <h3 class="font-bold text-slate-900 text-sm mb-1"><span class="icon icon-mobile-screen text-indigo-600 mr-1.5"></span> Mobile Optimized</h3>
-                    <p class="text-xs text-slate-500">Designed for seamless touch interaction on smartphones, tablets, and desktop devices.</p>
+                    <h3 class="font-bold text-slate-900 text-sm mb-1"><span
+                            class="icon icon-mobile-screen text-indigo-600 mr-1.5"></span> Mobile Optimized</h3>
+                    <p class="text-xs text-slate-500">Designed for seamless touch interaction on smartphones, tablets, and
+                        desktop devices.</p>
                 </div>
             </div>
         </section>
-
+    
         <!-- Section 11: Chronological Age & Leap Year Calculations -->
         <section>
             <h2 class="text-2xl font-bold text-slate-900 mb-4">
                 Chronological Age & Leap Year Calculations Explained
             </h2>
             <p class="leading-relaxed mb-4">
-                Accurate time and date duration tracking requires accounting for leap years and varying month lengths. A standard solar year consists of 365 days, while a leap year contains 366 days to align with Earth's orbit around the sun.
+                Accurate time and date duration tracking requires accounting for leap years and varying month lengths. A
+                standard solar year consists of 365 days, while a leap year contains 366 days to align with Earth's orbit
+                around the sun.
             </p>
             <p class="leading-relaxed">
-                Our <strong>Date & Age Calculator</strong> factors in exact leap year rules (years divisible by 4, except century years unless divisible by 400) to output precise chronological age in years, months, days, hours, and seconds.
+                Our <strong>Date & Age Calculator</strong> factors in exact leap year rules (years divisible by 4, except
+                century years unless divisible by 400) to output precise chronological age in years, months, days, hours,
+                and seconds.
             </p>
         </section>
-
+    
         <!-- Section 12: Frequently Asked Questions (FAQ) -->
         <section>
             <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-6">
                 Frequently Asked Questions (FAQ)
             </h2>
             <div class="space-y-3">
-                
+    
                 <!-- FAQ Item 1 -->
                 <div class="border border-slate-200 rounded-2xl overflow-hidden bg-white">
-                    <button type="button" onclick="toggleAccordion('faq-1')" class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center hover:bg-slate-50 transition">
+                    <button type="button" onclick="toggleAccordion('faq-1')"
+                        class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center hover:bg-slate-50 transition">
                         <h3>How do I calculate time between two times online free?</h3>
                         <span id="faq-1-icon" class="icon icon-chevron-down text-slate-400 transition-transform"></span>
                     </button>
                     <div id="faq-1" class="accordion-content px-5 text-sm text-slate-600 leading-relaxed">
                         <p>
-                          Select the "Time Duration" tab on our free online time calculator. Input your start time and end time, select AM/PM or 24-hour mode, and specify any break deduction in minutes. The tool immediately calculates total hours, total minutes, seconds, and decimal hours.
+                            Select the "Time Duration" tab on our free online time calculator. Input your start time and end
+                            time, select AM/PM or 24-hour mode, and specify any break deduction in minutes. The tool
+                            immediately calculates total hours, total minutes, seconds, and decimal hours.
                         </p>
                     </div>
                 </div>
-
+    
                 <!-- FAQ Item 2 -->
                 <div class="border border-slate-200 rounded-2xl overflow-hidden bg-white">
-                    <button type="button" onclick="toggleAccordion('faq-2')" class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center hover:bg-slate-50 transition">
+                    <button type="button" onclick="toggleAccordion('faq-2')"
+                        class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center hover:bg-slate-50 transition">
                         <h3>How to calculate hours and minutes for payroll?</h3>
                         <span id="faq-2-icon" class="icon icon-chevron-down text-slate-400 transition-transform"></span>
                     </button>
                     <div id="faq-2" class="accordion-content px-5 text-sm text-slate-600 leading-relaxed">
                         <p>
-                            To calculate hours for payroll, convert minutes into decimal hours by dividing minutes by 60 (e.g., 45 minutes / 60 = 0.75 hours). Use our "Work Hours & Payroll" tab to enter shift times across multiple days and auto-calculate standard and overtime earnings.
+                            To calculate hours for payroll, convert minutes into decimal hours by dividing minutes by 60
+                            (e.g., 45 minutes / 60 = 0.75 hours). Use our "Work Hours & Payroll" tab to enter shift times
+                            across multiple days and auto-calculate standard and overtime earnings.
                         </p>
                     </div>
                 </div>
-
+    
                 <!-- FAQ Item 3 -->
                 <div class="border border-slate-200 rounded-2xl overflow-hidden bg-white">
-                    <button type="button" onclick="toggleAccordion('faq-3')" class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center hover:bg-slate-50 transition">
+                    <button type="button" onclick="toggleAccordion('faq-3')"
+                        class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center hover:bg-slate-50 transition">
                         <h3>Does this overnight time calculator work across midnight?</h3>
                         <span id="faq-3-icon" class="icon icon-chevron-down text-slate-400 transition-transform"></span>
                     </button>
                     <div id="faq-3" class="accordion-content px-5 text-sm text-slate-600 leading-relaxed">
                         <p>
-                            Yes! Our free time duration calculator hours minutes seconds algorithm automatically detects when the end time falls on the following morning (such as 10:00 PM to 6:00 AM) and computes the correct overnight duration.
+                            Yes! Our free time duration calculator hours minutes seconds algorithm automatically detects
+                            when the end time falls on the following morning (such as 10:00 PM to 6:00 AM) and computes the
+                            correct overnight duration.
                         </p>
                     </div>
                 </div>
-
+    
                 <!-- FAQ Item 4 -->
                 <div class="border border-slate-200 rounded-2xl overflow-hidden bg-white">
-                    <button type="button" onclick="toggleAccordion('faq-4')" class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center hover:bg-slate-50 transition">
+                    <button type="button" onclick="toggleAccordion('faq-4')"
+                        class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center hover:bg-slate-50 transition">
                         <h3>Can I add hours and minutes together online for free?</h3>
                         <span id="faq-4-icon" class="icon icon-chevron-down text-slate-400 transition-transform"></span>
                     </button>
                     <div id="faq-4" class="accordion-content px-5 text-sm text-slate-600 leading-relaxed">
                         <p>
-                            Yes, use the "Add / Subtract Time" tab to add hours and minutes calculator free mode. Simply enter a starting time or duration and specify the hours, minutes, and seconds you want to add or subtract.
+                            Yes, use the "Add / Subtract Time" tab to add hours and minutes calculator free mode. Simply
+                            enter a starting time or duration and specify the hours, minutes, and seconds you want to add or
+                            subtract.
                         </p>
                     </div>
                 </div>
-
+    
                 <!-- FAQ Item 5 -->
                 <div class="border border-slate-200 rounded-2xl overflow-hidden bg-white">
-                    <button type="button" onclick="toggleAccordion('faq-5')" class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center hover:bg-slate-50 transition">
+                    <button type="button" onclick="toggleAccordion('faq-5')"
+                        class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center hover:bg-slate-50 transition">
                         <h3>What is a free decimal hours calculator?</h3>
                         <span id="faq-5-icon" class="icon icon-chevron-down text-slate-400 transition-transform"></span>
                     </button>
                     <div id="faq-5" class="accordion-content px-5 text-sm text-slate-600 leading-relaxed">
                         <p>
-                            A decimal hours calculator converts traditional sexagesimal time (hours, minutes, seconds) into a base-10 numerical format. For example, 7 hours 30 minutes becomes 7.50 decimal hours, which is necessary for payroll and billing calculations.
+                            A decimal hours calculator converts traditional sexagesimal time (hours, minutes, seconds) into
+                            a base-10 numerical format. For example, 7 hours 30 minutes becomes 7.50 decimal hours, which is
+                            necessary for payroll and billing calculations.
                         </p>
                     </div>
                 </div>
-
+    
                 <!-- FAQ Item 6 -->
                 <div class="border border-slate-200 rounded-2xl overflow-hidden bg-white">
-                    <button type="button" onclick="toggleAccordion('faq-6')" class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center hover:bg-slate-50 transition">
+                    <button type="button" onclick="toggleAccordion('faq-6')"
+                        class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center hover:bg-slate-50 transition">
                         <h3>How does lunch break deduction work on time cards?</h3>
                         <span id="faq-6-icon" class="icon icon-chevron-down text-slate-400 transition-transform"></span>
                     </button>
                     <div id="faq-6" class="accordion-content px-5 text-sm text-slate-600 leading-relaxed">
                         <p>
-                            Unpaid lunch or break time is subtracted from the total shift duration. For instance, an 8.5-hour total span with a 30-minute unpaid meal break results in 8.00 net worked hours.
+                            Unpaid lunch or break time is subtracted from the total shift duration. For instance, an
+                            8.5-hour total span with a 30-minute unpaid meal break results in 8.00 net worked hours.
                         </p>
                     </div>
                 </div>
-
+    
                 <!-- FAQ Item 7 -->
                 <div class="border border-slate-200 rounded-2xl overflow-hidden bg-white">
-                    <button type="button" onclick="toggleAccordion('faq-7')" class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center hover:bg-slate-50 transition">
+                    <button type="button" onclick="toggleAccordion('faq-7')"
+                        class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center hover:bg-slate-50 transition">
                         <h3>Is this time card calculator free to use for businesses?</h3>
                         <span id="faq-7-icon" class="icon icon-chevron-down text-slate-400 transition-transform"></span>
                     </button>
                     <div id="faq-7" class="accordion-content px-5 text-sm text-slate-600 leading-relaxed">
                         <p>
-                            Absolutely! Our online time card calculator free features can be used by small business owners, freelancers, managers, and HR teams without registration or hidden fees.
+                            Absolutely! Our online time card calculator free features can be used by small business owners,
+                            freelancers, managers, and HR teams without registration or hidden fees.
                         </p>
                     </div>
                 </div>
-
+    
             </div>
         </section>
-
+    
         <!-- Section 13: Other Useful Calculators -->
         <section id="related-calculators" class="pt-6">
             <h2 class="text-2xl font-bold text-slate-900 mb-6">
@@ -1223,7 +1164,8 @@
                 <a href="date-calculator.html"
                     class="p-5 rounded-2xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all group">
                     <div class="flex items-center justify-between mb-2">
-                        <span class="text-sm font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Date Calculator</span>
+                        <span class="text-sm font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Date
+                            Calculator</span>
                         <span
                             class="icon icon-arrow-right text-xs text-slate-400 group-hover:text-indigo-600 transition-colors"></span>
                     </div>
@@ -1232,7 +1174,8 @@
                 <a href="work-days-calculator.html"
                     class="p-5 rounded-2xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all group">
                     <div class="flex items-center justify-between mb-2">
-                        <span class="text-sm font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Work Days Calculator</span>
+                        <span class="text-sm font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Work
+                            Days Calculator</span>
                         <span
                             class="icon icon-arrow-right text-xs text-slate-400 group-hover:text-indigo-600 transition-colors"></span>
                     </div>
@@ -1241,7 +1184,8 @@
                 <a href="time-zone-converter.html"
                     class="p-5 rounded-2xl border border-slate-200 hover:border-indigo-500 hover:shadow-md transition-all group">
                     <div class="flex items-center justify-between mb-2">
-                        <span class="text-sm font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Time Zone Converter</span>
+                        <span class="text-sm font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Time
+                            Zone Converter</span>
                         <span
                             class="icon icon-arrow-right text-xs text-slate-400 group-hover:text-indigo-600 transition-colors"></span>
                     </div>
@@ -1249,9 +1193,9 @@
                 </a>
             </div>
         </section>
-
+    
     </article>
-
+    
     <!-- Multi-Column Footer Section -->
     <footer class="bg-slate-900 text-slate-400 text-sm border-t border-slate-800 mt-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -1324,29 +1268,25 @@
 
     <!-- Interactive Application Vanilla JavaScript -->
     <script>
-
-    <!-- Inline JavaScript for Toggle -->
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const btn = document.getElementById('calc-mobile-menu-btn');
-        const menu = document.getElementById('calc-mobile-menu');
-        const menuIcon = document.getElementById('calc-menu-icon');
-        const closeIcon = document.getElementById('calc-close-icon');
-
-        if (btn && menu) {
-            btn.addEventListener('click', () => {
-                const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-                btn.setAttribute('aria-expanded', !isExpanded);
-                menu.classList.toggle('hidden');
-                menuIcon.classList.toggle('hidden');
-                closeIcon.classList.toggle('hidden');
-            });
-        }
-    });
-
         let activeAddSubMode = 'add';
 
         document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle logic
+            const btn = document.getElementById('calc-mobile-menu-btn');
+            const menu = document.getElementById('calc-mobile-menu');
+            const menuIcon = document.getElementById('calc-menu-icon');
+            const closeIcon = document.getElementById('calc-close-icon');
+
+            if (btn && menu) {
+                btn.addEventListener('click', () => {
+                    const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+                    btn.setAttribute('aria-expanded', !isExpanded);
+                    menu.classList.toggle('hidden');
+                    menuIcon.classList.toggle('hidden');
+                    closeIcon.classList.toggle('hidden');
+                });
+            }
+
             // Set initial dates for date calculator
             const now = new Date();
             const past = new Date(now.getFullYear(), 0, 1);
@@ -1363,15 +1303,30 @@
                 endEl.value = formatDateForInput(now);
             }
 
-            // Run initial calculations
+            // Initial Calculations
             calculateDuration();
             calculateAddSub();
             calculatePayroll();
             calculateDateDiff();
 
-            // Attach event listeners for real-time recalculation in payroll
+            // Real-time recalculation listeners
+            document.querySelectorAll('#dur-start-time, #dur-end-time, #dur-start-ampm, #dur-end-ampm, #dur-break-mins').forEach(el => {
+                el.addEventListener('input', calculateDuration);
+                el.addEventListener('change', calculateDuration);
+            });
+
+            document.querySelectorAll('#as-base-h, #as-base-m, #as-base-s, #as-val-h, #as-val-m, #as-val-s').forEach(el => {
+                el.addEventListener('input', calculateAddSub);
+            });
+
             document.querySelectorAll('.pay-input, #pay-rate, #ot-rate, #ot-rule').forEach(el => {
                 el.addEventListener('input', calculatePayroll);
+                el.addEventListener('change', calculatePayroll);
+            });
+
+            document.querySelectorAll('#date-start, #date-end').forEach(el => {
+                el.addEventListener('input', calculateDateDiff);
+                el.addEventListener('change', calculateDateDiff);
             });
         });
 
@@ -1379,7 +1334,7 @@
         function switchTab(tabName) {
             document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.add('hidden'));
             document.querySelectorAll('.tab-button').forEach(btn => {
-                btn.classList.remove('bg-white', 'text-indigo-600', 'shadow-sm', 'ring-1', 'ring-slate-200');
+                btn.classList.remove('bg-white', 'text-brand-600', 'shadow-sm', 'border', 'border-slate-200');
                 btn.classList.add('text-slate-600');
                 btn.setAttribute('aria-selected', 'false');
             });
@@ -1389,7 +1344,7 @@
 
             if (activePanel && activeBtn) {
                 activePanel.classList.remove('hidden');
-                activeBtn.classList.add('bg-white', 'text-indigo-600', 'shadow-sm', 'ring-1', 'ring-slate-200');
+                activeBtn.classList.add('bg-white', 'text-brand-600', 'shadow-sm', 'border', 'border-slate-200');
                 activeBtn.classList.remove('text-slate-600');
                 activeBtn.setAttribute('aria-selected', 'true');
             }
@@ -1403,11 +1358,11 @@
             const label = document.getElementById('as-op-label');
 
             if (mode === 'add') {
-                addBtn.className = "flex-1 py-2 text-xs font-bold uppercase rounded-lg transition bg-white text-indigo-600 shadow-sm";
+                addBtn.className = "flex-1 py-2 text-xs font-bold uppercase rounded-lg transition bg-white text-brand-600 shadow-sm";
                 subBtn.className = "flex-1 py-2 text-xs font-bold uppercase rounded-lg transition text-slate-600 hover:text-slate-900";
                 if(label) label.innerText = "Time Amount to Add";
             } else {
-                subBtn.className = "flex-1 py-2 text-xs font-bold uppercase rounded-lg transition bg-white text-indigo-600 shadow-sm";
+                subBtn.className = "flex-1 py-2 text-xs font-bold uppercase rounded-lg transition bg-white text-brand-600 shadow-sm";
                 addBtn.className = "flex-1 py-2 text-xs font-bold uppercase rounded-lg transition text-slate-600 hover:text-slate-900";
                 if(label) label.innerText = "Time Amount to Subtract";
             }
@@ -1440,7 +1395,6 @@
             let startMins = parseTimeToMinutes(startVal, startAmpm);
             let endMins = parseTimeToMinutes(endVal, endAmpm);
 
-            // Overnight adjustment
             if (endMins < startMins) {
                 endMins += 24 * 60;
             }
@@ -1557,7 +1511,6 @@
                     }
                 });
             } else {
-                // weekly40
                 if (totalHours > 40) {
                     regularHours = 40;
                     overtimeHours = totalHours - 40;
@@ -1607,7 +1560,6 @@
             let diffHours = Math.floor(diffMins / 60);
             let diffDays = Math.floor(diffHours / 24);
 
-            // Chronological year, month, day difference
             let years = d2.getFullYear() - d1.getFullYear();
             let months = d2.getMonth() - d1.getMonth();
             let days = d2.getDate() - d1.getDate();
@@ -1643,9 +1595,9 @@
 
             const subContainer = document.getElementById('date-res-sub');
             subContainer.innerHTML = `
-                <div class="p-2 bg-white rounded-lg border border-indigo-100"><strong>Total Days:</strong> ${diffDays.toLocaleString()}</div>
-                <div class="p-2 bg-white rounded-lg border border-indigo-100"><strong>Total Hours:</strong> ${diffHours.toLocaleString()}</div>
-                <div class="p-2 bg-white rounded-lg border border-indigo-100"><strong>Total Minutes:</strong> ${diffMins.toLocaleString()}</div>
+                <div class="p-2 bg-white rounded-lg border border-brand-300"><strong>Total Days:</strong> ${diffDays.toLocaleString()}</div>
+                <div class="p-2 bg-white rounded-lg border border-brand-300"><strong>Total Hours:</strong> ${diffHours.toLocaleString()}</div>
+                <div class="p-2 bg-white rounded-lg border border-brand-300"><strong>Total Minutes:</strong> ${diffMins.toLocaleString()}</div>
             `;
         }
 
@@ -1680,21 +1632,19 @@
             }
         }
 
-        /* Copy Result to Clipboard */
+        /* Copy Result Helper */
         function copyResult(elementId) {
             const el = document.getElementById(elementId);
             if (!el) return;
 
             const textToCopy = el.innerText || el.textContent;
 
-            // Use document.execCommand fallback for iframe safety
             const textArea = document.createElement('textarea');
             textArea.value = textToCopy;
             document.body.appendChild(textArea);
             textArea.select();
             try {
                 document.execCommand('copy');
-                alert('Copied to clipboard!');
             } catch (err) {
                 console.error('Copy failed', err);
             }
